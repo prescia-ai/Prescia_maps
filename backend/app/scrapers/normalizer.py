@@ -17,6 +17,8 @@ from typing import Optional
 LOCATION_TYPES = {
     "battle", "camp", "railroad_stop", "trail",
     "town", "mine", "structure", "event",
+    "church", "school", "cemetery", "fairground",
+    "ferry", "stagecoach_stop", "spring", "locale",
 }
 
 # Keyword sets used to classify events
@@ -46,7 +48,25 @@ _MINE_KEYWORDS = frozenset(
 _STRUCTURE_KEYWORDS = frozenset(
     ["bridge", "fort", "fortification", "redoubt", "earthwork", "battery",
      "blockhouse", "mill", "plantation", "building", "ruins", "monument",
-     "courthouse", "church", "ferry"]
+     "courthouse"]
+)
+_CHURCH_KEYWORDS = frozenset(
+    ["church", "chapel", "mission", "parish", "congregation"]
+)
+_SCHOOL_KEYWORDS = frozenset(
+    ["school", "academy", "university", "college", "seminary"]
+)
+_CEMETERY_KEYWORDS = frozenset(
+    ["cemetery", "graveyard", "burial", "memorial"]
+)
+_FAIRGROUND_KEYWORDS = frozenset(
+    ["fairground", "fair", "carnival", "exposition", "pavilion"]
+)
+_FERRY_KEYWORDS = frozenset(
+    ["ferry", "crossing", "ford"]
+)
+_SPRING_KEYWORDS = frozenset(
+    ["spring", "hot spring", "mineral spring"]
 )
 
 # Regex patterns for year extraction
@@ -91,6 +111,12 @@ def classify_event_type(name: str, description: str = "") -> str:
         "town": sum(1 for kw in _TOWN_KEYWORDS if kw in combined),
         "mine": sum(1 for kw in _MINE_KEYWORDS if kw in combined),
         "structure": sum(1 for kw in _STRUCTURE_KEYWORDS if kw in combined),
+        "church": sum(1 for kw in _CHURCH_KEYWORDS if kw in combined),
+        "school": sum(1 for kw in _SCHOOL_KEYWORDS if kw in combined),
+        "cemetery": sum(1 for kw in _CEMETERY_KEYWORDS if kw in combined),
+        "fairground": sum(1 for kw in _FAIRGROUND_KEYWORDS if kw in combined),
+        "ferry": sum(1 for kw in _FERRY_KEYWORDS if kw in combined),
+        "spring": sum(1 for kw in _SPRING_KEYWORDS if kw in combined),
     }
 
     best_type = max(scores, key=lambda k: scores[k])

@@ -42,6 +42,14 @@ class LocationType(str, enum.Enum):
     mine = "mine"
     structure = "structure"
     event = "event"
+    church = "church"
+    school = "school"
+    cemetery = "cemetery"
+    fairground = "fairground"
+    ferry = "ferry"
+    stagecoach_stop = "stagecoach_stop"
+    spring = "spring"
+    locale = "locale"
 
 
 class LinearFeatureType(str, enum.Enum):
@@ -49,6 +57,8 @@ class LinearFeatureType(str, enum.Enum):
 
     trail = "trail"
     railroad = "railroad"
+    water = "water"
+    road = "road"
 
 
 class MapLayerType(str, enum.Enum):

@@ -28,6 +28,14 @@ WEIGHTS: Dict[str, float] = {
     "mine": 75.0,
     "structure": 50.0,
     "event": 40.0,
+    "church": 50.0,
+    "school": 45.0,
+    "cemetery": 40.0,
+    "fairground": 75.0,
+    "ferry": 65.0,
+    "stagecoach_stop": 70.0,
+    "spring": 30.0,
+    "locale": 35.0,
 }
 
 # Modifiers (additive, applied before clamping)
