@@ -91,7 +91,34 @@ Inserts approximately 60 pre-defined historical locations and 4 linear features 
 python scripts/scrape_wikipedia.py
 ```
 
-Fetches Civil War battle lists, ghost town lists, and other historical Wikipedia pages. Geocodes any records missing coordinates via Nominatim, then inserts them into the database.
+Fetches Civil War battle lists, ghost towns, Revolutionary War battles, US forts, state-specific ghost towns, and other historical Wikipedia pages. Geocodes any records missing coordinates via Nominatim, then inserts them into the database.
+
+### Load GNIS data (USGS Geographic Names)
+
+```bash
+# Load all high-value feature classes nation-wide
+python scripts/load_gnis.py
+
+# Load only a single state (e.g. Colorado)
+python scripts/load_gnis.py --state CO
+
+# Smoke test: import first 500 records
+python scripts/load_gnis.py --limit 500
+```
+
+Downloads the USGS National Geographic Names Information System (GNIS) file and imports mines, churches, schools, cemeteries, camps, springs, and other named places — potentially 50,000+ records with pre-existing coordinates (no geocoding needed).
+
+### Load NPS data (National Park Service)
+
+```bash
+# Requires NPS_API_KEY in backend/.env
+python scripts/load_nps.py
+
+# Dry-run: fetch and print records without inserting
+python scripts/load_nps.py --dry-run
+```
+
+Fetches battlefields, historic sites, historical parks, military parks, and monuments from the NPS developer API. Records are inserted with `confidence=0.95` (highest authority). Requires a free NPS API key — set `NPS_API_KEY` in `backend/.env`.
 
 ---
 
@@ -115,7 +142,7 @@ All routes are prefixed with `/api/v1`. Interactive docs: `http://localhost:8000
 
 ### Location types
 
-`battle` · `camp` · `railroad_stop` · `trail` · `town` · `mine` · `structure` · `event`
+`battle` · `camp` · `railroad_stop` · `trail` · `town` · `mine` · `structure` · `event` · `church` · `school` · `cemetery` · `fairground` · `ferry` · `stagecoach_stop` · `spring` · `locale`
 
 ### Score response
 
@@ -139,6 +166,7 @@ Copy `backend/.env.example` to `backend/.env` and adjust as needed.
 |----------|---------|-------------|
 | `DATABASE_URL` | `postgresql+asyncpg://postgres:password@localhost:5432/prescia_maps` | Async SQLAlchemy connection string |
 | `MAPBOX_TOKEN` | *(empty)* | Optional Mapbox token for tile layers |
+| `NPS_API_KEY` | *(empty)* | API key for the NPS developer API ([get one free](https://www.nps.gov/subjects/developer/get-started.htm)) |
 | `SCORE_SEARCH_RADIUS_KM` | `10.0` | Default radius for scoring queries |
 | `SCRAPER_TIMEOUT` | `30.0` | HTTP timeout for Wikipedia scraper (seconds) |
 

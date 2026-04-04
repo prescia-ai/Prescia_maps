@@ -42,6 +42,26 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
         "source": "wikipedia:historic_trails",
         "default_type": "trail",
     },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_American_Revolutionary_War",
+        "source": "wikipedia:revolutionary_war_battles",
+        "default_type": "battle",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_forts_in_the_United_States",
+        "source": "wikipedia:forts",
+        "default_type": "structure",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Colorado",
+        "source": "wikipedia:ghost_towns_colorado",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_California",
+        "source": "wikipedia:ghost_towns_california",
+        "default_type": "town",
+    },
 ]
 
 # Wikipedia DMS coordinate pattern  e.g. 39°48′N 77°14′W
@@ -328,10 +348,120 @@ def _parse_trails_page(soup: BeautifulSoup, source: str) -> List[Dict[str, Any]]
     return records
 
 
+def _parse_revolutionary_war_battles_page(
+    soup: BeautifulSoup, source: str
+) -> List[Dict[str, Any]]:
+    """
+    Parse the Revolutionary War battles list page.
+
+    The page contains sortable wikitables similar to the Civil War battles
+    page.  We reuse the same table-parsing logic but set the description
+    prefix and default_type appropriately for Revolutionary War context.
+    """
+    records: List[Dict[str, Any]] = []
+    tables = soup.find_all("table", class_="wikitable")
+
+    for table in tables:
+        rows = table.find_all("tr")
+        for row in rows[1:]:  # skip header
+            cells = row.find_all(["td", "th"])
+            if not cells:
+                continue
+
+            name_cell = cells[0]
+            name_link = name_cell.find("a")
+            raw_name = (name_link.get_text() if name_link else name_cell.get_text()).strip()
+            name = clean_name(raw_name)
+            if not name:
+                continue
+
+            year_text = cells[1].get_text() if len(cells) > 1 else ""
+            year = normalize_year(year_text)
+            state_text = cells[2].get_text().strip() if len(cells) > 2 else ""
+            coords = _extract_coords_from_tag(row)
+
+            records.append(
+                {
+                    "name": name,
+                    "description": f"American Revolutionary War battle. {year_text}".strip(),
+                    "year": year,
+                    "latitude": coords[0] if coords else None,
+                    "longitude": coords[1] if coords else None,
+                    "source": source,
+                    "location_hint": f"{name}, {state_text}".strip(", "),
+                    "default_type": "battle",
+                }
+            )
+
+    logger.info("Parsed %d Revolutionary War battle records", len(records))
+    return records
+
+
+def _parse_forts_page(soup: BeautifulSoup, source: str) -> List[Dict[str, Any]]:
+    """
+    Parse the list of forts in the United States page.
+
+    The page is organised as state-based sections with ``<ul>`` list items,
+    each containing a fort name (often a wikilink) and a short description.
+    """
+    records: List[Dict[str, Any]] = []
+    current_state = ""
+
+    content = soup.find("div", id="mw-content-text")
+    if not content:
+        return records
+
+    for elem in content.find_all(["h2", "h3", "ul"]):
+        if elem.name in ("h2", "h3"):
+            heading_text = elem.get_text(strip=True).replace("[edit]", "").strip()
+            if heading_text and not any(
+                x in heading_text.lower()
+                for x in ["see also", "reference", "external", "note", "content"]
+            ):
+                current_state = heading_text
+            continue
+
+        if elem.name == "ul":
+            for li in elem.find_all("li", recursive=False):
+                link = li.find("a")
+                raw_name = (link.get_text() if link else li.get_text()).strip()
+                raw_name = raw_name.split("–")[0].split("-")[0].strip()
+                name = clean_name(raw_name)
+                if not name or len(name) < 2:
+                    continue
+
+                description = li.get_text(separator=" ").strip()
+                year = normalize_year(description)
+                coords = _extract_coords_from_tag(li)
+
+                records.append(
+                    {
+                        "name": name,
+                        "description": description[:500],
+                        "year": year,
+                        "latitude": coords[0] if coords else None,
+                        "longitude": coords[1] if coords else None,
+                        "source": source,
+                        "location_hint": (
+                            f"{name}, {current_state}, United States"
+                            if current_state else name
+                        ),
+                        "default_type": "structure",
+                    }
+                )
+
+    logger.info("Parsed %d fort records", len(records))
+    return records
+
+
 _PAGE_PARSERS = {
     "wikipedia:civil_war_battles": _parse_battles_page,
     "wikipedia:ghost_towns": _parse_ghost_towns_page,
     "wikipedia:historic_trails": _parse_trails_page,
+    "wikipedia:revolutionary_war_battles": _parse_revolutionary_war_battles_page,
+    "wikipedia:forts": _parse_forts_page,
+    "wikipedia:ghost_towns_colorado": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_california": _parse_ghost_towns_page,
 }
 
 

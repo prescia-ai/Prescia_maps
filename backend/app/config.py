@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     )
     MAPBOX_TOKEN: str = ""
 
+    # NPS API
+    NPS_API_KEY: str = ""
+
     # Geocoding
     GEOCODING_USER_AGENT: str = "prescia_maps/1.0"
     GEOCODING_RATE_LIMIT: float = 1.0  # seconds between requests
