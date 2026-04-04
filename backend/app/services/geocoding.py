@@ -9,7 +9,6 @@ of the public Nominatim endpoint.
 import asyncio
 import logging
 import time
-from functools import lru_cache
 from typing import Optional, Tuple
 
 import httpx

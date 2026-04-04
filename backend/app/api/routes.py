@@ -14,6 +14,7 @@ POST /scrape                – trigger a fresh Wikipedia scrape (admin)
 
 from __future__ import annotations
 
+import json
 import logging
 from typing import Any, Dict, List, Optional
 from uuid import uuid4
@@ -223,7 +224,6 @@ async def get_features(
         if geom_row is None or geom_row.geojson is None:
             continue
 
-        import json
         geom_dict = json.loads(geom_row.geojson)
 
         features.append(
@@ -408,7 +408,6 @@ async def trigger_scrape(
     In production, wrap it behind authentication middleware.
     """
     from app.scrapers.wikipedia import scrape_all
-    from geoalchemy2.functions import ST_MakePoint, ST_SetSRID
 
     records = await scrape_all(geocode_missing=geocode_missing)
     inserted = 0
