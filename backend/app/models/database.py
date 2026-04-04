@@ -107,7 +107,7 @@ class Location(Base):
     source = Column(Text, nullable=True)
     confidence = Column(Float, nullable=False, default=0.5)
     # PostGIS geometry stored as WGS-84 (SRID 4326)
-    geom = Column(Geometry("POINT", srid=4326), nullable=True)
+    geom = Column(Geometry("POINT", srid=4326, spatial_index=True), nullable=True)
 
 
 class LinearFeature(Base):
@@ -127,7 +127,7 @@ class LinearFeature(Base):
         nullable=False,
         index=True,
     )
-    geom = Column(Geometry("LINESTRING", srid=4326), nullable=True)
+    geom = Column(Geometry("LINESTRING", srid=4326, spatial_index=True), nullable=True)
     source = Column(Text, nullable=True)
 
 

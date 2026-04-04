@@ -20,8 +20,9 @@ from typing import Any, Dict, List, Optional
 from uuid import uuid4
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from geoalchemy2 import Geography
 from geoalchemy2.functions import ST_Buffer, ST_DWithin, ST_MakePoint, ST_SetSRID
-from sqlalchemy import func, select, text
+from sqlalchemy import cast, func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
@@ -30,6 +31,7 @@ from app.models.schemas import (
     GeoJSONFeatureCollection,
     HealthResponse,
     HeatmapPoint,
+    HotspotCluster,
     LocationCreate,
     LocationResponse,
     ScoreResponse,
@@ -323,8 +325,8 @@ async def get_score(
     - Age of nearby sites.
     - Overlap multiplier when multiple significant sites cluster together.
     """
-    # Convert radius from km to degrees (approximate)
-    radius_deg = radius_km / 111.0
+    # Convert radius from km to metres for geography-based distance query
+    radius_m = radius_km * 1000.0
 
     point_expr = ST_SetSRID(ST_MakePoint(lon, lat), 4326)
 
@@ -340,7 +342,11 @@ async def get_score(
         Location.latitude.isnot(None),
         Location.longitude.isnot(None),
         Location.geom.isnot(None),
-        ST_DWithin(Location.geom, point_expr, radius_deg),
+        ST_DWithin(
+            cast(Location.geom, Geography),
+            cast(point_expr, Geography),
+            radius_m,
+        ),
     )
     loc_result = await db.execute(loc_stmt)
     nearby_locs: List[Dict[str, Any]] = [
@@ -361,7 +367,11 @@ async def get_score(
         LinearFeature.name,
     ).where(
         LinearFeature.geom.isnot(None),
-        ST_DWithin(LinearFeature.geom, point_expr, radius_deg),
+        ST_DWithin(
+            cast(LinearFeature.geom, Geography),
+            cast(point_expr, Geography),
+            radius_m,
+        ),
     )
     feat_result = await db.execute(feat_stmt)
     nearby_feats: List[Dict[str, Any]] = [
@@ -381,6 +391,172 @@ async def get_score(
         breakdown=result["breakdown"],
         nearby_count=result["nearby_count"],
     )
+
+
+# ---------------------------------------------------------------------------
+# State bounding boxes (min_lat, max_lat, min_lon, max_lon)
+# ---------------------------------------------------------------------------
+
+_STATE_BBOX: Dict[str, tuple] = {
+    "CO": (37.0, 41.0, -109.05, -102.05),
+    "CA": (32.5, 42.0, -124.5, -114.1),
+    "AZ": (31.3, 37.0, -114.8, -109.05),
+    "NM": (31.3, 37.0, -109.05, -103.0),
+    "TX": (25.8, 36.5, -106.65, -93.5),
+    "PA": (39.7, 42.3, -80.5, -74.7),
+    "VA": (36.5, 39.5, -83.7, -75.2),
+    "WV": (37.2, 40.6, -82.7, -77.7),
+    "TN": (34.98, 36.68, -90.3, -81.65),
+    "KY": (36.5, 39.15, -89.6, -81.95),
+    "GA": (30.36, 35.0, -85.6, -80.85),
+    "WY": (41.0, 45.0, -111.05, -104.05),
+    "MT": (44.35, 49.0, -116.05, -104.05),
+    "ID": (42.0, 49.0, -117.25, -111.05),
+    "OR": (42.0, 46.25, -124.55, -116.45),
+    "NV": (35.0, 42.0, -120.0, -114.05),
+    "SD": (42.5, 45.95, -104.05, -96.45),
+    "OK": (33.6, 37.0, -103.0, -94.43),
+    "AR": (33.0, 36.5, -94.6, -89.65),
+    "MO": (35.99, 40.6, -95.77, -89.1),
+    "KS": (37.0, 40.0, -102.05, -94.6),
+    "NE": (40.0, 43.0, -104.05, -95.31),
+    "UT": (37.0, 42.0, -114.05, -109.05),
+}
+
+
+# ---------------------------------------------------------------------------
+# Hotspot cluster detection
+# ---------------------------------------------------------------------------
+
+@router.get(
+    "/hotspots",
+    response_model=List[HotspotCluster],
+    summary="Discover top spatial hotspot clusters of historical locations",
+    tags=["analysis"],
+)
+async def get_hotspots(
+    top_n: int = Query(20, ge=1, le=100, description="Number of top clusters to return"),
+    min_cluster_size: int = Query(3, ge=1, description="Minimum locations per cluster"),
+    eps_km: float = Query(5.0, ge=0.1, le=500.0, description="Clustering radius in kilometres"),
+    state: Optional[str] = Query(None, description="US state abbreviation for bounding-box filter (e.g. CO)"),
+    db: AsyncSession = Depends(get_db),
+) -> List[HotspotCluster]:
+    """
+    Use PostGIS ``ST_ClusterDBSCAN`` to find spatial clusters of historical
+    locations and return the top N clusters ranked by aggregate score.
+
+    The aggregate score for each cluster is the sum of ``(type_weight × confidence)``
+    across all member locations.  State filtering restricts the input set to a
+    predefined bounding box before clustering.
+    """
+    from app.scoring.engine import WEIGHTS
+
+    # Approximate eps in degrees (acceptable for clustering purposes)
+    eps_deg = eps_km / 111.0
+
+    # Build bounding-box filter clause
+    bbox_clause = ""
+    bbox_params: Dict[str, float] = {}
+    if state:
+        state_upper = state.upper()
+        if state_upper not in _STATE_BBOX:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Unknown state abbreviation: '{state}'. Supported: {sorted(_STATE_BBOX)}",
+            )
+        min_lat, max_lat, min_lon, max_lon = _STATE_BBOX[state_upper]
+        bbox_clause = (
+            "AND latitude BETWEEN :min_lat AND :max_lat "
+            "AND longitude BETWEEN :min_lon AND :max_lon"
+        )
+        bbox_params = {
+            "min_lat": min_lat,
+            "max_lat": max_lat,
+            "min_lon": min_lon,
+            "max_lon": max_lon,
+        }
+
+    cluster_sql = text(
+        f"""
+        SELECT
+            name,
+            type,
+            latitude,
+            longitude,
+            confidence,
+            ST_ClusterDBSCAN(geom, eps := :eps_deg, minpoints := :min_size) OVER () AS cluster_id
+        FROM locations
+        WHERE geom IS NOT NULL
+          AND latitude IS NOT NULL
+          AND longitude IS NOT NULL
+        {bbox_clause}
+        """
+    )
+
+    result = await db.execute(
+        cluster_sql,
+        {"eps_deg": eps_deg, "min_size": min_cluster_size, **bbox_params},
+    )
+    rows = result.fetchall()
+
+    # Group rows by cluster_id (None = noise, skip)
+    clusters: Dict[int, List[Any]] = {}
+    for row in rows:
+        cid = row.cluster_id
+        if cid is None:
+            continue
+        clusters.setdefault(cid, []).append(row)
+
+    # Compute per-cluster stats
+    output: List[HotspotCluster] = []
+    for cid, members in clusters.items():
+        if len(members) < min_cluster_size:
+            continue
+
+        lats = [m.latitude for m in members]
+        lons = [m.longitude for m in members]
+        centroid_lat = sum(lats) / len(lats)
+        centroid_lon = sum(lons) / len(lons)
+
+        types_present = list({
+            m.type.value if hasattr(m.type, "value") else m.type
+            for m in members
+        })
+
+        aggregate_score = sum(
+            WEIGHTS.get(
+                m.type.value if hasattr(m.type, "value") else m.type,
+                WEIGHTS.get("event", 40.0),
+            ) * float(m.confidence if m.confidence is not None else 0.5)
+            for m in members
+        )
+
+        # Top 5 by (weight × confidence)
+        sorted_members = sorted(
+            members,
+            key=lambda m: WEIGHTS.get(
+                m.type.value if hasattr(m.type, "value") else m.type,
+                WEIGHTS.get("event", 40.0),
+            ) * float(m.confidence if m.confidence is not None else 0.5),
+            reverse=True,
+        )
+        top_locations = [m.name for m in sorted_members[:5]]
+
+        output.append(
+            HotspotCluster(
+                cluster_id=cid,
+                centroid_lat=centroid_lat,
+                centroid_lon=centroid_lon,
+                location_count=len(members),
+                aggregate_score=round(aggregate_score, 2),
+                types_present=types_present,
+                top_locations=top_locations,
+            )
+        )
+
+    # Sort by aggregate score descending, return top N
+    output.sort(key=lambda c: c.aggregate_score, reverse=True)
+    return output[:top_n]
 
 
 # ---------------------------------------------------------------------------
