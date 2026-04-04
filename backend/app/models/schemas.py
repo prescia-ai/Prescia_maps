@@ -27,11 +27,21 @@ class LocationType(str, enum.Enum):
     mine = "mine"
     structure = "structure"
     event = "event"
+    church = "church"
+    school = "school"
+    cemetery = "cemetery"
+    fairground = "fairground"
+    ferry = "ferry"
+    stagecoach_stop = "stagecoach_stop"
+    spring = "spring"
+    locale = "locale"
 
 
 class LinearFeatureType(str, enum.Enum):
     trail = "trail"
     railroad = "railroad"
+    water = "water"
+    road = "road"
 
 
 class MapLayerType(str, enum.Enum):
@@ -183,6 +193,22 @@ class MapLayerResponse(BaseModel):
     type: MapLayerType
     url: str
     metadata: Optional[Dict[str, Any]] = None
+
+
+# ---------------------------------------------------------------------------
+# Hotspot cluster schema
+# ---------------------------------------------------------------------------
+
+class HotspotCluster(BaseModel):
+    """A spatial cluster of historical locations ranked by aggregate score."""
+
+    cluster_id: int
+    centroid_lat: float
+    centroid_lon: float
+    location_count: int
+    aggregate_score: float
+    types_present: List[str]
+    top_locations: List[str]  # names of top 5 locations by weight
 
 
 # ---------------------------------------------------------------------------

@@ -153,7 +153,8 @@ def score_location(
         dist_factor = _distance_weight(dist_km)
 
         age_b = _age_bonus(loc.get("year"))
-        contribution = (base_weight + age_b) * dist_factor
+        confidence = float(loc.get("confidence", 0.5))
+        contribution = (base_weight + age_b) * dist_factor * confidence
 
         location_contributions.append(contribution)
         breakdown[f"loc:{loc.get('name', loc_type)[:30]}"] = round(contribution, 2)
@@ -171,7 +172,7 @@ def score_location(
     feature_names = " ".join(f.get("name", "").lower() for f in nearby_features)
 
     # Water proximity
-    has_water = any(
+    has_water = "water" in feature_types or any(
         kw in feature_names
         for kw in ["river", "creek", "stream", "lake", "pond", "bayou", "run"]
     )
