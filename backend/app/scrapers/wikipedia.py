@@ -82,7 +82,7 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
     {
         "url": "https://en.wikipedia.org/wiki/Pony_Express",
         "source": "wikipedia:pony_express",
-        "default_type": "stagecoach_stop",
+        "default_type": "pony_express",
     },
     # Wagon trails
     {

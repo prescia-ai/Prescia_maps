@@ -16,6 +16,7 @@ GET /blm-lands/tile-url     – BLM tile service URL for direct map rendering
 
 from __future__ import annotations
 
+import httpx
 import json
 import logging
 import time
@@ -697,8 +698,6 @@ async def get_blm_lands(
     ArcGIS service is unavailable an empty FeatureCollection is returned
     with a ``X-BLM-Warning`` response header.
     """
-    import httpx
-
     cache_key = f"{lat:.4f}:{lon:.4f}:{radius_km:.1f}"
     now = time.monotonic()
 

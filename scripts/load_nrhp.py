@@ -314,8 +314,8 @@ async def _run(
 
     if dry_run:
         for rec in records[:20]:
-            logger.info("  [DRY-RUN] %s (type=%s, lat=%.4f, lon=%.4f)",
-                        rec["name"], rec["type"], rec["latitude"], rec["longitude"])
+            coords = f"({rec['latitude']:.4f}, {rec['longitude']:.4f})"
+            logger.info("  [DRY-RUN] %s (type=%s) @ %s", rec["name"], rec["type"], coords)
         logger.info("Dry-run complete — %d records would be inserted.", len(records))
         await engine.dispose()
         return
