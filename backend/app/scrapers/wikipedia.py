@@ -961,12 +961,51 @@ async def scrape_source(
     return finalised
 
 
+async def _fetch_and_parse(
+    client: httpx.AsyncClient,
+    page_config: Dict[str, str],
+) -> List[Dict[str, Any]]:
+    """
+    Fetch a single Wikipedia page and parse it into raw record dicts.
+
+    No geocoding or final normalisation is performed here — this is the
+    purely I/O-bound step that can safely run concurrently.
+
+    Args:
+        client:      Shared :class:`httpx.AsyncClient` instance.
+        page_config: A single entry from :data:`WIKIPEDIA_PAGES`.
+
+    Returns:
+        List of raw record dicts (coordinates may be ``None``).
+    """
+    url = page_config["url"]
+    source = page_config["source"]
+    logger.info("Fetching %s", url)
+
+    soup = await _fetch_page(client, url)
+    if soup is None:
+        return []
+
+    parser = _PAGE_PARSERS.get(source)
+    if parser is None:
+        logger.warning("No parser registered for source %r", source)
+        return []
+
+    return parser(soup, source)
+
+
 async def scrape_all(
     geocode_missing: bool = True,
     timeout: float = 30.0,
 ) -> List[Dict[str, Any]]:
     """
-    Scrape all configured Wikipedia pages and return normalised records.
+    Scrape all configured Wikipedia pages concurrently and return normalised records.
+
+    All 49 Wikipedia GETs are issued in parallel with a single shared
+    :class:`httpx.AsyncClient`.  Once every page has been fetched and
+    parsed, geocoding is run on the combined record batch (a single
+    shared semaphore caps concurrency) and the final normalisation pass
+    is applied to the whole collection.
 
     Each returned record is a dict with keys:
     ``name``, ``description``, ``year``, ``latitude``, ``longitude``,
@@ -980,13 +1019,65 @@ async def scrape_all(
     Returns:
         List of record dicts ready for database insertion.
     """
-    all_records: List[Dict[str, Any]] = []
-
-    for page_config in WIKIPEDIA_PAGES:
-        records = await scrape_source(
-            page_config, geocode_missing=geocode_missing, timeout=timeout
+    # --- Phase A: fetch + parse all pages concurrently ---
+    async with httpx.AsyncClient(timeout=timeout) as client:
+        fetch_results = await asyncio.gather(
+            *(_fetch_and_parse(client, page_config) for page_config in WIKIPEDIA_PAGES),
+            return_exceptions=True,
         )
-        all_records.extend(records)
 
-    logger.info("Total records scraped and normalised: %d", len(all_records))
-    return all_records
+    # Flatten, skipping any pages that raised an exception
+    raw_records: List[Dict[str, Any]] = []
+    for page_config, result in zip(WIKIPEDIA_PAGES, fetch_results):
+        if isinstance(result, Exception):
+            logger.error(
+                "Error fetching/parsing %s: %s",
+                page_config["source"],
+                result,
+            )
+        else:
+            raw_records.extend(result)
+
+    # --- Phase B: geocode the combined batch ---
+    if geocode_missing:
+        raw_records = await _enrich_with_geocoding(raw_records)
+
+    # --- Phase C: final normalisation pass ---
+    finalised: List[Dict[str, Any]] = []
+    for rec in raw_records:
+        if is_blocked(rec["name"], rec.get("description", "")):
+            logger.debug("Blocked record: %r", rec["name"])
+            continue
+
+        event_type = classify_event_type(rec["name"], rec.get("description", ""))
+        default_type = rec.get("default_type", "event")
+
+        if default_type not in _GENERIC_DEFAULT_TYPES:
+            event_type = default_type
+        elif event_type == "event":
+            event_type = default_type
+
+        has_coords = (
+            rec.get("latitude") is not None and rec.get("longitude") is not None
+        )
+        confidence = assign_confidence(
+            source=rec.get("source", ""),
+            has_coords=has_coords,
+            has_year=rec.get("year") is not None,
+        )
+
+        finalised.append(
+            {
+                "name": rec["name"],
+                "description": rec.get("description"),
+                "year": rec.get("year"),
+                "latitude": rec.get("latitude"),
+                "longitude": rec.get("longitude"),
+                "source": rec.get("source"),
+                "type": event_type,
+                "confidence": confidence,
+            }
+        )
+
+    logger.info("Total records scraped and normalised: %d", len(finalised))
+    return finalised

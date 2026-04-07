@@ -9,8 +9,10 @@ If tqdm is not installed the script falls back to plain print() lines.
 """
 import argparse
 import asyncio
-import sys
+import json
 import os
+import sys
+from pathlib import Path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 
 import uuid
@@ -30,6 +32,14 @@ except ImportError:
     HAS_TQDM = False
 
 
+def _save_checkpoint(checkpoint_path: Path, completed_sources: list, records: list) -> None:
+    """Atomically write checkpoint data to disk."""
+    tmp = checkpoint_path.with_suffix(".tmp")
+    with open(tmp, "w") as fh:
+        json.dump({"completed_sources": completed_sources, "records": records}, fh)
+    os.replace(tmp, checkpoint_path)
+
+
 async def main():
     parser = argparse.ArgumentParser(description="Scrape Wikipedia for historical events and store in database.")
     parser.add_argument(
@@ -37,6 +47,18 @@ async def main():
         action="store_true",
         default=False,
         help="Skip Nominatim geocoding; only insert records with coordinates already present in Wikipedia HTML.",
+    )
+    parser.add_argument(
+        "--checkpoint",
+        default="scrape_checkpoint.json",
+        metavar="PATH",
+        help="Path to checkpoint file for crash-safe resume (default: scrape_checkpoint.json).",
+    )
+    parser.add_argument(
+        "--fresh",
+        action="store_true",
+        default=False,
+        help="Ignore/delete existing checkpoint and start over.",
     )
     args = parser.parse_args()
 
@@ -46,17 +68,44 @@ async def main():
     if args.no_geocode:
         print("⚠  Geocoding disabled — only records with embedded coordinates will be inserted.")
 
+    # -----------------------------------------------------------------------
+    # Checkpoint / resume
+    # -----------------------------------------------------------------------
+    checkpoint_path = Path(args.checkpoint)
+    completed_sources: list = []
+    checkpoint_records: list = []
+
+    if args.fresh and checkpoint_path.exists():
+        checkpoint_path.unlink()
+        print("🗑  Deleted existing checkpoint (--fresh).")
+
+    if checkpoint_path.exists():
+        try:
+            with open(checkpoint_path) as fh:
+                ckpt = json.load(fh)
+            completed_sources = ckpt.get("completed_sources", [])
+            checkpoint_records = ckpt.get("records", [])
+            print(
+                f"▶  Resuming: {len(completed_sources)} sources done, "
+                f"{len(checkpoint_records)} records already collected."
+            )
+        except Exception as exc:
+            print(f"⚠  Could not load checkpoint ({exc}). Starting fresh.")
+            completed_sources = []
+            checkpoint_records = []
+
     total_sources = len(WIKIPEDIA_PAGES)
     print(f"\n🌐 Scraping {total_sources} Wikipedia sources...\n")
 
     # -----------------------------------------------------------------------
     # Phase 1 — Scraping (one tick per Wikipedia source)
     # -----------------------------------------------------------------------
-    all_events = []
+    all_events: list = []
 
     if HAS_TQDM:
         pbar = _tqdm(
             total=total_sources,
+            initial=len(completed_sources),
             unit="source",
             ncols=90,
             colour="cyan",
@@ -66,7 +115,17 @@ async def main():
         pbar = None
 
     for page_config in WIKIPEDIA_PAGES:
-        label = page_config.get("source", page_config["url"].split("/")[-1])
+        source_key = page_config.get("source", page_config["url"].split("/")[-1])
+        label = source_key
+
+        # Skip already-completed sources (resume logic)
+        if source_key in completed_sources:
+            if pbar:
+                pbar.set_postfix_str(f"skip {label[:44]}", refresh=True)
+                pbar.update(1)
+            else:
+                print(f"  ↷ Skipping (already done): {label}")
+            continue
 
         if pbar:
             pbar.set_postfix_str(label[:50], refresh=True)
@@ -86,13 +145,19 @@ async def main():
             else:
                 print(f"     ✗ Failed: {exc}")
 
+        # Update checkpoint after each source (atomic write)
+        completed_sources.append(source_key)
+        _save_checkpoint(checkpoint_path, completed_sources, checkpoint_records + all_events)
+
         if pbar:
             pbar.update(1)
 
     if pbar:
         pbar.close()
 
-    print(f"\n📦 Found {len(all_events)} total records. Inserting into database...\n")
+    # Combine checkpoint (previously saved) records with newly scraped records
+    combined_events = checkpoint_records + all_events
+    print(f"\n📦 Found {len(combined_events)} total records. Inserting into database...\n")
 
     # -----------------------------------------------------------------------
     # Phase 2 — DB insert with live inline status bar
@@ -106,9 +171,9 @@ async def main():
         skipped_no_coords = 0
         skipped_duplicate = 0
         skipped_blocked = 0
-        total = len(all_events)
+        total = len(combined_events)
 
-        for i, event in enumerate(all_events, 1):
+        for i, event in enumerate(combined_events, 1):
             name = clean_name(event.get('name', ''))
             if not name:
                 skipped_no_coords += 1
@@ -160,6 +225,10 @@ async def main():
                 sys.stdout.flush()
 
         await session.commit()
+
+    # Clean up checkpoint after successful completion
+    if checkpoint_path.exists():
+        checkpoint_path.unlink()
 
     # Final summary
     print(f"\n\n✅ Done!")
