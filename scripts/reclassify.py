@@ -149,15 +149,17 @@ async def reclassify(dry_run: bool = False, source_filter: Optional[str] = None)
         source_filter: If set, only process records whose source starts with
                        this prefix (e.g. ``"wikipedia:"``).
     """
-    # Soft-import tqdm; fall back to a simple counter if not installed.
+    # Soft-import tqdm; fall back to a simple identity wrapper if not installed.
     try:
-        from tqdm import tqdm as _tqdm  # type: ignore[import]
-        def _progress(iterable, total):  # type: ignore[misc]
-            return _tqdm(iterable, total=total, unit="loc", desc="Reclassifying")
+        from tqdm import tqdm as _tqdm_cls  # type: ignore[import]
+        _have_tqdm = True
     except ImportError:
-        _tqdm = None
-        def _progress(iterable, total):  # type: ignore[misc]
-            return iterable
+        _have_tqdm = False
+
+    def _progress(iterable, total):  # type: ignore[misc]
+        if _have_tqdm:
+            return _tqdm_cls(iterable, total=total, unit="loc", desc="Reclassifying")
+        return iterable
 
     async with AsyncSessionLocal() as session:
         stmt = select(Location)

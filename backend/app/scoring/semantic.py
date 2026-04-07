@@ -214,14 +214,22 @@ def batch_compute_semantic_scores(
         return [1.0] * len(records)
 
     # --- Cache-aware path ------------------------------------------------
-    use_cache = location_ids is not None and len(location_ids) == len(records)
+    use_cache = location_ids is not None
+    if use_cache and len(location_ids) != len(records):  # type: ignore[arg-type]
+        logger.warning(
+            "batch_compute_semantic_scores: location_ids length (%d) does not match "
+            "records length (%d) — caching disabled for this call.",
+            len(location_ids),  # type: ignore[arg-type]
+            len(records),
+        )
+        use_cache = False
 
-    # Pre-fill results with None; populate from cache where possible
-    results: List[Optional[float]] = [None] * len(records)
+    # Pre-fill results with neutral score; populate from cache where possible
+    results: List[float] = [1.0] * len(records)
     miss_indices: List[int] = []
 
     if use_cache:
-        for i, (rec, lid) in enumerate(zip(records, location_ids)):
+        for i, (rec, lid) in enumerate(zip(records, location_ids)):  # type: ignore[zip-arg]
             cached = get_cached(
                 lid,
                 rec.get("name", ""),
@@ -236,7 +244,7 @@ def batch_compute_semantic_scores(
         miss_indices = list(range(len(records)))
 
     if not miss_indices:
-        return results  # type: ignore[return-value]
+        return results
 
     # --- Encode only the cache-miss records ------------------------------
     try:
@@ -259,16 +267,15 @@ def batch_compute_semantic_scores(
             if use_cache:
                 rec = records[orig_i]
                 set_cached(
-                    location_ids[orig_i],
+                    location_ids[orig_i],  # type: ignore[index]
                     rec.get("name", ""),
                     rec.get("description", ""),
                     rec.get("type", ""),
                     multiplier,
                 )
 
-        return results  # type: ignore[return-value]
+        return results
 
     except Exception as exc:
         logger.warning("Batch semantic scoring failed: %s", exc)
-        # Fill remaining None slots with neutral score
-        return [r if r is not None else 1.0 for r in results]
+        return results
