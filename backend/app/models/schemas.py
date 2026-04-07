@@ -35,6 +35,10 @@ class LocationType(str, enum.Enum):
     stagecoach_stop = "stagecoach_stop"
     spring = "spring"
     locale = "locale"
+    mission = "mission"
+    trading_post = "trading_post"
+    shipwreck = "shipwreck"
+    pony_express = "pony_express"
 
 
 class LinearFeatureType(str, enum.Enum):

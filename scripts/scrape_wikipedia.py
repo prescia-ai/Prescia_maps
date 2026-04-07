@@ -12,16 +12,17 @@ import asyncio
 import json
 import os
 import sys
+from collections import defaultdict
 from pathlib import Path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 
 import uuid
 from app.models.database import AsyncSessionLocal, create_tables
-from app.models.database import Location
+from app.models.database import Location, LinearFeature
 from app.scrapers.wikipedia import WIKIPEDIA_PAGES, scrape_source
 from app.scrapers.normalizer import classify_event_type, assign_confidence, normalize_year, clean_name, is_blocked
 from geoalchemy2.shape import from_shape
-from shapely.geometry import Point
+from shapely.geometry import LineString, Point
 from sqlalchemy import select
 
 # tqdm is an optional soft dependency — fall back gracefully if absent
@@ -226,7 +227,55 @@ async def main():
 
         await session.commit()
 
-    # Clean up checkpoint after successful completion
+    # -----------------------------------------------------------------------
+    # Phase 3 — Insert LinearFeature records for trail/route types
+    # -----------------------------------------------------------------------
+    LINEAR_TYPES = {"trail", "stagecoach_stop", "pony_express", "railroad_stop"}
+
+    # Group successfully inserted events by source (only those with coords)
+    route_groups: dict[str, list[tuple[float, float]]] = defaultdict(list)
+    for event in combined_events:
+        src = event.get('source', '')
+        lat = event.get('latitude')
+        lon = event.get('longitude')
+        etype = event.get('type') or classify_event_type(
+            clean_name(event.get('name', '')), event.get('description', '')
+        )
+        if etype in LINEAR_TYPES and lat and lon:
+            route_groups[src].append((float(lon), float(lat)))
+
+    lf_inserted = 0
+    async with AsyncSessionLocal() as session:
+        for src, coords in route_groups.items():
+            if len(coords) < 2:
+                continue
+            # Determine LinearFeature type
+            # Use railroad for railroad_stop sources, trail for everything else
+            lf_type = "railroad" if "railroad" in src else "trail"
+            # Build a human-readable name from the source key
+            # e.g. "wikipedia:oregon_trail" -> "Oregon Trail"
+            raw_name = src.split(":", 1)[-1].replace("_", " ").title()
+            # Check if already exists
+            existing = await session.execute(
+                select(LinearFeature).where(LinearFeature.name == raw_name)
+            )
+            if existing.scalar_one_or_none():
+                continue
+            # Sort waypoints west-to-east (ascending longitude)
+            sorted_coords = sorted(coords, key=lambda c: c[0])
+            line = LineString(sorted_coords)
+            lf = LinearFeature(
+                id=uuid.uuid4(),
+                name=raw_name,
+                type=lf_type,
+                geom=from_shape(line, srid=4326),
+                source=src,
+            )
+            session.add(lf)
+            lf_inserted += 1
+        await session.commit()
+
+    print(f"   Linear features: {lf_inserted} route(s) created")
     if checkpoint_path.exists():
         checkpoint_path.unlink()
 
