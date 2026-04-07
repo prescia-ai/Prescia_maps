@@ -186,15 +186,16 @@ class DedupIndex:
         self._names.add(key)
         self._coords.setdefault(key, []).append((lat, lon))
 
-    def is_duplicate(self, name: str, lat: float, lon: float) -> bool:
-        """Return True if this record is a duplicate of one already indexed."""
+    def is_duplicate(self, name: str, lat: float = 0.0, lon: float = 0.0) -> bool:
+        """
+        Return True if this record is a duplicate of one already indexed.
+
+        Currently uses exact-normalised-name matching only.  Proximity-based
+        fuzzy matching (e.g. "Sutter's Mill" vs "Sutters Mill" within 500 m)
+        is not yet implemented due to O(n²) cost for large datasets.
+        """
         key = self._normalise(name)
-        if key in self._names:
-            return True
-        # Check proximity against records with similar names (not implemented
-        # for all records due to O(n²) cost; only exact-normalised-name dups
-        # are caught here).
-        return False
+        return key in self._names
 
 
 # ---------------------------------------------------------------------------
@@ -262,7 +263,7 @@ async def insert_location_batch(
     stmt = pg_insert(Location).values(batch).on_conflict_do_nothing()
     result = await session.execute(stmt)
     await session.commit()
-    return result.rowcount or 0
+    return result.rowcount if result.rowcount is not None else 0
 
 
 async def insert_linear_feature_batch(
@@ -275,7 +276,7 @@ async def insert_linear_feature_batch(
     stmt = pg_insert(LinearFeature).values(batch).on_conflict_do_nothing()
     result = await session.execute(stmt)
     await session.commit()
-    return result.rowcount or 0
+    return result.rowcount if result.rowcount is not None else 0
 
 
 async def load_existing_linear_feature_names(session: AsyncSession) -> Set[str]:

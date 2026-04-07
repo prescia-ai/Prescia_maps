@@ -478,11 +478,14 @@ async def run(
                         if not cleaned or is_blocked(cleaned, rec.get("description", "")):
                             skipped_blocked += 1
                             continue
-                        if dedup.is_duplicate(cleaned, 0, 0):
+                        # Name-only dedup for records without coordinates
+                        if dedup.is_duplicate(cleaned):
                             skipped_dup += 1
                             continue
-                        # Web-scraped records without coords — skip for now
-                        # (they would need geocoding which is a separate enrichment step)
+                        # Web-scraped records without coords — register the name
+                        # but skip DB insert (would need geocoding in a separate
+                        # enrichment step)
+                        dedup.add(cleaned, 0.0, 0.0)
                         total_processed += 1
 
                 completed_sources.add("legends_of_america")
@@ -509,9 +512,11 @@ async def run(
                         if not cleaned or is_blocked(cleaned, rec.get("description", "")):
                             skipped_blocked += 1
                             continue
-                        if dedup.is_duplicate(cleaned, 0, 0):
+                        # Name-only dedup for records without coordinates
+                        if dedup.is_duplicate(cleaned):
                             skipped_dup += 1
                             continue
+                        dedup.add(cleaned, 0.0, 0.0)
                         total_processed += 1
 
                 completed_sources.add("ghosttowns_com")

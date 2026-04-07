@@ -71,6 +71,7 @@ from scraper_utils import (  # noqa: E402
     setup_logging,
 )
 from app.config import settings  # noqa: E402
+from app.models.database import LinearFeature as LinearFeatureModel  # noqa: E402
 from app.scrapers.normalizer import clean_name, classify_event_type, is_blocked  # noqa: E402
 
 logger = setup_logging("Historicscraper")
@@ -696,9 +697,7 @@ async def run(
             if lf_batch and not dry_run:
                 async with session_factory() as session:
                     for lf in lf_batch:
-                        session.add(
-                            __import__("app.models.database", fromlist=["LinearFeature"]).LinearFeature(**lf)
-                        )
+                        session.add(LinearFeatureModel(**lf))
                     try:
                         await session.commit()
                         total_linear += len(lf_batch)

@@ -157,7 +157,8 @@ def _parse_records(
         if lat == 0.0 and lon == 0.0:
             continue
 
-        # Basic US bounding box filter (continental US + Alaska + Hawaii)
+        # US bounding box: continental US (~25°–50° N, 125°–66° W),
+        # Alaska (~51°–72° N, 180°–130° W), Hawaii (~17°–23° N, 162°–154° W)
         if not (17.0 <= lat <= 72.0 and -180.0 <= lon <= -65.0):
             continue
 
