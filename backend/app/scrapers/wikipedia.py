@@ -135,19 +135,19 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
     },
     # Trading posts / fur trade
     {
-        "url": "https://en.wikipedia.org/wiki/List_of_trading_posts_of_the_American_fur_trade",
+        "url": "https://en.wikipedia.org/wiki/List_of_fur_trading_post_and_forts_in_North_America",
         "source": "wikipedia:trading_posts",
         "default_type": "trading_post",
     },
     # Native American battles
     {
-        "url": "https://en.wikipedia.org/wiki/List_of_Indian_Wars_battles",
+        "url": "https://en.wikipedia.org/wiki/List_of_American_Indian_Wars",
         "source": "wikipedia:indian_wars",
         "default_type": "battle",
     },
     # Other wars
     {
-        "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_War_of_1812",
+        "url": "https://en.wikipedia.org/wiki/Battles_of_the_War_of_1812",
         "source": "wikipedia:war_of_1812",
         "default_type": "battle",
     },
@@ -190,7 +190,7 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
     },
     # Ferries
     {
-        "url": "https://en.wikipedia.org/wiki/List_of_ferry_services_in_the_United_States",
+        "url": "https://en.wikipedia.org/wiki/List_of_ferry_operators_in_the_United_States",
         "source": "wikipedia:ferries",
         "default_type": "ferry",
     },
