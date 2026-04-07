@@ -3,6 +3,7 @@
 Script to scrape Wikipedia for historical events and store in database.
 Run from project root: python scripts/scrape_wikipedia.py
 """
+import argparse
 import asyncio
 import sys
 import os
@@ -18,11 +19,23 @@ from shapely.geometry import Point
 from sqlalchemy import select
 
 async def main():
+    parser = argparse.ArgumentParser(description="Scrape Wikipedia for historical events and store in database.")
+    parser.add_argument(
+        "--no-geocode",
+        action="store_true",
+        default=False,
+        help="Skip Nominatim geocoding; only insert records with coordinates already present in Wikipedia HTML.",
+    )
+    args = parser.parse_args()
+
     print("Creating database tables...")
     await create_tables()
 
+    if args.no_geocode:
+        print("Geocoding disabled — only records with embedded coordinates will be inserted.")
+
     print("Starting Wikipedia scraper...")
-    events = await scrape_all()
+    events = await scrape_all(geocode_missing=not args.no_geocode)
 
     print(f"Found {len(events)} events. Inserting into database...")
 
