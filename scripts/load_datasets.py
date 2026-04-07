@@ -130,6 +130,95 @@ MINING_CAMPS = [
     {"name": "Globe Mining District", "lat": 33.3942, "lon": -110.7863, "year": 1876, "type": "mine", "desc": "Arizona silver and copper mining"},
 ]
 
+# Butterfield Overland Mail route waypoints (approximate)
+BUTTERFIELD_OVERLAND_COORDS = [
+    (-89.6437, 35.1495),   # Memphis, TN (eastern terminus)
+    (-90.1994, 34.3668),   # Holly Springs, MS
+    (-92.2896, 34.7465),   # Little Rock, AR
+    (-94.1574, 35.3859),   # Fort Smith, AR
+    (-95.9928, 36.1540),   # Tulsa area, OK (Indian Territory)
+    (-97.5164, 35.4676),   # Oklahoma City area
+    (-98.4934, 34.6036),   # Fort Cobb, OK
+    (-99.7151, 34.3981),   # Red River Station
+    (-100.4171, 33.9137),  # Fort Belknap, TX
+    (-101.8313, 32.4487),  # Fort Phantom Hill, TX
+    (-102.0779, 32.4543),  # Fort Chadbourne, TX
+    (-103.3773, 31.6948),  # Horsehead Crossing, TX
+    (-104.0215, 31.3113),  # Fort Davis, TX
+    (-106.4850, 31.7619),  # El Paso, TX
+    (-107.7586, 32.3126),  # Fort Cummings, NM
+    (-109.0452, 32.2487),  # Fort Bowie, AZ (Apache Pass)
+    (-110.9747, 32.2226),  # Tucson, AZ
+    (-111.7891, 32.8912),  # Gila Bend area, AZ
+    (-114.5727, 32.7264),  # Fort Yuma, AZ/CA border
+    (-116.1628, 33.7291),  # Warner's Ranch, CA
+    (-117.1611, 32.7157),  # San Diego, CA
+    (-118.2437, 34.0522),  # Los Angeles, CA
+    (-121.4944, 38.5816),  # Sacramento, CA
+    (-122.4194, 37.7749),  # San Francisco, CA
+]
+
+# San Antonio–San Diego Mail Line waypoints (approximate)
+SA_SD_MAIL_COORDS = [
+    (-98.4936, 29.4241),   # San Antonio, TX
+    (-99.7756, 29.3169),   # Uvalde, TX
+    (-100.4172, 29.3727),  # Fort Clark, TX
+    (-101.3552, 29.8780),  # Fort Lancaster, TX
+    (-103.3773, 31.6948),  # Fort Stockton area, TX
+    (-104.0215, 31.3113),  # Fort Davis, TX
+    (-106.4850, 31.7619),  # El Paso, TX
+    (-109.0452, 32.2487),  # Apache Pass, AZ
+    (-110.9747, 32.2226),  # Tucson, AZ
+    (-114.5727, 32.7264),  # Fort Yuma, AZ
+    (-117.1611, 32.7157),  # San Diego, CA
+]
+
+# Wells Fargo Overland Route waypoints (approximate)
+WELLS_FARGO_OVERLAND_COORDS = [
+    (-73.9857, 40.7484),   # New York, NY
+    (-75.1652, 39.9526),   # Philadelphia, PA
+    (-76.6122, 39.2904),   # Baltimore, MD
+    (-90.1994, 38.6270),   # St. Louis, MO
+    (-94.5786, 39.0997),   # Independence, MO
+    (-98.4842, 38.7509),   # Great Bend, KS
+    (-104.8214, 38.8339),  # Colorado Springs, CO
+    (-105.2705, 40.0150),  # Denver, CO
+    (-111.8910, 40.7608),  # Salt Lake City, UT
+    (-115.1398, 36.1699),  # Las Vegas, NV
+    (-118.2437, 34.0522),  # Los Angeles, CA
+    (-122.4194, 37.7749),  # San Francisco, CA
+]
+
+# Holladay Overland Mail and Express waypoints (approximate)
+HOLLADAY_OVERLAND_COORDS = [
+    (-95.9345, 41.2565),   # Omaha, NE (Atchison connection)
+    (-96.6753, 40.8136),   # Nebraska City, NE
+    (-99.8566, 40.9248),   # North Platte, NE
+    (-103.7669, 41.1533),  # Julesburg, CO
+    (-104.8202, 41.1400),  # Scotts Bluff area, NE
+    (-105.2705, 40.0150),  # Denver, CO
+    (-107.2359, 42.8666),  # South Pass, WY
+    (-111.8910, 40.7608),  # Salt Lake City, UT
+    (-115.1398, 36.1699),  # Las Vegas, NV area
+    (-122.4194, 37.7749),  # San Francisco, CA (via Sacramento)
+]
+
+# Individual stagecoach stops along the Butterfield Overland Mail route
+STAGECOACH_STOPS = [
+    {"name": "Butterfield Station - Fort Smith", "lat": 35.3859, "lon": -94.1574, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Fort Smith, Arkansas"},
+    {"name": "Butterfield Station - Fort Belknap", "lat": 33.9137, "lon": -100.4171, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Fort Belknap, Texas"},
+    {"name": "Butterfield Station - Fort Phantom Hill", "lat": 32.4487, "lon": -101.8313, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Fort Phantom Hill, Texas"},
+    {"name": "Butterfield Station - Fort Chadbourne", "lat": 32.4543, "lon": -102.0779, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Fort Chadbourne, Texas"},
+    {"name": "Butterfield Station - Horsehead Crossing", "lat": 31.6948, "lon": -103.3773, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Horsehead Crossing on the Pecos River, Texas"},
+    {"name": "Butterfield Station - Fort Davis", "lat": 31.3113, "lon": -104.0215, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station near Fort Davis, Texas"},
+    {"name": "Butterfield Station - El Paso", "lat": 31.7619, "lon": -106.4850, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at El Paso, Texas"},
+    {"name": "Butterfield Station - Apache Pass", "lat": 32.2487, "lon": -109.0452, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Apache Pass near Fort Bowie, Arizona"},
+    {"name": "Butterfield Station - Tucson", "lat": 32.2226, "lon": -110.9747, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Tucson, Arizona"},
+    {"name": "Butterfield Station - Fort Yuma", "lat": 32.7264, "lon": -114.5727, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Fort Yuma on the Colorado River"},
+    {"name": "Butterfield Station - Warner's Ranch", "lat": 33.7291, "lon": -116.1628, "year": 1858, "type": "stagecoach_stop", "desc": "Butterfield Overland Mail station at Warner's Ranch, California"},
+]
+
+
 async def insert_trail(session, name: str, coords: list, trail_type: str, source: str):
     """Insert a trail/railroad as a LinearFeature."""
     existing = await session.execute(
@@ -184,6 +273,10 @@ async def main():
         await insert_trail(session, "Trail of Tears", TRAIL_OF_TEARS_COORDS, "trail", "Historical record")
         await insert_trail(session, "Santa Fe Trail", SANTA_FE_TRAIL_COORDS, "trail", "Historical record")
         await insert_trail(session, "Transcontinental Railroad (Southern)", TRANSCONTINENTAL_RR_COORDS, "railroad", "Historical record")
+        await insert_trail(session, "Butterfield Overland Mail", BUTTERFIELD_OVERLAND_COORDS, "trail", "Historical record")
+        await insert_trail(session, "San Antonio-San Diego Mail Line", SA_SD_MAIL_COORDS, "trail", "Historical record")
+        await insert_trail(session, "Wells Fargo Overland Route", WELLS_FARGO_OVERLAND_COORDS, "trail", "Historical record")
+        await insert_trail(session, "Holladay Overland Mail and Express", HOLLADAY_OVERLAND_COORDS, "trail", "Historical record")
 
         print("\n--- Loading Historic Towns ---")
         count = 0
@@ -212,6 +305,13 @@ async def main():
             if await insert_location(session, camp):
                 count += 1
         print(f"  Added {count} mining camps")
+
+        print("\n--- Loading Stagecoach Stops ---")
+        count = 0
+        for stop in STAGECOACH_STOPS:
+            if await insert_location(session, stop):
+                count += 1
+        print(f"  Added {count} stagecoach stops")
 
         print("\n--- Loading Map Layers ---")
         layers = [
