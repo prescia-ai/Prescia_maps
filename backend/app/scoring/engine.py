@@ -259,8 +259,9 @@ def compute_heatmap_data(
         confidence = float(loc.get("confidence", 0.5))
         weight = (base + age_b) * confidence
 
-        # Semantic multiplier for heatmap weighting
-        weight = weight * semantic_mults[i]
+        # Semantic multiplier for heatmap weighting (only when name is available)
+        if loc.get("name", ""):
+            weight = weight * semantic_mults[i]
 
         raw_points.append({"lat": lat, "lon": lon, "weight": weight})
         if weight > max_weight:
