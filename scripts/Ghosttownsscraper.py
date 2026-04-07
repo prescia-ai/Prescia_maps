@@ -473,7 +473,8 @@ async def run(
                 )
 
                 batch: List[Dict[str, Any]] = []
-                skipped_no_coords = 0
+                loa_inserted = 0
+                loa_no_coords = 0
                 async with session_factory() as session:
                     for rec in web_records:
                         cleaned = clean_name(rec["name"])
@@ -486,7 +487,7 @@ async def run(
                         # Geocode inline via Wikipedia + Nominatim
                         coords = await geocoding.geocode(cleaned)
                         if not coords:
-                            skipped_no_coords += 1
+                            loa_no_coords += 1
                             continue
                         lat, lon = coords
                         dedup.add(cleaned, lat, lon)
@@ -503,19 +504,25 @@ async def run(
                         total_processed += 1
                         if len(batch) >= BATCH_SIZE:
                             if not dry_run:
-                                total_inserted += await insert_location_batch(session, batch)
+                                inserted = await insert_location_batch(session, batch)
+                                total_inserted += inserted
+                                loa_inserted += inserted
                             else:
                                 total_inserted += len(batch)
+                                loa_inserted += len(batch)
                             batch.clear()
                     if batch:
                         if not dry_run:
-                            total_inserted += await insert_location_batch(session, batch)
+                            inserted = await insert_location_batch(session, batch)
+                            total_inserted += inserted
+                            loa_inserted += inserted
                         else:
                             total_inserted += len(batch)
+                            loa_inserted += len(batch)
 
                 logger.info(
                     "Legends of America: %d inserted, %d no coords.",
-                    total_inserted, skipped_no_coords,
+                    loa_inserted, loa_no_coords,
                 )
                 completed_sources.add("legends_of_america")
                 save_checkpoint(ckpt_path, {
@@ -536,7 +543,8 @@ async def run(
                 )
 
                 batch = []
-                skipped_no_coords = 0
+                gt_inserted = 0
+                gt_no_coords = 0
                 async with session_factory() as session:
                     for rec in web_records:
                         cleaned = clean_name(rec["name"])
@@ -549,7 +557,7 @@ async def run(
                         # Geocode inline via Wikipedia + Nominatim
                         coords = await geocoding.geocode(cleaned)
                         if not coords:
-                            skipped_no_coords += 1
+                            gt_no_coords += 1
                             continue
                         lat, lon = coords
                         dedup.add(cleaned, lat, lon)
@@ -566,19 +574,25 @@ async def run(
                         total_processed += 1
                         if len(batch) >= BATCH_SIZE:
                             if not dry_run:
-                                total_inserted += await insert_location_batch(session, batch)
+                                inserted = await insert_location_batch(session, batch)
+                                total_inserted += inserted
+                                gt_inserted += inserted
                             else:
                                 total_inserted += len(batch)
+                                gt_inserted += len(batch)
                             batch.clear()
                     if batch:
                         if not dry_run:
-                            total_inserted += await insert_location_batch(session, batch)
+                            inserted = await insert_location_batch(session, batch)
+                            total_inserted += inserted
+                            gt_inserted += inserted
                         else:
                             total_inserted += len(batch)
+                            gt_inserted += len(batch)
 
                 logger.info(
-                    "Ghosttowns.com: %d total inserted, %d no coords.",
-                    total_inserted, skipped_no_coords,
+                    "Ghosttowns.com: %d inserted, %d no coords.",
+                    gt_inserted, gt_no_coords,
                 )
                 completed_sources.add("ghosttowns_com")
                 save_checkpoint(ckpt_path, {
