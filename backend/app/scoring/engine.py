@@ -153,10 +153,11 @@ def score_location(
 
     # --- Location contributions ---
     location_contributions: List[float] = []
-    semantic_mults = batch_compute_semantic_scores([
-        {"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
-        for loc in nearby_locations
-    ])
+    semantic_mults = batch_compute_semantic_scores(
+        [{"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
+         for loc in nearby_locations],
+        location_ids=[str(loc.get("id", "")) for loc in nearby_locations],
+    )
     for i, loc in enumerate(nearby_locations):
         loc_type = loc.get("type", "event")
         base_weight = WEIGHTS.get(loc_type, WEIGHTS["event"])
@@ -243,10 +244,11 @@ def compute_heatmap_data(
     max_weight = 0.0
 
     raw_points: List[Dict[str, float]] = []
-    semantic_mults = batch_compute_semantic_scores([
-        {"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
-        for loc in all_locations
-    ])
+    semantic_mults = batch_compute_semantic_scores(
+        [{"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
+         for loc in all_locations],
+        location_ids=[str(loc.get("id", "")) for loc in all_locations],
+    )
     for i, loc in enumerate(all_locations):
         lat = loc.get("latitude")
         lon = loc.get("longitude")

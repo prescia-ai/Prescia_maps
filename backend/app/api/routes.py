@@ -278,6 +278,7 @@ async def get_heatmap(
     """
     result = await db.execute(
         select(
+            Location.id,
             Location.latitude,
             Location.longitude,
             Location.type,
@@ -291,6 +292,7 @@ async def get_heatmap(
 
     all_locs = [
         {
+            "id": str(r.id),
             "latitude": r.latitude,
             "longitude": r.longitude,
             "type": _type_str(r.type),
@@ -333,7 +335,7 @@ async def get_score(
     nearby_locs_result = await db.execute(
         text(
             """
-            SELECT name, type, latitude, longitude, year, description, confidence
+            SELECT id, name, type, latitude, longitude, year, description, confidence
             FROM locations
             WHERE ST_DWithin(
                 geom::geography,
@@ -345,13 +347,14 @@ async def get_score(
     )
     nearby_locs = [
         {
-            "name": r[0],
-            "type": _type_str(r[1]),
-            "latitude": r[2],
-            "longitude": r[3],
-            "year": r[4],
-            "description": r[5] or "",
-            "confidence": r[6],
+            "id": str(r[0]),
+            "name": r[1],
+            "type": _type_str(r[2]),
+            "latitude": r[3],
+            "longitude": r[4],
+            "year": r[5],
+            "description": r[6] or "",
+            "confidence": r[7],
         }
         for r in nearby_locs_result.all()
     ]
