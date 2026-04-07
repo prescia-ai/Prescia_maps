@@ -928,8 +928,8 @@ async def scrape_all(
         # Only let the classifier override if the default_type is generic.
         # For specific scraper-assigned types (town, trail, stagecoach_stop,
         # ferry, mission, etc.) trust the scraper — it knows better.
-        CLASSIFIER_OVERRIDE_TYPES = {"event", "structure"}
-        if default_type not in CLASSIFIER_OVERRIDE_TYPES:
+        GENERIC_DEFAULT_TYPES = {"event", "structure"}
+        if default_type not in GENERIC_DEFAULT_TYPES:
             # Specific default — trust the scraper
             event_type = default_type
         elif event_type == "event":

@@ -25,9 +25,20 @@ LOCATION_TYPES = {
 # Regex for battle detection — requires specific military-context phrases to
 # avoid false positives from generic words like "assault", "fight", "combat".
 _BATTLE_RE = re.compile(
-    r"\b(battle\s+of|battle\s+at|siege\s+of|skirmish\s+(?:at|of|near)|"
-    r"engagement\s+(?:at|of)|assault\s+on|raid\s+on|action\s+at|affair\s+at|"
-    r"civil\s+war\s+battle|military\s+engagement|armed\s+conflict)\b",
+    "|".join([
+        r"battle\s+of",
+        r"battle\s+at",
+        r"siege\s+of",
+        r"skirmish\s+(?:at|of|near)",
+        r"engagement\s+(?:at|of)",
+        r"assault\s+on",
+        r"raid\s+on",
+        r"action\s+at",
+        r"affair\s+at",
+        r"civil\s+war\s+battle",
+        r"military\s+engagement",
+        r"armed\s+conflict",
+    ]),
     re.IGNORECASE,
 )
 
