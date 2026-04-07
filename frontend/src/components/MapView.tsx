@@ -21,12 +21,26 @@ import HeatmapLayer from './HeatmapLayer';
 // ── Colour helpers ────────────────────────────────────────────────────────────
 
 const TYPE_COLORS: Record<string, string> = {
-  battle:        '#ef4444', // red
-  town:          '#3b82f6', // blue
-  mine:          '#f59e0b', // amber
-  camp:          '#22c55e', // green
-  railroad_stop: '#a855f7', // purple
-  trail:         '#14b8a6', // teal
+  battle:          '#ef4444', // red
+  town:            '#3b82f6', // blue
+  mine:            '#f59e0b', // amber
+  camp:            '#22c55e', // green
+  railroad_stop:   '#a855f7', // purple
+  trail:           '#14b8a6', // teal
+  structure:       '#f97316', // orange
+  church:          '#ec4899', // pink
+  cemetery:        '#6366f1', // indigo
+  ferry:           '#06b6d4', // cyan
+  stagecoach_stop: '#84cc16', // lime
+  fairground:      '#eab308', // yellow
+  school:          '#8b5cf6', // violet
+  spring:          '#10b981', // emerald
+  locale:          '#94a3b8', // slate
+  event:           '#94a3b8', // slate
+  mission:         '#d97706', // amber-dark
+  trading_post:    '#b45309', // brown-amber
+  shipwreck:       '#0369a1', // dark blue
+  pony_express:    '#dc2626', // dark red
 };
 
 function markerColor(type: LocationType): string {
@@ -60,8 +74,13 @@ function LocationMarkers({
         const { type, name, year, description, confidence } = f.properties;
 
         // Filter by layer
-        if (type === 'mine' || type === 'camp') {
+        const MINES_TYPES = new Set(['mine', 'camp', 'spring']);
+        const TRAILS_TYPES = new Set(['trail', 'stagecoach_stop', 'ferry', 'pony_express']);
+
+        if (MINES_TYPES.has(type)) {
           if (!layers.mines) return null;
+        } else if (TRAILS_TYPES.has(type)) {
+          if (!layers.trails) return null;
         } else if (!layers.events) {
           return null;
         }

@@ -143,11 +143,16 @@ export default function App() {
           <div className="space-y-1">
             {[
               { color: '#ef4444', label: 'Battle' },
-              { color: '#3b82f6', label: 'Town' },
-              { color: '#f59e0b', label: 'Mine / Camp' },
-              { color: '#22c55e', label: 'Camp / Trail' },
+              { color: '#3b82f6', label: 'Town / Ghost Town' },
+              { color: '#f59e0b', label: 'Mine' },
+              { color: '#22c55e', label: 'Camp' },
               { color: '#a855f7', label: 'Railroad Stop' },
               { color: '#14b8a6', label: 'Trail Point' },
+              { color: '#f97316', label: 'Fort / Structure' },
+              { color: '#84cc16', label: 'Stagecoach Stop' },
+              { color: '#ec4899', label: 'Mission / Church' },
+              { color: '#06b6d4', label: 'Ferry Crossing' },
+              { color: '#6366f1', label: 'Cemetery' },
             ].map(({ color, label }) => (
               <div key={label} className="flex items-center gap-2">
                 <span

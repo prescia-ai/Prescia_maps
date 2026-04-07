@@ -111,6 +111,28 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
         "source": "wikipedia:el_camino_real",
         "default_type": "trail",
     },
+    # Lewis & Clark
+    {
+        "url": "https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition",
+        "source": "wikipedia:lewis_clark",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Lewis_and_Clark_National_Historic_Trail",
+        "source": "wikipedia:lewis_clark_trail",
+        "default_type": "trail",
+    },
+    # Natchez Trace & Old Spanish Trail
+    {
+        "url": "https://en.wikipedia.org/wiki/Natchez_Trace",
+        "source": "wikipedia:natchez_trace",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Old_Spanish_Trail_(trade_route)",
+        "source": "wikipedia:old_spanish_trail",
+        "default_type": "trail",
+    },
     # Trading posts / fur trade
     {
         "url": "https://en.wikipedia.org/wiki/List_of_trading_posts_of_the_American_fur_trade",
@@ -793,6 +815,10 @@ _PAGE_PARSERS = {
     "wikipedia:mormon_trail": _parse_trails_page,
     "wikipedia:santa_fe_trail": _parse_trails_page,
     "wikipedia:el_camino_real": _parse_trails_page,
+    "wikipedia:lewis_clark": _parse_trails_page,
+    "wikipedia:lewis_clark_trail": _parse_trails_page,
+    "wikipedia:natchez_trace": _parse_trails_page,
+    "wikipedia:old_spanish_trail": _parse_trails_page,
 }
 
 
@@ -897,9 +923,19 @@ async def scrape_all(
             continue
 
         event_type = classify_event_type(rec["name"], rec.get("description", ""))
-        # Prefer the default_type if the classifier falls back to "event"
-        if event_type == "event":
-            event_type = rec.get("default_type", "event")
+        default_type = rec.get("default_type", "event")
+
+        # Only let the classifier override if the default_type is generic.
+        # For specific scraper-assigned types (town, trail, stagecoach_stop,
+        # ferry, mission, etc.) trust the scraper — it knows better.
+        GENERIC_DEFAULT_TYPES = {"event", "structure"}
+        if default_type not in GENERIC_DEFAULT_TYPES:
+            # Specific default — trust the scraper
+            event_type = default_type
+        elif event_type == "event":
+            # Classifier found nothing — fall back to scraper default
+            event_type = default_type
+        # else: classifier found something on a generic default — use it
 
         has_coords = (
             rec.get("latitude") is not None and rec.get("longitude") is not None
