@@ -4,7 +4,7 @@ Historic Places, Routes & Features scraper — single source of truth for all
 battles, forts, trails, stagecoach routes, railroads, and other historic sites.
 
 Data sources (in priority order):
-1. **NRHP CSV** — National Register of Historic Places bulk data
+1. **NRHP CSV** — National Register of Historic Places bulk CSV download
 2. **NPS API** — National Park Service battlefields, monuments, historic sites
 3. **OpenHistoricalMap** — Overpass API for abandoned railways, historic trails
 
@@ -40,8 +40,11 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import csv
+import io
 import sys
 import uuid
+import zipfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 
@@ -77,12 +80,11 @@ from app.scrapers.normalizer import clean_name, classify_event_type, is_blocked 
 logger = setup_logging("Historicscraper")
 
 # ---------------------------------------------------------------------------
-# NRHP Constants
+# NRHP Constants — bulk CSV download from NPS
 # ---------------------------------------------------------------------------
 
-NRHP_API_URL = (
-    "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services"
-    "/NRHP_Listings/FeatureServer/0/query"
+NRHP_CSV_URL = (
+    "https://irma.nps.gov/DataStore/DownloadFile/706904"
 )
 
 # Keywords for filtering NRHP records to metal-detecting relevant sites
@@ -128,7 +130,6 @@ NRHP_TYPE_MAP: Dict[str, str] = {
 
 NRHP_SOURCE = "nrhp"
 NRHP_CONFIDENCE = 0.90
-NRHP_PAGE_SIZE = 1000
 
 # ---------------------------------------------------------------------------
 # NPS Constants
@@ -154,7 +155,7 @@ NPS_PAGE_SIZE = 50
 # OpenHistoricalMap Constants
 # ---------------------------------------------------------------------------
 
-OHM_OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+OHM_OVERPASS_URL = "https://overpass.openhistoricalmap.org/api/interpreter"
 OHM_SOURCE = "openhistoricalmap"
 OHM_CONFIDENCE = 0.75
 
@@ -188,59 +189,120 @@ BATCH_SIZE = 500
 
 
 # ---------------------------------------------------------------------------
-# NRHP API helpers
+# NRHP CSV helpers
 # ---------------------------------------------------------------------------
 
-async def _fetch_nrhp_page(
-    client: httpx.AsyncClient,
-    state: Optional[str],
-    offset: int,
-) -> List[Dict[str, Any]]:
-    """Fetch one page of NRHP records from the ArcGIS REST service."""
-    where = f"STATE_='{state.upper()}'" if state else "1=1"
-    params = {
-        "where": where,
-        "outFields": "RESNAME,CITY,STATE_,LATITUDE,LONGITUDE,NRHP_REFNUM",
-        "f": "json",
-        "resultRecordCount": NRHP_PAGE_SIZE,
-        "resultOffset": offset,
-    }
-    try:
-        response = await client.get(NRHP_API_URL, params=params, headers=_HEADERS)
+def _download_nrhp_csv(timeout: float = 300.0) -> bytes:
+    """Download the NRHP CSV file from NPS Data Store."""
+    logger.info("Downloading NRHP CSV from %s …", NRHP_CSV_URL)
+    with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+        response = client.get(NRHP_CSV_URL)
         response.raise_for_status()
-        data = response.json()
-        features = data.get("features", [])
-        return [f.get("attributes", {}) for f in features]
-    except (httpx.HTTPError, ValueError, KeyError) as exc:
-        logger.error("NRHP API error at offset %d: %s", offset, exc)
-        return []
+    logger.info("Download complete (%.1f MB).", len(response.content) / 1_048_576)
+    return response.content
 
 
-async def _fetch_all_nrhp(
-    state: Optional[str],
-    limit: Optional[int],
-    timeout: float = 30.0,
-) -> List[Dict[str, Any]]:
-    """Paginate through the NRHP API and return all matching records."""
-    all_records: List[Dict[str, Any]] = []
-    offset = 0
+def _extract_nrhp_csv(raw_bytes: bytes) -> io.TextIOWrapper:
+    """
+    Extract the NRHP CSV data.
 
-    async with httpx.AsyncClient(timeout=timeout) as client:
-        while True:
-            page = await _fetch_nrhp_page(client, state, offset)
-            if not page:
-                break
-            all_records.extend(page)
-            logger.info("  NRHP: fetched %d records (total: %d)", len(page), len(all_records))
-            offset += len(page)
+    The download may be a ZIP archive containing a CSV, or the raw CSV itself.
+    """
+    # Try as ZIP first
+    try:
+        with zipfile.ZipFile(io.BytesIO(raw_bytes)) as zf:
+            csv_names = [n for n in zf.namelist() if n.lower().endswith(".csv")]
+            if csv_names:
+                logger.info("Extracting %s from archive.", csv_names[0])
+                data = zf.read(csv_names[0])
+                return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8", errors="replace")
+    except zipfile.BadZipFile:
+        pass
 
-            if len(page) < NRHP_PAGE_SIZE:
-                break
-            if limit is not None and len(all_records) >= limit:
-                all_records = all_records[:limit]
-                break
+    # Not a ZIP — treat as raw CSV
+    return io.TextIOWrapper(io.BytesIO(raw_bytes), encoding="utf-8", errors="replace")
 
-    return all_records
+
+def _parse_nrhp_csv(
+    stream: io.TextIOWrapper,
+    state_filter: Optional[str] = None,
+    limit: Optional[int] = None,
+):
+    """
+    Yield filtered NRHP records from the CSV stream.
+
+    Each yielded item is a dict with keys matching Location fields.
+    Column names are auto-detected from the CSV header.
+    """
+    reader = csv.DictReader(stream)
+    accepted = 0
+
+    # Detect column names (NRHP CSVs use varying headers)
+    name_cols = ["Resource Name", "RESNAME", "Property Name", "Name"]
+    lat_cols = ["Latitude", "LATITUDE", "Lat"]
+    lon_cols = ["Longitude", "LONGITUDE", "Lon", "Long"]
+    state_cols = ["State", "STATE", "STATE_"]
+    city_cols = ["City", "CITY", "County/Independent City"]
+    refnum_cols = ["Reference Number", "NRHP_REFNUM", "Ref#", "RefNum"]
+
+    def _find_col(row: Dict[str, Any], candidates: List[str]) -> str:
+        for c in candidates:
+            if c in row:
+                return (row[c] or "").strip()
+        return ""
+
+    for row in reader:
+        name = _find_col(row, name_cols)
+        if not name:
+            continue
+
+        # State filter
+        state = _find_col(row, state_cols)
+        if state_filter and state.upper() != state_filter.upper():
+            continue
+
+        # Coordinates
+        lat_str = _find_col(row, lat_cols)
+        lon_str = _find_col(row, lon_cols)
+        try:
+            lat = float(lat_str)
+            lon = float(lon_str)
+        except (ValueError, TypeError):
+            continue
+
+        if lat == 0.0 and lon == 0.0:
+            continue
+
+        # Keyword filter
+        if not _nrhp_matches_keywords(name):
+            continue
+
+        city = _find_col(row, city_cols)
+        ref_num = _find_col(row, refnum_cols)
+
+        desc_parts = []
+        if city:
+            desc_parts.append(city)
+        if state:
+            desc_parts.append(state)
+        if ref_num:
+            desc_parts.append(f"NRHP #{ref_num}")
+        description = ", ".join(desc_parts)
+
+        loc_type = _infer_nrhp_type(name)
+
+        yield build_location_record(
+            name=name,
+            lat=lat,
+            lon=lon,
+            source=NRHP_SOURCE,
+            loc_type=loc_type,
+            description=description,
+            confidence=NRHP_CONFIDENCE,
+        )
+        accepted += 1
+        if limit is not None and accepted >= limit:
+            return
 
 
 def _nrhp_matches_keywords(name: str) -> bool:
@@ -256,47 +318,6 @@ def _infer_nrhp_type(name: str) -> str:
         if keyword in name_lower:
             return loc_type
     return "structure"
-
-
-def _normalise_nrhp_record(attrs: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    """Convert raw NRHP attributes into a Location insert dict."""
-    name = (attrs.get("RESNAME") or "").strip()
-    if not name:
-        return None
-
-    try:
-        lat = float(attrs["LATITUDE"])
-        lon = float(attrs["LONGITUDE"])
-    except (ValueError, TypeError, KeyError):
-        return None
-
-    if lat == 0.0 and lon == 0.0:
-        return None
-
-    city = (attrs.get("CITY") or "").strip()
-    state = (attrs.get("STATE_") or "").strip()
-    ref_num = (attrs.get("NRHP_REFNUM") or "").strip()
-
-    desc_parts = []
-    if city:
-        desc_parts.append(city)
-    if state:
-        desc_parts.append(state)
-    if ref_num:
-        desc_parts.append(f"NRHP #{ref_num}")
-    description = ", ".join(desc_parts)
-
-    loc_type = _infer_nrhp_type(name)
-
-    return build_location_record(
-        name=name,
-        lat=lat,
-        lon=lon,
-        source=NRHP_SOURCE,
-        loc_type=loc_type,
-        description=description,
-        confidence=NRHP_CONFIDENCE,
-    )
 
 
 # ---------------------------------------------------------------------------
@@ -391,7 +412,7 @@ async def _fetch_ohm_features(
     query: str,
     rate_limiter: RateLimiter,
 ) -> List[Dict[str, Any]]:
-    """Execute an Overpass query against the main Overpass API and return elements."""
+    """Execute an Overpass query against the OpenHistoricalMap Overpass API and return elements."""
     rate_limiter.wait()
     try:
         async with httpx.AsyncClient(timeout=180.0) as client:
@@ -540,27 +561,18 @@ async def run(
     skipped_blocked = stats["skipped_blocked"]
 
     # ===================================================================
-    # Source 1: NRHP (ArcGIS REST API)
+    # Source 1: NRHP (bulk CSV download)
     # ===================================================================
     if "nrhp" not in completed_sources:
-        logger.info("=== Source 1: National Register of Historic Places ===")
-        raw_records = await _fetch_all_nrhp(state_filter, limit)
-        logger.info("Fetched %d raw NRHP records.", len(raw_records))
-
-        # Filter by keywords
-        filtered = [
-            r for r in raw_records
-            if _nrhp_matches_keywords(r.get("RESNAME", ""))
-        ]
-        logger.info("%d records match keyword filter.", len(filtered))
+        logger.info("=== Source 1: National Register of Historic Places (CSV) ===")
+        raw_bytes = _download_nrhp_csv()
+        stream = _extract_nrhp_csv(raw_bytes)
 
         batch: List[Dict[str, Any]] = []
+        nrhp_count = 0
         async with session_factory() as session:
-            for attrs in filtered:
-                record = _normalise_nrhp_record(attrs)
-                if record is None:
-                    continue
-
+            for record in _parse_nrhp_csv(stream, state_filter, limit):
+                nrhp_count += 1
                 cleaned = clean_name(record["name"])
                 if not cleaned:
                     continue
@@ -590,6 +602,7 @@ async def run(
                 else:
                     total_locations += len(batch)
 
+        logger.info("NRHP CSV: %d keyword-matched records parsed.", nrhp_count)
         completed_sources.add("nrhp")
         save_checkpoint(ckpt_path, {
             "completed_sources": list(completed_sources),

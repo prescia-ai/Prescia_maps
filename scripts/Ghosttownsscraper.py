@@ -69,6 +69,7 @@ from scraper_utils import (  # noqa: E402
     setup_logging,
 )
 from app.scrapers.normalizer import clean_name, is_blocked  # noqa: E402
+from app.services import geocoding  # noqa: E402
 
 logger = setup_logging("Ghosttownsscraper")
 
@@ -471,23 +472,51 @@ async def run(
                     client, rate_limiter, limit=limit,
                 )
 
-                batch = []
+                batch: List[Dict[str, Any]] = []
+                skipped_no_coords = 0
                 async with session_factory() as session:
                     for rec in web_records:
                         cleaned = clean_name(rec["name"])
                         if not cleaned or is_blocked(cleaned, rec.get("description", "")):
                             skipped_blocked += 1
                             continue
-                        # Name-only dedup for records without coordinates
                         if dedup.is_duplicate(cleaned):
                             skipped_dup += 1
                             continue
-                        # Web-scraped records without coords — register the name
-                        # but skip DB insert (would need geocoding in a separate
-                        # enrichment step)
-                        dedup.add(cleaned, 0.0, 0.0)
+                        # Geocode inline via Wikipedia + Nominatim
+                        coords = await geocoding.geocode(cleaned)
+                        if not coords:
+                            skipped_no_coords += 1
+                            continue
+                        lat, lon = coords
+                        dedup.add(cleaned, lat, lon)
+                        record = build_location_record(
+                            name=cleaned,
+                            lat=lat,
+                            lon=lon,
+                            source="legends_of_america",
+                            loc_type="town",
+                            description=rec.get("description"),
+                            confidence=0.60,
+                        )
+                        batch.append(record)
                         total_processed += 1
+                        if len(batch) >= BATCH_SIZE:
+                            if not dry_run:
+                                total_inserted += await insert_location_batch(session, batch)
+                            else:
+                                total_inserted += len(batch)
+                            batch.clear()
+                    if batch:
+                        if not dry_run:
+                            total_inserted += await insert_location_batch(session, batch)
+                        else:
+                            total_inserted += len(batch)
 
+                logger.info(
+                    "Legends of America: %d inserted, %d no coords.",
+                    total_inserted, skipped_no_coords,
+                )
                 completed_sources.add("legends_of_america")
                 save_checkpoint(ckpt_path, {
                     "completed_sources": list(completed_sources),
@@ -506,19 +535,51 @@ async def run(
                     client, rate_limiter, limit=limit,
                 )
 
+                batch = []
+                skipped_no_coords = 0
                 async with session_factory() as session:
                     for rec in web_records:
                         cleaned = clean_name(rec["name"])
                         if not cleaned or is_blocked(cleaned, rec.get("description", "")):
                             skipped_blocked += 1
                             continue
-                        # Name-only dedup for records without coordinates
                         if dedup.is_duplicate(cleaned):
                             skipped_dup += 1
                             continue
-                        dedup.add(cleaned, 0.0, 0.0)
+                        # Geocode inline via Wikipedia + Nominatim
+                        coords = await geocoding.geocode(cleaned)
+                        if not coords:
+                            skipped_no_coords += 1
+                            continue
+                        lat, lon = coords
+                        dedup.add(cleaned, lat, lon)
+                        record = build_location_record(
+                            name=cleaned,
+                            lat=lat,
+                            lon=lon,
+                            source="ghosttowns_com",
+                            loc_type="town",
+                            description=rec.get("description"),
+                            confidence=0.55,
+                        )
+                        batch.append(record)
                         total_processed += 1
+                        if len(batch) >= BATCH_SIZE:
+                            if not dry_run:
+                                total_inserted += await insert_location_batch(session, batch)
+                            else:
+                                total_inserted += len(batch)
+                            batch.clear()
+                    if batch:
+                        if not dry_run:
+                            total_inserted += await insert_location_batch(session, batch)
+                        else:
+                            total_inserted += len(batch)
 
+                logger.info(
+                    "Ghosttowns.com: %d total inserted, %d no coords.",
+                    total_inserted, skipped_no_coords,
+                )
                 completed_sources.add("ghosttowns_com")
                 save_checkpoint(ckpt_path, {
                     "completed_sources": list(completed_sources),

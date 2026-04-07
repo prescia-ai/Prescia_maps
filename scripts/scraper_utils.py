@@ -86,6 +86,13 @@ class _FallbackProgress:
         self._total = total
         self._n = 0
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        self.close()
+        return False
+
     def __iter__(self):
         if self._iterable is not None:
             yield from self._iterable
@@ -156,17 +163,14 @@ def haversine_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 class DedupIndex:
     """
-    In-memory index that checks for duplicates by normalised name **and**
-    geographic proximity.
+    In-memory index that checks for duplicates by normalised name.
 
-    Two records are considered duplicates if:
-    1. Their normalised names match exactly, OR
-    2. Their original names are very similar AND they are within
-       ``radius_m`` metres of each other.
+    Names are normalised (lowercased, possessives stripped, whitespace
+    collapsed) before comparison — so ``"Sutter's Mill"`` and
+    ``"Sutters Mill"`` are treated as the same record.
 
-    For the bulk-load use case the simple name match (option 1) covers the
-    vast majority of duplicates.  The proximity check (option 2) catches
-    trivial spelling variants like ``"Sutter's Mill"`` vs ``"Sutters Mill"``.
+    A ``radius_m`` parameter is accepted for future proximity-based
+    matching but is not currently used.
     """
 
     def __init__(self, radius_m: float = 500.0):
