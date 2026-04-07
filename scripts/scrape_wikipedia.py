@@ -40,24 +40,30 @@ async def main():
     print(f"Found {len(events)} events. Inserting into database...")
 
     async with AsyncSessionLocal() as session:
+        # Bulk-load existing names once instead of one query per record
+        result = await session.execute(select(Location.name))
+        existing_names = {row[0] for row in result}
+
         inserted = 0
-        skipped = 0
+        skipped_no_coords = 0
+        skipped_duplicate = 0
+
         for event in events:
-            # check if name already exists
-            existing = await session.execute(
-                select(Location).where(Location.name == event.get('name', ''))
-            )
-            if existing.scalar_one_or_none():
-                skipped += 1
+            name = clean_name(event.get('name', ''))
+            if not name:
+                skipped_no_coords += 1
+                continue
+
+            if name in existing_names:
+                skipped_duplicate += 1
                 continue
 
             lat = event.get('latitude')
             lon = event.get('longitude')
             if not lat or not lon:
-                skipped += 1
+                skipped_no_coords += 1
                 continue
 
-            name = clean_name(event.get('name', 'Unknown'))
             event_type = classify_event_type(name, event.get('description', ''))
             year = normalize_year(str(event.get('year', '')))
             confidence = assign_confidence(
@@ -79,10 +85,11 @@ async def main():
                 geom=from_shape(Point(float(lon), float(lat)), srid=4326)
             )
             session.add(location)
+            existing_names.add(name)  # prevent duplicate inserts within this batch
             inserted += 1
 
         await session.commit()
-        print(f"Done. Inserted: {inserted}, Skipped: {skipped}")
+        print(f"Done. Inserted: {inserted}, Skipped (no coords): {skipped_no_coords}, Skipped (duplicate): {skipped_duplicate}")
 
 if __name__ == '__main__':
     asyncio.run(main())
