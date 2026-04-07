@@ -191,6 +191,16 @@ export default function MapView({
         maxZoom={19}
       />
 
+      {/* BLM public lands overlay */}
+      {layers.blm && (
+        <TileLayer
+          url="https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
+          attribution="Bureau of Land Management"
+          opacity={0.4}
+          zIndex={5}
+        />
+      )}
+
       <ClickHandler onClick={handleClick} />
 
       <LocationMarkers

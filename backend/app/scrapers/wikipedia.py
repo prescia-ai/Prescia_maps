@@ -62,6 +62,206 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
         "source": "wikipedia:ghost_towns_california",
         "default_type": "town",
     },
+    # Stagecoach
+    {
+        "url": "https://en.wikipedia.org/wiki/Butterfield_Overland_Mail",
+        "source": "wikipedia:stagecoach_butterfield",
+        "default_type": "stagecoach_stop",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Overland_Mail_Company",
+        "source": "wikipedia:stagecoach_overland",
+        "default_type": "stagecoach_stop",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Central_Overland_California_and_Pikes_Peak_Express_Company",
+        "source": "wikipedia:stagecoach_central",
+        "default_type": "stagecoach_stop",
+    },
+    # Pony Express
+    {
+        "url": "https://en.wikipedia.org/wiki/Pony_Express",
+        "source": "wikipedia:pony_express",
+        "default_type": "pony_express",
+    },
+    # Wagon trails
+    {
+        "url": "https://en.wikipedia.org/wiki/Oregon_Trail",
+        "source": "wikipedia:oregon_trail",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/California_Trail",
+        "source": "wikipedia:california_trail",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Mormon_Trail",
+        "source": "wikipedia:mormon_trail",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Santa_Fe_Trail",
+        "source": "wikipedia:santa_fe_trail",
+        "default_type": "trail",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/El_Camino_Real_de_Tierra_Adentro",
+        "source": "wikipedia:el_camino_real",
+        "default_type": "trail",
+    },
+    # Trading posts / fur trade
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_trading_posts_of_the_American_fur_trade",
+        "source": "wikipedia:trading_posts",
+        "default_type": "trading_post",
+    },
+    # Native American battles
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_Indian_Wars_battles",
+        "source": "wikipedia:indian_wars",
+        "default_type": "battle",
+    },
+    # Other wars
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_War_of_1812",
+        "source": "wikipedia:war_of_1812",
+        "default_type": "battle",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_Mexican%E2%80%93American_War",
+        "source": "wikipedia:mexican_american_war",
+        "default_type": "battle",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_battles_of_the_Spanish%E2%80%93American_War",
+        "source": "wikipedia:spanish_american_war",
+        "default_type": "battle",
+    },
+    # Missions
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_California_missions",
+        "source": "wikipedia:missions_california",
+        "default_type": "mission",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_Texas",
+        "source": "wikipedia:missions_texas",
+        "default_type": "mission",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_New_Mexico",
+        "source": "wikipedia:missions_new_mexico",
+        "default_type": "mission",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_Arizona",
+        "source": "wikipedia:missions_arizona",
+        "default_type": "mission",
+    },
+    # Shipwrecks
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_shipwrecks_of_North_America",
+        "source": "wikipedia:shipwrecks",
+        "default_type": "shipwreck",
+    },
+    # Ferries
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ferry_services_in_the_United_States",
+        "source": "wikipedia:ferries",
+        "default_type": "ferry",
+    },
+    # Ghost towns — additional states
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Alabama",
+        "source": "wikipedia:ghost_towns_alabama",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Alaska",
+        "source": "wikipedia:ghost_towns_alaska",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Arizona",
+        "source": "wikipedia:ghost_towns_arizona",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Arkansas",
+        "source": "wikipedia:ghost_towns_arkansas",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Idaho",
+        "source": "wikipedia:ghost_towns_idaho",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Kansas",
+        "source": "wikipedia:ghost_towns_kansas",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Montana",
+        "source": "wikipedia:ghost_towns_montana",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Nevada",
+        "source": "wikipedia:ghost_towns_nevada",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_New_Mexico",
+        "source": "wikipedia:ghost_towns_new_mexico",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Oregon",
+        "source": "wikipedia:ghost_towns_oregon",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Texas",
+        "source": "wikipedia:ghost_towns_texas",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Utah",
+        "source": "wikipedia:ghost_towns_utah",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Washington_(state)",
+        "source": "wikipedia:ghost_towns_washington",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Wyoming",
+        "source": "wikipedia:ghost_towns_wyoming",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_South_Dakota",
+        "source": "wikipedia:ghost_towns_south_dakota",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_North_Dakota",
+        "source": "wikipedia:ghost_towns_north_dakota",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Nebraska",
+        "source": "wikipedia:ghost_towns_nebraska",
+        "default_type": "town",
+    },
+    {
+        "url": "https://en.wikipedia.org/wiki/List_of_ghost_towns_in_Oklahoma",
+        "source": "wikipedia:ghost_towns_oklahoma",
+        "default_type": "town",
+    },
 ]
 
 # Wikipedia DMS coordinate pattern  e.g. 39°48′N 77°14′W
@@ -454,6 +654,90 @@ def _parse_forts_page(soup: BeautifulSoup, source: str) -> List[Dict[str, Any]]:
     return records
 
 
+def _parse_generic_list_page(soup: BeautifulSoup, source: str) -> List[Dict[str, Any]]:
+    """
+    Generic parser for Wikipedia list pages.
+
+    Tries wikitables first (extracts name from the first cell and description
+    from the full row text).  Falls back to ``<ul><li>`` list parsing when
+    no tables are found.  Coordinates are extracted from each row/li via
+    ``_extract_coords_from_tag``.
+
+    The ``default_type`` for each record is taken from the WIKIPEDIA_PAGES
+    config entry.  It is resolved at call time via ``source``.
+    """
+    # Look up default_type from the page config
+    default_type = "structure"
+    for page_config in WIKIPEDIA_PAGES:
+        if page_config["source"] == source:
+            default_type = page_config.get("default_type", "structure")
+            break
+
+    records: List[Dict[str, Any]] = []
+    tables = soup.find_all("table", class_="wikitable")
+
+    for table in tables:
+        rows = table.find_all("tr")
+        for row in rows[1:]:  # skip header
+            cells = row.find_all(["td", "th"])
+            if not cells:
+                continue
+
+            name_cell = cells[0]
+            name_link = name_cell.find("a")
+            raw_name = (name_link.get_text() if name_link else name_cell.get_text()).strip()
+            name = clean_name(raw_name)
+            if not name:
+                continue
+
+            description = row.get_text(separator=" ").strip()
+            year = normalize_year(description)
+            coords = _extract_coords_from_tag(row)
+
+            records.append(
+                {
+                    "name": name,
+                    "description": description[:500],
+                    "year": year,
+                    "latitude": coords[0] if coords else None,
+                    "longitude": coords[1] if coords else None,
+                    "source": source,
+                    "location_hint": name,
+                    "default_type": default_type,
+                }
+            )
+
+    # Fallback: parse list items when no wikitable rows yielded results
+    if not records:
+        for li in soup.find_all("li"):
+            link = li.find("a")
+            raw_name = (link.get_text() if link else li.get_text()).strip()
+            raw_name = raw_name.split("–")[0].split("-")[0].strip()
+            name = clean_name(raw_name)
+            if not name or len(name) < 2:
+                continue
+
+            description = li.get_text(separator=" ").strip()
+            year = normalize_year(description)
+            coords = _extract_coords_from_tag(li)
+
+            records.append(
+                {
+                    "name": name,
+                    "description": description[:500],
+                    "year": year,
+                    "latitude": coords[0] if coords else None,
+                    "longitude": coords[1] if coords else None,
+                    "source": source,
+                    "location_hint": name,
+                    "default_type": default_type,
+                }
+            )
+
+    logger.info("Parsed %d generic list records from %s", len(records), source)
+    return records
+
+
 _PAGE_PARSERS = {
     "wikipedia:civil_war_battles": _parse_battles_page,
     "wikipedia:ghost_towns": _parse_ghost_towns_page,
@@ -462,6 +746,49 @@ _PAGE_PARSERS = {
     "wikipedia:forts": _parse_forts_page,
     "wikipedia:ghost_towns_colorado": _parse_ghost_towns_page,
     "wikipedia:ghost_towns_california": _parse_ghost_towns_page,
+    # Additional ghost town pages
+    "wikipedia:ghost_towns_alabama": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_alaska": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_arizona": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_arkansas": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_idaho": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_kansas": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_montana": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_nevada": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_new_mexico": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_oregon": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_texas": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_utah": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_washington": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_wyoming": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_south_dakota": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_north_dakota": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_nebraska": _parse_ghost_towns_page,
+    "wikipedia:ghost_towns_oklahoma": _parse_ghost_towns_page,
+    # Battle pages
+    "wikipedia:indian_wars": _parse_battles_page,
+    "wikipedia:war_of_1812": _parse_battles_page,
+    "wikipedia:mexican_american_war": _parse_battles_page,
+    "wikipedia:spanish_american_war": _parse_battles_page,
+    # Generic list pages (trading posts, missions, shipwrecks, ferries,
+    # stagecoach routes, pony express)
+    "wikipedia:trading_posts": _parse_generic_list_page,
+    "wikipedia:missions_california": _parse_generic_list_page,
+    "wikipedia:missions_texas": _parse_generic_list_page,
+    "wikipedia:missions_new_mexico": _parse_generic_list_page,
+    "wikipedia:missions_arizona": _parse_generic_list_page,
+    "wikipedia:shipwrecks": _parse_generic_list_page,
+    "wikipedia:ferries": _parse_generic_list_page,
+    "wikipedia:stagecoach_butterfield": _parse_generic_list_page,
+    "wikipedia:stagecoach_overland": _parse_generic_list_page,
+    "wikipedia:stagecoach_central": _parse_generic_list_page,
+    "wikipedia:pony_express": _parse_generic_list_page,
+    # Wagon trail pages
+    "wikipedia:oregon_trail": _parse_trails_page,
+    "wikipedia:california_trail": _parse_trails_page,
+    "wikipedia:mormon_trail": _parse_trails_page,
+    "wikipedia:santa_fe_trail": _parse_trails_page,
+    "wikipedia:el_camino_real": _parse_trails_page,
 }
 
 

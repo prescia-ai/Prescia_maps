@@ -50,6 +50,10 @@ class LocationType(str, enum.Enum):
     stagecoach_stop = "stagecoach_stop"
     spring = "spring"
     locale = "locale"
+    mission = "mission"
+    trading_post = "trading_post"
+    shipwreck = "shipwreck"
+    pony_express = "pony_express"
 
 
 class LinearFeatureType(str, enum.Enum):
@@ -68,6 +72,7 @@ class MapLayerType(str, enum.Enum):
     railroad = "railroad"
     trail = "trail"
     mining = "mining"
+    blm = "blm"
 
 
 # ---------------------------------------------------------------------------
@@ -193,9 +198,29 @@ async def create_tables() -> None:
     Called during application startup via the FastAPI lifespan context.
     PostGIS must already be installed in the PostgreSQL cluster; we only
     ensure the extension is enabled in the target database.
+
+    Also runs idempotent ALTER TYPE statements to add any new enum values
+    that may have been introduced after the initial schema was created.
     """
+    _new_location_types = ["mission", "trading_post", "shipwreck", "pony_express"]
+    _new_map_layer_types = ["blm"]
+
     async with engine.begin() as conn:
         # Enable PostGIS extension (idempotent)
         await conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis"))
         # Create all tables defined in the ORM
         await conn.run_sync(Base.metadata.create_all)
+        # Add any new LocationType enum values (idempotent)
+        for val in _new_location_types:
+            await conn.execute(
+                text(
+                    f"ALTER TYPE location_type_enum ADD VALUE IF NOT EXISTS '{val}'"
+                )
+            )
+        # Add any new MapLayerType enum values (idempotent)
+        for val in _new_map_layer_types:
+            await conn.execute(
+                text(
+                    f"ALTER TYPE map_layer_type_enum ADD VALUE IF NOT EXISTS '{val}'"
+                )
+            )

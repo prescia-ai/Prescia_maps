@@ -30,12 +30,17 @@ WEIGHTS: Dict[str, float] = {
     "event": 40.0,
     "church": 50.0,
     "school": 45.0,
-    "cemetery": 40.0,
+    "cemetery": 55.0,       # cemeteries are high value for detecting
     "fairground": 75.0,
-    "ferry": 65.0,
-    "stagecoach_stop": 70.0,
-    "spring": 30.0,
+    "ferry": 70.0,          # ferry crossings = high coin loss
+    "stagecoach_stop": 85.0, # highest value for detecting
+    "spring": 35.0,
     "locale": 35.0,
+    # New types from expanded data sources
+    "mission": 80.0,         # Spanish missions = very high value
+    "trading_post": 85.0,    # Trading posts = high commerce = high coin loss
+    "pony_express": 85.0,    # Pony Express stations = documented high value
+    "shipwreck": 60.0,       # River shipwrecks
 }
 
 # Modifiers (additive, applied before clamping)

@@ -10,16 +10,20 @@ GET /heatmap                – weighted density array for heatmap overlay
 GET /score?lat=&lon=        – interest score for a given coordinate
 POST /locations             – insert a new historical location
 POST /scrape                – trigger a fresh Wikipedia scrape (admin)
+GET /blm-lands              – BLM public land boundaries within radius
+GET /blm-lands/tile-url     – BLM tile service URL for direct map rendering
 """
 
 from __future__ import annotations
 
+import httpx
 import json
 import logging
-from typing import Any, Dict, List, Optional
+import time
+from typing import Any, Dict, List, Optional, Tuple
 from uuid import uuid4
 
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Response, status
 from geoalchemy2 import Geography
 from geoalchemy2.functions import ST_Buffer, ST_DWithin, ST_MakePoint, ST_SetSRID
 from sqlalchemy import cast, func, select, text
@@ -41,6 +45,22 @@ from app.scoring.engine import compute_heatmap_data, score_location
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+
+# ---------------------------------------------------------------------------
+# BLM in-memory cache
+# ---------------------------------------------------------------------------
+
+# Simple dict cache: key -> (timestamp, data)
+_BLM_CACHE: Dict[str, Tuple[float, Any]] = {}
+_BLM_CACHE_TTL = 3600.0  # 1 hour in seconds
+_BLM_SERVICE_URL = (
+    "https://gis.blm.gov/arcgis/rest/services/lands/"
+    "BLM_Natl_SMA_LimitedScale/MapServer/1/query"
+)
+_BLM_TILE_URL = (
+    "https://gis.blm.gov/arcgis/rest/services/lands/"
+    "BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
+)
 
 
 # ---------------------------------------------------------------------------
@@ -630,3 +650,110 @@ async def trigger_scrape(
         "skipped": skipped,
         "total_scraped": len(records),
     }
+
+
+# ---------------------------------------------------------------------------
+# BLM public lands
+# ---------------------------------------------------------------------------
+
+@router.get(
+    "/blm-lands/tile-url",
+    summary="BLM tile service URL for direct map rendering",
+    tags=["analysis"],
+)
+async def get_blm_tile_url() -> Dict[str, str]:
+    """
+    Return the BLM tile service URL and attribution metadata.
+
+    The URL uses the standard ``{z}/{y}/{x}`` format (note: y before x as
+    required by the BLM ArcGIS tile service).
+    """
+    return {
+        "url": _BLM_TILE_URL,
+        "attribution": "Bureau of Land Management",
+        "description": (
+            "BLM Surface Management Agency lands — "
+            "public land open to metal detecting with permit"
+        ),
+    }
+
+
+@router.get(
+    "/blm-lands",
+    response_model=GeoJSONFeatureCollection,
+    summary="BLM public lands within radius (legally detectable areas)",
+    tags=["analysis"],
+)
+async def get_blm_lands(
+    lat: float = Query(..., ge=-90.0, le=90.0),
+    lon: float = Query(..., ge=-180.0, le=180.0),
+    radius_km: float = Query(50.0, ge=1.0, le=500.0),
+    response: Optional[Response] = None,
+) -> GeoJSONFeatureCollection:
+    """
+    Return BLM public land boundaries within ``radius_km`` of the supplied
+    coordinate as a GeoJSON FeatureCollection.
+
+    Results are cached in memory for one hour.  When the upstream BLM
+    ArcGIS service is unavailable an empty FeatureCollection is returned
+    with a ``X-BLM-Warning`` response header.
+    """
+    cache_key = f"{lat:.4f}:{lon:.4f}:{radius_km:.1f}"
+    now = time.monotonic()
+
+    # Return cached result if fresh
+    if cache_key in _BLM_CACHE:
+        ts, cached_data = _BLM_CACHE[cache_key]
+        if now - ts < _BLM_CACHE_TTL:
+            return cached_data
+
+    # Build a simple bounding-box envelope from radius (approximate)
+    deg_per_km = 1.0 / 111.0
+    delta = radius_km * deg_per_km
+    envelope = (
+        f"{lon - delta},{lat - delta},{lon + delta},{lat + delta}"
+    )
+
+    params = {
+        "geometry": envelope,
+        "geometryType": "esriGeometryEnvelope",
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "ADMU_NAME,ADMIN_ST,NLCS_DESC",
+        "f": "geojson",
+        "resultRecordCount": 500,
+    }
+
+    empty_collection = GeoJSONFeatureCollection(
+        type="FeatureCollection", features=[]
+    )
+
+    try:
+        async with httpx.AsyncClient(timeout=15.0) as client:
+            resp = await client.get(_BLM_SERVICE_URL, params=params)
+            resp.raise_for_status()
+            data = resp.json()
+    except Exception as exc:
+        logger.warning("BLM API unavailable: %s", exc)
+        if response is not None:
+            response.headers["X-BLM-Warning"] = "BLM data unavailable"
+        _BLM_CACHE[cache_key] = (now, empty_collection)
+        return empty_collection
+
+    features = []
+    for feat in data.get("features", []):
+        props = feat.get("properties") or {}
+        features.append(
+            {
+                "type": "Feature",
+                "geometry": feat.get("geometry"),
+                "properties": {
+                    "name": props.get("ADMU_NAME", "BLM Land"),
+                    "state": props.get("ADMIN_ST", ""),
+                    "admin_unit": props.get("NLCS_DESC", ""),
+                },
+            }
+        )
+
+    result = GeoJSONFeatureCollection(type="FeatureCollection", features=features)
+    _BLM_CACHE[cache_key] = (now, result)
+    return result

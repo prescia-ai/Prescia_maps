@@ -18,6 +18,7 @@ const LAYER_DEFS: LayerDef[] = [
   { key: 'trails',    label: 'Trails & Routes',    color: 'bg-green-500',  icon: '🥾' },
   { key: 'mines',     label: 'Mines & Camps',      color: 'bg-yellow-500', icon: '⛏️' },
   { key: 'heatmap',   label: 'Activity Heatmap',   color: 'bg-orange-500', icon: '🌡️' },
+  { key: 'blm',       label: 'BLM Public Lands',   color: 'bg-yellow-600', icon: '🏔️' },
 ];
 
 export default function LayerControls({ layers, onChange }: LayerControlsProps) {
