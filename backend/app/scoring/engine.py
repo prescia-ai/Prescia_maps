@@ -12,7 +12,7 @@ import logging
 import math
 from typing import Any, Dict, List, Optional
 
-from app.scoring.semantic import compute_semantic_score
+from app.scoring.semantic import batch_compute_semantic_scores
 
 logger = logging.getLogger(__name__)
 
@@ -153,16 +153,18 @@ def score_location(
 
     # --- Location contributions ---
     location_contributions: List[float] = []
-    for loc in nearby_locations:
+    semantic_mults = batch_compute_semantic_scores([
+        {"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
+        for loc in nearby_locations
+    ])
+    for i, loc in enumerate(nearby_locations):
         loc_type = loc.get("type", "event")
         base_weight = WEIGHTS.get(loc_type, WEIGHTS["event"])
 
         # Apply semantic relevance multiplier if name/description available
         name = loc.get("name", "")
-        description = loc.get("description", "")
-        semantic_mult = 1.0
+        semantic_mult = semantic_mults[i]
         if name:
-            semantic_mult = compute_semantic_score(name, description, loc_type)
             base_weight = base_weight * semantic_mult
 
         loc_lat = loc.get("latitude") or lat
@@ -241,7 +243,11 @@ def compute_heatmap_data(
     max_weight = 0.0
 
     raw_points: List[Dict[str, float]] = []
-    for loc in all_locations:
+    semantic_mults = batch_compute_semantic_scores([
+        {"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
+        for loc in all_locations
+    ])
+    for i, loc in enumerate(all_locations):
         lat = loc.get("latitude")
         lon = loc.get("longitude")
         if lat is None or lon is None:
@@ -253,12 +259,9 @@ def compute_heatmap_data(
         confidence = float(loc.get("confidence", 0.5))
         weight = (base + age_b) * confidence
 
-        # Semantic multiplier for heatmap weighting
-        name = loc.get("name", "")
-        description = loc.get("description", "")
-        if name:
-            semantic_mult = compute_semantic_score(name, description, loc_type)
-            weight = weight * semantic_mult
+        # Semantic multiplier for heatmap weighting (only when name is available)
+        if loc.get("name", ""):
+            weight = weight * semantic_mults[i]
 
         raw_points.append({"lat": lat, "lon": lon, "weight": weight})
         if weight > max_weight:

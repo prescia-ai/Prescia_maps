@@ -95,8 +95,8 @@ def _get_reference_embeddings():
         return None, None
 
     try:
-        hotspot_embs = model.encode(HOTSPOT_REFERENCE_PHRASES, convert_to_numpy=True)
-        low_value_embs = model.encode(LOW_VALUE_PHRASES, convert_to_numpy=True)
+        hotspot_embs = model.encode(HOTSPOT_REFERENCE_PHRASES, convert_to_numpy=True, show_progress_bar=False)
+        low_value_embs = model.encode(LOW_VALUE_PHRASES, convert_to_numpy=True, show_progress_bar=False)
         return hotspot_embs, low_value_embs
     except Exception as exc:
         logger.warning("Failed to compute reference embeddings: %s", exc)
@@ -151,7 +151,7 @@ def compute_semantic_score(name: str, description: str = "", location_type: str 
 
         # Combine name + description + type into query text
         query_text = f"{name}. {description} Type: {location_type}".strip()
-        query_emb = model.encode([query_text], convert_to_numpy=True)[0]
+        query_emb = model.encode([query_text], convert_to_numpy=True, show_progress_bar=False)[0]
 
         # Max similarity to any hotspot phrase
         hotspot_sim = max(_cosine_sim(query_emb, ref) for ref in hotspot_embs)
