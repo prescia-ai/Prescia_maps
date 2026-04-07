@@ -16,6 +16,7 @@ const DEFAULT_LAYERS: LayerState = {
   trails:    true,
   mines:     true,
   heatmap:   false,
+  blm:       false,
 };
 
 export default function App() {

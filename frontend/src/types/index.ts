@@ -71,4 +71,5 @@ export interface LayerState {
   trails: boolean;
   mines: boolean;
   heatmap: boolean;
+  blm: boolean;
 }

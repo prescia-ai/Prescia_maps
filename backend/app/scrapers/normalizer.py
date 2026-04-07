@@ -19,6 +19,7 @@ LOCATION_TYPES = {
     "town", "mine", "structure", "event",
     "church", "school", "cemetery", "fairground",
     "ferry", "stagecoach_stop", "spring", "locale",
+    "mission", "trading_post", "shipwreck", "pony_express",
 }
 
 # Keyword sets used to classify events
@@ -51,7 +52,7 @@ _STRUCTURE_KEYWORDS = frozenset(
      "courthouse"]
 )
 _CHURCH_KEYWORDS = frozenset(
-    ["church", "chapel", "mission", "parish", "congregation"]
+    ["church", "chapel", "parish", "congregation"]
 )
 _SCHOOL_KEYWORDS = frozenset(
     ["school", "academy", "university", "college", "seminary"]
@@ -67,6 +68,22 @@ _FERRY_KEYWORDS = frozenset(
 )
 _SPRING_KEYWORDS = frozenset(
     ["spring", "hot spring", "mineral spring"]
+)
+_MISSION_KEYWORDS = frozenset(
+    ["mission", "presidio", "misión"]
+)
+_TRADING_POST_KEYWORDS = frozenset(
+    ["trading post", "fur trade", "trading company", "fur trading"]
+)
+_PONY_EXPRESS_KEYWORDS = frozenset(
+    ["pony express"]
+)
+_SHIPWRECK_KEYWORDS = frozenset(
+    ["shipwreck", "sunk", "steamboat", "wreck", "sunken"]
+)
+_STAGECOACH_KEYWORDS = frozenset(
+    ["stage", "stagecoach", "relay station", "overland mail", "stage stop",
+     "stage route", "butterfield", "stage line"]
 )
 
 # Regex patterns for year extraction
@@ -117,6 +134,11 @@ def classify_event_type(name: str, description: str = "") -> str:
         "fairground": sum(1 for kw in _FAIRGROUND_KEYWORDS if kw in combined),
         "ferry": sum(1 for kw in _FERRY_KEYWORDS if kw in combined),
         "spring": sum(1 for kw in _SPRING_KEYWORDS if kw in combined),
+        "mission": sum(1 for kw in _MISSION_KEYWORDS if kw in combined),
+        "trading_post": sum(1 for kw in _TRADING_POST_KEYWORDS if kw in combined),
+        "pony_express": sum(1 for kw in _PONY_EXPRESS_KEYWORDS if kw in combined),
+        "shipwreck": sum(1 for kw in _SHIPWRECK_KEYWORDS if kw in combined),
+        "stagecoach_stop": sum(1 for kw in _STAGECOACH_KEYWORDS if kw in combined),
     }
 
     best_type = max(scores, key=lambda k: scores[k])

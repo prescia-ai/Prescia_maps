@@ -32,3 +32,8 @@ export async function fetchScore(lat: number, lon: number): Promise<ScoreRespons
   });
   return data;
 }
+
+export async function fetchBlmTileUrl(): Promise<{ url: string; attribution: string }> {
+  const { data } = await api.get<{ url: string; attribution: string }>('/blm-lands/tile-url');
+  return data;
+}
