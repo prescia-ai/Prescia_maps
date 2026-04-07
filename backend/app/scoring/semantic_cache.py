@@ -36,9 +36,9 @@ def _cache_path() -> Path:
 # ---------------------------------------------------------------------------
 
 def text_hash(name: str, description: str, location_type: str) -> str:
-    """Return a short SHA-256 hash of the location's text fields."""
+    """Return a 16-character SHA-256 hex digest of the location's text fields."""
     raw = f"{name}|{description}|{location_type}".encode()
-    return hashlib.sha256(raw).hexdigest()[:12]
+    return hashlib.sha256(raw).hexdigest()[:16]
 
 
 # ---------------------------------------------------------------------------

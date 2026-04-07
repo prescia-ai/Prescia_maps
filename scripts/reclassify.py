@@ -188,7 +188,7 @@ async def reclassify(dry_run: bool = False, source_filter: Optional[str] = None)
                 if dry_run:
                     print(f"  [DRY-RUN] {loc.name!r}: {existing_str!r} → {new_type!r}  (source={loc.source!r})")
                 else:
-                    loc.type = new_type
+                    loc.type = LocationType(new_type)
                 updated += 1
                 type_counter[new_type] += 1
             else:

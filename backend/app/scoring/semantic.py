@@ -22,7 +22,7 @@ import logging
 from functools import lru_cache
 from typing import List, Optional
 
-from app.scoring.semantic_cache import get_cached, set_cached
+from app.scoring.semantic_cache import _cache, get_cached, save_cache, set_cached, text_hash
 
 logger = logging.getLogger(__name__)
 
@@ -263,16 +263,21 @@ def batch_compute_semantic_scores(
             multiplier = round(max(0.5, min(1.5, 1.0 + net * 0.5)), 4)
             results[orig_i] = multiplier
 
-            # Write back to cache
+            # Accumulate cache updates; flush to disk once after the loop
             if use_cache:
                 rec = records[orig_i]
-                set_cached(
-                    location_ids[orig_i],  # type: ignore[index]
-                    rec.get("name", ""),
-                    rec.get("description", ""),
-                    rec.get("type", ""),
-                    multiplier,
-                )
+                _cache[str(location_ids[orig_i])] = {  # type: ignore[index]
+                    "multiplier": multiplier,
+                    "hash": text_hash(
+                        rec.get("name", ""),
+                        rec.get("description", ""),
+                        rec.get("type", ""),
+                    ),
+                }
+
+        # Single disk write for the entire batch
+        if use_cache and miss_indices:
+            save_cache(_cache)
 
         return results
 
