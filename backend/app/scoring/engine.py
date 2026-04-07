@@ -12,6 +12,8 @@ import logging
 import math
 from typing import Any, Dict, List, Optional
 
+from app.scoring.semantic import compute_semantic_score
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -55,6 +57,9 @@ _MAX_AGE_BONUS = 20.0
 
 # Distance decay: score contribution falls off as 1/d² (softened)
 _DECAY_SIGMA_KM = 2.0   # effective "radius" of influence
+
+# Minimum semantic multiplier deviation to include in the score breakdown dict
+_SEMANTIC_BREAKDOWN_THRESHOLD = 0.05
 
 
 # ---------------------------------------------------------------------------
@@ -152,6 +157,14 @@ def score_location(
         loc_type = loc.get("type", "event")
         base_weight = WEIGHTS.get(loc_type, WEIGHTS["event"])
 
+        # Apply semantic relevance multiplier if name/description available
+        name = loc.get("name", "")
+        description = loc.get("description", "")
+        semantic_mult = 1.0
+        if name:
+            semantic_mult = compute_semantic_score(name, description, loc_type)
+            base_weight = base_weight * semantic_mult
+
         loc_lat = loc.get("latitude") or lat
         loc_lon = loc.get("longitude") or lon
         dist_km = _haversine_km(lat, lon, loc_lat, loc_lon)
@@ -163,6 +176,8 @@ def score_location(
 
         location_contributions.append(contribution)
         breakdown[f"loc:{loc.get('name', loc_type)[:30]}"] = round(contribution, 2)
+        if name and abs(semantic_mult - 1.0) > _SEMANTIC_BREAKDOWN_THRESHOLD:
+            breakdown[f"semantic:{name[:20]}"] = round(semantic_mult, 3)
 
     if location_contributions:
         # Sum contributions with overlap multiplier
@@ -237,6 +252,13 @@ def compute_heatmap_data(
         age_b = _age_bonus(loc.get("year"))
         confidence = float(loc.get("confidence", 0.5))
         weight = (base + age_b) * confidence
+
+        # Semantic multiplier for heatmap weighting
+        name = loc.get("name", "")
+        description = loc.get("description", "")
+        if name:
+            semantic_mult = compute_semantic_score(name, description, loc_type)
+            weight = weight * semantic_mult
 
         raw_points.append({"lat": lat, "lon": lon, "weight": weight})
         if weight > max_weight:

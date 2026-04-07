@@ -13,7 +13,7 @@ import uuid
 from app.models.database import AsyncSessionLocal, create_tables
 from app.models.database import Location
 from app.scrapers.wikipedia import scrape_all
-from app.scrapers.normalizer import classify_event_type, assign_confidence, normalize_year, clean_name
+from app.scrapers.normalizer import classify_event_type, assign_confidence, normalize_year, clean_name, is_blocked
 from geoalchemy2.shape import from_shape
 from shapely.geometry import Point
 from sqlalchemy import select
@@ -47,11 +47,16 @@ async def main():
         inserted = 0
         skipped_no_coords = 0
         skipped_duplicate = 0
+        skipped_blocked = 0
 
         for event in events:
             name = clean_name(event.get('name', ''))
             if not name:
                 skipped_no_coords += 1
+                continue
+
+            if is_blocked(name, event.get('description', '')):
+                skipped_blocked += 1
                 continue
 
             if name in existing_names:
@@ -89,7 +94,7 @@ async def main():
             inserted += 1
 
         await session.commit()
-        print(f"Done. Inserted: {inserted}, Skipped (no coords): {skipped_no_coords}, Skipped (duplicate): {skipped_duplicate}")
+        print(f"Done. Inserted: {inserted}, Skipped (no coords): {skipped_no_coords}, Skipped (duplicate): {skipped_duplicate}, Skipped (blocked): {skipped_blocked}")
 
 if __name__ == '__main__':
     asyncio.run(main())
