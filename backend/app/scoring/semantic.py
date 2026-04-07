@@ -22,6 +22,8 @@ import logging
 from functools import lru_cache
 from typing import List, Optional
 
+from app.scoring.semantic_cache import get_cached, set_cached
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -175,6 +177,7 @@ def compute_semantic_score(name: str, description: str = "", location_type: str 
 
 def batch_compute_semantic_scores(
     records: List[dict],
+    location_ids: Optional[List[str]] = None,
 ) -> List[float]:
     """
     Compute semantic scores for a batch of records efficiently.
@@ -182,8 +185,15 @@ def batch_compute_semantic_scores(
     Batching is much faster than individual calls since the model
     can process multiple texts in one forward pass.
 
+    If ``location_ids`` is provided (a parallel list of UUID strings), the
+    disk cache is consulted before encoding.  Cache hits are returned
+    immediately; only misses are sent to the model.  Results for misses are
+    then written back to the cache.  When ``location_ids`` is ``None``,
+    caching is skipped (backward compatible).
+
     Args:
-        records: List of dicts with keys: name, description, type
+        records:      List of dicts with keys: name, description, type
+        location_ids: Optional parallel list of UUID strings for caching.
 
     Returns:
         List of float multipliers, same length as records, in [0.5, 1.5].
@@ -203,24 +213,62 @@ def batch_compute_semantic_scores(
     if hotspot_embs is None:
         return [1.0] * len(records)
 
+    # --- Cache-aware path ------------------------------------------------
+    use_cache = location_ids is not None and len(location_ids) == len(records)
+
+    # Pre-fill results with None; populate from cache where possible
+    results: List[Optional[float]] = [None] * len(records)
+    miss_indices: List[int] = []
+
+    if use_cache:
+        for i, (rec, lid) in enumerate(zip(records, location_ids)):
+            cached = get_cached(
+                lid,
+                rec.get("name", ""),
+                rec.get("description", ""),
+                rec.get("type", ""),
+            )
+            if cached is not None:
+                results[i] = cached
+            else:
+                miss_indices.append(i)
+    else:
+        miss_indices = list(range(len(records)))
+
+    if not miss_indices:
+        return results  # type: ignore[return-value]
+
+    # --- Encode only the cache-miss records ------------------------------
     try:
+        miss_records = [records[i] for i in miss_indices]
         texts = [
             f"{r.get('name', '')}. {r.get('description', '')} Type: {r.get('type', '')}".strip()
-            for r in records
+            for r in miss_records
         ]
 
         query_embs = model.encode(texts, convert_to_numpy=True, batch_size=64, show_progress_bar=False)
 
-        scores = []
-        for qe in query_embs:
+        for j, (qe, orig_i) in enumerate(zip(query_embs, miss_indices)):
             hotspot_sim = max(_cosine_sim(qe, ref) for ref in hotspot_embs)
             low_value_sim = max(_cosine_sim(qe, ref) for ref in low_value_embs)
             net = hotspot_sim - low_value_sim
             multiplier = round(max(0.5, min(1.5, 1.0 + net * 0.5)), 4)
-            scores.append(multiplier)
+            results[orig_i] = multiplier
 
-        return scores
+            # Write back to cache
+            if use_cache:
+                rec = records[orig_i]
+                set_cached(
+                    location_ids[orig_i],
+                    rec.get("name", ""),
+                    rec.get("description", ""),
+                    rec.get("type", ""),
+                    multiplier,
+                )
+
+        return results  # type: ignore[return-value]
 
     except Exception as exc:
         logger.warning("Batch semantic scoring failed: %s", exc)
-        return [1.0] * len(records)
+        # Fill remaining None slots with neutral score
+        return [r if r is not None else 1.0 for r in results]
