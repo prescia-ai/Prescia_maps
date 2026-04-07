@@ -821,6 +821,10 @@ _PAGE_PARSERS = {
     "wikipedia:old_spanish_trail": _parse_trails_page,
 }
 
+# Scraper-assigned types that are specific enough to trust over the classifier.
+# Only types listed here will bypass the keyword classifier in the normalisation pass.
+_GENERIC_DEFAULT_TYPES: frozenset = frozenset({"event", "structure"})
+
 
 # ---------------------------------------------------------------------------
 # Geocoding enrichment
@@ -872,52 +876,50 @@ async def _enrich_with_geocoding(
 # Public API
 # ---------------------------------------------------------------------------
 
-async def scrape_all(
+async def scrape_source(
+    page_config: Dict[str, str],
     geocode_missing: bool = True,
     timeout: float = 30.0,
 ) -> List[Dict[str, Any]]:
     """
-    Scrape all configured Wikipedia pages and return normalised records.
+    Scrape and normalise a single Wikipedia page config entry.
 
-    Each returned record is a dict with keys:
-    ``name``, ``description``, ``year``, ``latitude``, ``longitude``,
-    ``source``, ``type``, ``confidence``.
+    This is the per-source building block used by :func:`scrape_all` and by
+    the CLI script for per-source progress reporting.
 
     Args:
+        page_config:     A single entry from :data:`WIKIPEDIA_PAGES`.
         geocode_missing: If ``True``, attempt to geocode records that lack
                          explicit coordinates (slower but more complete).
         timeout:         HTTP timeout in seconds.
 
     Returns:
-        List of record dicts ready for database insertion.
+        List of finalised record dicts for this source.
     """
-    all_records: List[Dict[str, Any]] = []
+    url = page_config["url"]
+    source = page_config["source"]
+    logger.info("Fetching %s", url)
 
     async with httpx.AsyncClient(timeout=timeout) as client:
-        for page_config in WIKIPEDIA_PAGES:
-            url = page_config["url"]
-            source = page_config["source"]
-            logger.info("Fetching %s", url)
+        soup = await _fetch_page(client, url)
 
-            soup = await _fetch_page(client, url)
-            if soup is None:
-                continue
+    if soup is None:
+        return []
 
-            parser = _PAGE_PARSERS.get(source)
-            if parser is None:
-                logger.warning("No parser registered for source %r", source)
-                continue
+    parser = _PAGE_PARSERS.get(source)
+    if parser is None:
+        logger.warning("No parser registered for source %r", source)
+        return []
 
-            records = parser(soup, source)
-            all_records.extend(records)
+    records = parser(soup, source)
 
-    # Optionally fill coordinates via geocoding
+    # Optionally fill coordinates via geocoding for this batch
     if geocode_missing:
-        all_records = await _enrich_with_geocoding(all_records)
+        records = await _enrich_with_geocoding(records)
 
     # Final normalisation pass
     finalised: List[Dict[str, Any]] = []
-    for rec in all_records:
+    for rec in records:
         if is_blocked(rec["name"], rec.get("description", "")):
             logger.debug("Blocked record: %r", rec["name"])
             continue
@@ -928,14 +930,10 @@ async def scrape_all(
         # Only let the classifier override if the default_type is generic.
         # For specific scraper-assigned types (town, trail, stagecoach_stop,
         # ferry, mission, etc.) trust the scraper — it knows better.
-        GENERIC_DEFAULT_TYPES = {"event", "structure"}
-        if default_type not in GENERIC_DEFAULT_TYPES:
-            # Specific default — trust the scraper
+        if default_type not in _GENERIC_DEFAULT_TYPES:
             event_type = default_type
         elif event_type == "event":
-            # Classifier found nothing — fall back to scraper default
             event_type = default_type
-        # else: classifier found something on a generic default — use it
 
         has_coords = (
             rec.get("latitude") is not None and rec.get("longitude") is not None
@@ -959,5 +957,36 @@ async def scrape_all(
             }
         )
 
-    logger.info("Total records scraped and normalised: %d", len(finalised))
+    logger.info("Scraped and normalised %d records from %s", len(finalised), url)
     return finalised
+
+
+async def scrape_all(
+    geocode_missing: bool = True,
+    timeout: float = 30.0,
+) -> List[Dict[str, Any]]:
+    """
+    Scrape all configured Wikipedia pages and return normalised records.
+
+    Each returned record is a dict with keys:
+    ``name``, ``description``, ``year``, ``latitude``, ``longitude``,
+    ``source``, ``type``, ``confidence``.
+
+    Args:
+        geocode_missing: If ``True``, attempt to geocode records that lack
+                         explicit coordinates (slower but more complete).
+        timeout:         HTTP timeout in seconds.
+
+    Returns:
+        List of record dicts ready for database insertion.
+    """
+    all_records: List[Dict[str, Any]] = []
+
+    for page_config in WIKIPEDIA_PAGES:
+        records = await scrape_source(
+            page_config, geocode_missing=geocode_missing, timeout=timeout
+        )
+        all_records.extend(records)
+
+    logger.info("Total records scraped and normalised: %d", len(all_records))
+    return all_records
