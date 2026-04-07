@@ -30,8 +30,10 @@ cd Prescia_maps
 # 2. Start all services (database + backend)
 docker compose up --build
 
-# 3. Load seed datasets (in a second terminal)
-docker compose exec backend python /scripts/load_datasets.py
+# 3. Import data (in a second terminal — run one or more scrapers)
+docker compose exec backend python /scripts/USminesscraper.py --limit 1000
+docker compose exec backend python /scripts/Ghosttownsscraper.py --gnis-only --limit 1000
+docker compose exec backend python /scripts/Historicscraper.py --skip-ohm --limit 1000
 
 # 4. Open the API docs
 open http://localhost:8000/docs
@@ -75,50 +77,76 @@ npm run dev   # Starts Vite dev server on http://localhost:5173
 
 ## Populating Data
 
-### Load seed datasets (trails, battles, forts, mines)
+The database is populated by three purpose-built scrapers that each own a single domain of historical data. Each scraper downloads bulk authoritative datasets, deduplicates records, and inserts them with proper geometry and confidence scoring.
+
+### 1. US Mines — `USminesscraper.py`
 
 ```bash
-# From project root
-python scripts/load_datasets.py
+# Full import (downloads USGS MRDS bulk CSV — 800,000+ mine sites)
+python scripts/USminesscraper.py
+
+# Filter by state
+python scripts/USminesscraper.py --state CO
+
+# Limit records (useful for testing)
+python scripts/USminesscraper.py --limit 1000
+
+# Dry-run: parse without inserting
+python scripts/USminesscraper.py --dry-run
 ```
 
-Inserts approximately 60 pre-defined historical locations and 4 linear features (Oregon Trail, Trail of Tears, Santa Fe Trail, Transcontinental Railroad) directly from hardcoded coordinates — no external files required.
+Downloads the USGS Mineral Resources Data System (MRDS) bulk CSV and imports mine site records with coordinates, commodity tags, and status. Replaces all previous mine-related data sources.
 
-### Scrape Wikipedia
+### 2. Ghost Towns & Abandoned Places — `Ghosttownsscraper.py`
 
 ```bash
-# From project root
-python scripts/scrape_wikipedia.py
+# Full import (GNIS + web sources)
+python scripts/Ghosttownsscraper.py
+
+# GNIS only (skip web scraping)
+python scripts/Ghosttownsscraper.py --gnis-only
+
+# Filter by state
+python scripts/Ghosttownsscraper.py --state CO
+
+# Limit records
+python scripts/Ghosttownsscraper.py --limit 5000
 ```
 
-Fetches Civil War battle lists, ghost towns, Revolutionary War battles, US forts, state-specific ghost towns, and other historical Wikipedia pages. Geocodes any records missing coordinates via Nominatim, then inserts them into the database.
+Downloads the USGS GNIS National File and scrapes Legends of America and ghosttowns.com for ghost towns, churches, cemeteries, schools, springs, camps, and other abandoned places. Replaces all previous ghost town and GNIS data sources.
 
-### Load GNIS data (USGS Geographic Names)
+### 3. Historic Places, Routes & Features — `Historicscraper.py`
 
 ```bash
-# Load all high-value feature classes nation-wide
-python scripts/load_gnis.py
+# Full import (NRHP + NPS + OpenHistoricalMap)
+python scripts/Historicscraper.py
 
-# Load only a single state (e.g. Colorado)
-python scripts/load_gnis.py --state CO
+# Skip NPS (if no API key)
+python scripts/Historicscraper.py --skip-nps
 
-# Smoke test: import first 500 records
-python scripts/load_gnis.py --limit 500
+# Skip OpenHistoricalMap
+python scripts/Historicscraper.py --skip-ohm
+
+# Specific state
+python scripts/Historicscraper.py --state TX
+
+# Dry-run
+python scripts/Historicscraper.py --dry-run
 ```
 
-Downloads the USGS National Geographic Names Information System (GNIS) file and imports mines, churches, schools, cemeteries, camps, springs, and other named places — potentially 50,000+ records with pre-existing coordinates (no geocoding needed).
+Imports from the National Register of Historic Places (NRHP), NPS API (requires `NPS_API_KEY`), and OpenHistoricalMap Overpass API. Handles both point features (battles, forts, stations) and linear features (abandoned railways, historic trails). Replaces all previous NRHP, NPS, and Wikipedia battle/trail/fort data sources.
 
-### Load NPS data (National Park Service)
+### Post-import enrichment
 
 ```bash
-# Requires NPS_API_KEY in backend/.env
-python scripts/load_nps.py
+# Enrich records with Wikipedia descriptions, corrected types, and years
+python scripts/enrich_locations.py
 
-# Dry-run: fetch and print records without inserting
-python scripts/load_nps.py --dry-run
+# Reclassify location types using source-label-first logic
+python scripts/reclassify.py
 ```
 
-Fetches battlefields, historic sites, historical parks, military parks, and monuments from the NPS developer API. Records are inserted with `confidence=0.95` (highest authority). Requires a free NPS API key — set `NPS_API_KEY` in `backend/.env`.
+All three scrapers support crash-safe checkpointing (`--checkpoint`, `--fresh`) and can resume interrupted imports.
 
 ---
 

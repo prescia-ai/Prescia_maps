@@ -33,3 +33,8 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Scraper checkpoints & downloaded data
+*_checkpoint.json
+*.checkpoint.json
+scrape_checkpoint*.json
