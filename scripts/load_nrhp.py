@@ -262,7 +262,7 @@ async def _insert_records(
     stmt = pg_insert(Location).values(records).on_conflict_do_nothing()
     result = await session.execute(stmt)
     await session.commit()
-    return result.rowcount or len(records)
+    return result.rowcount or 0
 
 
 # ---------------------------------------------------------------------------
@@ -314,8 +314,7 @@ async def _run(
 
     if dry_run:
         for rec in records[:20]:
-            coords = f"({rec['latitude']:.4f}, {rec['longitude']:.4f})"
-            logger.info("  [DRY-RUN] %s (type=%s) @ %s", rec["name"], rec["type"], coords)
+            logger.info("  [DRY-RUN] %s (type=%s, source=%s)", rec["name"], rec["type"], rec["source"])
         logger.info("Dry-run complete — %d records would be inserted.", len(records))
         await engine.dispose()
         return

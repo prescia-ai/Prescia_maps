@@ -688,7 +688,7 @@ async def get_blm_lands(
     lat: float = Query(..., ge=-90.0, le=90.0),
     lon: float = Query(..., ge=-180.0, le=180.0),
     radius_km: float = Query(50.0, ge=1.0, le=500.0),
-    response: Response = None,  # type: ignore[assignment]
+    response: Optional[Response] = None,
 ) -> GeoJSONFeatureCollection:
     """
     Return BLM public land boundaries within ``radius_km`` of the supplied

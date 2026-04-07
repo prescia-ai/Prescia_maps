@@ -114,7 +114,7 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
     {
         "url": "https://en.wikipedia.org/wiki/List_of_trading_posts_of_the_American_fur_trade",
         "source": "wikipedia:trading_posts",
-        "default_type": "structure",
+        "default_type": "trading_post",
     },
     # Native American battles
     {
@@ -142,28 +142,28 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
     {
         "url": "https://en.wikipedia.org/wiki/List_of_California_missions",
         "source": "wikipedia:missions_california",
-        "default_type": "structure",
+        "default_type": "mission",
     },
     {
         "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_Texas",
         "source": "wikipedia:missions_texas",
-        "default_type": "structure",
+        "default_type": "mission",
     },
     {
         "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_New_Mexico",
         "source": "wikipedia:missions_new_mexico",
-        "default_type": "structure",
+        "default_type": "mission",
     },
     {
         "url": "https://en.wikipedia.org/wiki/Spanish_missions_in_Arizona",
         "source": "wikipedia:missions_arizona",
-        "default_type": "structure",
+        "default_type": "mission",
     },
     # Shipwrecks
     {
         "url": "https://en.wikipedia.org/wiki/List_of_shipwrecks_of_North_America",
         "source": "wikipedia:shipwrecks",
-        "default_type": "structure",
+        "default_type": "shipwreck",
     },
     # Ferries
     {
