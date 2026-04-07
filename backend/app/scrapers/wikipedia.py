@@ -38,7 +38,7 @@ WIKIPEDIA_PAGES: List[Dict[str, str]] = [
         "default_type": "town",
     },
     {
-        "url": "https://en.wikipedia.org/wiki/Historic_trails_in_the_United_States",
+        "url": "https://en.wikipedia.org/wiki/Historic_trails_and_roads_in_the_United_States",
         "source": "wikipedia:historic_trails",
         "default_type": "trail",
     },
