@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup, Tag
 
 from app.scrapers.normalizer import assign_confidence, clean_name, classify_event_type, normalize_year
 from app.services import geocoding
+from app.services import wiki_geocoding
 
 logger = logging.getLogger(__name__)
 
@@ -411,6 +412,7 @@ def _parse_battles_page(soup: BeautifulSoup, source: str) -> List[Dict[str, Any]
                     "latitude": coords[0] if coords else None,
                     "longitude": coords[1] if coords else None,
                     "source": source,
+                    "wiki_title": name,
                     "location_hint": f"{name}, {state_text}".strip(", "),
                     "default_type": "battle",
                 }
@@ -466,6 +468,7 @@ def _parse_ghost_towns_page(soup: BeautifulSoup, source: str) -> List[Dict[str, 
                         "latitude": coords[0] if coords else None,
                         "longitude": coords[1] if coords else None,
                         "source": source,
+                        "wiki_title": name,
                         "location_hint": (
                             f"{name}, {current_state}, United States"
                             if current_state else name
@@ -588,6 +591,7 @@ def _parse_revolutionary_war_battles_page(
                     "latitude": coords[0] if coords else None,
                     "longitude": coords[1] if coords else None,
                     "source": source,
+                    "wiki_title": name,
                     "location_hint": f"{name}, {state_text}".strip(", "),
                     "default_type": "battle",
                 }
@@ -798,14 +802,14 @@ _PAGE_PARSERS = {
 
 async def _enrich_with_geocoding(
     records: List[Dict[str, Any]],
-    concurrency: int = 3,
+    concurrency: int = 15,
 ) -> List[Dict[str, Any]]:
     """
-    Fill in missing coordinates using Nominatim geocoding.
+    Fill in missing coordinates using Wikipedia Geosearch API with Nominatim fallback.
 
-    To respect the 1 req/sec Nominatim policy, we use a semaphore to
-    limit concurrent requests.  Records that still have no coordinates
-    after geocoding are kept (they may be inserted with NULL geom).
+    Higher concurrency (15 vs the old 3) is safe because the Wikipedia API
+    has no meaningful rate limit. Nominatim (1 req/sec) is only used as a
+    last resort, and its rate limiting is enforced inside geocoding.geocode().
 
     Args:
         records:     List of raw scraped record dicts.
@@ -820,11 +824,19 @@ async def _enrich_with_geocoding(
         if record.get("latitude") is not None and record.get("longitude") is not None:
             return record
         async with sem:
+            # Try exact article title first (fastest path)
+            wiki_title = record.get("wiki_title")
+            if wiki_title:
+                coords = await wiki_geocoding.get_article_coords(wiki_title)
+                if coords:
+                    record["latitude"], record["longitude"] = coords
+                    return record
+
+            # Fall back to geocode with location_hint (does wiki search then Nominatim)
             hint = record.get("location_hint", record["name"])
             coords = await geocoding.geocode(hint)
             if coords:
                 record["latitude"], record["longitude"] = coords
-                logger.debug("Geocoded %r -> %s", hint, coords)
             return record
 
     return list(await asyncio.gather(*(_geocode_one(r) for r in records)))

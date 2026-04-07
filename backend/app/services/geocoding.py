@@ -1,9 +1,8 @@
 """
-Nominatim geocoding service with rate-limiting and in-memory caching.
+Geocoding service with Wikipedia-first strategy and Nominatim fallback.
 
-Uses geopy's async Nominatim adapter wrapped in a simple asyncio-safe
-token-bucket style rate limiter so we stay within the 1 req/sec policy
-of the public Nominatim endpoint.
+Tries the Wikipedia Geosearch API first (fast, no rate limit), then falls
+back to Nominatim (1 req/sec) only when Wikipedia returns nothing.
 """
 
 import asyncio
@@ -14,6 +13,7 @@ from typing import Optional, Tuple
 import httpx
 
 from app.config import settings
+from app.services import wiki_geocoding
 
 logger = logging.getLogger(__name__)
 
@@ -68,8 +68,12 @@ async def geocode(query: str) -> Optional[Tuple[float, float]]:
     """
     Geocode a free-form place name to (latitude, longitude).
 
-    Results are cached in memory for the lifetime of the process so that
-    repeated lookups for the same place don't consume additional API quota.
+    Strategy (in order):
+    1. Wikipedia article coordinates (fast, no rate limit)
+    2. Wikipedia search + article coordinates (for non-exact titles)
+    3. Nominatim free-text geocoding (slow fallback, 1 req/sec)
+
+    Results are cached in memory.
 
     Args:
         query: Human-readable location string (e.g. ``"Gettysburg, Pennsylvania"``).
@@ -84,12 +88,26 @@ async def geocode(query: str) -> Optional[Tuple[float, float]]:
     if cache_key in _cache:
         return _cache[cache_key]
 
+    # Strategy 1: Direct Wikipedia article lookup
+    coords = await wiki_geocoding.get_article_coords(query)
+    if coords:
+        _cache[cache_key] = coords
+        return coords
+
+    # Strategy 2: Wikipedia search
+    coords = await wiki_geocoding.search_and_get_coords(query)
+    if coords:
+        _cache[cache_key] = coords
+        return coords
+
+    # Strategy 3: Nominatim fallback (rate-limited)
+    logger.debug("Falling back to Nominatim for %r", query)
     result = await _rate_limited_get({"q": query})
     if result:
         try:
-            coords: Tuple[float, float] = (float(result["lat"]), float(result["lon"]))
+            coords = (float(result["lat"]), float(result["lon"]))
             _cache[cache_key] = coords
-            logger.debug("Geocoded %r -> %s", query, coords)
+            logger.debug("Nominatim geocoded %r -> %s", query, coords)
             return coords
         except (KeyError, ValueError) as exc:
             logger.warning("Could not parse Nominatim result for %r: %s", query, exc)
