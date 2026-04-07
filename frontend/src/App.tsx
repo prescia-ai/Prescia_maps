@@ -108,8 +108,8 @@ export default function App() {
         <LayerControls layers={layers} onChange={setLayers} />
       </div>
 
-      {/* Bottom-right: info / score panels */}
-      <div className="absolute bottom-6 right-4 z-10 flex flex-col gap-3 items-end">
+      {/* Bottom-right: info / score panels (offset left of legend) */}
+      <div className="absolute bottom-6 right-48 z-10 flex flex-col gap-3 items-end">
         {selectedFeature && (
           <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
         )}
@@ -136,8 +136,8 @@ export default function App() {
         </div>
       )}
 
-      {/* Legend */}
-      <div className="absolute bottom-6 left-4 z-10">
+      {/* Legend – bottom-right, always visible */}
+      <div className="absolute bottom-6 right-4 z-10">
         <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-xl p-3 text-xs text-slate-300">
           <p className="font-semibold text-slate-400 uppercase tracking-widest mb-2 text-[10px]">Legend</p>
           <div className="space-y-1">
