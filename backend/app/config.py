@@ -39,5 +39,8 @@ class Settings(BaseSettings):
     # Scoring
     SCORE_SEARCH_RADIUS_KM: float = 10.0
 
+    # Semantic scoring
+    SEMANTIC_SCORING_ENABLED: bool = True
+
 
 settings = Settings()

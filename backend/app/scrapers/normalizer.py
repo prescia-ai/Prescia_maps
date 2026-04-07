@@ -220,6 +220,107 @@ def normalize_year(text: str) -> Optional[int]:
     return None
 
 
+# ---------------------------------------------------------------------------
+# Metal-detecting blocklist — locations to exclude from the database
+# ---------------------------------------------------------------------------
+
+# These keywords indicate protected, inaccessible, or low-value locations.
+# Records matching any of these are silently dropped during ingestion.
+BLOCKLIST_PHRASES: frozenset[str] = frozenset([
+    # Protected federal land — metal detecting prohibited
+    "national park",
+    "national monument",       # general monuments (not battlefield monuments)
+    "national recreation area",
+    "national seashore",
+    "national lakeshore",
+    "national preserve",
+    "national wilderness",
+    "wilderness area",
+    "wildlife refuge",
+    "national wildlife",
+    "nature reserve",
+    "nature preserve",
+    "national forest",         # detecting allowed with permit but low coin density
+    # State protected land
+    "state park",
+    "state forest",
+    "state wildlife",
+    "state nature",
+    # Modern infrastructure — no historical artifacts
+    "visitor center",
+    "interpretive center",
+    "museum",
+    "gift shop",
+    "parking lot",
+    "campground",              # modern campground, not historic camp
+    # Low-value modern locations
+    "interstate highway",
+    "shopping center",
+    "airport",
+    "military base",           # active military base
+    "restricted area",
+    "private property",
+    # Broad categories with no coin loss value
+    "national historic trail",  # the trail itself (linear), not a stop on it
+])
+
+# Exception keywords — if ANY of these appear alongside a blocklist phrase,
+# the record is NOT blocked. e.g. "National Monument" alone is blocked, but
+# "Battlefield National Monument" is NOT blocked.
+BLOCKLIST_EXCEPTIONS: frozenset[str] = frozenset([
+    "battlefield",
+    "battle",
+    "fort",
+    "camp",
+    "historic site",
+    "historical site",
+    "historic district",
+    "trading post",
+    "stage",
+    "mission",
+    "ferry",
+    "mine",
+    "ghost town",
+    "cemetery",
+])
+
+
+def is_blocked(name: str, description: str = "") -> bool:
+    """
+    Return True if a record should be excluded from the database.
+
+    A record is blocked if its name or description contains a blocklist
+    phrase AND does not contain any exception keyword. This filters out
+    national parks, protected areas, and modern infrastructure while
+    preserving battlefield monuments, historic forts within parks, etc.
+
+    Args:
+        name:        Location name.
+        description: Optional description text.
+
+    Returns:
+        True if the record should be dropped, False if it should be kept.
+    """
+    combined = f"{name} {description}".lower()
+
+    # Check if any blocklist phrase matches
+    matched_phrase = None
+    for phrase in BLOCKLIST_PHRASES:
+        if phrase in combined:
+            matched_phrase = phrase
+            break
+
+    if matched_phrase is None:
+        return False  # No blocklist match — keep the record
+
+    # Check if any exception keyword saves it
+    for exception in BLOCKLIST_EXCEPTIONS:
+        if exception in combined:
+            return False  # Exception found — keep the record
+
+    return True  # Blocked
+
+
 def clean_name(name: str) -> str:
     """
     Normalise a raw scraped name into a clean display string.

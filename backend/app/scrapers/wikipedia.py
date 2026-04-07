@@ -17,7 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import httpx
 from bs4 import BeautifulSoup, Tag
 
-from app.scrapers.normalizer import assign_confidence, clean_name, classify_event_type, normalize_year
+from app.scrapers.normalizer import assign_confidence, clean_name, classify_event_type, normalize_year, is_blocked
 from app.services import geocoding
 from app.services import wiki_geocoding
 
@@ -892,6 +892,10 @@ async def scrape_all(
     # Final normalisation pass
     finalised: List[Dict[str, Any]] = []
     for rec in all_records:
+        if is_blocked(rec["name"], rec.get("description", "")):
+            logger.debug("Blocked record: %r", rec["name"])
+            continue
+
         event_type = classify_event_type(rec["name"], rec.get("description", ""))
         # Prefer the default_type if the classifier falls back to "event"
         if event_type == "event":
