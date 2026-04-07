@@ -44,8 +44,16 @@ from app.scrapers.normalizer import classify_event_type
 
 _VALID_TYPES: frozenset[str] = frozenset(t.value for t in LocationType)
 
-# Generic types that may be overridden by a more specific existing type
-_GENERIC_TYPES: frozenset[str] = frozenset({"event", "structure"})
+# Generic types that may be overridden by a more specific existing type.
+# Only the pure fallback "event" is treated as fully generic/overridable.
+_GENERIC_TYPES: frozenset[str] = frozenset({"event"})
+
+# High-specificity types that can override a wrongly-assigned "battle".
+_HIGH_SPECIFICITY_TYPES: frozenset[str] = frozenset({
+    "trading_post", "pony_express", "stagecoach_stop", "mission",
+    "ferry", "shipwreck", "cemetery", "mine", "town", "camp",
+    "church", "school", "fairground", "spring", "railroad_stop",
+})
 
 # ---------------------------------------------------------------------------
 # Source-label mapping (ordered: more specific patterns first)
@@ -54,11 +62,20 @@ _GENERIC_TYPES: frozenset[str] = frozenset({"event", "structure"})
 # Each entry is (substring_to_check, type_to_assign).
 # The source string is lower-cased before matching.
 _SOURCE_RULES: list[tuple[str, str]] = [
+    ("ghost_towns",            "town"),    # e.g. "wikipedia:ghost_towns_nevada"
     ("ghost_town",             "town"),
-    ("mission",                "mission"),
-    ("ferry",                  "ferry"),
+    ("shipwrecks",             "shipwreck"),
     ("shipwreck",              "shipwreck"),
+    ("missions",               "mission"), # e.g. "wikipedia:missions_texas"
+    ("mission",                "mission"),
+    ("trading_posts",          "trading_post"),
     ("trading_post",           "trading_post"),
+    ("ferries",                "ferry"),
+    ("ferry",                  "ferry"),
+    ("cemeteries",             "cemetery"),
+    ("cemetery",               "cemetery"),
+    ("mines",                  "mine"),
+    ("camps",                  "camp"),
     ("stagecoach",             "stagecoach_stop"),
     ("pony_express",           "pony_express"),
     # War / battle sources
@@ -117,6 +134,10 @@ def _best_type(
     2. Name / description classifier.
     3. Existing type (fallback when #1 and #2 return a generic value).
 
+    Additionally, if the existing type is ``"battle"`` but the classifier
+    returns a high-specificity type (e.g. ``"trading_post"``, ``"mission"``),
+    the classifier result wins to correct misclassifications.
+
     Returns a valid ``LocationType`` string.
     """
     # 1. Source-label classification
@@ -127,6 +148,14 @@ def _best_type(
     # 2. Name / description classifier
     desc = description or ""
     classifier_type = classify_event_type(name, desc)
+
+    # Only allow a high-specificity classifier result to override an existing
+    # "battle" type — this corrects records that were wrongly stamped "battle"
+    # by the old flat-scoring code (all-zeros → first key = "battle").
+    # Source-derived "battle" records already returned above, so this only
+    # fires for records whose existing type is "battle" without source evidence.
+    if existing_type == "battle" and classifier_type in _HIGH_SPECIFICITY_TYPES:
+        return classifier_type
 
     # If the classifier returns a specific (non-generic) type, use it
     if classifier_type not in _GENERIC_TYPES:

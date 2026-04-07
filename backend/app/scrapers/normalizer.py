@@ -44,7 +44,7 @@ _BATTLE_RE = re.compile(
 
 # Keyword sets used to classify events
 _CAMP_KEYWORDS = frozenset([
-    "encampment", "bivouac", "cantonment",
+    "camp", "encampment", "bivouac", "cantonment",
     "army camp", "military camp", "soldier camp",
     "winter camp", "base camp",
 ])
@@ -53,8 +53,7 @@ _RAILROAD_KEYWORDS = frozenset(
      "terminus", "junction"]
 )
 _TRAIL_KEYWORDS = frozenset(
-    ["trail", "trace", "path", "road", "route", "highway", "pike", "turnpike",
-     "emigrant"]
+    ["trail", "trace", "highway", "pike", "turnpike", "emigrant"]
 )
 _TOWN_KEYWORDS = frozenset(
     ["town", "city", "village", "settlement", "ghost town", "community",
@@ -67,7 +66,7 @@ _MINE_KEYWORDS = frozenset(
 _STRUCTURE_KEYWORDS = frozenset([
     "bridge", "fort", "fortification", "redoubt", "earthwork", "battery",
     "blockhouse", "mill", "plantation", "building", "ruins", "monument",
-    "courthouse", "outpost", "post", "presidio", "stockade",
+    "courthouse", "outpost", "presidio", "stockade",
 ])
 _CHURCH_KEYWORDS = frozenset(
     ["church", "chapel", "parish", "congregation"]
@@ -100,9 +99,31 @@ _SHIPWRECK_KEYWORDS = frozenset(
     ["shipwreck", "sunk", "steamboat", "wreck", "sunken"]
 )
 _STAGECOACH_KEYWORDS = frozenset(
-    ["stage", "stagecoach", "relay station", "overland mail", "stage stop",
+    ["stagecoach", "relay station", "overland mail", "stage stop",
      "stage route", "butterfield", "stage line"]
 )
+
+# Priority-ordered list of (type_name, keyword_set) for Tier 3 classification.
+# Checked in order — first type with at least one keyword match wins.
+_TIER3_TYPE_ORDER: list[tuple[str, frozenset]] = [
+    ("mission",         _MISSION_KEYWORDS),
+    ("trading_post",    _TRADING_POST_KEYWORDS),
+    ("pony_express",    _PONY_EXPRESS_KEYWORDS),
+    ("stagecoach_stop", _STAGECOACH_KEYWORDS),
+    ("ferry",           _FERRY_KEYWORDS),
+    ("shipwreck",       _SHIPWRECK_KEYWORDS),
+    ("cemetery",        _CEMETERY_KEYWORDS),
+    ("mine",            _MINE_KEYWORDS),
+    ("church",          _CHURCH_KEYWORDS),
+    ("school",          _SCHOOL_KEYWORDS),
+    ("fairground",      _FAIRGROUND_KEYWORDS),
+    ("spring",          _SPRING_KEYWORDS),
+    ("camp",            _CAMP_KEYWORDS),
+    ("railroad_stop",   _RAILROAD_KEYWORDS),
+    ("town",            _TOWN_KEYWORDS),
+    ("trail",           _TRAIL_KEYWORDS),
+    ("structure",       _STRUCTURE_KEYWORDS),
+]
 
 # Regex patterns for year extraction
 _YEAR_PATTERNS = [
@@ -125,9 +146,16 @@ def classify_event_type(name: str, description: str = "") -> str:
     """
     Classify a historical event into a ``LocationType`` value.
 
-    The classifier works by counting keyword hits across the combined
-    name and description text, then returning the category with the most
-    matches.  Falls back to ``"event"`` when nothing matches.
+    The classifier uses three priority tiers to avoid generic single-word
+    keywords overriding specific multi-word phrases:
+
+    1. **Tier 1** — exact multi-word phrase matches (highest priority).
+       Returns immediately on first match.
+    2. **Tier 2** — battle regex (phrase-level match).
+    3. **Tier 3** — specific single-keyword types checked in priority order.
+       Returns the first type whose keyword count is > 0.
+
+    Falls back to ``"event"`` when nothing matches.
 
     Args:
         name:        Display name of the event or location.
@@ -138,29 +166,57 @@ def classify_event_type(name: str, description: str = "") -> str:
     """
     combined = f"{name} {description}".lower()
 
-    scores: dict[str, int] = {
-        "battle": len(_BATTLE_RE.findall(combined)),
-        "camp": sum(1 for kw in _CAMP_KEYWORDS if kw in combined),
-        "railroad_stop": sum(1 for kw in _RAILROAD_KEYWORDS if kw in combined),
-        "trail": sum(1 for kw in _TRAIL_KEYWORDS if kw in combined),
-        "town": sum(1 for kw in _TOWN_KEYWORDS if kw in combined),
-        "mine": sum(1 for kw in _MINE_KEYWORDS if kw in combined),
-        "structure": sum(1 for kw in _STRUCTURE_KEYWORDS if kw in combined),
-        "church": sum(1 for kw in _CHURCH_KEYWORDS if kw in combined),
-        "school": sum(1 for kw in _SCHOOL_KEYWORDS if kw in combined),
-        "cemetery": sum(1 for kw in _CEMETERY_KEYWORDS if kw in combined),
-        "fairground": sum(1 for kw in _FAIRGROUND_KEYWORDS if kw in combined),
-        "ferry": sum(1 for kw in _FERRY_KEYWORDS if kw in combined),
-        "spring": sum(1 for kw in _SPRING_KEYWORDS if kw in combined),
-        "mission": sum(1 for kw in _MISSION_KEYWORDS if kw in combined),
-        "trading_post": sum(1 for kw in _TRADING_POST_KEYWORDS if kw in combined),
-        "pony_express": sum(1 for kw in _PONY_EXPRESS_KEYWORDS if kw in combined),
-        "shipwreck": sum(1 for kw in _SHIPWRECK_KEYWORDS if kw in combined),
-        "stagecoach_stop": sum(1 for kw in _STAGECOACH_KEYWORDS if kw in combined),
-    }
+    # ------------------------------------------------------------------
+    # Tier 1: high-specificity multi-word phrase matches — checked first
+    # so they cannot be beaten by coincidental single-word keyword hits.
+    # ------------------------------------------------------------------
+    if "trading post" in combined or "fur trade" in combined or "fur trading" in combined:
+        return "trading_post"
+    if "pony express" in combined:
+        return "pony_express"
+    if (
+        "stagecoach" in combined
+        or "relay station" in combined
+        or "overland mail" in combined
+        or "stage stop" in combined
+        or "stage line" in combined
+        or "butterfield" in combined
+    ):
+        return "stagecoach_stop"
+    if "ghost town" in combined:
+        return "town"
+    if "hot spring" in combined or "mineral spring" in combined:
+        return "spring"
+    if (
+        "army camp" in combined
+        or "military camp" in combined
+        or "winter camp" in combined
+        or "bivouac" in combined
+        or "cantonment" in combined
+        or "encampment" in combined
+    ):
+        return "camp"
+    if "rail road" in combined or "rail line" in combined:
+        return "railroad_stop"
 
-    best_type = max(scores, key=lambda k: scores[k])
-    return best_type if scores[best_type] > 0 else "event"
+    # ------------------------------------------------------------------
+    # Tier 2: battle regex — phrase-level match (not a simple substring)
+    # ------------------------------------------------------------------
+    if _BATTLE_RE.search(combined):
+        return "battle"
+
+    # ------------------------------------------------------------------
+    # Tier 3: single-keyword types checked in priority order.
+    # First type with at least one keyword hit wins.
+    # ------------------------------------------------------------------
+    for type_name, keywords in _TIER3_TYPE_ORDER:
+        if any(kw in combined for kw in keywords):
+            return type_name
+
+    # ------------------------------------------------------------------
+    # Fallback
+    # ------------------------------------------------------------------
+    return "event"
 
 
 def assign_confidence(
