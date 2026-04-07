@@ -11,7 +11,10 @@ API docs: https://www.mediawiki.org/wiki/API:Coordinates
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
+import os
+from pathlib import Path
 from typing import Optional, Tuple, Dict
 
 import httpx
@@ -27,6 +30,44 @@ _sem = asyncio.Semaphore(10)  # Wikipedia allows much higher concurrency than No
 _HEADERS = {
     "User-Agent": "prescia_maps/1.0 (historical research; https://github.com/prescia-ai/Prescia_maps)"
 }
+
+# Persistent disk cache path (override via WIKI_GEOCODE_CACHE_PATH env var)
+_CACHE_PATH = Path(
+    os.environ.get(
+        "WIKI_GEOCODE_CACHE_PATH",
+        str(Path.home() / ".prescia_maps" / "wiki_geocode_cache.json"),
+    )
+)
+
+
+def _load_disk_cache() -> None:
+    """Load cached Wikipedia coordinate results from disk into the in-memory cache."""
+    try:
+        with open(_CACHE_PATH) as fh:
+            data = json.load(fh)
+        for key, value in data.items():
+            _cache[key] = tuple(value) if value is not None else None  # type: ignore[assignment]
+    except Exception:
+        pass  # Missing or corrupt cache file — start fresh
+
+
+def _save_disk_cache() -> None:
+    """Atomically write the in-memory cache to disk."""
+    try:
+        _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        tmp = _CACHE_PATH.with_suffix(".tmp")
+        with open(tmp, "w") as fh:
+            json.dump(
+                {k: list(v) if v is not None else None for k, v in _cache.items()},
+                fh,
+            )
+        os.replace(tmp, _CACHE_PATH)
+    except Exception as exc:
+        logger.warning("Failed to save wiki geocode disk cache: %s", exc)
+
+
+# Populate in-memory cache from disk on module import
+_load_disk_cache()
 
 
 async def get_article_coords(title: str) -> Optional[Tuple[float, float]]:
@@ -77,6 +118,7 @@ async def get_article_coords(title: str) -> Optional[Tuple[float, float]]:
             try:
                 result = (float(coord["lat"]), float(coord["lon"]))
                 _cache[cache_key] = result
+                _save_disk_cache()
                 logger.debug("Wikipedia coords for %r: %s", title, result)
                 return result
             except (KeyError, ValueError, TypeError):
@@ -140,6 +182,7 @@ async def search_and_get_coords(query: str) -> Optional[Tuple[float, float]]:
         coords = await get_article_coords(title)
         if coords:
             _cache[cache_key] = coords
+            _save_disk_cache()
             return coords
 
     _cache[cache_key] = None

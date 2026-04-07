@@ -6,8 +6,11 @@ back to Nominatim (1 req/sec) only when Wikipedia returns nothing.
 """
 
 import asyncio
+import json
 import logging
+import os
 import time
+from pathlib import Path
 from typing import Optional, Tuple
 
 import httpx
@@ -19,6 +22,44 @@ logger = logging.getLogger(__name__)
 
 # In-memory cache: query string -> (lat, lon) or None
 _cache: dict[str, Optional[Tuple[float, float]]] = {}
+
+# Persistent disk cache path (override via GEOCODE_CACHE_PATH env var)
+_CACHE_PATH = Path(
+    os.environ.get(
+        "GEOCODE_CACHE_PATH",
+        str(Path.home() / ".prescia_maps" / "geocode_cache.json"),
+    )
+)
+
+
+def _load_disk_cache() -> None:
+    """Load cached geocoding results from disk into the in-memory cache."""
+    try:
+        with open(_CACHE_PATH) as fh:
+            data = json.load(fh)
+        for key, value in data.items():
+            _cache[key] = tuple(value) if value is not None else None  # type: ignore[assignment]
+    except Exception:
+        pass  # Missing or corrupt cache file — start fresh
+
+
+def _save_disk_cache() -> None:
+    """Atomically write the in-memory cache to disk."""
+    try:
+        _CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        tmp = _CACHE_PATH.with_suffix(".tmp")
+        with open(tmp, "w") as fh:
+            json.dump(
+                {k: list(v) if v is not None else None for k, v in _cache.items()},
+                fh,
+            )
+        os.replace(tmp, _CACHE_PATH)
+    except Exception as exc:
+        logger.warning("Failed to save geocode disk cache: %s", exc)
+
+
+# Populate in-memory cache from disk on module import
+_load_disk_cache()
 
 # Timestamp of the last request (used for rate limiting)
 _last_request_time: float = 0.0
@@ -92,12 +133,14 @@ async def geocode(query: str) -> Optional[Tuple[float, float]]:
     coords = await wiki_geocoding.get_article_coords(query)
     if coords:
         _cache[cache_key] = coords
+        _save_disk_cache()
         return coords
 
     # Strategy 2: Wikipedia search
     coords = await wiki_geocoding.search_and_get_coords(query)
     if coords:
         _cache[cache_key] = coords
+        _save_disk_cache()
         return coords
 
     # Strategy 3: Nominatim fallback (rate-limited)
@@ -107,6 +150,7 @@ async def geocode(query: str) -> Optional[Tuple[float, float]]:
         try:
             coords = (float(result["lat"]), float(result["lon"]))
             _cache[cache_key] = coords
+            _save_disk_cache()
             logger.debug("Nominatim geocoded %r -> %s", query, coords)
             return coords
         except (KeyError, ValueError) as exc:
@@ -147,6 +191,7 @@ async def geocode_structured(
         try:
             coords = (float(result["lat"]), float(result["lon"]))
             _cache[cache_key] = coords
+            _save_disk_cache()
             return coords
         except (KeyError, ValueError):
             pass
