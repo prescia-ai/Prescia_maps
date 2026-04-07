@@ -157,6 +157,7 @@ async def geocode(query: str) -> Optional[Tuple[float, float]]:
             logger.warning("Could not parse Nominatim result for %r: %s", query, exc)
 
     _cache[cache_key] = None
+    _save_disk_cache()
     return None
 
 

@@ -125,6 +125,7 @@ async def get_article_coords(title: str) -> Optional[Tuple[float, float]]:
                 pass
 
     _cache[cache_key] = None
+    _save_disk_cache()
     return None
 
 
@@ -186,6 +187,7 @@ async def search_and_get_coords(query: str) -> Optional[Tuple[float, float]]:
             return coords
 
     _cache[cache_key] = None
+    _save_disk_cache()
     return None
 
 
