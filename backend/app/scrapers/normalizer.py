@@ -22,14 +22,21 @@ LOCATION_TYPES = {
     "mission", "trading_post", "shipwreck", "pony_express",
 }
 
+# Regex for battle detection — requires specific military-context phrases to
+# avoid false positives from generic words like "assault", "fight", "combat".
+_BATTLE_RE = re.compile(
+    r"\b(battle\s+of|battle\s+at|siege\s+of|skirmish\s+(?:at|of|near)|"
+    r"engagement\s+(?:at|of)|assault\s+on|raid\s+on|action\s+at|affair\s+at|"
+    r"civil\s+war\s+battle|military\s+engagement|armed\s+conflict)\b",
+    re.IGNORECASE,
+)
+
 # Keyword sets used to classify events
-_BATTLE_KEYWORDS = frozenset(
-    ["battle", "siege", "skirmish", "engagement", "combat", "assault", "raid",
-     "fight", "action at", "affair at"]
-)
-_CAMP_KEYWORDS = frozenset(
-    ["camp", "encampment", "bivouac", "cantonment", "outpost", "fort", "post"]
-)
+_CAMP_KEYWORDS = frozenset([
+    "encampment", "bivouac", "cantonment",
+    "army camp", "military camp", "soldier camp",
+    "winter camp", "base camp",
+])
 _RAILROAD_KEYWORDS = frozenset(
     ["railroad", "railway", "depot", "station", "rail road", "rail line",
      "terminus", "junction"]
@@ -46,11 +53,11 @@ _MINE_KEYWORDS = frozenset(
     ["mine", "mining", "quarry", "lode", "shaft", "pit", "colliery",
      "placer", "gold", "silver", "copper"]
 )
-_STRUCTURE_KEYWORDS = frozenset(
-    ["bridge", "fort", "fortification", "redoubt", "earthwork", "battery",
-     "blockhouse", "mill", "plantation", "building", "ruins", "monument",
-     "courthouse"]
-)
+_STRUCTURE_KEYWORDS = frozenset([
+    "bridge", "fort", "fortification", "redoubt", "earthwork", "battery",
+    "blockhouse", "mill", "plantation", "building", "ruins", "monument",
+    "courthouse", "outpost", "post", "presidio", "stockade",
+])
 _CHURCH_KEYWORDS = frozenset(
     ["church", "chapel", "parish", "congregation"]
 )
@@ -121,7 +128,7 @@ def classify_event_type(name: str, description: str = "") -> str:
     combined = f"{name} {description}".lower()
 
     scores: dict[str, int] = {
-        "battle": sum(1 for kw in _BATTLE_KEYWORDS if kw in combined),
+        "battle": len(_BATTLE_RE.findall(combined)),
         "camp": sum(1 for kw in _CAMP_KEYWORDS if kw in combined),
         "railroad_stop": sum(1 for kw in _RAILROAD_KEYWORDS if kw in combined),
         "trail": sum(1 for kw in _TRAIL_KEYWORDS if kw in combined),
