@@ -7,6 +7,7 @@ Data sources (in priority order):
 1. **NRHP CSV** — National Register of Historic Places bulk CSV download
 2. **NPS API** — National Park Service battlefields, monuments, historic sites
 3. **OpenHistoricalMap** — Overpass API for abandoned railways, historic trails
+4. **Wikidata SPARQL** — Battle locations from Wikidata knowledge graph
 
 Replaces data previously scattered across:
 - ``load_nrhp.py`` (NRHP ArcGIS API)
@@ -34,6 +35,9 @@ Usage::
 
     # Skip OpenHistoricalMap
     python scripts/Historicscraper.py --skip-ohm
+
+    # Skip Wikidata SPARQL (enabled by default; use flag to disable)
+    python scripts/Historicscraper.py --skip-wikidata
 """
 
 from __future__ import annotations
@@ -193,6 +197,25 @@ _HEADERS = {
         "https://github.com/prescia-ai/Prescia_maps)"
     )
 }
+
+# ---------------------------------------------------------------------------
+# Wikidata SPARQL Constants
+# ---------------------------------------------------------------------------
+
+WIKIDATA_SPARQL_URL = "https://query.wikidata.org/sparql"
+WIKIDATA_SOURCE = "wikidata"
+WIKIDATA_CONFIDENCE = 0.88
+
+# SPARQL query: US battles with coordinates
+_WIKIDATA_BATTLES_QUERY = """
+SELECT ?battle ?battleLabel ?coord ?date WHERE {
+  ?battle wdt:P31/wdt:P279* wd:Q178561;
+          wdt:P625 ?coord.
+  ?battle wdt:P17 wd:Q30.
+  OPTIONAL { ?battle wdt:P585 ?date. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+"""
 
 BATCH_SIZE = 500
 
@@ -542,6 +565,96 @@ def _ohm_element_to_location(
 
 
 # ---------------------------------------------------------------------------
+# Wikidata SPARQL helpers
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+_WKT_POINT_RE = _re.compile(
+    r"Point\s*\(\s*(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)\s*\)",
+    _re.IGNORECASE,
+)
+
+
+def _parse_wkt_point(wkt: str):
+    """
+    Parse a WKT ``Point(lon lat)`` literal and return ``(lat, lon)`` floats.
+
+    Returns ``None`` if parsing fails.
+    """
+    m = _WKT_POINT_RE.search(wkt)
+    if not m:
+        return None
+    lon, lat = float(m.group(1)), float(m.group(2))
+    return lat, lon
+
+
+def _parse_wikidata_year(date_str: str) -> Optional[int]:
+    """Extract a 4-digit year from a Wikidata date string (e.g. ``2023-07-04T00:00:00Z``)."""
+    m = _re.search(r"(\d{4})", date_str)
+    return int(m.group(1)) if m else None
+
+
+async def _fetch_wikidata_battles() -> List[Dict[str, Any]]:
+    """
+    Query the Wikidata SPARQL endpoint for US battles with coordinates.
+
+    Returns a list of raw SPARQL result bindings.
+    """
+    headers = {
+        **_HEADERS,
+        "Accept": "application/sparql-results+json",
+    }
+    params = {"query": _WIKIDATA_BATTLES_QUERY.strip()}
+    try:
+        async with httpx.AsyncClient(timeout=120.0) as client:
+            response = await client.get(
+                WIKIDATA_SPARQL_URL,
+                params=params,
+                headers=headers,
+            )
+            response.raise_for_status()
+            data = response.json()
+            bindings = data.get("results", {}).get("bindings", [])
+            logger.info("  Wikidata SPARQL: %d bindings returned.", len(bindings))
+            return bindings
+    except (httpx.HTTPError, ValueError) as exc:
+        logger.error("Wikidata SPARQL error: %s", exc)
+        return []
+
+
+def _wikidata_binding_to_location(binding: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Convert a single SPARQL result binding to a Location insert dict."""
+    label_val = binding.get("battleLabel", {}).get("value", "")
+    name = label_val.strip()
+    if not name or name.startswith("Q"):
+        # Unlabelled entity — skip
+        return None
+
+    coord_val = binding.get("coord", {}).get("value", "")
+    parsed = _parse_wkt_point(coord_val)
+    if parsed is None:
+        return None
+    lat, lon = parsed
+
+    year: Optional[int] = None
+    date_val = binding.get("date", {}).get("value", "")
+    if date_val:
+        year = _parse_wikidata_year(date_val)
+
+    return build_location_record(
+        name=name,
+        lat=lat,
+        lon=lon,
+        source=WIKIDATA_SOURCE,
+        loc_type="battle",
+        year=year,
+        description="",
+        confidence=WIKIDATA_CONFIDENCE,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Main async entry point
 # ---------------------------------------------------------------------------
 
@@ -551,6 +664,7 @@ async def run(
     dry_run: bool = False,
     skip_nps: bool = False,
     skip_ohm: bool = False,
+    skip_wikidata: bool = False,
     checkpoint_path: Optional[Path] = None,
     fresh: bool = False,
 ) -> None:
@@ -790,6 +904,55 @@ async def run(
             },
         })
 
+    # ===================================================================
+    # Source 4: Wikidata SPARQL (US battles)
+    # ===================================================================
+    if not skip_wikidata and "wikidata" not in completed_sources:
+        logger.info("=== Source 4: Wikidata SPARQL (US battles) ===")
+        bindings = await _fetch_wikidata_battles()
+        logger.info("Fetched %d Wikidata battle bindings.", len(bindings))
+
+        batch = []
+        async with session_factory() as session:
+            for binding in bindings:
+                record = _wikidata_binding_to_location(binding)
+                if record is None:
+                    continue
+
+                cleaned = clean_name(record["name"])
+                if not cleaned:
+                    continue
+
+                if is_blocked(cleaned, record.get("description", "")):
+                    skipped_blocked += 1
+                    continue
+
+                if dedup.is_duplicate(cleaned, record["latitude"], record["longitude"]):
+                    skipped_dup += 1
+                    continue
+
+                dedup.add(cleaned, record["latitude"], record["longitude"])
+                record["name"] = cleaned
+                batch.append(record)
+
+            if batch:
+                if not dry_run:
+                    total_locations += await insert_location_batch(session, batch)
+                else:
+                    total_locations += len(batch)
+
+        completed_sources.add("wikidata")
+        save_checkpoint(ckpt_path, {
+            "completed_sources": list(completed_sources),
+            "stats": {
+                "locations_inserted": total_locations,
+                "linear_features_inserted": total_linear,
+                "skipped_dup": skipped_dup,
+                "skipped_blocked": skipped_blocked,
+            },
+        })
+        logger.info("Wikidata import complete: %d new locations.", len(batch))
+
     await engine.dispose()
 
     # Clean up checkpoint on success
@@ -832,6 +995,10 @@ def main() -> None:
         help="Skip the OpenHistoricalMap source.",
     )
     parser.add_argument(
+        "--skip-wikidata", action="store_true", default=False,
+        help="Skip the Wikidata SPARQL battle source.",
+    )
+    parser.add_argument(
         "--checkpoint", default="historic_checkpoint.json", metavar="PATH",
         help="Checkpoint file path (default: historic_checkpoint.json).",
     )
@@ -848,6 +1015,7 @@ def main() -> None:
             dry_run=args.dry_run,
             skip_nps=args.skip_nps,
             skip_ohm=args.skip_ohm,
+            skip_wikidata=args.skip_wikidata,
             checkpoint_path=Path(args.checkpoint),
             fresh=args.fresh,
         )

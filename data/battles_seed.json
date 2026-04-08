@@ -1,0 +1,632 @@
+[
+  {
+    "name": "Battle of Lexington and Concord",
+    "latitude": 42.4485,
+    "longitude": -71.2300,
+    "year": 1775,
+    "description": "Opening battles of the American Revolutionary War, April 19, 1775, Lexington and Concord, Massachusetts.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Bunker Hill",
+    "latitude": 42.3763,
+    "longitude": -71.0604,
+    "year": 1775,
+    "description": "Early battle of the American Revolutionary War, June 17, 1775, Charlestown, Massachusetts.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Saratoga",
+    "latitude": 42.9989,
+    "longitude": -73.6498,
+    "year": 1777,
+    "description": "Turning point of the American Revolutionary War, October 1777, Saratoga County, New York.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Siege of Yorktown",
+    "latitude": 37.2279,
+    "longitude": -76.5087,
+    "year": 1781,
+    "description": "Final major land battle of the American Revolutionary War, September-October 1781, Yorktown, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Trenton",
+    "latitude": 40.2171,
+    "longitude": -74.7598,
+    "year": 1776,
+    "description": "Decisive American victory after Washington's crossing of the Delaware River, December 26, 1776.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Brandywine",
+    "latitude": 39.8273,
+    "longitude": -75.5627,
+    "year": 1777,
+    "description": "British victory that led to the capture of Philadelphia, September 11, 1777, Pennsylvania.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Camden",
+    "latitude": 34.2490,
+    "longitude": -80.6070,
+    "year": 1780,
+    "description": "Major British victory in the Southern Campaign, August 16, 1780, Camden, South Carolina.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Cowpens",
+    "latitude": 35.1277,
+    "longitude": -81.8138,
+    "year": 1781,
+    "description": "Decisive American victory in the Southern Campaign, January 17, 1781, South Carolina.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Guilford Court House",
+    "latitude": 36.1490,
+    "longitude": -79.8862,
+    "year": 1781,
+    "description": "Battle in North Carolina that weakened British forces, March 15, 1781.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Fort McHenry",
+    "latitude": 39.2635,
+    "longitude": -76.5795,
+    "year": 1814,
+    "description": "Defense of Baltimore harbor inspiring the Star-Spangled Banner, September 13-14, 1814.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of New Orleans",
+    "latitude": 29.8413,
+    "longitude": -89.9316,
+    "year": 1815,
+    "description": "Final major battle of the War of 1812, January 8, 1815, Chalmette, Louisiana.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Lake Erie",
+    "latitude": 41.7667,
+    "longitude": -82.9333,
+    "year": 1813,
+    "description": "American naval victory on Lake Erie, September 10, 1813, securing the Northwest Territory.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Lundy's Lane",
+    "latitude": 43.1006,
+    "longitude": -79.0603,
+    "year": 1814,
+    "description": "One of the bloodiest battles of the War of 1812, July 25, 1814, Niagara Falls area.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of the Thames",
+    "latitude": 42.5167,
+    "longitude": -81.9167,
+    "year": 1813,
+    "description": "American victory in which Tecumseh was killed, October 5, 1813, Ontario, Canada.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Palo Alto",
+    "latitude": 26.0333,
+    "longitude": -97.4667,
+    "year": 1846,
+    "description": "First major battle of the Mexican-American War, May 8, 1846, near present-day Brownsville, Texas.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Resaca de la Palma",
+    "latitude": 25.9667,
+    "longitude": -97.4833,
+    "year": 1846,
+    "description": "Second battle of the Mexican-American War, May 9, 1846, Texas.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Buena Vista",
+    "latitude": 25.5833,
+    "longitude": -100.9167,
+    "year": 1847,
+    "description": "American victory under Zachary Taylor against Santa Anna, February 22-23, 1847, Mexico.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Monterrey",
+    "latitude": 25.6667,
+    "longitude": -100.3167,
+    "year": 1846,
+    "description": "American capture of the city of Monterrey, September 21-24, 1846, Mexico.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Chapultepec",
+    "latitude": 19.4204,
+    "longitude": -99.1817,
+    "year": 1847,
+    "description": "Storming of Chapultepec Castle leading to Mexico City's fall, September 12-13, 1847.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "First Battle of Bull Run",
+    "latitude": 38.8151,
+    "longitude": -77.5239,
+    "year": 1861,
+    "description": "First major land battle of the American Civil War, July 21, 1861, Prince William County, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Second Battle of Bull Run",
+    "latitude": 38.8151,
+    "longitude": -77.5239,
+    "year": 1862,
+    "description": "Major Confederate victory under General Lee, August 28-30, 1862, Prince William County, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Shiloh",
+    "latitude": 35.1447,
+    "longitude": -88.3275,
+    "year": 1862,
+    "description": "Major and bloody Civil War battle in Tennessee, April 6-7, 1862.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Antietam",
+    "latitude": 39.4770,
+    "longitude": -77.7446,
+    "year": 1862,
+    "description": "Bloodiest single day in American military history, September 17, 1862, Sharpsburg, Maryland.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Fredericksburg",
+    "latitude": 38.3032,
+    "longitude": -77.4605,
+    "year": 1862,
+    "description": "Major Confederate victory, December 11-15, 1862, Fredericksburg, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Chancellorsville",
+    "latitude": 38.3167,
+    "longitude": -77.6333,
+    "year": 1863,
+    "description": "Lee's greatest victory; Stonewall Jackson mortally wounded, April 30-May 6, 1863, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Gettysburg",
+    "latitude": 39.8116,
+    "longitude": -77.2253,
+    "year": 1863,
+    "description": "Turning point of the Civil War and largest battle ever fought in North America, July 1-3, 1863.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Siege of Vicksburg",
+    "latitude": 32.3526,
+    "longitude": -90.8779,
+    "year": 1863,
+    "description": "Union siege that split the Confederacy by controlling the Mississippi River, May 18-July 4, 1863.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Chickamauga",
+    "latitude": 34.9344,
+    "longitude": -85.2643,
+    "year": 1863,
+    "description": "Major Confederate victory in Georgia, September 18-20, 1863.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Chattanooga",
+    "latitude": 35.0456,
+    "longitude": -85.3097,
+    "year": 1863,
+    "description": "Union victory that opened the way for the Atlanta Campaign, November 23-25, 1863.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of the Wilderness",
+    "latitude": 38.3167,
+    "longitude": -77.7667,
+    "year": 1864,
+    "description": "Opening engagement of Grant's Overland Campaign, May 5-7, 1864, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Spotsylvania Court House",
+    "latitude": 38.2167,
+    "longitude": -77.5833,
+    "year": 1864,
+    "description": "Brutal fighting during Grant's Overland Campaign, May 8-21, 1864, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Cold Harbor",
+    "latitude": 37.6000,
+    "longitude": -77.2500,
+    "year": 1864,
+    "description": "Costly Union assault near Richmond, May 31-June 12, 1864, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Siege of Petersburg",
+    "latitude": 37.2279,
+    "longitude": -77.4019,
+    "year": 1864,
+    "description": "Nine-month siege leading to the fall of Richmond, June 9, 1864-March 25, 1865, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Atlanta",
+    "latitude": 33.7490,
+    "longitude": -84.3880,
+    "year": 1864,
+    "description": "Series of battles leading to the fall of Atlanta, July 22, 1864, Georgia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Nashville",
+    "latitude": 36.1627,
+    "longitude": -86.7816,
+    "year": 1864,
+    "description": "Decisive Union victory that destroyed the Confederate Army of Tennessee, December 15-16, 1864.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Fort Sumter",
+    "latitude": 32.7525,
+    "longitude": -79.8742,
+    "year": 1861,
+    "description": "Opening battle of the Civil War, Confederate capture of Fort Sumter, April 12-14, 1861.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Wilson's Creek",
+    "latitude": 37.0927,
+    "longitude": -93.4049,
+    "year": 1861,
+    "description": "First major Civil War battle west of the Mississippi River, August 10, 1861, Missouri.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Pea Ridge",
+    "latitude": 36.4500,
+    "longitude": -94.0167,
+    "year": 1862,
+    "description": "Union victory securing Missouri for the North, March 7-8, 1862, Arkansas.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Fort Donelson",
+    "latitude": 36.4833,
+    "longitude": -87.8667,
+    "year": 1862,
+    "description": "Grant's first major victory, earning him nickname Unconditional Surrender Grant, February 11-16, 1862.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Cedar Creek",
+    "latitude": 39.0167,
+    "longitude": -78.2333,
+    "year": 1864,
+    "description": "Sheridan's dramatic rallying of Union troops to victory in the Shenandoah Valley, October 19, 1864.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Five Forks",
+    "latitude": 37.1333,
+    "longitude": -77.6833,
+    "year": 1865,
+    "description": "Union victory that led to Lee's evacuation of Petersburg and Richmond, April 1, 1865, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Little Bighorn",
+    "latitude": 45.5667,
+    "longitude": -107.4333,
+    "year": 1876,
+    "description": "Decisive Lakota/Cheyenne victory over the 7th Cavalry under Custer, June 25-26, 1876, Montana.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Wounded Knee Massacre",
+    "latitude": 43.1472,
+    "longitude": -102.3650,
+    "year": 1890,
+    "description": "Massacre of Lakota Sioux by the 7th Cavalry Regiment, December 29, 1890, South Dakota.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Sand Creek Massacre",
+    "latitude": 38.5500,
+    "longitude": -102.5167,
+    "year": 1864,
+    "description": "Massacre of Cheyenne and Arapaho encampment by Colorado militia, November 29, 1864.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Adobe Walls",
+    "latitude": 35.6667,
+    "longitude": -100.5167,
+    "year": 1874,
+    "description": "Battle between buffalo hunters and Comanche, Kiowa, and Cheyenne warriors, June 27, 1874, Texas.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Beecher Island",
+    "latitude": 39.6167,
+    "longitude": -102.2167,
+    "year": 1868,
+    "description": "Nine-day stand of US Army scouts against Cheyenne and Sioux warriors, September 17-25, 1868, Colorado.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Summit Springs",
+    "latitude": 40.4000,
+    "longitude": -103.2167,
+    "year": 1869,
+    "description": "Decisive US Army victory over Cheyenne Dog Soldiers, July 11, 1869, Colorado.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of the Rosebud",
+    "latitude": 45.3667,
+    "longitude": -106.9333,
+    "year": 1876,
+    "description": "Sioux and Cheyenne halted Crook's advance one week before Little Bighorn, June 17, 1876, Montana.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Bear Paw",
+    "latitude": 48.1167,
+    "longitude": -109.7167,
+    "year": 1877,
+    "description": "Final battle of the Nez Perce War; Chief Joseph surrendered, September 30-October 5, 1877, Montana.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of San Juan Hill",
+    "latitude": 20.0500,
+    "longitude": -75.8167,
+    "year": 1898,
+    "description": "Rough Riders under Theodore Roosevelt charge San Juan Hill, July 1, 1898, Santiago, Cuba.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Manila Bay",
+    "latitude": 14.5000,
+    "longitude": 120.8833,
+    "year": 1898,
+    "description": "Commodore Dewey's decisive naval victory over Spanish fleet, May 1, 1898, Philippines.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Fallen Timbers",
+    "latitude": 41.5333,
+    "longitude": -83.7667,
+    "year": 1794,
+    "description": "US victory over Western Confederacy opening the Northwest Territory, August 20, 1794, Ohio.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Tippecanoe",
+    "latitude": 40.5167,
+    "longitude": -86.8667,
+    "year": 1811,
+    "description": "Harrison defeated Tecumseh's confederacy, November 7, 1811, Indiana.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Horseshoe Bend",
+    "latitude": 32.9763,
+    "longitude": -85.7433,
+    "year": 1814,
+    "description": "Jackson destroyed Creek Nation resistance, March 27, 1814, Alabama.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Lundy's Lane",
+    "latitude": 43.1006,
+    "longitude": -79.0603,
+    "year": 1814,
+    "description": "One of the bloodiest battles of the War of 1812, July 25, 1814, near Niagara Falls.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Kings Mountain",
+    "latitude": 35.1384,
+    "longitude": -81.4216,
+    "year": 1780,
+    "description": "Patriot militia victory over Loyalists in the Southern Campaign, October 7, 1780, South Carolina.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Monmouth",
+    "latitude": 40.2368,
+    "longitude": -74.2820,
+    "year": 1778,
+    "description": "Last major battle in the Northern theater of the Revolution, June 28, 1778, New Jersey.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Kennesaw Mountain",
+    "latitude": 34.0376,
+    "longitude": -84.5792,
+    "year": 1864,
+    "description": "Confederate repulse of Sherman's frontal assault during the Atlanta Campaign, June 27, 1864, Georgia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Perryville",
+    "latitude": 37.6500,
+    "longitude": -84.9333,
+    "year": 1862,
+    "description": "Largest Civil War battle in Kentucky, October 8, 1862.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Stones River",
+    "latitude": 35.8833,
+    "longitude": -86.4333,
+    "year": 1862,
+    "description": "Indecisive but costly battle near Murfreesboro, Tennessee, December 31, 1862-January 2, 1863.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Champion Hill",
+    "latitude": 32.3333,
+    "longitude": -90.4167,
+    "year": 1863,
+    "description": "Key Union victory on the road to Vicksburg, May 16, 1863, Mississippi.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Spotsylvania",
+    "latitude": 38.2000,
+    "longitude": -77.5833,
+    "year": 1864,
+    "description": "Brutal fighting during Grant's Overland Campaign, May 8-21, 1864, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  },
+  {
+    "name": "Battle of Appomattox Court House",
+    "latitude": 37.3579,
+    "longitude": -78.7981,
+    "year": 1865,
+    "description": "Lee's final battle before surrender to Grant, ending the Civil War, April 9, 1865, Virginia.",
+    "type": "battle",
+    "source": "seed:battles",
+    "confidence": 0.95
+  }
+]

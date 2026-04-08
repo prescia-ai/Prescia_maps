@@ -121,7 +121,7 @@ Downloads the USGS GNIS National File and scrapes Legends of America and ghostto
 ### 3. Historic Places, Routes & Features — `Historicscraper.py`
 
 ```bash
-# Full import (NRHP + NPS + OpenHistoricalMap)
+# Full import (NRHP + NPS + OpenHistoricalMap + Wikidata)
 python scripts/Historicscraper.py
 
 # Skip NPS (if no API key)
@@ -130,6 +130,9 @@ python scripts/Historicscraper.py --skip-nps
 # Skip OpenHistoricalMap
 python scripts/Historicscraper.py --skip-ohm
 
+# Skip Wikidata SPARQL
+python scripts/Historicscraper.py --skip-wikidata
+
 # Specific state
 python scripts/Historicscraper.py --state TX
 
@@ -137,9 +140,35 @@ python scripts/Historicscraper.py --state TX
 python scripts/Historicscraper.py --dry-run
 ```
 
-Imports from the National Register of Historic Places (NRHP), NPS API (requires `NPS_API_KEY`), and OpenHistoricalMap Overpass API. Handles both point features (battles, forts, stations) and linear features (abandoned railways, historic trails). Replaces all previous NRHP, NPS, and Wikipedia battle/trail/fort data sources.
+Imports from the National Register of Historic Places (NRHP), NPS API (requires `NPS_API_KEY`), OpenHistoricalMap Overpass API, and Wikidata SPARQL (US battle locations). Handles both point features (battles, forts, stations) and linear features (abandoned railways, historic trails). Replaces all previous NRHP, NPS, and Wikipedia battle/trail/fort data sources.
 
-### 4. Route Stitcher — `stitch_routes.py`
+The Wikidata source is enabled by default and can be disabled with `--skip-wikidata`.
+
+### 4. Battle Seed Loader — `load_battles_seed.py`
+
+```bash
+# Full import (reads data/battles_seed.json)
+python scripts/load_battles_seed.py
+
+# Dry-run: count without inserting
+python scripts/load_battles_seed.py --dry-run
+```
+
+Imports ~60 pre-verified US battle locations (Revolutionary War, War of 1812, Mexican-American War, Civil War, Indian Wars, Spanish-American War) with accurate coordinates and `confidence=0.95`. Deduplicates against existing database records by name.
+
+### 5. Stagecoach Routes GeoJSON Loader — `load_stagecoach_geojson.py`
+
+```bash
+# Full import (reads data/stagecoach_routes.geojson)
+python scripts/load_stagecoach_geojson.py
+
+# Dry-run: count without inserting
+python scripts/load_stagecoach_geojson.py --dry-run
+```
+
+Imports 5 major stagecoach routes (Butterfield Overland Mail, San Antonio–San Diego Mail Line, Central Overland California & Pike's Peak Express, Holladay Overland Mail and Express, Overland Stage to Denver) as `LinearFeature` `LineString` records in the `linear_features` table. Deduplicates by name.
+
+### 6. Route Stitcher — `stitch_routes.py`
 
 Run **after** the three scrapers to convert point-stop clusters into rendered route lines.
 
