@@ -3920,7 +3920,8 @@
     "latitude": 38.885366,
     "longitude": -97.649534,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Trenton was a small Kansas farming community established during the great Kansas settlement era of the 1870s\u20131890s, when thousands of homestead families claimed the rich wheat-growing land of the central Kansas plains after the removal of Native American nations and the extension of the railroads. The community had a grain elevator, church, and general store at its height before the combined forces of drought, falling wheat prices, and rural depopulation through the early-to-mid 20th century emptied it. Today the Trenton area is active Kansas agricultural land, with perhaps a deteriorating grain elevator as the last standing structure. Old elevator sites and homestead perimeters in the area may yield late 19th-century to early 20th-century coins, farm implements, and domestic artifacts."
   },
   {
     "name": "Lake Valley, NM",
@@ -3928,7 +3929,8 @@
     "latitude": 32.718174,
     "longitude": -107.567882,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lake Valley was a significant silver mining camp in Sierra County, New Mexico, booming in the 1880s when the Bridal Chamber mine \u2014 one of the richest single ore pockets ever discovered in the American Southwest \u2014 yielded enormous quantities of nearly pure silver chloride ore, reportedly enough that refined silver bars were used as floor tiles in the mine office. The town grew to over 4,000 residents with hotels, saloons, multiple stores, and a railroad depot before the silver crashed in 1893 and the Bridal Chamber played out, emptying the camp within a decade. Today Lake Valley is a remarkable ghost town accessible via a dirt road south of Hillsboro, New Mexico, managed jointly by the Bureau of Land Management, with a preserved depot, schoolhouse, and assay office still standing. The mine dump areas and old townsite are accessible for exploration, with silver ore specimens and mining camp artifacts among the possible finds."
   },
   {
     "name": "Nutt, NM",
@@ -3936,7 +3938,8 @@
     "latitude": 32.572862,
     "longitude": -107.449469,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nutt was a tiny New Mexico community in Luna County along the Southern Pacific Railroad line, established as a minor railroad station and ranching center serving the sparse pastoral country of southwestern New Mexico's high desert during the late 19th and early 20th centuries. The community had a post office and served as the nearest railroad access point for ranchers working the surrounding desert range, but never developed beyond a station-level settlement. Today Nutt is largely abandoned, with a few deteriorating structures remaining along the old highway and railroad alignment south of Hatch. The desert environment preserves artifacts well, and the old station area and surrounding ranch sites may yield late 19th-century railroad hardware, ranch implements, and period domestic items."
   },
   {
     "name": "Terra Cotta, KS",
@@ -3944,7 +3947,8 @@
     "latitude": 38.741673,
     "longitude": -97.957269,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Terra Cotta was a small Kansas community, established during the late 19th or early 20th century and possibly associated with clay products manufacturing \u2014 terra cotta being fired clay used for decorative building elements and pottery. The community served surrounding agricultural and possibly light industrial interests before being absorbed into the larger Kansas rural economy or simply becoming inactive as its commercial reason for existing faded. Today Terra Cotta is a historical name in Kansas records. Old kiln sites and associated community perimeters near the historic Terra Cotta location in Kansas may yield early 20th-century ceramic fragments, industrial hardware, and domestic items."
   },
   {
     "name": "Ocoya, IL",
@@ -3952,7 +3956,8 @@
     "latitude": 40.805034,
     "longitude": -88.683952,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ocoya was a small community in Livingston County, Illinois, established during the mid-to-late 19th century as a minor farming and railway community along one of the rail lines crossing the Illinois prairie, serving surrounding grain farmers with a small commercial district that included a grain elevator, general store, and church. The community faded through the 20th century as rural populations consolidated in larger nearby Livingston County centers like Pontiac and Flanagan. Today Ocoya is a small unincorporated community with minimal remaining commercial activity. Old grain elevator foundations and farmstead perimeters near the historic Ocoya community can yield late 19th-century coins, agricultural hardware, and domestic items."
   },
   {
     "name": "Selbytown, IL\\n",
@@ -3960,7 +3965,8 @@
     "latitude": 39.926617,
     "longitude": -89.5732,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Selbytown was a small Illinois farming community, likely established during the mid-to-late 19th century agricultural settlement of the state and named for the Selby family \u2014 a surname common among English-descended settlers who moved into Illinois from Ohio and Indiana during the great prairie farming expansion. The community served surrounding farm families as a minor rural center with a church and country store before rural consolidation drew its residents toward larger Illinois towns. Today Selbytown exists only in historical records. Old church sites and road traces near the historic Selbytown community location may yield 19th-century domestic artifacts and early American coins."
   },
   {
     "name": "Rosati, MO",
@@ -3968,7 +3974,8 @@
     "latitude": 38.026988,
     "longitude": -91.530988,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rosati was a small Italian immigrant farming community in Phelps County, Missouri, established in the early 20th century by Italian immigrants \u2014 primarily from the Trentino and Piedmont regions \u2014 who were recruited to work in the vineyards and winery operations of the Missouri wine country. The community developed its own church, school, and Italian-language cultural institutions, making it one of the more distinctive ethnic farming enclaves in rural Missouri. The winery operations that anchored the community declined through Prohibition and later economic pressures, though some families remained. Old winery foundations and Italian-American community sites near Rosati may yield early 20th-century domestic items, wine-making hardware, and Italian-American cultural artifacts."
   },
   {
     "name": "St. Thomas, NV",
@@ -3976,7 +3983,8 @@
     "latitude": 36.466318,
     "longitude": -114.370664,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "St. Thomas was a Nevada community in Clark County, situated at the confluence of the Muddy and Virgin Rivers in the Moapa Valley, established in 1865 by Mormon settlers as a farming and trade community that served the region for over 70 years before being permanently inundated by the rising waters of Lake Mead following the completion of Hoover Dam in 1938. The town had a post office, general store, hotel, and school, and its 500+ residents were the last to leave before the floodwaters rose \u2014 one family famously departed by boat from their own front porch. During drought years when Lake Mead drops significantly, the foundations of St. Thomas re-emerge from the lakebed, drawing photographers and history enthusiasts to the exposed ruins. Low-water periods offer rare opportunities to walk the old streets and examine the exposed rock and adobe foundations, with pottery shards, glass, and hardware occasionally found by careful searchers."
   },
   {
     "name": "Hart, CA",
@@ -3984,7 +3992,8 @@
     "latitude": 35.328114,
     "longitude": -115.120868,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hart was a California desert community in San Bernardino County near the Nevada border, established in the early 20th century as a gold mining camp in the Providence Mountains when significant gold deposits were discovered in the remote Mojave Desert. The camp had a post office, several stores, and a population of several hundred miners at its peak during the 1910s\u20131920s before the gold played out and the extreme desert isolation made further operations uneconomical. Today the Hart area is within or adjacent to the Mojave National Preserve, managed by the National Park Service, with some mining ruins visible in the desert. Artifact collecting is prohibited within National Park Service boundaries, but the surrounding desert terrain outside the preserve may be accessible for exploration."
   },
   {
     "name": "Juan, NV",
@@ -3992,7 +4001,8 @@
     "latitude": 35.366379,
     "longitude": -115.088037,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Juan was a small Nevada mining community or ranch settlement, established during the late 19th or early 20th century in one of Nevada's many remote valleys or mountain ranges where mineral prospecting, ranching, or water access created brief clusters of population. The community served as a minor local center before economic or resource depletion dissolved it, leaving only scattered structural remains in the Nevada desert. Today the Juan community site is likely on BLM land in rural Nevada, with the dry desert environment preserving artifacts well. Old camp sites and mine workings near the historic Juan community location can yield late 19th-century Nevada frontier hardware and domestic items."
   },
   {
     "name": "Sand Hill, MO",
