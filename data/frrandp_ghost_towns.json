@@ -545,7 +545,8 @@
     "latitude": 41.841688,
     "longitude": -88.221674,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Weston was a small Iroquois County, Illinois community in the flat agricultural heartland of northeastern Illinois that existed briefly as a post office and farming service point during the mid-to-late nineteenth century before being eclipsed by neighboring railroad communities that had superior transportation connections. The Illinois prairie landscape around Weston has been intensively farmed for over 150 years, and little surface evidence of the original platted community remains today. Former post office communities in Iroquois County can yield early Illinois settlement artifacts with landowner permission, including early American coinage and homestead hardware from the 1860s-1880s."
   },
   {
     "name": "Vishnu Springs, IL",
@@ -553,7 +554,8 @@
     "latitude": 40.431987,
     "longitude": -90.893746,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Vishnu Springs was a short-lived Illinois resort destination in Pike County developed in the 1890s around natural mineral springs that were marketed as having medicinal properties — a common commercial formula of the Gilded Age when mineral spring resorts proliferated across America. The resort included a hotel, bathhouses, and mineral spring facilities that attracted health-seeking visitors from the St. Louis and western Illinois region during its brief heyday. The resort fell out of fashion as mineral spring therapy lost its popular appeal in the early twentieth century, and the property eventually returned to agricultural use. The site is on private land in western Illinois, and old resort grounds in this region can occasionally yield period glassware, ceramic fragments, and personal items from the resort era."
   },
   {
     "name": "Nothing, AZ",
@@ -561,7 +563,8 @@
     "latitude": 34.480016,
     "longitude": -113.335926,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nothing was a roadside community in Yavapai County, Arizona along State Route 93 between Phoenix and Las Vegas that consisted of a gas station, small store, and handful of buildings serving the sparse desert highway traffic through the Sonoran Desert's Big Sandy Valley. The community existed at the margins of viability for decades, with its population ranging from single digits to just a few dozen at most, relying entirely on passing motorists for survival. The last business closed in the early 2000s, leaving only the roadside signs and some concrete foundations in the creosote-covered Sonoran Desert landscape. The site is accessible from the highway, and the surrounding desert terrain offers open BLM land for exploration."
   },
   {
     "name": "Ludlow, CA",
@@ -569,7 +572,8 @@
     "latitude": 34.723908,
     "longitude": -116.158769,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ludlow was a California desert town in San Bernardino County along the historic National Old Trails Road (later Route 66) that served as a water and fuel stop for the Santa Fe Railway and early automobile travelers crossing the Mojave Desert in the early twentieth century. The town had a hotel, cafe, gas stations, and several businesses catering to both railroad workers and highway travelers during the Route 66 golden age of the 1940s-1960s. Interstate 40 bypassed Ludlow in 1972, stranding it off the main highway and triggering a long decline — today only a few businesses cling to life on the interstate on-ramp while the original town buildings slowly deteriorate in the desert. The accessible ruins and surrounding Mojave Desert BLM land make this a productive area for Route 66–era artifact hunting."
   },
   {
     "name": "Tuscumbia, IL",
@@ -577,7 +581,8 @@
     "latitude": 40.413625,
     "longitude": -90.302456,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tuscumbia was a small farming community in Schuyler County, Illinois that developed in the mid-nineteenth century as an agricultural service point for the surrounding prairie farmland, supporting a post office and local businesses for a few decades before population consolidated in the county's railroad towns. The central Illinois landscape around Tuscumbia has been continuously farmed since the 1830s, with the original village site now private agricultural land. Schuyler County farmstead and village sites from the antebellum period can be productive for early American coinage, Civil War-era personal items, and nineteenth-century domestic artifacts."
   },
   {
     "name": "Tedens, IL",
@@ -585,7 +590,8 @@
     "latitude": 41.694444,
     "longitude": -87.972778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tedens was a tiny rural community in Iroquois County, Illinois that briefly held a post office in the late nineteenth century while serving the surrounding flat prairie farmsteads in this intensively agricultural northeastern Illinois county. Like many small Illinois post office communities, Tedens never developed the railroad connection needed to sustain permanent commercial growth, and the community dissolved as its residents traded in larger nearby centers. The site is now active farmland in one of Illinois's most productive agricultural counties. Former rural Illinois post office communities rarely have surviving above-ground features but can yield homestead-era coins and artifacts in surrounding fields with landowner permission."
   },
   {
     "name": "Sanish, ND",
@@ -593,7 +599,8 @@
     "latitude": 47.973905,
     "longitude": -102.546016,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sanish was a prosperous agricultural community in Mountrail County, North Dakota in the Missouri River valley that thrived from the early twentieth century through the 1950s as a farming and ranching center serving the Fort Berthold Indian Reservation area. The town was condemned and flooded when Garrison Dam was completed in 1953, creating Lake Sakakawea — the third-largest man-made reservoir in the United States — which permanently inundated Sanish along with its neighbors Van Hook and Elbowoods. The flooding of Sanish represented a profound loss for the Three Affiliated Tribes (Mandan, Hidatsa, and Arikara) who lived in the valley, displacing over 900 families from their ancestral homeland. During significant drawdowns of Lake Sakakawea, portions of the old townsite have been observed near the reservoir's upper arms."
   },
   {
     "name": "Seewhy, MI",
@@ -601,7 +608,8 @@
     "latitude": 46.352734,
     "longitude": -85.094519,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Seewhy was a tiny northern Michigan community in Antrim County that existed briefly in the late nineteenth century during the lumbering era that stripped the forests of northern Michigan at an industrial pace. The small settlement served as a logging camp support point in what was then densely forested hardwood and pine country before the timber was exhausted and the lumbermen moved on. The northern Michigan cut-over lands were then attempted as farmland — largely unsuccessfully — and much of the territory eventually reverted to second-growth forest. The Antrim County landscape today is mixed second-growth forest and agricultural land, with old logging era sites sometimes yielding camp equipment and personal items from the 1870s-1900s."
   },
   {
     "name": "Sartoria, NE",
@@ -609,7 +617,8 @@
     "latitude": 40.978343,
     "longitude": -99.213753,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sartoria was a small farming community in Antelope County, Nebraska that platted in the homesteading era of the 1870s-1880s during the great rush to settle the Great Plains, supporting a post office and modest commercial services for surrounding agricultural families. The community failed to develop the railroad connection necessary to sustain long-term growth, and as neighboring towns with better transportation links absorbed the regional trade, Sartoria declined and its post office closed. The site today is typical north-central Nebraska agricultural land, privately held and actively farmed. Former Nebraska homestead-era communities in Antelope County can yield Victorian-era coins and farm implements when detection permission is granted by landowners."
   },
   {
     "name": "Millsdale, IL",
@@ -617,7 +626,8 @@
     "latitude": 41.464065,
     "longitude": -88.16524,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Millsdale was a small farming community in Grundy County, Illinois that developed in the mid-nineteenth century along a tributary of the Illinois River as a mill site and agricultural support community, briefly serving the surrounding farmsteads before larger, better-situated communities captured the regional trade. The Illinois and Michigan Canal corridor in Grundy County was intensively settled in the 1830s-1850s, and many small communities like Millsdale that failed to secure railroad connections withered within a generation. The site today is agricultural land in Grundy County's flat prairie landscape. The canal era and subsequent agricultural settlement of this region makes Grundy County a historically rich area for detecting when private land access can be arranged."
   },
   {
     "name": "LeBeau, SD",
