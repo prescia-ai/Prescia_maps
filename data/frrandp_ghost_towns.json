@@ -995,7 +995,8 @@
     "latitude": 32.325342,
     "longitude": -108.73834,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Shakespeare was a fading New Mexico ghost town in Hidalgo County near Lordsburg in the bootheel region of the state, originally established as a silver and copper mining camp called Ralston City in 1870 and later renamed Shakespeare when subsequent ore discoveries reinvigorated the camp in the 1880s. The town hosted colorful characters including Billy the Kid and Russian Bill Tettenborn, the latter of whom was hanged in the town's dining room by vigilantes in 1881. Shakespeare is now privately owned and operated as a living history site by the Graham family, who conduct periodic tours of the remarkably intact adobe structures that make this one of New Mexico's best-preserved territorial-era mining towns. The site is only accessible during guided tours, and artifact collecting on private property requires explicit landowner permission."
   },
   {
     "name": "Zzyzx, CA",
@@ -1003,7 +1004,8 @@
     "latitude": 35.14278,
     "longitude": -116.10389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Zzyzx was a mineral springs resort in San Bernardino County, California in the Mojave Desert along the old Salt Lake Road, developed in the 1940s by the flamboyant radio evangelist Curtis Howe Springer who operated the 'Zzyzx Mineral Springs and Health Resort' on fraudulently claimed federal land for over three decades, marketing his radio programs and dubious health cures to a Depression and war-weary audience. Springer was evicted from the federal land in 1974, and the site was subsequently converted into the Desert Studies Center, an educational consortium of California State University campuses. The name Zzyzx — invented by Springer to create 'the last word in the dictionary' — remains the official USGS designation. The Desert Studies Center operates year-round on the site, and the mineral spring pool and original Spanish Mission-style buildings are a fascinating relic of Springer's eccentric empire."
   },
   {
     "name": "Fayette, MI",
@@ -1011,7 +1013,8 @@
     "latitude": 45.717479,
     "longitude": -86.667914,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fayette was one of Michigan's finest industrial ghost towns, a complete iron smelting community on a protected harbor along the Garden Peninsula of Delta County in the Upper Peninsula, built and operated by the Jackson Iron Company from 1867 to 1891 to process Upper Peninsula iron ore into pig iron using locally produced charcoal. At its peak, Fayette had a hotel, opera house, doctor's office, and over 20 production buildings housing over 500 workers and their families in company-owned housing. The smelting operation closed in 1891 when natural gas and coke-fueled furnaces elsewhere became more economical, and the company sold its holdings. Today Fayette Historic Townsite within Fayette Township is preserved as a state park, with over 20 original structures standing — one of Michigan's most important industrial heritage sites."
   },
   {
     "name": "Rawsonville, MI",
@@ -1019,7 +1022,8 @@
     "latitude": 42.215317,
     "longitude": -83.551604,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rawsonville was a small Michigan community in Washtenaw County that existed as a mill and agricultural center along the Huron River in the nineteenth century, briefly supporting a post office and commercial activity before being overshadowed by larger Washtenaw County communities. The Huron River corridor in Washtenaw County has been continuously settled since the early 1820s and is now largely suburban territory within the Ann Arbor metropolitan area. Former mill sites along the Huron River in Washtenaw County occasionally yield mill hardware, millstones, and nineteenth-century industrial artifacts."
   },
   {
     "name": "Central, MI",
@@ -1027,7 +1031,8 @@
     "latitude": 47.407137,
     "longitude": -88.20066,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Central was a small copper mining camp in Keweenaw County, Michigan on the Keweenaw Peninsula in the Lake Superior copper district, established in the 1850s as part of the great copper rush that made Keweenaw County one of America's most productive copper mining regions for the latter half of the nineteenth century. The community housed miners and their families in company housing around the Central Mine shaft, which produced rich native copper deposits until operations ceased in the 1890s when easily accessible ore was exhausted. The Central Mine site includes a restored Methodist church that has been the focus of periodic heritage services by descendants of the Cornish and other immigrant miners who worked the Keweenaw copper district. The Keweenaw Peninsula landscape today is a National Heritage Area, with many historic mining sites open to exploration."
   },
   {
     "name": "Pere Cheney, MI",
@@ -1035,7 +1040,8 @@
     "latitude": 44.5775,
     "longitude": -84.63778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pere Cheney was a small lumbering community in Crawford County, Michigan in the northern Lower Peninsula that boomed briefly in the 1870s-1880s when the surrounding white pine forests were being clearcut at an industrial pace, reaching a population of several hundred before the timber was exhausted and the lumber companies moved their operations northward. The town's remaining residents — already battered by smallpox and typhoid epidemics — were finally driven off by the complete exhaustion of the surrounding forests, and Pere Cheney was abandoned by the early 1890s. The site today features a haunted reputation and an accessible old cemetery surrounded by second-growth jack pine and aspen, on land that is now state forest. The cemetery and surrounding area are accessible, and the site is one of northern Michigan's most frequently visited ghost towns."
   },
   {
     "name": "Glen Haven, MI",
@@ -1043,7 +1049,8 @@
     "latitude": 44.901939,
     "longitude": -86.027593,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Glen Haven was a small Great Lakes maritime community on the Sleeping Bear Dunes peninsula in Leelanau County, Michigan that existed from the 1850s as a steamship wooding station where Lake Michigan vessels stopped to take on cordwood fuel, later transitioning to fruit farming as the maritime economy changed. The community had a hotel, general store, and a Life-Saving Service station that served the dangerous Manitou Passage between the mainland and the Manitou Islands. The entire Glen Haven area is now within Sleeping Bear Dunes National Lakeshore, established in 1970, which has preserved several original buildings including the old Coast Guard boathouse and general store. The national lakeshore designation prohibits metal detecting, but the remarkably preserved maritime village is one of the Midwest's finest examples of an intact Victorian-era Lake Michigan port community."
   },
   {
     "name": "Old Victoria, MI",
@@ -1051,7 +1058,8 @@
     "latitude": 46.698976,
     "longitude": -89.229708,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Old Victoria was a copper and silver mining community in Ontonagon County, Michigan on the Keweenaw Peninsula's southern reaches, established in the 1840s during the early years of the great Lake Superior copper rush as miners explored the volcanic trap rock formations of the Lake Superior Copper District. The Victoria Mine produced modest quantities of copper through the mid-nineteenth century before being largely abandoned, and the community that grew around it faded with the mine. Several restored log buildings from the mining era have been preserved at the Victoria Dam site by Upper Peninsula Power Company, creating a small outdoor museum. The Ontonagon County landscape retains strong links to its copper mining heritage, and old mine dumps and settlement sites in the region can be productive detecting territory on accessible public and private lands."
   },
   {
     "name": "Deward, MI",
@@ -1059,7 +1067,8 @@
     "latitude": 44.840568,
     "longitude": -84.826703,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Deward was a quintessential Michigan lumber ghost town in Kalkaska County that was built entirely by the D.H. Day lumber company in 1901, grew to over 1,000 residents at its peak with a complete company town infrastructure, and was entirely demolished and abandoned by 1912 when the surrounding white and Norway pine forest was completely logged out. Day's meticulous records of the town's construction and demolition make Deward unusual among Michigan lumber ghost towns in being extremely well-documented historically. The site today is state forest land in Kalkaska County, accessible and occasionally visited by history enthusiasts and metal detectorists. Old logging camp and company town sites in Michigan's northern Lower Peninsula can yield impressive collections of period tools, coins, and personal items."
   },
   {
     "name": "Gibbs City, MI",
@@ -1067,7 +1076,8 @@
     "latitude": 46.225784,
     "longitude": -88.70069,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gibbs City was another Upper Peninsula Michigan copper mining community in Iron County, established during the period of intensive mining exploration in the Lake Superior copper region in the second half of the nineteenth century. The mining operation at Gibbs City never achieved the scale of the major Keweenaw copper producers and the community faded relatively quickly when copper production proved economically marginal at this location. The Upper Peninsula of Michigan is dotted with the ruins of such small copper and iron mining operations, most now on state or national forest land. Old mining camp sites in this region can yield period mining equipment, company scrip, and immigrant-era personal items."
   },
   {
     "name": "Jacktown, MI",
@@ -1075,7 +1085,8 @@
     "latitude": 44.778746,
     "longitude": -85.97378,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Jacktown was a small Michigan Upper Peninsula community in Dickinson County near the Menominee Iron Range that developed as a support settlement for the iron mining operations of northern Michigan, existing through the latter decades of the nineteenth century before the consolidation of mining operations into larger, more efficient facilities bypassed smaller communities like Jacktown. Iron County and Dickinson County in the Upper Peninsula have an extensive iron mining heritage, with numerous small communities having risen and fallen alongside the fortunes of individual mines and ore ranges. Former iron range communities in this part of Michigan are now largely on state or national forest land, with some sites accessible for historical exploration."
   },
   {
     "name": "Nonesuch, MI",
