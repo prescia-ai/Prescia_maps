@@ -725,7 +725,8 @@
     "latitude": 32.32,
     "longitude": -98.859167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mangum was a small West Texas ranching community in Stonewall County in the rolling red clay hills of the Rolling Plains region, one of many short-lived settlements that attempted to establish permanent communities on the marginal ranchland of west-central Texas in the late nineteenth century. Without a railroad connection and subject to the boom-bust cycles of Texas cattle ranching, Mangum faded quickly as the region's livestock economy became increasingly centralized in larger market towns with rail access. The site today is private ranchland typical of Stonewall County's working cattle country. The red clay soil of the Rolling Plains is hard on artifacts but former ranch communities can yield cowboy-era hardware, ranch equipment fragments, and occasional coinage."
   },
   {
     "name": "Sipe Springs, TX",
@@ -733,7 +734,8 @@
     "latitude": 32.090697,
     "longitude": -98.784222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sipe Springs was a small Comanche County, Texas community in the Cross Timbers region that developed around natural springs in the late nineteenth century as a ranching and farming supply point in the rough post oak and mesquite terrain of central Texas. The springs provided reliable water in a region where that commodity was precious, and the community briefly supported a hotel, school, and businesses. Improved wells and alternative water sources, combined with the lack of railroad access, ultimately undermined the community's spring-based advantage. The site today is private ranchland in Comanche County, and the surrounding Cross Timbers terrain retains its historic character as cattle country."
   },
   {
     "name": "King's Landing, MI",
@@ -741,7 +743,8 @@
     "latitude": 42.043413,
     "longitude": -86.397128,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "King's Landing was a small Michigan Upper Peninsula community along the shore of Lake Superior in Alger County that served the limited logging and fishing economy of this rugged Lake Superior coastline in the late nineteenth century. The community never grew beyond a small cluster of buildings serving the maritime and timber industries, and when those industries declined the community dissolved. The spectacular Lake Superior shoreline where King's Landing sat is now within or near Pictured Rocks National Lakeshore, which was established in 1966 as America's first national lakeshore. The national lakeshore designation protects the area but prohibits metal detecting, though the remarkable shoreline geology draws visitors from across the country."
   },
   {
     "name": "Monte Cristo, WA",
@@ -749,7 +752,8 @@
     "latitude": 47.985825,
     "longitude": -121.393604,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Monte Cristo was a silver and gold mining camp perched at 2,800 feet in the Cascade Mountains of Snohomish County, Washington, booming in the 1890s when rich ore discoveries drew hundreds of miners to the remote mountain valley accessible only by a railroad that had to conquer some of the most challenging terrain in the Pacific Northwest. The town had hotels, saloons, a concentrator mill, and a thriving commercial district during its brief peak in 1894-1897, but a catastrophic flood in 1897 severely damaged the town and railroad, and the mines never fully recovered. Several historic structures survive in the valley, now accessible via hiking trail since the mining road was converted to a trail through the Mount Baker-Snoqualmie National Forest. The surrounding mine dumps, tailing piles, and old building sites on national forest land make this a fascinating hiking destination, though artifact removal on national forest land requires a permit."
   },
   {
     "name": "Gold Town, CA",
@@ -757,7 +761,8 @@
     "latitude": 35.001667,
     "longitude": -118.168889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gold Town was a small placer gold mining camp in Tuolumne County, California in the Mother Lode country of the western Sierra Nevada foothills that developed during the California Gold Rush era of the 1850s, one of hundreds of camps that sprang up along gold-bearing Sierra Nevada streams. Like most placer mining camps, Gold Town faded rapidly once the accessible surface gold was worked out, with miners moving on to newer strikes elsewhere in the Mother Lode. The surrounding Sierra Nevada foothills are now a mix of private land and state and national forest, with many former Gold Rush sites on private cattle ranches or within forest boundaries. Metal detecting in former California Gold Rush era sites can yield period coins, mining equipment, and personal items."
   },
   {
     "name": "Oakwood, KS",
@@ -765,7 +770,8 @@
     "latitude": 38.160286,
     "longitude": -95.039379,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Oakwood was a small farming community in Coffey County, Kansas that platted during the great homesteading era of the 1870s-1880s, briefly supporting a post office and local commercial services for surrounding agricultural operations in the Neosho River watershed area of east-central Kansas. The community never developed adequate rail connections and was absorbed into the surrounding agricultural landscape within a generation of its founding. The site today is private farmland in Coffey County's productive agricultural territory. Kansas homestead-era communities like Oakwood can yield period artifacts — including pre-Civil War era tokens and coins from early territorial settlers — with proper landowner permission."
   },
   {
     "name": "Gunn, WY",
@@ -773,7 +779,8 @@
     "latitude": 41.637128,
     "longitude": -109.155521,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gunn was a small Wyoming community in Natrona County in the Thunder Basin region of northeastern Wyoming that developed briefly as a ranch supply and post office community in the late nineteenth century during the cattle ranching era on the High Plains. The harsh Wyoming climate, periodic drought, and marginal nature of the high-desert ranching economy combined to make permanent community establishment extremely difficult in this region. The site today is private ranchland in the sagebrush steppe of central Wyoming. Former Wyoming ranching communities from the 1880s-1900s can occasionally yield cowboy-era artifacts including leather hardware, horseshoes, and domestic items from the ranch era."
   },
   {
     "name": "Barnwell, CA",
@@ -781,7 +788,8 @@
     "latitude": 35.290626,
     "longitude": -115.232946,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Barnwell was a small California desert community in San Bernardino County in the Mojave Desert's eastern reaches near the Nevada border, developing as a railroad water stop and mining support community along the Atlantic & Pacific Railroad (later Santa Fe) in the 1880s. The town served as a supply point for surrounding desert mining districts including the Providence Mountains region, and had a post office, stores, and a hotel at its brief peak. As the mining districts faded and railroad technology reduced the need for water stops, Barnwell declined rapidly and was abandoned by the early twentieth century. The Mojave Desert landscape around Barnwell is managed by the Bureau of Land Management and offers open access for exploration of the historic mining and railroad era landscape."
   },
   {
     "name": "Goffs, CA",
@@ -789,7 +797,8 @@
     "latitude": 34.919048,
     "longitude": -115.061512,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Goffs was a community in San Bernardino County, California along historic Route 66 in the Mojave Desert that served as a railroad station and small community on the National Old Trails Road, later Route 66, providing water, fuel, and limited services to desert travelers in the early automobile era. The community's Schoolhouse, built in 1914, has been restored by the Mojave Desert Heritage and Cultural Association and serves as the organization's headquarters and a museum of desert history. Interstate 40 bypassed Route 66 through this section of the Mojave, leaving Goffs accessible only via the original highway alignment. The restored schoolhouse and surrounding desert landscape make Goffs a worthwhile stop for Route 66 enthusiasts and desert history researchers."
   },
   {
     "name": "Homer, CA",
@@ -797,7 +806,8 @@
     "latitude": 34.919649,
     "longitude": -114.937506,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Homer was a small California mining community in Mono County along Bodie Creek in the eastern Sierra Nevada, developing in the 1860s-1880s as a satellite settlement in the greater Bodie mining district that served nearby mining claims and provided modest commercial services to miners working the area's gold and silver deposits. The community faded as the Bodie district's main camp overshadowed surrounding satellites, and the town of Homer dissolved as miners consolidated their activities at the more prosperous Bodie site nearby. The surrounding Mono County landscape includes Bodie State Historic Park and extensive BLM land. The arid Sierra Nevada high desert terrain preserves historic artifacts well, and surrounding BLM land (outside the state park) may offer opportunities with proper permits."
   },
   {
     "name": "Forest City, UT",
