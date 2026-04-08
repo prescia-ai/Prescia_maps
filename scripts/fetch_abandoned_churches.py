@@ -876,6 +876,195 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
         "source": "obsidian_urbex_churches",
         "confidence": 0.65,
     },
+    {
+        "name": "San Isidro Church (Las Mesitas)",
+        "type": "abandoned_church",
+        "latitude": 37.05723,
+        "longitude": -106.12697,
+        "description": (
+            "San Isidro Church in Las Mesitas, Conejos County, Colorado, was originally constructed "
+            "in 1878 and rebuilt on donated land in 1932, serving the Hispanic Catholic agricultural "
+            "community of the San Luis Valley for nearly a century as a center for worship, community "
+            "gatherings, and Penitente Brotherhood devotions. The stone-walled structure was dedicated "
+            "to San Isidro Labrador, the patron saint of farmers, and featured vibrantly painted "
+            "stained-glass windows and a historic bell cast partly from jewelry donated by pioneer "
+            "women of the valley. On November 1, 1975, a malfunctioning heater ignited a catastrophic "
+            "fire that destroyed everything inside — pews, Stations of the Cross, religious vessels, "
+            "and the bell — leaving only the stone exterior walls standing open to the Colorado sky. "
+            "The photogenic shell of the church now serves as an informal pilgrimage site where "
+            "outdoor masses and even weddings are held amid the ruins, with wildflowers growing "
+            "along the former nave aisles."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Keota Methodist Church",
+        "type": "abandoned_church",
+        "latitude": 40.70278,
+        "longitude": -104.07528,
+        "description": (
+            "The Keota Methodist Church was constructed in 1918 to serve the booming prairie "
+            "homestead community of Keota on the Pawnee National Grasslands of Weld County, "
+            "Colorado, built as a timber-frame structure that became the social and spiritual "
+            "anchor for farmers and ranchers drawn by the Chicago, Burlington and Quincy Railroad's "
+            "reach across the high plains. Keota's fate was sealed by the Dust Bowl of the 1930s, "
+            "which stripped the overworked prairie soil and combined with the Great Depression to "
+            "drive a steady exodus of residents; the post office closed in 1974 and the last "
+            "railroad track was removed in 1982. The abandoned Methodist church survives alongside "
+            "a water tower and scattered foundations as the most prominent remnant of Keota's ghost "
+            "town, standing in open grassland grazed by pronghorn and cattle that roam the "
+            "surrounding federal land. The church has been documented by historians and photographers "
+            "as an emblem of failed homesteading on the Colorado plains, with its story contributing "
+            "inspiration for James Michener's fictional settlement in the novel Centennial."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Antelope Springs Methodist Episcopal Church",
+        "type": "abandoned_church",
+        "latitude": 40.46472,
+        "longitude": -103.59972,
+        "description": (
+            "The Antelope Springs Methodist Episcopal Church at 31948 CO-71 near Snyder, Morgan "
+            "County, Colorado, was constructed in 1915 and represents one of the last surviving "
+            "community-built timber-frame churches of the homestead era in northeastern Colorado, "
+            "listed on the National Register of Historic Places in 2013 for its architectural "
+            "integrity and its embodiment of the agricultural pioneer spirit of the region. The "
+            "modest one-story frame building was hand-constructed by local settler families and "
+            "served as both a worship space and community gathering hall for the scattered farms "
+            "of the Antelope Springs area through the mid-twentieth century until the congregation "
+            "dissolved as the rural population declined. On July 14, 2019, arsonists breached the "
+            "historic church and set a fire that severely damaged the interior, destroying roof "
+            "timbers and scorching the walls; two adults and a juvenile were arrested and charged "
+            "with arson and trespass within days. Colorado Preservation, Inc. placed the church on "
+            "its Endangered Places list, and the local community has organized ongoing restoration "
+            "efforts to stabilize and eventually rehabilitate the structure as a community center."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Milk River Valley Church (Kremlin-Gildford Church of the Brethren)",
+        "type": "abandoned_church",
+        "latitude": 48.67872,
+        "longitude": -110.22611,
+        "description": (
+            "The Kremlin-Gildford Church of the Brethren — commonly known as the Milk River Valley "
+            "Church — was built beginning in 1915 and completed around 1918 on the remote windswept "
+            "plains of Hill County, Montana, between the small Hi-Line communities of Kremlin and "
+            "Gildford, constructed by German-Russian immigrant farmers who brought the Church of "
+            "the Brethren tradition from the Great Plains settlements to Montana's homestead "
+            "frontier. Severe drought, economic hardship, and the collapse of wheat prices following "
+            "World War I devastated the congregation within a generation, and the church closed as "
+            "families abandoned their claims and left the land. The white clapboard church and an "
+            "adjacent parsonage now stand in isolation on a dirt track miles from any paved road, "
+            "surrounded by fields that return annually to wheat but contain no remaining community, "
+            "embodying the melancholy of the failed Hi-Line homestead era. Photographers and rural "
+            "heritage enthusiasts seek out the site for its dramatic prairie isolation and its "
+            "intact but deteriorating exterior, which has been documented by several Great Plains "
+            "photography projects."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Capilla de San Juan Bautista (La Garita)",
+        "type": "abandoned_church",
+        "latitude": 37.84662,
+        "longitude": -106.26054,
+        "description": (
+            "The Capilla de San Juan Bautista in La Garita, Saguache County, Colorado, is a "
+            "Territorial Adobe-style church built in 1879 and rebuilt in 1926 after an earlier "
+            "structure burned, featuring thick stuccoed adobe walls, a Gothic Revival bell tower, "
+            "and a prominent presence in the valley settled by Hispano Catholic families who moved "
+            "northward from the Conejos River settlements. The chapel served as an active parish "
+            "center until 1895 and thereafter as a mission church until it was abandoned in the "
+            "1960s after the surrounding community's population dwindled; the adjacent Casa de Cura "
+            "(priest's residence) fell into ruin and has been preserved as a roofless adobe shell. "
+            "The site was partially restored in the 2000s as the San Juan Catholic Spiritual "
+            "Center, though the original convent ruins and cemetery remain in their historic "
+            "deteriorated state as the most evocative elements of the complex. The ruins of the "
+            "Casa de Cura, set against the backdrop of the San Juan Mountains, draw photographers "
+            "and religious pilgrims exploring the Sangre de Cristo National Heritage Area."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Espinosa Church",
+        "type": "abandoned_church",
+        "latitude": 37.21,
+        "longitude": -105.44,
+        "description": (
+            "The Espinosa Church is a derelict historic Catholic chapel in the small unincorporated "
+            "community of Espinosa in Costilla County, Colorado, part of the network of small "
+            "Hispano Catholic mission churches that served the scattered farming and ranching "
+            "settlements of the San Luis Valley established by New Mexican settlers in the "
+            "mid-nineteenth century. Like many rural mission chapels of the region, the Espinosa "
+            "church was a simple adobe or stone vernacular structure that served as the spiritual "
+            "and social center of a hamlet-scale community dependent on subsistence farming and "
+            "stock grazing. Population decline and road improvements that made travel to larger "
+            "parish centers feasible led to the church's abandonment in the mid-to-late twentieth "
+            "century, leaving the structure to gradually deteriorate under seasonal freeze-thaw "
+            "cycles and deferred maintenance. The church is documented in urban exploration and "
+            "heritage photography collections focusing on the San Luis Valley's distinctive "
+            "network of abandoned Hispano mission architecture."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Jaroso Church (Sacred Heart Church)",
+        "type": "abandoned_church",
+        "latitude": 37.003,
+        "longitude": -105.625,
+        "description": (
+            "The Sacred Heart Church (Sagrado Corazon de Jesus) in Jaroso, Costilla County, "
+            "Colorado, is an abandoned Catholic chapel that served the small railroad settlement "
+            "of Jaroso, founded in the late nineteenth century along a branch line of the Denver "
+            "and Rio Grande Railroad that briefly brought commercial activity to this high-altitude "
+            "San Luis Valley community before the line's abandonment left the town isolated. The "
+            "modest adobe and frame structure was the religious center for Jaroso's largely "
+            "Hispanic Catholic population, which sustained itself through small-scale ranching and "
+            "farming in the shallow valley below the Sangre de Cristo Mountains. As the railroad "
+            "economy collapsed and younger generations moved to larger regional centers, Jaroso's "
+            "population contracted to a handful of households, and the church fell into disuse "
+            "and gradual structural deterioration. The abandoned church and a few surviving "
+            "residences make Jaroso one of the most evocative near-ghost settlements in the San "
+            "Luis Valley, photographed for its dramatic mountain backdrop and preserved vernacular "
+            "architecture."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Cathedral High School and Convent (Denver)",
+        "type": "abandoned_church",
+        "latitude": 39.7456,
+        "longitude": -104.9849,
+        "description": (
+            "The Cathedral High School and Convent at 1840 Grant Street in Denver's Uptown "
+            "neighborhood was completed in 1921 in a Spanish Renaissance Revival style designed "
+            "by architect Harry J. Manning, built to house a Catholic girls' school and a Sisters "
+            "of Charity convent complex that operated under the Archdiocese of Denver for decades "
+            "and later became nationally known as Seton House, a facility providing charitable "
+            "social services including AIDS hospice care during the 1980s and 1990s epidemic. "
+            "The five-story brick and terra cotta building features an ornate Spanish Revival "
+            "facade with decorative pilasters, arched window surrounds, and a prominent cornice, "
+            "representing one of the most architecturally elaborate institutional buildings of "
+            "its era in Denver. The property was sold and has changed hands multiple times since "
+            "Seton House closed, with redevelopment plans repeatedly stalling amid financial and "
+            "legal disputes, leaving the historic structure classified by the City of Denver as a "
+            "Neglected and Derelict Building subject to ongoing fines and enforcement actions. "
+            "The deteriorating complex has suffered extensive vandalism and structural neglect, "
+            "attracting urban explorers and preservation advocates who document its continuing "
+            "decay while campaigning for stabilization and adaptive reuse."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
 ]
 
 
