@@ -3650,7 +3650,8 @@
     "latitude": 44.05154,
     "longitude": -71.437625,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Livermore was a New Hampshire hill town in Grafton County, originally granted in 1876 and briefly occupied by a small logging and lumber community that harvested the vast spruce and fir forests of the Pemigewasset Wilderness during the late 19th century. The Livermore Lumber Company operated a sawmill and maintained worker housing, a railroad spur, and company facilities in the wilderness interior for several decades before the timber was exhausted and operations ceased by the early 20th century. Today the former township of Livermore is within the White Mountain National Forest, and the old railroad grades are hiking trails through the Pemi Wilderness. The national forest wilderness designation prohibits metal detecting, but the logging-era infrastructure remnants \u2014 old logging camp sites, rail spikes, and mill pond earthworks \u2014 are visible to hikers."
   },
   {
     "name": "Monson, NH",
@@ -3658,7 +3659,8 @@
     "latitude": 42.785012,
     "longitude": -71.616957,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Monson was a New Hampshire hill town in Hillsborough County that was granted in 1748 but achieved only limited settlement before the population dispersed during the 19th century as New Hampshire's upland farms proved economically unsustainable. The rocky terrain and thin soils that discouraged sustained agriculture left behind a landscape of stone walls, cellar holes, and old orchards that mark the locations of former farmsteads. Today the former Monson township is part of Greenfield State Park or adjacent private land in Hillsborough County. Stone-wall-enclosed old fields and cellar hole sites are the most productive areas for New England ghost town detectorists, who may find 18th-to-19th-century coins, domestic ceramics, and hand-forged farm implements."
   },
   {
     "name": "Bartlett, ND",
@@ -3666,7 +3668,8 @@
     "latitude": 48.044722,
     "longitude": -98.432327,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bartlett was a small North Dakota farming community on the northern Great Plains, established during the great homestead rush of the 1890s\u20131910s when the federal government opened Dakota lands to settlement and thousands of families filed on 160-acre claims across the region's wheat-growing prairie. The community had a grain elevator, a general store, and a church serving surrounding homesteaders during the wheat-growing boom years before the combination of drought, low wheat prices, and the Great Depression collapsed the North Dakota homestead economy in the 1930s. Today the Bartlett area is active wheat farmland with perhaps a deteriorating elevator or church foundation as the only reminder of the community. The surrounding flat agricultural land, worked with landowner permission, may yield early 20th-century coins, homestead hardware, and farm implements."
   },
   {
     "name": "Gold Point, NV",
@@ -3674,7 +3677,8 @@
     "latitude": 37.354476,
     "longitude": -117.364901,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gold Point was a silver and gold mining camp in Esmeralda County, Nevada, known variously as Hornsilver and Lime Point before settling on its current name, booming in the 1860s and again briefly in the early 20th century as repeated silver discoveries drew optimistic miners to the remote desert range between Goldfield and Beatty. The town had a post office, hotel, saloons, and a peak population of several hundred during its most active periods before ore depletion and the collapse of Nevada's silver economy reduced it to a handful of die-hard residents. Gold Point is today one of Nevada's most accessible ghost towns \u2014 a small but authentic collection of deteriorating adobe and wood-frame buildings still standing in the high desert \u2014 maintained by a private owner who welcomes visitors. The surrounding desert mine dumps and old claim areas are rich territory for period mining tools, ore specimens, and desert-preserved camp artifacts."
   },
   {
     "name": "Nevadaville, CO",
@@ -3682,7 +3686,8 @@
     "latitude": 39.795266,
     "longitude": -105.532498,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nevadaville was a significant gold mining camp in Gilpin County, Colorado, established in 1859 immediately after the Pike's Peak gold rush discoveries and growing alongside Central City as one of the most productive gold camps in the territory, with lode gold deposits yielding millions in ore over the following decades. The camp had over 3,000 residents at its peak, with multiple quartz mills, a stamp mill, saloons, churches, and a school serving the hard-rock mining community until declining gold prices and ore depletion reduced the population through the late 19th and early 20th centuries. Today Nevadaville's remaining structures sit on the hillside above Central City, and portions of the old townsite are accessible via roads from the Central City gaming district. The mine dumps and old claim areas surrounding Nevadaville are rich territory for mining artifacts, miner's checks, and period tools \u2014 though access to some areas may require coordination with local mine claim holders."
   },
   {
     "name": "Dearfield, CO",
@@ -3690,7 +3695,8 @@
     "latitude": 40.290789,
     "longitude": -104.259245,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dearfield was a pioneering African American agricultural colony in Weld County, Colorado, founded in 1910 by O.T. Jackson and other Black entrepreneurs as part of a Back-to-the-Land movement that sought to create self-sufficient Black farming communities on the Colorado plains during an era of intense racial segregation. At its peak in the early 1920s, Dearfield had nearly 700 residents, farms, a post office, a church, a grocery store, and a dance hall \u2014 an extraordinary achievement given the racial and economic barriers facing Black settlers on the high plains. The Great Depression, drought, and racial economic discrimination combined to empty the colony by the 1940s, and most structures were demolished or collapsed. Today the Dearfield site in Weld County retains a few deteriorating structures, is listed on the National Register of Historic Places, and is the subject of ongoing preservation efforts \u2014 a powerful symbol of African American pioneering on the Colorado frontier."
   },
   {
     "name": "Adelaide, CO",
@@ -3698,7 +3704,8 @@
     "latitude": 38.559995,
     "longitude": -105.090817,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Adelaide in Gunnison County was a small Colorado coal mining camp that served the coal-bearing formations of the Elk Mountain area during the late 19th and early 20th centuries, housing miners who worked the underground seams that fueled regional industries and railroad operations. The camp had company housing, a store, and basic community facilities before the mines were exhausted or became uneconomical and the camp was shuttered. Today the site is private land in Gunnison County's mountain terrain, with mine shaft collars and tailings piles marking the locations of former underground workings. Coal mining camp artifacts \u2014 brass lamp parts, mining tokens, company store merchandise \u2014 are the typical finds at such sites for detectorists with landowner access."
   },
   {
     "name": "Adelaide, Lake County, CO",
@@ -3706,7 +3713,8 @@
     "latitude": 39.247222,
     "longitude": -106.258056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Adelaide in Lake County was a small Colorado mining camp in the high terrain near Leadville, established during the silver mining boom of the 1870s\u20131880s when the Leadville district became one of the richest silver fields in the American West, attracting tens of thousands of miners and supporting dozens of satellite camps across the surrounding mountains. The camp served as a minor service point and housing cluster for miners working nearby claims, lacking the full commercial infrastructure of larger Leadville-district towns. Today the Lake County site is on or near the public lands managed by the U.S. Forest Service in the San Isabel National Forest area. The high-altitude mine dumps and old camp sites of the Leadville district are among the most productive in Colorado for mining-era artifacts \u2014 with miner's tools, ore samples, and period hardware common finds."
   },
   {
     "name": "Arapahoe, CO",
@@ -3714,7 +3722,8 @@
     "latitude": 39.775,
     "longitude": -105.178333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arapahoe was a small Colorado community, possibly a stagecoach stop or minor railroad watering point serving travelers crossing the eastern Colorado plains during the 1870s\u20131890s when the cattle and wheat economy of the high plains was just developing. The community served a limited role for surrounding homesteaders and cattle ranchers before better road connections and later the automobile made such minor waypoints economically obsolete. Today the Arapahoe area of Colorado is agricultural plains with no surviving commercial infrastructure from the original community. The high plains around the historic Arapahoe community location, searched with landowner permission, can yield late 19th-century coins, homestead hardware, and cattle-drive era artifacts."
   },
   {
     "name": "Arrow, CO",
@@ -3722,7 +3731,8 @@
     "latitude": 39.91528,
     "longitude": -105.76037,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arrow was a small Colorado mining or ranching community, established during the late 19th century in one of Colorado's many mountain or foothill valleys where mineral prospecting, ranching, or railroad construction created brief clusters of population. The community served as a minor local center before the resource that created it was exhausted or bypassed by other developments, leaving behind scattered structural ruins and mine workings. Today the Arrow community site is likely public or private land in Colorado's mountain terrain. Mine dump areas and old camp sites near the historic Arrow location can yield late 19th-century mining hardware, ranch implements, and domestic artifacts."
   },
   {
     "name": "Corona, CO",
