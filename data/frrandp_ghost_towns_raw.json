@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Bodie",
+    "latitude": 38.212,
+    "longitude": -119.0157,
+    "description": "Gold mining ghost town, Mono County, California. California State Historic Park. Frozen in time since 1942. Zero permanent residents."
+  },
+  {
+    "name": "Ballarat",
+    "latitude": 36.0538,
+    "longitude": -117.2235,
+    "description": "Desert ghost town, Inyo County, California. Former supply town for Death Valley mines. Abandoned early 20th century. No permanent residents."
+  },
+  {
+    "name": "Calico",
+    "latitude": 34.9488,
+    "longitude": -116.8678,
+    "description": "Silver mining ghost town, San Bernardino County, California. Operated 1881–1907. Restored as a county regional park. No permanent residents."
+  },
+  {
+    "name": "Cerro Gordo",
+    "latitude": 36.5139,
+    "longitude": -117.9047,
+    "description": "Silver and lead mining ghost town, Inyo County, California. Active 1865–1938. Private property, no permanent residential population."
+  },
+  {
+    "name": "Darwin",
+    "latitude": 36.2669,
+    "longitude": -117.5897,
+    "description": "Mining ghost town, Inyo County, California. Former lead-silver camp in the Darwin Hills. Essentially abandoned; a handful of structures remain."
+  },
+  {
+    "name": "Ludlow",
+    "latitude": 34.7178,
+    "longitude": -116.1606,
+    "description": "Mojave Desert railroad ghost town, San Bernardino County, California. Old Route 66 stop, now largely abandoned."
+  },
+  {
+    "name": "Rhyolite",
+    "latitude": 36.9027,
+    "longitude": -116.8305,
+    "description": "Gold rush ghost town, Nye County, Nevada. Population peaked at ~10,000 in 1908. Completely abandoned by 1920. Ruins remain in open desert."
+  },
+  {
+    "name": "Belmont",
+    "latitude": 38.6258,
+    "longitude": -117.2458,
+    "description": "Former Nye County seat, Nevada. Silver mining boomtown 1865–1885. Courthouse ruins preserved. No permanent residents."
+  },
+  {
+    "name": "Berlin",
+    "latitude": 39.3667,
+    "longitude": -117.9167,
+    "description": "Lander County ghost town, Nevada. Part of Berlin-Ichthyosaur State Park. Mining ceased by 1911. Zero permanent residents."
+  },
+  {
+    "name": "Gold Point",
+    "latitude": 37.3522,
+    "longitude": -117.3697,
+    "description": "Esmeralda County ghost town, Nevada. Silver and gold mining camp. Privately owned; no permanent residential population."
+  },
+  {
+    "name": "Hamilton",
+    "latitude": 39.2503,
+    "longitude": -115.0039,
+    "description": "White Pine County ghost town, Nevada. Former county seat. Silver boom 1868–1880s. Destroyed by fires; only ruins remain. Zero residents."
+  },
+  {
+    "name": "Unionville",
+    "latitude": 40.4167,
+    "longitude": -118.0333,
+    "description": "Pershing County ghost town, Nevada. Silver mining camp established 1861. Mark Twain briefly prospected here. Essentially abandoned."
+  },
+  {
+    "name": "Animas Forks",
+    "latitude": 37.9361,
+    "longitude": -107.5745,
+    "description": "San Juan County ghost town, Colorado. Gold and silver mining settlement. Active 1875–1910. Above 11,200 ft elevation. Zero residents."
+  },
+  {
+    "name": "St. Elmo",
+    "latitude": 38.7034,
+    "longitude": -106.3439,
+    "description": "Chaffee County ghost town, Colorado. Gold mining town active 1880–1922. One caretaker reported; considered zero permanent population."
+  },
+  {
+    "name": "Independence",
+    "latitude": 39.0639,
+    "longitude": -106.6533,
+    "description": "Pitkin County ghost town, Colorado. Gold camp near Independence Pass. Abandoned 1899. Preserved by Aspen Historical Society. Zero residents."
+  },
+  {
+    "name": "Ashcroft",
+    "latitude": 38.9456,
+    "longitude": -106.7458,
+    "description": "Pitkin County ghost town, Colorado. Silver mining camp abandoned 1890s. Preserved structures. Zero permanent residents."
+  },
+  {
+    "name": "Gilman",
+    "latitude": 39.4909,
+    "longitude": -106.4828,
+    "description": "Eagle County ghost town, Colorado. EPA Superfund site. Zinc and lead mine. Evacuated 1984; permanently abandoned. Zero residents."
+  },
+  {
+    "name": "Summitville",
+    "latitude": 37.4353,
+    "longitude": -106.5994,
+    "description": "Rio Grande County ghost town, Colorado. Gold mining settlement. Abandoned and designated a Superfund cleanup site. Zero residents."
+  },
+  {
+    "name": "Ruby",
+    "latitude": 31.4642,
+    "longitude": -111.2245,
+    "description": "Santa Cruz County ghost town, Arizona. Lead-zinc mining camp active 1912–1941. Isolated ruins on private property. Zero residents."
+  },
+  {
+    "name": "Vulture City",
+    "latitude": 33.8183,
+    "longitude": -112.9117,
+    "description": "Maricopa County ghost town, Arizona. Gold mine operated 1863–1942. Preserved on private land. No permanent residents."
+  },
+  {
+    "name": "Gleeson",
+    "latitude": 31.7009,
+    "longitude": -109.798,
+    "description": "Cochise County ghost town, Arizona. Copper mining camp established 1900. Adobe ruins remain. Zero permanent residents."
+  },
+  {
+    "name": "Dos Cabezas",
+    "latitude": 32.1392,
+    "longitude": -109.6317,
+    "description": "Cochise County ghost town, Arizona. Gold and silver mining camp active 1870s–1900s. Small cluster of ruins. Essentially zero residents."
+  },
+  {
+    "name": "Harshaw",
+    "latitude": 31.5167,
+    "longitude": -110.6147,
+    "description": "Santa Cruz County ghost town, Arizona. Silver mining town established 1877. Abandoned early 20th century. No permanent residents."
+  },
+  {
+    "name": "Greaterville",
+    "latitude": 31.8417,
+    "longitude": -110.6458,
+    "description": "Santa Cruz County ghost town, Arizona. Gold placer mining camp 1870s–1890s. Ruins in the Santa Rita Mountains. Zero residents."
+  },
+  {
+    "name": "Swansea",
+    "latitude": 34.1444,
+    "longitude": -114.0683,
+    "description": "La Paz County ghost town, Arizona. Copper smelting town established 1909. Ruins in the Buckskin Mountains. Zero permanent residents."
+  },
+  {
+    "name": "Bumble Bee",
+    "latitude": 34.2333,
+    "longitude": -112.2,
+    "description": "Yavapai County ghost town, Arizona. Gold mining settlement late 1800s. Privately owned ruins along Bumble Bee Road. Zero residents."
+  },
+  {
+    "name": "Mogollon",
+    "latitude": 33.3867,
+    "longitude": -108.7678,
+    "description": "Catron County ghost town, New Mexico. Silver-gold mining camp active 1890–1942. Remote mountain location. Zero permanent residents."
+  },
+  {
+    "name": "Elizabethtown",
+    "latitude": 36.5534,
+    "longitude": -105.2231,
+    "description": "Colfax County ghost town, New Mexico. First incorporated town in New Mexico. Gold mining boom 1867–1875. Ruins only. Zero residents."
+  },
+  {
+    "name": "White Oaks",
+    "latitude": 33.6006,
+    "longitude": -105.7831,
+    "description": "Lincoln County ghost town, New Mexico. Gold mining boomtown 1879–1900s. Only ruins remain. Zero permanent residents."
+  },
+  {
+    "name": "Kelly",
+    "latitude": 34.0847,
+    "longitude": -107.1897,
+    "description": "Socorro County ghost town, New Mexico. Lead-zinc-silver mine active 1860s–1940s. Church ruins preserved. Zero residents."
+  },
+  {
+    "name": "South Pass City",
+    "latitude": 42.47,
+    "longitude": -108.8083,
+    "description": "Fremont County ghost town, Wyoming. Gold mining settlement 1867–1872. State Historic Site. Zero permanent residents."
+  },
+  {
+    "name": "Atlantic City",
+    "latitude": 42.53,
+    "longitude": -108.74,
+    "description": "Fremont County ghost town, Wyoming. Gold and iron mining town founded 1868. Mostly abandoned; treated as zero population."
+  },
+  {
+    "name": "Sego",
+    "latitude": 39.1972,
+    "longitude": -109.5006,
+    "description": "Grand County ghost town, Utah. Coal mining camp active 1910–1955. Petroglyphs nearby. Zero residents."
+  },
+  {
+    "name": "Cisco",
+    "latitude": 38.9742,
+    "longitude": -109.3258,
+    "description": "Grand County ghost town, Utah (not to be confused with Cisco, TX). Railroad and ranching ghost town. Abandoned mid-20th century. Zero residents."
+  },
+  {
+    "name": "Kennecott",
+    "latitude": 61.4897,
+    "longitude": -142.9128,
+    "description": "Wrangell-St. Elias National Park ghost town, Alaska. Copper mine operated 1903–1938. National Historic Landmark. Zero permanent residents."
+  },
+  {
+    "name": "Centralia",
+    "latitude": 40.8031,
+    "longitude": -76.3413,
+    "description": "Columbia County ghost town, Pennsylvania. Evacuated due to underground coal mine fire burning since 1962. Government-ordered relocation. Fewer than 10 holdouts remain."
+  },
+  {
+    "name": "Terlingua",
+    "latitude": 29.3204,
+    "longitude": -103.6088,
+    "description": "Brewster County ghost town, Texas. Mercury mining town active 1900–1942. Mostly abandoned ruins in the Chihuahuan Desert, near Big Bend National Park."
+  },
+  {
+    "name": "Thurmond",
+    "latitude": 37.9523,
+    "longitude": -81.0738,
+    "description": "Fayette County ghost town, West Virginia. Coal boom town 1880–1930s. National Park Service site. Fewer than 5 residents; considered abandoned."
+  },
+  {
+    "name": "Bannack",
+    "latitude": 45.1639,
+    "longitude": -112.995,
+    "description": "Beaverhead County ghost town, Montana. First territorial capital of Montana. Gold rush town 1862. Montana State Park. Zero permanent residents."
+  },
+  {
+    "name": "Garnet",
+    "latitude": 46.8219,
+    "longitude": -113.3931,
+    "description": "Missoula/Granite County ghost town, Montana. Gold mining camp 1860s–1947. Managed by BLM. Zero permanent residents."
+  },
+  {
+    "name": "Silver City",
+    "latitude": 42.9767,
+    "longitude": -116.7336,
+    "description": "Owyhee County ghost town, Idaho. Silver mining town established 1864. Former county seat. Zero permanent residents."
+  },
+  {
+    "name": "Hardman",
+    "latitude": 45.2167,
+    "longitude": -120.2167,
+    "description": "Morrow County ghost town, Oregon. Former farming and ranching community. Abandoned mid-20th century. Zero residents."
+  }
+]
