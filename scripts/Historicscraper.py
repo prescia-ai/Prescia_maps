@@ -91,7 +91,7 @@ logger = setup_logging("Historicscraper")
 # ---------------------------------------------------------------------------
 
 NRHP_CSV_URL = (
-    "https://irma.nps.gov/DataStore/DownloadFile/706904"
+    "https://irma.nps.gov/DataStore/DownloadFile/719414"
 )
 
 # Keywords for filtering NRHP records to metal-detecting relevant sites
@@ -137,6 +137,8 @@ NRHP_TYPE_MAP: Dict[str, str] = {
 
 NRHP_SOURCE = "nrhp"
 NRHP_CONFIDENCE = 0.90
+# Number of bytes to read when validating that a download looks like CSV text
+_NRHP_HEADER_VALIDATION_BYTES = 200
 
 # ---------------------------------------------------------------------------
 # NPS Constants
@@ -209,11 +211,12 @@ def _download_nrhp_csv(timeout: float = 300.0) -> bytes:
     return response.content
 
 
-def _extract_nrhp_csv(raw_bytes: bytes) -> io.TextIOWrapper:
+def _extract_nrhp_csv(raw_bytes: bytes) -> Optional[io.TextIOWrapper]:
     """
     Extract the NRHP CSV data.
 
     The download may be a ZIP archive containing a CSV, or the raw CSV itself.
+    Returns None if the content is not valid CSV (e.g. a File Geodatabase).
     """
     # Try as ZIP first
     try:
@@ -222,12 +225,27 @@ def _extract_nrhp_csv(raw_bytes: bytes) -> io.TextIOWrapper:
             if csv_names:
                 logger.info("Extracting %s from archive.", csv_names[0])
                 data = zf.read(csv_names[0])
-                return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8", errors="replace")
+                return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8-sig", errors="replace")
+            # Check for GDB files (not parseable as CSV)
+            gdb_names = [n for n in zf.namelist() if ".gdb" in n.lower()]
+            if gdb_names:
+                logger.error(
+                    "NRHP download contains a File Geodatabase (%s), not a CSV. "
+                    "The download URL may need updating.", gdb_names[0]
+                )
+                return None
     except zipfile.BadZipFile:
         pass
 
-    # Not a ZIP — treat as raw CSV
-    return io.TextIOWrapper(io.BytesIO(raw_bytes), encoding="utf-8", errors="replace")
+    # Check if raw bytes look like CSV (starts with printable ASCII / UTF-8 text)
+    header = raw_bytes[:_NRHP_HEADER_VALIDATION_BYTES].decode("utf-8-sig", errors="replace")
+    # A valid CSV header will either be all-printable (no newline yet) or contain a newline.
+    # Binary/GDB content will fail both checks.
+    if header.isprintable() or "\n" in header:
+        return io.TextIOWrapper(io.BytesIO(raw_bytes), encoding="utf-8-sig", errors="replace")
+
+    logger.error("NRHP download is not a valid CSV or ZIP file.")
+    return None
 
 
 def _parse_nrhp_csv(
@@ -584,58 +602,64 @@ async def run(
         raw_bytes = _download_nrhp_csv()
         stream = _extract_nrhp_csv(raw_bytes)
 
-        batch: List[Dict[str, Any]] = []
-        nrhp_count = 0
-        async with session_factory() as session:
-            for record in _parse_nrhp_csv(stream, state_filter, limit):
-                nrhp_count += 1
-                cleaned = clean_name(record["name"])
-                if not cleaned:
-                    continue
+        if stream is None:
+            logger.warning(
+                "NRHP CSV extraction failed (non-CSV content) — skipping NRHP source."
+            )
+            completed_sources.add("nrhp")
+        else:
+            batch: List[Dict[str, Any]] = []
+            nrhp_count = 0
+            async with session_factory() as session:
+                for record in _parse_nrhp_csv(stream, state_filter, limit):
+                    nrhp_count += 1
+                    cleaned = clean_name(record["name"])
+                    if not cleaned:
+                        continue
 
-                if is_blocked(cleaned, record.get("description", "")):
-                    skipped_blocked += 1
-                    continue
+                    if is_blocked(cleaned, record.get("description", "")):
+                        skipped_blocked += 1
+                        continue
 
-                if dedup.is_duplicate(cleaned, record["latitude"], record["longitude"]):
-                    skipped_dup += 1
-                    continue
+                    if dedup.is_duplicate(cleaned, record["latitude"], record["longitude"]):
+                        skipped_dup += 1
+                        continue
 
-                dedup.add(cleaned, record["latitude"], record["longitude"])
-                record["name"] = cleaned
-                batch.append(record)
+                    dedup.add(cleaned, record["latitude"], record["longitude"])
+                    record["name"] = cleaned
+                    batch.append(record)
 
-                if len(batch) >= BATCH_SIZE:
+                    if len(batch) >= BATCH_SIZE:
+                        if not dry_run:
+                            total_locations += await insert_location_batch(session, batch)
+                        else:
+                            total_locations += len(batch)
+                        batch.clear()
+
+                if batch:
                     if not dry_run:
                         total_locations += await insert_location_batch(session, batch)
                     else:
                         total_locations += len(batch)
-                    batch.clear()
 
-            if batch:
-                if not dry_run:
-                    total_locations += await insert_location_batch(session, batch)
-                else:
-                    total_locations += len(batch)
-
-        logger.info("NRHP CSV: %d keyword-matched records parsed.", nrhp_count)
-        if nrhp_count == 0:
-            logger.warning(
-                "NRHP CSV: 0 records matched keywords. "
-                "CSV columns were logged above at INFO level. "
-                "Check column name mapping."
-            )
-        completed_sources.add("nrhp")
-        save_checkpoint(ckpt_path, {
-            "completed_sources": list(completed_sources),
-            "stats": {
-                "locations_inserted": total_locations,
-                "linear_features_inserted": total_linear,
-                "skipped_dup": skipped_dup,
-                "skipped_blocked": skipped_blocked,
-            },
-        })
-        logger.info("NRHP import complete: %d locations inserted.", total_locations)
+            logger.info("NRHP CSV: %d keyword-matched records parsed.", nrhp_count)
+            if nrhp_count == 0:
+                logger.warning(
+                    "NRHP CSV: 0 records matched keywords. "
+                    "CSV columns were logged above at INFO level. "
+                    "Check column name mapping."
+                )
+            completed_sources.add("nrhp")
+            save_checkpoint(ckpt_path, {
+                "completed_sources": list(completed_sources),
+                "stats": {
+                    "locations_inserted": total_locations,
+                    "linear_features_inserted": total_linear,
+                    "skipped_dup": skipped_dup,
+                    "skipped_blocked": skipped_blocked,
+                },
+            })
+            logger.info("NRHP import complete: %d locations inserted.", total_locations)
 
     # ===================================================================
     # Source 2: NPS API
