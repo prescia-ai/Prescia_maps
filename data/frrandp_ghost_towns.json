@@ -3020,7 +3020,8 @@
     "latitude": 42.028056,
     "longitude": -88.753611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Brush Point was a small Illinois community situated on or near a river or lake peninsula characterized by dense brush or timber \u2014 a common descriptive place name throughout the Midwest that reflected the landscape settlers encountered when they first arrived. The community likely served river travelers and nearby farmers in the mid-19th century with a tavern, a ferry crossing, or a minor trading post before improved roads and bridges made such geographic landmarks less commercially significant. Today the site has been absorbed into surrounding agricultural or riparian land. Old river landing areas and farmstead perimeters near the original Brush Point location may yield 19th-century coins, domestic items, and watercraft hardware."
   },
   {
     "name": "Bourbonais, IL",
@@ -3028,7 +3029,8 @@
     "latitude": 41.343611,
     "longitude": -89.635278,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bourbonais was an early French-Canadian settlement in Kankakee County, Illinois, one of the oldest European-origin communities in northeastern Illinois, established by French-Canadian fur traders and settlers in the 1830s near a ford on the Kankakee River where the community of Bourbonnais (the modern spelling) eventually grew into a permanent village. The original settlement area preceded the formal town plat and served as a gathering point for the mixed French-Canadian and Potawatomi population of the region before American settlers arrived in force. Today the village of Bourbonnais is an active community, but the ghost-town designation likely refers to the original pre-plat settlement area that predated the formal incorporation. Historic French-Canadian domestic artifacts, fur-trade-era items, and early American coins are potential finds from the oldest occupation layers."
   },
   {
     "name": "Daggett, IL",
@@ -3036,7 +3038,8 @@
     "latitude": 42.0325,
     "longitude": -89.973611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Daggett was a small Illinois farming community, established during the mid-19th century settlement of the Illinois prairie by families seeking the rich agricultural land available through the government land sale system. The community had a church and perhaps a school, functioning as a local social center for surrounding homesteaders before declining in the latter half of the 19th century as railroad-served towns attracted the regional commerce. No physical structures remain today, and the original community site is agricultural land. Farm field margins and old road traces near the historic Daggett community location may yield 19th-century coins, agricultural hardware, and domestic fragments."
   },
   {
     "name": "Reeds Crossing, IL",
@@ -3044,7 +3047,8 @@
     "latitude": 42.201389,
     "longitude": -88.798611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Reeds Crossing was a small Illinois community centered on a river or creek ford where an early settler named Reed established a crossing and perhaps a tavern or ferry service for travelers moving through the region during the mid-19th century. Such crossing points were natural gathering spots for trade and socialization during the era before reliable bridges, and they often developed into small communities with a blacksmith and a store alongside the crossing operation. As bridges replaced fords and road alignments shifted, Reeds Crossing lost its commercial reason for existing and faded from the landscape. Old creek and river crossing sites in the area may preserve 19th-century coins, travel-related hardware, and domestic items from the tavern era."
   },
   {
     "name": "Cardiff, IL",
@@ -3052,7 +3056,8 @@
     "latitude": 41.051667,
     "longitude": -88.287222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cardiff was a small Illinois community platted during the boom era of Illinois settlement, likely named by Welsh immigrant settlers who brought the name of their homeland's capital to the Midwest prairie where they hoped to establish a prosperous new community. The town may have had a brief commercial existence with a store and church before failing to attract a railroad depot, which proved fatal to scores of similar Illinois communities in the 1850s\u20131870s. Today Cardiff exists only in old county plat records. The historic community location, accessed with landowner permission, may yield mid-19th-century domestic artifacts, Welsh-community items, and early American coinage."
   },
   {
     "name": "Tracy, IL",
@@ -3060,7 +3065,8 @@
     "latitude": 41.169444,
     "longitude": -88.233889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tracy was a small rural community in Illinois, established in the mid-to-late 19th century and named for an early landowner or settler family that dominated the local landscape. The community served surrounding farm families with a church, school, and country store before demographic consolidation and improved transportation drew its residents toward larger neighboring towns through the early 20th century. No physical structures survive at the original community site. Old farmstead perimeters and road traces near the historic Tracy community location may yield late 19th-century coins, agricultural hardware, and domestic artifacts."
   },
   {
     "name": "Houstonville, IL",
@@ -3068,7 +3074,8 @@
     "latitude": 40.355,
     "longitude": -88.308611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Houstonville was a small Illinois farming community, platted during the mid-19th century and named for a prominent local settler or landowner who helped establish the settlement in the rich agricultural country of central or southern Illinois. The community had a church and a country store at its height, serving as a minor rural center before railroad construction to nearby towns effectively bypassed Houstonville and drew its commercial life away. Today the original townsite is agricultural land with no surviving structures. Old church lots and road intersections identified through historic plat maps may be productive areas for 19th-century finds."
   },
   {
     "name": "Kumler, IL",
@@ -3076,7 +3083,8 @@
     "latitude": 40.299722,
     "longitude": -88.578056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kumler was a small Illinois community, likely named for a German or Swiss-German immigrant family \u2014 the Kumler surname being common among German-speaking Pennsylvania Dutch settlers who spread across Ohio and Illinois in the early 19th century. The community served as a minor agricultural trading point for surrounding farm families, possibly with a German Lutheran or Reformed church at its core, before disappearing from active use by the late 19th or early 20th century. No physical evidence of the original settlement survives above ground. Old church sites and farmstead perimeters near the Kumler community location may yield German-American domestic artifacts, 19th-century coins, and agricultural hardware."
   },
   {
     "name": "Lone Tree Corners, IL",
@@ -3084,7 +3092,8 @@
     "latitude": 41.184722,
     "longitude": -89.485556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lone Tree Corners was a small Illinois community named for a solitary tree \u2014 likely a large bur oak or cottonwood \u2014 that served as a landmark at a rural crossroads, a common naming convention for Midwestern communities that grew up around distinctive natural features visible across the flat prairie landscape. The community may have had a blacksmith shop, a school, and a store serving surrounding farm families in the mid-to-late 19th century before better-connected neighboring towns absorbed its commerce. No structures remain today. Old crossroads sites and farmstead areas near the historic community location may yield 19th-century coins, agricultural implements, and domestic hardware."
   },
   {
     "name": "Chamness, IL",
@@ -3092,7 +3101,8 @@
     "latitude": 37.676944,
     "longitude": -88.988611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Chamness was a small Illinois farming community, platted during the mid-19th century and named for the Chamness family \u2014 a surname found among Quaker settlers from North Carolina and Indiana who moved into central Illinois during the antebellum era. The community served as a minor local gathering point for surrounding Quaker and mixed-denomination farm families, with a Friends meeting house or other church at its core. As the rural Quaker population consolidated and moved to larger centers through the late 19th century, Chamness faded from the landscape. The old meeting grounds and farmstead perimeters in the area may yield 19th-century domestic artifacts and early American coins."
   },
   {
     "name": "Halfway, IL (Little Juarez)",
