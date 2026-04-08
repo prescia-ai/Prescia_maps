@@ -2084,7 +2084,8 @@
     "latitude": 44.659444,
     "longitude": -118.290833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Whitney was a small Baker County, Oregon ranching and farming community in the Eagle Valley of the Blue Mountains, established in the late nineteenth century as a supply and post office community for surrounding agricultural operations in the rugged terrain of eastern Oregon's basin and range country. The community existed as a modest service point until the regional economy consolidated in larger Baker County centers. Baker County's mining history, particularly the gold discoveries in the Cornucopia and Unity areas, make eastern Oregon a historically rich detecting region. The surrounding Wallowa-Whitman National Forest and BLM lands offer extensive public access for history enthusiasts in this remote but scenic corner of Oregon."
   },
   {
     "name": "Knox Mills, WI",
@@ -2092,7 +2093,8 @@
     "latitude": 45.5,
     "longitude": -90.112778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Knox Mills was a small Wisconsin farming and milling community likely in the Fox River watershed of the central Wisconsin landscape, established as a mill and agricultural service point during Wisconsin's great settlement era and fading as the regional economy consolidated in larger milling centers with railroad access. Wisconsin's many small mill communities of the nineteenth century were the backbone of the agricultural economy, processing grain from surrounding farms before the industry was reorganized around larger, more efficient railroad-served mills. Former Wisconsin mill sites and their surrounding communities are typically on private agricultural land today."
   },
   {
     "name": "Anchorage, WI",
@@ -2100,7 +2102,8 @@
     "latitude": 44.268611,
     "longitude": -91.757222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Anchorage was a small Wisconsin community — distinct from the Alaska city — likely a farming or logging community in the northern or central Wisconsin lake country that existed briefly as a post office community during the Wisconsin settlement era of the 1870s-1890s. The Wisconsin northland was simultaneously being logged at an industrial pace and settled by farming families during this period, creating a chaotic pattern of community formation and abandonment as the timber played out and farming proved difficult in the sandy soils left by glacial outwash. Former Wisconsin northland communities that attempted farming after logging typically left only cellar depressions and stone walls in the recovering second-growth forest."
   },
   {
     "name": "Army Lake, WI",
@@ -2108,7 +2111,8 @@
     "latitude": 42.806667,
     "longitude": -88.375278,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Army Lake was a small Wisconsin community in Waukesha County in the Kettle Moraine lake district of southeastern Wisconsin, a resort or farming community that developed around one of the region's many glacial lakes during the late nineteenth century when Wisconsin's natural lake landscape attracted both farmers and resort-seekers from Milwaukee and Chicago. The Kettle Moraine region of Waukesha County is now largely developed as part of the greater Milwaukee suburban area, and former rural communities in this region have generally been absorbed into residential development. The Ice Age National Scientific Reserve and Kettle Moraine State Forest preserve portions of the original natural landscape."
   },
   {
     "name": "Ashford, WI",
@@ -2116,7 +2120,8 @@
     "latitude": 43.346667,
     "longitude": -90.468056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ashford was a small Wisconsin community in Fond du Lac County in the Kettle Moraine region, existing as a farming settlement in the rolling glacial terrain of eastern Wisconsin during the great agricultural settlement era of the mid-to-late nineteenth century. Fond du Lac County was settled by German, Irish, and Yankee farmers in the 1840s-1860s, creating a rich agricultural landscape that has been continuously farmed for over 150 years. Former Wisconsin farming communities in Fond du Lac County typically survive only as the names of townships, with the original community sites now private farmland. Detecting in former Wisconsin farming communities from the antebellum period can yield early American coinage and homestead artifacts."
   },
   {
     "name": "Bagdad, WI",
@@ -2124,7 +2129,8 @@
     "latitude": 45.656111,
     "longitude": -88.703611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bagdad, Wisconsin was a small farming community in Portage County in central Wisconsin that existed briefly as a post office community in the agricultural settlement of the Wisconsin interior during the late nineteenth century. Portage County's central Wisconsin landscape is dominated by the sandy plains deposited by glacial Lake Wisconsin, making farming challenging in the drier areas — a factor that contributed to many small communities' difficulties in sustaining population. Stevens Point is the dominant Portage County center, and most small farming communities in the county consolidated toward the railroad towns in the latter nineteenth century."
   },
   {
     "name": "Bohri, WI",
@@ -2132,7 +2138,8 @@
     "latitude": 44.145,
     "longitude": -91.602778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bohri was a small Wisconsin community — possibly a Scandinavian immigrant settlement — in the northern or central Wisconsin logging and farming country that existed briefly during the great Wisconsin northern land rush of the 1880s-1900s. Many Wisconsin northland communities bore names reflecting the origins of their settlers — Norwegian, Swedish, Finnish, and German immigrant communities spread across Wisconsin's cutover lands after the timber was exhausted. The failed cutover farming movement of Wisconsin's early twentieth century left dozens of such communities abandoned when soil conditions proved too poor for sustained agriculture."
   },
   {
     "name": "Doaksville, OK",
@@ -2140,7 +2147,8 @@
     "latitude": 34.0358,
     "longitude": -95.0717,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Doaksville was the capital of the Choctaw Nation during the antebellum era, a significant Native American political and commercial center in the southeastern part of Indian Territory (now McCurtain County, Oklahoma) that had a population of several thousand in the 1840s-1850s and served as the center of Choctaw government, commerce, and social life after the tribe's forced removal from Mississippi along the Trail of Tears in the 1830s. The town had a Presbyterian mission, several trading posts, and the Choctaw Nation's governmental buildings before Fort Towson — the nearby U.S. Army post — closed and the capital moved to Skullyville and eventually Tuskahoma. Doaksville is most famous as the site where Confederate General Stand Watie, the last Confederate general to surrender, laid down his arms on June 23, 1865. The site is preserved as a historic landmark in McCurtain County."
   },
   {
     "name": "Texola, OK",
@@ -2148,7 +2156,8 @@
     "latitude": 35.219219,
     "longitude": -99.991219,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Texola was a small Oklahoma-Texas border community in Beckham County, Oklahoma along historic Route 66, existing on the very edge of the Texas state line as a small but persistent service community for cross-country travelers on the Mother Road. The town's Route 66 heritage included a jail so small it's been called the 'world's smallest jail,' various tourist attractions, and the typical small highway service economy of the Route 66 era that collapsed when Interstate 40 bypassed the community. Today Texola has a handful of residents and several original Route 66-era buildings, making it one of Oklahoma's more accessible Route 66 ghost town experiences. The open, accessible nature of the surviving buildings and the surrounding Beckham County landscape make this a worthwhile stop for Route 66 and Oklahoma history enthusiasts."
   },
   {
     "name": "Frisco, UT",
@@ -2156,7 +2165,8 @@
     "latitude": 38.45635,
     "longitude": -113.258853,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Frisco was one of Utah's most spectacular silver mining ghost towns, a Beaver County boom camp in the San Francisco Mountains that reached a population of 6,000 in the early 1880s when the Horn Silver Mine produced some of the richest ore ever found in Utah, yielding $16 million in silver by 1885. The camp had 23 saloons, multiple hotels and stores, and was notorious for its lawlessness — a marshal killed six men on his first night on the job, reportedly hanging them in pairs from the same telegraph pole. The Horn Silver Mine's main shaft collapsed in 1885, triggering a massive cave-in that ended the camp's boom era virtually overnight. The ruins of Frisco — including the remarkably preserved beehive charcoal kilns and scattered building foundations — are accessible on BLM land south of Milford, Utah, making this one of the West's most rewarding ghost town sites for artifact hunters and history enthusiasts."
   },
   {
     "name": "Turret, CO",
