@@ -416,7 +416,12 @@ LANDMARKS = [
 
 
 def scrape_trail_list(url):
-    """Fetch a URL and return a parsed list of trail data, or empty list on failure."""
+    """Fetch a remote JSON resource and return a parsed list, or empty list on failure.
+
+    Intended for optionally supplementing the hardcoded TRAILS data with an
+    external source (e.g. a JSON API endpoint).  Not called by default; all
+    data is already hardcoded in the TRAILS and LANDMARKS constants above.
+    """
     try:
         with urllib.request.urlopen(url, timeout=10) as response:
             data = response.read().decode("utf-8")
