@@ -2444,7 +2444,8 @@
     "latitude": 43.958044,
     "longitude": -103.35852,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rockerville was a Black Hills, South Dakota gold mining community in Pennington County established in 1876 shortly after the great Black Hills gold rush began, thriving briefly as a placer and sluice mining community before the most accessible surface gold was exhausted and miners moved on to deeper operations at Deadwood and Lead. The community had several businesses, a hotel, and a post office during its brief boom years, and a famous hydraulic mining operation that used high-pressure water jets to wash the gold-bearing gravel. Rockerville was later revived in the early twentieth century as a tourist attraction and small community on the road between Rapid City and Custer State Park. The historic core of Rockerville is accessible today, and the surrounding Black Hills National Forest offers open access for gold prospecting in the gulches and streams."
   },
   {
     "name": "Elkmont, TN",
@@ -2452,7 +2453,8 @@
     "latitude": 35.660555,
     "longitude": -83.583874,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Elkmont was a small Sevier County, Tennessee community in the Great Smoky Mountains that developed in the early twentieth century as a logging community and subsequently as a summer resort colony, where Knoxville and Chattanooga elite families built summer cottages along Jakes Creek and the Little River beginning in the 1910s-1920s through the Appalachian Club. The Smoky Mountains were heavily logged in the early 1900s, with communities like Elkmont serving as bases for the Little River Lumber Company's operations before the land was acquired for the national park. Today Elkmont's collection of aging summer cottages — some of the oldest structures in Great Smoky Mountains National Park — is the subject of ongoing debate about preservation versus restoration. Metal detecting is prohibited within the national park, but the accessible campground area near the old colony is popular with visitors."
   },
   {
     "name": "Tremont, TN",
@@ -2460,7 +2462,8 @@
     "latitude": 35.62083,
     "longitude": -83.6775,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tremont was a small Sevier County, Tennessee logging and community in the Smoky Mountains area, part of the Little River drainage that was logged extensively by the Little River Lumber Company in the early twentieth century before the land was incorporated into Great Smoky Mountains National Park in the 1930s. The community at Tremont served as a base for logging operations in the upper Little River watershed before the park's establishment required relocating the remaining residents. The Tremont area today is home to the Great Smoky Mountains Institute at Tremont, an environmental education center, accessible via a road through the national park from Townsend, Tennessee. The rich natural and logging heritage of the Tremont area is interpreted through the institute's educational programs."
   },
   {
     "name": "Wahsatch, UT",
@@ -2468,7 +2471,8 @@
     "latitude": 41.199167,
     "longitude": -111.112222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Wahsatch was a small Summit County, Utah community along the Union Pacific Railroad's mainline near the Utah-Wyoming border in the Wasatch Mountains, serving as a railroad section house community and modest service point for travelers and railroad workers crossing the high mountain terrain in the late nineteenth and early twentieth centuries. The Echo Canyon approach to the Wasatch was one of the most dramatic sections of the transcontinental railroad, and communities like Wahsatch existed primarily to service the railroad's operations through the mountain terrain. As diesel locomotives replaced steam and railroad technology reduced the need for section house communities, Wahsatch faded from its already modest existence. The surrounding Summit County landscape includes Echo Canyon and the Weber River corridor, with the historic railroad grade still clearly visible in the dramatic canyon terrain."
   },
   {
     "name": "Woodside, UT",
