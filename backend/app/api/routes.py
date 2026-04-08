@@ -538,7 +538,7 @@ async def get_blm_tile_url() -> Dict[str, str]:
     """
     return {
         "url": (
-            "https://gis.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
+            "https://gis.usgs.gov/arcgis/rest/services/PADUS3_0GAP_Status_Code/MapServer/tile/{z}/{y}/{x}"
         ),
         "attribution": "USGS PAD-US 3.0 – Protected Areas Database of the United States",
     }
