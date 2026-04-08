@@ -815,7 +815,8 @@
     "latitude": 40.527778,
     "longitude": -111.602778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Forest City was a small silver and lead mining camp in Juab County, Utah in the Tintic Mining District, established in the 1870s as one of several camps that served the prolific ore deposits of the eastern Tintic Mountains, which would eventually yield hundreds of millions of dollars in precious metals over several decades of mining. The camp existed primarily to house miners working nearby claims and declined as operations consolidated at larger Tintic District centers like Eureka and Silver City. The Tintic Mining District is one of Utah's most historically significant mining regions, and the surrounding Juab County landscape contains extensive mine dumps and historic mining infrastructure. Much of the Tintic District land is now managed by the BLM or is private mining claim land with variable access."
   },
   {
     "name": "Colton, UT",
@@ -823,7 +824,8 @@
     "latitude": 39.849502,
     "longitude": -111.010237,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Colton was a small Carbon County, Utah mining community along Price River Pass at the western edge of the Wasatch Plateau, serving as a coal mining and railroad support community along the Denver and Rio Grande Western Railroad's mainline through the Price River Canyon. The town existed primarily as a railroad helper station and modest coal mining community from the 1880s through the early twentieth century before declining as rail operations were modernized and the need for helper engines reduced. The Carbon County area remains active coal mining country today, and many former mining community sites exist on private mining land or alongside active railroad rights-of-way. Former railroad helper station communities in this region can yield railroad hardware and early twentieth century domestic artifacts."
   },
   {
     "name": "Clifford Eight, IL",
@@ -831,7 +833,8 @@
     "latitude": 37.828768,
     "longitude": -89.077663,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Clifford Eight was a small rural community in Iroquois County, Illinois in the flat agricultural belt of northeastern Illinois, another of the region's many short-lived post office communities that platted during the height of Illinois's agricultural settlement in the 1870s-1880s without ever securing the railroad connections needed for permanent commercial viability. The site today is actively farmed cropland in Iroquois County, one of Illinois's most productive agricultural counties. Farm-era detecting in Iroquois County with landowner permission can yield Victorian-era coinage and homestead hardware from the settlement period."
   },
   {
     "name": "Parker City, IL",
@@ -839,7 +842,8 @@
     "latitude": 37.5671,
     "longitude": -88.797603,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Parker City was a small Iroquois County, Illinois farming community that briefly held a post office during the late nineteenth century while serving the surrounding prairie agricultural operations, but failed to develop the economic base needed to survive the competitive landscape of Illinois's post-railroad rural economy. The site has been absorbed into the surrounding agricultural landscape of Iroquois County. Former post office community sites in Iroquois County are typically private farmland but can be productive detecting sites with permission."
   },
   {
     "name": "Berlin, NV",
@@ -847,7 +851,8 @@
     "latitude": 38.882222,
     "longitude": -117.607222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Berlin was a well-preserved Nevada ghost town in Nye County in the Shoshone Mountains, established in the 1890s as a silver and gold mining camp that operated through the early 1910s and then fell silent, its structures abandoned intact to the high-desert climate rather than demolished or burned. The town's remarkable preservation — including the ore processing mill, manager's house, and various outbuildings — earned it a place within Berlin-Ichthyosaur State Park, which also protects a remarkable deposit of Triassic-era ichthyosaur fossils nearby. The state park has made Berlin one of Nevada's most accessible and well-interpreted ghost towns, with guided tours available during the season. Metal detecting is prohibited within state park boundaries, but the preserved townsite and surrounding history make this a must-visit destination in the central Nevada mining landscape."
   },
   {
     "name": "Centerview, KS",
@@ -855,7 +860,8 @@
     "latitude": 37.815582,
     "longitude": -99.268642,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Centerview was a small farming community in Linn County, Kansas that developed during the post-Civil War settlement of east-central Kansas's fertile Marais des Cygnes River valley, briefly supporting a post office and local agricultural commerce before the railroad network established in neighboring communities captured the regional trade. The Linn County region in southeastern Kansas has a notable Civil War history as a site of border warfare, and the surrounding landscape contains several historically significant Civil War-era sites. The former Centerview site is private farmland in Linn County. Kansas Civil War border region communities can yield mid-nineteenth century coins and military personal items alongside standard homestead-era artifacts."
   },
   {
     "name": "Heineman, WI",
@@ -863,7 +869,8 @@
     "latitude": 45.278057,
     "longitude": -89.554152,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Heineman was a small Wisconsin farming community in Sauk County in the Baraboo Hills region, one of the state's most geologically distinctive areas with ancient quartzite ridges rising dramatically from the surrounding farmland. The community existed as a modest agricultural service point during Wisconsin's settlement era and faded as the county's commercial activities consolidated at larger centers like Baraboo. Sauk County is home to Baraboo, where the Ringling Brothers Circus wintered, and the region has a rich history connected to both agriculture and entertainment. The surrounding Sauk County landscape includes Parfrey's Glen State Natural Area and Devils Lake State Park, making it a popular outdoor destination today."
   },
   {
     "name": "Butler, TN",
@@ -871,7 +878,8 @@
     "latitude": 36.333174,
     "longitude": -82.027616,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Butler was a thriving agricultural and commercial community in Carter County, Tennessee in the Watauga River valley in the northeastern corner of the state, established in the 1800s and growing to include churches, stores, a post office, and several hundred residents serving the surrounding mountain farming economy. The town was condemned and flooded in 1948 when the Tennessee Valley Authority completed Watauga Dam, creating Watauga Lake — one of the TVA's high-mountain reservoirs in the Unaka Mountains. Residents were displaced and the town was completely inundated, though the TVA cemetery relocation program moved most of the town's graves to higher ground. During exceptional drought years, the upper lake arms have revealed portions of the old road network and foundations, and the TVA-managed reservoir offers public access along its scenic shoreline."
   },
   {
     "name": "Kwigiumpainukamiut, AK",
@@ -879,7 +887,8 @@
     "latitude": 61.5686,
     "longitude": -159.2258,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kwigiumpainukamiut was a traditional Yup'ik Eskimo village on the Bering Sea coast of Alaska whose very long name reflects the Yup'ik language's descriptive place-naming tradition, a community of indigenous Alaskans who lived along this remote stretch of the Alaska coastline for generations sustained by subsistence hunting, fishing, and gathering. The village was abandoned in the twentieth century as Alaska Native communities throughout rural Alaska were relocated by government programs or chose to relocate to larger communities with access to schools and services. The remote Bering Sea coast location means the site is accessible only by small plane or boat. Indigenous Alaskan village sites are protected under the Native American Graves Protection and Repatriation Act, and artifact collection is prohibited."
   },
   {
     "name": "Santa Claus, AZ",
@@ -887,7 +896,8 @@
     "latitude": 35.336667,
     "longitude": -114.216389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Santa Claus was a Yavapai County, Arizona roadside attraction and real estate development scheme launched in 1937 along US Route 93 by Harry Miller, who built a small village themed around Christmas imagery — including a post office that operated as 'Santa Claus, Arizona' and received thousands of holiday mail pieces annually from across the country. The venture was intended to anchor a larger real estate development but the remote desert location on the road between Phoenix and Las Vegas never attracted enough buyers, and the business struggled through multiple ownership changes. The last of the Christmas-themed buildings closed in 2006, leaving a collection of decaying holiday structures slowly crumbling in the Sonoran Desert. The accessible roadside ruins make for an odd but memorable stop on the US 93 corridor."
   },
   {
     "name": "Youngberg, AZ",
