@@ -1,0 +1,1979 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oregon Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1830s-1869",
+        "description": "The most heavily traveled overland route in American history, the Oregon Trail carried over 400,000 emigrants from Missouri to the Pacific Northwest between the 1840s and 1860s. It followed the Platte River valley through the Great Plains before crossing the Continental Divide at South Pass."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5786,
+            39.0997
+          ],
+          [
+            -97.0,
+            40.7
+          ],
+          [
+            -98.382,
+            40.6936
+          ],
+          [
+            -100.45,
+            41.32
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -105.9,
+            42.94
+          ],
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -115.7,
+            42.6
+          ],
+          [
+            -116.2,
+            43.65
+          ],
+          [
+            -116.9347,
+            43.6
+          ],
+          [
+            -118.9647,
+            45.5946
+          ],
+          [
+            -121.1789,
+            45.6052
+          ],
+          [
+            -122.6765,
+            45.5231
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1841-1869",
+        "description": "Branching from the Oregon Trail at South Pass or Fort Hall, the California Trail brought hundreds of thousands of emigrants and Forty-Niners to the goldfields of California. The treacherous crossing of the Sierra Nevada, especially at Donner Pass, became legendary for its dangers."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -113.715,
+            42.0706
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -117.0,
+            40.7
+          ],
+          [
+            -118.0,
+            40.5
+          ],
+          [
+            -118.7,
+            39.3
+          ],
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.9,
+            38.8
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santa Fe Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1821-1880",
+        "description": "Opened by William Becknell in 1821 following Mexican independence from Spain, the Santa Fe Trail was the great commercial highway linking Missouri to the Mexican Southwest. For nearly 60 years it carried merchant caravans, military expeditions, and eventually stagecoaches through the southern plains."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5786,
+            39.0997
+          ],
+          [
+            -96.4892,
+            38.6617
+          ],
+          [
+            -98.0,
+            38.3
+          ],
+          [
+            -99.3295,
+            38.25
+          ],
+          [
+            -100.6667,
+            37.99
+          ],
+          [
+            -102.5,
+            37.98
+          ],
+          [
+            -103.55,
+            37.49
+          ],
+          [
+            -104.4,
+            37.2
+          ],
+          [
+            -104.5,
+            36.91
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mormon Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846-1869",
+        "description": "Blazed by Brigham Young and the Latter-day Saints fleeing religious persecution in 1846-1847, the Mormon Trail paralleled the Oregon Trail but ran along the north bank of the Platte River. Over 70,000 Mormon pioneers followed this route to build their Zion in the Salt Lake Valley."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -91.381,
+            40.55
+          ],
+          [
+            -93.0,
+            41.25
+          ],
+          [
+            -95.8517,
+            41.2606
+          ],
+          [
+            -97.0,
+            41.5
+          ],
+          [
+            -99.0,
+            41.1
+          ],
+          [
+            -101.0,
+            41.2
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -107.0,
+            42.1
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pony Express Route",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1860-1861",
+        "description": "The Pony Express operated for only 18 months from April 1860 to October 1861, yet became one of the most celebrated enterprises in American history. Riders covered the nearly 2,000-mile route between Missouri and California in approximately 10 days, delivering mail across the continent before the telegraph made the service obsolete."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.8467,
+            39.7675
+          ],
+          [
+            -96.0,
+            40.1
+          ],
+          [
+            -98.382,
+            40.6936
+          ],
+          [
+            -100.45,
+            40.69
+          ],
+          [
+            -102.2583,
+            40.9875
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -107.0,
+            42.1
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ],
+          [
+            -114.0,
+            39.2
+          ],
+          [
+            -116.2023,
+            39.1638
+          ],
+          [
+            -119.75,
+            39.15
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Natchez Trace",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1700s-1820s",
+        "description": "One of America's oldest roads, the Natchez Trace followed ancient Native American paths through the Old Southwest, linking the Mississippi River port of Natchez to Nashville, Tennessee. Flatboat men who floated goods downriver to Natchez walked this trace northward home, earning the nickname 'Kaintucks.'"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -91.4032,
+            31.5604
+          ],
+          [
+            -91.0,
+            32.0
+          ],
+          [
+            -90.9,
+            32.2988
+          ],
+          [
+            -90.2,
+            32.7
+          ],
+          [
+            -89.9711,
+            34.26
+          ],
+          [
+            -88.7037,
+            34.55
+          ],
+          [
+            -88.0,
+            34.9889
+          ],
+          [
+            -87.0,
+            35.15
+          ],
+          [
+            -86.7816,
+            36.1627
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bozeman Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1863-1868",
+        "description": "Blazed by John Bozeman in 1863 as a shortcut to the Montana goldfields, the Bozeman Trail cut directly through the Powder River Basin, prime hunting grounds of the Lakota and Cheyenne. Red Cloud's War (1866-1868) forced the U.S. Army to abandon its forts along the trail, making it the only conflict in which the government conceded defeat to Native Americans."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -104.5,
+            43.0
+          ],
+          [
+            -106.4,
+            43.9
+          ],
+          [
+            -106.55,
+            44.3
+          ],
+          [
+            -106.9506,
+            44.5244
+          ],
+          [
+            -107.5,
+            45.0
+          ],
+          [
+            -107.9195,
+            45.317
+          ],
+          [
+            -108.5,
+            45.6
+          ],
+          [
+            -110.7624,
+            45.6796
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Spanish Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1829-1848",
+        "description": "The Old Spanish Trail connected the Spanish colonial settlements of New Mexico with the missions of Alta California through the harsh Colorado Plateau and Mojave Desert. First fully traversed by Antonio Armijo in 1829-1830, it became a mule trade route carrying woolen blankets west and returning with horses and mules."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.9378,
+            35.687
+          ],
+          [
+            -106.5,
+            36.5
+          ],
+          [
+            -107.8801,
+            37.2753
+          ],
+          [
+            -109.55,
+            38.55
+          ],
+          [
+            -110.0,
+            38.0
+          ],
+          [
+            -111.0,
+            37.5
+          ],
+          [
+            -113.0,
+            37.0
+          ],
+          [
+            -114.0,
+            36.0
+          ],
+          [
+            -115.1398,
+            36.1699
+          ],
+          [
+            -117.0,
+            34.5
+          ],
+          [
+            -118.2437,
+            34.0522
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gila Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846-1850s",
+        "description": "The Gila Trail followed the Gila River across the Sonoran Desert, providing the southernmost all-weather route to California during the Gold Rush era. Pioneered during the Mexican-American War by General Kearny's Army of the West, it later became a major route for thousands of Forty-Niners."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.485,
+            31.7619
+          ],
+          [
+            -108.0,
+            32.0
+          ],
+          [
+            -109.5,
+            32.3
+          ],
+          [
+            -110.9747,
+            32.2226
+          ],
+          [
+            -112.074,
+            33.4484
+          ],
+          [
+            -113.5,
+            33.2
+          ],
+          [
+            -114.6277,
+            32.6927
+          ],
+          [
+            -117.161,
+            32.7153
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Camino Real de Tierra Adentro",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1598-1882",
+        "description": "The Royal Road of the Interior Land, stretching nearly 1,800 miles from Mexico City to Santa Fe, was the lifeline of Spanish colonial New Mexico for nearly three centuries. Established by Juan de O\u00f1ate in 1598, it was one of the longest and oldest European trade routes in North America."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.485,
+            31.7619
+          ],
+          [
+            -106.6,
+            32.5
+          ],
+          [
+            -107.25,
+            33.0
+          ],
+          [
+            -107.25,
+            33.85
+          ],
+          [
+            -106.6504,
+            35.0844
+          ],
+          [
+            -106.45,
+            35.45
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilderness Road / Boone's Trace",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1775-1810",
+        "description": "Blazed by Daniel Boone and a party of axemen for the Transylvania Company in 1775, the Wilderness Road opened the trans-Appalachian frontier to settlement. By 1800 it had carried an estimated 300,000 settlers through the Cumberland Gap into Kentucky and the Ohio Valley."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -82.562,
+            36.5484
+          ],
+          [
+            -83.6,
+            36.6
+          ],
+          [
+            -83.677,
+            36.6017
+          ],
+          [
+            -84.0,
+            36.9
+          ],
+          [
+            -84.2,
+            37.4
+          ],
+          [
+            -84.2981,
+            37.5678
+          ],
+          [
+            -84.5,
+            37.95
+          ],
+          [
+            -84.4947,
+            38.0523
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Wagon Road",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1730s-1780s",
+        "description": "The Great Wagon Road was the most heavily traveled road in colonial America, carrying German and Scots-Irish immigrants from Philadelphia southward through the Shenandoah Valley and into the Carolina backcountry. By the eve of the Revolution, it had carried over 100,000 settlers into the southern frontier."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.1652,
+            39.9526
+          ],
+          [
+            -76.3055,
+            40.0379
+          ],
+          [
+            -76.7275,
+            39.9626
+          ],
+          [
+            -77.7199,
+            39.6418
+          ],
+          [
+            -78.1633,
+            39.1857
+          ],
+          [
+            -79.942,
+            37.271
+          ],
+          [
+            -80.4139,
+            37.2796
+          ],
+          [
+            -81.0,
+            36.5
+          ],
+          [
+            -80.8431,
+            35.2271
+          ],
+          [
+            -81.5,
+            34.0
+          ],
+          [
+            -81.9748,
+            33.4735
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chisholm Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1867-1884",
+        "description": "The most famous of the Texas cattle trails, the Chisholm Trail carried an estimated five million longhorns northward from Texas to the Kansas railheads between 1867 and 1884. Named for trader Jesse Chisholm who had blazed a wagon road through Indian Territory, it defined the era of the open-range cattle drive."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.4936,
+            29.4241
+          ],
+          [
+            -98.0,
+            30.0
+          ],
+          [
+            -97.7431,
+            30.2672
+          ],
+          [
+            -97.5,
+            31.0
+          ],
+          [
+            -97.1469,
+            31.5493
+          ],
+          [
+            -97.0,
+            32.0
+          ],
+          [
+            -97.3208,
+            32.7254
+          ],
+          [
+            -97.5,
+            33.5
+          ],
+          [
+            -97.9,
+            34.5
+          ],
+          [
+            -98.3,
+            35.5
+          ],
+          [
+            -98.3,
+            36.5
+          ],
+          [
+            -97.0,
+            37.0
+          ],
+          [
+            -97.2167,
+            38.9517
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goodnight-Loving Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1866-1889",
+        "description": "Pioneered by Charles Goodnight and Oliver Loving in 1866, this trail blazed a new path westward through the Pecos River valley to supply beef to New Mexico forts and Colorado mining camps. Loving was fatally wounded by Comanche warriors on a scouting trip in 1867, and the trail's story inspired Larry McMurtry's Lonesome Dove."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -100.4359,
+            31.4638
+          ],
+          [
+            -101.4,
+            31.85
+          ],
+          [
+            -102.0,
+            31.42
+          ],
+          [
+            -103.5,
+            31.45
+          ],
+          [
+            -104.4244,
+            31.7587
+          ],
+          [
+            -104.4,
+            32.5
+          ],
+          [
+            -104.515,
+            34.17
+          ],
+          [
+            -104.6,
+            35.0
+          ],
+          [
+            -104.68,
+            36.5
+          ],
+          [
+            -104.5,
+            37.0
+          ],
+          [
+            -104.9845,
+            39.7392
+          ],
+          [
+            -104.9847,
+            41.14
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Western Trail / Dodge City Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1874-1893",
+        "description": "Established in 1874 when Abilene's cattle era ended and Dodge City rose as the new cow capital, the Western Trail ultimately carried more cattle northward than even the famous Chisholm Trail. At its peak in the early 1880s, the trail saw hundreds of thousands of longhorns pass through Dodge City annually."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -99.074,
+            29.7274
+          ],
+          [
+            -99.1403,
+            30.0474
+          ],
+          [
+            -100.4359,
+            31.4638
+          ],
+          [
+            -99.7167,
+            32.4487
+          ],
+          [
+            -98.7167,
+            33.0
+          ],
+          [
+            -99.5,
+            34.0
+          ],
+          [
+            -100.5,
+            35.0
+          ],
+          [
+            -100.0,
+            36.0
+          ],
+          [
+            -99.7667,
+            37.7528
+          ],
+          [
+            -99.0,
+            38.5
+          ],
+          [
+            -100.0,
+            39.5
+          ],
+          [
+            -101.7011,
+            40.7267
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shawnee Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1840s-1860s",
+        "description": "The earliest of the great Texas cattle trails, the Shawnee Trail (also called the Texas Road or Sedalia Trail) carried longhorns northeastward to Missouri markets before the Civil War and resumed briefly afterward. It was eventually abandoned due to resistance from Missouri and Kansas farmers who feared Texas fever decimating their livestock."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -95.3698,
+            29.7604
+          ],
+          [
+            -96.0,
+            30.5
+          ],
+          [
+            -96.797,
+            32.7767
+          ],
+          [
+            -96.5,
+            33.5
+          ],
+          [
+            -95.5,
+            34.5
+          ],
+          [
+            -94.9,
+            35.5
+          ],
+          [
+            -94.5,
+            36.0
+          ],
+          [
+            -94.9785,
+            37.0282
+          ],
+          [
+            -94.4,
+            37.5
+          ],
+          [
+            -93.2,
+            38.5
+          ],
+          [
+            -93.2283,
+            38.7048
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smoky Hill Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1859-1870",
+        "description": "The Smoky Hill Trail was the most direct route from the Missouri River to Denver, following the Smoky Hill River across Kansas. Despite its shorter distance, it was notorious for lack of water and food in western Kansas, earning it the name 'Starvation Trail' before military posts were established along the route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5784,
+            39.0997
+          ],
+          [
+            -96.8,
+            39.1
+          ],
+          [
+            -96.5,
+            38.5
+          ],
+          [
+            -97.5,
+            38.5
+          ],
+          [
+            -98.0,
+            38.5
+          ],
+          [
+            -99.0,
+            38.5
+          ],
+          [
+            -100.0,
+            38.5
+          ],
+          [
+            -101.0,
+            38.5
+          ],
+          [
+            -102.0,
+            38.5
+          ],
+          [
+            -103.0,
+            38.8
+          ],
+          [
+            -104.9847,
+            39.7392
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lander Road / Lander Cutoff",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1858-1869",
+        "description": "Surveyed by Frederick Lander and constructed with federal funds in 1858, the Lander Road provided an improved northern cutoff to the Oregon Trail that bypassed the barren desert around Fort Bridger. It was the first federally funded road improvement project west of the Mississippi River."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -110.0,
+            42.7
+          ],
+          [
+            -111.0,
+            42.5
+          ],
+          [
+            -112.0,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mullan Road",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1860-1862",
+        "description": "Built by Army Lieutenant John Mullan between 1859 and 1862, the Mullan Road was a 624-mile military wagon road connecting the navigable waters of the Missouri River at Fort Benton to the Columbia River system at Walla Walla. It opened the northern Rocky Mountain region to settlement and became a major immigration route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.6699,
+            47.8211
+          ],
+          [
+            -112.0269,
+            46.5958
+          ],
+          [
+            -112.3,
+            46.0
+          ],
+          [
+            -113.9966,
+            46.8721
+          ],
+          [
+            -114.0,
+            47.0
+          ],
+          [
+            -116.5,
+            47.6788
+          ],
+          [
+            -117.0,
+            47.5
+          ],
+          [
+            -118.343,
+            46.0646
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nez Perce Trail - Flight of 1877",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1877",
+        "description": "In the summer of 1877, Chief Joseph and approximately 800 Nez Perce men, women, and children fled 1,170 miles across Idaho, Wyoming, and Montana to escape forced relocation to a reservation. They were stopped just 40 miles from the Canadian border at the Battle of Bear Paw, where Chief Joseph delivered his famous surrender speech."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -117.2,
+            45.5
+          ],
+          [
+            -116.0,
+            46.0
+          ],
+          [
+            -114.5847,
+            46.5442
+          ],
+          [
+            -113.5,
+            46.2
+          ],
+          [
+            -113.3,
+            45.65
+          ],
+          [
+            -112.5,
+            45.2
+          ],
+          [
+            -111.0,
+            44.5
+          ],
+          [
+            -109.5,
+            45.0
+          ],
+          [
+            -109.7,
+            48.5
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherokee Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1849-1860s",
+        "description": "The Cherokee Trail was blazed in 1849 by a party of Cherokee men from Indian Territory seeking a gold rush route to California via the southern Rockies. It became an important alternative route connecting the southern states to Utah and California, following the Arkansas River and crossing the Rockies at Raton Pass."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.3985,
+            35.3859
+          ],
+          [
+            -95.0,
+            36.0
+          ],
+          [
+            -95.5,
+            36.7
+          ],
+          [
+            -96.0,
+            37.0
+          ],
+          [
+            -97.0,
+            37.5
+          ],
+          [
+            -99.0,
+            37.5
+          ],
+          [
+            -101.0,
+            37.5
+          ],
+          [
+            -103.0,
+            37.3
+          ],
+          [
+            -104.5,
+            37.2
+          ],
+          [
+            -104.5,
+            37.0
+          ],
+          [
+            -106.3489,
+            39.5501
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cooke's Wagon Road",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846-1847",
+        "description": "Blazed by Mormon Battalion commander Philip St. George Cooke in 1846-1847, Cooke's Wagon Road was the first wagon route from New Mexico to California. The 2,000-mile march of the Mormon Battalion proved the southern route was viable for wagon travel and established an important military road."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.9378,
+            35.687
+          ],
+          [
+            -106.8,
+            33.5
+          ],
+          [
+            -107.8,
+            33.0
+          ],
+          [
+            -109.0,
+            32.0
+          ],
+          [
+            -110.9747,
+            32.2226
+          ],
+          [
+            -112.0,
+            32.5
+          ],
+          [
+            -113.5,
+            32.5
+          ],
+          [
+            -114.6277,
+            32.6927
+          ],
+          [
+            -117.161,
+            32.7153
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Applegate Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846",
+        "description": "Pioneered in 1846 by brothers Jesse and Lindsay Applegate as a supposedly safer southern alternative to the dangerous Columbia River section of the Oregon Trail, the Applegate Trail entered Oregon through the Klamath Basin. Despite the brothers' good intentions, the route proved extremely difficult and desert crossings caused immense suffering."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -117.0,
+            41.5
+          ],
+          [
+            -118.5,
+            41.5
+          ],
+          [
+            -120.3,
+            41.98
+          ],
+          [
+            -121.5,
+            42.2
+          ],
+          [
+            -122.5,
+            43.2
+          ],
+          [
+            -123.0867,
+            44.0521
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barlow Road",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1845",
+        "description": "Opened by Samuel Barlow in 1846 as a toll road over the southern slopes of Mount Hood, the Barlow Road provided the first all-land route from The Dalles to the Willamette Valley. Before its construction, emigrants faced the dangerous Columbia River rapids or expensive river passage to reach Oregon City."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.1789,
+            45.6052
+          ],
+          [
+            -121.5,
+            45.5
+          ],
+          [
+            -121.7,
+            45.35
+          ],
+          [
+            -121.9,
+            45.3
+          ],
+          [
+            -122.1,
+            45.4
+          ],
+          [
+            -122.6765,
+            45.5231
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hastings Cutoff",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846",
+        "description": "Promoted by Lansford Hastings as a shortcut to California, the Hastings Cutoff crossed the treacherous Great Salt Lake Desert and actually proved longer and more dangerous than the established route. The Donner-Reed Party's decision to take this route in 1846 contributed directly to their catastrophic entrapment in the Sierra Nevada."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -112.0,
+            40.8
+          ],
+          [
+            -113.5,
+            40.5
+          ],
+          [
+            -115.0,
+            40.5
+          ],
+          [
+            -116.0,
+            40.5
+          ],
+          [
+            -116.5,
+            40.5
+          ],
+          [
+            -117.0,
+            40.7
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beckwourth Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1851",
+        "description": "Discovered by mountain man and former slave Jim Beckwourth in 1851, the Beckwourth Trail crossed the Sierra Nevada at what is now Beckwourth Pass, the lowest pass through the northern Sierra. Beckwourth actively recruited emigrants at the Humboldt River to use his route, which he had promoted to a nearby town for commercial benefit."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.3,
+            39.8
+          ],
+          [
+            -120.5,
+            39.9
+          ],
+          [
+            -120.9,
+            39.7
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carson Route",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1848",
+        "description": "The Carson Route via Carson Pass was identified by Kit Carson during Fr\u00e9mont's 1844 expedition and became one of the primary Sierra Nevada crossings for California-bound emigrants. The route entered the Sierra at a more southerly point than Donner Pass and funneled emigrants toward the American River drainage and Sutter's Fort."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.1,
+            38.9
+          ],
+          [
+            -120.4,
+            38.7
+          ],
+          [
+            -120.7,
+            38.5
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Donner Pass Route",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1844",
+        "description": "The Donner Pass crossing of the Sierra Nevada was first used by the Stephens-Townsend-Murphy Party in 1844, who successfully crossed the mountains just before winter closed in. Two years later, the Donner-Reed Party became stranded here, and the resulting tragedy of cannibalism and death became the most harrowing story of overland emigration."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8,
+            39.3
+          ],
+          [
+            -120.1,
+            39.35
+          ],
+          [
+            -120.31,
+            39.32
+          ],
+          [
+            -120.5,
+            39.2
+          ],
+          [
+            -120.8,
+            38.95
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "King's Highway / El Camino Real de los Tejas",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1690s-1790s",
+        "description": "El Camino Real de los Tejas, the Royal Road of the Tejas, linked the Spanish settlements of Texas with French Louisiana along an ancient Native American path. Established in the 1690s to counter French expansion into Texas, it connected missions, presidios, and towns across the Texas interior for over a century."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.4936,
+            29.4241
+          ],
+          [
+            -98.0,
+            29.7
+          ],
+          [
+            -97.5,
+            30.0
+          ],
+          [
+            -96.797,
+            30.4
+          ],
+          [
+            -96.0,
+            30.9
+          ],
+          [
+            -95.0,
+            31.1
+          ],
+          [
+            -94.7256,
+            31.6035
+          ],
+          [
+            -94.0,
+            31.75
+          ],
+          [
+            -93.5,
+            31.75
+          ],
+          [
+            -93.086,
+            31.7543
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kearny Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1846",
+        "description": "General Stephen Kearny led his Army of the West along this route in 1846 to conquer New Mexico during the Mexican-American War, following much of the Santa Fe Trail. The army's swift capture of Santa Fe without firing a shot marked the beginning of American rule over the Southwest."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.91,
+            39.36
+          ],
+          [
+            -96.0,
+            39.0
+          ],
+          [
+            -97.0,
+            38.5
+          ],
+          [
+            -98.0,
+            38.0
+          ],
+          [
+            -99.0,
+            37.5
+          ],
+          [
+            -100.0,
+            37.5
+          ],
+          [
+            -101.0,
+            37.5
+          ],
+          [
+            -102.5,
+            37.98
+          ],
+          [
+            -103.55,
+            37.49
+          ],
+          [
+            -104.5,
+            36.91
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emigrant Trail / Humboldt Route",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1840s-1860s",
+        "description": "The Humboldt Route followed the Humboldt River across the Nevada desert, providing the critical water and forage corridor for westbound California emigrants. The Humboldt Sink at the river's terminus presented the final major challenge before the Sierra Nevada, as emigrants faced a brutal 40-mile desert crossing."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -114.5,
+            42.0
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -116.0,
+            42.0
+          ],
+          [
+            -116.5,
+            41.5
+          ],
+          [
+            -117.0,
+            41.0
+          ],
+          [
+            -117.5,
+            40.5
+          ],
+          [
+            -118.0,
+            40.0
+          ],
+          [
+            -118.5,
+            39.5
+          ],
+          [
+            -118.7,
+            39.3
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zane's Trace",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1796-1800s",
+        "description": "Surveyed by Ebenezer Zane under a congressional land grant in 1796-1797, Zane's Trace was the first road through the Northwest Territory, cutting diagonally across Ohio from Wheeling to Limestone (Maysville), Kentucky. The three ferry crossings at Zanesville, Lancaster, and Chillicothe each grew into important Ohio towns."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.7209,
+            40.064
+          ],
+          [
+            -81.5,
+            40.0
+          ],
+          [
+            -81.9946,
+            39.9401
+          ],
+          [
+            -83.0,
+            39.5
+          ],
+          [
+            -83.75,
+            38.9
+          ],
+          [
+            -84.31,
+            38.9
+          ],
+          [
+            -84.512,
+            39.1031
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "National Road / Cumberland Road",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1811-1830s",
+        "description": "The National Road was the first federally funded interstate highway in the United States, authorized by Congress in 1806 and constructed from Cumberland, Maryland westward to Vandalia, Illinois by 1839. It served as the primary artery for westward migration before the railroad era, handling enormous traffic in goods, livestock, and settlers."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7625,
+            39.6528
+          ],
+          [
+            -79.5,
+            39.7
+          ],
+          [
+            -80.7209,
+            40.064
+          ],
+          [
+            -81.5,
+            40.2
+          ],
+          [
+            -82.0,
+            40.0
+          ],
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -83.5,
+            39.8
+          ],
+          [
+            -84.512,
+            39.77
+          ],
+          [
+            -85.0,
+            39.77
+          ],
+          [
+            -85.5,
+            39.77
+          ],
+          [
+            -86.1581,
+            39.7684
+          ],
+          [
+            -87.0,
+            39.5
+          ],
+          [
+            -89.144,
+            38.9606
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trapper's Trail / Cache Valley Trail",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1820s-1840s",
+        "description": "The Trapper's Trail was the informal network of paths used by Rocky Mountain fur trappers to connect the trading hub of Taos, New Mexico with the annual mountain man rendezvous sites and eventually South Pass. It preceded the major emigrant trails and much of its course was later incorporated into the Overland Trail system."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.5731,
+            36.4072
+          ],
+          [
+            -105.0,
+            37.0
+          ],
+          [
+            -104.9845,
+            39.7392
+          ],
+          [
+            -105.0,
+            40.5
+          ],
+          [
+            -106.3489,
+            39.5501
+          ],
+          [
+            -107.0,
+            41.0
+          ],
+          [
+            -108.86,
+            42.5
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bozeman Road - Northern Extension",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1864-1866",
+        "description": "The northern extension of the Bozeman Trail connected the gold mining center of Virginia City, Montana with the Missouri River steamboat terminus at Fort Benton, providing a supply route for the booming mining camps of southwestern Montana. This segment saw heavy freight wagon traffic during the height of the Montana gold rush."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.7624,
+            45.6796
+          ],
+          [
+            -111.5,
+            46.0
+          ],
+          [
+            -111.9,
+            46.5
+          ],
+          [
+            -112.0269,
+            46.5958
+          ],
+          [
+            -110.6699,
+            47.8211
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cimarron Cutoff / Dry Route",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1822-1880",
+        "description": "The Cimarron Cutoff shaved 100 miles off the Mountain Branch of the Santa Fe Trail by cutting across the Cimarron Desert, but the waterless stretch between the Arkansas and Cimarron Rivers made it extremely dangerous. Despite frequent attacks by Comanche and Kiowa warriors, most commercial caravans preferred this shorter route to avoid the mountains."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -96.4892,
+            38.6617
+          ],
+          [
+            -97.5,
+            38.3
+          ],
+          [
+            -98.5,
+            38.0
+          ],
+          [
+            -99.7667,
+            37.7528
+          ],
+          [
+            -100.5,
+            37.5
+          ],
+          [
+            -101.3,
+            37.0
+          ],
+          [
+            -102.5,
+            36.5
+          ],
+          [
+            -103.5,
+            36.5
+          ],
+          [
+            -104.5,
+            36.0
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Camino del Diablo",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1699-1849",
+        "description": "El Camino del Diablo (The Devil's Highway) was one of the most dangerous trails in North America, traversing 250 miles of the Sonoran Desert with limited water sources. First used by Father Kino in the 1690s to connect his missions, it later became a desperate shortcut for California-bound forty-niners, hundreds of whom perished from thirst."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.7,
+            30.5
+          ],
+          [
+            -111.0,
+            30.7
+          ],
+          [
+            -113.0,
+            31.5
+          ],
+          [
+            -114.0,
+            32.0
+          ],
+          [
+            -114.6277,
+            32.6927
+          ],
+          [
+            -117.161,
+            32.7153
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Butterfield Trail Connecting Segment",
+        "type": "trail",
+        "source": "seed:historic_trails",
+        "years": "1858-1861",
+        "description": "The eastern segment of the Butterfield Overland Mail route connected Memphis and St. Louis to Fort Smith, Arkansas before crossing Indian Territory into Texas. This section passed through the Cherokee and Choctaw nations and marked the eastern approach to the great southwestern overland route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -90.049,
+            35.1495
+          ],
+          [
+            -90.5,
+            35.5
+          ],
+          [
+            -91.0,
+            35.5
+          ],
+          [
+            -92.0,
+            35.3
+          ],
+          [
+            -94.3985,
+            35.3859
+          ],
+          [
+            -95.0,
+            35.6
+          ],
+          [
+            -96.0,
+            35.7
+          ],
+          [
+            -96.797,
+            35.9
+          ],
+          [
+            -96.8,
+            36.1
+          ],
+          [
+            -97.0,
+            36.1
+          ],
+          [
+            -97.5,
+            36.0
+          ],
+          [
+            -96.5884,
+            33.6357
+          ]
+        ]
+      }
+    }
+  ]
+}
