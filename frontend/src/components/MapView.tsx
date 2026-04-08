@@ -182,6 +182,7 @@ interface MapViewProps {
   layers: LayerState;
   onMapClick: (lat: number, lon: number) => void;
   onLocationSelect: (f: LocationFeature) => void;
+  onLandAccessClick?: (lat: number, lon: number) => void;
 }
 
 export default function MapView({
@@ -191,10 +192,16 @@ export default function MapView({
   layers,
   onMapClick,
   onLocationSelect,
+  onLandAccessClick,
 }: MapViewProps) {
   const handleClick = useCallback(
-    (lat: number, lon: number) => onMapClick(lat, lon),
-    [onMapClick],
+    (lat: number, lon: number) => {
+      if (layers.blm && onLandAccessClick) {
+        onLandAccessClick(lat, lon);
+      }
+      onMapClick(lat, lon);
+    },
+    [onMapClick, layers.blm, onLandAccessClick],
   );
 
   return (
@@ -210,11 +217,11 @@ export default function MapView({
         maxZoom={19}
       />
 
-      {/* BLM public lands overlay */}
+      {/* PAD-US land access overlay */}
       {layers.blm && (
         <TileLayer
-          url="https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
-          attribution="Bureau of Land Management"
+          url="https://gis.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
+          attribution="USGS PAD-US 3.0"
           opacity={0.4}
           zIndex={5}
         />

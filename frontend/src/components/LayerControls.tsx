@@ -18,7 +18,14 @@ const LAYER_DEFS: LayerDef[] = [
   { key: 'trails',    label: 'Trails & Routes',    color: 'bg-green-500',  icon: '🥾' },
   { key: 'mines',     label: 'Mines & Camps',      color: 'bg-yellow-500', icon: '⛏️' },
   { key: 'heatmap',   label: 'Activity Heatmap',   color: 'bg-orange-500', icon: '🌡️' },
-  { key: 'blm',       label: 'BLM Public Lands',   color: 'bg-yellow-600', icon: '🏔️' },
+  { key: 'blm',       label: 'Land Access',         color: 'bg-emerald-500', icon: '🛡️' },
+];
+
+const LAND_ACCESS_LEGEND = [
+  { color: '#22c55e', label: 'Public — OK to Detect' },
+  { color: '#eab308', label: 'Private — Permit Required' },
+  { color: '#ef4444', label: 'Off Limits' },
+  { color: '#f97316', label: 'Unsure — Verify First' },
 ];
 
 export default function LayerControls({ layers, onChange }: LayerControlsProps) {
@@ -59,6 +66,21 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                 <span className="text-base leading-none">{icon}</span>
                 <span className="text-sm font-medium leading-tight">{label}</span>
               </button>
+
+              {/* Land Access legend — shown when the layer is active */}
+              {key === 'blm' && active && (
+                <div className="mt-2 ml-3 pl-3 border-l border-slate-700 space-y-1">
+                  {LAND_ACCESS_LEGEND.map(({ color: c, label: l }) => (
+                    <div key={l} className="flex items-center gap-2">
+                      <span
+                        className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: c }}
+                      />
+                      <span className="text-xs text-slate-400">{l}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </li>
           );
         })}

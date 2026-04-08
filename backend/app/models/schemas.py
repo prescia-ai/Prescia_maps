@@ -225,3 +225,40 @@ class HealthResponse(BaseModel):
     status: Literal["ok", "degraded"] = "ok"
     database: bool
     version: str = "1.0.0"
+
+
+# ---------------------------------------------------------------------------
+# Land Access schemas
+# ---------------------------------------------------------------------------
+
+class LandAccessResponse(BaseModel):
+    """Full land-access classification for a PAD-US area."""
+
+    area_code: str
+    unit_name: Optional[str] = None
+    managing_agency: Optional[str] = None
+    designation: Optional[str] = None
+    state: Optional[str] = None
+    gap_status: Optional[int] = None
+    status: str  # allowed, off_limits, private_permit, unsure
+    confidence: float
+    reason: Optional[str] = None
+    source: str  # rule_tier1, cached, user_override
+    last_verified: Optional[str] = None
+
+
+class LandAccessOverrideCreate(BaseModel):
+    """Payload for creating/updating a user override."""
+
+    status: str = Field(..., pattern=r"^(allowed|off_limits)$")
+    notes: Optional[str] = None
+
+
+class LandAccessOverrideResponse(BaseModel):
+    """User override record."""
+
+    area_code: str
+    status: str
+    notes: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
