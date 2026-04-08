@@ -1274,7 +1274,8 @@
     "latitude": 37.1928,
     "longitude": -93.5508,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hooker was a small Texas County, Missouri community in the Ozark uplands of southern Missouri, a modest farming and timber support community that existed briefly in the late nineteenth and early twentieth centuries in this sparsely settled Ozark region. Texas County in the Missouri Ozarks contains some of Missouri's wildest and most remote landscape, with the Jacks Fork and Current rivers cutting through spectacular dolomite bluffs in what is now the Ozark National Scenic Riverways. Former Ozark hill country communities in this region are now largely private and national forest land, and the Civil War guerrilla history of Texas County adds historical significance to the area."
   },
   {
     "name": "Siberia, CA",
@@ -1282,7 +1283,8 @@
     "latitude": 34.627258,
     "longitude": -115.987335,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Siberia was a Mojave Desert community in San Bernardino County, California along Route 66 between Barstow and Needles, existing as a railroad water stop along the Santa Fe Railway in the early twentieth century before Route 66 brought automobile travelers through this stretch of the empty Mojave. Like most of the tiny service communities along this section of Route 66, Siberia was completely bypassed by Interstate 40 and then slowly consumed by the desert. The name — evocative of brutal cold in contrast to the scorching Mojave heat — was either chosen for its irony or as a reference to the isolation of the location. The surrounding Mojave Desert BLM land is open for exploration, and former railroad-era sites in the central Mojave yield interesting early twentieth century industrial artifacts."
   },
   {
     "name": "Times Beach, MO",
@@ -1290,7 +1292,8 @@
     "latitude": 38.508611,
     "longitude": -90.6025,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Times Beach was a small Missouri resort community in St. Louis County along the Meramec River established in the 1920s, initially developed as a vacation bungalow community where families could rent lots for summer recreation along the scenic Meramec River corridor outside St. Louis. The community transitioned from resort to year-round residence as working-class families moved in permanently, but became nationally infamous in 1983 when dioxin contamination from waste oil sprayed on dirt roads in the 1970s was found to be so severe that the EPA ordered the complete evacuation and purchase of the entire town. The structures were demolished, the contaminated soil was incinerated on-site, and the land was remediated before being converted to Route 66 State Park — one of America's most dramatic examples of an entire community erased by toxic contamination. The park today offers a remarkable juxtaposition of Meramec River recreation and the toxic legacy of industrial waste."
   },
   {
     "name": "Two Guns, AZ",
@@ -1298,7 +1301,8 @@
     "latitude": 35.117791,
     "longitude": -111.093477,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Two Guns was an Arizona roadside attraction and would-be town in Navajo County along historic Route 66, established in the 1920s by the flamboyant Harry 'Two Gun' Miller who built a dubious tourist attraction around the ruins of a Navajo Canyon trading post and nearby cliff dwellings, advertising it with homemade signs promoting a 'Death Cave' where Apache raiders were allegedly burned alive. The roadside enterprise changed hands several times, featured a fake zoo with mountain lions, and was the scene of multiple murders in its early years before declining as Route 66 traffic patterns changed. The ruins of Two Guns — including the caged animal enclosures, a stone trading post, and the Diablo Canyon bridge — are accessible from the old Route 66 alignment and remain one of the most eerie and atmospheric stops on the route. Metal detecting at the accessible ruins of this Route 66 attraction yields mid-twentieth century coins and automotive-era items."
   },
   {
     "name": "Toronto, IL",
@@ -1306,7 +1310,8 @@
     "latitude": 39.712505,
     "longitude": -89.630638,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Toronto was a small Woodford County, Illinois farming community that briefly held a post office in the mid-to-late nineteenth century while serving the surrounding agricultural operations in central Illinois's corn belt. The flat Woodford County prairie landscape was intensively settled and farmed beginning in the 1850s, and many small communities like Toronto that lacked railroad connections quickly gave way to better-positioned towns. The site today is private cropland in Woodford County, one of Illinois's most productive agricultural counties. Former Woodford County post office communities from the late nineteenth century can yield period agricultural and domestic artifacts with landowner permission."
   },
   {
     "name": "Warm Springs, NV",
@@ -1314,7 +1319,8 @@
     "latitude": 38.19049,
     "longitude": -116.370054,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Warm Springs was a Churchill County, Nevada community that existed as a watering hole and stage stop in the Great Basin desert along travel routes crossing the Basin and Range landscape of central Nevada, providing crucial water for livestock and travelers crossing the arid terrain between the Humboldt River and Carson Sink regions. The springs made Warm Springs an important stopping point in the pre-railroad era when overland travel across Nevada was a grueling multi-day ordeal. The site today is in the remote Churchill County desert, accessible via back roads through the vast BLM-managed Nevada landscape. Former Nevada stage stop communities in this region can yield overland era artifacts including harness hardware, coins, and personal items."
   },
   {
     "name": "Ojibway, MI",
@@ -1322,7 +1328,8 @@
     "latitude": 47.339365,
     "longitude": -88.327886,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ojibway was a small Upper Peninsula Michigan community in Keweenaw County on the tip of the Keweenaw Peninsula, existing as a modest fishing and copper industry support settlement in the late nineteenth and early twentieth centuries in this remote Lake Superior shoreline area. The Keweenaw Peninsula, accessible by road only through Houghton County, is a remarkably preserved industrial heritage landscape, and Ojibway existed in the shadow of the larger copper mining operations that defined the region's economy. The Keweenaw National Historical Park encompasses much of the Keweenaw Peninsula's industrial heritage, and many historic sites are protected within the park's boundaries. The park's interpretive programs provide extensive historical context for this remarkable Michigan copper country landscape."
   },
   {
     "name": "Phoenix, MI",
@@ -1330,7 +1337,8 @@
     "latitude": 47.38889,
     "longitude": -88.2775,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Phoenix was a small copper mining community in Keweenaw County, Michigan on the Keweenaw Peninsula near Lac La Belle in the Lake Superior copper district, established during the great copper rush of the 1840s-1880s as part of the intensive mining development that made this remote Michigan peninsula one of America's most important industrial centers. The Phoenix mine was one of several in the lake district of the eastern Keweenaw that produced native copper from volcanic trap rock deposits unique to the Lake Superior basin. The community faded as the Phoenix Mine's ore production declined in the late nineteenth century. The surrounding Keweenaw Peninsula landscape today is a mix of national historical park, state and county land, and private property with variable access."
   },
   {
     "name": "Delaware, MI",
@@ -1338,7 +1346,8 @@
     "latitude": 47.42111,
     "longitude": -88.09583,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Delaware was a small Keweenaw County, Michigan copper mining community near Copper Harbor at the very tip of the Keweenaw Peninsula, established in the copper rush era and connected to the Delaware Mine, which produced copper from one of the peninsula's deeper mine shafts and operated through the 1880s before closing. The Delaware Mine shaft has been preserved as a tourist attraction, with guided underground tours available seasonally — one of the best opportunities to experience the underground world of the Lake Superior copper mining era. The community that supported the mine is largely gone, but the mine shaft, engine house ruins, and surrounding copper country landscape are preserved. The Keweenaw National Historical Park context makes this a historically rich but well-interpreted site."
   },
   {
     "name": "Mandan, MI",
@@ -1346,7 +1355,8 @@
     "latitude": 47.425,
     "longitude": -88.01556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mandan was a small Upper Peninsula Michigan community in Houghton County at the heart of the Keweenaw copper mining district, connected to the Mandan Mine and the broader network of copper mining operations that made Houghton County one of the great industrial centers of nineteenth-century America. The community housed miners and their families in the close-knit residential patterns typical of Keweenaw copper mining communities, where Cornish, Finnish, Croatian, and other immigrant groups created distinct ethnic neighborhoods around the mine shafts. The Keweenaw Peninsula copper country is now recognized as a National Heritage Area, preserving the remarkable industrial and ethnic heritage of this remote Michigan peninsula."
   },
   {
     "name": "Floresta, CO",
