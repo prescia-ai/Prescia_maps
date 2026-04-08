@@ -73,17 +73,9 @@ function LocationMarkers({
         const [lng, lat] = f.geometry.coordinates;
         const { type, name, year, description, confidence } = f.properties;
 
-        // Filter by layer
-        const MINES_TYPES = new Set(['mine', 'camp', 'spring']);
-        const TRAILS_TYPES = new Set(['trail', 'stagecoach_stop', 'ferry', 'pony_express']);
-
-        if (MINES_TYPES.has(type)) {
-          if (!layers.mines) return null;
-        } else if (TRAILS_TYPES.has(type)) {
-          if (!layers.trails) return null;
-        } else if (!layers.events) {
-          return null;
-        }
+        // Filter by layer — check if this specific type has a per-type toggle.
+        // If the type isn't in LayerState (unknown type), show it by default.
+        if (type in layers && !layers[type as keyof LayerState]) return null;
 
         const color = markerColor(type);
 
@@ -133,14 +125,16 @@ function LinearFeatures({
       {features.map((f) => {
         const { type, id } = f.properties;
 
-        if (type === 'railroad' && !layers.railroads) return null;
-        if (type === 'trail' && !layers.trails) return null;
-        // unknown types respect railroads toggle
-        if (type !== 'railroad' && type !== 'trail' && !layers.railroads) return null;
+        if (type in layers && !layers[type as keyof LayerState]) return null;
 
-        const isRailroad = type === 'railroad';
-        const color = isRailroad ? '#ef4444' : '#22c55e';
-        const dashArray = isRailroad ? undefined : '8 6';
+        const LINEAR_COLORS: Record<string, { color: string; dashArray?: string; weight: number }> = {
+          railroad: { color: '#ef4444', weight: 2.5 },
+          trail:    { color: '#22c55e', weight: 2, dashArray: '8 6' },
+          road:     { color: '#84cc16', weight: 2, dashArray: '6 4' },
+          water:    { color: '#06b6d4', weight: 2, dashArray: '4 4' },
+        };
+        const lineStyle = LINEAR_COLORS[type] ?? { color: '#94a3b8', weight: 2, dashArray: '4 4' };
+        const { color, dashArray, weight } = lineStyle;
 
         // Flatten LineString / MultiLineString into position arrays
         const geom = f.geometry;
@@ -160,7 +154,7 @@ function LinearFeatures({
           <Polyline
             key={`${String(id)}-${idx}`}
             positions={positions}
-            pathOptions={{ color, weight: isRailroad ? 2.5 : 2, dashArray, opacity: 0.8 }}
+            pathOptions={{ color, weight, dashArray, opacity: 0.8 }}
           >
             <Popup>
               <span className="text-sm font-medium">{f.properties.name}</span>
