@@ -196,7 +196,7 @@ async def get_location(
 async def delete_location(
     location_id: UUID,
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Delete a historical location by its UUID."""
     result = await db.execute(select(Location).where(Location.id == location_id))
     loc = result.scalar_one_or_none()
@@ -694,7 +694,7 @@ async def put_land_access_override(
 async def delete_land_access_override(
     area_code: str,
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Remove a user override, falling back to the rule engine."""
     result = await db.execute(
         select(LandAccessOverride).where(LandAccessOverride.area_code == area_code)
