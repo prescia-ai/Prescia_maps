@@ -216,6 +216,47 @@ class HotspotCluster(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# Import schemas
+# ---------------------------------------------------------------------------
+
+class ImportLocationItem(BaseModel):
+    """A single location record for bulk import."""
+
+    name: str = Field(..., min_length=1, max_length=512)
+    type: LocationType
+    latitude: float = Field(..., ge=-90.0, le=90.0)
+    longitude: float = Field(..., ge=-180.0, le=180.0)
+    year: Optional[int] = Field(None, ge=-5000, le=2100)
+    description: Optional[str] = None
+    source: Optional[str] = None
+    confidence: float = Field(default=0.5, ge=0.0, le=1.0)
+
+
+class ImportFeatureItem(BaseModel):
+    """A single GeoJSON Feature for linear feature import."""
+
+    type: Literal["Feature"] = "Feature"
+    geometry: LineStringGeometry
+    properties: Dict[str, Any]
+
+
+class ImportFeaturesRequest(BaseModel):
+    """GeoJSON FeatureCollection wrapper for linear feature bulk import."""
+
+    type: Literal["FeatureCollection"] = "FeatureCollection"
+    features: List[ImportFeatureItem]
+
+
+class ImportSummaryResponse(BaseModel):
+    """Summary returned after a bulk import operation."""
+
+    inserted: int
+    skipped_duplicate: int
+    skipped_invalid: int
+    errors: List[str]
+
+
+# ---------------------------------------------------------------------------
 # Health check schema
 # ---------------------------------------------------------------------------
 

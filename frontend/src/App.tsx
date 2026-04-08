@@ -1,10 +1,13 @@
 import { useState, useCallback } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import MapView from './components/MapView';
 import LayerControls from './components/LayerControls';
 import InfoPanel from './components/InfoPanel';
 import ScorePanel from './components/ScorePanel';
 import LandAccessPanel from './components/LandAccessPanel';
 import LoadingSpinner from './components/LoadingSpinner';
+import Navbar from './components/Navbar';
+import ImportModal from './components/ImportModal';
 import { useLocations } from './hooks/useLocations';
 import { useFeatures } from './hooks/useFeatures';
 import { useHeatmap } from './hooks/useHeatmap';
@@ -22,9 +25,11 @@ const DEFAULT_LAYERS: LayerState = {
 };
 
 export default function App() {
+  const queryClient = useQueryClient();
   const [layers, setLayers] = useState<LayerState>(DEFAULT_LAYERS);
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
+  const [showImportModal, setShowImportModal] = useState(false);
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
@@ -83,6 +88,11 @@ export default function App() {
   const handleCloseInfo  = useCallback(() => setSelectedFeature(null), []);
   const handleCloseScore = useCallback(() => setClickedCoords(null), []);
 
+  const handleImportSuccess = useCallback(() => {
+    queryClient.invalidateQueries({ queryKey: ['locations'] });
+    queryClient.invalidateQueries({ queryKey: ['features'] });
+  }, [queryClient]);
+
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
@@ -92,8 +102,17 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen bg-slate-950 overflow-hidden">
-      {/* Full-screen map */}
-      <div className="absolute inset-0">
+      {/* Navbar */}
+      <Navbar
+        locationCount={locations.length}
+        isLoading={isInitialLoading}
+        isLocationsError={locationsQuery.isError}
+        isFeaturesError={featuresQuery.isError}
+        onImportClick={() => setShowImportModal(true)}
+      />
+
+      {/* Full-screen map — offset below navbar */}
+      <div className="absolute inset-0 top-12">
         <MapView
           locations={locations}
           linearFeatures={linearFeatures}
@@ -105,47 +124,7 @@ export default function App() {
         />
       </div>
 
-      {/* Top bar / branding */}
-      <div className="absolute top-0 left-0 right-0 z-10 pointer-events-none">
-        <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-b from-slate-950/90 to-transparent">
-          <span className="text-2xl">🗺️</span>
-          <div>
-            <h1 className="text-white font-bold text-sm leading-tight tracking-wide">
-              Prescia Maps
-            </h1>
-            <p className="text-slate-400 text-xs leading-tight">
-              Historical Activity &amp; Metal Detecting Intelligence
-            </p>
-          </div>
-
-          {/* Data status badges */}
-          <div className="ml-auto flex items-center gap-2 pointer-events-auto">
-            {locationsQuery.isError && (
-              <span className="text-xs text-red-400 bg-red-900/40 px-2 py-1 rounded-full">
-                ⚠ Locations unavailable
-              </span>
-            )}
-            {featuresQuery.isError && (
-              <span className="text-xs text-red-400 bg-red-900/40 px-2 py-1 rounded-full">
-                ⚠ Features unavailable
-              </span>
-            )}
-            {isInitialLoading && (
-              <span className="text-xs text-blue-400 bg-blue-900/40 px-2 py-1 rounded-full flex items-center gap-1">
-                <span className="w-3 h-3 border border-blue-400 border-t-transparent rounded-full animate-spin inline-block" />
-                Loading data…
-              </span>
-            )}
-            {!isInitialLoading && !locationsQuery.isError && (
-              <span className="text-xs text-green-400 bg-green-900/40 px-2 py-1 rounded-full">
-                ✓ {locations.length} locations
-              </span>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Left panel: layer controls */}
+      {/* Left panel: layer controls — offset below navbar */}
       <div className="absolute top-16 left-4 z-10">
         <LayerControls layers={layers} onChange={setLayers} />
       </div>
@@ -217,6 +196,14 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      {/* Import modal */}
+      {showImportModal && (
+        <ImportModal
+          onClose={() => setShowImportModal(false)}
+          onImportSuccess={handleImportSuccess}
+        />
+      )}
     </div>
   );
 }

@@ -12,6 +12,8 @@ from typing import Any, Dict, List, Optional
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from geoalchemy2.shape import from_shape
+from shapely.geometry import LineString as ShapelyLineString
 from sqlalchemy import select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.responses import Response
@@ -30,6 +32,9 @@ from app.models.schemas import (
     HealthResponse,
     HeatmapPoint,
     HotspotCluster,
+    ImportFeaturesRequest,
+    ImportLocationItem,
+    ImportSummaryResponse,
     LandAccessOverrideCreate,
     LandAccessOverrideResponse,
     LandAccessResponse,
@@ -725,3 +730,156 @@ async def list_land_access_overrides(
         )
         for r in rows
     ]
+
+
+# ---------------------------------------------------------------------------
+# Bulk import
+# ---------------------------------------------------------------------------
+
+
+@router.post(
+    "/import/locations",
+    response_model=ImportSummaryResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Bulk-import point locations from a JSON array",
+    tags=["import"],
+)
+async def import_locations(
+    payload: List[ImportLocationItem],
+    db: AsyncSession = Depends(get_db),
+) -> ImportSummaryResponse:
+    """
+    Accept a JSON array of point locations and insert them into the database.
+
+    Skips duplicate records (matched by exact name) and invalid records.
+    Returns a summary of inserted, skipped, and errored rows.
+    """
+    inserted = 0
+    skipped_duplicate = 0
+    skipped_invalid = 0
+    errors: List[str] = []
+
+    # Fetch existing names once for efficient dedup
+    existing_result = await db.execute(select(Location.name))
+    existing_names: set = {row[0] for row in existing_result.all()}
+
+    for idx, item in enumerate(payload):
+        row_label = f"Row {idx + 1}"
+        if item.name in existing_names:
+            skipped_duplicate += 1
+            continue
+
+        try:
+            loc = Location(
+                name=item.name,
+                type=item.type,
+                latitude=item.latitude,
+                longitude=item.longitude,
+                year=item.year,
+                description=item.description,
+                source=item.source,
+                confidence=item.confidence,
+            )
+            db.add(loc)
+            existing_names.add(item.name)
+            inserted += 1
+        except Exception as exc:
+            skipped_invalid += 1
+            errors.append(f"{row_label}: {exc}")
+
+    await db.flush()
+    return ImportSummaryResponse(
+        inserted=inserted,
+        skipped_duplicate=skipped_duplicate,
+        skipped_invalid=skipped_invalid,
+        errors=errors,
+    )
+
+
+@router.post(
+    "/import/features",
+    response_model=ImportSummaryResponse,
+    status_code=status.HTTP_200_OK,
+    summary="Bulk-import linear features from a GeoJSON FeatureCollection",
+    tags=["import"],
+)
+async def import_features(
+    payload: ImportFeaturesRequest,
+    db: AsyncSession = Depends(get_db),
+) -> ImportSummaryResponse:
+    """
+    Accept a GeoJSON FeatureCollection of LineString features and insert them.
+
+    Skips duplicates by name and validates that geometry has at least 2 points
+    and that the feature type is a valid LinearFeatureType.
+    Returns a summary of inserted, skipped, and errored rows.
+    """
+    from app.models.database import LinearFeatureType as DBLinearFeatureType
+    from app.models.schemas import LinearFeatureType as SchemaLinearFeatureType
+
+    inserted = 0
+    skipped_duplicate = 0
+    skipped_invalid = 0
+    errors: List[str] = []
+
+    # Fetch existing names once for efficient dedup
+    existing_result = await db.execute(select(LinearFeature.name))
+    existing_names: set = {row[0] for row in existing_result.all()}
+
+    for idx, feature in enumerate(payload.features):
+        row_label = f"Row {idx + 1}"
+        props = feature.properties
+        name = props.get("name")
+        feat_type = props.get("type")
+
+        if not name or not str(name).strip():
+            skipped_invalid += 1
+            errors.append(f"{row_label}: 'name' is required")
+            continue
+
+        name = str(name).strip()
+
+        if name in existing_names:
+            skipped_duplicate += 1
+            continue
+
+        # Validate type
+        valid_types = {t.value for t in SchemaLinearFeatureType}
+        if feat_type not in valid_types:
+            skipped_invalid += 1
+            errors.append(
+                f"{row_label}: type '{feat_type}' is not a valid LinearFeatureType "
+                f"(must be one of: {', '.join(sorted(valid_types))})"
+            )
+            continue
+
+        # Validate coordinates
+        coords = feature.geometry.coordinates
+        if len(coords) < 2:
+            skipped_invalid += 1
+            errors.append(f"{row_label}: geometry must have at least 2 coordinate pairs")
+            continue
+
+        try:
+            shapely_line = ShapelyLineString(coords)
+            geom = from_shape(shapely_line, srid=4326)
+            linear_feat = LinearFeature(
+                name=name,
+                type=feat_type,
+                geom=geom,
+                source=str(props.get("source", "")) or None,
+            )
+            db.add(linear_feat)
+            existing_names.add(name)
+            inserted += 1
+        except Exception as exc:
+            skipped_invalid += 1
+            errors.append(f"{row_label}: {exc}")
+
+    await db.flush()
+    return ImportSummaryResponse(
+        inserted=inserted,
+        skipped_duplicate=skipped_duplicate,
+        skipped_invalid=skipped_invalid,
+        errors=errors,
+    )

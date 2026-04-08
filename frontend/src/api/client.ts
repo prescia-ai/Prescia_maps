@@ -7,6 +7,7 @@ import type {
   LandAccessResponse,
   LandAccessOverrideCreate,
   LandAccessOverrideResponse,
+  ImportSummaryResponse,
 } from '../types';
 
 const api = axios.create({
@@ -66,4 +67,14 @@ export async function deleteLandAccessOverride(areaCode: string): Promise<void> 
 export async function fetchLandAccessOverrides(): Promise<LandAccessOverrideResponse[]> {
   const { data } = await api.get<LandAccessOverrideResponse[]>('/land-access/overrides');
   return data;
+}
+
+export async function importLocations(data: any[]): Promise<ImportSummaryResponse> {
+  const { data: result } = await api.post<ImportSummaryResponse>('/import/locations', data);
+  return result;
+}
+
+export async function importFeatures(data: any): Promise<ImportSummaryResponse> {
+  const { data: result } = await api.post<ImportSummaryResponse>('/import/features', data);
+  return result;
 }
