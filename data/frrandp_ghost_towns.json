@@ -2660,7 +2660,8 @@
     "latitude": 38.383333,
     "longitude": -104.997778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Concrete was a small quarrying and ranching community in Gunnison County, Colorado, situated in the upper Tomichi Valley where limestone deposits supported a brief industrial operation in the late 19th and early 20th centuries. The community served the workers who extracted and processed stone from the surrounding formations, supplemented by ranching families using the high-altitude grasslands. Operations wound down as the market for locally quarried stone declined with the availability of cheaper Portland cement, and the community faded away. The remote valley location off Tomichi Creek Road offers open public land access where detectorists may find quarry equipment fragments, early wire-era ranch hardware, and 1890s\u20131920s coins."
   },
   {
     "name": "Mantua, AL",
@@ -2668,7 +2669,8 @@
     "latitude": 33.053843,
     "longitude": -87.929048,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mantua was a small agricultural village in Etowah County, Alabama, established by antebellum settlers along one of the creek drainages feeding the Coosa River system during the 1830s\u20131850s cotton era. The community supported a rural church, a school, and small cotton-related trade, but never attained town status before the Civil War and Reconstruction disrupted the regional economy. Over the following decades, improved roads and later automobile culture drew residents toward Gadsden and other Etowah County centers, leaving Mantua to disappear into the surrounding farmland. The old church yard and community gathering sites are worth exploring for antebellum coins, military buttons, and early domestic hardware."
   },
   {
     "name": "Arcadia, MS",
@@ -2676,7 +2678,8 @@
     "latitude": 32.648611,
     "longitude": -91.125556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arcadia was a small Mississippi farming community, likely situated in the rolling hills of the state's central or northern region, established in the antebellum era by plantation-economy settlers growing cotton on the rich loessial soils. The town served as a minor local trading center with a general store, a gin, and a church before the collapse of the plantation economy after the Civil War and successive agricultural downturns in the late 19th and early 20th centuries gradually emptied it. Only old county records and a possible cemetery mark where Arcadia once stood. Metal detectorists working old road traces and farmstead perimeters in the area may find pre\u2013Civil War American coins, Confederate buttons, and plantation-era domestic items."
   },
   {
     "name": "Arnot, MS",
@@ -2684,7 +2687,8 @@
     "latitude": 31.255833,
     "longitude": -91.608333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arnot was a rural community in Mississippi, typical of the dozens of small farming settlements established across the state during the antebellum cotton boom of the 1830s\u20131860s that lacked the transportation infrastructure needed for long-term survival. The community likely had a church, a school, and a general store at its peak, serving the surrounding plantation families and small landholders, before economic hardships following the Civil War and the boll weevil crisis of the early 20th century depleted its population. Today the site is farmland or forested with no surviving structures. Searching along old road traces and around historic church or school sites may yield antebellum copper coins, military relics, and domestic fragments."
   },
   {
     "name": "Artonish, MS",
@@ -2692,7 +2696,8 @@
     "latitude": 31.189897,
     "longitude": -91.58373,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Artonish was a Mississippi plantation community in the Natchez District of Jefferson County, built around a grand antebellum cotton plantation whose main house and outbuildings formed the nucleus of a small community of enslaved workers, overseers, and family members. Artonish Plantation was one of the more prosperous estates in the Natchez region during the 1840s\u20131860s, but the Civil War and emancipation shattered the plantation economy, and the surrounding community dissolved as freedpeople and ruined planters both moved on. The Artonish area today is largely forested private land, though the old plantation road trace and some structural ruins may survive. Antebellum domestic artifacts, plantation tokens, and Civil War military items are historically significant finds from this area."
   },
   {
     "name": "Baleshed, MS",
@@ -2700,7 +2705,8 @@
     "latitude": 32.842778,
     "longitude": -91.105278,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Baleshed was a small rural Mississippi community, one of the countless farm-era settlements that dotted the state's agricultural landscape during the 19th century and vanished as rural consolidation and economic hardship thinned the population across multiple generations. The settlement likely supported a church and a small store serving nearby farming families growing cotton or corn on the region's soils. No notable physical remains survive above ground, and the land has been absorbed into modern agricultural or timber operations. Detectorists working permission-obtained farmland in the area may find 19th-century domestic items, agricultural hardware, and early American coins."
   },
   {
     "name": "Bankston, MS",
@@ -2708,7 +2714,8 @@
     "latitude": 33.397222,
     "longitude": -89.366667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bankston was a small community in Mississippi, established in the antebellum era as a minor rural trading center serving the farming families of the surrounding region. The community had a store, church, and perhaps a school that served a modest cluster of households before the double blow of the post\u2013Civil War depression and the late 19th-century agricultural crisis steadily erased its commercial life. Today Bankston exists only in county records and on historic maps, with no surviving commercial structures. The old community sites are potentially productive for 19th-century copper and silver coinage, military relics from the Civil War era, and domestic household items."
   },
   {
     "name": "Beatties Bluff, MS",
@@ -2716,7 +2723,8 @@
     "latitude": 32.663611,
     "longitude": -90.1975,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Beatties Bluff was a Mississippi River bluff-top community in Warren County, Mississippi, likely a pre\u2013Civil War landing and trading site that served steamboat traffic on the great river during the antebellum era. Like many river landings, it combined agricultural trade with ferry operations and a tavern or store, bustling during the cotton-shipping season before steamboating declined in the post\u2013Civil War era. The high Mississippi River bluffs of Warren County have eroded significantly over the decades, and much of the original landing site may have been lost to the river. Accessible bluff-top areas can yield steamboat-era hardware, antebellum coins, and mid-19th century domestic artifacts."
   },
   {
     "name": "Ben Lomond, MS",
@@ -2724,7 +2732,8 @@
     "latitude": 32.802778,
     "longitude": -91.138333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ben Lomond was a small Mississippi community, likely named by Scots-Irish settlers in the antebellum era who built a church, a school, and a few commercial establishments to serve the surrounding farming region. The community persisted through the Civil War and Reconstruction but declined in the late 19th century as improved transportation bypassed it in favor of railroad towns that could offer regular freight service. Today the community name survives only in local historical memory and old county maps. The surrounding farmland, particularly around old church sites and road intersections, may yield antebellum and Civil War era coins, buttons, and domestic fragments for detectorists working with landowner permission."
   },
   {
     "name": "Pearce, MS",
@@ -2732,7 +2741,8 @@
     "latitude": 32.891111,
     "longitude": -90.344444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pearce was a small Mississippi farming community that served as a minor local center for rural households growing cotton across the rolling hills of the state's interior during the 19th century. The settlement likely had a church and a country store before declining in the early 20th century as automobiles and improved roads allowed farmers to patronize larger nearby towns. No physical structures survive above ground, and the site has been absorbed into surrounding agricultural operations. Detectorists with landowner permission may explore the old community site for 19th-century domestic items, Civil War era relics, and early American coins."
   },
   {
     "name": "Liverpool, MS",
