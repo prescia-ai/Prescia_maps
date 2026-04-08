@@ -1,0 +1,506 @@
+[
+  {
+    "name": "Tipton Station",
+    "type": "stagecoach_stop",
+    "latitude": 38.6556,
+    "longitude": -92.7796,
+    "description": "Eastern terminus of the Butterfield Overland Mail, Tipton, MO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Springfield, MO",
+    "type": "stagecoach_stop",
+    "latitude": 37.2090,
+    "longitude": -93.2923,
+    "description": "Major stop on the Butterfield Overland Mail route, Springfield, MO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fayetteville, AR",
+    "type": "stagecoach_stop",
+    "latitude": 36.0626,
+    "longitude": -94.1574,
+    "description": "Butterfield Overland Mail stop, Fayetteville, AR",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Smith, AR",
+    "type": "stagecoach_stop",
+    "latitude": 35.3859,
+    "longitude": -94.3985,
+    "description": "Major stop on the Butterfield Overland Mail, Fort Smith, AR",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Colbert's Ferry",
+    "type": "stagecoach_stop",
+    "latitude": 33.8418,
+    "longitude": -96.5814,
+    "description": "Butterfield Overland Mail crossing of the Red River at Colbert's Ferry",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Sherman, TX",
+    "type": "stagecoach_stop",
+    "latitude": 33.6357,
+    "longitude": -96.6089,
+    "description": "Butterfield Overland Mail stop, Sherman, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Gainesville, TX",
+    "type": "stagecoach_stop",
+    "latitude": 33.6218,
+    "longitude": -97.1331,
+    "description": "Butterfield Overland Mail stop, Gainesville, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Belknap, TX",
+    "type": "stagecoach_stop",
+    "latitude": 33.1526,
+    "longitude": -98.8960,
+    "description": "Butterfield Overland Mail stop at Fort Belknap, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Chadbourne, TX",
+    "type": "stagecoach_stop",
+    "latitude": 32.0529,
+    "longitude": -100.5301,
+    "description": "Butterfield Overland Mail stop at Fort Chadbourne, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Concho, TX",
+    "type": "stagecoach_stop",
+    "latitude": 31.4638,
+    "longitude": -100.4395,
+    "description": "Butterfield Overland Mail stop at Fort Concho / San Angelo, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Stockton, TX",
+    "type": "stagecoach_stop",
+    "latitude": 30.8882,
+    "longitude": -102.8793,
+    "description": "Butterfield Overland Mail and San Antonio–San Diego Mail stop, Fort Stockton, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "El Paso, TX",
+    "type": "stagecoach_stop",
+    "latitude": 31.7619,
+    "longitude": -106.4850,
+    "description": "Major junction stop on the Butterfield Overland Mail and SA-SD Mail Line, El Paso, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Tucson, AZ",
+    "type": "stagecoach_stop",
+    "latitude": 32.2226,
+    "longitude": -110.9747,
+    "description": "Major stop on Butterfield Overland Mail and SA-SD Mail Line, Tucson, AZ",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Yuma, AZ",
+    "type": "stagecoach_stop",
+    "latitude": 32.6927,
+    "longitude": -114.6277,
+    "description": "Butterfield Overland Mail Colorado River crossing, Yuma, AZ",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Yuma, CA",
+    "type": "stagecoach_stop",
+    "latitude": 32.7248,
+    "longitude": -114.6244,
+    "description": "Butterfield Overland Mail stop at Fort Yuma on the California side of the Colorado River",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "San Bernardino, CA",
+    "type": "stagecoach_stop",
+    "latitude": 34.1083,
+    "longitude": -117.2898,
+    "description": "Butterfield Overland Mail stop, San Bernardino, CA",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Los Angeles, CA",
+    "type": "stagecoach_stop",
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "description": "Western terminus of the Butterfield Overland Mail, Los Angeles, CA",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "San Antonio, TX",
+    "type": "stagecoach_stop",
+    "latitude": 29.4241,
+    "longitude": -98.4936,
+    "description": "Eastern terminus of the San Antonio–San Diego Mail Line, San Antonio, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Clark, TX",
+    "type": "stagecoach_stop",
+    "latitude": 29.3103,
+    "longitude": -100.4262,
+    "description": "San Antonio–San Diego Mail Line stop at Fort Clark (Brackettville), TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Davis, TX",
+    "type": "stagecoach_stop",
+    "latitude": 30.5988,
+    "longitude": -103.8947,
+    "description": "San Antonio–San Diego Mail Line stop at Fort Davis, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "San Diego, CA",
+    "type": "stagecoach_stop",
+    "latitude": 32.7157,
+    "longitude": -117.1611,
+    "description": "Western terminus of the San Antonio–San Diego Mail Line, San Diego, CA",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Atchison, KS",
+    "type": "stagecoach_stop",
+    "latitude": 39.5634,
+    "longitude": -95.1213,
+    "description": "Eastern terminus of the Central Overland California & Pike's Peak Express and Holladay Overland Mail, Atchison, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Kearny, NE",
+    "type": "stagecoach_stop",
+    "latitude": 40.6458,
+    "longitude": -99.0012,
+    "description": "Major stop on Central Overland California & Pike's Peak Express and Holladay Overland Mail, Fort Kearny, NE",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Julesburg, CO",
+    "type": "stagecoach_stop",
+    "latitude": 40.9880,
+    "longitude": -102.2693,
+    "description": "Important relay station on Central Overland and Holladay routes, Julesburg, CO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Laramie, WY",
+    "type": "stagecoach_stop",
+    "latitude": 42.2097,
+    "longitude": -104.5491,
+    "description": "Major stop on Central Overland and Holladay Overland routes, Fort Laramie, WY",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "South Pass, WY",
+    "type": "stagecoach_stop",
+    "latitude": 42.3395,
+    "longitude": -108.8442,
+    "description": "Continental Divide crossing on Central Overland and Holladay routes, South Pass, WY",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Bridger, WY",
+    "type": "stagecoach_stop",
+    "latitude": 41.3205,
+    "longitude": -110.3939,
+    "description": "Major supply and relay stop on Holladay Overland Mail, Fort Bridger, WY",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Salt Lake City, UT",
+    "type": "stagecoach_stop",
+    "latitude": 40.7608,
+    "longitude": -111.8910,
+    "description": "Major hub on Central Overland and Holladay Overland Mail routes, Salt Lake City, UT",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Carson City, NV",
+    "type": "stagecoach_stop",
+    "latitude": 39.1638,
+    "longitude": -119.7674,
+    "description": "Central Overland California & Pike's Peak Express stop, Carson City, NV",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Sacramento, CA",
+    "type": "stagecoach_stop",
+    "latitude": 38.5816,
+    "longitude": -121.4944,
+    "description": "Western terminus of the Central Overland California & Pike's Peak Express, Sacramento, CA",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Kansas City, MO",
+    "type": "stagecoach_stop",
+    "latitude": 39.0997,
+    "longitude": -94.5786,
+    "description": "Eastern terminus of the Overland Stage to Denver, Kansas City, MO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Junction City, KS",
+    "type": "stagecoach_stop",
+    "latitude": 39.0286,
+    "longitude": -96.8314,
+    "description": "Overland Stage to Denver stop, Junction City, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Riley, KS",
+    "type": "stagecoach_stop",
+    "latitude": 39.0556,
+    "longitude": -96.7808,
+    "description": "Overland Stage to Denver stop near Fort Riley, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Fort Hays, KS",
+    "type": "stagecoach_stop",
+    "latitude": 38.8714,
+    "longitude": -99.3218,
+    "description": "Overland Stage to Denver stop at Fort Hays, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Salina, KS",
+    "type": "stagecoach_stop",
+    "latitude": 38.8403,
+    "longitude": -97.6114,
+    "description": "Overland Stage to Denver stop, Salina, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Denver, CO",
+    "type": "stagecoach_stop",
+    "latitude": 39.7392,
+    "longitude": -104.9903,
+    "description": "Western terminus of the Overland Stage to Denver, Denver, CO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Plum Creek Station, NE",
+    "type": "stagecoach_stop",
+    "latitude": 40.7520,
+    "longitude": -99.6260,
+    "description": "Central Overland relay station, Plum Creek (Lexington), NE",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Cottonwood Springs, NE",
+    "type": "stagecoach_stop",
+    "latitude": 41.0579,
+    "longitude": -100.8404,
+    "description": "Central Overland relay station at Cottonwood Springs (North Platte area), NE",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Scotts Bluff, NE",
+    "type": "stagecoach_stop",
+    "latitude": 41.8699,
+    "longitude": -103.6673,
+    "description": "Central Overland stage stop near Scotts Bluff, NE",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Horseshoe Station, WY",
+    "type": "stagecoach_stop",
+    "latitude": 42.3082,
+    "longitude": -105.0147,
+    "description": "Central Overland relay station between Fort Laramie and South Pass",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Sweetwater Station, WY",
+    "type": "stagecoach_stop",
+    "latitude": 42.4618,
+    "longitude": -107.4539,
+    "description": "Central Overland relay station on the Sweetwater River, WY",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Green River Crossing, WY",
+    "type": "stagecoach_stop",
+    "latitude": 41.5271,
+    "longitude": -109.4668,
+    "description": "Holladay Overland Mail Green River crossing station, WY",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Echo Canyon Station, UT",
+    "type": "stagecoach_stop",
+    "latitude": 41.0350,
+    "longitude": -111.4280,
+    "description": "Holladay Overland Mail relay station in Echo Canyon, UT",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Egan Station, NV",
+    "type": "stagecoach_stop",
+    "latitude": 39.4808,
+    "longitude": -114.9063,
+    "description": "Central Overland relay station in Egan Canyon, NV",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Ruby Valley Station, NV",
+    "type": "stagecoach_stop",
+    "latitude": 40.2840,
+    "longitude": -115.4960,
+    "description": "Central Overland relay station in Ruby Valley, NV",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Dragoon Springs, AZ",
+    "type": "stagecoach_stop",
+    "latitude": 31.9210,
+    "longitude": -109.9680,
+    "description": "Butterfield Overland Mail station in the Dragoon Mountains, AZ",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Apache Pass Station, AZ",
+    "type": "stagecoach_stop",
+    "latitude": 32.1733,
+    "longitude": -109.4707,
+    "description": "Butterfield Overland Mail station at Apache Pass (Fort Bowie area), AZ",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Picacho Pass, AZ",
+    "type": "stagecoach_stop",
+    "latitude": 32.6427,
+    "longitude": -111.4007,
+    "description": "Butterfield Overland Mail relay station at Picacho Pass, AZ",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Mesilla, NM",
+    "type": "stagecoach_stop",
+    "latitude": 32.2720,
+    "longitude": -106.8024,
+    "description": "Butterfield Overland Mail and SA-SD Mail stop at Mesilla, NM",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Phantom Hill, TX",
+    "type": "stagecoach_stop",
+    "latitude": 32.5777,
+    "longitude": -99.7210,
+    "description": "Butterfield Overland Mail stop at Fort Phantom Hill, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Jacksboro, TX",
+    "type": "stagecoach_stop",
+    "latitude": 33.2179,
+    "longitude": -98.1598,
+    "description": "Butterfield Overland Mail stop near Fort Richardson / Jacksboro, TX",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Emigrant Spring, OR",
+    "type": "stagecoach_stop",
+    "latitude": 45.7882,
+    "longitude": -118.6030,
+    "description": "Stage stop on the route through the Blue Mountains, OR",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.75
+  },
+  {
+    "name": "Castle Rock Station, CO",
+    "type": "stagecoach_stop",
+    "latitude": 39.3723,
+    "longitude": -104.8561,
+    "description": "Overland Stage to Denver relay station at Castle Rock, CO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.85
+  },
+  {
+    "name": "Bijou Creek Station, CO",
+    "type": "stagecoach_stop",
+    "latitude": 39.8870,
+    "longitude": -103.9890,
+    "description": "Overland Stage to Denver relay station on Bijou Creek, CO",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.80
+  },
+  {
+    "name": "Solomon's Fork Station, KS",
+    "type": "stagecoach_stop",
+    "latitude": 39.2290,
+    "longitude": -98.8710,
+    "description": "Overland Stage to Denver relay station on Solomon's Fork, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.80
+  },
+  {
+    "name": "Smoky Hill Spring, KS",
+    "type": "stagecoach_stop",
+    "latitude": 38.9610,
+    "longitude": -100.1520,
+    "description": "Overland Stage to Denver relay station on the Smoky Hill route, KS",
+    "source": "seed:stagecoach_stops",
+    "confidence": 0.80
+  }
+]

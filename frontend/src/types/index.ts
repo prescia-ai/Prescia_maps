@@ -66,10 +66,29 @@ export interface ScoreResponse {
 // ── Layer visibility state ───────────────────────────────────────────────────
 
 export interface LayerState {
-  events: boolean;
-  railroads: boolean;
-  trails: boolean;
-  mines: boolean;
+  // Point feature types
+  battle: boolean;
+  town: boolean;
+  mine: boolean;
+  camp: boolean;
+  railroad_stop: boolean;
+  stagecoach_stop: boolean;
+  trail: boolean;
+  structure: boolean;
+  church: boolean;
+  cemetery: boolean;
+  ferry: boolean;
+  fairground: boolean;
+  school: boolean;
+  spring: boolean;
+  mission: boolean;
+  trading_post: boolean;
+  shipwreck: boolean;
+  pony_express: boolean;
+  // Linear feature types
+  railroad: boolean;
+  road: boolean;
+  // Special layers
   heatmap: boolean;
   blm: boolean;
 }

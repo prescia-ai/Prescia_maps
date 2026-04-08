@@ -16,12 +16,28 @@ import { fetchLandAccess, putLandAccessOverride } from './api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from './types';
 
 const DEFAULT_LAYERS: LayerState = {
-  events:    true,
-  railroads: true,
-  trails:    true,
-  mines:     true,
-  heatmap:   false,
-  blm:       false,
+  battle:          true,
+  town:            true,
+  mine:            true,
+  camp:            true,
+  railroad_stop:   true,
+  stagecoach_stop: true,
+  trail:           true,
+  structure:       true,
+  church:          true,
+  cemetery:        true,
+  ferry:           true,
+  fairground:      true,
+  school:          true,
+  spring:          true,
+  mission:         true,
+  trading_post:    true,
+  shipwreck:       true,
+  pony_express:    true,
+  railroad:        true,
+  road:            true,
+  heatmap:         false,
+  blm:             false,
 };
 
 export default function App() {
@@ -129,8 +145,8 @@ export default function App() {
         <LayerControls layers={layers} onChange={setLayers} />
       </div>
 
-      {/* Bottom-right: info / score / land-access panels (offset left of legend) */}
-      <div className="absolute bottom-6 right-48 z-10 flex flex-col gap-3 items-end">
+      {/* Bottom-right: info / score / land-access panels */}
+      <div className="absolute bottom-6 right-6 z-10 flex flex-col gap-3 items-end">
         {selectedFeature && (
           <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
         )}
@@ -166,36 +182,6 @@ export default function App() {
           </div>
         </div>
       )}
-
-      {/* Legend – bottom-right, always visible */}
-      <div className="absolute bottom-6 right-4 z-10">
-        <div className="bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-xl p-3 text-xs text-slate-300">
-          <p className="font-semibold text-slate-400 uppercase tracking-widest mb-2 text-[10px]">Legend</p>
-          <div className="space-y-1">
-            {[
-              { color: '#ef4444', label: 'Battle' },
-              { color: '#3b82f6', label: 'Town / Ghost Town' },
-              { color: '#f59e0b', label: 'Mine' },
-              { color: '#22c55e', label: 'Camp' },
-              { color: '#a855f7', label: 'Railroad Stop' },
-              { color: '#14b8a6', label: 'Trail Point' },
-              { color: '#f97316', label: 'Fort / Structure' },
-              { color: '#84cc16', label: 'Stagecoach Stop' },
-              { color: '#ec4899', label: 'Mission / Church' },
-              { color: '#06b6d4', label: 'Ferry Crossing' },
-              { color: '#6366f1', label: 'Cemetery' },
-            ].map(({ color, label }) => (
-              <div key={label} className="flex items-center gap-2">
-                <span
-                  className="inline-block w-3 h-3 rounded-full flex-shrink-0 border border-white/20"
-                  style={{ backgroundColor: color }}
-                />
-                <span>{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Import modal */}
       {showImportModal && (
