@@ -1,0 +1,1812 @@
+[
+  {
+    "name": "Independence, MO",
+    "type": "trail_landmark",
+    "latitude": 39.0911,
+    "longitude": -94.4155,
+    "description": "The 'Queen City of the Trails,' Independence was the primary jumping-off point for the Oregon, California, and Santa Fe Trails. Emigrants from the eastern states gathered here each spring to outfit for the long journey west.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Santa Fe Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Westport, MO",
+    "type": "trail_landmark",
+    "latitude": 39.0361,
+    "longitude": -94.5786,
+    "description": "Located just west of present-day Kansas City, Westport was a rival jumping-off point to Independence and a major outfitting center for overland emigrants. Its early prominence as a fur trade depot made it a natural staging ground for westward migration.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Council Grove, KS",
+    "type": "trail_landmark",
+    "latitude": 38.6617,
+    "longitude": -96.4892,
+    "description": "The last major supply point on the Santa Fe Trail before the open plains, Council Grove was named for a 1825 treaty council held under a large oak tree. Wagon trains typically reorganized here into defensive caravans before venturing into potentially hostile territory.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Fort Kearny, NE",
+    "type": "trail_landmark",
+    "latitude": 40.6519,
+    "longitude": -99.005,
+    "description": "Established in 1848 to protect emigrants on the Platte River Road, Fort Kearny was the first military post encountered on the Oregon Trail. It served as a critical supply and repair point for thousands of overland emigrants and Pony Express riders.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Chimney Rock, NE",
+    "type": "trail_landmark",
+    "latitude": 41.7061,
+    "longitude": -103.3477,
+    "description": "Rising 325 feet above the North Platte River valley, Chimney Rock was the most famous and often-described landmark on the Oregon Trail. Emigrants mentioned it in their diaries more than any other feature, and its distinctive spire signaled that the emigrants were entering the Rocky Mountain region.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Scotts Bluff, NE",
+    "type": "trail_landmark",
+    "latitude": 41.8344,
+    "longitude": -103.7129,
+    "description": "Scotts Bluff was a dramatic sandstone promontory that forced the Oregon Trail through the narrow Mitchell Pass. Named for fur trader Hiram Scott who died near its base around 1828, it was a major visual landmark and trail milestone.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Fort Laramie, WY",
+    "type": "trail_landmark",
+    "latitude": 42.2097,
+    "longitude": -104.5491,
+    "description": "Originally a fur trading post known as Fort William, Fort Laramie became the most important military installation on the central overland route. Emigrants rested, repaired equipment, and sent last letters home from here before venturing into the more challenging terrain ahead.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route",
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Register Cliff, WY",
+    "type": "trail_landmark",
+    "latitude": 42.1264,
+    "longitude": -104.5155,
+    "description": "The soft sandstone of Register Cliff bears the carved signatures of thousands of Oregon and California Trail emigrants who passed between 1840 and 1870. Hundreds of names, dates, and destinations are still legible, making it one of the most tangible remnants of overland emigration.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Independence Rock, WY",
+    "type": "trail_landmark",
+    "latitude": 42.4942,
+    "longitude": -107.7251,
+    "description": "Called the 'Register of the Desert' by Father Pierre-Jean De Smet, Independence Rock bears the inscribed names of thousands of emigrants who scratched their marks into its granite surface. Emigrants needed to reach this landmark by July 4th to have a reasonable chance of crossing the Sierra Nevada before winter.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "South Pass, WY",
+    "type": "trail_landmark",
+    "latitude": 42.6361,
+    "longitude": -108.9417,
+    "description": "The broad, gentle crossing of the Continental Divide at South Pass made overland wagon travel to the Pacific possible, and was perhaps the single most important geographic feature in the history of westward expansion. Emigrants crossing here were technically halfway to Oregon City, though the most difficult terrain still lay ahead.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route",
+      "Lander Road / Lander Cutoff"
+    ]
+  },
+  {
+    "name": "Fort Bridger, WY",
+    "type": "trail_landmark",
+    "latitude": 41.3166,
+    "longitude": -110.3874,
+    "description": "Established by mountain man Jim Bridger in 1843 as a trading post for Oregon-bound emigrants, Fort Bridger became a key decision point where travelers chose between the established trail and shortcuts like the Hastings Cutoff. The Mormons purchased it in 1855 and it later became a U.S. Army post.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route",
+      "Cherokee Trail",
+      "Hastings Cutoff"
+    ]
+  },
+  {
+    "name": "Fort Hall, ID",
+    "type": "trail_landmark",
+    "latitude": 43.0282,
+    "longitude": -112.4095,
+    "description": "Founded by Nathaniel Wyeth in 1834 and later sold to the Hudson's Bay Company, Fort Hall was the parting of the ways where California-bound emigrants left the Oregon Trail and headed southwest. The fort's factor, Richard Grant, reportedly discouraged emigration to California to maintain the fur trade.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Pony Express Route",
+      "Lander Road / Lander Cutoff",
+      "Emigrant Trail / Humboldt Route"
+    ]
+  },
+  {
+    "name": "Three Island Crossing, ID",
+    "type": "trail_landmark",
+    "latitude": 43.0,
+    "longitude": -115.7,
+    "description": "The Three Island Crossing of the Snake River was one of the most dangerous river crossings on the Oregon Trail, where emigrants could either ford the river on stepping-stone islands or continue on the difficult south bank route. Many wagons overturned and some emigrants drowned at this crossing.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Fort Boise, ID",
+    "type": "trail_landmark",
+    "latitude": 43.65,
+    "longitude": -116.2,
+    "description": "Hudson's Bay Company's Fort Boise provided the last resupply opportunity for Oregon-bound emigrants before the Blue Mountains. Like Fort Hall, it was operated by the British company that initially resisted American emigration but provided essential assistance to travelers in need.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "The Dalles, OR",
+    "type": "trail_landmark",
+    "latitude": 45.5946,
+    "longitude": -121.1789,
+    "description": "The Dalles was the practical end of overland travel on the Oregon Trail, where emigrants had to either raft their wagons down the treacherous Columbia River rapids or pay toll on the newly-opened Barlow Road to reach the Willamette Valley. The name comes from the French word for flagstones describing the basalt rock formations.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "Barlow Road"
+    ]
+  },
+  {
+    "name": "Oregon City, OR",
+    "type": "trail_landmark",
+    "latitude": 45.3573,
+    "longitude": -122.6065,
+    "description": "Oregon City was the official terminus of the Oregon Trail, the first incorporated American city west of the Rocky Mountains, and the capital of the Oregon Territory. Emigrants who survived the arduous 2,000-mile journey arrived here to begin their new lives in the Pacific Northwest.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Oregon Trail",
+      "Barlow Road"
+    ]
+  },
+  {
+    "name": "City of Rocks, ID",
+    "type": "trail_landmark",
+    "latitude": 42.0706,
+    "longitude": -113.715,
+    "description": "This dramatic formation of granite spires and boulders in southern Idaho was a famous landmark on the California Trail where emigrants carved their names in axle grease on the rocks. The parting of the Oregon and California trails officially occurred nearby at Raft River junction.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Humboldt Sink, NV",
+    "type": "trail_landmark",
+    "latitude": 39.8,
+    "longitude": -118.65,
+    "description": "Where the Humboldt River disappeared into the desert, emigrants faced the dread 'Forty Mile Desert' crossing to reach the Truckee or Carson Rivers and the Sierra Nevada beyond. Dead animals, abandoned wagons, and desperate emigrants littered this stretch, making it one of the most dreaded sections of the California Trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "California Trail",
+      "Emigrant Trail / Humboldt Route"
+    ]
+  },
+  {
+    "name": "Carson Sink, NV",
+    "type": "trail_landmark",
+    "latitude": 39.7,
+    "longitude": -118.75,
+    "description": "The Carson Sink marked the end of the Carson River branch of the California Trail and the beginning of the final desert crossing before the Sierra Nevada. Emigrants typically rested here before attempting the brutal 50-mile desert stretch to reach the mountains.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Donner Pass, CA",
+    "type": "trail_landmark",
+    "latitude": 39.32,
+    "longitude": -120.31,
+    "description": "The Truckee Pass, later renamed Donner Pass after the tragic 1846-47 disaster, was the primary Sierra Nevada crossing for California-bound emigrants from the north. The stranding of the Donner-Reed Party here, with 87 people snowbound for four months and 41 perishing, became the most dramatic tragedy of westward migration.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "California Trail",
+      "Donner Pass Route"
+    ]
+  },
+  {
+    "name": "Sutter's Fort, CA",
+    "type": "trail_landmark",
+    "latitude": 38.5751,
+    "longitude": -121.499,
+    "description": "John Sutter's agricultural and trading empire in the Sacramento Valley was the destination of most California-bound emigrants, providing food, employment, and a base to begin new lives. It was near Sutter's Mill that James Marshall discovered gold in January 1848, triggering the California Gold Rush.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "California Trail",
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Nauvoo, IL",
+    "type": "trail_landmark",
+    "latitude": 40.55,
+    "longitude": -91.381,
+    "description": "The 'City Beautiful' on the Mississippi River was the thriving center of the Latter-day Saint community until anti-Mormon violence forced the Exodus of 1846. At its height Nauvoo rivaled Chicago in population, and its abandonment under duress marks one of the greatest forced migrations in American history.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Mormon Trail"
+    ]
+  },
+  {
+    "name": "Winter Quarters, NE",
+    "type": "trail_landmark",
+    "latitude": 41.3,
+    "longitude": -96.05,
+    "description": "Established on the banks of the Missouri River in 1846-1847 as a temporary refuge for fleeing Latter-day Saints, Winter Quarters became a sprawling community of 3,500 people. The bitter winter of 1846-47 claimed hundreds of lives, and a moving pioneer cemetery near the site commemorates those who died there.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Mormon Trail"
+    ]
+  },
+  {
+    "name": "Salt Lake City, UT",
+    "type": "trail_landmark",
+    "latitude": 40.7608,
+    "longitude": -111.891,
+    "description": "Founded by Brigham Young and the Mormon pioneers in July 1847 in the valley of the Great Salt Lake, Salt Lake City became the spiritual and commercial hub of the Great Basin. The city grew rapidly into a major waystation for California-bound emigrants and the center of Mormon civilization.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Mormon Trail",
+      "Pony Express Route",
+      "Cherokee Trail"
+    ]
+  },
+  {
+    "name": "Arrow Rock, MO",
+    "type": "trail_landmark",
+    "latitude": 39.0747,
+    "longitude": -92.9482,
+    "description": "Arrow Rock was an important early waypoint on the Santa Fe Trail, known for its salt lick and river crossing used by Native Americans long before European contact. The town that grew here became home to several prominent Missouri politicians and artists.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Fort Osage, MO",
+    "type": "trail_landmark",
+    "latitude": 39.175,
+    "longitude": -94.0167,
+    "description": "Built in 1808 under the direction of William Clark, Fort Osage was the westernmost U.S. outpost for nearly two decades and the location of the government's first factory trading post with Native Americans. It served as an early waypoint for Santa Fe-bound traders.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Fort Larned, KS",
+    "type": "trail_landmark",
+    "latitude": 38.185,
+    "longitude": -99.2186,
+    "description": "Established in 1859 to protect Santa Fe Trail travelers from Kiowa and Cheyenne raids, Fort Larned was one of the most active military posts on the central plains during the Indian Wars of the 1860s. The well-preserved fort is now a National Historic Site.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Bent's Old Fort, CO",
+    "type": "trail_landmark",
+    "latitude": 38.0394,
+    "longitude": -103.425,
+    "description": "Built by brothers Charles and William Bent around 1833, Bent's Old Fort was the premier trading post on the southern plains, strategically located on the Santa Fe Trail's Mountain Branch. The adobe fort served trappers, Cheyenne and Arapaho traders, and emigrants until it was mysteriously destroyed in 1849.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Santa Fe Trail",
+      "Trapper's Trail / Cache Valley Trail"
+    ]
+  },
+  {
+    "name": "Raton Pass, NM",
+    "type": "trail_landmark",
+    "latitude": 37.05,
+    "longitude": -104.5,
+    "description": "The crossing of the Sangre de Cristo Mountains at Raton Pass presented the most challenging terrain obstacle on the Mountain Branch of the Santa Fe Trail. Richens Lacy 'Uncle Dick' Wootton built a toll road over the pass in 1865, which the Atchison, Topeka and Santa Fe Railway later acquired.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Santa Fe Trail",
+      "Goodnight-Loving Trail",
+      "Cherokee Trail"
+    ]
+  },
+  {
+    "name": "Cimarron Crossing, KS",
+    "type": "trail_landmark",
+    "latitude": 37.7528,
+    "longitude": -100.35,
+    "description": "The Cimarron Crossing of the Arkansas River marked the divergence of the Santa Fe Trail's Mountain and Cimarron (Dry) Routes. Caravans choosing the shorter Cimarron Cutoff faced the waterless stretch of the Jornada to reach the safety of the Cimarron River.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Santa Fe Trail",
+      "Cimarron Cutoff / Dry Route"
+    ]
+  },
+  {
+    "name": "Fort Union, NM",
+    "type": "trail_landmark",
+    "latitude": 35.9167,
+    "longitude": -104.95,
+    "description": "Established in 1851 as the largest military installation in the Southwest, Fort Union protected the Santa Fe Trail's southern reaches and served as the principal supply depot for military operations in New Mexico and the surrounding territories. Deep wagon ruts from the trail are still visible at the site.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Santa Fe, NM",
+    "type": "trail_landmark",
+    "latitude": 35.687,
+    "longitude": -105.9378,
+    "description": "Founded in 1610 as the capital of the Kingdom of New Mexico, Santa Fe was one of North America's oldest continuously inhabited cities and the terminus of multiple historic trails. Its famous Palace of the Governors on the plaza witnessed the arrival of Kearny's conquering army in 1846.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Santa Fe Trail",
+      "El Camino Real de Tierra Adentro",
+      "Old Spanish Trail",
+      "Kearny Trail"
+    ]
+  },
+  {
+    "name": "St. Joseph, MO",
+    "type": "trail_landmark",
+    "latitude": 39.7675,
+    "longitude": -94.8467,
+    "description": "The eastern terminus of the Pony Express, St. Joseph was a booming frontier city where the first rider, Johnny Fry, dashed westward on April 3, 1860 to initiate the service. The Pikes Peak Stables where the Pony Express operated are now preserved as a museum.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Gothenburg Station, NE",
+    "type": "trail_landmark",
+    "latitude": 40.9271,
+    "longitude": -100.1606,
+    "description": "The Gothenburg Pony Express station was one of the relay stations where riders exchanged horses and briefly rested during the grueling overland run. The original station building, relocated to a park in Gothenburg, is one of the few surviving authentic Pony Express stations.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Julesburg, CO",
+    "type": "trail_landmark",
+    "latitude": 40.9875,
+    "longitude": -102.2583,
+    "description": "Fort Sedgwick at Julesburg was an important Pony Express station and later a notorious frontier town that was twice destroyed by Cheyenne and Sioux warriors in the winter of 1865. It sat at the crossroads of several major overland routes.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Pony Express Route",
+      "Smoky Hill Trail"
+    ]
+  },
+  {
+    "name": "Fort Caspar, WY",
+    "type": "trail_landmark",
+    "latitude": 42.85,
+    "longitude": -106.3,
+    "description": "Originally a Pony Express and Overland Stage station near a Mormon ferry crossing of the North Platte River, Fort Caspar was attacked by Cheyenne, Sioux, and Arapaho warriors in 1865 during Red Cloud's war. Lieutenant Caspar Collins was killed in the engagement that gave the fort its name.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Pony Express Route",
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Camp Floyd, UT",
+    "type": "trail_landmark",
+    "latitude": 40.3,
+    "longitude": -112.1,
+    "description": "Established during the Utah War of 1857-58, Camp Floyd was briefly the largest military post in the United States with 3,500 troops. It served as an important Pony Express relay station and its auction of military equipment at the outbreak of the Civil War provided settlers with inexpensive goods.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Ruby Valley Station, NV",
+    "type": "trail_landmark",
+    "latitude": 40.5,
+    "longitude": -115.5,
+    "description": "Ruby Valley Station was one of the home stations on the Nevada stretch of the Pony Express where riders could rest and eat a hot meal. The Ruby Mountains provided a dramatic backdrop and the valley offered water and forage in the otherwise harsh Great Basin landscape.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Friday's Station, NV",
+    "type": "trail_landmark",
+    "latitude": 38.9,
+    "longitude": -119.95,
+    "description": "Friday's Station near Lake Tahoe was the last Nevada relay station on the Pony Express route before riders ascended the Sierra Nevada into California. Young rider Bob Haslam covered the incredible distance from Friday's Station to Smith Creek and back, nearly 380 miles, when his relief rider refused to ride during the Pyramid Lake War.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Natchez, MS",
+    "type": "trail_landmark",
+    "latitude": 31.5604,
+    "longitude": -91.4032,
+    "description": "The oldest city on the Mississippi River and southern terminus of the Natchez Trace, Natchez was a major cotton port and one of the wealthiest cities in antebellum America. Under-the-Hill, its notorious riverside district, catered to the boatmen who walked the Trace northward after selling their goods.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Mount Locust Inn, MS",
+    "type": "trail_landmark",
+    "latitude": 31.7,
+    "longitude": -91.35,
+    "description": "Mount Locust was one of the earliest stands (inns) on the Natchez Trace, established around 1780 and used continuously by travelers on the Trace for decades. The restored plantation house is one of the few surviving stands and is maintained by the National Park Service.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Port Gibson, MS",
+    "type": "trail_landmark",
+    "latitude": 31.9553,
+    "longitude": -90.9843,
+    "description": "Port Gibson sat near the Natchez Trace along the southwestern Mississippi bluffs and was spared destruction in the Civil War because General Grant declared it 'too beautiful to burn.' Its ornate antebellum churches and mansions reflect the prosperity of the cotton era.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "French Camp, MS",
+    "type": "trail_landmark",
+    "latitude": 33.3,
+    "longitude": -89.4,
+    "description": "French Camp was named for Louis LeFleur, a French-Canadian trader who established a stand here in the early 1800s. It was a major rest stop on the Natchez Trace and later the site of a Choctaw school established by missionaries.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Tupelo, MS",
+    "type": "trail_landmark",
+    "latitude": 34.2576,
+    "longitude": -88.7037,
+    "description": "Near the site of the Chickasaw town of Ackia where the French were defeated in 1736, Tupelo sits along the Natchez Trace in northern Mississippi. The town later gained fame as the birthplace of Elvis Presley.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Colbert's Ferry, TN",
+    "type": "trail_landmark",
+    "latitude": 35.0,
+    "longitude": -87.5,
+    "description": "Operated by George Colbert, a Chickasaw chief of Scottish descent, Colbert's Ferry was a profitable business on the Tennessee River crossing of the Natchez Trace. Colbert reportedly charged Andrew Jackson an exorbitant toll to cross with his army after the Battle of New Orleans.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Nashville, TN",
+    "type": "trail_landmark",
+    "latitude": 36.1627,
+    "longitude": -86.7816,
+    "description": "The northern terminus of the Natchez Trace, Nashville was the destination for most of the flatboatmen who walked north from Natchez after selling their goods. Founded in 1779 as Fort Nashborough, it grew rapidly as the gateway to the western frontier.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Fort Reno, WY",
+    "type": "trail_landmark",
+    "latitude": 43.7,
+    "longitude": -106.9,
+    "description": "The first of three forts built along the Bozeman Trail to protect miners and settlers from Lakota and Cheyenne resistance, Fort Reno was frequently besieged and was among the posts abandoned after Red Cloud's War. Its garrison experienced near-constant harassment throughout 1866-1867.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Fort Phil Kearny, WY",
+    "type": "trail_landmark",
+    "latitude": 44.5244,
+    "longitude": -106.9506,
+    "description": "The main fort along the Bozeman Trail was the site of the Fetterman Fight in December 1866, when Lt. Col. Fetterman disobeyed orders and led 80 soldiers to their deaths in the worst U.S. Army defeat on the northern plains prior to Little Bighorn. The fort was burned to the ground by victorious warriors immediately after its abandonment in 1868.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Fort C.F. Smith, MT",
+    "type": "trail_landmark",
+    "latitude": 45.317,
+    "longitude": -107.9195,
+    "description": "The northernmost fort on the Bozeman Trail, Fort C.F. Smith in the Big Horn Valley was the scene of the Hayfield Fight in August 1867. The fort was also burned upon abandonment and Red Cloud, reviewing his successful campaign, said it was the only war in which a Native American chief won.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Virginia City, MT",
+    "type": "trail_landmark",
+    "latitude": 45.2961,
+    "longitude": -111.9475,
+    "description": "The gold rush town of Virginia City was the primary destination for travelers on the Bozeman Trail, booming to a population of 10,000 after gold was discovered in Alder Gulch in 1863. It served as the territorial capital of Montana from 1865 to 1875 and preserved many of its original buildings.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Cumberland Gap, KY",
+    "type": "trail_landmark",
+    "latitude": 36.6017,
+    "longitude": -83.677,
+    "description": "The Cumberland Gap was the great natural portal through the Appalachian Mountains, used by Native Americans, long hunters, and then the flood of settlers who followed Daniel Boone into Kentucky. Before Boone's Trace was cut, the gap had already been used for centuries as a natural crossing in the Cumberland Mountains.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Wilderness Road / Boone's Trace"
+    ]
+  },
+  {
+    "name": "Boonesborough, KY",
+    "type": "trail_landmark",
+    "latitude": 37.9,
+    "longitude": -84.23,
+    "description": "Established by Daniel Boone and the Transylvania Company in 1775, Fort Boonesborough was the first Anglo-American settlement in Kentucky and the destination of the original Wilderness Road. The fort withstood a ten-day siege by British and Shawnee forces in 1778.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Wilderness Road / Boone's Trace"
+    ]
+  },
+  {
+    "name": "Lexington, KY",
+    "type": "trail_landmark",
+    "latitude": 38.0406,
+    "longitude": -84.5037,
+    "description": "Named in 1775 for the opening battle of the American Revolution, Lexington quickly became the largest and most prosperous city in Kentucky and the 'Athens of the West.' It was the natural destination for settlers who poured through the Cumberland Gap on the Wilderness Road.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Wilderness Road / Boone's Trace"
+    ]
+  },
+  {
+    "name": "Winchester, VA",
+    "type": "trail_landmark",
+    "latitude": 39.1857,
+    "longitude": -78.1633,
+    "description": "Located at the northern end of the Shenandoah Valley, Winchester was a major colonial waypoint on the Great Wagon Road and a strategic location contested multiple times during the Civil War. George Washington used it as a headquarters during the French and Indian War.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Staunton, VA",
+    "type": "trail_landmark",
+    "latitude": 38.1496,
+    "longitude": -79.0717,
+    "description": "Staunton was the principal trading center of the central Shenandoah Valley and an important stop on the Great Wagon Road as emigrants moved southward into the Carolinas. It became the birthplace of Woodrow Wilson and a center of culture in the Virginia backcountry.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Roanoke, VA",
+    "type": "trail_landmark",
+    "latitude": 37.271,
+    "longitude": -79.942,
+    "description": "Situated at the southern end of the Shenandoah Valley where the Great Wagon Road turned into the Carolina piedmont, the Roanoke area was a key junction point. The town grew dramatically after the railroad arrived in the 1880s, transforming from a small village into a regional hub.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Salem, NC",
+    "type": "trail_landmark",
+    "latitude": 36.0726,
+    "longitude": -80.2423,
+    "description": "Founded by Moravian settlers in 1766 as a planned community along the Great Wagon Road, Salem (later joined with Winston to form Winston-Salem) was a notable exception to the rough frontier settlements of the Carolina backcountry. The Moravians maintained strict community records that provide detailed accounts of travel and trade on the road.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Charlotte, NC",
+    "type": "trail_landmark",
+    "latitude": 35.2271,
+    "longitude": -80.8431,
+    "description": "Settled predominantly by Scots-Irish immigrants who traveled the Great Wagon Road, Charlotte was the site of the Mecklenburg Declaration of Independence in May 1775 and the Cornwallis occupation during the Revolutionary War. The town sat at the intersection of the Great Wagon Road and the Carolina trading path.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Camden, SC",
+    "type": "trail_landmark",
+    "latitude": 34.2465,
+    "longitude": -80.607,
+    "description": "Established as Fredericksburg Township in 1733 for German and Swiss settlers moving down the Great Wagon Road, Camden was the British base of operations in the South during the Revolutionary War. The devastating American defeat at the Battle of Camden in 1780 was a major British victory.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "Augusta, GA",
+    "type": "trail_landmark",
+    "latitude": 33.4735,
+    "longitude": -81.9748,
+    "description": "The southern terminus of the Great Wagon Road, Augusta was one of colonial Georgia's most important cities and a major trading center with the Cherokee and Creek nations. It served as Georgia's capital during the Revolutionary War and remained a key inland port on the Savannah River.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Great Wagon Road"
+    ]
+  },
+  {
+    "name": "San Antonio, TX",
+    "type": "trail_landmark",
+    "latitude": 29.4241,
+    "longitude": -98.4936,
+    "description": "San Antonio was the starting point for most cattle drives up the Chisholm Trail, with ranchers gathering their herds in the surrounding Hill Country for the long drive north. The city's Alamo Mission and the surrounding missions represented the northern frontier of Spanish colonization in Texas.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Chisholm Trail",
+      "Goodnight-Loving Trail",
+      "Western Trail / Dodge City Trail",
+      "King's Highway / El Camino Real de los Tejas"
+    ]
+  },
+  {
+    "name": "Waco, TX",
+    "type": "trail_landmark",
+    "latitude": 31.5493,
+    "longitude": -97.1469,
+    "description": "The Chisholm Trail crossing of the Brazos River at Waco was one of the most critical fords on the entire cattle drive route, with herds sometimes waiting days for flood waters to recede. The suspension bridge built here in 1870 was at the time the longest single-span bridge in the United States.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Fort Worth, TX",
+    "type": "trail_landmark",
+    "latitude": 32.7254,
+    "longitude": -97.3208,
+    "description": "Fort Worth grew from a military post into a thriving cowtown as the 'last stop before the frontier' on the Chisholm Trail. The city's famous Hell's Half Acre district provided cowboys with rowdy entertainment, and the Stockyards district remains a tribute to Fort Worth's cattle heritage.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Chisholm Trail",
+      "Western Trail / Dodge City Trail"
+    ]
+  },
+  {
+    "name": "Gainesville, TX",
+    "type": "trail_landmark",
+    "latitude": 33.6218,
+    "longitude": -97.1331,
+    "description": "Gainesville was the last major Texas town on the Chisholm Trail before crossing the Red River into Indian Territory, and served as a final outfitting point for cattle drives. The Red River crossing just north of here was one of the most challenging river crossings on the entire Chisholm Trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Red River Station, TX",
+    "type": "trail_landmark",
+    "latitude": 33.9,
+    "longitude": -97.7,
+    "description": "The Red River Station crossing was the gateway from Texas into Indian Territory and the open range of the northern Chisholm Trail. The crossing required careful management of longhorns, and many cattlemen paid Native American tolls for passage through their lands.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Caldwell, KS",
+    "type": "trail_landmark",
+    "latitude": 37.0355,
+    "longitude": -97.6109,
+    "description": "Known as the 'Border Queen,' Caldwell sat on the Kansas-Indian Territory line and was the last and wildest cattle town on the Chisholm Trail after Wichita's shipping trade declined. Its proximity to the open range of Indian Territory made it a late-era railhead for Texas cattle drives.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Wichita, KS",
+    "type": "trail_landmark",
+    "latitude": 37.6872,
+    "longitude": -97.3301,
+    "description": "Wichita was the premier cattle trading center on the Chisholm Trail from 1872 to 1876, receiving over 1.5 million cattle during its heyday as a railhead. Wyatt Earp served as a lawman here before his famous tenure in Dodge City, and the city grew from a frontier trading post to a thriving commercial center.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Abilene, KS",
+    "type": "trail_landmark",
+    "latitude": 38.92,
+    "longitude": -97.2167,
+    "description": "The first great cattle town of the Kansas railheads, Abilene received its first Texas cattle drive in 1867 when Joseph McCoy built the facilities to connect Texas longhorns with the Kansas Pacific Railroad. Wild Bill Hickok served as marshal here, and the town's cattle boom ended when Kansas farmers drove out the cattle trade in 1872.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Chisholm Trail",
+      "Smoky Hill Trail"
+    ]
+  },
+  {
+    "name": "Fort Sumner, NM",
+    "type": "trail_landmark",
+    "latitude": 34.4701,
+    "longitude": -104.2406,
+    "description": "Fort Sumner was established in 1862 to hold the Navajo and Mescalero Apache peoples at the Bosque Redondo reservation, and was the destination of Goodnight and Loving's first cattle drive in 1866. The fort became notorious for the disastrous Bosque Redondo experiment in forced relocation and is also remembered as the place where Billy the Kid was killed.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Goodnight-Loving Trail"
+    ]
+  },
+  {
+    "name": "Bosque Redondo, NM",
+    "type": "trail_landmark",
+    "latitude": 34.45,
+    "longitude": -104.15,
+    "description": "The Bosque Redondo reservation was the site of a failed experiment in forced relocation, where 9,000 Navajo people were confined in miserable conditions following the Long Walk of 1864. The reservation's food requirements, supplied by Goodnight-Loving cattle drives, could never meet the needs of the starving population.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Goodnight-Loving Trail"
+    ]
+  },
+  {
+    "name": "Pueblo, CO",
+    "type": "trail_landmark",
+    "latitude": 38.2544,
+    "longitude": -104.6091,
+    "description": "Situated at the confluence of the Arkansas River and Fountain Creek, Pueblo was an important trading and military post that became a major stop on the Goodnight-Loving and Cherokee Trails. It grew into a steel-producing industrial city after the railroad arrived.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Goodnight-Loving Trail",
+      "Cherokee Trail"
+    ]
+  },
+  {
+    "name": "Denver, CO",
+    "type": "trail_landmark",
+    "latitude": 39.7392,
+    "longitude": -104.9847,
+    "description": "Founded in 1858 at the confluence of Cherry Creek and the South Platte River during the Pike's Peak Gold Rush, Denver became the commercial hub of the Rocky Mountain region. Its position at the eastern foot of the Rockies made it the destination of multiple overland trails and later the 'Queen City of the Plains.'",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Goodnight-Loving Trail",
+      "Smoky Hill Trail",
+      "Trapper's Trail / Cache Valley Trail"
+    ]
+  },
+  {
+    "name": "Cheyenne, WY",
+    "type": "trail_landmark",
+    "latitude": 41.14,
+    "longitude": -104.8202,
+    "description": "Founded in 1867 as a railroad camp for the Union Pacific, Cheyenne grew explosively to become Wyoming's territorial capital. As the northern terminus of the Goodnight-Loving Trail, it received enormous cattle shipments and became one of the wealthiest cities per capita in the world during the cattle boom of the 1880s.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Goodnight-Loving Trail"
+    ]
+  },
+  {
+    "name": "Fort Riley, KS",
+    "type": "trail_landmark",
+    "latitude": 39.055,
+    "longitude": -96.7961,
+    "description": "Established in 1853 at the confluence of the Republican and Smoky Hill Rivers, Fort Riley guarded the beginning of the Smoky Hill Trail and the Santa Fe Trail road network. George Armstrong Custer trained the 7th Cavalry here before the campaigns against the Southern Cheyenne.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Smoky Hill Trail"
+    ]
+  },
+  {
+    "name": "Fort Hays, KS",
+    "type": "trail_landmark",
+    "latitude": 38.8781,
+    "longitude": -99.3247,
+    "description": "Built in 1865 to protect the Smoky Hill Trail and Union Pacific Railroad workers from Cheyenne and Sioux raids, Fort Hays became an important base for General Sheridan's winter campaign of 1868-69. Wild Bill Hickok served as a scout here and the nearby town of Hays City was one of the wildest frontier settlements in Kansas.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Smoky Hill Trail"
+    ]
+  },
+  {
+    "name": "Fort Wallace, KS",
+    "type": "trail_landmark",
+    "latitude": 38.9167,
+    "longitude": -101.5833,
+    "description": "The westernmost military post in Kansas, Fort Wallace bore the brunt of Cheyenne and Sioux raids along the Smoky Hill Trail during the Indian Wars of the 1860s. The surrounding countryside saw frequent engagements, including the Battle of Beecher Island in 1868.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Smoky Hill Trail"
+    ]
+  },
+  {
+    "name": "Cumberland, MD",
+    "type": "trail_landmark",
+    "latitude": 39.6528,
+    "longitude": -78.7625,
+    "description": "The starting point of the National Road, Cumberland was selected because it was the western terminus of the Chesapeake and Ohio Canal and the easternmost point where the Allegheny Mountains could be crossed feasibly by wagon. The city became a major trans-Appalachian transportation hub.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "National Road / Cumberland Road"
+    ]
+  },
+  {
+    "name": "Wheeling, WV",
+    "type": "trail_landmark",
+    "latitude": 40.064,
+    "longitude": -80.7209,
+    "description": "Wheeling was the western terminus of the first segment of the National Road and the primary gateway to the Ohio Valley and beyond. Its Ohio River crossing made it the busiest transshipment point on the Road, with goods and emigrants transferring between road and river transport.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "National Road / Cumberland Road",
+      "Zane's Trace"
+    ]
+  },
+  {
+    "name": "Zanesville, OH",
+    "type": "trail_landmark",
+    "latitude": 39.9401,
+    "longitude": -81.9946,
+    "description": "Founded by Ebenezer Zane at the Muskingum River crossing of his trace, Zanesville became an important town on both Zane's Trace and the National Road. It served as Ohio's state capital from 1810 to 1812 and was a major pottery manufacturing center.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "National Road / Cumberland Road",
+      "Zane's Trace"
+    ]
+  },
+  {
+    "name": "Columbus, OH",
+    "type": "trail_landmark",
+    "latitude": 39.9612,
+    "longitude": -82.9988,
+    "description": "Founded as Ohio's state capital in 1816 at the crossroads of the National Road and the Scioto River, Columbus was a planned governmental city that grew into the state's largest urban center. Its position on the National Road made it a major commercial and distribution hub.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "National Road / Cumberland Road"
+    ]
+  },
+  {
+    "name": "Indianapolis, IN",
+    "type": "trail_landmark",
+    "latitude": 39.7684,
+    "longitude": -86.1581,
+    "description": "Like Columbus, Indianapolis was a planned state capital founded at the intersection of the National Road and local waterways. The arrival of the National Road in 1827 transformed it from a tiny settlement into the commercial center of Indiana.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "National Road / Cumberland Road"
+    ]
+  },
+  {
+    "name": "Vandalia, IL",
+    "type": "trail_landmark",
+    "latitude": 38.9606,
+    "longitude": -89.144,
+    "description": "The western terminus of the National Road, Vandalia served as Illinois's state capital until 1837 when the capital moved to Springfield. A young Abraham Lincoln served in the legislature here and helped vote to move the capital to his home region.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "National Road / Cumberland Road"
+    ]
+  },
+  {
+    "name": "Fort Benton, MT",
+    "type": "trail_landmark",
+    "latitude": 47.8211,
+    "longitude": -110.6699,
+    "description": "The easternmost navigable point of the Missouri River, Fort Benton was the most inland port in North America, accessible to steamboats that traveled 3,400 miles from St. Louis. As the eastern terminus of the Mullan Road it was the gateway to Montana and the northern Rockies.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Mullan Road"
+    ]
+  },
+  {
+    "name": "Helena, MT",
+    "type": "trail_landmark",
+    "latitude": 46.5958,
+    "longitude": -112.0269,
+    "description": "Founded as Last Chance Gulch in 1864 after gold was discovered, Helena grew to become Montana's territorial and state capital. Its position on the Mullan Road made it accessible from both the Missouri River ports and the transcontinental railroad.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Mullan Road",
+      "Bozeman Road - Northern Extension"
+    ]
+  },
+  {
+    "name": "Missoula, MT",
+    "type": "trail_landmark",
+    "latitude": 46.8721,
+    "longitude": -113.9966,
+    "description": "Located in a strategic valley at the confluence of several rivers, Missoula was a Mullan Road waystation that grew into the commercial center of western Montana. The Hell Gate Canyon nearby was named for its use by raiding Blackfeet against the Flathead people.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Mullan Road"
+    ]
+  },
+  {
+    "name": "Coeur d'Alene, ID",
+    "type": "trail_landmark",
+    "latitude": 47.6788,
+    "longitude": -116.78,
+    "description": "Situated on the beautiful lake bearing its name, Coeur d'Alene was an important Mullan Road waystation between the Bitterroot Mountains and the Columbia Plateau. The area was the homeland of the Coeur d'Alene tribe, who had a tense encounter with Colonel Edward Steptoe in 1858.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Mullan Road"
+    ]
+  },
+  {
+    "name": "Walla Walla, WA",
+    "type": "trail_landmark",
+    "latitude": 46.0646,
+    "longitude": -118.343,
+    "description": "Near the site of Marcus Whitman's mission (destroyed in 1847), Walla Walla became the commercial center of the southeastern Columbia Plateau and the western terminus of the Mullan Road. It was one of the most important agricultural settlements in the Pacific Northwest.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Mullan Road",
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Abiquiu, NM",
+    "type": "trail_landmark",
+    "latitude": 36.2181,
+    "longitude": -106.3272,
+    "description": "Abiquiu was the northern New Mexico village that served as the main departure point for Old Spanish Trail expeditions heading toward Utah and California. The town's mixed Hispanic and Genizaro (re-settled captive) population made it a gateway between Spanish colonial and indigenous worlds.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "Moab, UT",
+    "type": "trail_landmark",
+    "latitude": 38.5733,
+    "longitude": -109.5498,
+    "description": "The Moab area, known as the Spanish Valley, was a key crossing point of the Colorado River on the Old Spanish Trail. The dramatic red rock canyons that now draw tourists worldwide were a formidable obstacle and landmark for the trail's mule caravans.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "Las Vegas, NV",
+    "type": "trail_landmark",
+    "latitude": 36.1699,
+    "longitude": -115.1398,
+    "description": "The 'Meadows' of Las Vegas were a crucial water and forage stop on the Old Spanish Trail through the Mojave Desert. John C. Fr\u00e9mont camped here in 1844 during his second expedition, and the site later became an important waystation for mail and emigrant routes.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "Cajon Pass, CA",
+    "type": "trail_landmark",
+    "latitude": 34.3,
+    "longitude": -117.47,
+    "description": "The mountain gateway through the San Bernardino Mountains, Cajon Pass was the entry point for the Old Spanish Trail and later the Mormon Road into southern California. Through this pass flowed not only trade goods but also the notorious 'horse thief trail' used by raiders who stole California mission horses.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "Nacogdoches, TX",
+    "type": "trail_landmark",
+    "latitude": 31.6035,
+    "longitude": -94.7256,
+    "description": "One of the oldest towns in Texas, Nacogdoches was a major waystation on El Camino Real de los Tejas and the main Spanish administrative center in eastern Texas. Its strategic location made it a recurring flashpoint in conflicts between Spain, France, and later the United States over Texas sovereignty.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "King's Highway / El Camino Real de los Tejas"
+    ]
+  },
+  {
+    "name": "San Augustine, TX",
+    "type": "trail_landmark",
+    "latitude": 31.5,
+    "longitude": -94.1,
+    "description": "San Augustine was an early Texas town on the El Camino Real and one of the oldest Anglo-American settlements in Texas, earned the nickname 'Gateway to Texas' for those approaching from Louisiana. The area saw fierce competition between Spanish and American settlers in the early 19th century.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "King's Highway / El Camino Real de los Tejas"
+    ]
+  },
+  {
+    "name": "Natchitoches, LA",
+    "type": "trail_landmark",
+    "latitude": 31.7543,
+    "longitude": -93.086,
+    "description": "The oldest permanent European settlement in the Louisiana Purchase territory, Natchitoches was established by the French in 1714 specifically as a trading post and counter to Spanish expansion into Texas. As the eastern terminus of El Camino Real it was the gateway between the French Mississippi Valley and Spanish Texas.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "King's Highway / El Camino Real de los Tejas",
+      "Natchez Trace"
+    ]
+  },
+  {
+    "name": "Wallowa Lake, OR",
+    "type": "trail_landmark",
+    "latitude": 45.2833,
+    "longitude": -117.2167,
+    "description": "The beautiful Wallowa Valley surrounding this glacial lake was the ancestral homeland of Chief Joseph's band of Nez Perce. The U.S. government's attempt to force the Nez Perce from this beloved 'Valley of the Winding Waters' to a smaller reservation triggered the Flight of 1877.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Nez Perce Trail - Flight of 1877"
+    ]
+  },
+  {
+    "name": "Lolo Pass, MT",
+    "type": "trail_landmark",
+    "latitude": 46.6333,
+    "longitude": -114.5833,
+    "description": "Lolo Pass across the Bitterroot Mountains was a traditional Nez Perce route to the buffalo hunting grounds of Montana, used by the tribe for centuries before Lewis and Clark crossed it in 1805. During the Flight of 1877, the Nez Perce traversed this rugged mountain pass ahead of General Howard's pursuing army.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Nez Perce Trail - Flight of 1877"
+    ]
+  },
+  {
+    "name": "Big Hole Battlefield, MT",
+    "type": "trail_landmark",
+    "latitude": 45.65,
+    "longitude": -113.65,
+    "description": "The Big Hole National Battlefield commemorates the surprise dawn attack by Colonel Gibbon's forces on the sleeping Nez Perce camp on August 9, 1877. Despite the ambush, the Nez Perce warriors rallied and drove off the soldiers, allowing the people to continue their flight, though with heavy casualties including many women and children.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Nez Perce Trail - Flight of 1877"
+    ]
+  },
+  {
+    "name": "Bear Paw Battlefield, MT",
+    "type": "trail_landmark",
+    "latitude": 48.0167,
+    "longitude": -109.75,
+    "description": "Just 40 miles from the safety of Canada, Chief Joseph and the Nez Perce were caught by General Nelson Miles at Snake Creek in October 1877. After a five-day siege in the autumn snow, Chief Joseph delivered his famous 'From where the sun now stands' surrender speech, ending one of the most brilliant military retreats in history.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Nez Perce Trail - Flight of 1877"
+    ]
+  },
+  {
+    "name": "Fort Smith, AR",
+    "type": "trail_landmark",
+    "latitude": 35.3859,
+    "longitude": -94.3985,
+    "description": "Established as a military post in 1817 on the Arkansas River at the edge of Indian Territory, Fort Smith was the jumping-off point for the Cherokee Trail. The federal court established here under Judge Isaac Parker, known as the 'Hanging Judge,' was responsible for law enforcement in Indian Territory.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Cherokee Trail"
+    ]
+  },
+  {
+    "name": "Fort Scott, KS",
+    "type": "trail_landmark",
+    "latitude": 37.839,
+    "longitude": -94.705,
+    "description": "An 1842 military post on the Military Road through Kansas, Fort Scott was an important waystation on the Cherokee Trail as it passed through eastern Kansas. The surrounding area was a violent battleground during the 'Bleeding Kansas' era as pro- and anti-slavery forces fought for control.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Cherokee Trail"
+    ]
+  },
+  {
+    "name": "Goose Lake, OR/CA",
+    "type": "trail_landmark",
+    "latitude": 41.98,
+    "longitude": -120.3,
+    "description": "Straddling the Oregon-California border, Goose Lake was a key landmark on the Applegate Trail where travelers could find water in the high desert. The lake's alkaline water and surrounding dry country made this a challenging stretch of the otherwise promising southern Oregon route.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.75,
+    "trails": [
+      "Applegate Trail"
+    ]
+  },
+  {
+    "name": "Klamath Falls, OR",
+    "type": "trail_landmark",
+    "latitude": 42.2249,
+    "longitude": -121.7817,
+    "description": "Near the ancestral territory of the Klamath and Modoc peoples, the Klamath Basin was a challenging section of the Applegate Trail that required emigrants to cross volcanic terrain and deal with hostile encounters. The area later became the scene of the Modoc War of 1872-73.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Applegate Trail"
+    ]
+  },
+  {
+    "name": "Jacksonville, OR",
+    "type": "trail_landmark",
+    "latitude": 42.3121,
+    "longitude": -122.9682,
+    "description": "The gold rush town of Jacksonville was the first major settlement reached by emigrants on the Applegate Trail after crossing the Siskiyou Mountains. Founded after a gold discovery in Rich Gulch in 1851, it served as the seat of Jackson County and a supply point for miners throughout southwestern Oregon.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Applegate Trail"
+    ]
+  },
+  {
+    "name": "Chillicothe, OH",
+    "type": "trail_landmark",
+    "latitude": 39.3331,
+    "longitude": -82.9824,
+    "description": "Chillicothe was the first and most important capital of the Northwest Territory and early Ohio, and sat on Zane's Trace at the Scioto River crossing. The area was the heart of the Shawnee nation and the site of multiple frontier conflicts before becoming Ohio's first state capital.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Zane's Trace"
+    ]
+  },
+  {
+    "name": "Maysville, KY",
+    "type": "trail_landmark",
+    "latitude": 38.6412,
+    "longitude": -83.7452,
+    "description": "Located on the Ohio River at the southern terminus of Zane's Trace, Maysville (originally Limestone) was the landing point for emigrants who floated down the Ohio and then struck inland through Kentucky. Daniel Boone operated a ferry crossing here late in his life.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Zane's Trace"
+    ]
+  },
+  {
+    "name": "Bandera, TX",
+    "type": "trail_landmark",
+    "latitude": 29.7274,
+    "longitude": -99.074,
+    "description": "The 'Cowboy Capital of the World,' Bandera was the southern starting point for the Western Trail, with the surrounding Hill Country ranches providing the longhorns that would be driven north to Dodge City. The Medina River crossing here was the first major water obstacle on the drive north.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Western Trail / Dodge City Trail"
+    ]
+  },
+  {
+    "name": "Dodge City, KS",
+    "type": "trail_landmark",
+    "latitude": 37.7528,
+    "longitude": -99.9659,
+    "description": "The most famous cattle town in American history, Dodge City received over five million longhorns during its cattle trading peak from 1875 to 1885. Lawmen like Wyatt Earp, Bat Masterson, and Doc Holliday kept order in the 'Queen of the Cowtowns' while the Long Branch Saloon and Front Street provided entertainment.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.95,
+    "trails": [
+      "Western Trail / Dodge City Trail",
+      "Chisholm Trail"
+    ]
+  },
+  {
+    "name": "Ogallala, NE",
+    "type": "trail_landmark",
+    "latitude": 41.1267,
+    "longitude": -101.7011,
+    "description": "Known as the 'Gomorrah of the Plains,' Ogallala was the northern terminus of the Western Trail and a shipping point for Texas cattle on the Union Pacific Railroad. Cowboys who survived the long trail drive celebrated in the town's numerous saloons before the long ride back to Texas.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Western Trail / Dodge City Trail"
+    ]
+  },
+  {
+    "name": "El Paso, TX",
+    "type": "trail_landmark",
+    "latitude": 31.7619,
+    "longitude": -106.485,
+    "description": "The Pass of the North at El Paso del Norte was one of the most strategic geographic and cultural crossroads in the Southwest, sitting on the Rio Grande at the boundary of modern Texas and New Mexico. The crossing here connected New Mexico to Mexico via the Camino Real and to California via the Gila Trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Gila Trail",
+      "Cooke's Wagon Road",
+      "El Camino Real de Tierra Adentro",
+      "Kearny Trail"
+    ]
+  },
+  {
+    "name": "Tucson, AZ",
+    "type": "trail_landmark",
+    "latitude": 32.2226,
+    "longitude": -110.9747,
+    "description": "Originally a Tohono O'odham village called Stjukshon, Tucson became a Spanish presidio in 1775 and remained part of Mexico until the Gadsden Purchase of 1853. As the only significant settlement between El Paso and the Colorado River, it was an essential resupply point for travelers on the Gila Trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Gila Trail",
+      "Cooke's Wagon Road"
+    ]
+  },
+  {
+    "name": "Yuma, AZ",
+    "type": "trail_landmark",
+    "latitude": 32.6927,
+    "longitude": -114.6277,
+    "description": "The Colorado River crossing at Yuma was the critical gateway between Arizona and California, one of the most difficult river crossings in the Southwest. The Yuma Crossing was controlled for centuries by the Quechan people, who charged tolls for passage; the U.S. Army established Fort Yuma here in 1850 to keep the crossing open.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Gila Trail",
+      "Cooke's Wagon Road"
+    ]
+  },
+  {
+    "name": "San Diego, CA",
+    "type": "trail_landmark",
+    "latitude": 32.7153,
+    "longitude": -117.161,
+    "description": "The destination of the southern overland routes, San Diego was California's oldest European settlement and a rapidly growing port after the Mexican-American War. The Mormon Battalion's arrival here in January 1847 completed the first wagon crossing from New Mexico to the Pacific Ocean.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Gila Trail",
+      "Cooke's Wagon Road"
+    ]
+  },
+  {
+    "name": "Donner Lake, CA",
+    "type": "trail_landmark",
+    "latitude": 39.32,
+    "longitude": -120.24,
+    "description": "The small lake at the foot of Donner Pass became forever associated with the tragedy of the Donner-Reed Party, which was stranded here from October 1846 to April 1847. The party's ordeal, in which 41 of 87 people perished and survivors resorted to cannibalism, became the most infamous episode in the history of overland emigration.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Donner Pass Route",
+      "Hastings Cutoff"
+    ]
+  },
+  {
+    "name": "Salt Lake Desert, UT",
+    "type": "trail_landmark",
+    "latitude": 40.7608,
+    "longitude": -113.0,
+    "description": "The Great Salt Lake Desert was the most treacherous section of the Hastings Cutoff, a 80-mile crossing with no water or forage that the Donner-Reed Party underestimated disastrously. The party spent five days crossing what Hastings had claimed could be done in two, losing most of their livestock and abandoning wagons.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.75,
+    "trails": [
+      "Hastings Cutoff"
+    ]
+  },
+  {
+    "name": "Pacific Springs, WY",
+    "type": "trail_landmark",
+    "latitude": 42.5,
+    "longitude": -109.2,
+    "description": "Pacific Springs, just west of South Pass, was the first water emigrants found on the Pacific slope of the Continental Divide and the departure point for multiple cutoffs including the Lander Road. The cold, clear springs provided critical relief after the dry crossing of South Pass.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Lander Road / Lander Cutoff",
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Hollenberg Station, KS",
+    "type": "trail_landmark",
+    "latitude": 39.9,
+    "longitude": -97.0,
+    "description": "The Hollenberg Pony Express Station in northeastern Kansas is the only known unaltered original Pony Express station still standing in its original location. Built by Gerat Hollenberg in 1857 as a ranch and trading post, it served as a home station on the Missouri-Kansas stretch of the route.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Taos, NM",
+    "type": "trail_landmark",
+    "latitude": 36.4072,
+    "longitude": -105.5731,
+    "description": "Taos was the mountain men's winter headquarters and social center, where trappers like Kit Carson, Jim Bridger, and Ceran St. Vrain gathered each year. The Taos Rebellion of 1847 against American occupation killed the first American territorial governor of New Mexico.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Trapper's Trail / Cache Valley Trail",
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "Fort Leavenworth, KS",
+    "type": "trail_landmark",
+    "latitude": 39.36,
+    "longitude": -94.91,
+    "description": "Established in 1827 as the oldest active U.S. Army post west of the Mississippi River, Fort Leavenworth was the staging point for Kearny's Army of the West in 1846 and a major supply depot for military operations throughout the West. It guarded the Missouri River crossing that began the overland routes to Santa Fe and the Pacific.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.9,
+    "trails": [
+      "Kearny Trail",
+      "Oregon Trail"
+    ]
+  },
+  {
+    "name": "Horsehead Crossing, TX",
+    "type": "trail_landmark",
+    "latitude": 31.5,
+    "longitude": -102.4,
+    "description": "The Horsehead Crossing of the Pecos River was named for the horse skulls left by animals that drank greedily of the alkali-tainted water and died. Charles Goodnight chose this remote and unforgiving crossing as the route for his first cattle drive to avoid Comanche raiders on the Llano Estacado.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Goodnight-Loving Trail"
+    ]
+  },
+  {
+    "name": "Pecos, TX",
+    "type": "trail_landmark",
+    "latitude": 31.42,
+    "longitude": -103.49,
+    "description": "The crossing of the Pecos River was a critical waypoint on the Goodnight-Loving Trail, where the cattle could be rested after the brutal waterless stretch from the Colorado River. The Pecos River valley provided the water and forage corridor that made the trail feasible.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Goodnight-Loving Trail"
+    ]
+  },
+  {
+    "name": "Raton, NM",
+    "type": "trail_landmark",
+    "latitude": 36.9,
+    "longitude": -104.44,
+    "description": "The town at the foot of Raton Pass was a major waystation on both the Goodnight-Loving Trail and the Mountain Branch of the Santa Fe Trail. Dick Wootton's toll road through the pass was replaced by the Atchison, Topeka and Santa Fe Railway in 1879, and Raton grew as a railroad coal mining town.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Goodnight-Loving Trail",
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Ash Hollow, NE",
+    "type": "trail_landmark",
+    "latitude": 41.85,
+    "longitude": -102.3,
+    "description": "Ash Hollow, where the north and south forks of the Platte River diverged, was a famous resting spot on the Oregon and California Trails, with fresh water, wood, and grass after the dry crossing of the Nebraska plains. A violent confrontation here in 1855 between U.S. troops and Brul\u00e9 Lakota people marked the beginning of the great Sioux wars.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "South Pass City, WY",
+    "type": "trail_landmark",
+    "latitude": 42.5069,
+    "longitude": -108.7988,
+    "description": "A gold rush town established near South Pass in 1867, South Pass City was briefly an important Wyoming Territory settlement and the site where Esther Hobart Morris championed women's suffrage legislation, making Wyoming the first territory to grant women the right to vote in 1869.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Scotts Bluff Pass, NE",
+    "type": "trail_landmark",
+    "latitude": 41.82,
+    "longitude": -103.69,
+    "description": "Mitchell Pass through the Scotts Bluff formation was the narrow gap through which the Oregon Trail was routed after a better route was found in the 1850s. Deep wagon ruts are still visible in the soft soil on either side of the pass, preserved within Scotts Bluff National Monument.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Alcove Spring, KS",
+    "type": "trail_landmark",
+    "latitude": 39.7,
+    "longitude": -96.62,
+    "description": "Alcove Spring was a beautiful natural spring near the Big Blue River crossing on the Oregon and Mormon Trails. Sarah Keyes, an elderly member of the Donner-Reed Party, died and was buried here in May 1846, the first of many who would perish before the party reached California.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "Mormon Trail"
+    ]
+  },
+  {
+    "name": "Big Blue River Crossing, KS",
+    "type": "trail_landmark",
+    "latitude": 39.67,
+    "longitude": -96.65,
+    "description": "The Big Blue River crossing was the first major river obstacle on the Oregon and California Trails, sometimes requiring emigrants to use improvised ferries or rafts when the river was in flood. The marshy bottomlands here delayed many wagon trains during the critical spring departure season.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail"
+    ]
+  },
+  {
+    "name": "Courthouse Rock, NE",
+    "type": "trail_landmark",
+    "latitude": 41.58,
+    "longitude": -103.08,
+    "description": "Courthouse Rock and adjacent Jail Rock were dramatic buttes rising from the North Platte valley that served as trail landmarks for Oregon and California-bound emigrants. Many emigrants noted them in their diaries, often trying and failing to estimate their actual distance from the trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail",
+      "California Trail"
+    ]
+  },
+  {
+    "name": "Platte River Road, NE",
+    "type": "trail_landmark",
+    "latitude": 41.1,
+    "longitude": -101.0,
+    "description": "The Platte River Road along the shallow, braided Platte River was the highway of the Great Plains migration, carrying the overwhelming majority of westbound emigrants for three decades. The river valley provided water, grass, and a relatively level pathway across the seemingly endless plains.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Fort McPherson, NE",
+    "type": "trail_landmark",
+    "latitude": 41.05,
+    "longitude": -100.58,
+    "description": "Established in 1863 to protect the Platte River emigrant road and the Pony Express, Fort McPherson was an important base for campaigns against Sioux and Cheyenne raiders during the 1860s. Buffalo Bill Cody served as a scout here and the fort cemetery contains many victims of the Indian Wars.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Rock Creek Station, NE",
+    "type": "trail_landmark",
+    "latitude": 40.15,
+    "longitude": -97.0,
+    "description": "Rock Creek Station was a Pony Express relay station and Oregon Trail waystation in southeastern Nebraska that became famous as the site where 'Wild Bill' Hickok killed David McCanles in 1861 in a still-disputed confrontation. The station's well-worn ruts show the heavy traffic of overland emigration.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Emigrant Gap, CA",
+    "type": "trail_landmark",
+    "latitude": 39.28,
+    "longitude": -120.67,
+    "description": "Emigrant Gap was the passage into the Sierra Nevada foothills used by California Trail emigrants before they tackled the final ascent to Donner or Carson Pass. The dramatic view from the gap looking west into the Sacramento Valley was the first sight of California's promised golden lands for many weary travelers.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "California Trail",
+      "Donner Pass Route"
+    ]
+  },
+  {
+    "name": "Johnson's Ranch, CA",
+    "type": "trail_landmark",
+    "latitude": 39.15,
+    "longitude": -121.2,
+    "description": "Johnson's Ranch on Bear Creek was the first settlement reached by emigrants descending from the Sierra Nevada into the Sacramento Valley, and the staging point for the relief parties sent up to rescue the stranded Donner Party. William Johnson's hospitality to exhausted emigrants made his ranch one of the most welcome sights on the entire overland route.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.75,
+    "trails": [
+      "California Trail",
+      "Donner Pass Route"
+    ]
+  },
+  {
+    "name": "Rabbit Ears Pass, CO",
+    "type": "trail_landmark",
+    "latitude": 40.38,
+    "longitude": -106.6,
+    "description": "Named for the distinctive twin peaks visible for miles, Rabbit Ears Pass was a landmark crossing of the Park Range used by trappers and the Cherokee Trail. The pass provided a route through the mountains between the North Park and the Yampa River valley.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.75,
+    "trails": [
+      "Cherokee Trail",
+      "Trapper's Trail / Cache Valley Trail"
+    ]
+  },
+  {
+    "name": "Pawnee Rock, KS",
+    "type": "trail_landmark",
+    "latitude": 38.27,
+    "longitude": -98.98,
+    "description": "Pawnee Rock was one of the most distinctive landmarks on the Santa Fe Trail, a large sandstone outcropping that rose above the flat Kansas plains and served as a lookout point and inscription rock. Many emigrant parties carved their names into the soft stone, and it was a frequent campsite and reported site of attacks by Pawnee warriors.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Point of Rocks, NM",
+    "type": "trail_landmark",
+    "latitude": 36.75,
+    "longitude": -104.0,
+    "description": "Point of Rocks in the Canadian River valley was an important water source and camping spot on the Santa Fe Trail's Cimarron Cutoff, providing a rare opportunity for rest in the dry country. The dramatic rock formation was also used as an ambush site by Jicarilla Apache and Comanche warriors who preyed on the trail's commercial traffic.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Santa Fe Trail"
+    ]
+  },
+  {
+    "name": "Jornada del Muerto, NM",
+    "type": "trail_landmark",
+    "latitude": 33.0,
+    "longitude": -107.0,
+    "description": "The 90-mile 'Journey of the Dead Man' was the most fearsome section of El Camino Real de Tierra Adentro, a waterless desert stretch that killed many travelers who attempted to cross it without adequate preparation. The O\u00f1ate colonists first crossed it in 1598 and subsequent travelers both dreaded and narrated the crossing for centuries.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "El Camino Real de Tierra Adentro"
+    ]
+  },
+  {
+    "name": "Mesilla, NM",
+    "type": "trail_landmark",
+    "latitude": 32.2724,
+    "longitude": -106.803,
+    "description": "The Mexican village of Mesilla was transferred to the United States as part of the Gadsden Purchase of 1853 and became an important hub on the southern overland routes. Billy the Kid was tried and convicted here in 1881, and the historic plaza still preserves its 19th-century character.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "El Camino Real de Tierra Adentro",
+      "Gila Trail"
+    ]
+  },
+  {
+    "name": "Fort Craig, NM",
+    "type": "trail_landmark",
+    "latitude": 33.52,
+    "longitude": -107.18,
+    "description": "Established in 1854 near the northern end of the Jornada del Muerto, Fort Craig was the scene of the largest Civil War battle in the New Mexico Territory at Valverde in 1862, where Confederate forces under General Sibley attempted to capture New Mexico as part of the Confederacy's western strategy.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "El Camino Real de Tierra Adentro"
+    ]
+  },
+  {
+    "name": "Fort Defiance, AZ",
+    "type": "trail_landmark",
+    "latitude": 35.75,
+    "longitude": -109.06,
+    "description": "Established in 1851 as the first permanent U.S. Army post in Arizona, Fort Defiance was built in the heart of Navajo territory after the Mexican-American War. It became the administrative center for Navajo affairs and the starting point of the Long Walk of 1864 that forced the Navajo people to Bosque Redondo.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.75,
+    "trails": [
+      "Old Spanish Trail"
+    ]
+  },
+  {
+    "name": "South Platte River Crossing, CO",
+    "type": "trail_landmark",
+    "latitude": 40.67,
+    "longitude": -103.2,
+    "description": "The crossing of the South Platte River was one of the most challenging early obstacles on the overland trails, with the wide, shallow river hiding quicksand and unstable footing for wagons and livestock. Emigrants at this crossing had to decide whether to continue straight north or angle westward along the river.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Fetterman Massacre Site, WY",
+    "type": "trail_landmark",
+    "latitude": 44.51,
+    "longitude": -106.92,
+    "description": "The site of the Fetterman Fight on December 21, 1866, where Lakota, Cheyenne, and Arapaho warriors under Crazy Horse and High Back Bone lured Lt. Col. William Fetterman and 80 soldiers into an ambush and killed them all. The disaster led directly to the Fort Laramie Treaty of 1868 and U.S. abandonment of the Bozeman Trail forts.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Bozeman Trail"
+    ]
+  },
+  {
+    "name": "Crossing of the Platte, WY",
+    "type": "trail_landmark",
+    "latitude": 42.85,
+    "longitude": -106.32,
+    "description": "The upper crossing of the North Platte River at the site of present-day Casper, Wyoming was a critical junction where emigrants crossed to the south bank or paid for ferry service. The Mormon Ferry established here in 1847 was one of the first businesses operated by Latter-day Saints along the trail.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.8,
+    "trails": [
+      "Oregon Trail",
+      "California Trail",
+      "Mormon Trail",
+      "Pony Express Route"
+    ]
+  },
+  {
+    "name": "Whitman Mission, WA",
+    "type": "trail_landmark",
+    "latitude": 46.04,
+    "longitude": -118.47,
+    "description": "Marcus and Narcissa Whitman's Waiilatpu Mission near Walla Walla was an important resupply point for Oregon Trail emigrants from 1836 until the Cayuse attacked and killed the Whitmans and eleven others in 1847. The Whitman Massacre triggered the Cayuse War and accelerated calls for U.S. territorial government in Oregon.",
+    "source": "seed:historic_trail_landmarks",
+    "confidence": 0.85,
+    "trails": [
+      "Oregon Trail"
+    ]
+  }
+]
