@@ -104,13 +104,13 @@ FEATURE_CLASS_MAP: Dict[str, str] = {
     "Crossing": "ferry",
 }
 
-# GNIS column names
-_COL_NAME = "FEATURE_NAME"
-_COL_CLASS = "FEATURE_CLASS"
-_COL_STATE = "STATE_ALPHA"
-_COL_LAT = "PRIM_LAT_DEC"
-_COL_LON = "PRIM_LONG_DEC"
-_COL_COUNTY = "COUNTY_NAME"
+# GNIS column name candidates (new AllNames file may differ from old NationalFile)
+_GNIS_NAME_CANDIDATES = ["FEATURE_NAME", "Feature_Name", "feature_name", "NAME", "Name", "GNIS_Name"]
+_GNIS_CLASS_CANDIDATES = ["FEATURE_CLASS", "Feature_Class", "feature_class", "CLASS", "Class"]
+_GNIS_STATE_CANDIDATES = ["STATE_ALPHA", "State_Alpha", "state_alpha", "STATE", "State"]
+_GNIS_LAT_CANDIDATES = ["PRIM_LAT_DEC", "Prim_Lat_Dec", "prim_lat_dec", "LATITUDE", "Latitude", "LAT", "Lat"]
+_GNIS_LON_CANDIDATES = ["PRIM_LONG_DEC", "Prim_Long_Dec", "prim_long_dec", "LONGITUDE", "Longitude", "LON", "Lon", "LONG", "Long"]
+_GNIS_COUNTY_CANDIDATES = ["COUNTY_NAME", "County_Name", "county_name", "COUNTY", "County"]
 
 BATCH_SIZE = 500
 
@@ -124,6 +124,33 @@ _LOA_USER_AGENT = (
 
 # Ghosttowns.com base
 _GT_BASE = "https://www.ghosttowns.com"
+
+# Known non-ghost-town strings from Legends of America nav/sidebar
+_LOA_JUNK_NAMES: frozenset = frozenset({
+    "about us", "about us/more", "social media", "travel blog",
+    "resources & credits", "resources", "credits", "contact",
+    "home", "privacy policy", "disclaimer", "search",
+    "20th century history", "discovery and exploration",
+    "exploration of america", "overland trails", "spanish exploration",
+    "westward expansion", "early america", "historic people",
+    "african americans", "cowboys & trail blazers", "gunfighters",
+    "heroes and patriots", "native americans", "presidents of the united states",
+    "heroes and leaders", "indian wars", "myths & legends",
+    "notable native americans", "old west", "feuds & range wars",
+    "american automobile history", "byways & historic trails",
+    "the railroad crosses america", "stagecoaches of the american west",
+})
+
+
+def _find_gnis_col(fieldnames, candidates):
+    """Find the first matching column name (case-insensitive) from candidates."""
+    if not fieldnames:
+        return None
+    lower_map = {f.lower().strip(): f for f in fieldnames}
+    for c in candidates:
+        if c.lower() in lower_map:
+            return lower_map[c.lower()]
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -173,6 +200,17 @@ def _extract_pipe_file(zip_bytes: bytes) -> io.TextIOWrapper:
     return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8", errors="replace")
 
 
+def _detect_gnis_delimiter(stream: io.TextIOWrapper) -> str:
+    """Peek at the first line to detect the delimiter (|, tab, or comma)."""
+    first_line = stream.readline()
+    stream.seek(0)
+    if "|" in first_line:
+        return "|"
+    if "\t" in first_line:
+        return "\t"
+    return ","
+
+
 def _parse_gnis_records(
     stream: io.TextIOWrapper,
     state_filter: Optional[str] = None,
@@ -184,11 +222,28 @@ def _parse_gnis_records(
     Filters for feature classes defined in ``FEATURE_CLASS_MAP`` and excludes
     mines (handled by USminesscraper).
     """
-    reader = csv.DictReader(stream, delimiter="|")
+    delimiter = _detect_gnis_delimiter(stream)
+    reader = csv.DictReader(stream, delimiter=delimiter)
+    logger.info("GNIS columns found: %s", reader.fieldnames)
+
+    col_name = _find_gnis_col(reader.fieldnames, _GNIS_NAME_CANDIDATES)
+    col_class = _find_gnis_col(reader.fieldnames, _GNIS_CLASS_CANDIDATES)
+    col_state = _find_gnis_col(reader.fieldnames, _GNIS_STATE_CANDIDATES)
+    col_lat = _find_gnis_col(reader.fieldnames, _GNIS_LAT_CANDIDATES)
+    col_lon = _find_gnis_col(reader.fieldnames, _GNIS_LON_CANDIDATES)
+    col_county = _find_gnis_col(reader.fieldnames, _GNIS_COUNTY_CANDIDATES)
+
+    if not all([col_name, col_class, col_lat, col_lon]):
+        logger.warning(
+            "GNIS: could not locate required columns in header — skipping. "
+            "Available fields: %s", reader.fieldnames
+        )
+        return
+
     accepted = 0
 
     for row in reader:
-        feature_class = (row.get(_COL_CLASS) or "").strip()
+        feature_class = (row.get(col_class) or "").strip()
 
         # Skip mines — handled by USminesscraper
         if feature_class == "Mine":
@@ -199,25 +254,25 @@ def _parse_gnis_records(
             continue
 
         if state_filter:
-            state = (row.get(_COL_STATE) or "").strip().upper()
+            state = (row.get(col_state) or "").strip().upper() if col_state else ""
             if state != state_filter.upper():
                 continue
 
         try:
-            lat = float(row[_COL_LAT])
-            lon = float(row[_COL_LON])
+            lat = float(row[col_lat])
+            lon = float(row[col_lon])
         except (ValueError, KeyError):
             continue
 
         if lat == 0.0 and lon == 0.0:
             continue
 
-        name = (row.get(_COL_NAME) or "").strip()
+        name = (row.get(col_name) or "").strip()
         if not name:
             continue
 
-        state = (row.get(_COL_STATE) or "").strip()
-        county = (row.get(_COL_COUNTY) or "").strip()
+        state = (row.get(col_state) or "").strip() if col_state else ""
+        county = (row.get(col_county) or "").strip() if col_county else ""
 
         yield name, type_str, lat, lon, state, county
         accepted += 1
@@ -280,12 +335,16 @@ async def _scrape_legends_of_america(
                         name_tag = li.find(["b", "strong", "a"])
                         if name_tag:
                             town_name = name_tag.get_text(strip=True)
-                            if len(town_name) > 2 and len(town_name) < 100:
-                                records.append({
-                                    "name": town_name,
-                                    "description": text[:500],
-                                    "source": "legends_of_america",
-                                })
+                            # Filter out nav/sidebar junk
+                            if len(town_name) > 2 and len(town_name) <= 60:
+                                if "/" not in town_name:
+                                    if town_name.lower().strip() not in _LOA_JUNK_NAMES:
+                                        if any(c.isalpha() for c in town_name):
+                                            records.append({
+                                                "name": town_name,
+                                                "description": text[:500],
+                                                "source": "legends_of_america",
+                                            })
             except (httpx.HTTPError, Exception) as exc:
                 logger.debug("Failed to scrape %s: %s", state_url, exc)
                 continue

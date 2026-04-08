@@ -6,8 +6,6 @@ All routes are mounted under the ``/api/v1`` prefix defined in
 session (``db``) and, where appropriate, calls the scoring engine.
 """
 
-from __future__ import annotations
-
 import logging
 from collections import defaultdict
 from typing import Any, Dict, List, Optional
