@@ -97,6 +97,37 @@ _EXCLUDED_NAMES_LOWER = frozenset({
     "randsburg",
 })
 
+# Keywords in a place name that indicate it is NOT a ghost town and should be
+# excluded even when sourced from the Google My Maps data.
+_NON_GHOST_TOWN_NAME_KEYWORDS = frozenset({
+    # Archaeological / prehistoric
+    "mound", "cliff dwelling", "cliff house", "cliff palace", "balcony house",
+    "archaeological", "fossil", "quarry", "petroglyph", "pictograph",
+    "burial ground", "burial mound", "heritage site",
+    "zona arque",  # Spanish prefix of "zona arqueológica" (archaeological zone)
+    "cerro de ",   # Spanish: "cerro de <name>" = archaeological hilltop site (not a ghost town)
+    # Historic sites that are not towns
+    "state park", "national park", "national monument", "national historic",
+    "state historic", "historic park", "historic site",
+    "interpretation centre", "interpretive center", "interpretive centre",
+    "d'interprétation", "museum",
+    # Structures / landmarks
+    "castle", "tower", "station", "bridge", "viaduct", "lighthouse",
+    "power plant", "dam",
+    # Settlements that are not towns
+    "colony", "mounds", "pueblo", "cliff dwellings",
+    # Attractions / infrastructure
+    "amusement park", "theme park", "resort",
+    "prison", "penitentiary", "reformatory",
+    "island",
+    # Archaeological site variants
+    " site", "site,",
+    # Explicit nature features
+    "cave of", "fossil bed",
+    # Misc
+    "trail", "submit a",
+})
+
 # Coordinates for the fallback seed dataset — truly abandoned ghost towns with
 # zero permanent population.  Data compiled from public records, Wikipedia,
 # National Register of Historic Places, and state park documentation.
@@ -395,7 +426,8 @@ def is_true_ghost_town(name: str, description: str = "") -> bool:
     (zero or near-zero permanent population, genuinely abandoned).
 
     Excludes towns known to have active tourism industries, current residents,
-    or commercial businesses.
+    or commercial businesses. Also excludes archaeological sites, mounds,
+    cliff dwellings, and other non-town entries that may appear in the map.
     """
     name_lower = name.lower().strip()
 
@@ -406,6 +438,11 @@ def is_true_ghost_town(name: str, description: str = "") -> bool:
     # Fuzzy exclusion: skip if the name starts with or contains an excluded town
     for excl in _EXCLUDED_NAMES_LOWER:
         if name_lower == excl or name_lower.startswith(excl + ",") or name_lower.startswith(excl + " "):
+            return False
+
+    # Exclude non-ghost-town place types by name keywords
+    for kw in _NON_GHOST_TOWN_NAME_KEYWORDS:
+        if kw in name_lower:
             return False
 
     # Keyword-based exclusion from description
@@ -444,50 +481,49 @@ def _fetch_viewer(mid: str, client: httpx.Client) -> str:
 
 
 def _parse_viewer_html(html: str) -> List[Dict[str, Any]]:
-    """Extract placemarks from Google My Maps viewer HTML."""
-    text = html.replace(r"\x22", '"').replace(r"\x27", "'")
-    text = text.replace(r"\x5b", "[").replace(r"\x5d", "]")
-    text = text.replace(r"\x3d", "=").replace(r"\x26", "&")
+    """
+    Extract placemarks from Google My Maps viewer HTML.
 
-    coord_pattern = re.compile(
-        r'\[null,null,(-?\d{1,3}\.\d{4,}),(-?\d{1,3}\.\d{4,})\]'
+    The viewer embeds JSON-like data where each placemark follows this pattern
+    (with double-quotes escaped as \\"):
+      [[null,[lat,lon]],"0",null,"STYLE_ID",[lat,lon],[0,0],"HEX_ID"],[["Name"]]]
+
+    We unescape the JSON string quoting first, then use targeted regex.
+    """
+    # Unescape the \"  → "  sequences that Google uses inside JS string literals
+    text = html.replace('\\"', '"')
+
+    # Pattern: [null,[lat,lon]],"0",null,"STYLE_ID"  then within ~150 chars: [["Name"]]
+    coord_pat = re.compile(
+        r'\[null,\[(-?\d+\.?\d*),(-?\d+\.?\d*)\]\],"0",null,"[^"]+"'
     )
-    name_pattern = re.compile(r'"([^"]{2,120})"')
-    desc_pattern = re.compile(r'"([^"]{5,300})"')
+    name_pat = re.compile(r'\[\["([^"]+)"\]\]')
 
     results: List[Dict[str, Any]] = []
-    for m in coord_pattern.finditer(text):
+    for m in coord_pat.finditer(text):
         lat = float(m.group(1))
         lon = float(m.group(2))
         if not (-90 <= lat <= 90 and -180 <= lon <= 180):
             continue
 
-        before = text[max(0, m.start() - 500): m.start()]
-        name = ""
-        for candidate in reversed(name_pattern.findall(before)):
-            if re.search(r'https?://', candidate):
-                continue
-            if re.search(r'\\u[0-9a-fA-F]{4}', candidate):
-                continue
-            if len(candidate.split()) > 10:
-                continue
-            name = candidate
-            break
+        # Name appears immediately after the placemark metadata block
+        after = text[m.end(): m.end() + 200]
+        nm = name_pat.search(after)
+        if not nm:
+            continue
 
-        after = text[m.end(): m.end() + 1000]
-        description = ""
-        for candidate in desc_pattern.findall(after):
-            if re.search(r'https?://', candidate):
-                continue
-            if candidate == name:
-                continue
-            description = candidate
-            break
+        name = nm.group(1)
+        # Decode unicode escape sequences (e.g. \u0027 -> ')
+        # The sequence encodes to latin-1 bytes then decodes as utf-8 because
+        # unicode_escape produces latin-1 byte strings for non-ASCII code points.
+        try:
+            name = name.encode("utf-8").decode("unicode_escape").encode("latin-1").decode("utf-8")
+        except (UnicodeDecodeError, UnicodeEncodeError):
+            pass
 
-        if name:
-            results.append({"name": name, "latitude": lat, "longitude": lon, "description": description})
+        results.append({"name": name, "latitude": lat, "longitude": lon, "description": ""})
 
-    # Deduplicate
+    # Deduplicate by (name, lat, lon)
     seen: set[tuple[str, float, float]] = set()
     deduped: List[Dict[str, Any]] = []
     for entry in results:
@@ -503,17 +539,45 @@ def scrape_google_my_maps(mid: str) -> Optional[List[Dict[str, Any]]]:
     """
     Try to scrape the FRRandP Google My Maps viewer page.
 
+    The map ("Ghost Towns, Abandoned Places & Historic Sites") contains a mix
+    of ghost towns, archaeological sites, abandoned structures, and other POIs.
+    This function filters the raw results to North American coordinates only
+    before returning, leaving final ghost-town filtering to ``apply_ghost_town_filter``.
+
     Returns a list of raw dicts or None if the scrape fails.
     """
     try:
         with httpx.Client(follow_redirects=True, timeout=_REQUEST_TIMEOUT) as client:
             html = _fetch_viewer(mid, client)
-        results = _parse_viewer_html(html)
-        if results:
-            logger.info("Google My Maps: extracted %d pins.", len(results))
-            return results
-        logger.warning("Google My Maps: page loaded but no pins found.")
-        return None
+        raw = _parse_viewer_html(html)
+        if not raw:
+            logger.warning("Google My Maps: page loaded but no pins found.")
+            return None
+
+        # Pre-filter: keep only US territories and Canada.
+        # The map also contains entries from Mexico, Central America, Caribbean,
+        # and other countries; those are excluded here.
+        #
+        # Accepted regions:
+        #   - Continental US + Canada: lat 24-83, lon -52 to -168
+        #   - Hawaii (US): lat 18-23, lon -154 to -162
+        #   - Puerto Rico (US): lat 17-19, lon -65 to -68
+        def _in_us_or_canada(e: dict) -> bool:
+            lat, lon = e["latitude"], e["longitude"]
+            if 24 <= lat <= 83 and -168 <= lon <= -52:
+                return True
+            if 18 <= lat <= 23 and -162 <= lon <= -154:  # Hawaii
+                return True
+            if 17 <= lat <= 19 and -68 <= lon <= -65:    # Puerto Rico
+                return True
+            return False
+
+        na = [e for e in raw if _in_us_or_canada(e)]
+        logger.info(
+            "Google My Maps: extracted %d pins (%d in US/Canada).",
+            len(raw), len(na),
+        )
+        return na if na else None
     except Exception as exc:
         logger.warning("Google My Maps scrape failed: %s", exc)
         return None
