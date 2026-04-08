@@ -126,7 +126,7 @@ _LOA_USER_AGENT = (
 _GT_BASE = "https://www.ghosttowns.com"
 
 # Known non-ghost-town strings from Legends of America nav/sidebar
-_LOA_JUNK_NAMES: frozenset = frozenset({
+_LOA_JUNK_NAMES: frozenset[str] = frozenset({
     "about us", "about us/more", "social media", "travel blog",
     "resources & credits", "resources", "credits", "contact",
     "home", "privacy policy", "disclaimer", "search",
@@ -336,15 +336,18 @@ async def _scrape_legends_of_america(
                         if name_tag:
                             town_name = name_tag.get_text(strip=True)
                             # Filter out nav/sidebar junk
-                            if len(town_name) > 2 and len(town_name) <= 60:
-                                if "/" not in town_name:
-                                    if town_name.lower().strip() not in _LOA_JUNK_NAMES:
-                                        if any(c.isalpha() for c in town_name):
-                                            records.append({
-                                                "name": town_name,
-                                                "description": text[:500],
-                                                "source": "legends_of_america",
-                                            })
+                            if (
+                                len(town_name) > 2
+                                and len(town_name) <= 60
+                                and "/" not in town_name
+                                and town_name.lower().strip() not in _LOA_JUNK_NAMES
+                                and any(c.isalpha() for c in town_name)
+                            ):
+                                records.append({
+                                    "name": town_name,
+                                    "description": text[:500],
+                                    "source": "legends_of_america",
+                                })
             except (httpx.HTTPError, Exception) as exc:
                 logger.debug("Failed to scrape %s: %s", state_url, exc)
                 continue
