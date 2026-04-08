@@ -3830,7 +3830,8 @@
     "latitude": 38.436111,
     "longitude": -105.887222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Calcite was a small Colorado quarrying community in Garfield County, established around deposits of calcite or limestone used for industrial purposes such as flux in smelting operations or road-building material during the mining era of the late 19th and early 20th centuries. The community served the quarry workers and their families as a company camp before the deposits were exhausted or transportation changes made the operation uneconomical. Today the Calcite area is likely BLM or Forest Service land in western Colorado, with quarry workings and camp ruins still potentially visible in the terrain. Old quarry sites and camp areas in the region may yield early 20th-century industrial hardware, quarry tools, and domestic artifacts."
   },
   {
     "name": "Calumet, CO",
@@ -3838,7 +3839,8 @@
     "latitude": 37.692789,
     "longitude": -104.859711,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Calumet was a small Colorado mining community, likely associated with copper or coal mining given the name's strong association with the Calumet copper district of Michigan \u2014 a name that miners and promoters applied to other mining areas across the West in hopes of replicating Michigan's legendary copper wealth. The camp served surrounding mining interests during the late 19th or early 20th century before ore depletion or economic pressures ended operations. Today the Calumet site in Colorado is likely on public lands or private mining claim land with mine shaft collars and tailings piles as the most visible remnants. Old mine dumps and camp areas near the historic Calumet location can yield mining hardware, blasting equipment fragments, and period domestic items."
   },
   {
     "name": "Capitol City, CO",
@@ -3846,7 +3848,8 @@
     "latitude": 38.006352,
     "longitude": -107.467332,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Capitol City was an audaciously named silver mining camp in Hinsdale County, Colorado, situated in the high alpine terrain of the San Juan Mountains along Henson Creek at over 10,000 feet elevation, booming in the 1870s\u20131880s when silver ore discoveries led founder George Lee to christen it with a name reflecting his grand ambitions to make it the state capital. At its peak Capitol City had a smelter, several stores, a post office, and over 400 residents, with Lee personally constructing a brick governor's mansion anticipating the community's elevation to political prominence that never came. The silver crash of 1893 ended the dream abruptly, and the population scattered, leaving the governor's mansion and other structures to the elements. Today the Capitol City site is accessible via the Alpine Loop scenic byway north of Lake City, with foundation ruins and mine workings visible in the spectacular mountain setting."
   },
   {
     "name": "Caribou, CO",
@@ -3854,7 +3857,8 @@
     "latitude": 39.980833,
     "longitude": -105.578611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Caribou was a significant silver mining camp in Boulder County, Colorado, established in 1869 after rich silver lodes were discovered in the mountains west of Nederland at 10,000 feet elevation, growing rapidly to over 3,000 residents during the 1870s\u20131880s with multiple stamp mills, a hotel, saloons, and a school serving the high-altitude mining community. Caribou silver went to some of the most sophisticated Colorado refineries, and the camp attracted Dutch investment that funded major mine operations throughout the boom decade. A series of devastating fires swept through the wooden buildings in the 1870s\u20131880s, and the silver crash of 1893 ended what remained of the community. Today the Caribou townsite is on Boulder County open space land and accessible on foot from Nederland, with foundation ruins and mine workings scattered across the alpine tundra above treeline."
   },
   {
     "name": "Petersburg, IL",
@@ -3862,7 +3866,8 @@
     "latitude": 41.274383,
     "longitude": -87.568378,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Petersburg was a small community in Illinois, distinct from the county seat of Menard County of the same name, likely a minor crossroads farming settlement or rural trading post established in the 19th-century agricultural settlement of the Illinois prairie that was eventually absorbed into or overshadowed by larger nearby communities. The community served surrounding farm families with a church and country store at its peak before economic consolidation drew its population to better-served towns. Today the smaller Petersburg location is agricultural land with no surviving commercial infrastructure. Old church sites and farmstead perimeters near the historic community location may yield 19th-century coins, domestic items, and farm hardware."
   },
   {
     "name": "Pinkney, TN\\n",
@@ -3870,7 +3875,8 @@
     "latitude": 35.157025,
     "longitude": -87.543633,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pinkney was a small Tennessee rural community, likely established during the early settlement of Middle Tennessee in the early 19th century by farm families growing cotton or tobacco on the rich limestone-underlain soils of the region. The community served surrounding agricultural interests with a church, school, and possibly a general store or cotton gin before being eclipsed by neighboring centers with better transportation connections. Today the Pinkney area is private Tennessee agricultural land with no surviving commercial structures. Old church lots and farmstead perimeters near the historic Pinkney community location may yield early 19th-century domestic artifacts, antebellum coins, and agricultural hardware."
   },
   {
     "name": "Casaba, AZ",
@@ -3878,7 +3884,8 @@
     "latitude": 33.22578,
     "longitude": -111.86809,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Casaba was a small community in Maricopa or Pinal County, Arizona, likely a minor agricultural or ranching settlement established during the late 19th or early 20th century as American farmers and ranchers moved into the desert Southwest following the pacification of Apache resistance and the extension of railroads into the region. The community served surrounding desert agricultural interests before the harsh desert climate and limited water resources made sustained commercial development impossible. Today the Casaba site is likely desert BLM or private ranch land in central Arizona. The dry desert environment preserves artifacts well, and old ranch sites and farming operations near the historic Casaba location may yield late 19th-century domestic items, ranch hardware, and early American coins."
   },
   {
     "name": "Cordes, AZ",
@@ -3886,7 +3893,8 @@
     "latitude": 34.30336,
     "longitude": -112.16682,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cordes was a small Arizona community along Antelope Creek in Yavapai County, established as a stage stop and ranching center on the route between Prescott and Phoenix during the late 19th century before the railroad routes through the region changed commercial patterns. The Cordes family established the original ranch and stage stop that gave the community its name, and the area developed into a minor rural center for surrounding cattle ranchers working the Bradshaw Mountain foothills. Today the Cordes area survives as the tiny community of Cordes Junction on Interstate 17, a major Arizona highway, with the original stage stop site preserved nearby. The old ranch and stage stop areas near Cordes can yield late 19th-century travel hardware, ranch implements, and domestic items from the stage route era."
   },
   {
     "name": "Middleton, AZ",
@@ -3894,7 +3902,8 @@
     "latitude": 34.274811,
     "longitude": -112.277839,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Middleton was a small Arizona community in Yavapai County, established during the agricultural and ranching development of central Arizona's mountain country in the late 19th or early 20th century as the region's water resources were harnessed for small-scale irrigation farming and cattle ranching. The community served surrounding agricultural and ranching interests as a minor local center before being absorbed into the larger Prescott regional economy or simply fading from commercial significance. Today the Middleton area of Yavapai County is ranch land or small-scale agricultural terrain. Old ranch homestead sites and farmstead perimeters near the historic Middleton community may yield late 19th-century to early 20th-century Arizona frontier artifacts."
   },
   {
     "name": "Hansen, AZ",
@@ -3902,7 +3911,8 @@
     "latitude": 33.29816,
     "longitude": -111.920398,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hansen was a small Arizona community, likely a minor ranching or agricultural settlement in the territorial era of the late 19th or early 20th century named for a Scandinavian settler family \u2014 the Hansen surname being common among Danish and Norwegian immigrants who settled across the American West during this period. The community served surrounding ranch families as a minor local gathering point before being absorbed into the larger Arizona territorial economy or simply fading when its initial population moved on. Today the Hansen community site in Arizona is likely private ranch land. Old ranch homestead sites near the historic Hansen location may yield late 19th-century domestic hardware, ranch implements, and Scandinavian-American cultural artifacts."
   },
   {
     "name": "Trenton, KS",
