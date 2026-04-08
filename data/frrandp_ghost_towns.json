@@ -2174,7 +2174,8 @@
     "latitude": 38.640274,
     "longitude": -105.988902,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Turret was a small Chaffee County, Colorado gold mining camp in the Turret Mining District in the rugged mountains north of Salida, established in the 1890s after gold discoveries attracted prospectors to the remote canyon country between the Arkansas River and the Sangre de Cristo Mountains. The camp had a post office, several mines, and a small commercial district serving the mining population through the late 1890s-1910s before declining ore values caused most operations to cease. The Turret area is accessible via rough mountain roads from Salida in the Chaffee County high country, with some structures and mine workings visible in the landscape. The surrounding San Isabel National Forest and BLM land in this region of Colorado offers public access for exploration of the historic mining landscape."
   },
   {
     "name": "Tuckerville, CO",
@@ -2182,7 +2183,8 @@
     "latitude": 37.492501,
     "longitude": -107.485334,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tuckerville was a small Huerfano County, Colorado community in the Cucharas River valley of the southern Colorado coalfields, one of several small settlements that served the coal mining economy of the southern Sangre de Cristo region in the late nineteenth and early twentieth centuries. The southern Colorado coal camps were culturally diverse — Italian, Slavic, Hispanic, and other immigrant groups creating a rich mosaic of working-class culture in the company towns along the Trinidad coalfield. The dramatic labor battles of 1913-1914 shaped the history of every community in this region, and the memory of Ludlow weighs heavily on the landscape. Former Huerfano County coal communities are largely on private or corporate land in the valleys below the Sangre de Cristo Mountains."
   },
   {
     "name": "Alta, CO",
@@ -2190,7 +2192,8 @@
     "latitude": 37.885915,
     "longitude": -107.854207,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Alta was a Ouray County, Colorado silver mining camp in the San Juan Mountains near Telluride, established in the 1870s-1880s during the great San Juan silver rush at nearly 12,000 feet elevation in some of the most spectacular alpine terrain in North America. The camp produced significant quantities of gold and silver from the adjacent Gold King Mine and surrounding claims, supporting a population of several hundred in the harsh high-altitude environment. The Gold King Mine later became notorious in 2015 when an EPA cleanup crew accidentally released three million gallons of mine waste into the Animas River, triggering a major environmental disaster. The site is now partly within private mining claim land and partly accessible via 4WD roads near Ophir Pass, with the spectacular San Juan Mountain setting making it worth the challenging approach."
   },
   {
     "name": "Trojan, CA",
@@ -2198,7 +2201,8 @@
     "latitude": 34.60511,
     "longitude": -115.943614,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Trojan, California was a small mining community in Trinity County, California in the rugged Trinity Mountains of far northern California, connected to the gold and silver mining history of the Trinity Alps and Salmon River country that attracted prospectors from the Gold Rush era onward. Trinity County's mining history is extensive — the county produced significant gold through multiple mining eras — and many small camps like Trojan developed and faded alongside the fortunes of individual mines and districts. The Trinity Alps Wilderness and surrounding Shasta-Trinity National Forest cover much of Trinity County's rugged mountain terrain. Former Trinity County mining camp sites on national forest land are accessible for exploration within the permitted parameters for artifact recovery."
   },
   {
     "name": "Trojan, SD",
@@ -2206,7 +2210,8 @@
     "latitude": 44.342206,
     "longitude": -103.83798,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Trojan, South Dakota was a small Pennington County, South Dakota community in the Black Hills gold country, one of many small mining camps that developed in the hills surrounding Deadwood and Lead during the great Black Hills Gold Rush beginning in 1876. The Black Hills attracted tens of thousands of prospectors who spread across the region's ponderosa pine-covered hills and gulches seeking the next great gold deposit, creating dozens of short-lived camps like Trojan alongside the major producers. The Black Hills National Forest covers much of the surrounding landscape, and the legacy of Black Hills mining history is one of South Dakota's richest heritage resources. Former Black Hills mining camp sites within national forest land are accessible for surface historical exploration."
   },
   {
     "name": "Heron, MT",
@@ -2214,7 +2219,8 @@
     "latitude": 48.057944,
     "longitude": -115.969018,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Heron was a small Sanders County, Montana logging community along the Clark Fork River in the Cabinet Mountains region of northwest Montana, established as a railroad service point and logging camp support community along the Northern Pacific Railroad mainline in the late nineteenth century. The Cabinet Mountains of Sanders County have a rich mining and logging history, and the Clark Fork River valley served as a transportation corridor connecting the mining and logging economy of northwestern Montana to markets in the east. The surrounding Kootenai and Lolo National Forest land makes much of the area publicly accessible, and former logging camp sites in this part of Montana can yield period equipment and domestic artifacts."
   },
   {
     "name": "Encampment, MN",
@@ -2222,7 +2228,8 @@
     "latitude": 47.095168,
     "longitude": -91.565879,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Encampment, Minnesota was a small farming community in the Minnesota prairie landscape, one of many brief post office communities that appeared and disappeared during Minnesota's great agricultural settlement era of the 1870s-1890s as the state's rich farmland was rapidly occupied by waves of Scandinavian, German, and other immigrant farmers. Minnesota's precise agricultural grid of townships and sections supported many small communities with post offices serving as nodes in the farm-to-market network, though most lacked railroad connections and were quickly superseded. The Minnesota prairie site today is private farmland in one of the Midwest's most productive agricultural regions."
   },
   {
     "name": "Malmota/Maramba/Marmata, MN",
@@ -2230,7 +2237,8 @@
     "latitude": 47.049922,
     "longitude": -91.629565,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Malmota/Maramba/Marmata (Minnesota) was a small Minnesota farming community with a name that appears in historical records under multiple spellings, suggesting a short-lived post office community in the agricultural interior of the state during the late nineteenth century settlement era. The multiple name variations may reflect different proprietors or recording errors in postal records — a common situation in the era before standardized documentation of small rural post offices. The site today is private farmland in the Minnesota agricultural landscape."
   },
   {
     "name": "Burlington, MN",
@@ -2238,7 +2246,8 @@
     "latitude": 47.0327,
     "longitude": -91.656672,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Burlington, Minnesota was a small farming community distinct from the many other Burlingtons across America, existing briefly as an agricultural service point in the Minnesota prairie during the great Midwest homesteading era. Minnesota was settled with remarkable speed in the 1850s-1870s by farmers who rapidly occupied the state's extraordinarily rich prairie and forest soils, creating dozens of small communities that competed for railroad access and county seat status. The Burlington site in Minnesota is private farmland today, absorbed into the continuous agricultural landscape of the Upper Midwest."
   },
   {
     "name": "Centralia, OK",
@@ -2246,7 +2255,8 @@
     "latitude": 36.79675,
     "longitude": -95.353305,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Centralia was a small Oklahoma community in Carter County or a neighboring county that existed briefly as a farming settlement or crossroads community in the Indian Territory/Oklahoma Territory transitional era of the late nineteenth and early twentieth centuries. The Oklahoma settlement landscape was dramatically reorganized after the Land Runs of 1889 and subsequent years, creating intense competition among new communities for commercial viability. Many small Oklahoma communities like Centralia that lacked railroad connections or favorable geography failed to sustain themselves. The surrounding Oklahoma landscape is working ranch and farm country with private landholdings predominating."
   },
   {
     "name": "Keighley, KS",
