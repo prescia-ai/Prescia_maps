@@ -45,6 +45,15 @@
     "confidence": 0.75
   },
   {
+    "name": "Blue Church and Parish School",
+    "type": "abandoned_church",
+    "latitude": 42.877,
+    "longitude": -78.877,
+    "description": "This Roman Catholic church was founded by a German immigrant community that settled in a waterfront industrial neighborhood of a large American city in the mid-nineteenth century, with the brown-stoned structure completed in the 1890s featuring a soaring nave with a cornflower blue and bright yellow painted vaulted ceiling, carved marble altar, and pendant stained-glass windows. A schoolhouse was added in the 1920s to serve the parish's growing educational needs, and the complex later transitioned to serving the large Polish Catholic community that replaced the original German congregation in the surrounding neighborhood. The schoolhouse fell vacant around 2005 and the church itself closed roughly a decade later as the diocese consolidated parishes, leaving both buildings abandoned until a sale and redevelopment approval. Plans call for the church shell to be converted to commercial and restaurant use while the convent, rectory, and school buildings become residential apartments, preserving the complex's historic facades.",
+    "source": "obsidian_urbex_churches",
+    "confidence": 0.65
+  },
+  {
     "name": "Sacred Heart Church (Vernon, CT)",
     "type": "abandoned_church",
     "latitude": 41.8321,

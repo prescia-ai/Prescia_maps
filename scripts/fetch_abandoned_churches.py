@@ -166,6 +166,29 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
         "confidence": 0.75,
     },
     {
+        "name": "Blue Church and Parish School",
+        "type": "abandoned_church",
+        "latitude": 42.877,
+        "longitude": -78.877,
+        "description": (
+            "This Roman Catholic church was founded by a German immigrant community that settled "
+            "in a waterfront industrial neighborhood of a large American city in the mid-nineteenth "
+            "century, with the brown-stoned structure completed in the 1890s featuring a soaring "
+            "nave with a cornflower blue and bright yellow painted vaulted ceiling, a carved marble "
+            "altar, and hanging pendant stained-glass windows. A schoolhouse was added in the 1920s "
+            "to serve the parish's growing educational needs, and the complex later transitioned to "
+            "serving the large Polish Catholic community that replaced the original German "
+            "congregation in the surrounding neighborhood. The schoolhouse fell vacant around 2005 "
+            "and the church itself closed roughly a decade later as the diocese consolidated "
+            "parishes, leaving both buildings abandoned until a sale and redevelopment approval. "
+            "Plans call for the church shell to be converted to commercial and restaurant use while "
+            "the convent, rectory, and school buildings become residential apartments, preserving "
+            "the complex's historic facades."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
         "name": "Sacred Heart Church (Vernon, CT)",
         "type": "abandoned_church",
         "latitude": 41.8321,
@@ -919,6 +942,67 @@ def _parse_obsidian_html(html: str) -> List[Dict[str, Any]]:
 
 
 # ---------------------------------------------------------------------------
+# Merge helpers
+# ---------------------------------------------------------------------------
+
+
+def _normalize_name(name: str) -> str:
+    """Normalize a location name for fuzzy matching against seed data."""
+    import re as _re
+    import html as _html
+    # Decode HTML entities (e.g. &#8217; → right single quote)
+    name = _html.unescape(name)
+    # Normalize fancy quotes / apostrophes to plain ASCII
+    name = name.replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", '"').replace("\u201d", '"')
+    # Strip trailing ", USA" or similar country suffixes
+    name = _re.sub(r",?\s+usa\s*$", "", name, flags=_re.IGNORECASE)
+    # Remove parenthetical qualifiers used in seed names, e.g. "(Keely)", "(Vernon, CT)"
+    name = _re.sub(r"\s*\([^)]*\)", "", name)
+    # Normalize "St." / "St " → "st " so abbreviation period doesn't matter
+    name = _re.sub(r"\bst\.?(?=\s|\b|,|\.|$)", "st", name, flags=_re.IGNORECASE)
+    return _re.sub(r"\s+", " ", name).strip().lower()
+
+
+def _build_seed_lookup() -> Dict[str, Dict[str, Any]]:
+    """Return a dict mapping normalized seed names to their full seed records."""
+    return {_normalize_name(entry["name"]): entry for entry in SEED_CHURCHES}
+
+
+def _merge_scraped_with_seed(
+    scraped: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Enrich scraped entries with seed data coordinates and descriptions.
+
+    Strategy:
+    1. For each scraped entry, attempt a name-normalised lookup in SEED_CHURCHES.
+    2. If found, replace the scraped record with the full seed record (which has
+       web-researched coordinates and a proper historical description).
+    3. Any seed entries *not* represented in the scraped list are appended so
+       the output always includes the full supplemental dataset.
+    4. Any scraped entries with no seed match are kept as-is (null coords).
+    """
+    seed_lookup = _build_seed_lookup()
+    output: List[Dict[str, Any]] = []
+    matched_seed_keys: set = set()
+
+    for scraped_entry in scraped:
+        key = _normalize_name(scraped_entry["name"])
+        if key in seed_lookup:
+            output.append(seed_lookup[key])
+            matched_seed_keys.add(key)
+        else:
+            # New entry not yet in seed — include with whatever data we have
+            output.append(scraped_entry)
+
+    # Append supplemental seed entries not matched above
+    for entry in SEED_CHURCHES:
+        if _normalize_name(entry["name"]) not in matched_seed_keys:
+            output.append(entry)
+
+    return output
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -964,9 +1048,12 @@ def main() -> None:
 
     if not args.skip_scrape:
         logger.info("=== Method 1: Obsidian Urbex Photography scrape ===")
-        churches = scrape_obsidian_urbex()
-        if churches:
-            method_used = "obsidian_urbex_scrape"
+        scraped = scrape_obsidian_urbex()
+        if scraped:
+            # Enrich scraped entries with web-researched coordinates from seed,
+            # and append the full supplemental dataset.
+            churches = _merge_scraped_with_seed(scraped)
+            method_used = "obsidian_urbex_scrape+seed_enriched"
 
     if churches is None:
         logger.info("=== Method 2: Seed dataset fallback ===")
