@@ -4,7 +4,7 @@
     "latitude": 39.812,
     "longitude": -79.588,
     "year": 1754,
-    "description": "Washington's defeat at Fort Necessity, opening battle of the French and Indian War, July 3, 1754, Pennsylvania.",
+    "description": "On July 3, 1754, a young George Washington and his Virginia militia were overwhelmed by French and Indian forces at this hastily built circular stockade in the Pennsylvania wilderness, marking the opening land engagement of the French and Indian War. Washington was forced to surrender \u2014 the only time in his career \u2014 after a day-long battle fought in pouring rain that left a third of his men killed or wounded, with the French allowing his force to withdraw. Today the site is preserved as Fort Necessity National Battlefield near Farmington, PA, with a reconstructed stockade and an interpretive visitor center managed by the National Park Service. While the park itself prohibits metal detecting, the surrounding Great Meadows area saw extensive 18th-century military encampment activity, and private land in the broader region has yielded musket balls, brass buttons, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -14,7 +14,7 @@
     "latitude": 40.3347,
     "longitude": -79.9089,
     "year": 1755,
-    "description": "British General Braddock's disastrous defeat by French and Indian forces, July 9, 1755, near present-day Pittsburgh, Pennsylvania.",
+    "description": "On July 9, 1755, British General Edward Braddock led a column of 1,400 regulars and colonial troops through a wooded ravine near present-day Pittsburgh, where roughly 900 French soldiers and Native American warriors ambushed them in one of the most catastrophic defeats in British military history. Braddock himself was mortally wounded, and the British column \u2014 unable to adapt to frontier warfare \u2014 suffered over 900 casualties before Washington rallied the survivors in retreat. The battlefield near Braddock, PA sits largely beneath modern development, though a small monument marks the general area where Braddock fell. Scattered finds of Brown Bess musket balls, British regimental buttons, and military accoutrements have surfaced along the route on private land, and the broader Monongahela River valley saw extensive military movement throughout the war.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -24,7 +24,7 @@
     "latitude": 43.4198,
     "longitude": -73.7052,
     "year": 1755,
-    "description": "British colonial victory halting French advance, September 8, 1755, Lake George, New York.",
+    "description": "On September 8, 1755, a combined force of British colonials and Mohawk warriors under Sir William Johnson defeated a French and Canadian army commanded by Baron Dieskau near the southern end of Lake George in New York, halting the French advance toward Albany and the Hudson Valley. Dieskau was captured during the engagement, which saw savage fighting including a French ambush of a colonial detachment that became known as 'Bloody Morning Scout.' The battlefield area is now largely absorbed into the Lake George Battlefield Park and surrounding resort town, with the lake itself \u2014 once a major military corridor \u2014 hosting a popular tourist industry. Musket balls, French trade silver, and military buttons have been found in the lake region over the years, and private lands along the lakeshore saw heavy encampment use throughout the French and Indian War.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -34,7 +34,7 @@
     "latitude": 43.8443,
     "longitude": -73.3877,
     "year": 1758,
-    "description": "Abercrombie's failed assault on Fort Carillon defended by Montcalm, July 8, 1758, Lake Champlain, New York.",
+    "description": "In July 1758, British General James Abercrombie led the largest army ever assembled in North America to that point \u2014 nearly 15,000 men \u2014 against the undermanned French garrison at Fort Carillon (later Fort Ticonderoga), only to be repulsed with devastating losses in one of Britain's worst defeats of the war. French commander the Marquis de Montcalm had erected a hasty breastwork of felled timber that shredded the massed British and Highland infantry assaults, killing or wounding nearly 2,000 men in a matter of hours. Fort Ticonderoga stands today as a privately operated historic site with a reconstructed fortress and museum on the Lake Champlain peninsula in New York, open to visitors. Metal detecting is prohibited on the fort grounds, but the surrounding slopes and approach routes have produced French musket balls, British regimental buttons, and military equipment on private property.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -44,7 +44,7 @@
     "latitude": 43.4289,
     "longitude": -73.7104,
     "year": 1757,
-    "description": "French capture and subsequent massacre of British garrison, August 3-9, 1757, Lake George, New York.",
+    "description": "In August 1757, French commander Montcalm besieged and captured the British Fort William Henry at the southern tip of Lake George, New York, after a six-day siege that forced the garrison's surrender under agreed terms of parole. What followed was one of the war's most infamous episodes: Montcalm's Native American allies, unpaid in plunder, attacked the surrendering British column and massacred between 100 and 200 soldiers and civilians, with hundreds more taken captive. The site is now occupied by a reconstructed fort and museum at Lake George, NY, operated as a living history attraction. Metal detecting is restricted on the historic site, but the lake bottom and surrounding shoreline have produced 18th-century military artifacts including musket balls, buttons, and personal effects from the extensive French and Indian War campaigns along this waterway.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -54,7 +54,7 @@
     "latitude": 44.2335,
     "longitude": -76.4819,
     "year": 1758,
-    "description": "British destruction of key French supply depot, August 27, 1758, Ontario, Canada.",
+    "description": "In August 1758, a British colonial force of roughly 3,000 men under Colonel John Bradstreet made a daring amphibious raid across Lake Ontario to capture Fort Frontenac at present-day Kingston, Ontario \u2014 the vital French supply and communications hub connecting Montreal to the western forts. The small French garrison surrendered quickly, and Bradstreet's men destroyed nine armed vessels, enormous stores of supplies, and the fort itself, effectively crippling France's ability to supply her western allies and garrison. The site is now within the downtown core of Kingston, Ontario, with a small park and interpretive marker noting the fort's former location. Archaeological excavations have recovered 18th-century military hardware, French cannon balls, trade goods, and military buttons from the site over the years.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -64,7 +64,7 @@
     "latitude": 46.8417,
     "longitude": -71.27,
     "year": 1759,
-    "description": "Wolfe's failed assault on French lines before Plains of Abraham, July 31, 1759, Quebec.",
+    "description": "On July 31, 1759, British General James Wolfe launched a costly amphibious assault against the fortified French shoreline at Beauport, near Quebec City, attempting to find a way past Montcalm's defensive lines before the campaigning season ended. The attack was repulsed with significant British losses as French and Canadian defenders poured fire down on the landing troops from elevated positions, demonstrating the near-impregnability of the Beauport shore. This defeat pushed Wolfe to find an alternative approach, ultimately leading to the daring night ascent at Anse-au-Foulon and the decisive battle on the Plains of Abraham six weeks later. The Beauport shoreline is now largely developed residential and industrial land east of Quebec City, though the area saw intense military activity during the 1759 siege campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -74,7 +74,7 @@
     "latitude": 46.8013,
     "longitude": -71.2196,
     "year": 1759,
-    "description": "Decisive British victory ending French control of Canada, September 13, 1759, Quebec City.",
+    "description": "On September 13, 1759, British General James Wolfe led approximately 4,500 soldiers up the cliffs at Anse-au-Foulon before dawn and deployed them on the Plains of Abraham outside the walls of Quebec City, forcing the Marquis de Montcalm to abandon his defensive positions and give battle on open ground. In a brief but decisive engagement lasting perhaps 20 minutes, disciplined British volleys broke the advancing French lines; both Wolfe and Montcalm were mortally wounded, and Quebec surrendered five days later, effectively ending French rule in Canada. The battlefield is now Battlefields Park (Parc des Champs-de-Bataille) in Quebec City, a large urban park maintained by the National Battlefields Commission, with interpretive panels marking key positions. Detecting is prohibited in the park, but the cliffs, landing areas, and surrounding countryside saw massive military movements throughout the 1759 siege campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -84,7 +84,7 @@
     "latitude": 43.2631,
     "longitude": -79.0607,
     "year": 1759,
-    "description": "British capture of French Fort Niagara controlling the Great Lakes, July 25, 1759, New York.",
+    "description": "In July 1759, a British force under Sir William Johnson besieged the strategically vital Fort Niagara at the mouth of the Niagara River on Lake Ontario, cutting off the French supply line to the entire Great Lakes interior. A French relief force marching from the south was ambushed and destroyed at the Battle of La Belle Famille on July 24, and the fort surrendered the following day \u2014 a loss that effectively ended French power in the Great Lakes region. Old Fort Niagara is today a beautifully preserved state historic site in Youngstown, NY, with original 18th-century stone buildings including the famous 'French Castle' still standing. Metal detecting is prohibited on the fort grounds, but the surrounding Niagara frontier and lakeshore saw extensive military traffic during the French and Indian War, with private land in the area occasionally yielding 18th-century military artifacts.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -94,7 +94,7 @@
     "latitude": 40.2826,
     "longitude": -79.7209,
     "year": 1763,
-    "description": "Bouquet's relief expedition defeats Pontiac's warriors, August 5-6, 1763, Pennsylvania.",
+    "description": "On August 5-6, 1763, British Colonel Henry Bouquet and his column of Highlanders and Royal Americans were ambushed by Delaware, Shawnee, and Mingo warriors near Bushy Run Station in western Pennsylvania while marching to relieve the besieged Fort Pitt. Bouquet feigned retreat on the second day to lure the warriors into an ambush of his own, decisively defeating them in a battle that helped bring Pontiac's War to a close in the east. The battlefield is preserved as Bushy Run Battlefield, a Pennsylvania state historic site in Harrison City, with trails, earthworks, and a museum. Metal detecting is not permitted on state historic sites, but the surrounding countryside and the route of Bouquet's march through the Pennsylvania backcountry offer private land opportunities where musket balls, brass buttons, and military hardware have been found.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -630,7 +630,7 @@
     "confidence": 0.95
   },
   {
-    "name": "Battle of Châteauguay",
+    "name": "Battle of Ch\u00e2teauguay",
     "latitude": 45.1153,
     "longitude": -73.7417,
     "year": 1813,
@@ -2494,7 +2494,7 @@
     "latitude": 41.9,
     "longitude": -102.0,
     "year": 1855,
-    "description": "Harney's punitive expedition against Brulé Sioux, September 3, 1855, Nebraska.",
+    "description": "Harney's punitive expedition against Brul\u00e9 Sioux, September 3, 1855, Nebraska.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -3090,7 +3090,7 @@
     "confidence": 0.95
   },
   {
-    "name": "Battle of Concepción",
+    "name": "Battle of Concepci\u00f3n",
     "latitude": 29.4025,
     "longitude": -98.4945,
     "year": 1835,
