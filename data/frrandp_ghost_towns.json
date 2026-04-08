@@ -1904,7 +1904,8 @@
     "latitude": 41.523889,
     "longitude": -79.581389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pithole City was one of the most spectacular boomtowns in American history, exploding from empty Pennsylvania farmland in Venango County to a city of 15,000 people in just six months after a January 1865 oil well struck a massive flow — making it the first major American oil gusher in the post-Civil War petroleum boom. At its frenzied peak, Pithole had 57 hotels, dozens of saloons, a daily newspaper, a post office that briefly ranked third in Pennsylvania by volume, and a pipeline to the Oil Creek railroad — one of the world's first oil pipelines. By 1866 the oil flow declined and the population vanished nearly as fast as it had arrived, with the buildings dismantled and sold for lumber. Today the Pithole site is maintained by the Pennsylvania Historical and Museum Commission, with cellar depressions and a visitor center marking what was once a city of thousands."
   },
   {
     "name": "Buffalo City, NC",
@@ -1912,7 +1913,8 @@
     "latitude": 35.84222,
     "longitude": -75.9175,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Buffalo City was an early nineteenth-century North Carolina community in Wilkes County in the Blue Ridge Mountain foothills, developing as a local agricultural and commercial center during the early settlement of western North Carolina before larger county towns with better road connections captured the regional trade. Western North Carolina's mountain communities carry a rich Scots-Irish cultural heritage and a significant connection to the American Revolution-era backcountry conflicts between Tories and Patriots that shaped the region's history. The Wilkes County landscape today is private farmland and forest, and former community sites in this region can yield Revolutionary and early Federal-era artifacts."
   },
   {
     "name": "New Birmingham, TX",
@@ -1920,7 +1922,8 @@
     "latitude": 31.777152,
     "longitude": -95.120225,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "New Birmingham was a planned industrial city in Morris County, Texas promoted aggressively in the early 1890s by land speculators who claimed the site had iron ore deposits of Pennsylvania-grade quality that would make it 'the Pittsburgh of the South' — attracting significant investment and a furnace operation before the ore proved to be of insufficient quality and quantity. The iron furnace was built and briefly operated before the scheme collapsed in the mid-1890s, leaving investors with worthless land and the town's few permanent residents with little recourse. The ruins of the New Birmingham iron furnace were later preserved as part of what is now New Birmingham City Park in Morris County, with the dramatic stone furnace stack remaining as one of East Texas's most unusual industrial relics. The accessible park site makes this one of Texas's more interesting industrial ghost town destinations."
   },
   {
     "name": "Kouns, TX",
@@ -1928,7 +1931,8 @@
     "latitude": 30.215188,
     "longitude": -97.793076,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kouns was a tiny Lipscomb County, Texas community in the Texas Panhandle High Plains, one of the many small farming and ranching service communities that briefly supported a post office during the dryland homesteading boom of the early twentieth century before drought, agricultural hardship, and the Dust Bowl of the 1930s eliminated the economic rationale for such communities. The Llano Estacado landscape of the Texas Panhandle was settled late in American history and was always marginal for dryland farming without irrigation. The site today is private ranchland or farmland in the remote Canadian River basin country of the Texas Panhandle."
   },
   {
     "name": "National City, IL",
@@ -1936,7 +1940,8 @@
     "latitude": 38.6484,
     "longitude": -90.149924,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "National City was a small Macoupin County, Illinois farming community along the Illinois River corridor in west-central Illinois that briefly held a post office in the nineteenth century while serving surrounding agricultural operations in this section of the Prairie State. Macoupin County has significant Coal Age history from both the geology of its rich coal seams and the labor history of the coal mining communities that developed along the county's northern boundary. The site today is private farmland in the flat to rolling terrain of Macoupin County. Former post office communities in this region of Illinois can yield agricultural and homestead artifacts from the 1860s-1880s."
   },
   {
     "name": "Cumpressco, FL",
@@ -1944,7 +1949,8 @@
     "latitude": 28.358894,
     "longitude": -82.039248,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cumpressco was a small Hernando County, Florida community in the interior scrub and pine flatwood terrain of the central Florida peninsula, existing briefly as an agricultural service point and post office during the late nineteenth century Florida pioneer era when settlers attempted to establish farming operations in the challenging interior landscape of the state. The interior Florida scrubland is notoriously poor agricultural territory — sandy, nutrient-poor, and prone to drought — and many small pioneer communities in counties like Hernando failed to sustain themselves. The site today is private land or state-managed scrubland in the Hernando County interior."
   },
   {
     "name": "Idlewild, UT",
@@ -1952,7 +1958,8 @@
     "latitude": 41.253831,
     "longitude": -111.856606,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Idlewild was a small Millard County, Utah community in the Sevier Valley of central Utah, one of the modest Mormon pioneer agricultural settlements that attempted to farm the desert valleys of Millard County using irrigation from mountain streams. The Sevier Valley farming communities faced chronic water shortages and the challenges of high desert agriculture, and many small communities like Idlewild were abandoned as farming proved unviable or populations consolidated in larger valley towns. The Millard County Sevier Valley communities represent the extended reach of Brigham Young's vision for populating every potentially farmable valley in the Great Basin, regardless of the agricultural odds."
   },
   {
     "name": "Southern Cross, MT",
@@ -1960,7 +1967,8 @@
     "latitude": 46.191055,
     "longitude": -113.264843,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Southern Cross was a small Granite County, Montana gold and silver mining community in the Flint Creek Range, established in the 1870s-1880s during the great Montana silver and gold rushes that brought prospectors to every accessible mountain range in the territory. The mine produced modest quantities of precious metals before declining ore grades made operations uneconomical, and the community faded as miners moved to more productive areas. The Granite County mining landscape around Philipsburg is historically rich, containing the famous Granite Mine — one of Montana's greatest silver producers — and numerous smaller operations like Southern Cross. The surrounding Deerlodge National Forest and BLM land in Granite County offer access to the historic mining landscape."
   },
   {
     "name": "Rimini, MT",
@@ -1968,7 +1976,8 @@
     "latitude": 46.487511,
     "longitude": -112.247963,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rimini was a small Jefferson County, Montana mining community in the Big Belt Mountains near Helena, established in the 1860s-1870s in the gold and silver-bearing formations of the mountains east of Montana's capital city. The mining district produced intermittently through the late nineteenth and early twentieth centuries, and the community existed to serve the various mining operations in the area. The area became environmentally significant for a different reason — lead and arsenic contamination from historic mining operations in Rimini Creek affected downstream water supplies and led to an EPA Superfund designation for cleanup of the mining legacy. The cleanup status affects access and artifact recovery in the area."
   },
   {
     "name": "Elkhorn, MT",
@@ -1976,7 +1985,8 @@
     "latitude": 46.274788,
     "longitude": -111.946213,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Elkhorn was a silver mining community in Jefferson County, Montana in the Elkhorn Mountains south of Boulder, established in the 1870s and producing significant silver wealth through the 1880s — particularly from the Elkhorn Mine that produced over $14 million in silver during its peak years. The town had a population of 2,500 at its height with a hotel, several saloons, a school, and the Fraternity Hall — a two-story structure that became one of Montana's most photographed ghost town buildings. Montana State Parks manages Elkhorn Ghost Town as a state park with two original structures preserved, and the remaining mine workings and townsite are accessible via a dirt road south of Boulder. Metal detecting is prohibited within the state park boundaries."
   },
   {
     "name": "Fairfax, WA",
