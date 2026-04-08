@@ -374,7 +374,8 @@
     "latitude": 39.532764,
     "longitude": -106.393918,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gilman was a zinc and silver mining company town perched dramatically on a cliff above the Eagle River canyon in Eagle County, Colorado, operated almost entirely by the Eagle Mine from the early 1900s through 1984, when a Superfund designation forced closure after decades of mining left the site severely contaminated with heavy metals. At its peak Gilman housed several hundred miners and their families in company-owned housing, with a school, store, and community facilities all managed by the mining company. Today the entire site is fenced off and remediated under EPA oversight — the cliffside cluster of abandoned buildings is clearly visible from US Highway 24 below, but the site is strictly off-limits to the public. Metal detecting and entry are prohibited due to contamination hazards, making Gilman one of Colorado's most visually striking but completely inaccessible ghost towns."
   },
   {
     "name": "Millville, IL",
@@ -382,7 +383,8 @@
     "latitude": 42.448889,
     "longitude": -90.051389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Millville was a small farming community in Pike County, Illinois along the Illinois River that thrived in the mid-nineteenth century as a river trade and agricultural center, supporting mills and businesses that served the surrounding river valley farmsteads. The community declined as navigation on the Illinois River became less economically central and larger nearby towns captured the regional commercial trade. The site today is low-lying agricultural land typical of western Illinois's river bottom terrain. Pike County farmstead sites from the antebellum period can yield early American coinage and household artifacts when detecting permission is obtained from current landowners."
   },
   {
     "name": "Kapoho, HI",
@@ -390,7 +392,8 @@
     "latitude": 19.502733,
     "longitude": -154.846033,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kapoho was a small farming community on the eastern tip of the Big Island of Hawaii in Puna District that was first devastated by lava flows from Kilauea in 1960, destroying much of the original village, and then completely obliterated in May 2018 when a catastrophic eruption sent lava rivers across the lower Puna landscape, burying what had been rebuilt under tens of feet of new land. The original community grew warm-water orchids, papayas, and anthurium flowers in the fertile volcanic soil, and Kapoho Bay — a beloved snorkeling destination — was completely filled by the 2018 flows. Today the site is new lava rock covering former homes, businesses, and the bay itself, dramatically demonstrating the ongoing geological youth of Hawaii's Big Island. The fresh lava fields and private land status mean the site is largely inaccessible for any kind of artifact recovery."
   },
   {
     "name": "Atomic City, ID",
@@ -398,7 +401,8 @@
     "latitude": 43.445442,
     "longitude": -112.812424,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Atomic City is a small Idaho community in Bingham County southeast of Idaho Falls that boomed briefly in the 1950s as a bedroom community for workers at the National Reactor Testing Station (now Idaho National Laboratory), where the United States conducted pioneering nuclear reactor experiments during the Cold War. The town was named with typical 1950s atomic-age optimism and reached a population of several hundred at its peak during the height of nuclear research activity at the nearby facility. As federal employment at INL has fluctuated and the nuclear program evolved, Atomic City has shrunk to barely a dozen residents — technically still incorporated but effectively a ghost of its Cold War self. The surrounding INL reservation is federal land with restricted access, though Atomic City's surviving structures and the area's Cold War history make it a fascinating roadside stop."
   },
   {
     "name": "Centralia, PA",
@@ -406,7 +410,8 @@
     "latitude": 40.804254,
     "longitude": -76.340504,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Centralia was a thriving anthracite coal town in Columbia County, Pennsylvania until 1962, when a trash fire in an abandoned strip mine ignited an underground coal seam that has been burning ever since, slowly undermining the town with toxic gases and ground subsidence. Over the following decades, carbon monoxide and sulfur dioxide seeping from the ground forced the evacuation of nearly all of the town's 1,100 residents, and most structures were demolished by the state. Today only a handful of buildings remain on a cracked, steam-venting grid of streets — Pennsylvania's most famous ghost town and one of the eeriest abandoned places in America. The former residential blocks and demolished building lots are accessible from the public roads, though underground instability makes the ground itself potentially hazardous."
   },
   {
     "name": "Isles Dernieres, LA",
@@ -414,7 +419,8 @@
     "latitude": 29.049233,
     "longitude": -90.830086,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Isles Dernieres — or Last Island — was a popular antebellum resort island off the Louisiana coast in Terrebonne Parish that drew wealthy New Orleans society families to its hotels and boardinghouses during the steaming summer months of the 1840s and 1850s. The island was catastrophically destroyed on August 10, 1856, when a powerful hurricane made direct landfall, killing over 200 of the approximately 400 people present — one of the deadliest disasters in Louisiana history before Katrina. The remnant island chain called Isle Dernieres continues to shrink through ongoing coastal erosion and land subsidence, and today barely stands above sea level. The site is in the Gulf of Mexico and largely inaccessible except by boat, with ongoing erosion continuing to diminish what little land remains."
   },
   {
     "name": "Kalapana, HI",
@@ -422,7 +428,8 @@
     "latitude": 19.354803,
     "longitude": -154.97951,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kalapana was a residential community on Hawaii's Big Island in the Puna District that was built on old lava flows from previous volcanic activity, growing in the mid-twentieth century as a residential area attracting people drawn to the remote, affordable Big Island countryside. In 1990 a lava flow from Kilauea's ongoing eruption crept inexorably through the neighborhood, burying over 100 homes, the famous Kaimū Black Sand Beach, and most of the community's infrastructure under fresh volcanic rock. The Royal Gardens subdivision above Kalapana continued to be eaten by lava flows through subsequent years, and the 2018 eruption delivered the final blow to any remaining structures. The lava-covered former streets are accessible on foot, a surreal landscape where old asphalt roads disappear beneath new rock."
   },
   {
     "name": "Thistle, UT",
@@ -430,7 +437,8 @@
     "latitude": 39.991069,
     "longitude": -111.497059,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Thistle was a small Utah County, Utah community along the Spanish Fork River that was obliterated in the spring of 1983 when an enormous landslide blocked the canyon, creating a natural dam that rapidly backed up a lake that submerged the town, the railroad, and U.S. Highway 6 under several dozen feet of water in one of the costliest landslide disasters in American history. The Army Corps of Engineers drilled a drainage tunnel through the slide mass to drain the lake, costing over $400 million in 1983 dollars — the most expensive landslide mitigation project ever undertaken in the United States. The town was never rebuilt, and the canyon today shows the dramatic scar of the slide with new highway and railroad alignments routed around the obstruction. The drained lakebed still shows evidence of the former townsite, accessible via the canyon road during favorable conditions."
   },
   {
     "name": "Kirwin, WY",
@@ -438,7 +446,8 @@
     "latitude": 43.876344,
     "longitude": -109.297923,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kirwin was a small ranching and farming community in Phillips County, Wyoming — actually Philips County, Kansas, just north of the Wyoming border — that developed in the 1870s along the North Fork of the Solomon River, growing to include a post office, hotel, grain elevator, and several businesses before drought and the collapse of the cattle market in the late 1880s devastated the economy. The community recovered partially in the early twentieth century but ultimately declined as population drained from northwest Kansas's marginal agricultural country. Today Kirwin is the site of Kirwin National Wildlife Refuge, established around Kirwin Reservoir, which covers much of the original town area. The NWR land makes metal detecting prohibited, though the wildlife refuge preserves some of the area's natural and historic character."
   },
   {
     "name": "Appleton, Illinois",
