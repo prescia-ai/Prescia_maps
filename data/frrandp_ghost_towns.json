@@ -1454,7 +1454,8 @@
     "latitude": 28.793049,
     "longitude": -81.393679,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Markham was a small Glades County, Florida community in the Lake Okeechobee region of south-central Florida that developed as an agricultural support community in the early twentieth century as drainage projects converted the Everglades and Lake Okeechobee rim into sugarcane and cattle ranch country. The remote and flood-prone Glades County landscape made sustained community development extremely difficult, and small farming communities like Markham struggled to survive the periodic Lake Okeechobee hurricanes and floods that periodically devastated south Florida agriculture. The surrounding Glades County landscape today is active sugarcane and cattle ranching country with private land predominating."
   },
   {
     "name": "Hiawatha, UT",
@@ -1462,7 +1463,8 @@
     "latitude": 39.488869,
     "longitude": -111.015701,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hiawatha was a Carbon County, Utah coal mining community in the Wasatch Plateau coal country, one of several company towns that served the extensive coalfields of central Utah that powered the state's railroad and industrial economy through the twentieth century. The town had company-owned housing, a store, and community facilities serving the miners and their families who extracted coal from the deep mountain seams. Hiawatha and neighboring coal camps declined as coal production consolidated and eventually rail and industrial coal demand fell, leaving the company towns economically stranded. The Carbon County coal country around Price, Utah is one of the West's most historically significant coal mining regions, and many former mine sites are accessible on public land."
   },
   {
     "name": "Packard, KY",
@@ -1470,7 +1472,8 @@
     "latitude": 36.664455,
     "longitude": -84.055481,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Packard was a small eastern Kentucky community in Pike County in the heart of the Appalachian coalfields, one of hundreds of coal camp communities that developed throughout the Cumberland Plateau from the 1880s through the mid-twentieth century to house the miners, their families, and the commercial operations that supported the coal industry. Pike County Kentucky is the most coal-rich county in America by historical production and was at the center of the union organizing battles and poverty that defined Appalachian coal country in the twentieth century. Former coal camp sites in Pike County are largely on private or corporate mining land, though the Appalachian cultural heritage preserved in these communities represents a rich chapter in American working-class history."
   },
   {
     "name": "Mono Mills, CA",
@@ -1478,7 +1481,8 @@
     "latitude": 37.889809,
     "longitude": -118.960354,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mono Mills was a California lumber and sawmill community in Mono County at the edge of the Mono Basin, established in the 1870s by the narrow-gauge Bodie and Benton Railway to supply railroad ties and lumber to the booming silver mining town of Bodie in the White Mountains. The railway ran from the pine forest at Mono Mills to Bodie, carrying timber essential for the mines' underground timbering and surface construction at a time when Bodie had little local timber. When Bodie's mining boom faded in the early 1880s, the Mono Mills operation shut down and the railway was abandoned. The site of Mono Mills is now on BLM land east of Lee Vining, California, and portions of the old railroad grade and mill site remnants are visible in the landscape."
   },
   {
     "name": "Callville, NV",
@@ -1486,7 +1490,8 @@
     "latitude": 36.113333,
     "longitude": -114.688889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Callville was an 1860s Mormon pioneer community on the Colorado River in what is now Clark County, Nevada, established in 1864 at the direction of Brigham Young as a river port to receive goods shipped up the Colorado from the Gulf of California, serving Utah's growing settlements without reliance on overland routes through hostile territory. The river port never achieved its commercial goals as the Colorado proved too difficult to navigate consistently, and when the transcontinental railroad was completed in 1869, overland shipping routes made the river port obsolete. The original site of Callville is now submerged beneath Lake Mead, flooded when Hoover Dam was completed in 1935. During significant Lake Mead drought-level drawdowns, a stone warehouse building from the original Callville has periodically emerged from the reservoir."
   },
   {
     "name": "Johnsonville, TN",
@@ -1494,7 +1499,8 @@
     "latitude": 36.045421,
     "longitude": -87.998257,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Johnsonville was a small Humphreys County, Tennessee community along the Tennessee River in western Tennessee that served as a Union supply depot during the Civil War, becoming the site of a significant Confederate cavalry raid in November 1864 when Nathan Bedford Forrest's artillery attacked and destroyed the supply depot, capturing or destroying an estimated $6.7 million in Union supplies and equipment. The raid — notable as one of the few instances of cavalry defeating a naval force — significantly impaired Union supply operations in the final months of the war. The site was flooded in 1944 when Kentucky Dam was completed by the TVA, submerging the original townsite beneath Kentucky Lake. Johnsonville State Historic Park on the lake's western shore preserves and interprets the battle site."
   },
   {
     "name": "Dugger, TN",
@@ -1502,7 +1508,8 @@
     "latitude": 36.33753,
     "longitude": -81.996889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dugger was a small Lawrence County, Tennessee coal mining community in the plateau region of northeastern Tennessee, connected to the small-scale coal operations that characterized the southern Appalachian coalfields in contrast to the massive coal industry of the central Appalachian region. The Tennessee coalfields were a smaller-scale operation than the Kentucky or West Virginia mines, and many small communities like Dugger developed and faded alongside individual mine operations. The surrounding Lawrence County landscape today is mixed farming and forest land in this hilly section of Middle Tennessee. Former Tennessee coal community sites are typically on private land in rural Lawrence County."
   },
   {
     "name": "Ludlow, CO",
@@ -1510,7 +1517,8 @@
     "latitude": 37.333349,
     "longitude": -104.583318,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ludlow, Colorado was the site of the Ludlow Massacre of April 20, 1914 — the deadliest event in American labor history — when Colorado National Guard troops and company gunmen attacked a tent colony of striking coal miners and their families in Las Animas County at the southern end of the Ludlow anticline, killing at least 25 people including 11 children and two women who suffocated in a pit beneath a burning tent. The strike against the Colorado Fuel and Iron Company (owned by John D. Rockefeller Jr.) had begun in September 1913 in a dispute over wages, union recognition, and the notorious company town system that controlled virtually every aspect of miners' lives. The Ludlow Massacre galvanized the American labor movement and led directly to federal labor reform legislation. A monument maintained by the United Mine Workers marks the site, which is on the National Register of Historic Places and open to the public."
   },
   {
     "name": "Midway, AZ",
@@ -1518,7 +1526,8 @@
     "latitude": 34.070577,
     "longitude": -113.886605,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Midway was a small Yavapai County, Arizona community along the historic Black Canyon Road between Prescott and Phoenix, serving as a mid-point stage stop and watering hole in the central Arizona desert where travelers and livestock could rest before the next stretch of the demanding journey through the Sonoran Desert. The route through Bloody Basin and the Black Canyon corridor was one of Arizona Territory's most important north-south arteries before the railroad arrived, and communities like Midway served a vital if modest role in the frontier transportation network. The Black Canyon Highway (later Interstate 17) eventually made the old stage stops obsolete, and Midway faded into the desert landscape. The surrounding Prescott National Forest and private ranch land makes access to former stage stop sites in this region variable."
   },
   {
     "name": "Swansea, AZ",
@@ -1526,7 +1535,8 @@
     "latitude": 34.172806,
     "longitude": -113.844391,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Swansea was a small La Paz County, Arizona copper mining camp and smelter town along the Bill Williams River in the western Arizona desert, established in 1908 when the Clara Consolidated Gold and Copper Mining Company developed rich copper deposits in the Swansea Hills and built a smelter, housing, a school, and all the infrastructure of a functioning mining town. The smelter processed ore from several local mines through the 1910s before declining copper prices and ore depletion forced closure in 1924, and the buildings were subsequently stripped of usable materials. The ruins of Swansea — including the distinctive smelter stack and building foundations — are accessible via dirt roads on BLM land in the Swansea Wilderness area. The BLM-managed site is one of Arizona's more accessible copper mining ghost towns with visible structural ruins."
   },
   {
     "name": "Klondike, CA",
