@@ -2064,7 +2064,7 @@
     "latitude": 37.3333,
     "longitude": -78.3167,
     "year": 1865,
-    "description": "Rearguard actions during Lee's final retreat, April 6-7, 1865, Virginia.",
+    "description": "On April 6-7, 1865, retreating Confederate forces burned most of the massive High Bridge railroad trestle over the Appomattox River in Prince Edward County, VA, while Union cavalry fought to prevent the destruction, galloping across the lower wagon bridge to attack the Confederate rear guard. The bridge was one of the engineering marvels of Virginia, and its partial destruction slowed but did not stop the Union pursuit. High Bridge Trail State Park in Prince Edward County, VA, features the restored bridge (now a rail-trail pedestrian bridge) 125 feet above the Appomattox River, a stunning historic landmark in an otherwise rural setting. Metal detecting is not permitted in the state park, but surrounding Prince Edward County private farmland along the Appomattox River has produced April 1865 Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2074,7 +2074,7 @@
     "latitude": 37.3579,
     "longitude": -78.7981,
     "year": 1865,
-    "description": "Lee's final battle before surrender to Grant, April 9, 1865, Virginia.",
+    "description": "On April 9, 1865, the Army of Northern Virginia \u2014 reduced to perhaps 28,000 exhausted men \u2014 made its final attempt to break through the Union lines at Appomattox Court House, VA, before Lee sent out the white flag. Grant and Lee met in the parlor of Wilmer McLean's house to sign the terms of surrender that effectively ended the Civil War, four years after the first shots at Fort Sumter. Appomattox Court House National Historical Park preserves the entire village with the McLean House reconstruction, the original brick courthouse, and the surrender field in rural Appomattox County, VA. Metal detecting is strictly prohibited in the national park, but the surrounding private farmland along the retreat route from Petersburg has produced April 1865 Mini\u00e9 balls, discarded equipment, and military hardware \u2014 relics of Lee's last desperate march.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2084,7 +2084,7 @@
     "latitude": 30.6779,
     "longitude": -87.8286,
     "year": 1865,
-    "description": "Union capture of Confederate forts guarding Mobile, March 27-April 9, 1865, Alabama.",
+    "description": "In March-April 1865, Union General E.R.S. Canby besieged Spanish Fort and Fort Blakely on the eastern shore of Mobile Bay, Alabama \u2014 two Confederate strongpoints protecting the city of Mobile. After a three-week siege, Confederate forces evacuated Spanish Fort on April 8, and Fort Blakely fell the following day in a massive Union assault, securing the final surrender of Mobile. The Spanish Fort and Fort Blakely sites in Baldwin County, AL, are partially preserved with earthwork remains; Blakely State Park maintains some of the most intact Civil War earthworks in the South, with hundreds of yards of preserved Confederate defensive lines. Metal detecting is not permitted in Blakely State Park, but the surrounding Baldwin County private land has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2094,7 +2094,7 @@
     "latitude": 32.4074,
     "longitude": -87.0211,
     "year": 1865,
-    "description": "Wilson's cavalry captures vital Confederate manufacturing city, April 2, 1865, Alabama.",
+    "description": "On April 2, 1865, Union cavalry under General James Wilson captured the Confederate industrial city of Selma, AL \u2014 home to the Selma Arsenal, foundries, and naval works that had supplied the Confederacy \u2014 in a battle where Wilson's troopers broke through a six-mile defensive perimeter and overwhelmed the outnumbered Confederate defenders under General Nathan Bedford Forrest. The fall of Selma destroyed the last major Confederate industrial capacity in the Deep South. Selma is a historic city on the Alabama River, and the battlefield terrain is largely within the modern city, with Old Live Oak Cemetery and various historical markers noting the engagement. The broader Dallas County area has produced Civil War cavalry relics on private land from Wilson's Raid through Alabama in the spring of 1865.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2104,7 +2104,7 @@
     "latitude": 32.461,
     "longitude": -84.9877,
     "year": 1865,
-    "description": "Last major battle of the Civil War, April 16, 1865, Georgia.",
+    "description": "On April 16, 1865 \u2014 one week after Lee's surrender at Appomattox \u2014 Union cavalry under General James Wilson attacked and captured Columbus, GA, in the last significant land battle of the Civil War east of the Mississippi, destroying the Confederate naval works, textile mills, and munitions facilities in the city. Confederate Brigadier General Reuben Wright's force made a spirited defense before being overwhelmed at midnight. Columbus, GA, is a modern city on the Chattahoochee River, and the battlefield is within the city limits, with a Heritage Walk and various historical markers noting the final battle's locations. The broader Chattahoochee Valley corridor has produced Civil War cavalry relics on private land.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2114,7 +2114,7 @@
     "latitude": 34.9332,
     "longitude": -88.5219,
     "year": 1862,
-    "description": "Van Dorn's failed attack on Corinth, October 3-4, 1862, Mississippi.",
+    "description": "On October 3-4, 1862, Confederate Generals Van Dorn and Price attacked the Union garrison at Corinth, MS, in a determined two-day assault that broke through the outer Union lines on October 3 before being repulsed with devastating losses on October 4 \u2014 Battery Robinett, defended by the 11th Missouri Infantry, was the scene of some of the most intense fighting. The Confederate defeat ended organized Southern resistance in northern Mississippi. The Corinth Civil War Interpretive Center in Corinth, MS, is an NPS site at the national cemetery interpreting the 1862 siege and battle; Battery Robinett earthworks are preserved nearby. Surrounding Alcorn County private farmland has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware from both the 1862 siege and battle.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2124,7 +2124,7 @@
     "latitude": 34.2576,
     "longitude": -88.7062,
     "year": 1864,
-    "description": "Union victory neutralizing Forrest, July 14-15, 1864, Mississippi.",
+    "description": "On July 14-15, 1864, Union General Andrew Smith's force defeated Nathan Bedford Forrest's Confederate cavalry and supporting infantry at Tupelo (Harrisburg), MS, in a battle specifically designed to keep Forrest occupied and away from Sherman's supply lines during the Atlanta Campaign. Though Smith ultimately withdrew back to Memphis, the battle achieved its strategic goal of neutralizing Forrest for the crucial summer weeks. Tupelo National Battlefield is a small NPS unit in Tupelo, MS, preserving a portion of the battlefield terrain along Highway 6 near the city. Surrounding Lee County private farmland has produced Civil War Mini\u00e9 balls, artillery fragments, and cavalry relics from Forrest's operations in northeastern Mississippi.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2134,7 +2134,7 @@
     "latitude": 35.1085,
     "longitude": -77.0441,
     "year": 1862,
-    "description": "Burnside captures key North Carolina port, March 14, 1862.",
+    "description": "On March 14, 1862, General Ambrose Burnside's amphibious force of 11,000 men landed at Slocum's Creek and attacked the Confederate defensive line south of New Bern, NC, routing the defenders and capturing the city in a battle that gave the Union a major foothold on the North Carolina coast. New Bern remained in Union hands for the rest of the war, serving as a major logistical base for coastal operations. New Bern, NC, is a well-preserved historic city at the confluence of the Neuse and Trent rivers, with numerous antebellum buildings and the New Bern Battlefield Park preserving a portion of the 1862 defensive positions. Metal detecting is not permitted in the preserved battlefield areas, but surrounding Craven County private farmland has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2144,7 +2144,7 @@
     "latitude": 35.8888,
     "longitude": -75.6688,
     "year": 1862,
-    "description": "Union amphibious capture of Roanoke Island, February 7-8, 1862, North Carolina.",
+    "description": "On February 7-8, 1862, General Burnside and Flag Officer Goldsborough captured Roanoke Island, NC, the Confederate stronghold guarding Croatan Sound, with an amphibious assault that overwhelmed the island's defenders and opened the Albemarle Sound to Union naval operations. The fall of Roanoke Island enabled Burnside's subsequent operations against New Bern, Fort Macon, and the North Carolina coastal plain. The Roanoke Island Freedmen's Colony historical site and Fort Huger earthworks preserve portions of this largely forgotten but strategically vital 1862 operation. Dare County's barrier island landscape retains much of its 19th-century character, and the island's beaches and interior have yielded period artifacts during archaeological surveys.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2154,7 +2154,7 @@
     "latitude": 37.4267,
     "longitude": -77.3882,
     "year": 1862,
-    "description": "Confederate guns stop Union naval advance on Richmond, May 15, 1862, Virginia.",
+    "description": "On May 15, 1862, Confederate cannon at Drewry's Bluff on the James River below Richmond, VA, stopped a Union naval flotilla including the famous Monitor from steaming up to attack the Confederate capital \u2014 the high bluff presented firing angles the Monitor's guns couldn't match, and after an hour the Federal gunboats withdrew. The fort at Drewry's Bluff was a critical Confederate position throughout the war, also serving as a prisoner of war facility. Drewry's Bluff, now Fort Darling, is part of Richmond National Battlefield Park in Chesterfield County, VA, with the fort earthworks, gun emplacements, and the James River overlook well preserved. Metal detecting is prohibited in the national park, but surrounding private land along the James River corridor has produced Civil War naval and fort relics.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2164,7 +2164,7 @@
     "latitude": 32.7154,
     "longitude": -79.94,
     "year": 1862,
-    "description": "Confederate repulse of Union assault on James Island, June 16, 1862, South Carolina.",
+    "description": "On June 16, 1862, Union forces under General Henry Benham launched an unauthorized predawn assault on Confederate Tower Battery (Fort Lamar) at Secessionville on James Island, SC, but were repulsed by a smaller Confederate garrison in a costly frontal attack that cost 683 Union casualties against 204 Confederate. The defeat ended Union operations toward Charleston from James Island for the time being. The Secessionville battlefield on James Island, SC (now part of suburban Charleston), has been partially preserved by the Secessionville Historical Society. Metal detecting is not permitted on preserved portions, but this area of the Sea Islands and Charleston Harbor has been historically productive for Civil War coastal fortification relics.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2174,7 +2174,7 @@
     "latitude": 30.2002,
     "longitude": -82.4098,
     "year": 1864,
-    "description": "Largest Civil War battle in Florida; Confederate victory, February 20, 1864.",
+    "description": "On February 20, 1864, Confederate forces under General Joseph Finegan ambushed a Union column advancing from Jacksonville, FL, at Olustee (Ocean Pond) in the pine flatwoods of Baker County, routing the Federals and inflicting over 1,800 casualties in the bloodiest battle ever fought in Florida. Black Union regiments including the 54th Massachusetts and 8th USCT fought with particular distinction during the retreat. Olustee Battlefield Historic State Park near Olustee, FL, preserves the pine flatwood terrain with the original earthwork traces and an annual battle reenactment. Metal detecting is not permitted in the state park, but surrounding Baker County private pineland has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware from this decisive Florida engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2184,7 +2184,7 @@
     "latitude": 30.104,
     "longitude": -84.307,
     "year": 1865,
-    "description": "Confederate defense preventing Union capture of Tallahassee, March 6, 1865, Florida.",
+    "description": "On March 6, 1865, Confederate forces including Florida militia, cadets from the West Florida Seminary (Florida State University's predecessor), and regular troops repulsed a Union landing force attempting to cross the St. Marks River at Natural Bridge \u2014 the last Confederate defensive victory in the Deep South. The victory prevented the capture of Tallahassee, the only Confederate capital east of the Mississippi never occupied by Union forces. Natural Bridge Battlefield Historic State Park near Woodville, FL, preserves the crossing terrain with earthwork remnants and interpretive markers, holding an annual reenactment. Metal detecting is not permitted in the state park, but surrounding Leon and Wakulla County private land has produced Civil War Mini\u00e9 balls and military hardware from the engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2194,7 +2194,7 @@
     "latitude": 37.4333,
     "longitude": -77.25,
     "year": 1864,
-    "description": "African American troops earn 14 Medals of Honor, September 29, 1864, Virginia.",
+    "description": "On September 29, 1864, thirteen Black Union soldiers earned the Medal of Honor in the assault on New Market Heights north of the James River at Richmond, VA \u2014 one of the largest single-day awards of the Medal of Honor to Black soldiers in American history. The assault by USCT (United States Colored Troops) under General David Birney broke the Confederate line after withering close-range fire, demonstrating beyond question the combat effectiveness of Black Union troops. The New Market Heights battlefield in Henrico County, VA, is preserved as a Richmond National Battlefield Park unit. Metal detecting is prohibited in the national park, but surrounding Henrico County private land has produced Civil War Mini\u00e9 balls, USCT military hardware, and military equipment from the September 1864 Richmond operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2204,7 +2204,7 @@
     "latitude": 37.4333,
     "longitude": -77.25,
     "year": 1864,
-    "description": "Butler's attack north of the James River, September 29-October 2, 1864, Virginia.",
+    "description": "On September 29-30, 1864, Union forces attacked the Confederate defenses north of the James River in a combined operation at Chaffin's Farm and New Market Heights, capturing Fort Harrison in one of the boldest Union tactical successes of the Petersburg Campaign and threatening the outer Richmond defenses. Confederate counterattacks on September 30 failed to retake Fort Harrison, which was held by the Union for the rest of the war as a key position in the expanding Richmond-Petersburg siege lines. Richmond National Battlefield Park's Fort Harrison unit in Henrico County, VA, preserves the earthworks with hiking trails along the extensive fortifications. Metal detecting is prohibited in the national park, but surrounding private land has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2214,7 +2214,7 @@
     "latitude": 37.1833,
     "longitude": -77.5833,
     "year": 1864,
-    "description": "Union attempt to cut Lee's supply line, October 27-28, 1864, Virginia.",
+    "description": "On October 27-28, 1864, Grant launched another extension of his siege lines at Petersburg, attempting to cut the Boydton Plank Road \u2014 the last Confederate supply route into the city \u2014 in a major operation involving 43,000 Union troops. Confederate forces under Hampton and Heth counterattacked and forced the Union forces back, but the operation succeeded in extending the siege lines and maintaining pressure. The Boydton Plank Road battlefield in Dinwiddie County, VA, is partially preserved within Petersburg National Battlefield's western units. Metal detecting is prohibited in the national park areas, but surrounding private farmland in Dinwiddie County has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware from the late 1864 siege operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2224,7 +2224,7 @@
     "latitude": 32.6379,
     "longitude": -80.9098,
     "year": 1864,
-    "description": "Confederate victory blocking Union march, November 30, 1864, South Carolina.",
+    "description": "On November 30, 1864, a Union force attempting to cut the railroad between Charleston and Savannah was repulsed at Honey Hill (Grahamville), SC, in a battle fought through dense Carolina lowcountry vegetation that negated Union numerical superiority. The Confederate defenders, including a small force of regulars and militia, held their earthwork position against repeated assaults. The Honey Hill battlefield near Ridgeland, SC, in Hampton County is largely private farmland and woodland in the South Carolina coastal plain. The surrounding coastal plain private land has produced Civil War Mini\u00e9 balls, artillery fragments, and military hardware from the operations supporting Sherman's March through the Carolinas.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2234,7 +2234,7 @@
     "latitude": 38.3032,
     "longitude": -77.4605,
     "year": 1863,
-    "description": "Sedgwick attacks Marye's Heights from below, May 3, 1863, Virginia.",
+    "description": "The Second Battle of Fredericksburg on May 3, 1863 \u2014 part of the Chancellorsville Campaign \u2014 saw Sedgwick's Union Sixth Corps storm the famous Marye's Heights that had slaughtered thousands the previous December, this time capturing the position relatively quickly as the Confederate force was thinner and surprised by the determination of the attack. Sedgwick then moved toward Chancellorsville before being stopped at Salem Church. Fredericksburg and Spotsylvania National Military Park preserves Marye's Heights, the Sunken Road and its famous stone wall, and the National Cemetery with its thousands of Union graves. Surrounding Stafford County private land has produced remarkable quantities of Civil War relics from the multiple engagements at Fredericksburg in 1862 and 1863.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2244,7 +2244,7 @@
     "latitude": 38.2,
     "longitude": -77.5833,
     "year": 1864,
-    "description": "Twenty hours of continuous combat at the Mule Shoe salient, May 12, 1864, Virginia.",
+    "description": "On May 12, 1864, the Union assault on the Mule Shoe salient at Spotsylvania Court House reached its climax at the 'Bloody Angle' \u2014 a jutting corner of Confederate earthworks where Union and Confederate troops fought hand-to-hand across log parapets for nearly 20 hours in pouring rain, with men pushing bayonets through the logs and using rifle butts as clubs in some of the most savage close-quarters combat of the entire war. The log breastwork at the Bloody Angle was reportedly knee-deep in bodies. Fredericksburg and Spotsylvania National Military Park preserves the original earthworks of the Bloody Angle in Spotsylvania County, VA, with a walking trail along the parapets \u2014 some of the most evocative surviving Civil War fortifications in America. Metal detecting is strictly prohibited, but surrounding private land has produced extraordinary quantities of Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2254,7 +2254,7 @@
     "latitude": 38.0,
     "longitude": -77.7,
     "year": 1864,
-    "description": "Lee traps Grant in a V-formation; Grant retreats, May 23-26, 1864, Virginia.",
+    "description": "On May 23-26, 1864, Grant's army crossed the North Anna River in central Virginia and found Lee's army in a brilliant inverted V-shaped defensive position that threatened to destroy any Union force that crossed the river in two separated columns. But Lee fell ill at this critical moment and could not coordinate the offensive stroke that might have devastated Grant's army; Grant disengaged and moved around Lee's flank once more. The North Anna battlefield in Hanover County, VA, is partially preserved at Hanover County's North Anna Battlefield Park and at Jericho Mill, with earthwork traces visible in the forest. Surrounding private land has produced Civil War Mini\u00e9 balls and military hardware from the May 1864 Overland Campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2264,7 +2264,7 @@
     "latitude": 36.99,
     "longitude": -79.94,
     "year": 1865,
-    "description": "Wilson's cavalry sweeps through Alabama and Georgia, March-April 1865.",
+    "description": "In March-April 1865, Union General James Wilson led 13,500 cavalry in a devastating raid through Alabama and Georgia \u2014 the largest cavalry operation in the history of the Western Hemisphere \u2014 destroying Selma, Montgomery, Columbus (GA), and dozens of Confederate industrial and supply facilities. Wilson's Raid effectively ended Confederate industrial capacity in the Deep South as Lee was surrendering to the north. The raid route crosses hundreds of miles through Alabama and Georgia, with historical markers in multiple communities along the way. The raid corridor has produced Civil War cavalry relics on private land throughout Alabama and Georgia, including cavalry weapons, equipment, and camp debris.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
