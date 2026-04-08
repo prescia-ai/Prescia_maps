@@ -1364,7 +1364,8 @@
     "latitude": 38.841938,
     "longitude": -107.122827,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Floresta was a small coal mining community in Huerfano County, Colorado on the eastern slope of the Sangre de Cristo Mountains near Walsenburg, established in the late nineteenth century to house miners working the rich coal seams of the Trinidad coalfield that powered southern Colorado's industrial development. The Colorado coalfields were the scene of intense labor strife in the early twentieth century, culminating in the 1913-1914 Coal Field War and the Ludlow Massacre (at a nearby site), which reshaped American labor law and the national conversation about worker rights. Floresta and its neighboring coal camps declined as coal production consolidated into larger operations and eventually diesel replaced coal in railroad operations. The Huerfano County landscape today retains old coal mine infrastructure visible from public roads."
   },
   {
     "name": "Woodstock, CO",
@@ -1372,7 +1373,8 @@
     "latitude": 38.617699,
     "longitude": -106.392061,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Woodstock was a small Huerfano County, Colorado coal mining community in the Cucharas River valley on the eastern slope of the Sangre de Cristo Mountains, one of several coal camp communities that served the southern Colorado coalfields in the late nineteenth and early twentieth centuries. The Colorado coal country communities were characterized by intense ethnicity — Italian, Slavic, Hispanic, and other immigrant groups filling the ranks of the mines — and fierce labor-management conflict that marked the region's history. Coal Camp life in Huerfano County was managed by company control of housing, stores, and political life until the labor reforms that followed the Ludlow Massacre of 1914. The remaining buildings and infrastructure of Woodstock and similar Huerfano County coal camps are largely on private mining land."
   },
   {
     "name": "Pomme De Terre, MN",
@@ -1380,7 +1382,8 @@
     "latitude": 46.064493,
     "longitude": -95.910623,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pomme De Terre was a small Kandiyohi County, Minnesota farming community in the west-central Minnesota prairie that developed as an agricultural service point during the great homesteading era of the 1870s-1880s, briefly supporting a post office and local commerce for surrounding Scandinavian and German immigrant farm families. The community faded as the county's commercial activity consolidated in larger centers like Willmar, which became Kandiyohi County's dominant railroad town. The site today is private farmland in the productive west-central Minnesota agricultural landscape. Former Minnesota homestead communities in this region can yield Scandinavian immigrant-era household items and late Victorian coinage with landowner permission."
   },
   {
     "name": "Cahaba, AL",
@@ -1388,7 +1391,8 @@
     "latitude": 32.316806,
     "longitude": -87.101379,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cahaba was Alabama's first state capital, established at the confluence of the Cahaba and Alabama rivers in Dallas County in 1820 and serving as the state seat of government until 1826 when flooding forced the capital to be relocated to Tuscaloosa. The town survived as a river port and market center through the antebellum era, becoming a significant cotton shipping point before the Civil War, but was severely damaged by floods and the war's aftermath and never fully recovered. Today the site is preserved as the Cahaba Archaeological Site and is managed by the Alabama Historical Commission, with regular public access. The rich history of this former state capital — including its colonial Spanish, Creek Indian, and antebellum layers — makes Cahaba one of Alabama's most significant archaeological destinations."
   },
   {
     "name": "Kennicott, AK",
@@ -1396,7 +1400,8 @@
     "latitude": 61.486389,
     "longitude": -142.886389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kennicott was a National Historic Landmark copper mining town in Wrangell-St. Elias National Park in Alaska, built by the Kennecott Copper Corporation starting in 1903 and operating until 1938, producing over $200 million in copper from the incredibly rich Bonanza and Jumbo ore bodies during its 35 years of operation. The remote Wrangell Mountains location required building the Copper River and Northwestern Railway — one of the most difficult railroad construction projects in American history — just to get the ore to tidewater at Cordova. When the ore ran out in 1938, the entire operation was shut down virtually overnight, and Kennicott and the nearby worker town of McCarthy were abandoned with much of the equipment still in place. Today the site is a remarkable preserved industrial heritage site within the national park, accessible by a long gravel road through the Wrangell Mountains."
   },
   {
     "name": "Bannack, MT",
@@ -1404,7 +1409,8 @@
     "latitude": 45.161034,
     "longitude": -112.995591,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bannack was Montana's first territorial capital and a significant gold rush town in Beaverhead County, established after John White's gold discovery on Grasshopper Creek in 1862 set off a stampede of prospectors to this remote corner of what would become Montana Territory. The rough-and-tumble camp quickly developed a dark reputation — Henry Plummer, the town's elected sheriff, was in fact the leader of the 'Innocents,' a gang of road agents responsible for over 100 murders before a vigilante committee hanged him in January 1864. Bannack is now Montana's finest ghost town, preserved as Bannack State Park with over 60 original structures including the hotel, jail, gallows, and Masonic Hall still standing. Metal detecting is prohibited within the state park, but the site's remarkable preservation and rich history make it one of Montana's premier ghost town destinations."
   },
   {
     "name": "South Pass City, WY",
@@ -1412,7 +1418,8 @@
     "latitude": 42.468288,
     "longitude": -108.799836,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "South Pass City was Wyoming's most significant gold mining ghost town, a booming camp in Fremont County on the South Pass of the Continental Divide in the Wind River Mountains, where gold discoveries in 1867-1869 briefly drew thousands of miners to this extreme and remote location and created one of Wyoming's first significant towns. The town had over 1,000 residents at its peak, with saloons, hotels, and a drug store, and was home to Wyoming's landmark women's suffrage movement — Esther Hobart Morris, who advocated for Wyoming's 1869 Women's Suffrage Act, lived here. The gold quickly played out and South Pass City declined to near-ghost town status within a few years, though it remained inhabited sporadically. Today South Pass City State Historic Site preserves over 30 original structures and interprets the gold rush and women's suffrage history."
   },
   {
     "name": "Thurmond, WV",
@@ -1420,7 +1427,8 @@
     "latitude": 37.961502,
     "longitude": -81.082322,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Thurmond was a thriving West Virginia coal town in Fayette County in the New River Gorge that at its peak in the early twentieth century was the largest depot on the Chesapeake and Ohio Railway's New River line, processing millions of tons of New River coalfield coal and generating more freight revenue than any other C&O station in the system. The town was notable for its non-stop gambling, prostitution, and saloons — Thurmond had a famously rowdy reputation even by coal town standards — and one poker game allegedly ran continuously for 14 years. The population declined as coal production shifted and rail operations modernized, and by the time New River Gorge National Park was established in 1978, Thurmond had fewer than a dozen residents. The historic C&O depot and a handful of structures survive as part of the national park's interpretive story."
   },
   {
     "name": "Bulowville, FL",
@@ -1428,7 +1436,8 @@
     "latitude": 29.430397,
     "longitude": -81.153541,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bulowville was a small plantation-era and frontier community in Flagler County, Florida that existed along the Halifax River coastal region of northeast Florida in the antebellum period, connected to the Hernandez and Bulow sugar plantation operations that dominated the northeast Florida coastal economy in the 1820s-1830s. The community and surrounding plantations were destroyed during the Second Seminole War when Seminole warriors torched the plantations along Florida's east coast in 1836, forcing the abandonment of the entire coastal agricultural economy. The ruins of the Bulow Plantation sugar mill are preserved at Bulow Plantation Ruins Historic State Park, one of Florida's finest antebellum industrial ruins. The park and surrounding Flagler County coast is accessible, with the sugar mill ruins offering a tangible connection to Florida's violent plantation era."
   },
   {
     "name": "New Salem, IL",
@@ -1436,7 +1445,8 @@
     "latitude": 39.977217,
     "longitude": -89.843173,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "New Salem was an 1830s Illinois frontier village in Menard County along the Sangamon River where Abraham Lincoln lived from 1831 to 1837, clerking in a store, serving as postmaster, studying law, and serving in the state legislature before relocating to Springfield to pursue his legal and political career. The village was reconstructed in the 1930s as Lincoln's New Salem State Historic Site, with 12 reconstructed log structures based on historical records and archaeology representing the town at its 1830s peak. The original New Salem declined quickly after Lincoln left — the Sangamon River proved not to be navigable as hoped, and the county seat went to nearby Petersburg — making it essentially a ghost town by 1840. The state historic site offers living history programs and archaeological interpretation of this important Lincoln heritage site."
   },
   {
     "name": "Markham, FL",
