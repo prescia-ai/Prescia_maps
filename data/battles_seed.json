@@ -540,16 +540,6 @@
     "confidence": 0.95
   },
   {
-    "name": "Battle of Lundy's Lane",
-    "latitude": 43.1006,
-    "longitude": -79.0603,
-    "year": 1814,
-    "description": "One of the bloodiest battles of the War of 1812, July 25, 1814, near Niagara Falls.",
-    "type": "battle",
-    "source": "seed:battles",
-    "confidence": 0.95
-  },
-  {
     "name": "Battle of Kings Mountain",
     "latitude": 35.1384,
     "longitude": -81.4216,
@@ -610,11 +600,11 @@
     "confidence": 0.95
   },
   {
-    "name": "Battle of Spotsylvania",
-    "latitude": 38.2000,
-    "longitude": -77.5833,
-    "year": 1864,
-    "description": "Brutal fighting during Grant's Overland Campaign, May 8-21, 1864, Virginia.",
+    "name": "Battle of Fort Wagner",
+    "latitude": 32.7430,
+    "longitude": -79.8660,
+    "year": 1863,
+    "description": "54th Massachusetts Infantry assault on Confederate Fort Wagner, July 18, 1863, Morris Island, South Carolina.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
