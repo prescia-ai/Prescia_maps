@@ -3,11 +3,13 @@
 run_all.py — Prescia Maps master pipeline runner with resume support.
 
 Runs the full data pipeline in sequence:
-  1. scripts/USminesscraper.py       — US mines (USGS MRDS)
-  2. scripts/Ghosttownsscraper.py    — Ghost towns & abandoned places
-  3. scripts/Historicscraper.py      — Historic places, battles, forts
-  4. scripts/stitch_routes.py        — Route stitching (skipped if missing)
-  5. scripts/enrich_locations.py     — Enrichment pass (Wikipedia, reclassify)
+  1. scripts/USminesscraper.py           — US mines (USGS MRDS)
+  2. scripts/Ghosttownsscraper.py        — Ghost towns & abandoned places
+  3. scripts/Historicscraper.py          — Historic places, battles, forts (+ Wikidata)
+  4. scripts/load_battles_seed.py        — 371 pre-verified US battle locations
+  5. scripts/load_stagecoach_geojson.py  — Stagecoach route LineString features
+  6. scripts/stitch_routes.py            — Route stitching (skipped if missing)
+  7. scripts/enrich_locations.py         — Enrichment pass (Wikipedia, reclassify)
 
 Resume support:
   A checkpoint file (pipeline_checkpoint.json) tracks the status of each step.
@@ -56,16 +58,22 @@ SCRIPTS = {
     "mines": REPO_ROOT / "scripts" / "USminesscraper.py",
     "ghosttowns": REPO_ROOT / "scripts" / "Ghosttownsscraper.py",
     "historic": REPO_ROOT / "scripts" / "Historicscraper.py",
+    "battles": REPO_ROOT / "scripts" / "load_battles_seed.py",
+    "stagecoach": REPO_ROOT / "scripts" / "load_stagecoach_geojson.py",
     "stitch": REPO_ROOT / "scripts" / "stitch_routes.py",
     "enrich": REPO_ROOT / "scripts" / "enrich_locations.py",
 }
 
-STEP_ORDER: List[str] = ["mines", "ghosttowns", "historic", "stitch", "enrich"]
+STEP_ORDER: List[str] = [
+    "mines", "ghosttowns", "historic", "battles", "stagecoach", "stitch", "enrich",
+]
 
 STEP_LABELS: Dict[str, str] = {
     "mines": "USminesscraper",
     "ghosttowns": "Ghosttownsscraper",
     "historic": "Historicscraper",
+    "battles": "load_battles_seed",
+    "stagecoach": "load_stagecoach_geojson",
     "stitch": "stitch_routes",
     "enrich": "enrich_locations",
 }
@@ -75,9 +83,11 @@ STATE_STEPS = frozenset(["mines", "ghosttowns", "historic"])
 # Steps that accept --limit
 LIMIT_STEPS = frozenset(["mines", "ghosttowns", "historic", "enrich"])
 # Steps that accept --fresh
-FRESH_STEPS = frozenset(["mines", "ghosttowns", "historic", "stitch", "enrich"])
+FRESH_STEPS = frozenset(["mines", "ghosttowns", "historic", "battles", "stitch", "enrich"])
 # Steps that accept --dry-run
-DRY_RUN_STEPS = frozenset(["mines", "ghosttowns", "historic", "stitch", "enrich"])
+DRY_RUN_STEPS = frozenset([
+    "mines", "ghosttowns", "historic", "battles", "stagecoach", "stitch", "enrich",
+])
 
 # ---------------------------------------------------------------------------
 # ANSI helpers
@@ -461,7 +471,7 @@ def parse_args() -> argparse.Namespace:
         dest="skip",
         help=(
             "Skip a named step. Can be repeated. "
-            "Step names: mines, ghosttowns, historic, stitch, enrich."
+            "Step names: mines, ghosttowns, historic, battles, stagecoach, stitch, enrich."
         ),
     )
     parser.add_argument(
