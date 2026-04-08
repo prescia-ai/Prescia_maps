@@ -84,7 +84,7 @@ logger = setup_logging("Ghosttownsscraper")
 # Constants
 # ---------------------------------------------------------------------------
 
-GNIS_NATIONAL_FILE_URL = "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Topical/AllNames_National_Text.zip"
+GNIS_NATIONAL_FILE_URL = "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/DomesticNames/DomesticNames_National_Text.zip"
 GNIS_SOURCE = "gnis"
 GNIS_CONFIDENCE = 0.85
 
@@ -206,7 +206,7 @@ def _extract_pipe_file(zip_bytes: bytes) -> io.TextIOWrapper:
         if not txt_names:
             raise ValueError("No .txt file found inside the GNIS ZIP archive.")
         data = zf.read(txt_names[0])
-    return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8", errors="replace")
+    return io.TextIOWrapper(io.BytesIO(data), encoding="utf-8-sig", errors="replace")
 
 
 def _detect_gnis_delimiter(stream: io.TextIOWrapper) -> str:
@@ -585,16 +585,16 @@ async def run(
                         total_inserted += len(batch)
 
             completed_sources.add("gnis")
-        save_checkpoint(ckpt_path, {
-            "completed_sources": list(completed_sources),
-            "stats": {
-                "processed": total_processed,
-                "inserted": total_inserted,
-                "skipped_dup": skipped_dup,
-                "skipped_blocked": skipped_blocked,
-            },
-        })
-        logger.info("GNIS import complete: %d inserted.", total_inserted)
+            save_checkpoint(ckpt_path, {
+                "completed_sources": list(completed_sources),
+                "stats": {
+                    "processed": total_processed,
+                    "inserted": total_inserted,
+                    "skipped_dup": skipped_dup,
+                    "skipped_blocked": skipped_blocked,
+                },
+            })
+            logger.info("GNIS import complete: %d inserted.", total_inserted)
     else:
         logger.info("GNIS source already completed (checkpoint). Skipping.")
 
