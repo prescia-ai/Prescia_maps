@@ -1065,6 +1065,1210 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
         "source": "obsidian_urbex_churches",
         "confidence": 0.85,
     },
+    {
+        "name": "Modoc Mission Church (Wyandotte)",
+        "type": "abandoned_church",
+        "latitude": 36.804,
+        "longitude": -94.6952,
+        "description": (
+            "The Modoc Mission Church near Wyandotte in Ottawa County, Oklahoma, was established to "
+            "serve the Modoc tribe who were forcibly relocated to Indian Territory following the "
+            "Modoc War of 1872–73 in California, making it a poignant symbol of the cultural "
+            "resilience of a people who endured forced removal from their homeland in the Klamath "
+            "Basin. The mission church served as a spiritual anchor for the small Modoc community "
+            "within the broader mosaic of relocated tribes in the old Quapaw Agency region of "
+            "northeastern Oklahoma, offering worship and community gatherings in a vernacular frame "
+            "building typical of late nineteenth-century mission architecture. As the Modoc "
+            "population remained small and geographically dispersed, the congregation dwindled over "
+            "the twentieth century and the building fell into disuse, leaving it as a weathered "
+            "historic remnant in Ottawa County. The church is documented by heritage organizations "
+            "as one of the few physical traces of the relocated Modoc community in northeastern "
+            "Oklahoma."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Second Presbyterian Church (Tulsa)",
+        "type": "abandoned_church",
+        "latitude": 36.1515,
+        "longitude": -95.9635,
+        "description": (
+            "The Second Presbyterian Church of Tulsa, Oklahoma, was organized in 1917 as a "
+            "congregation spun off from the rapidly growing First Presbyterian Church, establishing "
+            "its 'White Church' at the corner of Zunis Avenue and Barton Street on October 21, 1917, "
+            "in a white-painted wood-frame and stucco structure that became a modest landmark in the "
+            "surrounding residential neighborhood. The congregation flourished through the oil-boom "
+            "decades of the 1920s and 1930s, serving a working-class and middle-class Presbyterian "
+            "community in south Tulsa, but declined as the neighborhood demographics shifted "
+            "following construction of the Crosstown Expressway and mid-century suburban migration. "
+            "The church was reportedly abandoned by 2019 and the building has since drawn attention "
+            "from preservation advocates and urban explorers who document its deteriorating but "
+            "still-standing form in a changing section of Tulsa. Architectural and community "
+            "documentation is maintained by the Abandoned Atlas Foundation and Abandoned Oklahoma."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Earlsboro Church of Christ",
+        "type": "abandoned_church",
+        "latitude": 35.3281,
+        "longitude": -96.8014,
+        "description": (
+            "The Earlsboro Church of Christ is a two-story buff-brick building with a bell tower and "
+            "parapeted gable roof constructed in 1929 in Earlsboro, Pottawatomie County, Oklahoma, "
+            "under the leadership of local resident J.A. Ingram at a cost of approximately $25,000 — "
+            "a remarkable investment for a small town that had boomed during the oil era and earlier "
+            "as a frontier whisky town on the edge of Indian Territory. The auditorium could seat "
+            "500 worshippers and the building included Sunday school rooms, a kitchen, and a "
+            "basement, quickly becoming the social and spiritual center of Earlsboro's community. "
+            "Attendance declined through the latter twentieth century as rural depopulation eroded "
+            "the congregation, and the church was formally closed by the late 1990s or early 2000s; "
+            "former members salvaged pews, pulpit chairs, and a communion tray, while the "
+            "stained-glass windows were removed for safekeeping in the 2010s. The weathered shell "
+            "now stands as an atmospheric ruin frequently photographed by urban explorers and "
+            "featured on Only In Your State as one of Oklahoma's most evocative abandoned religious "
+            "sites."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Okfuskee Sunday School",
+        "type": "abandoned_church",
+        "latitude": 35.4441,
+        "longitude": -96.2745,
+        "description": (
+            "The Okfuskee Sunday School is an abandoned rural church and community meeting hall in "
+            "Okfuskee County, central Oklahoma, used through the 1950s when records indicate only a "
+            "handful of regular worshippers attending, making it a vivid time capsule of the "
+            "declining small rural congregation phenomenon that swept across the Oklahoma plains as "
+            "agricultural mechanization and rural depopulation accelerated after World War II. The "
+            "interior was found largely intact by explorers decades after closure, with original "
+            "attendance boards, the pulpit, an offering plate, and a flooded basement containing "
+            "artifacts including old trophies and a vintage refrigerator, suggesting that the "
+            "community used the building for secular as well as religious purposes. The building is "
+            "part of the larger pattern of Okfuskee County's abandoned structures rooted in the "
+            "post-Depression rural exodus and the decline of once-thriving agricultural hamlets. "
+            "Abandoned Oklahoma and the Abandoned Atlas Foundation have documented the site "
+            "extensively in photography and video."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Cache Creek Mission (Apache)",
+        "type": "abandoned_church",
+        "latitude": 34.8955,
+        "longitude": -98.3634,
+        "description": (
+            "The Cache Creek Mission near Apache in Caddo County, southwestern Oklahoma, was one of "
+            "the early Baptist mission stations established for the Kiowa, Comanche, and Apache "
+            "tribes of the southern Plains following their confinement to the reservation created by "
+            "the Medicine Lodge Treaty of 1867, serving both as a house of worship and a community "
+            "outreach center in an era when federal Indian policy promoted Christianization "
+            "alongside land allotment. The mission stood near Cache Creek, a tributary of the "
+            "Washita River in the former Kiowa-Comanche-Apache Reservation lands, in a landscape "
+            "that saw profound disruption as the reservation was broken up under the Dawes Act "
+            "allotments of the early twentieth century. As the surrounding Caddo County developed "
+            "into an agricultural district and Native American congregants dispersed, the original "
+            "mission church fell into disuse and gradual structural deterioration. The site "
+            "represents the complex religious history of the southern Plains missions and their role "
+            "in the cultural transitions of the late nineteenth and early twentieth centuries."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "First Baptist Church of Clearview",
+        "type": "abandoned_church",
+        "latitude": 35.3986,
+        "longitude": -96.1875,
+        "description": (
+            "The First Baptist Church of Clearview served the historic all-Black town of Clearview "
+            "in Okfuskee County, Oklahoma, one of more than fifty African-American townships "
+            "established in Oklahoma Territory and Indian Territory before statehood, founded in "
+            "1903 by freedmen seeking self-determination, economic independence, and freedom from "
+            "the racial violence and Jim Crow oppression prevalent elsewhere in the "
+            "post-Reconstruction South. The church was the primary spiritual institution for "
+            "Clearview's community of Black entrepreneurs, farmers, and educators who built a town "
+            "complete with a hotel, brick school, print shop, and two churches served by the Fort "
+            "Smith and Western Railroad. As the Great Depression decimated cotton prices and rural "
+            "depopulation accelerated through the mid-twentieth century, Clearview's population "
+            "collapsed from its peak and historic structures including the church building were lost "
+            "to demolition or deterioration. Clearview survives with a tiny population (41 in 2020) "
+            "as a recognized symbol of Black entrepreneurship and resilience, with the Oklahoma "
+            "African American Educators Hall of Fame located there."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "First Methodist Church (Sparks, OK)",
+        "type": "abandoned_church",
+        "latitude": 35.6114,
+        "longitude": -96.8189,
+        "description": (
+            "The First Methodist Church in Sparks, Lincoln County, Oklahoma, served the railroad hub "
+            "community that grew at the junction of the Eastern Oklahoma Railway and the Fort Smith "
+            "and Western Railroad from 1902, when Sparks rapidly developed with over fifty "
+            "businesses, banks, newspapers, schools, and several churches drawing settlers to land "
+            "opened following the 1891 Sac and Fox Reservation land run. The town's population "
+            "peaked at 503 in 1907 before entering a long decline driven by falling farm prices "
+            "after World War I, the Great Depression, closure of the railroad in 1939, and "
+            "shuttering of the schools by the 1990s, reducing Sparks to a near-ghost community of "
+            "only 122 residents by 2020. The Methodist church building and other surviving "
+            "structures — including the Masonic lodge and Farmers and Merchants Bank — now stand as "
+            "relics in a community that still has a few inhabited homes and a post office. Abandoned "
+            "Oklahoma has documented Sparks's surviving and abandoned structures as a case study of "
+            "the vanishing Oklahoma railroad town."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Prairie Grove School/Church (Stratford)",
+        "type": "abandoned_church",
+        "latitude": 34.7953,
+        "longitude": -96.9603,
+        "description": (
+            "The Prairie Grove School was constructed in 1938 as a Works Progress Administration "
+            "project west of Stratford in Garvin County, Oklahoma, at a cost of $5,300 from WPA "
+            "funds plus $2,563 in local contributions, built with a stage, moveable partition, water "
+            "fountain, and a basketball court as a multi-purpose community facility for the rural "
+            "farm families of the Prairie Grove area. The school consolidated with Stratford public "
+            "schools in 1953 due to declining enrollment, and the building was repurposed as the "
+            "Prairie Grove Church, serving a small congregation as a community hub for another two "
+            "decades until attendance fell away in the early 1970s. Since abandonment the building "
+            "has deteriorated severely over five decades of Oklahoma weather and deferred "
+            "maintenance, now reduced to a partially collapsed ruin described by preservationists as "
+            "a characteristic but rapidly disappearing example of Depression-era WPA vernacular "
+            "construction in rural Oklahoma. The Abandoned Oklahoma and Abandoned Atlas Foundation "
+            "websites have documented its ongoing decay."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Eden Baptist Church (Hennessey)",
+        "type": "abandoned_church",
+        "latitude": 36.1782,
+        "longitude": -97.8488,
+        "description": (
+            "Eden Baptist Church northeast of Hennessey in Kingfisher County, Oklahoma, was "
+            "dedicated on September 16, 1928, when a modern brick building replaced the original "
+            "1917 frame church and the congregation renamed it from Valley Center Baptist to Eden "
+            "Baptist, quickly earning the nickname 'The City Church in the Country' for its "
+            "impressive auditorium, basement rooms, kitchen, and notable steeple topped with an "
+            "angel statue. The brick structure represented the prosperity of the surrounding "
+            "wheat-farming community in the 1920s, but the Dust Bowl and Great Depression devastated "
+            "the agricultural economy, and as rural populations declined through the mid-century the "
+            "congregation shrank until the church closed on September 30, 1973, after which the "
+            "property was transferred to the Hennessey First Baptist Church. The angel statue was "
+            "stolen from the steeple in the 1990s, and subsequent storms collapsed the north wall "
+            "and destroyed the steeple, leaving the brick shell standing in the prairie as a "
+            "poignant monument to the rise and fall of the Oklahoma farming frontier."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Saddle Mountain Mission (Cache)",
+        "type": "abandoned_church",
+        "latitude": 34.6359,
+        "longitude": -98.562,
+        "description": (
+            "The Saddle Mountain Mission was founded in 1903 near Mountain View in Kiowa County, "
+            "Oklahoma, by Isabel Crawford, a Canadian Baptist missionary who communicated with her "
+            "Kiowa congregation partly through Plains Indian Sign Language due to her near-deafness, "
+            "making the mission notable for pioneering a model of native Christian leadership that "
+            "allowed non-ordained, non-White ministers elected directly by the congregation — a "
+            "radical departure from the paternalistic norm of the era. The mission served as a "
+            "center of independent Kiowa and Comanche Christian identity for six decades, producing "
+            "numerous native missionaries and pastors and maintaining a cemetery that remains active "
+            "with descendants of the original congregation. Internal disputes about church "
+            "governance led to the mission's closure in the early 1960s, and in 1963 the original "
+            "church building was physically relocated approximately 30 miles south to Eagle Park "
+            "near Cache, Oklahoma, where it stands abandoned and deteriorating in the former "
+            "amusement park grounds. The Saddle Mountain Mission is listed on Preservation "
+            "Oklahoma's Most Endangered Places and is recognized as a significant site in the "
+            "history of Native American Christianity."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Bradford Christian School and Pryor Christian Center",
+        "type": "abandoned_church",
+        "latitude": 36.3084,
+        "longitude": -95.3169,
+        "description": (
+            "Bradford Christian School and the Pryor Christian Center operated as a combined church "
+            "and private school campus in Pryor, Mayes County, Oklahoma, founded in 1987 by John and "
+            "Brenda Alley within the Pryor Christian Center building, serving the evangelical "
+            "community of northeastern Oklahoma with both religious services and K-12 Christian "
+            "education until the school separated and relocated to a new site in 2000. The remaining "
+            "building continued as the Pryor Christian Center until the congregation dissolved and "
+            "the property was abandoned, with the building later suffering a fire that resulted in "
+            "significant structural damage before it was eventually demolished. The site represents "
+            "the pattern of independent evangelical church-school campuses that proliferated in "
+            "Oklahoma's small cities during the 1980s religious revival and subsequently declined "
+            "with congregation splits and economic pressures. Abandoned Oklahoma documented the "
+            "building's deteriorated state before its eventual demolition."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Victory Baptist Church (Pershing)",
+        "type": "abandoned_church",
+        "latitude": 36.5933,
+        "longitude": -96.2753,
+        "description": (
+            "Victory Baptist Church in Pershing, Osage County, northern Oklahoma, is a "
+            "stone-construction church building estimated to have been built in the early to "
+            "mid-1920s, with records from 1924 showing approximately sixty attendees drawn from "
+            "nearby communities including Pawhuska and Nelogoney under Pastor Nail, followed by Rev. "
+            "James Gore in 1934. The congregation remained active through the rural prosperity of "
+            "the 1920s and the hardship of the Depression and Dust Bowl years, but declining "
+            "membership and a failing roof that was never repaired led to the church's closure "
+            "during the 1960s, after which the building stood abandoned and roofless. The adjacent "
+            "stone parsonage, constructed from the same local stone as the church, appears to have "
+            "continued as a residence or storage structure, surviving in better condition than the "
+            "church itself. The abandoned shell has been documented by Abandoned Oklahoma as an "
+            "iconic rural relic in the rolling hills of Osage County."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "First Methodist Church, Jermyn, Texas",
+        "type": "abandoned_church",
+        "latitude": 33.2618,
+        "longitude": -98.3919,
+        "description": (
+            "Erected in 1909 as the first church in the small Jack County ranching town of Jermyn, "
+            "this Methodist Episcopal building was designated a Recorded Texas Historic Landmark in "
+            "1968. As Jermyn's population shrank from its early-20th-century peak, the congregation "
+            "dissolved and the church was quietly abandoned. Original furnishings reportedly remain "
+            "inside the weathered frame structure."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "St. Barbara's Catholic Church Ruins, Thurber, Texas",
+        "type": "abandoned_church",
+        "latitude": 32.487,
+        "longitude": -98.421,
+        "description": (
+            "Built in 1897 to serve the predominantly Italian and Polish Catholic coal miners of "
+            "Erath County's company town of Thurber, which at its peak housed nearly 10,000 "
+            "residents. When the Texas & Pacific Coal Company converted operations to oil and "
+            "relocated its workforce in 1921, Thurber was emptied within months; demolition crews "
+            "left the church standing out of reverence. Only brick ruins and a museum chimney mark "
+            "the site today."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Mound Prairie Lutheran Church, Alto, Texas",
+        "type": "abandoned_church",
+        "latitude": 31.671,
+        "longitude": -95.08,
+        "description": (
+            "Founded in 1854 by Swedish immigrants in Cherokee County, this is one of the oldest "
+            "Lutheran congregations in Texas, established by settlers who came with the Swedish "
+            "emigration movement led by Gustaf Unonius. The rural community shrank as agriculture "
+            "mechanized and younger generations relocated to cities, leaving the church largely "
+            "dormant. The historic building is periodically preserved by the Texas Swedish "
+            "descendants organization."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Monument United Methodist Church, Monument, Kansas",
+        "type": "abandoned_church",
+        "latitude": 39.1044,
+        "longitude": -101.0072,
+        "description": (
+            "A striking 1930 Tudor Revival brick church built by the residents of this Logan County "
+            "ghost town that had once been a Butterfield Overland Despatch relay station on the "
+            "Smoky Hill Trail. As western Kansas depopulated through the mid-20th century, "
+            "attendance collapsed and the doors closed for good in 1966; pews were redistributed to "
+            "churches in neighboring towns. The roof has since caved in and the interior bears "
+            "graffiti, but the exterior walls still stand on the wind-swept prairie."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Walnut Valley Presbyterian Church, Cowley County, Kansas",
+        "type": "abandoned_church",
+        "latitude": 37.24,
+        "longitude": -96.88,
+        "description": (
+            "Organized in 1879 along the former Winfield–Eldorado stage route in Cowley County, this "
+            "rural Presbyterian congregation built a modest wooden church that was destroyed by "
+            "lightning and rebuilt in 1915. Declining farm populations through the mid-20th century "
+            "rendered the congregation unsustainable, and it formally merged with another church in "
+            "1971. The empty building subsequently served as a farm outbuilding before being "
+            "abandoned."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Nicodemus First Baptist Church, Nicodemus, Kansas",
+        "type": "abandoned_church",
+        "latitude": 39.393,
+        "longitude": -99.617,
+        "description": (
+            "Founded in 1877 by freed slaves from Kentucky who established the only remaining "
+            "all-Black frontier town on the Great Plains in Graham County, this Baptist congregation "
+            "was the spiritual anchor of Nicodemus from its earliest days. The town's population "
+            "plummeted after the railroad bypassed it in 1888; by the 20th century only a handful of "
+            "families remained. The original church building is preserved within the Nicodemus "
+            "National Historic Site."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Bloodland Methodist Church, Pulaski County, Missouri",
+        "type": "abandoned_church",
+        "latitude": 37.687,
+        "longitude": -92.152,
+        "description": (
+            "A Methodist congregation in a German-American farming village of Pulaski County that "
+            "had grown to roughly 100 residents and three churches by 1900. In 1940 the U.S. Army "
+            "condemned the entire community to build Fort Leonard Wood, forcibly relocating all "
+            "families within weeks; church buildings were dismantled or demolished. Only the "
+            "adjacent Bloodland Cemetery survives inside the military reservation as a monument to "
+            "the lost community."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Windyville Methodist Church, Windyville, Missouri",
+        "type": "abandoned_church",
+        "latitude": 37.707,
+        "longitude": -92.924,
+        "description": (
+            "A small Methodist church built around 1880 in this remote Dallas County hamlet, once a "
+            "quiet crossroads farming settlement in the Ozark hills. Rural exodus through the 20th "
+            "century reduced Windyville to one of Missouri's most isolated ghost towns; the church "
+            "closed as its congregation dispersed to larger towns. The abandoned building is "
+            "periodically featured in Missouri ghost-town photography projects."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Rodney Presbyterian Church, Rodney, Mississippi",
+        "type": "abandoned_church",
+        "latitude": 31.863,
+        "longitude": -91.197,
+        "description": (
+            "Chartered by the Mississippi Legislature in 1828 and built between 1829–1832 in Federal "
+            "style, this brick Presbyterian church served what was once a thriving Mississippi River "
+            "port that nearly became the state capital by a margin of three votes. Fires, yellow "
+            "fever, Civil War skirmishes (a cannonball hole remains above one window), and the "
+            "river's course change collectively destroyed the town; the congregation shrank to 16 "
+            "members by 1923. It is now a preserved ghost-town landmark maintained by the Rodney "
+            "History and Preservation Society."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Old Providence Presbyterian Church, Church Hill, Mississippi",
+        "type": "abandoned_church",
+        "latitude": 31.821,
+        "longitude": -91.096,
+        "description": (
+            "A Greek Revival brick church built in 1829 in Jefferson County near Natchez, founded by "
+            "Scots-Irish Presbyterian planters in what was then a prosperous antebellum community. "
+            "Civil War disruptions and postwar economic collapse gutted the congregation, and Church "
+            "Hill itself faded to a near-ghost town with only a handful of residents. The building "
+            "is rarely used and stands as a testament to the antebellum religious landscape of the "
+            "Natchez Trace corridor."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Centennial Baptist Church, Helena, Arkansas",
+        "type": "abandoned_church",
+        "latitude": 34.525,
+        "longitude": -90.591,
+        "description": (
+            "Founded in 1865 and housed in a 1905 brick building designed by African American "
+            "architect Henry James Price, this Baptist church in Phillips County was a cornerstone "
+            "of Helena's Black community during the Jim Crow era. Designated a National Historic "
+            "Landmark for its architectural and cultural significance, the congregation held its "
+            "last formal services in 1998 as membership dwindled. A 2020 tornado caused severe "
+            "structural damage, and the building now stands in fragile ruin."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Cades Cove Primitive Baptist Church, Blount County, Tennessee",
+        "type": "abandoned_church",
+        "latitude": 35.6,
+        "longitude": -83.843,
+        "description": (
+            "Organized in 1827 as the oldest congregation in Cades Cove, this Primitive Baptist "
+            "church built its original log structure that same year to serve the isolated Great "
+            "Smoky Mountains farming valley. The congregation held its last formal service in 1915 "
+            "as younger generations left the cove, and the National Park Service acquired the land "
+            "in the 1940s. The preserved white-frame building and adjacent cemetery are among the "
+            "most visited historic structures in Great Smoky Mountains National Park."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Cades Cove Methodist Church, Blount County, Tennessee",
+        "type": "abandoned_church",
+        "latitude": 35.614,
+        "longitude": -83.834,
+        "description": (
+            "The Methodist Episcopal, South congregation of Cades Cove traced its origins to 1827 "
+            "and erected its simple white frame meeting house in 1902 to replace earlier structures "
+            "in the remote Tennessee mountain valley. NPS acquisition of the Cades Cove area in the "
+            "1940s ended active congregational use, though the building was carefully preserved. It "
+            "stands today as a restored historic structure with no active congregation, open to park "
+            "visitors year-round."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Rocky Valley Lutheran Church, Dooley, Montana",
+        "type": "abandoned_church",
+        "latitude": 48.882,
+        "longitude": -104.389,
+        "description": (
+            "Built in 1915 by Norwegian Lutheran homesteaders on the remote Montana Hi-Line in "
+            "Sheridan County, this prairie church served the scattered farming families who "
+            "dry-farmed the windswept benchlands east of Wolf Point. Congregation numbers fell "
+            "sharply after World War II as small farms consolidated and young people moved away, "
+            "leaving the church unused for decades. A powerful windstorm in 2019 collapsed the "
+            "structure, leaving only foundation remnants and the adjacent cemetery."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Bannack Methodist-Episcopal Church, Bannack, Montana",
+        "type": "abandoned_church",
+        "latitude": 45.165,
+        "longitude": -113.001,
+        "description": (
+            "Erected in 1877 in Montana's first territorial capital in Beaverhead County, this "
+            "church also housed a Masonic hall on its upper floor, reflecting the dual social "
+            "functions of frontier religious buildings. Bannack's placer gold mines were largely "
+            "exhausted by the 1870s and the town steadily emptied through the early 20th century. "
+            "The church is now a preserved structure in Bannack State Park, a Montana ghost town on "
+            "the National Register of Historic Places."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Garnet Mining Camp Chapel, Garnet, Montana",
+        "type": "abandoned_church",
+        "latitude": 46.769,
+        "longitude": -113.432,
+        "description": (
+            "A non-denominational community chapel in one of Montana's largest intact ghost towns, "
+            "located in Granite County east of Missoula at nearly 6,000 feet elevation. Gold mining "
+            "in Garnet peaked in the 1890s, with a brief revival in the 1930s, before the camp was "
+            "finally abandoned and partially destroyed by fire in 1947. The chapel and approximately "
+            "30 other structures are maintained by the Bureau of Land Management as an open-air "
+            "heritage site."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Norway Lutheran Church and Cemetery, Denbigh, North Dakota",
+        "type": "abandoned_church",
+        "latitude": 48.181,
+        "longitude": -100.615,
+        "description": (
+            "Organized in 1884 at the Erick Espeseth farm by Norwegian immigrants in McHenry County, "
+            "this congregation built its distinctive yellowish 'Denbigh Brick' Late Gothic Revival "
+            "church in 1907, topped by a 65-foot bell tower visible for miles across the Mouse River "
+            "valley. Declining rural populations eroded membership through the mid-20th century "
+            "until the congregation dissolved. Listed on the National Register of Historic Places in "
+            "1994, the church and cemetery remain important genealogical sites for "
+            "Norwegian-American descendants."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Wolf Butte Lutheran Church, Adams County, North Dakota",
+        "type": "abandoned_church",
+        "latitude": 46.1,
+        "longitude": -102.5,
+        "description": (
+            "A rural Norwegian Lutheran church built around 1910 in remote Adams County, 45 miles "
+            "south of Dickinson, serving the scattered homesteading families who settled the "
+            "southwestern North Dakota grasslands. Regular services ended in 1988 as the surrounding "
+            "farm population dwindled to just a handful of families. The white frame church stands "
+            "alone on open rangeland and has been documented by regional photography projects "
+            "focused on vanishing prairie religious architecture."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Cottonwood Prairie Church, Cottonwood, South Dakota",
+        "type": "abandoned_church",
+        "latitude": 43.993,
+        "longitude": -102.03,
+        "description": (
+            "A simple wooden prairie church in the ghost town of Cottonwood, Jackson County, "
+            "sequentially used by Presbyterian (1915), Lutheran (1922), and Catholic (1928) "
+            "congregations as was common in frontier communities that could not support separate "
+            "denominational buildings. The post office closed in 1925 and the community faded as "
+            "ranching consolidated; the church was last regularly used by the mid-20th century. It "
+            "stands today as an icon of the Great Plains landscape, often photographed by travelers "
+            "near Badlands National Park."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Okaton Community Church, Okaton, South Dakota",
+        "type": "abandoned_church",
+        "latitude": 43.997,
+        "longitude": -100.955,
+        "description": (
+            "A wooden prairie church built around 1910 in Jones County's Okaton, one of the smallest "
+            "incorporated municipalities in the United States with a population under 50. The "
+            "community church served multiple homesteading families in an area where extreme drought "
+            "and economic hardship drove most settlers away during the Dust Bowl era. The building "
+            "stands largely abandoned on the open prairie, occasionally featured in studies of Great "
+            "Plains ghost towns."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Zion Lutheran Church, Shelly, Minnesota",
+        "type": "abandoned_church",
+        "latitude": 47.456,
+        "longitude": -96.791,
+        "description": (
+            "Founded in 1880 by Norwegian immigrants in Norman County's Red River Valley and built "
+            "in 1883 in a Victorian Gothic style by the congregation of Elder Peder Efteland, this "
+            "church survived being shifted off its foundation by a tornado in 1902. Rural "
+            "depopulation and consolidation of surrounding farms steadily reduced the congregation, "
+            "which eventually dissolved. Listed on the National Register of Historic Places in 1999, "
+            "the church is maintained as a local heritage landmark."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Trondhjem Norwegian Lutheran Church, Lonsdale, Minnesota",
+        "type": "abandoned_church",
+        "latitude": 44.481,
+        "longitude": -93.424,
+        "description": (
+            "Named for Trondheim, Norway, this congregation was established in 1877 by Norwegian "
+            "immigrant farmers in Rice County and built its present church building in 1899 to "
+            "replace an earlier structure. As rural consolidation and the shift away from "
+            "Norwegian-language worship eroded membership, the congregation merged with a "
+            "neighboring church, and the building passed into the care of a local historical "
+            "preservation society. The structure is maintained as a cultural landmark and is "
+            "occasionally open for heritage events."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Rock Valle Lutheran Church, Echo, Minnesota",
+        "type": "abandoned_church",
+        "latitude": 44.619,
+        "longitude": -96.027,
+        "description": (
+            "Dedicated in May 1902 in Lyon County by Norwegian immigrant farming families, this "
+            "rural Lutheran church took its name from the rocky valley terrain of the local "
+            "landscape. Declining farm populations through the latter half of the 20th century left "
+            "the congregation unable to sustain itself, and the church was closed and abandoned. The "
+            "adjacent Rock Valle Cemetery contains graves dating to the 1890s settlement period."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "St. Ambrose Church, St. Nazianz, Wisconsin",
+        "type": "abandoned_church",
+        "latitude": 43.999,
+        "longitude": -87.926,
+        "description": (
+            "Built in 1898 in Gothic Revival style by the Salvatorian Fathers at their colony in "
+            "Manitowoc County, this Catholic church formed the spiritual centerpiece of a community "
+            "originally established in 1854 by the Reverend Ambrose Oschwald and German Catholic "
+            "immigrants seeking a religious utopia. The Salvatorian seminary school that sustained "
+            "the complex closed in 1982, and the church fell into disuse. The building has since "
+            "been partially incorporated into a United Ministries campus while the original nave "
+            "remains largely vacant."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Coon Prairie Lutheran Church, Vernon County, Wisconsin",
+        "type": "abandoned_church",
+        "latitude": 43.76,
+        "longitude": -91.036,
+        "description": (
+            "Organized around 1862 by Norwegian Lutheran immigrants who settled the upland prairie "
+            "of Vernon County along the Coon River valley, this congregation built a modest wooden "
+            "church to serve the farming community in their native tradition. Rural out-migration "
+            "through the 20th century gradually depleted the congregation until services became "
+            "infrequent and eventually ceased. The white-frame church and nearby cemetery are "
+            "maintained by Norwegian-American descendants as a heritage site."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Central Mine Methodist Church, Central, Michigan",
+        "type": "abandoned_church",
+        "latitude": 47.407,
+        "longitude": -88.204,
+        "description": (
+            "Built in 1868–1869 on the Keweenaw Peninsula by Cornish copper miners who brought their "
+            "Methodist faith from Cornwall, England, this church served the community around the "
+            "Central copper mine until the mine closed in 1898. The congregation officially "
+            "disbanded in 1903 as the town's population departed, though annual reunion services "
+            "held every July since 1907 have kept the building from true abandonment. Listed on the "
+            "National Register as part of the Central Mine Historic District, the building retains "
+            "its original handmade pews."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Martin Corners Methodist Church, Barry County, Michigan",
+        "type": "abandoned_church",
+        "latitude": 42.646,
+        "longitude": -85.133,
+        "description": (
+            "A rural Methodist congregation established in 1888 at the crossroads community of "
+            "Martin Corners, six miles east of Hastings in Barry County, serving the surrounding "
+            "agricultural township. As farms consolidated and rural populations shifted toward "
+            "larger towns, the congregation lost critical mass and was officially dissolved in 1972. "
+            "The white frame building, situated alongside an abandoned one-room schoolhouse, "
+            "deteriorates amid farmland."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Bethel Methodist Church, Crawford County, Indiana",
+        "type": "abandoned_church",
+        "latitude": 38.262,
+        "longitude": -86.506,
+        "description": (
+            "A frontier Methodist congregation established in the 1820s in the hill country of "
+            "Crawford County, one of Indiana's earliest organized churches serving the scattered "
+            "pioneer farming communities along the Ohio River tributary valleys. As younger "
+            "generations left for factory towns and the congregation dwindled, the church held its "
+            "last services in the mid-20th century. The simple frame building has been abandoned "
+            "amid the Hoosier National Forest."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Old Zion German Reformed Church, Columbiana County, Ohio",
+        "type": "abandoned_church",
+        "latitude": 40.872,
+        "longitude": -80.752,
+        "description": (
+            "Founded around 1835 by German Reformed immigrants in rural Columbiana County along "
+            "Ohio's eastern border, this congregation served Pennsylvania-German farming families in "
+            "the rolling hills southwest of Youngstown. The congregation merged with a larger German "
+            "Reformed church in the early 20th century, and the original brick building was "
+            "subsequently abandoned. The structure stands today in weathered condition on private "
+            "farmland."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Hauge Lutheran Church, Norway, Illinois",
+        "type": "abandoned_church",
+        "latitude": 41.465,
+        "longitude": -88.666,
+        "description": (
+            "Built in 1847 in the Fox River Valley community of Norway, Kendall County, this church "
+            "was the congregation of the first permanent Norwegian settlement in Illinois, founded "
+            "by 'low church' Haugean Lutherans who rejected the Norwegian state church. After the "
+            "congregation merged with another church in 1918, the building eventually became home to "
+            "the Norsk Museum dedicated to Norwegian-American heritage. Listed on the National "
+            "Register of Historic Places in 2016, it no longer functions as a house of worship."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "St. John's United Church of Christ, Siegel, Iowa",
+        "type": "abandoned_church",
+        "latitude": 42.829,
+        "longitude": -92.357,
+        "description": (
+            "Founded in 1874 by German Evangelical immigrants in Douglas Township, Bremer County, "
+            "following a doctrinal split from a neighboring Lutheran congregation, this church is "
+            "the sole surviving structure of the ghost town of Siegel, which had a post office from "
+            "1889 to 1897. By the 1940s all other community buildings had vanished as agricultural "
+            "consolidation emptied the landscape, leaving the church standing alone on Killdeer "
+            "Avenue. A tiny membership of around 80 occasionally gathers there, making it a living "
+            "relic of a vanished prairie town."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Buckhorn Church, Buckhorn, Iowa",
+        "type": "abandoned_church",
+        "latitude": 42.044,
+        "longitude": -90.478,
+        "description": (
+            "Built in 1898 to serve the residents of Buckhorn, a small Jackson County farming "
+            "community in northeastern Iowa, this community church hosted baptisms, Sunday School, "
+            "and seasonal celebrations for area families. In the 1960s, the surrounding land was "
+            "purchased for a large-scale dairy operation, and the remaining households relocated; "
+            "the town was effectively erased. The white-frame church with its red metal roof still "
+            "stands beside the old cemetery as the last visible trace of Buckhorn."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Pilgrim Holiness Church (Baled Hay Church), Arthur, Nebraska",
+        "type": "abandoned_church",
+        "latitude": 41.571,
+        "longitude": -101.689,
+        "description": (
+            "Constructed in 1928 in the Nebraska Sandhills from baled rye straw — two-foot-thick "
+            "walls plastered inside and stuccoed outside — because conventional building materials "
+            "were prohibitively expensive in this treeless region, this Pilgrim Holiness church is "
+            "believed to be the oldest baled-straw church in North America. Services ceased in the "
+            "mid-1960s after membership in Arthur County's sparse population fell below a viable "
+            "threshold. Preserved on the National Register of Historic Places since 1979, it is now "
+            "maintained as a museum by the Arthur County Historical Society."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Steele City Methodist Church, Steele City, Nebraska",
+        "type": "abandoned_church",
+        "latitude": 40.043,
+        "longitude": -97.003,
+        "description": (
+            "A Methodist congregation that flourished in this Jefferson County railroad town in the "
+            "1880s, when Steele City briefly served as a regional agricultural hub along the Kansas "
+            "City and Omaha Railway. The railroad's decline shifted commerce to nearby towns, and "
+            "Steele City's population fell from several hundred to fewer than 50; the church was "
+            "abandoned and the building left to the elements. The ghost town retains a few "
+            "structures including the silent church."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "South Pass City Methodist Church, South Pass City, Wyoming",
+        "type": "abandoned_church",
+        "latitude": 42.467,
+        "longitude": -108.8,
+        "description": (
+            "Established in 1868 during the gold rush that briefly swelled South Pass City's "
+            "population to nearly 4,000 in Fremont County, this Methodist congregation hosted "
+            "circuit-riding preachers serving the South Pass mining district. Gold ore quality "
+            "declined sharply by 1872 and the town was nearly deserted within a decade; the church "
+            "closed shortly thereafter. Now a Wyoming State Historic Site, the building is preserved "
+            "and interpreted for visitors as part of one of the state's best-documented ghost towns."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "St. Aloysius Catholic Church Ruins, Morley, Colorado",
+        "type": "abandoned_church",
+        "latitude": 37.032,
+        "longitude": -104.506,
+        "description": (
+            "Hand-built in 1917 by Italian, Slavic, and Mexican Catholic coal miners in the Colorado "
+            "Fuel & Iron Company town of Morley, Las Animas County, which once housed over 600 "
+            "residents at its peak in the 1920s. When CF&I closed the mine in 1956 and demolished "
+            "the town, crews refused to raze the church out of reverence; it is the only structure "
+            "left standing, visible from Interstate 25. Its Spanish colonial–influenced bell tower "
+            "still rises above the ruins."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Animas Forks Community Church, San Juan County, Colorado",
+        "type": "abandoned_church",
+        "latitude": 37.921,
+        "longitude": -107.572,
+        "description": (
+            "A non-denominational community church built around 1878 in the silver mining ghost town "
+            "of Animas Forks, perched at 11,200 feet elevation in the San Juan Mountains where "
+            "winters rendered the site uninhabitable for months each year. Silver prices collapsed "
+            "in 1893, gutting the population, and the last permanent residents departed by the "
+            "1920s. The structure is now in ruins alongside several other preserved buildings "
+            "maintained by the Bureau of Land Management."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Grafton LDS Meetinghouse, Grafton, Utah",
+        "type": "abandoned_church",
+        "latitude": 37.167,
+        "longitude": -113.08,
+        "description": (
+            "Built in 1886 to serve as both church and schoolhouse for this Church of Jesus Christ "
+            "of Latter-day Saints pioneer settlement on the Virgin River in Washington County, the "
+            "meetinghouse survived when periodic flooding and Black Hawk War raids of the 1860s "
+            "drove settlers away and back repeatedly. The last residents departed by 1944 and the "
+            "LDS branch was discontinued in 1921, leaving behind one of the most photographed ghost "
+            "towns in the American West. The meetinghouse, pioneer homes, and cemetery are now "
+            "preserved by the Grafton Heritage Partnership."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Chesterfield LDS Meetinghouse, Chesterfield, Idaho",
+        "type": "abandoned_church",
+        "latitude": 42.867,
+        "longitude": -111.902,
+        "description": (
+            "Established in 1879 by Latter-day Saint pioneers in Bannock County as part of the 'Bear "
+            "Lake Stake' colonization effort ordered by Brigham Young, the Chesterfield community "
+            "built a Greek Revival-style meetinghouse that anchored the farming village for half a "
+            "century. When the railroad bypassed Chesterfield and younger families departed for more "
+            "connected communities, the town emptied by the late 1930s. It is now considered one of "
+            "Idaho's best-preserved Mormon ghost towns and is listed on the National Register."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Our Lady of Tears Catholic Church, Silver City, Idaho",
+        "type": "abandoned_church",
+        "latitude": 43.023,
+        "longitude": -116.733,
+        "description": (
+            "Built in 1898 to minister to the Catholic miners of the Owyhee Mountains' silver boom, "
+            "this church served Silver City at its height when the remote Owyhee County community "
+            "had 75 or more buildings and several thousand residents. As ore deposits thinned and "
+            "the population contracted through the early 20th century, the church held increasingly "
+            "infrequent services. Today Silver City is a preserved but sparsely occupied ghost town "
+            "accessible by unpaved mountain road, with only a handful of seasonal residents; the "
+            "church holds special masses occasionally."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Unionville Methodist Church, Unionville, Nevada",
+        "type": "abandoned_church",
+        "latitude": 40.446,
+        "longitude": -118.122,
+        "description": (
+            "Founded around 1863 in a Pershing County silver mining camp that boasted 1,500 "
+            "residents at its peak in the late 1860s, this Methodist congregation served miners from "
+            "the Arizona Mine and surrounding claims in Buena Vista Canyon. The ore quality declined "
+            "sharply by the 1870s, a fire in 1872 destroyed much of the town, and the county seat "
+            "moved to Winnemucca in 1873, reducing Unionville to fewer than 30 residents. Church "
+            "ruins are still visible in the canyon alongside Mark Twain's former cabin, now a "
+            "bed-and-breakfast."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Rhyolite Community Church Ruins, Rhyolite, Nevada",
+        "type": "abandoned_church",
+        "latitude": 36.896,
+        "longitude": -116.829,
+        "description": (
+            "A non-denominational community church built in 1907 in Death Valley's most famous ghost "
+            "town, which at its peak in 1908 had a population estimated at 10,000 and boasted "
+            "electric lights, a stock exchange, and three newspapers. The main gold mine played out "
+            "by 1911 and the town was virtually empty by 1920; the church was among the many "
+            "buildings that collapsed or were dismantled for salvage. Ruins stand openly on Bureau "
+            "of Land Management land alongside the iconic Bottle House."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Fairbank Church Ruins, Fairbank, Arizona",
+        "type": "abandoned_church",
+        "latitude": 31.723,
+        "longitude": -110.188,
+        "description": (
+            "The ruins of a late-19th-century adobe church in the Santa Cruz County railroad ghost "
+            "town of Fairbank, which served as a supply hub for Tombstone's silver mines after the "
+            "Benson-to-Nogales railroad arrived in the 1880s. After Tombstone's mines flooded and "
+            "the railroad rerouted, Fairbank's economic reason for existence disappeared and the "
+            "town was slowly abandoned through the 1970s. The church ruins are visible along the San "
+            "Pedro Riparian National Conservation Area trail system."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "San Ignacio Catholic Church, Monticello, New Mexico",
+        "type": "abandoned_church",
+        "latitude": 33.287,
+        "longitude": -107.389,
+        "description": (
+            "Built in 1869 by the founding Hispanic ranching families of Cañada Alamosa (renamed "
+            "Monticello in 1881), this adobe mission church served Sierra County's agricultural "
+            "community for over 150 years and holds baptism, marriage, and burial records from 1869 "
+            "onward. With fewer than 100 families remaining in the ghost town today versus the 1,000 "
+            "who once lived in the canyon, the Catholic Diocese decommissioned the church in 2024 "
+            "and gifted it to the Monticello Canyon Association for community use. Structural "
+            "deterioration required demolition of the tower in 2025."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Santo Niño de Atocha Catholic Church, Cuervo, New Mexico",
+        "type": "abandoned_church",
+        "latitude": 35.052,
+        "longitude": -104.281,
+        "description": (
+            "Commissioned in 1915 at the height of Cuervo's prosperity as a ranching and railroad "
+            "community on old Route 66 in Guadalupe County, this Catholic church served several "
+            "hundred residents. As Route 66 was bypassed by Interstate 40 and ranching economics "
+            "changed, Cuervo's population collapsed from roughly 500 to under 50; the church became "
+            "a near-ghost town relic. The building still stands along the old highway as a landmark "
+            "of New Mexico's Route 66 heritage."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Santa Rosa de Lima Church Ruins, Abiquiu, New Mexico",
+        "type": "abandoned_church",
+        "latitude": 36.216,
+        "longitude": -106.319,
+        "description": (
+            "Built around 1744 as the Roman Catholic church of the Spanish colonial plaza settlement "
+            "of Santa Rosa de Lima in Rio Arriba County, this adobe structure was part of an early "
+            "frontier community established by Hispanic settlers pushing north along the Chama "
+            "River. Repeated Ute and Comanche raids forced abandonment of the plaza in 1747, and the "
+            "ruins have remained largely intact on Archdiocese of Santa Fe land ever since. Listed "
+            "on the National Register of Historic Places, the substantial adobe walls remain a "
+            "striking reminder of Spain's northern frontier."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Bodie Methodist Church, Bodie, California",
+        "type": "abandoned_church",
+        "latitude": 38.213,
+        "longitude": -119.013,
+        "description": (
+            "Erected in 1882 to serve a Mono County gold camp that had swelled to perhaps 10,000 "
+            "residents during its late-1870s peak, this Methodist church was the center of Bodie's "
+            "respectable social life in a town notorious for its lawlessness and saloons. The gold "
+            "ran out and Bodie gradually depopulated; the church held its last service in 1932. Now "
+            "maintained by California State Parks in a policy of 'arrested decay,' the building "
+            "retains original furnishings including its piano."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "St. Charles Borromeo Catholic Church, Shasta, California",
+        "type": "abandoned_church",
+        "latitude": 40.602,
+        "longitude": -122.493,
+        "description": (
+            "Built in 1857 to serve the Catholic miners of Shasta, which in the early 1850s was the "
+            "largest inland city in California with $100,000 in gold passing through its commercial "
+            "district every week. When the California and Oregon Railroad bypassed Shasta in 1872 in "
+            "favor of Redding four miles east, the town's commercial district collapsed within "
+            "months and the church was abandoned. Brick ruins of St. Charles Borromeo are preserved "
+            "within the Shasta State Historic Park managed by California State Parks."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Volcano Union Congregational Church, Volcano, California",
+        "type": "abandoned_church",
+        "latitude": 38.431,
+        "longitude": -120.631,
+        "description": (
+            "Built in 1856 in Amador County's gold rush settlement of Volcano, which claimed "
+            "California's first lending library and lending telescope, this Congregational church "
+            "served the mining community during its most prosperous decade. As placer gold deposits "
+            "exhausted and hydraulic mining declined, Volcano's population shrank from several "
+            "thousand to under 100 by the late 19th century, and the church fell out of regular use. "
+            "The historic stone building is now preserved in the Volcano ghost town district."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Shaniko Community Chapel, Shaniko, Oregon",
+        "type": "abandoned_church",
+        "latitude": 45.003,
+        "longitude": -120.753,
+        "description": (
+            "A small Protestant frame chapel built around 1901 in what was promoted as the 'Wool "
+            "Capital of the World,' when Shaniko in Wasco County shipped more wool than any other "
+            "railroad in the Pacific Northwest. After a competing rail line was built in 1911 and "
+            "destroyed Shaniko's transport monopoly, the town declined rapidly; a series of fires "
+            "accelerated the collapse. The chapel is part of the Shaniko Historic District listed on "
+            "the National Register and is occasionally used for special ceremonies."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Locust Grove Church, Sherman County, Oregon",
+        "type": "abandoned_church",
+        "latitude": 45.417,
+        "longitude": -120.778,
+        "description": (
+            "A Protestant community church established around the 1880s to serve the wheat-farming "
+            "families of Sherman County's high desert plateau, where homesteaders flocked during the "
+            "late-19th-century agricultural expansion along the Columbia River. As farm "
+            "consolidation reduced the number of rural families through the mid-20th century, the "
+            "congregation dissolved and the community it served became a ghost town. The building is "
+            "documented in Oregon historical archives and the Sherman County ghost town records."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
+    {
+        "name": "Elberton United Brethren Church, Elberton, Washington",
+        "type": "abandoned_church",
+        "latitude": 46.981,
+        "longitude": -117.221,
+        "description": (
+            "Built in 1913 in the ghost town of Elberton, platted in 1886 in Garfield County on a "
+            "branch of the Palouse River, this United Brethren in Christ church survived the fires "
+            "(1908), floods (1910), railroad pullout (1907), and Great Depression that collectively "
+            "emptied the town. By 1966, Elberton was formally disincorporated; the church is now the "
+            "last significant standing structure in what was once a community of 500. It draws "
+            "photographers and ghost-town explorers and is documented on Atlas Obscura and Spokane "
+            "Historical."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Sherman Community Church, Sherman, Washington",
+        "type": "abandoned_church",
+        "latitude": 47.828,
+        "longitude": -118.605,
+        "description": (
+            "A modest Protestant church built in the 1890s in the Lincoln County wheat-farming "
+            "hamlet of Sherman, which thrived briefly during the homesteading boom north of Wilbur. "
+            "As wheat prices fell and agricultural operations consolidated into larger holdings, the "
+            "farming families dispersed and the community shrank to a church, a cemetery, and "
+            "scattered foundations. A maintenance group of local descendants gathers annually for a "
+            "Memorial Day service, one of the few remaining gatherings at the site."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.75,
+    },
+    {
+        "name": "Adams Grove Presbyterian Church, Dallas County, Alabama",
+        "type": "abandoned_church",
+        "latitude": 32.272,
+        "longitude": -87.031,
+        "description": (
+            "Built in 1853 in the antebellum Greek Revival style near Sardis in Dallas County, this "
+            "Presbyterian church features a rare 'distyle-in-antis' portico and four separate "
+            "entryways historically used to segregate enslaved people (who entered through side "
+            "doors to the balcony) from white congregants. The adjacent cemetery holds burials from "
+            "1843 to 1955, and the building was used for its last service in 1974. Listed on the "
+            "National Register of Historic Places in 1986, it is one of the least-altered antebellum "
+            "rural churches in Alabama."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "St. Luke's Episcopal Church, Old Cahawba, Alabama",
+        "type": "abandoned_church",
+        "latitude": 32.319,
+        "longitude": -87.105,
+        "description": (
+            "Designed in 1854 in Carpenter Gothic style by architect Richard Upjohn for Episcopal "
+            "worshippers in Alabama's first permanent state capital, this Dallas County church was "
+            "dismantled and moved 11 miles to Martin's Station after Cahawba's Civil War decline and "
+            "recurring floods. Auburn University's Rural Studio relocated and reassembled it at Old "
+            "Cahawba Archaeological Park between 2006–2008 as a preservation project. Listed on the "
+            "National Register since 1982, it stands as a central artifact of one of the South's "
+            "most evocative ghost towns."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Goshen Primitive Baptist Church, Clark County, Kentucky",
+        "type": "abandoned_church",
+        "latitude": 38.019,
+        "longitude": -84.071,
+        "description": (
+            "Founded in 1797 with 59 charter members at the home of William Payne in Clark County, "
+            "this is among the oldest Baptist congregations in Kentucky; the current Greek Revival "
+            "brick building dates to around 1850. Primitive Baptists, who reject paid clergy, Sunday "
+            "Schools, and musical instruments, saw their rural membership base erode through the "
+            "20th century as the surrounding farming community depopulated. Listed on the National "
+            "Register of Historic Places in 1979, the congregation now has very limited or no active "
+            "membership."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.85,
+    },
+    {
+        "name": "Chinn-Scott Chapel, Pointe Coupee Parish, Louisiana",
+        "type": "abandoned_church",
+        "latitude": 30.78,
+        "longitude": -91.658,
+        "description": (
+            "Founded in 1890 as Chinn Chapel African Methodist Episcopal, with a land deed "
+            "formalized in 1903 when the Platt family sold half an acre near Batchelor for $100, "
+            "this chapel in Pointe Coupee Parish also briefly served as the first public school for "
+            "local Black children during the Jim Crow era. The church was incorporated into the "
+            "United Methodist denomination before its congregation was decommissioned in 2015. It "
+            "now stands abandoned in the rural bayou landscape as a testament to the African "
+            "American religious community of Reconstruction-era Louisiana."
+        ),
+        "source": "obsidian_urbex_churches",
+        "confidence": 0.65,
+    },
 ]
 
 
