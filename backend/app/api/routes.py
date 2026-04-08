@@ -188,8 +188,8 @@ async def get_location(
 
 @router.delete(
     "/locations/{location_id}",
-    response_model=None,
     status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
     summary="Delete a historical location",
     tags=["locations"],
 )

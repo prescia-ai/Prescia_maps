@@ -38,11 +38,18 @@ Usage::
 
 from __future__ import annotations
 
+import io
+import sys
+
+# Force UTF-8 output on Windows to prevent emoji/unicode crashes
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 import argparse
 import asyncio
 import csv
-import io
-import sys
 import uuid
 import zipfile
 from pathlib import Path
@@ -232,23 +239,32 @@ def _parse_nrhp_csv(
     Yield filtered NRHP records from the CSV stream.
 
     Each yielded item is a dict with keys matching Location fields.
-    Column names are auto-detected from the CSV header.
+    Column names are auto-detected from the CSV header (case-insensitive).
     """
     reader = csv.DictReader(stream)
+    logger.info("NRHP CSV columns: %s", reader.fieldnames)
     accepted = 0
 
     # Detect column names (NRHP CSVs use varying headers)
-    name_cols = ["Resource Name", "RESNAME", "Property Name", "Name"]
-    lat_cols = ["Latitude", "LATITUDE", "Lat"]
-    lon_cols = ["Longitude", "LONGITUDE", "Lon", "Long"]
-    state_cols = ["State", "STATE", "STATE_"]
+    name_cols = [
+        "Resource Name", "RESNAME", "Property Name", "Name",
+        "ResourceName", "resource_name", "RESOURCE_NAME",
+        "Property_Name", "property_name",
+    ]
+    lat_cols = ["Latitude", "LATITUDE", "Lat", "lat", "LAT", "Y", "y", "Lat_"]
+    lon_cols = ["Longitude", "LONGITUDE", "Lon", "Long", "lon", "LON", "X", "x", "Lon_", "Long_", "LONG"]
+    state_cols = ["State", "STATE", "STATE_", "State_Alpha", "STATE_ALPHA", "state", "St"]
     city_cols = ["City", "CITY", "County/Independent City"]
     refnum_cols = ["Reference Number", "NRHP_REFNUM", "Ref#", "RefNum"]
 
     def _find_col(row: Dict[str, Any], candidates: List[str]) -> str:
+        row_lower = {k.lower(): v for k, v in row.items()}
         for c in candidates:
             if c in row:
                 return (row[c] or "").strip()
+            c_lower = c.lower()
+            if c_lower in row_lower:
+                return (row_lower[c_lower] or "").strip()
         return ""
 
     for row in reader:
@@ -603,6 +619,12 @@ async def run(
                     total_locations += len(batch)
 
         logger.info("NRHP CSV: %d keyword-matched records parsed.", nrhp_count)
+        if nrhp_count == 0:
+            logger.warning(
+                "NRHP CSV: 0 records matched keywords. "
+                "CSV columns were logged above at INFO level. "
+                "Check column name mapping."
+            )
         completed_sources.add("nrhp")
         save_checkpoint(ckpt_path, {
             "completed_sources": list(completed_sources),
