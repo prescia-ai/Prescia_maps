@@ -104,3 +104,12 @@ export interface LandAccessOverrideResponse {
   created_at: string | null;
   updated_at: string | null;
 }
+
+// ── Import ───────────────────────────────────────────────────────────────────
+
+export interface ImportSummaryResponse {
+  inserted: number;
+  skipped_duplicate: number;
+  skipped_invalid: number;
+  errors: string[];
+}
