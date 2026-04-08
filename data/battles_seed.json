@@ -2504,7 +2504,7 @@
     "latitude": 45.5667,
     "longitude": -107.4333,
     "year": 1876,
-    "description": "Custer's Last Stand; Lakota/Cheyenne defeat 7th Cavalry, June 25-26, 1876, Montana.",
+    "description": "On June 25, 1876, Lieutenant Colonel George Armstrong Custer led roughly 210 men of the 7th Cavalry into a massive encampment of Lakota Sioux, Northern Cheyenne, and Arapaho warriors along the Little Bighorn River in Montana Territory, resulting in the complete annihilation of his command in what became the most famous defeat in American military history. The combined Indian force, numbering perhaps 2,000 warriors led by Sitting Bull and Crazy Horse, overwhelmed Custer's divided regiment in a battle that lasted less than an hour. The battlefield is preserved as Little Bighorn Battlefield National Monument, with white marble headstones marking where each soldier fell across the rolling Montana grassland ridges. Metal detecting is strictly prohibited on the monument grounds, but archaeological surveys have recovered hundreds of .45-70 Springfield cartridge casings and Henry rifle rounds that helped reconstruct the battle's flow \u2014 the surrounding private ranch land in the Bighorn Valley saw extensive cavalry movements and camp activity.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2514,7 +2514,7 @@
     "latitude": 45.3667,
     "longitude": -106.9333,
     "year": 1876,
-    "description": "Crazy Horse halts Crook's advance, June 17, 1876, Montana.",
+    "description": "On June 17, 1876, eight days before Little Bighorn, General George Crook's column of 1,300 soldiers and 262 Crow and Shoshone scouts was attacked by approximately 1,500 Lakota and Cheyenne warriors under Crazy Horse on Rosebud Creek in Montana Territory \u2014 a fierce six-hour battle that forced Crook to retreat, effectively removing his column from the Little Bighorn campaign and allowing Custer to advance unsupported. The Battle of the Rosebud has been called one of Crazy Horse's greatest tactical achievements. The Rosebud Battlefield State Park near Kirby, Montana, preserves the battlefield terrain, one of Montana's most intact Indian Wars sites. Metal detecting is not permitted in the state park, but surrounding Big Horn and Rosebud County private ranch land has produced .45-70 Springfield and Indian-fired cartridge casings and cavalry equipment.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2524,7 +2524,7 @@
     "latitude": 45.4167,
     "longitude": -106.8667,
     "year": 1877,
-    "description": "Miles defeats Crazy Horse's last major resistance, January 8, 1877, Montana.",
+    "description": "On January 8, 1877, Colonel Nelson Miles's 5th Infantry regiment fought Crazy Horse's Lakota warriors in the rugged Wolf Mountains of Montana Territory in a winter battle fought in sub-zero temperatures and a blinding snowstorm. Miles's artillery broke the Indian assault, and Crazy Horse withdrew \u2014 one of the last significant actions of the Great Sioux War before the surrenders of 1877. The Wolf Mountains battlefield in Rosebud County, Montana, is remote private ranch land in the Tongue River badlands. The surrounding area has produced Indian Wars-era .45-70 Springfield cartridge casings and cavalry equipment, and the remote battlefield is largely unchanged from the January 1877 engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2534,7 +2534,7 @@
     "latitude": 47.1167,
     "longitude": -106.0,
     "year": 1876,
-    "description": "Miles attacks Sitting Bull's village, October 21, 1876, Montana.",
+    "description": "On October 21, 1876, Colonel Nelson Miles's 5th Infantry caught Sitting Bull's band near Cedar Creek in eastern Montana Territory, engaging in several days of negotiations and fighting before Sitting Bull's people escaped northward toward Canada. The engagement was part of Miles's aggressive winter campaign that would eventually drive Sitting Bull and his followers into Canadian exile. The Cedar Creek area in Prairie County, Montana, is remote private ranch and federal land. The eastern Montana badlands have produced Indian Wars cartridge casings and cavalry equipment on private and public land from Miles's sustained 1876-77 campaign operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2544,7 +2544,7 @@
     "latitude": 45.8667,
     "longitude": -103.35,
     "year": 1876,
-    "description": "Crook destroys American Horse's village, September 9, 1876, South Dakota.",
+    "description": "On September 9-10, 1876, General George Crook's starving column \u2014 on the desperate 'Horsemeat March' following Little Bighorn \u2014 found and attacked a Lakota village at Slim Buttes in Dakota Territory (present-day Harding County, SD), killing the headman American Horse and capturing the village before Crazy Horse arrived with reinforcements that briefly threatened to overrun the camp. The battle was the first Union offensive success following the Little Bighorn disaster. Slim Buttes in Harding County, South Dakota, is remote private ranch land and national grassland in the northern Great Plains. The surrounding area has produced Indian Wars-era .45-70 Springfield casings and cavalry equipment in isolated finds from this remote campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2554,7 +2554,7 @@
     "latitude": 43.5667,
     "longitude": -107.2667,
     "year": 1876,
-    "description": "Mackenzie destroys Cheyenne winter camp, November 25, 1876, Wyoming.",
+    "description": "On November 25, 1876, Colonel Ranald Mackenzie's 4th Cavalry destroyed the Northern Cheyenne village of Dull Knife (Morning Star) and Little Wolf in the Bighorn Mountains of Wyoming Territory, burning their lodges and winter food stores and seizing their horses \u2014 forcing the Northern Cheyenne into a desperate winter flight that resulted in enormous suffering. The destruction of Dull Knife's village was one of the decisive blows of the Great Sioux War campaign. The Dull Knife (Red Fork Canyon) battlefield in Johnson County, Wyoming, is remote private ranch land in the Powder River Basin. The region has produced Indian Wars .45-70 Springfield casings and cavalry equipment from Mackenzie's 1876 Powder River Expedition on private land.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2564,7 +2564,7 @@
     "latitude": 45.6167,
     "longitude": -106.65,
     "year": 1877,
-    "description": "Miles attacks last large Sioux camp, May 7, 1877, Montana.",
+    "description": "On May 7, 1877, Colonel Nelson Miles ambushed the last significant Lakota holdout under Chief Lame Deer at Muddy Creek (Lame Deer Creek) in Montana Territory, killing Lame Deer and his war chief Iron Star when a brief peace conference erupted into violence. The engagement effectively ended organized Lakota resistance and brought the Great Sioux War to a close. The Lame Deer battle site on Muddy Creek in Rosebud County, Montana, is near the modern Northern Cheyenne Reservation community of Lame Deer. Indian Wars .45-70 Springfield cartridge casings and cavalry equipment have been found in the region from the 1877 operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2574,7 +2574,7 @@
     "latitude": 46.3833,
     "longitude": -115.8167,
     "year": 1877,
-    "description": "Howard forces Chief Joseph to retreat, July 11-12, 1877, Idaho.",
+    "description": "On July 11-12, 1877, the Nez Perce under Chief Looking Glass fought General Oliver Howard's 400-man force on the bluffs above the Clearwater River in Idaho Territory, holding off the Army long enough to escape eastward over the Lolo Trail in the beginning of the famous Nez Perce retreat toward Canada. The Battle of the Clearwater was one of the opening engagements of the 1,700-mile running campaign. The Clearwater Battlefield near Kamiah, Idaho, is preserved as a National Historic Landmark on private and tribal land, with Civil War Trails-style interpretive markers along Highway 12. The surrounding Idaho County area has produced Indian Wars .45-70 Springfield cartridge casings and cavalry equipment from the 1877 Nez Perce campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2584,7 +2584,7 @@
     "latitude": 45.65,
     "longitude": -113.6333,
     "year": 1877,
-    "description": "Army attacks Nez Perce camp; mutual losses, August 9-10, 1877, Montana.",
+    "description": "On August 9-10, 1877, Colonel John Gibbon's 7th Infantry attacked the Nez Perce camp on the Big Hole River in Montana Territory at dawn, initially breaking into the sleeping camp but then being driven back and pinned down by Nez Perce warriors who counter-attacked and besieged Gibbon's force for two days. The Nez Perce lost approximately 60-90 people including many women and children, but the survivors escaped to continue their remarkable flight. Big Hole National Battlefield near Wisdom, Montana, preserves the battlefield with the original tepee pole frames still standing in the meadow, one of the most evocative battlefield landscapes in America. Metal detecting is strictly prohibited in the national monument, but the surrounding Beaverhead County private ranch land has produced Indian Wars .45-70 Springfield cartridge casings and Winchester .44-40 rounds from the engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2594,7 +2594,7 @@
     "latitude": 46.0167,
     "longitude": -108.3,
     "year": 1877,
-    "description": "Sturgis engages fleeing Nez Perce, September 13, 1877, Montana.",
+    "description": "On September 13, 1877, Colonel Samuel Sturgis's 7th Cavalry attempted to intercept the fleeing Nez Perce at Canyon Creek in Montana Territory \u2014 a canyon east of present-day Billings \u2014 but the Nez Perce rear guard held off the cavalry while the main band escaped up the canyon and onto the plains, continuing the great flight northward toward Canada. The battle demonstrated the Nez Perce's remarkable tactical skill in combining combat with movement. The Canyon Creek battlefield near Billings in Yellowstone County, Montana, is largely private ranch and agricultural land. The surrounding Billings area and Canyon Creek corridor have produced Indian Wars cartridge casings and cavalry equipment from the September 1877 campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2604,7 +2604,7 @@
     "latitude": 48.1167,
     "longitude": -109.7167,
     "year": 1877,
-    "description": "Chief Joseph surrenders; I will fight no more forever, October 1877, Montana.",
+    "description": "In late September and early October 1877, the Nez Perce were caught 40 miles from the Canadian border at Bear Paw Mountain in Montana Territory by Colonel Nelson Miles's troops, fighting a six-day siege before Chief Joseph's famous surrender speech: 'From where the sun now stands, I will fight no more forever.' The capture of Joseph's band ended the 1,700-mile Nez Perce retreat and placed the survivors in reservation captivity far from their Idaho homeland. Bear Paw Battlefield, part of Nez Perce National Historical Park, is a beautifully preserved and interpreted site near Chinook in Blaine County, Montana, with original tepee rings, earthworks, and an evocative landscape. Metal detecting is strictly prohibited in the national park, but surrounding Blaine County ranch land has produced Indian Wars cartridge casings and Nez Perce camp artifacts.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2614,7 +2614,7 @@
     "latitude": 38.55,
     "longitude": -102.5167,
     "year": 1864,
-    "description": "Chivington's militia massacre of Cheyenne/Arapaho, November 29, 1864, Colorado.",
+    "description": "On November 29, 1864, Colonel John Chivington led 700 Colorado volunteers in a dawn assault on Black Kettle's peaceful Cheyenne and Arapaho village at Sand Creek in the Colorado Territory, killing approximately 150 people \u2014 mostly women, children, and elderly \u2014 and mutilating the bodies in an atrocity that shocked even a war-hardened nation and inflamed the southern Plains wars for years. The massacre is now widely recognized as one of the most horrific war crimes committed against Native Americans. Sand Creek Massacre National Historic Site in Kiowa County, Colorado, is a remote but powerfully interpreted site preserving the cottonwood creek valley where the attack occurred, managed in partnership with Cheyenne and Arapaho tribes. Metal detecting is strictly prohibited in the national site, but the surrounding Kiowa County ranches have produced period .58 caliber musket balls and military hardware from the engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2624,7 +2624,7 @@
     "latitude": 39.6167,
     "longitude": -102.2167,
     "year": 1868,
-    "description": "Nine-day stand of scouts against Cheyenne and Sioux, September 17-25, 1868, Colorado.",
+    "description": "On September 17-25, 1868, a company of 50 frontier scouts under Colonel George Forsyth was surrounded by approximately 750 Cheyenne, Sioux, and Arapaho warriors on a sandy island in the Arikaree Fork of the Republican River in Colorado Territory \u2014 the scouts held out for eight days, killing the renowned Cheyenne war chief Roman Nose and fighting off repeated charges from behind their horses' bodies until relief arrived. Lieutenant Frederick Beecher was killed in the action, giving the site its name. The Beecher Island battlefield in Yuma County, Colorado, is marked by a monument near Wray, CO, on private and public land. The surrounding northeastern Colorado ranch country has produced Indian Wars-era Spencer and Springfield cartridge casings and frontier scout equipment from the 1868 engagement.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2634,7 +2634,7 @@
     "latitude": 40.4,
     "longitude": -103.2167,
     "year": 1869,
-    "description": "Decisive destruction of Cheyenne Dog Soldiers, July 11, 1869, Colorado.",
+    "description": "On July 11, 1869, General Eugene Carr's 5th Cavalry \u2014 guided by Buffalo Bill Cody as chief scout \u2014 surprised and destroyed the village of Cheyenne war chief Tall Bull at Summit Springs in Washington County, Colorado Territory, killing 52 warriors including Tall Bull and rescuing two white captives, breaking the power of the Cheyenne Dog Soldiers on the Republican River. The battle effectively ended Cheyenne raids on the Kansas-Colorado settlements. The Summit Springs battlefield in Washington County, Colorado, is marked by a monument and state historical marker on private ranch land in the northeastern Colorado shortgrass prairie. The surrounding Washington County area has produced Indian Wars-era cartridge casings and cavalry equipment from the 1869 campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2644,7 +2644,7 @@
     "latitude": 35.6667,
     "longitude": -100.5167,
     "year": 1874,
-    "description": "Buffalo hunters hold out against Comanche, June 27, 1874, Texas.",
+    "description": "On June 27, 1874, approximately 700 Comanche, Cheyenne, and Kiowa warriors under Quanah Parker launched a dawn assault on 28 buffalo hunters at Adobe Walls in Hutchinson County, Texas \u2014 but the hunters' Sharps buffalo rifles, accurate to 1,000 yards, held off the massed cavalry charges in a battle that demonstrated the lethal precision of the buffalo hunters' weapons. One hunter, Billy Dixon, made a famous mile-plus shot that reportedly struck a warrior from the saddle. The Adobe Walls battle site near Canadian, TX, has a monument and state historical marker on private ranch land in the Texas Panhandle. The surrounding Hutchinson County private ranch land has produced Indian Wars-era Sharps .50 caliber cartridge casings, trade goods, and battle debris from the 1874 engagement \u2014 a significant but accessible private land detecting site.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2654,7 +2654,7 @@
     "latitude": 34.7333,
     "longitude": -101.0667,
     "year": 1874,
-    "description": "Mackenzie destroys Comanche/Kiowa winter supplies, September 28, 1874, Texas.",
+    "description": "On September 28, 1874, Colonel Ranald Mackenzie's 4th Cavalry discovered and attacked Quanah Parker's main Comanche camp in the dramatic hidden canyon of Palo Duro in the Texas Panhandle, routing the warriors with few casualties but destroying their lodges, food, and winter supplies \u2014 then killing 1,048 captured horses to prevent their recovery. The destruction of their winter resources broke the Comanches' will to fight and ended the Red River War. Palo Duro Canyon State Park near Canyon, TX, is one of Texas's most spectacular parks, with the dramatic 800-foot canyon walls and a replica of the Red River War battlefield interpretive area. Metal detecting is not permitted in the state park, but surrounding Randall County private ranch land has produced Comanche camp artifacts and .45-70 Springfield cartridge casings from the 1874 operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2664,7 +2664,7 @@
     "latitude": 34.7,
     "longitude": -100.9167,
     "year": 1874,
-    "description": "Lyman's wagon train fight during Red River War, September 9-12, 1874, Texas.",
+    "description": "The Red River War of 1874 was a multi-column campaign by five U.S. Army columns that relentlessly pursued the Comanche, Kiowa, and Southern Cheyenne across the Texas Panhandle, engaging them in multiple small fights along Sweetwater Creek and other Red River tributaries until the tribes were exhausted and forced back to the reservation. The battle at Sweetwater Creek in Wheeler County, TX, was one of these many actions. The remote Texas Panhandle has been largely unchanged since the 1874 campaign, and the Sweetwater Creek corridor in Wheeler County, TX, is private ranch land. The Red River War campaign corridor has produced Indian Wars-era cartridge casings and military hardware on private ranch land throughout the Texas Panhandle.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2674,7 +2674,7 @@
     "latitude": 34.6036,
     "longitude": -98.3959,
     "year": 1874,
-    "description": "Outbreak of Kiowa-Comanche violence at agency, August 22, 1874, Indian Territory.",
+    "description": "On August 22, 1874, the Red River War opened with an attack by Kiowa warriors on a company of soldiers escorting a surveying party at the Wichita Agency (Anadarko) in Indian Territory (present-day Oklahoma) \u2014 warriors from the reservation attacked civilians and soldiers in broad daylight, marking the formal beginning of the Red River War. The town of Anadarko, OK, in Caddo County sits near the original agency location, now largely within the modern community. The Red River War campaign area across southwestern Oklahoma has produced Indian Wars-era cartridge casings and military hardware on private land from the 1874 operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2684,7 +2684,7 @@
     "latitude": 43.1472,
     "longitude": -102.365,
     "year": 1890,
-    "description": "Massacre of Lakota Sioux by 7th Cavalry, December 29, 1890, South Dakota.",
+    "description": "On December 29, 1890, soldiers of the 7th Cavalry attempted to disarm Chief Big Foot's band of Miniconjou Lakota Sioux at Wounded Knee Creek on the Pine Ridge Reservation in South Dakota \u2014 when a deaf warrior named Black Coyote refused to surrender his rifle, a shot was fired (its origin disputed), and the soldiers opened fire with rifles and Hotchkiss mountain guns, killing approximately 250-300 men, women, and children and effectively ending the Plains Indian Wars. The massacre remains one of the most traumatic events in Native American history. Wounded Knee is on the Pine Ridge Indian Reservation in Shannon County, SD; a small church cemetery marks the mass grave, and the site has become a place of pilgrimage and protest. The area is tribal land, and no outside metal detecting is permitted \u2014 the site is a deeply sacred place of mourning for the Lakota people.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2694,7 +2694,7 @@
     "latitude": 45.7667,
     "longitude": -116.3167,
     "year": 1877,
-    "description": "Nez Perce defeat Army at opening of Nez Perce War, June 17, 1877, Idaho.",
+    "description": "On June 17, 1877, the first battle of the Nez Perce War was fought when Captain David Perry led 99 soldiers into White Bird Canyon in Idaho Territory and was ambushed by Nez Perce warriors using the terrain expertly, killing 34 soldiers and wounding 4 in one of the Army's worst small-unit defeats of the Indian Wars. The Nez Perce had not started the fight \u2014 young warriors had killed settlers, triggering the war \u2014 but their tactical victory at White Bird Canyon showed the Army they faced a formidable opponent. White Bird Battlefield in Idaho County, Idaho, is preserved as part of Nez Perce National Historical Park, with dramatic canyon views and interpretive trails along Highway 95. Metal detecting is prohibited in the national park, but surrounding Idaho County private land has produced Indian Wars .45-70 Springfield and .45-60 Sharps cartridge casings from the 1877 campaign.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2704,7 +2704,7 @@
     "latitude": 46.1667,
     "longitude": -115.0,
     "year": 1877,
-    "description": "Nez Perce evade Army blockade, July 25-28, 1877, Montana/Idaho.",
+    "description": "In late July 1877, the Nez Perce under Chief Looking Glass crossed the Bitterroot Mountains on the ancient Lolo Trail into Montana Territory, where Captain Charles Rawn's small force had built a small fortification ('Fort Fizzle') to block their passage \u2014 the Nez Perce simply went around Rawn's position through the mountains while the settlers negotiated safe passage, continuing their remarkable flight. The Lolo Trail crossing in Lolo, Missoula County, Montana, is commemorated at Fort Fizzle Historical Site along U.S. Highway 12. The Lolo Trail (now a forest service road) traverses rugged Bitterroot Mountain terrain in the Clearwater and Lolo National Forests, and the surrounding area has produced Indian Wars-era artifacts near the trail corridor.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2714,7 +2714,7 @@
     "latitude": 44.5667,
     "longitude": -111.5,
     "year": 1877,
-    "description": "Nez Perce night raid on Army mule herd, August 20, 1877, Idaho.",
+    "description": "On August 19-20, 1877, Nez Perce warriors raided General Howard's camp at Camas Creek (Camas Meadows) in Idaho Territory near present-day Kilgore, stealing approximately 150 mules from the Army pack train in a daring night operation that delayed Howard's pursuit for several days. The brilliant raid was one of the Nez Perce's most effective tactics in slowing the pursuing Army. The Camas Meadows battlefield in Clark County, Idaho, is now within the agricultural fields of the upper Snake River Plain near Kilgore, ID. The surrounding Clark County area has produced Indian Wars-era cartridge casings from the 1877 Nez Perce campaign on private land.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2724,7 +2724,7 @@
     "latitude": 44.7833,
     "longitude": -106.5833,
     "year": 1866,
-    "description": "Fetterman's entire command of 80 men wiped out by Sioux, December 21, 1866, Wyoming.",
+    "description": "On December 21, 1866, Captain William Fetterman led exactly 80 men from Fort Phil Kearny along the Bozeman Trail in Wyoming Territory \u2014 reportedly boasting he could ride through the entire Sioux nation with 80 men \u2014 and was lured into a perfectly executed ambush by Red Cloud's warriors led by Crazy Horse acting as decoy, resulting in the complete annihilation of the command in what was the worst U.S. Army defeat on the Plains until Little Bighorn a decade later. The disaster forced the Army to close the Bozeman Trail forts and sign the Fort Laramie Treaty of 1868. The Fetterman Fight site in Johnson County, Wyoming, is preserved as Fetterman Battle Site \u2014 a small state historic site near Story, WY, with a monument and interpretive markers on the ridge where the soldiers died. Metal detecting is not permitted at the state site, but surrounding Johnson County private ranch land has produced Indian Wars .58 caliber Springfield and .50 caliber cartridge casings, arrowheads, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2734,7 +2734,7 @@
     "latitude": 44.8167,
     "longitude": -106.7333,
     "year": 1867,
-    "description": "Soldiers with breech-loaders repel Sioux assault, August 2, 1867, Wyoming.",
+    "description": "On August 2, 1867, a small company of 32 soldiers under Captain James Powell were attacked by over 1,000 Sioux warriors near Fort Phil Kearny, Wyoming Territory \u2014 but instead of dying as at Fetterman, the soldiers had just received new breech-loading Springfield rifles capable of rapid fire, and the unprecedented volume of fire repulsed repeated charges with enormous warrior casualties. The Wagon Box Fight demonstrated that new repeating technology had fundamentally changed the balance between soldiers and warriors in open terrain. The Wagon Box Fight site near Story in Johnson County, Wyoming, has a state historical marker; the immediate area is largely private ranch land. The Johnson County area has produced Indian Wars-era cartridge casings, arrowheads, and military hardware from the intense 1866-68 Powder River country operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2744,7 +2744,7 @@
     "latitude": 45.5167,
     "longitude": -107.2667,
     "year": 1867,
-    "description": "Soldiers repel Crow/Sioux attack near Fort C.F. Smith, August 1, 1867, Montana.",
+    "description": "On August 1, 1867 \u2014 the day before the Wagon Box Fight \u2014 a mowing party and their military escort near Fort C.F. Smith in Montana Territory fought off a major Crow and Sioux attack from behind their wagon barricades using new breech-loading rifles, inflicting severe casualties on the warriors. The twin victories at Hayfield and Wagon Box demonstrated to Red Cloud's coalition that the new Springfield repeaters had changed the tactical equation. Fort C.F. Smith was on the Bighorn River near present-day Fort Smith in Big Horn County, Montana; the site is on private and federal land. The surrounding Big Horn County ranch country has produced Indian Wars cartridge casings and military hardware from the 1867 Big Horn campaigns.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2754,7 +2754,7 @@
     "latitude": 42.8333,
     "longitude": -106.3333,
     "year": 1865,
-    "description": "Sioux and Cheyenne ambush Union troopers, July 26, 1865, Wyoming.",
+    "description": "On July 26, 1865, a large Cheyenne, Sioux, and Arapaho force attacked the Platte Bridge Station (near present-day Casper, WY), ambushing Lieutenant Caspar Collins and a small relief column with approximately 3,000 warriors \u2014 Collins was killed, and the Sergeant Custard's wagon train escort was wiped out nearby. The battle was one of the most significant Plains Indian victories of 1865. The battle site in Natrona County, Wyoming, near Casper, is commemorated by Fort Caspar Museum and Historic Site on the grounds of the reconstructed fort. Metal detecting is not permitted at the historic site, but surrounding Natrona County private land has produced Indian Wars-era cartridge casings and military hardware from the Platte Bridge operations.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2764,7 +2764,7 @@
     "latitude": 46.9833,
     "longitude": -102.3167,
     "year": 1864,
-    "description": "Sully defeats Sioux in major engagement, July 28, 1864, North Dakota.",
+    "description": "On July 28, 1864, General Alfred Sully led 2,200 soldiers against a large encampment of Hunkpapa, Sioux, and allied tribes at Killdeer Mountain in Dakota Territory (present-day North Dakota), driving them from their fortified positions in the badlands with artillery. The battle was part of Sully's punitive expedition following the Dakota War of 1862. Killdeer Mountain Battlefield State Historic Site in Dunn County, North Dakota, preserves the dramatic butte terrain with interpretive trails and a monument. Metal detecting is not permitted in the state historic site, but surrounding Dunn County private ranch land has produced Indian Wars-era .58 caliber Springfield musket balls and military hardware from Sully's 1864 expedition.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2774,7 +2774,7 @@
     "latitude": 46.5333,
     "longitude": -98.8667,
     "year": 1863,
-    "description": "Sully attacks Sioux encampment in Minnesota War aftermath, September 3, 1863, North Dakota.",
+    "description": "On September 3-5, 1863, General Alfred Sully's forces attacked a large Sioux encampment at Whitestone Hill in Dakota Territory (present-day Dickey County, ND), killing approximately 100-150 warriors and capturing 156 in a controversial attack on a camp that included many peaceful bands. The battle sparked intense debate about the indiscriminate nature of Plains Indian warfare. Whitestone Hill State Historic Site in Dickey County, North Dakota, preserves the battlefield with monuments and interpretive markers. Metal detecting is not permitted in the state historic site, but surrounding Dickey County private farmland has produced Indian Wars-era military hardware and musket balls from the 1863 Dakota Expedition.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2784,7 +2784,7 @@
     "latitude": 44.5333,
     "longitude": -94.9833,
     "year": 1862,
-    "description": "Sibley defeats Dakota in decisive battle of Dakota War, September 23, 1862, Minnesota.",
+    "description": "On September 23, 1862, the decisive engagement of the Dakota War ended when Colonel Henry Sibley's force defeated Little Crow's warriors at Wood Lake in Yellow Medicine County, Minnesota, after the warriors' pre-dawn ambush was prematurely triggered. The victory ended major combat operations of the Dakota War, leading to the surrender of hundreds of Dakota and the infamous mass execution of 38 warriors at Mankato \u2014 the largest mass execution in American history. Wood Lake Battle Site in Yellow Medicine County, Minnesota, is a state historic site with a monument and interpretive markers in the prairie lake country of southwestern Minnesota. Metal detecting is not permitted in the state historic site, but surrounding Yellow Medicine County private farmland has produced Civil War-era musket balls and military hardware from the 1862 Minnesota Dakota War.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2794,7 +2794,7 @@
     "latitude": 44.5833,
     "longitude": -94.9667,
     "year": 1862,
-    "description": "Dakota ambush of burial detail, September 2-3, 1862, Minnesota.",
+    "description": "On September 2-3, 1862, a detachment of Minnesota volunteers under Captain Hiram Grant was surrounded by Dakota warriors at Birch Coulee while burying the dead from earlier massacres, and was besieged for 31 hours before Colonel Sibley's relief column arrived \u2014 losing 23 men killed and 60 wounded in one of the costliest engagements of the Dakota War relative to numbers engaged. Birch Coulee Battlefield State Historic Site in Renville County, Minnesota, preserves the defensive perimeter used by the besieged soldiers in a rural prairie setting. Metal detecting is not permitted in the state historic site, but surrounding Renville County private farmland has produced Dakota War-era musket balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2804,7 +2804,7 @@
     "latitude": 44.3126,
     "longitude": -94.4575,
     "year": 1862,
-    "description": "Dakota attacks on Minnesota town, August 19-23, 1862.",
+    "description": "On August 19-23, 1862, the German immigrant community of New Ulm, Minnesota, repulsed two major Dakota Sioux attacks during the Dakota War, with civilian defenders and arriving militia fighting off warriors throughout the town and ultimately burning buildings to create fields of fire. The town was largely destroyed, and survivors were evacuated before the Dakota War ended. New Ulm, MN, in Brown County is a well-preserved German-American historic community; the Battle of New Ulm Museum and Schell's Brewery (used as a refuge during the battle) preserve the history. The Brown County area has produced Dakota War-era musket balls and period hardware on private land near the battle sites.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -2814,7 +2814,7 @@
     "latitude": 44.4439,
     "longitude": -94.7276,
     "year": 1862,
-    "description": "Dakota attacks on Minnesota fort, August 20-22, 1862.",
+    "description": "On August 20-22, 1862, Dakota warriors under Little Crow attacked the undermanned Fort Ridgely on the Minnesota River in Nicollet County, the key military post in the region, twice attempting to overwhelm the garrison before being repulsed both times by cannon fire that the Dakota could not counter. The fort's survival was crucial to preventing the Dakota War from spreading further east. Fort Ridgely State Park and Historic Site in Nicollet County, Minnesota, preserves the original stone commissary building and reconstructed features of the 1862 fort. Metal detecting is not permitted in the state park, but surrounding Nicollet County private farmland has produced Dakota War-era musket balls and military hardware from the August 1862 attacks.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
