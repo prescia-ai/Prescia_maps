@@ -2840,7 +2840,8 @@
     "latitude": 33.970833,
     "longitude": -88.543056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cotton Gin Port was a significant antebellum commercial settlement in Monroe County, Mississippi, situated on the Tombigbee River where a cotton gin and river landing served as a major shipping hub for the surrounding plantation district during the 1820s\u20131840s. At its peak the community had a tavern, warehouses, a post office, and a thriving trade in ginned cotton baled for shipment down the Tombigbee to Mobile, making it one of the more commercially active interior landings in northeast Mississippi. The community declined sharply after the Mobile and Ohio Railroad bypassed it in favor of Aberdeen and other settlements in the 1850s, gutting the river trade economy. Today Cotton Gin Port is a historical site with some archaeological investigations conducted in the area, and the Tombigbee riverbanks may yield early 19th-century commercial artifacts and antebellum domestic items."
   },
   {
     "name": "Electric Mills, MS",
@@ -2848,7 +2849,8 @@
     "latitude": 32.769167,
     "longitude": -88.463889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Electric Mills was an early 20th-century sawmill and company town in Kemper County, Mississippi, built around one of the region's innovative electrically powered timber mills that processed the vast longleaf pine forests of east-central Mississippi during the 1910s\u20131930s. The company town included worker housing, a commissary, a school, and a church, all owned and operated by the lumber company, and it functioned as a self-contained settlement for hundreds of mill workers and their families. When the surrounding timberland was exhausted by the mid-20th century, the mill closed and the company town dissolved, leaving behind only foundations and the community's name on county maps. Searches around old mill sites and company town footprints can yield early 20th-century coins, industrial hardware, and domestic items from the mill worker community."
   },
   {
     "name": "Woolworth, MS",
@@ -2856,7 +2858,8 @@
     "latitude": 31.633333,
     "longitude": -90.273333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Woolworth was a small Mississippi farming community named for an early settler family, established in the rural agricultural districts of the state during the mid-to-late 19th century and serving as a minor trade point for cotton farmers in the surrounding area. The community had a post office for a period and a church or small store before rural depopulation through the 20th century reduced it to a name on old postal records. Today no physical structures remain, and the site is private farmland. Detectorists with landowner permission may find 19th-century domestic artifacts, Civil War-era relics, and agricultural hardware in the vicinity of the old community."
   },
   {
     "name": "Rocky Springs, MS",
@@ -2864,7 +2867,8 @@
     "latitude": 32.088889,
     "longitude": -90.815,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rocky Springs was a prosperous antebellum farming community in Claiborne County, Mississippi along the Old Natchez Trace, booming in the 1820s\u20131830s when cotton planting made it one of the wealthiest settlements in the state's interior before yellow fever epidemics, soil depletion, and the Civil War systematically destroyed the community over the following decades. At its peak, Rocky Springs had over 2,500 residents, multiple churches, a post office, and a thriving commercial district \u2014 an astonishing scale for such a remote inland location. Today Rocky Springs is preserved as part of Natchez Trace Parkway, managed by the National Park Service, and visitors can walk to the surviving 1837 brick Methodist church and the community cemetery. Access for metal detecting is prohibited within the national parkway, but the area's rich history draws historians and enthusiasts who can explore publicly accessible adjacent lands."
   },
   {
     "name": "Uniontown, MS",
@@ -2872,7 +2876,8 @@
     "latitude": 31.758611,
     "longitude": -91.172778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Uniontown was a small Mississippi farming community, likely established in the antebellum era and named by optimistic settlers seeking to evoke national unity in a landscape deeply divided by sectional tensions over slavery. The community served the surrounding cotton-farming households with a church, school, and store, but never grew large enough to survive the economic shocks of the Civil War and Reconstruction period. Today the community name appears on old county maps and historical records, with no surviving physical structures. Old church sites and road traces near the historic community location are potential areas for finding antebellum coins, Civil War military relics, and 19th-century domestic artifacts."
   },
   {
     "name": "Dogtown, MS",
@@ -2880,7 +2885,8 @@
     "latitude": 34.264722,
     "longitude": -89.285833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dogtown was an informal rural settlement in Mississippi, typical of the colloquially named crossroads communities scattered throughout the Deep South that served as gathering points for farming families living beyond the reach of formal town amenities. The community may have had a blacksmith shop, a gristmill, or a tavern alongside its informal social functions, peaking in the mid-to-late 19th century before improved transportation drew commerce to larger centers. No formal historical records document the community in detail, and the site has been absorbed into surrounding private agricultural land. Old crossroads and fence line intersections in the vicinity may yield 19th-century coins, farm hardware, and domestic items."
   },
   {
     "name": "Orwood, MS",
@@ -2888,7 +2894,8 @@
     "latitude": 34.258889,
     "longitude": -89.718056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Orwood was a small Mississippi farming community in Carroll County, established during the antebellum era as a minor local trading center for the surrounding cotton-growing plantation district. The community had a church and possibly a small store, surviving through the Civil War and Reconstruction before the steady rural depopulation of the late 19th and early 20th centuries emptied it. Today Orwood exists only as a name on historic maps, and the site is private agricultural land. The Carroll County countryside in the Orwood area, explored with landowner permission, may yield antebellum domestic artifacts, Civil War-era military items, and 19th-century farm implements."
   },
   {
     "name": "Old Town, Calhoun County, MS",
@@ -2896,7 +2903,8 @@
     "latitude": 33.9881,
     "longitude": -89.29906,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Old Town in Calhoun County was a Mississippi community that predated the formal organization of surrounding settlements, established by early Choctaw-era traders and pioneer settlers in the 1820s\u20131830s before the removal of the Choctaw Nation opened the region to large-scale American settlement. The community served as an early trading post and gathering point for both Native American and settler populations during the transitional decade before the county was formally organized and newer, better-located towns absorbed the trade. Almost nothing survives above ground at the old townsite, which is now forested or farmed private land. The pre\u20131840 era of this location makes it a particularly interesting target for searchers, who might find early American trade goods, Native American items, and pioneer-era coins with landowner permission."
   },
   {
     "name": "Pontocola, MS",
@@ -2904,7 +2912,8 @@
     "latitude": 34.145278,
     "longitude": -88.821667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pontocola was a small rural community in Mississippi, established during the antebellum settlement era and serving the farming families of the surrounding region with church services, a small store, and perhaps a post office at its peak. The community name reflects the region's Choctaw linguistic heritage \u2014 many Mississippi place names derive from the Choctaw language \u2014 and likely occupied land previously used by Native American communities before the forced removal of the 1830s. Today the community survives only in historical records and old maps, having been absorbed into the surrounding agricultural landscape. Detectorists with landowner permission may find trade era artifacts, antebellum coins, and early domestic hardware at old community sites."
   },
   {
     "name": "Palo Alto, MS",
@@ -2912,7 +2921,8 @@
     "latitude": 33.680556,
     "longitude": -88.8,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Palo Alto was a small Mississippi farming community, likely named in the patriotic fervor following the 1846 Battle of Palo Alto during the Mexican-American War \u2014 a naming convention common across the South and Midwest during that era. The community served as a minor rural center for surrounding plantation and farm families growing cotton in the region, with a church and store at its height before post\u2013Civil War economic decline reduced it to a crossroads and eventually nothing at all. Today Palo Alto exists only on old county plat maps and postal records. The surrounding rural landscape, explored with landowner permission, may yield mid-19th-century coins, domestic artifacts, and farm implements from the community's active years."
   },
   {
     "name": "Pigeon Roost, MS",
