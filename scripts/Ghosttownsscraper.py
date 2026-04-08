@@ -34,12 +34,19 @@ Usage::
 
 from __future__ import annotations
 
+import io
+import sys
+
+# Force UTF-8 output on Windows to prevent emoji/unicode crashes
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 import argparse
 import asyncio
 import csv
-import io
 import re
-import sys
 import uuid
 import zipfile
 from pathlib import Path
@@ -77,7 +84,7 @@ logger = setup_logging("Ghosttownsscraper")
 # Constants
 # ---------------------------------------------------------------------------
 
-GNIS_NATIONAL_FILE_URL = "https://geonames.usgs.gov/docs/stategaz/NationalFile.zip"
+GNIS_NATIONAL_FILE_URL = "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/Topical/AllNames_National_Text.zip"
 GNIS_SOURCE = "gnis"
 GNIS_CONFIDENCE = 0.85
 
@@ -123,14 +130,37 @@ _GT_BASE = "https://www.ghosttowns.com"
 # GNIS download & parse
 # ---------------------------------------------------------------------------
 
-def _download_gnis(timeout: float = 300.0) -> bytes:
-    """Download the GNIS National File ZIP."""
-    logger.info("Downloading GNIS National File from %s …", GNIS_NATIONAL_FILE_URL)
-    with httpx.Client(timeout=timeout, follow_redirects=True) as client:
-        response = client.get(GNIS_NATIONAL_FILE_URL)
-        response.raise_for_status()
-    logger.info("Download complete (%.1f MB).", len(response.content) / 1_048_576)
-    return response.content
+def _download_gnis(timeout: float = 300.0, max_attempts: int = 3) -> bytes:
+    """Download the GNIS National File ZIP with exponential-backoff retry."""
+    import time as _time
+
+    last_exc: Exception = RuntimeError("No attempts made")
+    for attempt in range(1, max_attempts + 1):
+        try:
+            logger.info(
+                "Downloading GNIS National File from %s (attempt %d/%d) …",
+                GNIS_NATIONAL_FILE_URL, attempt, max_attempts,
+            )
+            with httpx.Client(timeout=timeout, follow_redirects=True) as client:
+                response = client.get(GNIS_NATIONAL_FILE_URL)
+                response.raise_for_status()
+            logger.info("Download complete (%.1f MB).", len(response.content) / 1_048_576)
+            return response.content
+        except Exception as exc:
+            last_exc = exc
+            if attempt < max_attempts:
+                wait = 2 ** attempt  # 2, 4, 8 seconds
+                logger.warning(
+                    "GNIS download attempt %d/%d failed: %s — retrying in %ds …",
+                    attempt, max_attempts, exc, wait,
+                )
+                _time.sleep(wait)
+            else:
+                logger.warning(
+                    "GNIS download failed after %d attempts: %s",
+                    max_attempts, exc,
+                )
+    raise last_exc
 
 
 def _extract_pipe_file(zip_bytes: bytes) -> io.TextIOWrapper:
@@ -382,69 +412,79 @@ async def run(
     # ===================================================================
     if "gnis" not in completed_sources:
         logger.info("=== Source 1: USGS GNIS ===")
-        zip_bytes = _download_gnis()
-        stream = _extract_pipe_file(zip_bytes)
+        try:
+            zip_bytes = _download_gnis()
+            stream = _extract_pipe_file(zip_bytes)
+        except Exception as gnis_exc:
+            logger.warning(
+                "GNIS download/extract failed — skipping GNIS source and continuing "
+                "with web scraping sources. Error: %s", gnis_exc,
+            )
+            completed_sources.add("gnis")
+            zip_bytes = None
+            stream = None
 
-        batch: List[Dict[str, Any]] = []
+        if stream is not None:
+            batch: List[Dict[str, Any]] = []
 
-        async with session_factory() as session:
-            for name, type_str, lat, lon, state, county in _parse_gnis_records(
-                stream, state_filter, limit
-            ):
-                cleaned = clean_name(name)
-                if not cleaned:
-                    continue
+            async with session_factory() as session:
+                for name, type_str, lat, lon, state, county in _parse_gnis_records(
+                    stream, state_filter, limit
+                ):
+                    cleaned = clean_name(name)
+                    if not cleaned:
+                        continue
 
-                if is_blocked(cleaned, ""):
-                    skipped_blocked += 1
-                    continue
+                    if is_blocked(cleaned, ""):
+                        skipped_blocked += 1
+                        continue
 
-                if dedup.is_duplicate(cleaned, lat, lon):
-                    skipped_dup += 1
-                    continue
+                    if dedup.is_duplicate(cleaned, lat, lon):
+                        skipped_dup += 1
+                        continue
 
-                dedup.add(cleaned, lat, lon)
+                    dedup.add(cleaned, lat, lon)
 
-                desc_parts = []
-                if county:
-                    desc_parts.append(f"{county} County")
-                if state:
-                    desc_parts.append(state)
-                description = ", ".join(desc_parts) if desc_parts else None
+                    desc_parts = []
+                    if county:
+                        desc_parts.append(f"{county} County")
+                    if state:
+                        desc_parts.append(state)
+                    description = ", ".join(desc_parts) if desc_parts else None
 
-                record = build_location_record(
-                    name=cleaned,
-                    lat=lat,
-                    lon=lon,
-                    source=GNIS_SOURCE,
-                    loc_type=type_str,
-                    description=description,
-                    confidence=GNIS_CONFIDENCE,
-                )
-                batch.append(record)
-                total_processed += 1
+                    record = build_location_record(
+                        name=cleaned,
+                        lat=lat,
+                        lon=lon,
+                        source=GNIS_SOURCE,
+                        loc_type=type_str,
+                        description=description,
+                        confidence=GNIS_CONFIDENCE,
+                    )
+                    batch.append(record)
+                    total_processed += 1
 
-                if len(batch) >= BATCH_SIZE:
+                    if len(batch) >= BATCH_SIZE:
+                        if not dry_run:
+                            total_inserted += await insert_location_batch(session, batch)
+                        else:
+                            total_inserted += len(batch)
+                        batch.clear()
+
+                    if total_processed % 5000 == 0:
+                        logger.info(
+                            "GNIS progress: %d processed, %d inserted.",
+                            total_processed, total_inserted,
+                        )
+
+                # Final batch
+                if batch:
                     if not dry_run:
                         total_inserted += await insert_location_batch(session, batch)
                     else:
                         total_inserted += len(batch)
-                    batch.clear()
 
-                if total_processed % 5000 == 0:
-                    logger.info(
-                        "GNIS progress: %d processed, %d inserted.",
-                        total_processed, total_inserted,
-                    )
-
-            # Final batch
-            if batch:
-                if not dry_run:
-                    total_inserted += await insert_location_batch(session, batch)
-                else:
-                    total_inserted += len(batch)
-
-        completed_sources.add("gnis")
+            completed_sources.add("gnis")
         save_checkpoint(ckpt_path, {
             "completed_sources": list(completed_sources),
             "stats": {

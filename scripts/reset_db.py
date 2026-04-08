@@ -20,7 +20,14 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import io
 import sys
+
+# Force UTF-8 output on Windows to prevent emoji/unicode crashes
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+if sys.stderr.encoding != 'utf-8':
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 from pathlib import Path
 
 from sqlalchemy import text
