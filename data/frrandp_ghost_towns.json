@@ -4010,7 +4010,8 @@
     "latitude": 40.311278,
     "longitude": -92.128366,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sand Hill was a small Missouri farming community, established during the 19th century in the rolling Ozark margin country or Missouri river-bottom agricultural lands by farm families growing corn, tobacco, and livestock on the fertile Missouri soils. The community served surrounding agricultural families with a church, school, and country store, functioning as a minor rural center before improved transportation drew residents toward larger Missouri market towns. Today Sand Hill is absorbed into the surrounding Missouri agricultural landscape with no surviving commercial structures. Old church lots and farmstead perimeters near the historic Sand Hill community location can yield 19th-century coins, agricultural hardware, and domestic artifacts."
   },
   {
     "name": "Bible Grove, MO",
@@ -4018,7 +4019,8 @@
     "latitude": 40.352813,
     "longitude": -92.304353,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bible Grove was a small Missouri community in Clark County in the Missouri 'boot heel' or northern Missouri region, organized around a church congregation as many 19th-century rural Missouri communities were, with a Bible-inspired name reflecting the evangelical Protestant culture that dominated the rural Midwest. The community served surrounding farm families with its church, school, and perhaps a country store during the 19th century before the usual pattern of rural consolidation and improved transportation dissolved the commercial core. Today Bible Grove exists only as a historical name in Missouri records. Old church sites and farmstead perimeters near the historic Bible Grove community location may yield 19th-century coins, religious community artifacts, and farm implements."
   },
   {
     "name": "Yost, UT",
@@ -4026,7 +4028,8 @@
     "latitude": 41.960833,
     "longitude": -113.541389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Yost was a small ranching and farming community in Box Elder County, Utah, situated in the remote Raft River Valley country in the northwestern corner of the state near the Idaho border, established by homesteaders seeking the valley's reliable water and relatively sheltered terrain for grazing and small-scale irrigation farming. The community had a church, school, and small store serving the scattered ranching families of the area, persisting through the mid-20th century before rural depopulation emptied it. Today Yost is largely inactive, with a handful of structures remaining in the remote valley. The isolated Box Elder County terrain near Yost, accessible via county roads, may yield late 19th-century ranch hardware, homestead implements, and early 20th-century coins."
   },
   {
     "name": "Soldier Summit, UT",
@@ -4034,7 +4037,8 @@
     "latitude": 39.928569,
     "longitude": -111.077945,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Soldier Summit was a railroad community in Utah County, Utah, situated atop the dramatic divide between the Wasatch Front and the Uinta Basin at 7,477 feet elevation where the Denver and Rio Grande Western Railroad's mountain mainline crested the Wasatch Plateau \u2014 a brutal climb that required helper engines to push heavy freight trains up the grade during the steam era. The community housed railroad maintenance workers and their families in a cluster of company buildings perched on the summit, and it served the helper locomotive operations that were required on the steep grades through the 1940s\u20131950s. When diesel engines replaced steam and made helper operations less necessary, the community rapidly emptied. Today Soldier Summit retains a few deteriorating structures along US-6 in eastern Utah, and the railroad grade areas near the summit may yield railroad hardware and worker-era domestic artifacts."
   },
   {
     "name": "Pickelville, UT",
@@ -4042,7 +4046,8 @@
     "latitude": 41.912435,
     "longitude": -111.388262,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pickelville was a small community in Rich County, Utah, situated near the shores of Bear Lake on the Utah-Idaho border, established by early Mormon settlers in the late 19th century who farmed the Bear Lake Valley's rich bottomland and fished the lake's renowned Bonneville cisco runs. The community served as a minor local center for the Bear Lake area during the late 19th and early 20th centuries before tourism development transformed the area's economy and the original agricultural community faded. Today the Bear Lake area is a popular Utah resort destination, and the Pickelville area retains some rural character amid the growing lake town. Old farmstead sites near the historic Pickelville community location can yield late 19th-century domestic artifacts and Mormon pioneer-era implements."
   },
   {
     "name": "Bingham Canyon, UT",
@@ -4050,7 +4055,8 @@
     "latitude": 40.558671,
     "longitude": -112.131572,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bingham Canyon was one of the most significant mining communities in American history, a Utah copper mining town in Salt Lake County built into the steep walls of Bingham Canyon southwest of Salt Lake City that grew from an 1863 gold placer camp into a full-scale company town of 15,000 residents \u2014 one of the most densely populated mining towns in the Mountain West \u2014 serving the workers of the Kennecott Copper Mine. The town had multiple schools, ethnic-specific churches and commercial districts for its diverse immigrant population of Greeks, Italians, Finns, Japanese, and dozens of other nationalities who came to work the massive open-pit mine. Beginning in the 1950s, the expanding Kennecott open pit consumed the town section by section until the last residents were relocated in 1971 and the entire townsite was eaten by the mine. Today Bingham Canyon is entirely within the Kennecott Copper Mine property \u2014 the largest man-made excavation on Earth \u2014 and is not accessible to the public, though the overlook visitor center provides views of the pit where the town once stood."
   },
   {
     "name": "Ile aux Marins, St. Pierre and Miquelon",
@@ -4058,7 +4064,8 @@
     "latitude": 46.786271,
     "longitude": -56.148677,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "\u00cele aux Marins was a small fishing community on the French overseas territory of Saint-Pierre and Miquelon off the southern coast of Newfoundland, inhabited from the 16th century by Basque, Breton, and Norman fishermen who used the island as a base for the extraordinarily rich Grand Banks cod fishery that fueled European economies for centuries. The island community had a church, school, and the full infrastructure of a permanent fishing village, supporting over 600 residents at its peak in the late 19th century. The collapse of the cod fishery through the 20th century, combined with the practical advantages of living on the larger main island of Saint-Pierre, led to the gradual evacuation of \u00cele aux Marins, with the last permanent residents leaving in 1965. Today the island is a preserved open-air museum with the old village intact, accessible by boat from Saint-Pierre, offering an extraordinary window into centuries of North Atlantic fishing culture."
   },
   {
     "name": "Normantown, IL",
@@ -4066,7 +4073,8 @@
     "latitude": 41.656517,
     "longitude": -88.233553,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Normantown was a small Illinois farming community in Greene County, established during the mid-19th century agricultural settlement of the Illinois River valley country by farm families growing corn, wheat, and hogs on the rich bottomland and upland soils of western Illinois. The community served surrounding farming interests with a church and store before being eclipsed by neighboring Illinois River towns with better transportation connections. Today Normantown is a small unincorporated community with minimal surviving commercial activity from the original settlement era. Old farmstead perimeters and road traces near the historic Normantown community in Greene County, Illinois can yield 19th-century coins, farm implements, and domestic artifacts."
   },
   {
     "name": "Wolfs, IL",
@@ -4074,7 +4082,8 @@
     "latitude": 41.695863,
     "longitude": -88.260902,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Wolfs was a small Illinois farming community, likely named for the Wolf or Wolff family \u2014 a German-American surname common among the German immigrant farm families who settled heavily in Illinois from the 1840s through the 1870s, establishing a strong presence in the central and southern Illinois agricultural landscape. The community served surrounding German-American farm families with a Lutheran or Catholic church and country store before rural consolidation through the 20th century absorbed it into the larger township structure. Today Wolfs exists only in old Illinois county records. German-American church sites and farmstead perimeters near the historic Wolfs community location can yield 19th-century domestic items, German-American cultural artifacts, and farm implements."
   },
   {
     "name": "Ingham, OH",
@@ -4082,7 +4091,8 @@
     "latitude": 39.313889,
     "longitude": -82.296667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ingham was a small Ohio farming community in one of the state's agricultural counties, established during the 19th century settlement of Ohio's interior by farming families who claimed the rich glacially deposited soils and built small rural communities with churches, schools, and country stores to serve their agricultural needs. The community declined as improved transportation and rural consolidation through the late 19th and 20th centuries drew its residents toward larger Ohio centers. Today the Ingham community is absorbed into Ohio's agricultural landscape with no surviving commercial structures. Old church lots and farmstead perimeters near the historic Ingham community location in Ohio may yield 19th-century coins, domestic ceramics, and agricultural hardware."
   },
   {
     "name": "Aaronsburg, OH",
