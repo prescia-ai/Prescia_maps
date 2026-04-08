@@ -1814,7 +1814,8 @@
     "latitude": 46.347223,
     "longitude": -101.173747,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Freda was a small Houghton County, Michigan copper mining community on the Keweenaw Peninsula in the Lake Superior copper district, established in the late nineteenth century as a residential community for workers in the nearby copper mines and stamp mills of the Quincy and Hancock area. The community occupied lakeside land on the Portage Lake shoreline and was eventually acquired as the copper industry consolidated, with remaining structures demolished or absorbed into the broader Houghton County landscape. The Keweenaw Peninsula today is recognized as a National Heritage Area celebrating the world's greatest copper mining district, and the Quincy Mine and other preserved industrial heritage sites offer remarkable insight into the immigrant workers who built this community."
   },
   {
     "name": "Keomuku, HI",
@@ -1822,7 +1823,8 @@
     "latitude": 20.840857,
     "longitude": -156.818866,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Keomuku was a plantation-era community on the eastern coast of Lanai, the smallest of Hawaii's inhabited islands, established in the 1890s when the Maunalei Sugar Company attempted to grow sugarcane on Lanai's eastern coast — one of several ill-fated agricultural ventures that preceded the island's twentieth century transformation into a pineapple plantation. The venture failed within a decade, reportedly cursed after workers dismantled a heiau (ancient Hawaiian temple) to use its stones for a railroad. The remains of Ka Lanakila Church, built by workers in 1903, still stand at Keomuku and have been intermittently maintained as a historic landmark. The site is accessible via a rough four-wheel-drive coastal road, with the old church ruins and former plantation landscape offering a quiet glimpse of Lanai's pre-pineapple history."
   },
   {
     "name": "Belmont, NV",
@@ -1830,7 +1832,8 @@
     "latitude": 38.0716,
     "longitude": -117.21786,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Belmont was a significant Nevada silver mining boomtown in Nye County in the Monitor Valley, established in 1865 after rich silver discoveries and growing to over 2,000 people by the late 1860s, serving as Nye County's seat of government with a courthouse, newspaper, and all the infrastructure of a frontier silver town. The town declined in the 1880s as silver prices fell and the mines reached depths where extraction became uneconomical, and the county seat was moved to Tonopah in 1905 when that community's remarkable silver-gold discovery eclipsed everything else in the region. The remarkably preserved ruins of Belmont — including the standing walls of the old courthouse, the Cosmopolitan Saloon, and several other structures — are accessible on BLM and state land. The accessible ruins make Belmont one of central Nevada's most historically significant and rewarding ghost town destinations."
   },
   {
     "name": "Unionville, NV",
@@ -1838,7 +1841,8 @@
     "latitude": 40.445463,
     "longitude": -118.120695,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Unionville was an early Nevada silver mining camp in Pershing County in the Humboldt Mountains, established in 1861 during the initial Nevada silver rush and notable for being the site where young Samuel Clemens — not yet 'Mark Twain' — tried his hand at silver mining in 1861-1862 before abandoning the shovel in favor of the pen. Clemens's hilarious account of his failed mining adventure appeared in 'Roughing It' (1872), one of American literature's great comic accounts of western frontier experience. The town had a post office, stores, and several hundred residents during its peak years before the silver played out and the population dispersed. A handful of structures survive in the narrow Buena Vista Canyon, and the surrounding Humboldt-Toiyabe National Forest offers access to the greater area."
   },
   {
     "name": "St. Elmo, CO",
@@ -1846,7 +1850,8 @@
     "latitude": 38.703365,
     "longitude": -106.346223,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "St. Elmo was a Colorado ghost town in Chaffee County in the Sawatch Range at 10,000 feet elevation, booming in the 1880s when the Alpine Tunnel railroad and silver mining combined to create a town of over 2,000 people with hotels, saloons, a post office, and all the amenities of a prosperous Victorian mountain community — including a school where the legendary 'Dirty Annie' Stark ran the general store into the 1950s, long after everyone else had left. The silver crash of 1893 decimated the economy, the Alpine Tunnel closed in 1910, and St. Elmo slowly depopulated through the early twentieth century. Today over 40 original buildings survive in remarkable condition, accessible via a paved road to this remarkably intact Colorado ghost town. Metal detecting is not permitted on the state-recognized historic site, but the surrounding Gunnison National Forest offers exploration opportunities."
   },
   {
     "name": "Batsto Village, NJ",
@@ -1854,7 +1859,8 @@
     "latitude": 39.642881,
     "longitude": -74.648323,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Batsto Village in Burlington County, New Jersey is a remarkably preserved eighteenth and nineteenth-century iron furnace and glassmaking village in the Pine Barrens, established in 1766 and operating through the Revolutionary War — producing bog iron cannon and other military hardware — before transitioning to glass production in the mid-nineteenth century as the bog iron deposits were depleted. The village's approximately 33 historic structures including the ironmaster's mansion, workers' cottages, sawmill, and gristmill have been preserved as Batsto Village within Wharton State Forest, one of the finest examples of an intact early American industrial village in the Northeast. The site is managed by the New Jersey Division of Parks and Forestry with regular interpretive programs and tours. Metal detecting is not permitted within the state forest historic site."
   },
   {
     "name": "Silver City, ID",
@@ -1862,7 +1868,8 @@
     "latitude": 43.016826,
     "longitude": -116.73318,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Silver City was Idaho's premier silver and gold mining boomtown, perched at 6,200 feet in the Owyhee Mountains of Owyhee County, booming from the mid-1860s through the 1870s when the Poorman and War Eagle Mountain mines produced millions of dollars in precious metals and the town swelled to over 2,500 residents with hotels, a newspaper, churches, and a full range of frontier commercial and entertainment establishments. The deep underground mines continued to produce through the early twentieth century with various revivals, and Silver City had year-round residents into the late twentieth century. Today the community is managed by the Idaho Department of Lands as a historic townsite, with over 70 original structures surviving and accessible via a rough mountain road. The surrounding Owyhee Mountains BLM land is rich with mining history, and the accessible public land allows exploration beyond the historic townsite itself."
   },
   {
     "name": "Ashcroft, CO",
@@ -1870,7 +1877,8 @@
     "latitude": 39.053601,
     "longitude": -106.79976,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ashcroft was a Colorado silver mining camp in Pitkin County in the Castle Creek valley south of Aspen at 9,500 feet elevation, founded in 1880 and briefly rivaling Aspen itself with a population that reached 2,500 at its peak during the silver boom of the 1880s, complete with multiple hotels, saloons, and a post office. The silver crash of 1893 destroyed Ashcroft's economy, and the population had declined to virtually nothing by 1900, though a few die-hard residents remained through the early twentieth century. In the 1930s the Chicago Tribune publisher's son Laurence Cowles attempted a ski resort development that briefly revived interest, but the venture failed. Today Ashcroft is preserved as a ghost town attraction managed by the Aspen Historical Society and is accessible via paved Castle Creek Road, with several original log structures maintained for public interpretation."
   },
   {
     "name": "Johnsonville, IN",
@@ -1878,7 +1886,8 @@
     "latitude": 40.227596,
     "longitude": -87.486579,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Johnsonville was a small Harrison County, Indiana community along the Wabash River drainage in west-central Indiana that platted during the early settlement era of the Indiana frontier in the 1820s-1830s, briefly supporting a post office and local agricultural commerce before larger, railroad-connected communities in Harrison County absorbed the regional trade. Harrison County was settled early in Indiana's history and has a significant connection to the state's territorial and early statehood government. The site today is private agricultural land in Harrison County. Former Indiana frontier-era communities from the 1820s-1840s can yield early American coinage and personal items reflective of the Ohio Valley settlement era."
   },
   {
     "name": "Benmore, UT",
@@ -1886,7 +1895,8 @@
     "latitude": 40.087768,
     "longitude": -112.425562,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Benmore was a small Millard County, Utah community in the Sevier Desert of central Utah, briefly holding a post office and serving the limited ranching and dry farming activities in this arid basin landscape in the late nineteenth and early twentieth centuries. The Great Basin landscape of Millard County — one of Utah's largest and most sparsely populated counties — is characterized by salt flats, desert shrubland, and the scattered mountain ranges that create the distinctive Basin and Range topography. Most small communities in Millard County that attempted dryland farming in the Sevier Desert failed to sustain themselves given the insufficient and unreliable precipitation. The site today is private ranch or BLM desert land in the broad Sevier Desert basin."
   },
   {
     "name": "Pithole City, PA",
