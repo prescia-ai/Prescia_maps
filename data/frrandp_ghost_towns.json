@@ -3380,7 +3380,8 @@
     "latitude": 42.829,
     "longitude": -92.357,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Siegel was a small Iowa farming community, established during the late 19th century settlement of the state's agricultural interior and likely named for a German immigrant family \u2014 the Siegel surname being common among German-speaking settlers who flooded into Iowa, Missouri, and Illinois after 1848. The community served surrounding German-American farm families with a church, school, and country store, functioning as a minor ethnic enclave and rural center. As the German-American population assimilated and rural communities consolidated through the 20th century, Siegel faded from commercial significance. Old German-American church sites and farmstead perimeters near the historic Siegel community location may yield late 19th-century coins, domestic hardware, and German-American cultural artifacts."
   },
   {
     "name": "Doris, IA",
@@ -3388,7 +3389,8 @@
     "latitude": 42.480278,
     "longitude": -91.814444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Doris was a small Iowa farming community established in the late 19th or early 20th century, likely named for the daughter or wife of an early landowner or railroad official \u2014 a common naming convention for small Midwestern communities platted alongside newly constructed rail lines. The community served surrounding farm families as a minor rural center with a grain elevator, a store, and a church, before rural consolidation and declining farm populations emptied it through the mid-20th century. Today the community site is active Iowa farmland. Old elevator foundations and farmstead perimeters near the historic Doris community location may yield early 20th-century coins, grain handling hardware, and domestic items."
   },
   {
     "name": "Hughes, IA",
@@ -3396,7 +3398,8 @@
     "latitude": 42.3975,
     "longitude": -93.1377,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hughes was a small Iowa farming community in the late 19th century, likely named for a prominent landowner or early settler family that held significant acreage in the surrounding township. The community served as a minor local center for surrounding farm families with a church and store, functioning through the post\u2013Civil War agricultural boom before rural depopulation drew its residents toward larger Iowa centers. Today Hughes exists only in old county plat records. Farm field margins and road traces near the historic Hughes community location in Iowa may yield late 19th-century domestic artifacts, farm implements, and early American coins."
   },
   {
     "name": "Dudley, IA",
@@ -3404,7 +3407,8 @@
     "latitude": 41.087778,
     "longitude": -92.591944,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dudley was a small Iowa farming community established during the rapid agricultural settlement of the state in the 1860s\u20131880s, serving surrounding homesteaders with a church, school, and country store typical of the small service communities that anchored Iowa's rural townships. The community was named for an early settler family or local landowner and functioned as a minor rural center before improved roads and automobiles allowed Iowa farm families to travel easily to larger nearby towns for goods and services. Today Dudley is an inactive community with no surviving commercial structures. Old farmstead sites and road traces near the historic Dudley location may yield late 19th-century Iowa farm artifacts, coins, and domestic hardware."
   },
   {
     "name": "Plum Creek, IA",
@@ -3412,7 +3416,8 @@
     "latitude": 43.1091,
     "longitude": -94.1969,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Plum Creek was an Iowa community that grew up along a creek lined with native wild plum thickets \u2014 a common landscape feature on the Iowa prairie that provided fruit for early settlers and gave dozens of Iowa creeks and communities their name. The settlement functioned as a minor rural center for surrounding farming families in the mid-to-late 19th century, with a church and store anchoring the community's social life. As the wild plum thickets gave way to cultivated fields and the creek was ditched for agricultural drainage, the community's identity faded along with the landscape feature that named it. Old farmstead sites and creek-margin areas near the historic Plum Creek community may yield 19th-century domestic artifacts and farm hardware."
   },
   {
     "name": "Thrall, IA",
@@ -3420,7 +3425,8 @@
     "latitude": 42.7614,
     "longitude": -93.9258,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Thrall was a small Iowa farming community established during the agricultural settlement era of the 1870s\u20131880s, named for a local landowner or early settler family who platted the community along a country road or creek in the rolling Iowa countryside. The community had a church, school, and country store at its height, serving surrounding farm families before rural consolidation and improved transportation drew the commerce to larger nearby Iowa towns. Today Thrall is absorbed into the surrounding agricultural landscape with no surviving commercial structures. Old church sites and road traces near the historic Thrall community location can yield late 19th-century coins, domestic artifacts, and farm implements."
   },
   {
     "name": "Secor, IA",
@@ -3428,7 +3434,8 @@
     "latitude": 42.3111,
     "longitude": -93.0719,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Secor was an Iowa community established in the late 19th century, possibly related to a rail line or named for a local landowner, serving surrounding agricultural interests in one of Iowa's many small rural townships during the post\u2013Civil War settlement era. The community had a brief commercial life centered on agriculture-related services before the rural Iowa population began consolidating in larger centers through the early 20th century. Today Secor is an inactive community with no surviving commercial infrastructure. Old farmstead perimeters and road traces near the historic Secor community location may yield late 19th-century to early 20th-century Iowa farm artifacts and domestic items."
   },
   {
     "name": "Rubens, IA",
@@ -3436,7 +3443,8 @@
     "latitude": 42.822472,
     "longitude": -94.639701,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rubens was a small Iowa farming community in the late 19th century, named for a local landowner or perhaps reflecting the cultural aspirations of educated European immigrant settlers who admired the Flemish painter Peter Paul Rubens. The community served surrounding farm families as a minor rural center before being absorbed into the larger township structure as Iowa's rural population consolidated. Today the community exists only in old Iowa county records and plat maps. Old farmstead sites and road traces near the historic Rubens community location may yield late 19th-century domestic artifacts, European-American cultural items, and Iowa farm hardware."
   },
   {
     "name": "Herring, IA",
@@ -3444,7 +3452,8 @@
     "latitude": 42.2319,
     "longitude": -95.1642,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Herring was a small Iowa farming community, likely named for an early settler family, established during the rapid agricultural settlement of Iowa's interior in the 1870s\u20131890s. The community served surrounding farm families with a church and country store, functioning as a minor rural gathering point before improved transportation drew commerce away to larger centers. Today the community name survives only in old Iowa county records. Farm field margins and old road traces near the historic Herring community location can yield late 19th-century coins, domestic items, and agricultural hardware for detectorists with landowner permission."
   },
   {
     "name": "Preparation, IA",
@@ -3452,7 +3461,8 @@
     "latitude": 41.88749,
     "longitude": -95.89195,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Preparation was a unique Iowa community in Monona County established in the 1850s by a utopian religious community led by Charles Etienne Remy, a French religious leader who gathered followers seeking to prepare for the Second Coming of Christ in a communal farming settlement on the bluffs above the Missouri River. The community was organized along communal principles with shared property and religious governance, growing to several hundred members before internal conflicts and Remy's death dissolved the experiment by the late 1850s. Today the Preparation townsite area on the Missouri River bluffs is part of the Iowa landscape near Castana, with some archaeological evidence of the communal settlement surviving. The unusual nature of the community \u2014 a French-led utopian colony on the Iowa frontier \u2014 makes it a historically significant target for researchers and artifact hunters with proper landowner permissions."
   },
   {
     "name": "Mount Pisgah, IA",
