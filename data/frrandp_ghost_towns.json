@@ -1094,7 +1094,8 @@
     "latitude": 46.755225,
     "longitude": -89.6196,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nonesuch was a copper mining camp in Ontonagon County, Michigan in the Lake Superior Copper District, named with the self-deprecating or perhaps hopeful humor common to mining camp nomenclature, established in the 1860s-1870s during the great period of copper exploration across the Keweenaw Peninsula and surrounding counties. The mine produced modest quantities of copper before operations proved economically marginal, and the camp was abandoned. The remote Ontonagon County landscape where Nonesuch sat is now largely state or national forest land, preserving the wild character of the Lake Superior copper country. Old mine dumps and camp foundations from the Copper Country era are scattered across much of this region and can be explored on accessible public lands."
   },
   {
     "name": "Singapore, MI",
@@ -1102,7 +1103,8 @@
     "latitude": 42.653979,
     "longitude": -86.203959,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Singapore was a thriving Michigan lumber town in Allegan County at the mouth of the Kalamazoo River on Lake Michigan, established in the 1830s as a speculative real estate venture and growing into a significant lumber shipping port before being completely buried by migrating sand dunes in the 1870s. At its peak Singapore had three hotels, two sawmills, a bank, and a general store, serving as a significant Lake Michigan port before the combination of the Chicago Fire of 1871 (which consumed enormous quantities of Michigan lumber) and the advancing dunes overwhelmed the community. The town was gradually buried by sand dunes typical of the Lake Michigan shoreline, and today Singapore lies beneath the dunes at the mouth of the Kalamazoo River near Saugatuck. Parts of the buried town occasionally surface during major storms that shift the dune landscape."
   },
   {
     "name": "Trow, WI",
@@ -1110,7 +1112,8 @@
     "latitude": 44.439931,
     "longitude": -90.824683,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Trow was a small Wisconsin farming community in Sauk County in the Baraboo Hills region, a brief post-office community that developed during the great Wisconsin agricultural settlement era of the mid-to-late nineteenth century and faded as the regional economy consolidated in larger market towns. The Sauk County landscape is notable for its dramatic geology — ancient quartzite ridges, Parfrey's Glen, and Devils Lake — and the surrounding countryside has been farmed continuously since the 1840s. Former rural Sauk County communities like Trow are now private farmland, but the region's long agricultural history makes it productive territory for detecting with landowner permission."
   },
   {
     "name": "Tecoma, NV",
@@ -1118,7 +1121,8 @@
     "latitude": 41.320201,
     "longitude": -114.081402,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tecoma was a small Nevada mining community in Elko County near the Utah border in the Toano Range, established in the 1870s when silver discoveries drew prospectors to this remote corner of the Basin and Range country in northeastern Nevada. The community served as a supply point for surrounding mining operations and had a brief commercial existence before declining ore values and the marginal nature of the deposits led to abandonment. The remote northeastern Nevada landscape is primarily BLM land and cattle ranching country today, with old mining camp sites accessible along the network of desert roads. The dry Great Basin climate preserves metallic artifacts well, making former mining camp sites in this region productive for detecting on BLM land."
   },
   {
     "name": "Monroe City, TX",
@@ -1126,7 +1130,8 @@
     "latitude": 29.784944,
     "longitude": -94.585194,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Monroe City was a small agricultural community in Angelina County, Texas in the East Texas Piney Woods region, one of the many small farming and timber communities that developed in the post-Civil War era as East Texas was settled by families from the Deep South establishing cotton farms and sawmill operations in the longleaf pine forest. The community faded as the timber industry depleted the forest and railroads consolidated commercial activity in larger East Texas towns. The site today is in the privately held farmland and second-growth pine forest typical of Angelina County's rural landscape. East Texas former plantation and timber communities can yield interesting Civil War and Reconstruction-era artifacts with landowner permission."
   },
   {
     "name": "Arlington, MO",
@@ -1134,7 +1139,8 @@
     "latitude": 37.920318,
     "longitude": -91.970996,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arlington was a small agricultural community in Pettis County, Missouri in the rolling farmland of west-central Missouri that developed in the mid-nineteenth century as a local service point for surrounding farms but failed to grow beyond a modest post office community when railroad lines bypassed the site. Pettis County, home to Sedalia, was an important livestock shipping point and agricultural center in nineteenth-century Missouri, and many small communities in the county existed primarily to support the cattle drives and farm trade. The site today is private agricultural land in the Missouri River drainage region. Former Missouri post office communities typically yield mid-nineteenth century coinage and domestic artifacts when detecting with landowner permission."
   },
   {
     "name": "Glenrio, TX/NM",
@@ -1142,7 +1148,8 @@
     "latitude": 35.178946,
     "longitude": -103.042168,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Glenrio straddles the Texas-New Mexico border in Quay County, NM and Deaf Smith County, TX along historic US Route 66, originally established as a Texas and Pacific Railway water stop in 1903 and later growing into a classic Route 66 tourist service community with gas stations, cafes, and motels serving cross-country travelers during the highway's golden age from the 1940s through the 1960s. The state line between Texas and New Mexico runs through the middle of town, creating an unusual situation where the businesses on the Texas side sold beer (legal in that county) and New Mexico side services took advantage of different tax laws. Interstate 40 bypassed Glenrio in 1973, immediately killing the remaining businesses, and today the town is a Route 66 ghost town with several original buildings still standing in the windswept high plains landscape. The site is partly accessible from the old highway alignment, and abandoned Route 66 roadside communities yield period gas station equipment, motel hardware, and automotive-era artifacts."
   },
   {
     "name": "Newkirk, NM",
@@ -1150,7 +1157,8 @@
     "latitude": 35.06839,
     "longitude": -104.264699,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Newkirk was a small Guadalupe County, New Mexico community along historic US Route 66 in the eastern New Mexico high plains, one of several tiny service communities that existed along the highway corridor to provide gas, food, and water to travelers crossing the vast Llano Estacado and Canadian River breaks landscape. Like many Route 66 roadside communities in this stretch of New Mexico, Newkirk died quickly when Interstate 40 diverted the cross-country traffic away from the old highway. A few remaining structures mark the original townsite along the ghost highway alignment. The surrounding eastern New Mexico landscape is working ranch country with private land requiring permission for any detecting activity."
   },
   {
     "name": "Spencer, MO",
@@ -1158,7 +1166,8 @@
     "latitude": 37.184444,
     "longitude": -93.7025,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Spencer was a small Ralls County, Missouri agricultural community along the North Salt River in the northeastern Missouri uplands, briefly platted and supporting a post office in the nineteenth century before being absorbed into the surrounding agricultural landscape as the county's commercial activity concentrated in railroad towns like New London and Hannibal. Northeast Missouri's rural communities carry a rich ante-bellum and Civil War history, as this region was bitterly contested along the Missouri-Kansas border during the 1860s. Former Missouri community sites in this region can yield interesting period artifacts from both the agricultural and Civil War eras."
   },
   {
     "name": "Amboy, CA",
@@ -1166,7 +1175,8 @@
     "latitude": 34.557772,
     "longitude": -115.744441,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Amboy was a Mojave Desert community in San Bernardino County, California along historic Route 66, built around Roy's Motel and Cafe — opened in 1938 — which became one of the most photographed stopping points on the entire Route 66 highway corridor due to its distinctive 1950s sign and remote desert setting amid the Mojave volcanic landscape near Amboy Crater. The community served cross-country travelers, military personnel from nearby bases, and adventurers through the Route 66 era before Interstate 40 bypassed the site and the population dwindled to near zero. Roy's has been periodically restored and operates intermittently as a tourist attraction today, drawing Route 66 enthusiasts and photographers to the Mojave Desert landmark. The surrounding BLM land includes the Amboy Crater National Natural Landmark, a perfectly preserved cinder cone volcano accessible by a short trail."
   },
   {
     "name": "Anaconda, NM",
