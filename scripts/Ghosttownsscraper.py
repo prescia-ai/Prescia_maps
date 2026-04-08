@@ -125,6 +125,15 @@ _LOA_USER_AGENT = (
 # Ghosttowns.com base
 _GT_BASE = "https://www.ghosttowns.com"
 
+# Compiled regex for LOA state page links: /ghost-towns/{2-letter-state-code}-...
+_LOA_STATE_PAGE_RE = re.compile(r"/ghost-towns/[a-z]{2}-", re.IGNORECASE)
+
+# Compiled regex to reject navigation/category words in extracted town names
+_LOA_NAV_WORDS_RE = re.compile(
+    r"\b(history|travel|blog|media|resources|contact|about|support|photo|show|more)\b",
+    re.IGNORECASE,
+)
+
 # Known non-ghost-town strings from Legends of America nav/sidebar
 _LOA_JUNK_NAMES: frozenset[str] = frozenset({
     "about us", "about us/more", "social media", "travel blog",
@@ -306,14 +315,20 @@ async def _scrape_legends_of_america(
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "lxml")
 
-        # Find state links
+        # Find state-specific ghost town links.
+        # LOA state pages follow a consistent pattern like:
+        #   /ghost-towns/al-ghosttowns.html  (two-letter state code prefix)
+        # Reject generic navigation links that happen to contain /ghost-towns/.
+        seen_urls = set()
         state_links = []
         for a_tag in soup.find_all("a", href=True):
             href = a_tag["href"]
-            if "/ghost-towns/" in href and href != _LOA_STATES_PATH:
+            if _LOA_STATE_PAGE_RE.search(href):
                 if href.startswith("/"):
                     href = f"{_LOA_BASE}{href}"
-                state_links.append(href)
+                if href not in seen_urls:
+                    seen_urls.add(href)
+                    state_links.append(href)
 
         logger.info("Found %d state pages on Legends of America.", len(state_links))
 
@@ -327,8 +342,23 @@ async def _scrape_legends_of_america(
                 resp.raise_for_status()
                 state_soup = BeautifulSoup(resp.text, "lxml")
 
+                # Target the main content area to avoid nav/sidebar junk.
+                # LOA pages typically wrap article content in <article>, <main>,
+                # or a div with id/class containing "content" or "entry".
+                content_area = (
+                    state_soup.find("article")
+                    or state_soup.find("main")
+                    or state_soup.find(id=re.compile(r"content|entry|article", re.I))
+                    or state_soup.find(class_=re.compile(r"entry-content|post-content|article-body", re.I))
+                    or state_soup  # fall back to whole page if no wrapper found
+                )
+
                 # Extract ghost town names from list items and paragraphs
-                for li in state_soup.find_all(["li", "p"]):
+                # within the identified content area only.
+                for li in content_area.find_all(["li", "p"]):
+                    # Skip elements that are inside nav, header, footer, or aside
+                    if li.find_parent(["nav", "header", "footer", "aside"]):
+                        continue
                     text = li.get_text(strip=True)
                     if len(text) > 10 and len(text) < 500:
                         # Try to extract a town name (first bold text or first link)
@@ -340,8 +370,11 @@ async def _scrape_legends_of_america(
                                 len(town_name) > 2
                                 and len(town_name) <= 60
                                 and "/" not in town_name
+                                and "&" not in town_name
                                 and town_name.lower().strip() not in _LOA_JUNK_NAMES
                                 and any(c.isalpha() for c in town_name)
+                                # Reject strings that look like site navigation
+                                and not _LOA_NAV_WORDS_RE.search(town_name)
                             ):
                                 records.append({
                                     "name": town_name,
@@ -376,25 +409,30 @@ async def _scrape_ghosttowns_com(
     records: List[Dict[str, Any]] = []
     headers = {"User-Agent": _LOA_USER_AGENT}
 
-    # US states for ghosttowns.com URL patterns
+    # US states as (two-letter abbreviation, full name) pairs for ghosttowns.com
+    # URL pattern: https://www.ghosttowns.com/states/{abbr}/
     states = [
-        "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
-        "connecticut", "delaware", "florida", "georgia", "idaho", "illinois",
-        "indiana", "iowa", "kansas", "kentucky", "louisiana", "maine",
-        "maryland", "massachusetts", "michigan", "minnesota", "mississippi",
-        "missouri", "montana", "nebraska", "nevada", "new-hampshire",
-        "new-jersey", "new-mexico", "new-york", "north-carolina",
-        "north-dakota", "ohio", "oklahoma", "oregon", "pennsylvania",
-        "rhode-island", "south-carolina", "south-dakota", "tennessee",
-        "texas", "utah", "vermont", "virginia", "washington",
-        "west-virginia", "wisconsin", "wyoming",
+        ("al", "Alabama"), ("ak", "Alaska"), ("az", "Arizona"), ("ar", "Arkansas"),
+        ("ca", "California"), ("co", "Colorado"), ("ct", "Connecticut"), ("de", "Delaware"),
+        ("fl", "Florida"), ("ga", "Georgia"), ("id", "Idaho"), ("il", "Illinois"),
+        ("in", "Indiana"), ("ia", "Iowa"), ("ks", "Kansas"), ("ky", "Kentucky"),
+        ("la", "Louisiana"), ("me", "Maine"), ("md", "Maryland"), ("ma", "Massachusetts"),
+        ("mi", "Michigan"), ("mn", "Minnesota"), ("ms", "Mississippi"), ("mo", "Missouri"),
+        ("mt", "Montana"), ("ne", "Nebraska"), ("nv", "Nevada"), ("nh", "New Hampshire"),
+        ("nj", "New Jersey"), ("nm", "New Mexico"), ("ny", "New York"),
+        ("nc", "North Carolina"), ("nd", "North Dakota"), ("oh", "Ohio"),
+        ("ok", "Oklahoma"), ("or", "Oregon"), ("pa", "Pennsylvania"),
+        ("ri", "Rhode Island"), ("sc", "South Carolina"), ("sd", "South Dakota"),
+        ("tn", "Tennessee"), ("tx", "Texas"), ("ut", "Utah"), ("vt", "Vermont"),
+        ("va", "Virginia"), ("wa", "Washington"), ("wv", "West Virginia"),
+        ("wi", "Wisconsin"), ("wy", "Wyoming"),
     ]
 
-    for state_slug in states:
+    for state_abbr, state_name in states:
         if limit is not None and len(records) >= limit:
             break
 
-        url = f"{_GT_BASE}/{state_slug}/"
+        url = f"{_GT_BASE}/states/{state_abbr}/"
         try:
             rate_limiter.wait()
             resp = await client.get(url, headers=headers)
@@ -407,10 +445,10 @@ async def _scrape_ghosttowns_com(
                 if len(text) > 2 and len(text) < 100:
                     # Basic heuristic: links within state pages that look like town names
                     href = a_tag["href"]
-                    if state_slug in href and text[0].isupper():
+                    if f"/{state_abbr}/" in href and text[0].isupper():
                         records.append({
                             "name": text,
-                            "description": f"Ghost town in {state_slug.replace('-', ' ').title()}",
+                            "description": f"Ghost town in {state_name}",
                             "source": "ghosttowns_com",
                         })
         except (httpx.HTTPError, Exception) as exc:
