@@ -3470,7 +3470,8 @@
     "latitude": 41.038586,
     "longitude": -94.113028,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mount Pisgah was a significant Mormon pioneer settlement in Montgomery County, Iowa, established in 1846 as one of the major way stations on the Mormon Trail as Latter-day Saint refugees fled Nauvoo, Illinois following the assassination of Joseph Smith and the destruction of their community. At its peak the temporary settlement housed thousands of Saints who farmed the bottomlands, built shelters, and rested before continuing the trek to the Great Salt Lake Valley, with many dying there from exposure, disease, and starvation in the harsh Iowa winters. Today a historic Mormon marker and small park preserve the memory of Mount Pisgah, and the surrounding area is private Iowa farmland. The dense layering of pioneer occupation makes this a historically significant site, though the sacred nature of the ground warrants respectful exploration; surrounding fields have yielded pioneer hardware, wagon parts, and mid-19th-century domestic items."
   },
   {
     "name": "Unique, IA",
@@ -3478,7 +3479,8 @@
     "latitude": 42.717222,
     "longitude": -94.345278,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Unique was a small Iowa farming community with an appropriately distinctive name, established during the late 19th century agricultural settlement of the state and serving surrounding farm families as a minor rural center with a church and country store. Despite its singular name, Unique followed the typical arc of small Iowa farm towns \u2014 brief commercial viability followed by rural depopulation through the early 20th century as automobiles allowed farmers to reach larger service centers. Today Unique exists only in Iowa state historical records. Old church sites and road traces near the historic Unique community location can yield late 19th-century Iowa farm artifacts and domestic items."
   },
   {
     "name": "Morrisburgh, IA",
@@ -3486,7 +3488,8 @@
     "latitude": 41.6,
     "longitude": -94.318056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Morrisburgh was a small Iowa farming community established during the late 19th century settlement era, likely named for an early settler or land developer of Irish origin \u2014 the Morriss or Morris surname being common among Irish-American settlers who moved into Iowa following the Great Famine migration of the late 1840s. The community served surrounding farm families as a minor rural center before rural depopulation through the 20th century dissolved it. Today the community exists only in historical records. Old farmstead perimeters and road traces near the historic Morrisburgh community location may yield late 19th-century coins, domestic hardware, and Irish-American cultural artifacts."
   },
   {
     "name": "Ivanhoe, IA",
@@ -3494,7 +3497,8 @@
     "latitude": 41.883333,
     "longitude": -91.4625,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ivanhoe was an Iowa farming community platted during the mid-to-late 19th century, bearing the name of Sir Walter Scott's famous 1819 novel \u2014 a popular literary reference among educated American settlers who gave their communities aspirational names from popular culture and classical sources. The community served surrounding agricultural interests with a church and store before being eclipsed by better-connected neighboring Iowa towns. Today Ivanhoe is a historical name in Iowa county records. Old church sites and road intersections near the historic Ivanhoe community location in Iowa may yield 19th-century domestic artifacts and early American coins."
   },
   {
     "name": "Hinkletown, IA",
@@ -3502,7 +3506,8 @@
     "latitude": 41.511111,
     "longitude": -91.969444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hinkletown was a small Iowa farming community, likely named for the Hinkle or Hinkley family \u2014 Germanic surnames common among Pennsylvania Dutch settlers who spread from Ohio and Indiana into Iowa in the mid-19th century. The community served surrounding farm families as a minor rural gathering point with a church and store during the post\u2013Civil War agricultural boom before rural consolidation through the early 20th century emptied it. Today Hinkletown exists only in old Iowa county records. Old farmstead sites and road traces near the historic Hinkletown community location can yield late 19th-century coins, Pennsylvania Dutch cultural artifacts, and farm implements."
   },
   {
     "name": "Hopewell, IA",
@@ -3510,7 +3515,8 @@
     "latitude": 41.350592,
     "longitude": -92.449968,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hopewell in Iowa was a small farming community, bearing one of the most common place names in the Midwest \u2014 a name that reflected the aspirations of religious settlers, often Methodists, Baptists, or Presbyterians, who built churches and communities based on the biblical connotations of hope and divine blessing. The community served surrounding farm families as a minor rural center in the post\u2013Civil War settlement era before rural depopulation through the 20th century dissolved it into the surrounding Iowa agricultural landscape. Today the community name survives only in historical records. Old church sites and farmstead perimeters near the historic Iowa Hopewell community location can yield 19th-century religious community artifacts, domestic items, and farm hardware."
   },
   {
     "name": "Midway, Johnson County, IA",
@@ -3518,7 +3524,8 @@
     "latitude": 41.618889,
     "longitude": -91.439167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Midway in Johnson County was a small Iowa community in the rural agricultural landscape between Iowa City and other Johnson County centers, occupying a geographic midpoint position along an early road that served surrounding farm families with a church and store in the mid-to-late 19th century. The community never developed beyond a hamlet scale before improved transportation drew the commerce to Iowa City and other larger centers. Today the Midway area is active Johnson County farmland surrounding the greater Iowa City metropolitan area. Old farmstead sites and road traces in the historic Midway location near Iowa City may yield 19th-century coins, domestic artifacts, and farm implements."
   },
   {
     "name": "Riceville, ME",
@@ -3526,7 +3533,8 @@
     "latitude": 45.052528,
     "longitude": -68.307752,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Riceville in Maine was a small rural community in Oxford or Franklin County, established during the 18th or early 19th century by farming families seeking agricultural land in Maine's interior hill country above the coastal lowlands. The community likely had a sawmill and a gristmill powered by a local stream, along with a church and school serving the surrounding farmsteads, before Maine's harsh winters, thin soils, and economic pull of coastal cities gradually drained its population through the 19th century. Today the site is forested private land in Maine's interior with no surviving commercial structures. Old mill pond sites and farmstead cellar holes near the historic Riceville community can yield 18th-to-19th-century New England domestic artifacts and farm implements."
   },
   {
     "name": "Perkins, ME",
@@ -3534,7 +3542,8 @@
     "latitude": 44.046111,
     "longitude": -69.801667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Perkins was a small Maine community established by farming families in the early 19th century on the forested uplands of Maine's interior, one of dozens of small hill towns platted during the period of optimistic inland settlement when Revolutionary War veterans and their families pushed into Maine's backcountry seeking land grants and agricultural opportunity. Thin, rocky soils and brutal winters made farming difficult, and as coastal and urban Maine offered better economic opportunities through the mid-19th century, Perkins slowly depopulated. Today the community is unincorporated or merged with a neighboring town, with old stone walls, cellar holes, and a cemetery as the primary physical evidence. New England farmstead cellar holes are productive sites for 19th-century domestic ceramics, coins, and hand-forged iron implements."
   },
   {
     "name": "Lucin, UT",
@@ -3542,7 +3551,8 @@
     "latitude": 41.348333,
     "longitude": -113.904167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lucin was a remote railroad community in Box Elder County, Utah, situated on the salt flats of the Great Basin where the Southern Pacific Railroad's Lucin Cutoff \u2014 built in 1903 across the Great Salt Lake on a wooden trestle \u2014 had its western terminus. The town served as a maintenance hub for the remarkable wooden trestle railroad crossing that reduced the transcontinental rail distance by 44 miles, housing railroad workers and their families in the isolated desert. When the wooden trestle was replaced by a rock fill causeway in 1959, the need for the Lucin maintenance facility vanished, and the town was quickly abandoned. The desert-preserved site retains some structural remains and mine tailings from associated mineral exploration, and the BLM land surrounding the old townsite is open to exploration for railroad hardware, worker camp artifacts, and early 20th-century coins."
   },
   {
     "name": "Katalla, AK",
