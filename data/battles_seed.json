@@ -104,7 +104,7 @@
     "latitude": 42.3295,
     "longitude": -83.0458,
     "year": 1763,
-    "description": "British ambush during Pontiac's Rebellion, July 31, 1763, Detroit, Michigan.",
+    "description": "On July 31, 1763, Captain James Dalzell led 247 British soldiers on a night sortie from Detroit to strike the encampment of Pontiac's besieging warriors, but walked into a devastating ambush at Parent's Creek near the city. The warriors, well aware of the British plan, poured fire from both banks of the creek, killing 20 soldiers and wounding another 34 in a rout that sent the survivors fleeing back to the fort \u2014 the creek reportedly ran red with blood, giving the engagement its grim name. The battle site is now entirely within the urban fabric of modern Detroit, with Parent's Creek culverted and the area long since developed. No detecting opportunities exist at the urban site, but the broader Detroit River corridor and the region's private farmland saw extensive 18th-century military and trade activity.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -114,7 +114,7 @@
     "latitude": 40.4419,
     "longitude": -79.9995,
     "year": 1763,
-    "description": "Siege of Fort Pitt during Pontiac's Rebellion, June-August 1763, Pittsburgh, Pennsylvania.",
+    "description": "During Pontiac's War in 1763, Delaware and Shawnee warriors besieged the British-held Fort Pitt at the confluence of the Allegheny and Monongahela rivers \u2014 a strategic position that would become the city of Pittsburgh. The garrison, commanded by Captain Simeon Ecuyer, held out for two months through escalating pressure until Bouquet's relief column broke the siege after the Battle of Bushy Run. Fort Pitt's location is now Point State Park in downtown Pittsburgh, with a reconstructed bastion and the Fort Pitt Museum operated by the Pennsylvania Historical and Museum Commission. The park prohibits metal detecting, but the rivers and surrounding hillsides of the Pittsburgh metropolitan area saw three centuries of military and commercial activity, and private land searches in the outlying areas have yielded 18th-century trade goods and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -124,7 +124,7 @@
     "latitude": 42.4485,
     "longitude": -71.23,
     "year": 1775,
-    "description": "Opening battles of the American Revolutionary War, April 19, 1775, Massachusetts.",
+    "description": "On April 19, 1775, the 'shot heard round the world' was fired on Lexington Green when British Regulars under Lieutenant Colonel Francis Smith confronted a company of Minute Men, killing eight colonists in a brief skirmish before marching on to Concord. At Concord's North Bridge, the Minute Men opened fire \u2014 the first organized armed resistance of the American Revolution \u2014 and the British column suffered a punishing running fight along the sixteen miles back to Boston, losing 273 men killed and wounded. The sites are preserved as Minute Man National Historical Park in Lexington, Concord, and Lincoln, MA, one of the best-interpreted battlefields in America with original stone walls, the North Bridge reconstruction, and the Battle Road trail. Metal detecting is strictly prohibited in the national park, but private properties along the original Bay Road corridor have yielded Continental-era musket balls, pewter buttons, and British military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -134,7 +134,7 @@
     "latitude": 42.3763,
     "longitude": -71.0604,
     "year": 1775,
-    "description": "Early major battle of the Revolutionary War, June 17, 1775, Charlestown, Massachusetts.",
+    "description": "On June 17, 1775, colonial militia defending hastily constructed earthworks on Breed's Hill (the main fighting position, often confused with adjacent Bunker Hill) twice repulsed massed British assaults before falling back on the third charge after running out of powder, inflicting over 1,000 British casualties \u2014 nearly 40% of the attacking force \u2014 in the costliest engagement of the war for the British. The battle proved that American militia could stand against professional Redcoats and stiffened colonial resolve, even though the British technically captured the hill. Bunker Hill Monument, a 221-foot granite obelisk in Charlestown, MA, dominates the skyline above the neighborhood that grew over the battlefield. The entire area is now urban Boston, with detecting prohibited, but the original earthwork outlines are partially preserved and the site is managed by Boston National Historical Park.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -144,7 +144,7 @@
     "latitude": 43.8443,
     "longitude": -73.3877,
     "year": 1775,
-    "description": "Ethan Allen and Green Mountain Boys capture Fort Ticonderoga, May 10, 1775, New York.",
+    "description": "In the predawn hours of May 10, 1775, Ethan Allen and his Green Mountain Boys \u2014 joined by Benedict Arnold \u2014 surprised and captured the sleeping British garrison at Fort Ticonderoga on Lake Champlain in New York, seizing the fort without a shot fired. The fort's 59 artillery pieces were later dragged to Boston by Henry Knox, where they forced the British evacuation of the city in March 1776. Fort Ticonderoga is today a privately operated historic site with original 18th-century masonry, a world-class museum collection, and ongoing archaeological programs on the Lake Champlain peninsula. Metal detecting is not permitted at the fort site, but the surrounding lake shores and approach roads saw heavy military traffic from both the French and Indian War and the Revolution, and private lands in the area have yielded musket balls, British and American buttons, and accoutrements.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -154,7 +154,7 @@
     "latitude": 42.3763,
     "longitude": -71.0604,
     "year": 1775,
-    "description": "Part of the Battle of Bunker Hill, June 17, 1775, Charlestown, Massachusetts.",
+    "description": "The main defensive position during the Battle of Bunker Hill on June 17, 1775, Breed's Hill saw colonial militia dig earthworks overnight and then hold them against two massive British frontal assaults before ammunition ran out and the position was lost on the third charge. Colonel William Prescott reportedly ordered his men 'Don't fire until you see the whites of their eyes,' and the devastating volleys killed or wounded a significant portion of the British assault force, including many officers. The Bunker Hill Monument stands atop the site in Charlestown, MA, as part of Boston National Historical Park; the battlefield is entirely within a dense urban neighborhood. No metal detecting is permitted, but construction projects in the Charlestown area over the years have uncovered period artifacts including musket balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -164,7 +164,7 @@
     "latitude": 42.3601,
     "longitude": -71.0589,
     "year": 1775,
-    "description": "Eight-month siege forcing British evacuation of Boston, April 1775-March 1776, Massachusetts.",
+    "description": "From April 1775 to March 1776, the Continental Army besieged the British garrison in Boston after Lexington and Concord, in the first major sustained military operation of the Revolutionary War. The siege was resolved when Henry Knox arrived with artillery captured at Fort Ticonderoga and emplaced them on Dorchester Heights, forcing the British to evacuate by sea on March 17, 1776 \u2014 an event still celebrated as Evacuation Day in Massachusetts. The siege lines, redoubts, and encampments once spread across Roxbury, Cambridge, Charlestown, and surrounding towns, virtually all of which are now within the modern Boston metropolitan area. Various earthwork remnants survive in parks around the city, and private land in the outer siege lines area has occasionally yielded Continental Army buttons, musket balls, and camp debris.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -174,7 +174,7 @@
     "latitude": 46.8138,
     "longitude": -71.208,
     "year": 1775,
-    "description": "Failed American assault on Quebec City, December 31, 1775, Canada.",
+    "description": "On the night of December 31, 1775, American General Richard Montgomery and Colonel Benedict Arnold launched a desperate two-pronged assault on the fortified city of Quebec in a blizzard, attempting to complete the conquest of Canada before their troops' enlistments expired on New Year's Day. Montgomery was killed almost immediately, Arnold was badly wounded, and Daniel Morgan led the other column deep into the city's Lower Town before being surrounded and captured \u2014 the Americans suffered over 400 casualties and prisoners while the British garrison held the city. The battle site within Quebec City's historic Lower Town and the walls are now part of the UNESCO World Heritage Old Quebec area, one of the best-preserved historic fortifications in North America. The walled city and nearby Plains of Abraham are managed by Parks Canada, with detecting prohibited, though the surrounding countryside saw extensive 18th-century military traffic.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -184,7 +184,7 @@
     "latitude": 34.4618,
     "longitude": -78.1079,
     "year": 1776,
-    "description": "Patriot victory over Loyalists in North Carolina, February 27, 1776.",
+    "description": "On February 27, 1776, North Carolina Patriot militia ambushed a column of 1,600 Loyalist Highland Scots and regulators at Moore's Creek Bridge near Wilmington, NC, killing dozens and capturing over 800 men including all their officers in a brief but decisive engagement. The Loyalists, armed largely with broadswords and their Highland weapons, crossed a partially dismantled bridge into withering fire from Patriots concealed on the opposite bank, and the rout effectively ended Loyalist organized resistance in the Carolinas for years. The site is preserved as Moores Creek National Battlefield near Currie, NC, with reconstructed earthworks, interpretive trails, and a visitor center operated by the National Park Service. Metal detecting is prohibited within the park, but the surrounding coastal plain farmland saw extensive Patriot and Loyalist movement throughout the war, and private land searches have recovered Revolutionary War-era buttons and musket balls.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
@@ -194,7 +194,7 @@
     "latitude": 40.6501,
     "longitude": -73.9496,
     "year": 1776,
-    "description": "Major British victory and Washington's strategic retreat, August 27, 1776, Brooklyn, New York.",
+    "description": "On August 27, 1776, British General William Howe executed a brilliantly planned envelopment of the American lines on Brooklyn Heights, sending 10,000 men through the unguarded Jamaica Pass while Hessians and British regulars pinned the American front, resulting in approximately 2,000 American casualties and prisoners in the largest battle of the Revolutionary War. Washington skillfully evacuated his 9,000-man army across the East River to Manhattan under cover of night and fog, saving the army that would fight on to ultimate victory. The battlefield is now almost entirely within the densely developed borough of Brooklyn, NY, with small remnants at Prospect Park and Old Stone House Historic Interpretive Center marking where fierce rear-guard fighting took place. No detecting opportunities exist in the urban environment, but the Old Stone House and Battle Pass area provide historical interpretation of this near-fatal defeat.",
     "type": "battle",
     "source": "seed:battles",
     "confidence": 0.95
