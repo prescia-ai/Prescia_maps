@@ -4190,7 +4190,8 @@
     "latitude": 41.418056,
     "longitude": -83.872222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Providence was a small Ohio community in Lucas County along the Maumee River in the Black Swamp country of northwestern Ohio, notable as the site of a historic canal lock on the Miami and Erie Canal \u2014 one of the engineering marvels of the 1840s that connected Lake Erie to the Ohio River and transformed Ohio's interior economy. The lock and associated canal community served as an important waypoint for the enormous volume of agricultural goods that moved through the Maumee Valley corridor during the canal era, before the railroads made the canals obsolete by the 1880s. Today the Providence area retains a restored canal lock operated as Farnsworth Metropark, managed by the Metroparks of the Toledo Area, giving visitors an authentic view of the canal era infrastructure. The area around the lock and former canal community is a fascinating historical site, though the park status limits metal detecting."
   },
   {
     "name": "Middleburg, Seneca County, OH",
@@ -4198,7 +4199,8 @@
     "latitude": 41.234568,
     "longitude": -83.25435,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Middleburg in Seneca County was a small Ohio farming community established during the early 19th century settlement of north-central Ohio's fertile lake plain and till plain country, serving surrounding agricultural families with a church, school, and country store before being eclipsed by neighboring Seneca County centers with railroad connections. The community had a modest period of commercial activity during the first half of the 19th century before rural consolidation through the latter half reduced it to a historical footnote. Today the Middleburg community in Seneca County is Ohio agricultural land with no surviving commercial infrastructure. Old church and schoolhouse sites near the historic Middleburg community location can yield early 19th-century Ohio domestic artifacts and coins."
   },
   {
     "name": "Hopewell, OH",
@@ -4206,7 +4208,8 @@
     "latitude": 41.1375,
     "longitude": -83.238333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hopewell in Ohio was a small rural community bearing one of the state's most evocative names \u2014 a reference to the Hopewell culture, the remarkable prehistoric Native American civilization that built hundreds of earthwork mounds across the Ohio valley from roughly 100 BCE to 500 CE. The farming community established in the area during the 19th century was likely near or adjacent to these ancient earthworks, and its name may have been chosen in recognition of the visible archaeological heritage surrounding the settlement. The community served surrounding Ohio farm families in the 19th century before rural consolidation dissolved its commercial core. Historic Hopewell culture earthwork sites across Ohio are managed as protected archaeological resources \u2014 detectorists must avoid such sites \u2014 but surrounding farmland may yield 19th-century Ohio domestic artifacts."
   },
   {
     "name": "Murraysville, OH",
@@ -4214,7 +4217,8 @@
     "latitude": 41.336561,
     "longitude": -82.122204,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Murraysville was a small Ohio community in Washington or another Ohio county, established during the early 19th-century settlement of the Ohio hill country by farming and milling families who sought the water power of the region's creek drainages for sawmilling and gristmilling operations alongside agricultural development. The community had a mill, a store, and a church at its height, serving the surrounding agricultural families before rural consolidation and improved transportation drew residents toward larger centers. Today Murraysville is absorbed into the surrounding Ohio landscape. Old mill pond sites and farmstead perimeters near the historic Murraysville community can yield 19th-century millwright hardware, early Ohio coins, and domestic artifacts."
   },
   {
     "name": "Brandywine Village, OH",
@@ -4222,7 +4226,8 @@
     "latitude": 41.276111,
     "longitude": -81.538056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Brandywine Village was a small Ohio community named for the Brandywine River \u2014 a name shared by streams across the eastern United States honoring the historic creek in Delaware where Washington's Continental Army fought in 1777. The Ohio settlement likely served surrounding agricultural families in the hilly country of northeastern Ohio with a mill, church, and small store during the 19th century. As improved transportation and industrial growth concentrated Ohio's population in larger centers, Brandywine Village faded from commercial significance. Old mill sites and church lots near the historic Brandywine Village community location in Ohio can yield early-to-mid 19th-century domestic artifacts, mill hardware, and coins."
   },
   {
     "name": "Cobbs Corners, OH",
@@ -4230,7 +4235,8 @@
     "latitude": 41.308674,
     "longitude": -81.281174,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cobbs Corners was a small Ohio farming community named for a settler family named Cobb who established the original crossroads store or tavern that anchored the community's commercial life during the 19th century. The community served surrounding Ohio farm families as a minor local center before rural consolidation and improved transportation through the late 19th and 20th centuries drew residents toward larger Ohio centers. Today Cobbs Corners is absorbed into Ohio's agricultural landscape. Old road intersection sites and farmstead perimeters near the historic Cobbs Corners community location can yield 19th-century Ohio domestic artifacts, early American coins, and farm hardware."
   },
   {
     "name": "Butterworth, OH",
@@ -4238,7 +4244,8 @@
     "latitude": 39.302778,
     "longitude": -84.255833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Butterworth was a small Ohio farming community, likely named for an early settler family \u2014 the Butterworth surname being a common English-origin name among Ohio's early settlers from New England and New York who established farming communities across the state's interior during the 1810s\u20131840s. The community served surrounding farm families with a church and store, functioning as a minor rural gathering point before improved transportation and rural consolidation dissolved its commercial core. Today Butterworth exists only in old Ohio county records and plat maps. Old church sites and farmstead perimeters near the historic Butterworth community location in Ohio can yield early 19th-century coins, domestic ceramics, and farm implements."
   },
   {
     "name": "Simpkinsville, OH",
@@ -4246,7 +4253,8 @@
     "latitude": 39.172397,
     "longitude": -84.152062,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Simpkinsville was a small Ohio community named for the Simpkins family, established during the 19th century settlement of Ohio's interior as a minor rural center serving surrounding farming families with a church, school, and country store. The community had a brief but genuine commercial existence before being absorbed into the larger township structure as rural Ohio populations consolidated through the latter half of the 19th century and into the 20th. Today Simpkinsville is a historical name in old Ohio plat records. Old church lots and farmstead perimeters near the historic Simpkinsville community location in Ohio may yield 19th-century domestic artifacts, coins, and agricultural hardware."
   },
   {
     "name": "Kelsey, OH",
@@ -4254,7 +4262,8 @@
     "latitude": 39.964444,
     "longitude": -80.915,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kelsey was a small Ohio farming community, likely named for a settler family who were among the early arrivals in the area during Ohio's rapid agricultural settlement in the first half of the 19th century. The community served surrounding agricultural families with the standard rural combination of church, school, and general store before being eclipsed by better-connected neighboring Ohio communities through the latter half of the 19th century. Today Kelsey is absorbed into Ohio's agricultural landscape with no surviving commercial infrastructure. Farm field margins and old road traces near the historic Kelsey community location in Ohio can yield 19th-century coins, domestic artifacts, and farm implements for detectorists with landowner permission."
   },
   {
     "name": "Three Legs Town, OH",
@@ -4262,7 +4271,8 @@
     "latitude": 40.427222,
     "longitude": -81.368889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Three Legs Town was a small Ohio community with an unusual name that may derive from a tavern sign \u2014 tavern signs depicting animals or human figures with distinctive features were common commercial identifiers in the pre-literacy era, and a three-legged animal or figure would have been a memorable and distinctive landmark along an early Ohio road. The community served passing travelers and surrounding farm families as a minor wayside stop during the early 19th century, declining as improved roads and later turnpikes shifted traffic to better-maintained routes. Today Three Legs Town exists only as a curiosity in Ohio historical records, its precise location and final fate obscured by two centuries of agricultural transformation. Old road trace areas and historic tavern site locations in the surrounding Ohio countryside can yield early American coins, travel hardware, and tavern-era domestic artifacts."
   },
   {
     "name": "Rossville, Knox County, OH",
