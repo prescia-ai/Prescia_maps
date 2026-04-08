@@ -3290,7 +3290,8 @@
     "latitude": 38.378611,
     "longitude": -88.091667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Wanborough was an early Illinois community in Edwards County with strong English heritage, established by settlers from Wanborough, Surrey, England who emigrated to Illinois in the early 19th century as part of the English Prairie settlement movement organized by land agent George Flower and Morris Birkbeck. The community was part of the remarkable 1818\u20131820s English Prairie experiment in which educated English immigrants attempted to create an idyllic agrarian settlement in the American wilderness, with more genteel ambitions than typical frontier settlements. Wanborough's English character faded as American settlers outnumbered the original English colonists, and the community eventually dissolved into the surrounding Edwards County agricultural landscape. Artifacts from this early English settlement period \u2014 including English-made ceramics, coins, and domestic hardware \u2014 would be historically significant finds in the area."
   },
   {
     "name": "Winchestertonfieldville, IA",
@@ -3298,7 +3299,8 @@
     "latitude": 41.083994,
     "longitude": -92.081584,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Winchestertonfieldville was a tiny rural settlement in Iowa with an extraordinarily long name, made famous in the 2012 film 'The Words' and appearing in various lists of place name curiosities; the actual settlement it referred to was a minor farming community crossroads in Fayette County. The real community, known locally by simpler variants, was one of dozens of small Iowa farm villages that served surrounding homesteaders in the post\u2013Civil War settlement era before improved transportation drew commerce to larger centers like West Union. Today the community area is productive Iowa farmland with no surviving commercial structures. Old farmstead sites and road traces near the historic community location can yield late 19th-century Iowa farm artifacts and coins."
   },
   {
     "name": "Lakewood, IA",
@@ -3306,7 +3308,8 @@
     "latitude": 43.346944,
     "longitude": -96.162778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lakewood was a small Iowa farming community, established in the post\u2013Civil War settlement era when Iowa's remaining prairie lands were rapidly converted to agriculture by families pushing westward from Ohio, Indiana, and Illinois. The community served as a minor local center for surrounding farms with a church, school, and country store before rural depopulation through the early 20th century drew its residents to larger Iowa centers. Today the community exists only in old Iowa plat maps. The surrounding Iowa farmland, worked with landowner permission, may yield late 19th-century domestic artifacts, farm implements, and coins from the active community era."
   },
   {
     "name": "Big Spring, IA",
@@ -3314,7 +3317,8 @@
     "latitude": 40.683333,
     "longitude": -93.526944,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Big Spring was an Iowa community built around a reliable natural spring that provided water for livestock, travelers, and settlers during the crucial first decades of Euro-American settlement when reliable water sources were the primary determinant of community location. The spring served as a gathering point that attracted a tavern, a store, and eventually a church and school, but as drilled wells became available and the spring's geographic advantage faded, so did the community's commercial significance. Today the original spring site is likely on private farmland, possibly still flowing or now buried by agricultural modifications. The old spring area and surrounding farmstead sites can yield 19th-century domestic artifacts and travel-era hardware."
   },
   {
     "name": "Iowaville, IA",
@@ -3322,7 +3326,8 @@
     "latitude": 40.879187,
     "longitude": -92.177124,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Iowaville was a significant early Iowa settlement on the Des Moines River in Van Buren County, established in the 1830s as one of the first American communities in what would become Iowa, at the site of a former Sauk and Fox village near a Des Moines River ford. The community thrived briefly as a river trading post and regional center before being eclipsed by Keosauqua and other better-situated county towns, eventually losing its post office and commercial life by the 1850s. The Des Moines River bottomlands around the old Iowaville site are prone to flooding, which has both preserved and scattered the archaeological record. River terrace areas near the historic site, accessible on public land along the river, may yield early 19th-century trade items, Native American-contact-era artifacts, and pioneer domestic hardware."
   },
   {
     "name": "Coal Valley, IA",
@@ -3330,7 +3335,8 @@
     "latitude": 42.031667,
     "longitude": -93.950833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Coal Valley was an Iowa mining community established in the mid-to-late 19th century to exploit the shallow coal deposits that run through much of southern Iowa's Pennsylvanian-age geology, providing fuel for homes, railroads, and small industries across the region during an era when coal was the primary energy source. The community had a company store, a school, and housing for miners and their families at its height, functioning as a self-contained mining camp. As deeper and more productive Illinois and West Virginia coal undersold Iowa's shallow deposits after World War I, most Iowa coal camps closed by the 1920s\u20131930s, leaving behind only shaft collars, slag heaps, and deteriorating company housing. The old mine dump areas and former company town footprint can yield industrial hardware, mining company tokens, and early 20th-century domestic artifacts."
   },
   {
     "name": "Conover, IA",
@@ -3338,7 +3344,8 @@
     "latitude": 43.215278,
     "longitude": -91.894722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Conover was a small Iowa farming community established during the rapid agricultural settlement of the state in the 1850s\u20131870s, serving surrounding homesteaders with a church, school, and country store. The community was named for an early settler family or local landowner and functioned as a minor rural center before improved transportation and rural consolidation drew its residents toward larger nearby Iowa towns. Today Conover exists only in old county plat records. The surrounding Iowa farmland, explored with landowner permission, may yield late 19th-century coins, farm implements, and domestic artifacts from the community's active decades."
   },
   {
     "name": "Littleport, IA",
@@ -3346,7 +3353,8 @@
     "latitude": 42.753611,
     "longitude": -91.368889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Littleport was a small Iowa community in Clayton County on the Upper Iowa River, established in the mid-19th century as a minor river landing and farming center that served the dairy and agricultural country of northeastern Iowa. The community had a brief commercial life serving local farmers and rivermen before the railroads bypassed it and the trade shifted to larger Clayton County centers. Today Littleport is a small unincorporated community with a handful of residents, though most of its 19th-century commercial infrastructure has long disappeared. The old river landing area and surrounding farm sites may yield 19th-century domestic artifacts and river trade hardware."
   },
   {
     "name": "Motor, IA",
@@ -3354,7 +3362,8 @@
     "latitude": 42.807778,
     "longitude": -91.351389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Motor was a small Iowa farming community in Adair County, established in the late 19th century and likely named for its position along an early road or the optimistic spirit of the new automotive age. The community had a post office for a period and served surrounding farm families as a minor rural center before the consolidation of rural services drew commerce toward larger Adair County towns. Today Motor is a historical name in Iowa records with no surviving commercial structures. Old farmstead sites and road traces near the historic Motor community location can yield late 19th-century and early 20th-century Iowa farm artifacts and domestic items."
   },
   {
     "name": "Donnan, IA",
@@ -3362,7 +3371,8 @@
     "latitude": 42.896111,
     "longitude": -91.878056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Donnan was a small Iowa farming community in Howard County, established in the post\u2013Civil War settlement era by farm families seeking the rich agricultural land of northeastern Iowa's rolling hills and prairie. The community served surrounding farms with a church, school, and country store, functioning as a minor local center before rural depopulation through the 20th century emptied it. Today the Donnan area is active Iowa farmland with no surviving commercial structures. Old farmstead perimeters and road traces near the historic Donnan community location may yield late 19th-century coins, farm hardware, and domestic artifacts."
   },
   {
     "name": "Siegel, IA",
