@@ -54,7 +54,7 @@ _RELIGIOUS_KEYWORDS = (
     "convent",
     "monastery",
     "parish",
-    "dogma",
+    "rectory",
     "sacred",
     "holy",
     "saint",
