@@ -4,6 +4,9 @@ import type {
   LinearFeatureCollection,
   HeatmapPoint,
   ScoreResponse,
+  LandAccessResponse,
+  LandAccessOverrideCreate,
+  LandAccessOverrideResponse,
 } from '../types';
 
 const api = axios.create({
@@ -35,5 +38,32 @@ export async function fetchScore(lat: number, lon: number): Promise<ScoreRespons
 
 export async function fetchBlmTileUrl(): Promise<{ url: string; attribution: string }> {
   const { data } = await api.get<{ url: string; attribution: string }>('/blm-lands/tile-url');
+  return data;
+}
+
+export async function fetchLandAccess(lat: number, lon: number): Promise<LandAccessResponse> {
+  const { data } = await api.get<LandAccessResponse>('/land-access', {
+    params: { lat, lon },
+  });
+  return data;
+}
+
+export async function putLandAccessOverride(
+  areaCode: string,
+  payload: LandAccessOverrideCreate,
+): Promise<LandAccessResponse> {
+  const { data } = await api.put<LandAccessResponse>(
+    `/land-access/${encodeURIComponent(areaCode)}/override`,
+    payload,
+  );
+  return data;
+}
+
+export async function deleteLandAccessOverride(areaCode: string): Promise<void> {
+  await api.delete(`/land-access/${encodeURIComponent(areaCode)}/override`);
+}
+
+export async function fetchLandAccessOverrides(): Promise<LandAccessOverrideResponse[]> {
+  const { data } = await api.get<LandAccessOverrideResponse[]>('/land-access/overrides');
   return data;
 }

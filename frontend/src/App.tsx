@@ -3,12 +3,14 @@ import MapView from './components/MapView';
 import LayerControls from './components/LayerControls';
 import InfoPanel from './components/InfoPanel';
 import ScorePanel from './components/ScorePanel';
+import LandAccessPanel from './components/LandAccessPanel';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useLocations } from './hooks/useLocations';
 import { useFeatures } from './hooks/useFeatures';
 import { useHeatmap } from './hooks/useHeatmap';
 import { useScore } from './hooks/useScore';
-import type { LocationFeature, LayerState } from './types';
+import { fetchLandAccess, putLandAccessOverride } from './api/client';
+import type { LocationFeature, LayerState, LandAccessResponse } from './types';
 
 const DEFAULT_LAYERS: LayerState = {
   events:    true,
@@ -24,6 +26,12 @@ export default function App() {
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
 
+  // Land access state
+  const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
+  const [landAccessLoading, setLandAccessLoading] = useState(false);
+  const [landAccessError, setLandAccessError] = useState(false);
+  const [showLandAccess, setShowLandAccess] = useState(false);
+
   const locationsQuery = useLocations();
   const featuresQuery  = useFeatures();
   const heatmapQuery   = useHeatmap();
@@ -32,6 +40,39 @@ export default function App() {
   const handleMapClick = useCallback((lat: number, lon: number) => {
     setSelectedFeature(null);
     setClickedCoords({ lat, lon });
+  }, []);
+
+  const handleLandAccessClick = useCallback(async (lat: number, lon: number) => {
+    setShowLandAccess(true);
+    setLandAccessLoading(true);
+    setLandAccessError(false);
+    setLandAccessData(null);
+    try {
+      const data = await fetchLandAccess(lat, lon);
+      setLandAccessData(data);
+    } catch {
+      setLandAccessError(true);
+    } finally {
+      setLandAccessLoading(false);
+    }
+  }, []);
+
+  const handleLandAccessOverride = useCallback(async (
+    areaCode: string,
+    status: 'allowed' | 'off_limits',
+    notes: string,
+  ) => {
+    try {
+      const updated = await putLandAccessOverride(areaCode, { status, notes });
+      setLandAccessData(updated);
+    } catch {
+      // silently fail — user can retry
+    }
+  }, []);
+
+  const handleCloseLandAccess = useCallback(() => {
+    setShowLandAccess(false);
+    setLandAccessData(null);
   }, []);
 
   const handleLocationSelect = useCallback((f: LocationFeature) => {
@@ -60,6 +101,7 @@ export default function App() {
           layers={layers}
           onMapClick={handleMapClick}
           onLocationSelect={handleLocationSelect}
+          onLandAccessClick={handleLandAccessClick}
         />
       </div>
 
@@ -108,7 +150,7 @@ export default function App() {
         <LayerControls layers={layers} onChange={setLayers} />
       </div>
 
-      {/* Bottom-right: info / score panels (offset left of legend) */}
+      {/* Bottom-right: info / score / land-access panels (offset left of legend) */}
       <div className="absolute bottom-6 right-48 z-10 flex flex-col gap-3 items-end">
         {selectedFeature && (
           <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
@@ -122,6 +164,16 @@ export default function App() {
             isLoading={scoreQuery.isLoading}
             isError={scoreQuery.isError}
             onClose={handleCloseScore}
+          />
+        )}
+
+        {showLandAccess && (
+          <LandAccessPanel
+            data={landAccessData}
+            isLoading={landAccessLoading}
+            isError={landAccessError}
+            onClose={handleCloseLandAccess}
+            onOverride={handleLandAccessOverride}
           />
         )}
       </div>

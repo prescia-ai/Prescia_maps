@@ -13,11 +13,13 @@ from geoalchemy2 import Geometry
 from sqlalchemy import (
     JSON,
     Column,
+    DateTime,
     Enum,
     Float,
     Integer,
     String,
     Text,
+    func,
     text,
 )
 from sqlalchemy.dialects.postgresql import UUID
@@ -155,6 +157,49 @@ class MapLayer(Base):
     )
     url = Column(Text, nullable=False)
     metadata_ = Column("metadata", JSON, nullable=True)
+
+
+class LandAccessCache(Base):
+    """
+    Cached land-access classification for a PAD-US area.
+
+    Stores the result of the tier-1 rule engine so that repeated lookups
+    for the same area code are returned instantly without re-querying
+    the PAD-US REST API.
+    """
+
+    __tablename__ = "land_access_cache"
+
+    area_code = Column(String(50), primary_key=True)
+    unit_name = Column(Text, nullable=True)
+    managing_agency = Column(Text, nullable=True)
+    designation = Column(Text, nullable=True)
+    state = Column(String(2), nullable=True)
+    gap_status = Column(Integer, nullable=True)
+    status = Column(String(20), nullable=False)  # allowed, off_limits, private_permit, unsure
+    confidence = Column(Float, nullable=False)
+    reason = Column(Text, nullable=True)
+    source = Column(String(20), nullable=False)  # rule_tier1, user_override
+    latitude = Column(Float, nullable=True)
+    longitude = Column(Float, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
+class LandAccessOverride(Base):
+    """
+    User-submitted override for a PAD-US area classification.
+
+    Overrides always take priority over the rule engine and cached results.
+    """
+
+    __tablename__ = "land_access_overrides"
+
+    area_code = Column(String(50), primary_key=True)
+    status = Column(String(20), nullable=False)  # allowed, off_limits
+    notes = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
 
 # ---------------------------------------------------------------------------

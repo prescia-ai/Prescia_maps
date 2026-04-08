@@ -73,3 +73,34 @@ export interface LayerState {
   heatmap: boolean;
   blm: boolean;
 }
+
+// ── Land Access ──────────────────────────────────────────────────────────────
+
+export type LandAccessStatus = 'allowed' | 'off_limits' | 'private_permit' | 'unsure';
+
+export interface LandAccessResponse {
+  area_code: string;
+  unit_name: string | null;
+  managing_agency: string | null;
+  designation: string | null;
+  state: string | null;
+  gap_status: number | null;
+  status: LandAccessStatus;
+  confidence: number;
+  reason: string | null;
+  source: string; // 'rule_tier1' | 'cached' | 'user_override'
+  last_verified: string | null;
+}
+
+export interface LandAccessOverrideCreate {
+  status: 'allowed' | 'off_limits';
+  notes?: string;
+}
+
+export interface LandAccessOverrideResponse {
+  area_code: string;
+  status: string;
+  notes: string | null;
+  created_at: string | null;
+  updated_at: string | null;
+}

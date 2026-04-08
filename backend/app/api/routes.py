@@ -19,6 +19,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.responses import Response
 
 from app.models.database import (
+    LandAccessCache,
+    LandAccessOverride,
     LinearFeature,
     Location,
     MapLayer,
@@ -30,6 +32,9 @@ from app.models.schemas import (
     HealthResponse,
     HeatmapPoint,
     HotspotCluster,
+    LandAccessOverrideCreate,
+    LandAccessOverrideResponse,
+    LandAccessResponse,
     LinearFeatureProperties,
     LineStringGeometry,
     LocationCreate,
@@ -41,6 +46,7 @@ from app.models.schemas import (
     ScoreResponse,
 )
 from app.scoring.engine import WEIGHTS, _age_bonus, compute_heatmap_data, score_location
+from app.services.land_access import lookup_land_access
 
 logger = logging.getLogger(__name__)
 
@@ -522,22 +528,21 @@ async def create_layer(
 @router.get(
     "/blm-lands/tile-url",
     response_model=None,
-    summary="Return the BLM public-lands tile URL and attribution",
-    tags=["blm"],
+    summary="Return the PAD-US land-access tile URL and attribution",
+    tags=["land-access"],
 )
 async def get_blm_tile_url() -> Dict[str, str]:
     """
-    Return the BLM (Bureau of Land Management) public-lands tile URL.
+    Return the PAD-US (Protected Areas Database) tile URL.
 
-    The tile URL points to the BLM GeoCommunicator WMS service, which
-    provides boundaries of federally managed public lands overlaid on the
-    base map.
+    Replaces the previous BLM-only tile service with the comprehensive
+    PAD-US 3.0 layer that covers all protected and public lands.
     """
     return {
         "url": (
-            "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_Combined/MapServer/tile/{z}/{y}/{x}"
+            "https://gis.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
         ),
-        "attribution": "Bureau of Land Management (BLM) – Public Domain",
+        "attribution": "USGS PAD-US 3.0 – Protected Areas Database of the United States",
     }
 
 
@@ -598,3 +603,126 @@ async def get_blm_lands(
         ],
         "count": len(rows),
     }
+
+
+# ---------------------------------------------------------------------------
+# Land Access
+# ---------------------------------------------------------------------------
+
+
+@router.get(
+    "/land-access",
+    response_model=LandAccessResponse,
+    summary="Classify land-access status at a coordinate",
+    tags=["land-access"],
+)
+async def get_land_access(
+    lat: float = Query(..., ge=-90.0, le=90.0, description="Latitude"),
+    lon: float = Query(..., ge=-180.0, le=180.0, description="Longitude"),
+    db: AsyncSession = Depends(get_db),
+) -> LandAccessResponse:
+    """
+    Query PAD-US for the parcel at (lat, lon), run the tier-based rule
+    engine, and return a 4-colour classification.
+
+    Resolution order: user override → cache → tier-1 rules.
+    """
+    result = await lookup_land_access(lat, lon, db)
+    return LandAccessResponse(**result)
+
+
+@router.put(
+    "/land-access/{area_code}/override",
+    response_model=LandAccessResponse,
+    summary="Create or update a user override for a land area",
+    tags=["land-access"],
+)
+async def put_land_access_override(
+    area_code: str,
+    payload: LandAccessOverrideCreate,
+    db: AsyncSession = Depends(get_db),
+) -> LandAccessResponse:
+    """Save a user override and return the updated classification."""
+    from datetime import datetime, timezone
+
+    # Upsert the override
+    existing = await db.execute(
+        select(LandAccessOverride).where(LandAccessOverride.area_code == area_code)
+    )
+    row = existing.scalar_one_or_none()
+    if row is not None:
+        row.status = payload.status
+        row.notes = payload.notes
+        row.updated_at = datetime.now(timezone.utc)
+    else:
+        row = LandAccessOverride(
+            area_code=area_code,
+            status=payload.status,
+            notes=payload.notes,
+        )
+        db.add(row)
+    await db.flush()
+
+    # Also look up cached info to return a full response
+    cached = await db.execute(
+        select(LandAccessCache).where(LandAccessCache.area_code == area_code)
+    )
+    cached_row = cached.scalar_one_or_none()
+
+    return LandAccessResponse(
+        area_code=area_code,
+        unit_name=cached_row.unit_name if cached_row else None,
+        managing_agency=cached_row.managing_agency if cached_row else None,
+        designation=cached_row.designation if cached_row else None,
+        state=cached_row.state if cached_row else None,
+        gap_status=cached_row.gap_status if cached_row else None,
+        status=payload.status,
+        confidence=1.0,
+        reason=f"User override: {payload.notes or 'No notes provided.'}",
+        source="user_override",
+        last_verified=row.updated_at.isoformat() if row.updated_at else datetime.now(timezone.utc).isoformat(),
+    )
+
+
+@router.delete(
+    "/land-access/{area_code}/override",
+    status_code=status.HTTP_204_NO_CONTENT,
+    summary="Remove a user override",
+    tags=["land-access"],
+)
+async def delete_land_access_override(
+    area_code: str,
+    db: AsyncSession = Depends(get_db),
+) -> None:
+    """Remove a user override, falling back to the rule engine."""
+    result = await db.execute(
+        select(LandAccessOverride).where(LandAccessOverride.area_code == area_code)
+    )
+    row = result.scalar_one_or_none()
+    if row is None:
+        raise HTTPException(status_code=404, detail="Override not found")
+    await db.delete(row)
+
+
+@router.get(
+    "/land-access/overrides",
+    response_model=List[LandAccessOverrideResponse],
+    summary="List all user overrides",
+    tags=["land-access"],
+)
+async def list_land_access_overrides(
+    db: AsyncSession = Depends(get_db),
+) -> List[LandAccessOverrideResponse]:
+    """Return all user-submitted land-access overrides."""
+    result = await db.execute(select(LandAccessOverride))
+    rows = result.scalars().all()
+    return [
+        LandAccessOverrideResponse(
+            area_code=r.area_code,
+            status=r.status,
+            notes=r.notes,
+            created_at=r.created_at.isoformat() if r.created_at else None,
+            updated_at=r.updated_at.isoformat() if r.updated_at else None,
+        )
+        for r in rows
+    ]
