@@ -35,7 +35,10 @@ docker compose exec backend python /scripts/USminesscraper.py --limit 1000
 docker compose exec backend python /scripts/Ghosttownsscraper.py --gnis-only --limit 1000
 docker compose exec backend python /scripts/Historicscraper.py --skip-ohm --limit 1000
 
-# 4. Open the API docs
+# 4. Stitch routes — turns point clusters into rendered map lines
+docker compose exec backend python /scripts/stitch_routes.py
+
+# 5. Open the API docs
 open http://localhost:8000/docs
 ```
 
@@ -136,6 +139,26 @@ python scripts/Historicscraper.py --dry-run
 
 Imports from the National Register of Historic Places (NRHP), NPS API (requires `NPS_API_KEY`), and OpenHistoricalMap Overpass API. Handles both point features (battles, forts, stations) and linear features (abandoned railways, historic trails). Replaces all previous NRHP, NPS, and Wikipedia battle/trail/fort data sources.
 
+### 4. Route Stitcher — `stitch_routes.py`
+
+Run **after** the three scrapers to convert point-stop clusters into rendered route lines.
+
+```bash
+# Full run (NPS trail geometry + stitch from point clusters)
+python scripts/stitch_routes.py
+
+# Preview what would be created (no DB writes)
+python scripts/stitch_routes.py --dry-run
+
+# Skip NPS National Trails download (only stitch from DB points)
+python scripts/stitch_routes.py --skip-nps-trails
+
+# Require at least 5 stops to form a route
+python scripts/stitch_routes.py --min-points 5
+```
+
+Downloads actual polyline geometry for National Historic Trails from the NPS ArcGIS open-data portal, then groups existing `Location` point records by route-name pattern (Pony Express, Butterfield Overland Mail, Oregon/Santa Fe/Mormon/California Trails, named railroads, etc.) and stitches them into `LinearFeature` LINESTRING records using nearest-neighbour geographic ordering. The result is that named routes appear as **lines** on the map with their individual stops as **dots**.
+
 ### Post-import enrichment
 
 ```bash
@@ -146,7 +169,7 @@ python scripts/enrich_locations.py
 python scripts/reclassify.py
 ```
 
-All three scrapers support crash-safe checkpointing (`--checkpoint`, `--fresh`) and can resume interrupted imports.
+All scrapers support crash-safe checkpointing (`--checkpoint`, `--fresh`) and can resume interrupted imports.
 
 ---
 
