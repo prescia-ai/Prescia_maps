@@ -8510,7 +8510,8 @@
     "latitude": 41.291472,
     "longitude": -74.005061,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Doodletown Mine in Orange County, New York within the Hudson Highlands was a small iron ore mine exploiting the magnetite iron ore deposits of the Hudson Highlands, part of the broader Hudson Valley iron industry that was one of the foundational elements of early American manufacturing from colonial times through the Civil War era. The Hudson Highlands iron mines provided ore for the Sterling Iron Works and other forges that produced iron chains, cannon, and hardware for the Continental Army during the Revolution, and the region's ironmaster families — the Hasenclever, the Ringers, the Ringwoods — were among the most important industrialists in colonial and early republican America. Doodletown was a small community in the mountains adjacent to Iona Marsh and Bear Mountain, whose residents included iron workers, farmers, and seasonal workers, before the community gradually dispersed in the early twentieth century and the land was incorporated into Harriman State Park. The Doodletown site within Harriman State Park is accessible for hiking, and the stone foundations of former homes are visible along the old roads."
   },
   {
     "name": "Mica Mine",
@@ -8518,7 +8519,8 @@
     "latitude": 41.293614,
     "longitude": -74.022098,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mica Mine in Orange County, New York in the Hudson Highlands near Bear Mountain was an industrial mineral operation extracting mica from the Precambrian schists and gneisses of the Hudson Highlands, where the remarkable muscovite mica crystals embedded in the ancient basement rocks were used as electrical insulators in early electrical equipment and as a thermal insulator in stoves and lanterns. Mica mining in the Hudson Highlands served the growing electrical equipment industry of the late nineteenth century, when mica's unique dielectric properties made it invaluable for capacitors, vacuum tubes, and electrical insulation before synthetic alternatives were developed. The mine is within the boundaries of the Harriman-Bear Mountain State Parks complex, where the former mine workings and associated debris have been reclaimed by the recovering hardwood forest. The site is accessible for hiking within the state park system, and the mine dumps are visible as subtle landscape features in the forested highlands."
   },
   {
     "name": "Herberts Mine",
@@ -8526,7 +8528,8 @@
     "latitude": 41.284438,
     "longitude": -74.004562,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Herberts Mine in Orange County, New York in the Hudson Highlands near Bear Mountain and Harriman State Park was another of the numerous small iron ore mines that operated in the ancient Precambrian rocks of the Hudson Highlands, exploiting the magnetite ore deposits embedded in the ancient basement gneisses and schists of the New York Highlands chain. The Hudson Highlands iron mining landscape is one of the most historically significant pre-industrial mining districts in North America, spanning from colonial ironworks through the Civil War era and providing crucial material for America's early manufacturing economy. Today the mine site is within Harriman State Park, one of the most heavily used state parks in the nation given its proximity to New York City, and the old mine workings are accessible to hikers on the park's extensive trail system. The recovering forest has largely reclaimed the surface evidence of mining, but subtle mine dump topography and occasional ore fragments identify the former workings."
   },
   {
     "name": "Cranberry Mine",
@@ -8534,7 +8537,8 @@
     "latitude": 41.301622,
     "longitude": -74.051529,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cranberry Mine in Rockland County, New York in the Ramapo Highlands was an iron mine exploiting the magnetite ore deposits of the Ramapo Mountains along the New York-New Jersey border, part of the same Precambrian basement rock sequence that underlies the wider Hudson Highlands iron mining district extending from New York into New Jersey's Ringwood area. The Cranberry Mine operated during the colonial and early American republic period when the Ramapo River valley iron industry was one of the most important iron-producing regions in America, supplying ore to the Sterling Iron Works and other forges. The site within the Harriman-Bear Mountain State Parks system has been integrated into the park's hiking trail network, and the old mine workings are accessible on foot through the Ramapo-Harriman highland landscape. Former Ramapo iron mine sites are interesting for their combination of colonial-era industrial archaeology and the natural beauty of the recovering Appalachian forest."
   },
   {
     "name": "Abandoned Mine",
@@ -8542,7 +8546,8 @@
     "latitude": 33.990891,
     "longitude": -115.696159,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "This abandoned mine in San Bernardino County, California in the Mojave Desert near Twentynine Palms was one of the many small gold, silver, or mineral claims worked by individual prospectors in the eastern Mojave's vast mineral-bearing volcanic and metamorphic terrain, where geological surveys and the proximity to the Colorado River trade routes encouraged persistent prospecting from the 1860s onward. The Mojave Desert contains an extraordinary density of small mining claims, abandoned prospect holes, and ghost mine sites spread across BLM, National Park, and Joshua Tree National Monument lands, representing over a century of speculative mineral development. The specific site is in the desert east of Joshua Tree National Park, on what appears to be BLM land where surface exploration is generally permitted within applicable regulations. Eastern Mojave mine sites are productive for the tools, camp hardware, and personal artifacts of desert prospectors who worked isolated claims in extreme conditions."
   },
   {
     "name": "Abandoned Mine with Off Roading",
@@ -8550,7 +8555,8 @@
     "latitude": 37.74062,
     "longitude": -117.233212,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Mine with Off-Roading opportunity in Esmeralda County, Nevada near Mina in the Mineral County borderland was a silver or gold mining operation in the extensive mining district of western Nevada's Hawthorne-Tonopah corridor, where the mineral-bearing volcanic rocks of the Walker Lane have hosted dozens of mining camps since the 1860s. The combination of active mine ruins and the BLM land's accessibility to off-highway vehicle travel makes this site a popular destination for the OHV community that uses the western Nevada desert for recreation. Nevada's western desert has some of the most permissive off-highway vehicle regulations of any public land in the country, making the combination of ghost mine exploration and OHV recreation a uniquely accessible experience. The mine site is accessible from US 95 in western Nevada and offers the combination of mining history and desert recreation."
   },
   {
     "name": "Gemfield Mine",
@@ -8558,7 +8564,8 @@
     "latitude": 37.734068,
     "longitude": -117.236475,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gemfield Mine in Esmeralda County, Nevada near Mina was a precious or semi-precious gemstone mining operation in western Nevada's Hawthorne Mining District, taking advantage of the remarkable range of collector minerals produced by the volcanic hydrothermal systems of the Walker Lane tectonic zone. The Mineral County-Esmeralda County borderland is known for gem-quality tourmaline, opal, turquoise, and other collector minerals in addition to gold and silver ore, and small-scale gemstone mining has attracted collectors and entrepreneurs throughout the region. The Gemfield operation represents the specialist gemstone mining that complements the base metal and precious metal industries in this part of Nevada. The site near Mina is on BLM land in western Nevada's desert, accessible via paved and improved dirt roads from US 95, and the area is popular with rock hounds and mineral collectors."
   },
   {
     "name": "Gleeson Copper Mine",
@@ -8566,7 +8573,8 @@
     "latitude": 31.737463,
     "longitude": -109.82614,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gleeson Copper Mine in Cochise County, Arizona near the Dragoon Mountains was a copper mining camp established in 1900 when the discovery of oxidized copper ore in the limestone hills east of Tombstone briefly made Gleeson one of the more promising copper districts in southeastern Arizona Territory. The town of Gleeson developed quickly with a post office, saloons, miners' boarding houses, and commercial establishments, reaching a peak population of several hundred before the ore bodies proved too shallow and erratic to sustain large-scale production. Gleeson today is one of the most photogenic ghost towns in southern Arizona, with the ruins of the jail, hospital, adobe houses, and commercial buildings still standing in various states of picturesque decay against the backdrop of the Dragoon Mountains. The site is on private and BLM land east of Tombstone in Cochise County, accessible via dirt roads, and is a classic Arizona ghost town destination with good historical remains and excellent desert scenery."
   },
   {
     "name": "Vertical Mine # 9",
@@ -8574,7 +8582,8 @@
     "latitude": 34.959913,
     "longitude": -114.396078,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Vertical Mine #9 near Oatman, Mohave County, Arizona in the Black Mountains was one of the small-scale gold mining claims that proliferated throughout the Oatman Mining District in the years following the major gold strikes at Oatman itself in 1902-1915, when the Tom Reed and United Eastern mines produced millions in gold and the surrounding hills were peppered with smaller claims. The Black Mountains gold district produced gold from epithermal quartz veins in the volcanic rocks, and the Oatman area became one of the most productive gold districts in Arizona before declining ore grades and rising costs ended the major operations by the 1940s. The surrounding Mohave County desert is BLM land, and the Old Route 66 through Oatman makes the area easily accessible to visitors. Former gold mine sites near Oatman are productive for period mining implements, assay materials, and early twentieth century camp hardware left by the miners who worked these remote claims."
   },
   {
     "name": "#10 Vertical Gold Mine",
@@ -8582,7 +8591,8 @@
     "latitude": 34.960302,
     "longitude": -114.397217,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gold Mine #10 near Oatman, Mohave County, Arizona was another of the small gold mining claims in the Black Mountains district above old Route 66, part of the cluster of vertical shaft mines that prospectors sank into the gold-bearing quartz veins of the volcanic terrain in the decades following the main Oatman gold boom of the 1910s. The Oatman area in extreme western Mohave County near the Colorado River had some of the most accessible gold deposits in Arizona, drawing thousands of prospectors during the Great Depression years when gold's fixed price of $35 per ounce made even modest placer and lode claims economically marginal but psychologically compelling. The site is on BLM land in the Black Mountains above Oatman, accessible via dirt roads off Route 66, where the iconic burros that roam Oatman's main street are descendants of pack animals abandoned by miners when the mines closed. BLM land surface collecting is generally permitted for personal-quantity mineral specimens but regulated for archaeological items."
   },
   {
     "name": "Horizontal Mine # 11",
