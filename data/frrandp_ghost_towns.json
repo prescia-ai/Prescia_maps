@@ -5810,7 +5810,8 @@
     "latitude": 31.366389,
     "longitude": -101.980556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Upland was a small farming and ranching community in Andrews County, Texas on the flat Permian Basin grassland, established in the early 20th century as dryland farming was attempted on the high plains before the enormous oil and gas reserves beneath the Permian Basin were discovered and transformed the regional economy. The community had a school and church during its farming era, but declining agricultural returns and the shift to oil-based economy drew the population toward larger Permian Basin cities. Today Upland is a ghost town remnant in the Andrews County oil country. Detecting on private land near former homestead sites can yield early 20th-century farm implements, domestic artifacts, and coins from the pre-oil farming settlement era."
   },
   {
     "name": "Hay Flat, NM",
@@ -5818,7 +5819,8 @@
     "latitude": 31.905056,
     "longitude": -103.319722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hay Flat was a small ranching community in a remote region of New Mexico, likely in the high grassland country of eastern or central New Mexico where seasonal meadows and hay production supported scattered cattle ranching operations. New Mexico's remote ranch country holds a deep layered history from Spanish colonial expeditions and ranching through the 19th-century open range cattle era, and even minor community sites like Hay Flat can hold period artifacts for detectorists working with landowner permission. The New Mexico ranch landscape, with its combination of Spanish colonial, frontier military, and cattle drive history, is historically rich but requires careful research to identify promising sites on the vast private land holdings of the region."
   },
   {
     "name": "Salt Flat, TX",
@@ -5826,7 +5828,8 @@
     "latitude": 31.743611,
     "longitude": -105.092778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Salt Flat was a small community in Hudspeth County, Texas along the Salt Lake road corridor in far West Texas, near the salt deposits of the Guadalupe Mountains region that were the subject of the Salt War of 1877-1878, a violent conflict between Hispanic communities claiming traditional salt gathering rights and Anglo entrepreneurs attempting to privatize the resource. The community served travelers and limited local ranching interests in this remote desert corridor. Today Salt Flat is a very small community along Highway 62/180 near the New Mexico border. The surrounding Hudspeth County desert landscape, scene of significant frontier conflict and cross-border activity, holds detecting potential on private land for period artifacts."
   },
   {
     "name": "Pandale, TX",
@@ -5834,7 +5837,8 @@
     "latitude": 30.184444,
     "longitude": -101.550833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pandale was an extremely remote ranching community in Val Verde County, Texas along the Pecos River canyon in the rugged limestone country of the Trans-Pecos region, established in the late 19th century as a service point for the isolated sheep and goat ranching operations of the Pecos River drainage. The community had a wool-buying facility and local store serving the scattered ranching population, but the extreme isolation limited growth. Today Pandale is one of the most remote inhabited communities in Texas, accessible only by a single paved road that ends at the Pecos River crossing. The Val Verde County canyon country, with its cave art and multi-thousand-year human occupation history, holds detecting potential on private ranch land for artifacts from the ranching era."
   },
   {
     "name": "Pumpville, TX",
@@ -5842,7 +5846,8 @@
     "latitude": 29.942528,
     "longitude": -101.735194,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pumpville was a small railroad water stop community in Val Verde County, Texas along the Southern Pacific Railroad mainline through the remote Trans-Pecos desert country, established in the 1880s-1890s to provide water pumped from the surrounding desert for steam locomotives crossing one of the most arid sections of the transcontinental route. The community had a small permanent population of railroad workers and their families maintaining the water pumping infrastructure. When diesel locomotives eliminated the need for water stops in the mid-20th century, Pumpville lost its reason for existence. The former railroad service community site in the Trans-Pecos desert holds detecting potential for railroad-era hardware, section house artifacts, and coins from the service period."
   },
   {
     "name": "Shafter, TX",
@@ -5850,7 +5855,8 @@
     "latitude": 29.820278,
     "longitude": -104.303333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Shafter was a historic silver mining town in Presidio County, Texas in the remote Chinati Mountains of the Trans-Pecos, established in the 1880s when the Presidio Mining Company began working the rich silver deposits that had been known since the Spanish colonial period. The mine and town experienced several boom and bust cycles through the late 19th and 20th centuries, with the silver ore requiring a cyanide processing facility that operated when prices made production economical. The last mining operation shut down in the early 2000s, and Shafter is now largely a ghost town with a small permanent caretaker population. The remote Presidio County silver mining district offers exceptional detecting potential on private land for mining-era tokens, silver specimens, and period artifacts from the multiple boom cycles."
   },
   {
     "name": "Woody, TX",
@@ -5858,7 +5864,8 @@
     "latitude": 31.752694,
     "longitude": -103.49325,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Woody was a small ranching community in Texas, likely in the Hill Country or Edwards Plateau region where isolated ranch settlements supported scattered populations of sheep, goat, and cattle ranchers working the thin limestone soils of the Texas uplands. Such minor named communities in the Texas Hill Country typically existed as local post office designations serving ranchers spread across enormous acreages in one of the most scenic but agriculturally challenging regions of the state. The Texas Hill Country ranch country holds detecting potential on private land near former ranch headquarters for period ranch hardware, domestic coins, and personal artifacts from the long ranching occupation of the region."
   },
   {
     "name": "Porterville, TX",
@@ -5866,7 +5873,8 @@
     "latitude": 31.686917,
     "longitude": -103.618111,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Porterville was a small community in a Texas county that served the local farming or ranching population during the late 19th and early 20th centuries, bearing the common -ville suffix that dozens of Texas communities adopted in naming their settlements for prominent local families or landowners. Like many of these minor Texas communities, Porterville existed as a local school and church center for the rural neighborhood before transportation improvements and rural population decline eliminated the need for such small-scale community identity. Detecting on private land near former Texas community sites can yield period domestic artifacts, agricultural hardware, and coins from the community's active years."
   },
   {
     "name": "Madera Springs, TX",
@@ -5874,7 +5882,8 @@
     "latitude": 30.855278,
     "longitude": -103.95,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Madera Springs was a small ranching settlement in the Chihuahuan Desert country of far West Texas, possibly in Presidio or Jeff Davis County, where a reliable spring or water source in the mountains gave both life to the community and its name. In the arid Trans-Pecos region, springs were extraordinarily valuable and attracted both indigenous peoples over thousands of years and later Spanish colonial, Mexican, and Anglo ranching operations. The remote Trans-Pecos mountain ranch country holds deep archaeological potential spanning from prehistoric rock art sites through Spanish colonial expeditions and 19th-century frontier ranching. Detecting on private mountain ranch land in the area requires significant access negotiation but can yield fascinating multi-period artifact assemblages."
   },
   {
     "name": "Pilares, TX",
@@ -5882,7 +5891,8 @@
     "latitude": 30.436389,
     "longitude": -104.851944,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pilares was a historic border community in Presidio County, Texas on the Rio Grande, occupied from the Spanish colonial period through the early 20th century as a farming and ranching settlement taking advantage of the Rio Grande bottomland for irrigation agriculture in the harsh Chihuahuan Desert. The community was involved in cross-border conflicts during the turbulent Mexican Revolution period of 1910-1920, when Pancho Villa's forces operated throughout the Big Bend borderlands and the U.S. Army conducted punitive expeditions. Today Pilares is an abandoned settlement in the remote Big Bend country, accessible only to those with determination and a high-clearance vehicle. The site holds significant detecting potential for Spanish colonial artifacts, Mexican Revolution-era items, and frontier ranching hardware."
   },
   {
     "name": "Lobo, TX",
