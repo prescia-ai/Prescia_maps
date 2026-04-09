@@ -5,7 +5,8 @@
     "latitude": 41.427218,
     "longitude": -93.114967,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.82,
+    "detecting_weight": 36,
     "description": "Red Rock was a small farming community in Marion County, Iowa that thrived along the Des Moines River from the mid-1800s until the Army Corps of Engineers began construction of Red Rock Dam in the 1960s, permanently flooding the original townsite beneath Red Rock Lake. The town had a general store, church, and school before residents were relocated to higher ground. Today the original settlement lies beneath the reservoir, but during low-water periods the surrounding shoreline areas have yielded old foundations, ceramics, and personal items from the displaced community. The accessible shoreline makes this a worthwhile site for metal detectorists, particularly after seasonal drawdowns expose previously submerged ground."
   },
   {
@@ -14,7 +15,8 @@
     "latitude": 39.377236,
     "longitude": -96.689644,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Garrison was a small agricultural hamlet in Clay County, Kansas that developed alongside the railroad in the late nineteenth century as a shipping point for local grain and livestock. The town never grew large, and when highway routes bypassed the community in the early twentieth century, businesses relocated and residents drifted away. Little remains at the original site today beyond scattered foundations and overgrown lots, though the surrounding farmland retains its historic character. Detecting permission from local landowners can yield farm-era coins, buttons, and household hardware from the homesteading period."
   },
   {
@@ -23,7 +25,8 @@
     "latitude": 42.359167,
     "longitude": -72.296389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.88,
+    "detecting_weight": 32,
     "description": "Greenwich was a prosperous agricultural village in Worcester County, Massachusetts that dated to colonial times and had a post office, churches, and a thriving mill economy along the Swift River valley. The town — along with the neighboring villages of Dana, Enfield, and Prescott — was condemned and flooded in the 1930s to create the Quabbin Reservoir, which now supplies drinking water to the Boston metropolitan area. Residents were forcibly relocated, and all structures were demolished before the valley was flooded by 1939. The surrounding Quabbin watershed is now protected state land; while metal detecting is prohibited within the reservation, low water periods occasionally expose the old roadbeds near the reservoir's edges."
   },
   {
@@ -32,7 +35,8 @@
     "latitude": 42.090959,
     "longitude": -75.318064,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.86,
+    "detecting_weight": 33,
     "description": "Cannonsville was a rural Delaware County, New York farming community established in the early nineteenth century along the West Branch of the Delaware River, eventually growing to include a post office, churches, a store, and several hundred residents. In the 1950s the New York City Board of Water Supply condemned the town to build Cannonsville Reservoir as part of the Delaware River system, forcibly relocating families and demolishing all buildings before flooding the valley in 1964. Today the reservoir covers the original townsite completely, though during extended droughts the waterline drops to reveal old road surfaces and stone wall remnants. The surrounding watershed lands are managed by New York City DEP, restricting most recreational access."
   },
   {
@@ -41,7 +45,8 @@
     "latitude": 38.480402,
     "longitude": -107.209139,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 66,
     "description": "Cebolla was a small ranching and farming community in Gunnison County, Colorado situated along the Gunnison River in the Lake Fork valley, serving as a supply stop for homesteaders and cattlemen working the surrounding high country in the late 1800s. The town declined as improved roads and changing agricultural economics made the remote valley less viable for permanent settlement, and most residents had departed by the mid-twentieth century. A few old structures and foundations remain in the area, which is now surrounded by Gunnison National Forest and Bureau of Land Management land. The open public land makes access relatively straightforward, and old homesites in this region can yield late-Victorian era coins, buttons, and household items."
   },
   {
@@ -50,7 +55,8 @@
     "latitude": 38.476707,
     "longitude": -107.096272,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Iola was a tiny settlement in Gunnison County, Colorado located in the Curecanti National Recreation Area along the Gunnison River, existing primarily as a small ranching and farming outpost in the late nineteenth and early twentieth centuries. Like several nearby communities in the Lake Fork and Gunnison valleys, Iola was largely abandoned as the remote canyon country proved economically unviable for sustained settlement. Today the site falls within the boundaries of Curecanti National Recreation Area managed by the National Park Service, which prohibits metal detecting on federal park lands. The scenic canyon landscape preserves the historic setting even if the actual artifacts are off-limits to recreational collectors."
   },
   {
@@ -59,7 +65,8 @@
     "latitude": 41.206039,
     "longitude": -88.238068,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.68,
+    "detecting_weight": 58,
     "description": "Torino was a small agricultural village in Grundy County, Illinois that briefly flourished in the mid-nineteenth century as settlers moved into the Illinois prairie, establishing a post office, church, and handful of businesses to serve surrounding farms. When the county's railroad network bypassed Torino in favor of neighboring towns, commercial activity collapsed and the community dissolved over the following decades. Today the original townsite is incorporated into productive farmland with little surface evidence of its former existence. Detecting with landowner permission in former Illinois prairie towns like Torino can produce mid-1800s large cent and early American coinage alongside farm equipment remnants."
   },
   {
@@ -68,7 +75,8 @@
     "latitude": 38.465149,
     "longitude": -107.136612,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 66,
     "description": "Kezar was a small agricultural settlement in Gunnison County, Colorado in the upper Gunnison River valley, serving as a modest supply point for surrounding ranches and farms in the late nineteenth century. Like many isolated Colorado high-country communities, Kezar faded as transportation improvements made it easier for valley residents to trade in larger centers, and the town was largely abandoned by the early twentieth century. The site today lies within or near Bureau of Land Management territory in the Gunnison Basin. Public land status makes some areas accessible for exploration, though the remote nature of the site requires significant travel to reach."
   },
   {
@@ -77,7 +85,8 @@
     "latitude": 37.021186,
     "longitude": -107.39228,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.83,
+    "detecting_weight": 33,
     "description": "Arboles was a small ranching community in Archuleta County, Colorado near the confluence of the Piedra and San Juan rivers, serving as a local trading point for Hispanic and Anglo ranchers working the rugged high desert terrain in the late 1800s and early 1900s. The community declined as the regional economy shifted and Navajo Lake reservoir, created in the 1960s by Navajo Dam in neighboring New Mexico, altered the lower valley landscape. Some remnants of the old community survive in the area near Navajo State Park on the Colorado side of the lake. The state park and surrounding BLM lands offer relatively open access for history enthusiasts exploring the region."
   },
   {
@@ -86,7 +95,8 @@
     "latitude": 45.165535,
     "longitude": -70.221909,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 32,
     "description": "Flagstaff was a small logging and farming community in Somerset County, Maine along the Dead River valley that existed from the colonial era until the 1950s, when Central Maine Power Company built Long Falls Dam and flooded the valley to create Flagstaff Lake. The town had a post office, church, and schoolhouse, and was notable as the last stopping point for Benedict Arnold's expedition to Quebec in 1775. Residents were bought out and displaced in the late 1940s before the dam began filling in 1950, and the structures were demolished or left to flood. During late summer and fall drawdowns, old foundations and cellar holes emerge along the lake's shoreline — a productive area for detecting with proper access permissions."
   },
   {
