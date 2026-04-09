@@ -116,8 +116,9 @@
     "longitude": -115.9531,
     "description": "Elkhorn, Montana was a silver and gold mining camp that flourished in the 1880s and early 1890s, with its main street supporting saloons, dance halls, and several sporting houses that catered to miners working the Elkhorn Mine and surrounding properties. The camp's isolation in the Boulder Valley mountains meant that entertainment options were limited to whatever the local vice district could offer, creating a brisk trade for the women who worked there. Today Elkhorn is a state park with two original Fraternal Hall buildings preserved, and many cabin foundation outlines visible across the grassy hillside townsite. The areas adjacent to the state park boundary on surrounding BLM and forest land are accessible for detecting, with good potential for period coins, jewelry, and mining camp hardware.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.72,
+    "tier": 1,
+    "detecting_weight": 63
   },
   {
     "name": "Kendall Ghost Town",
@@ -126,8 +127,9 @@
     "longitude": -109.6833,
     "description": "Kendall, Montana was a gold mining camp that peaked around 1902\u20131907 in the Judith Mountains of central Montana, with a working-class population of several hundred miners who supported a small but active vice district of cribs and boarding house operations on the edge of the townsite. The mines used a cyanide-leaching process on low-grade ore, and the boom was short-lived, with the camp largely abandoned by 1910 and the buildings salvaged or collapsed. Foundation outlines and scattered debris are all that remain on the open rangeland above Lewistown, accessible via county roads through active ranch country. Detecting on accessible portions of the site has produced gold-rush-era coins, personal items, and mining hardware from this brief but productive camp.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.67,
+    "tier": 1,
+    "detecting_weight": 59
   },
   {
     "name": "Marysville Red-Light Area",
@@ -136,8 +138,9 @@
     "longitude": -112.3333,
     "description": "Marysville, Montana was one of Montana's richest gold mining camps, with the Drumlummon Mine producing over $16 million by 1900, and the town supported a lively red-light district behind the main commercial street where women in cribs and small frame houses served the large mining workforce. The vice district occupied a discreet side street in keeping with the town's semi-respectable status as a company mining town, but business was brisk throughout the 1880s and 1890s peak years. Several original buildings from the mining era survive in Marysville, which still has a handful of year-round residents, and the surrounding Helena National Forest land is accessible. Detectorists working the forest edges and old residential lots near the former vice district have found coins, buttons, and personal ornaments from the boom years.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.77,
+    "tier": 1,
+    "detecting_weight": 69
   },
   {
     "name": "South Pass City Brothels",
@@ -146,8 +149,9 @@
     "longitude": -108.8031,
     "description": "South Pass City, Wyoming was a gold rush camp that boomed in 1867\u20131872 along the historic Oregon Trail crossing, where thousands of miners working the placer and lode deposits supported several boarding houses and sporting establishments that functioned as de facto brothels. The camp is historically notable as the place where Wyoming passed the first women's suffrage law in the United States in 1869, though the women in the red-light district enjoyed different rights than those voting. Today South Pass City is a Wyoming State Historic Site with 26 original structures preserved, and the surrounding Wind River Mountains public land is accessible for recreation including metal detecting. Period finds from the area include gold-rush coins, mining tokens, and everyday personal items from the brief but historically significant boom.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.82,
+    "tier": 1,
+    "detecting_weight": 51
   },
   {
     "name": "Old Homestead Parlor House",
@@ -156,8 +160,9 @@
     "longitude": -105.178,
     "description": "The Old Homestead at 353 Myers Avenue in Cripple Creek, Colorado was the most famous parlor house in the Colorado gold fields, operated by the notorious Pearl DeVere during the 1890s boom when the Cripple Creek district was producing $18 million in gold annually. The elegant Victorian house offered high-class entertainment to wealthy mine owners and investors, while cheaper cribs lined Myers Avenue serving the ordinary miner population below. The building still stands and operates today as a museum open to the public, preserving the lavish interior d\u00e9cor of Colorado's most celebrated brothel. The surrounding Cripple Creek area including BLM mining claims adjacent to town offers detecting opportunities, with period gold coins, tokens, and jewelry the prime targets.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.93,
+    "tier": 1,
+    "detecting_weight": 46
   },
   {
     "name": "Leadville Vice District",
@@ -166,8 +171,9 @@
     "longitude": -106.2925,
     "description": "Leadville, Colorado was the second-largest city in the state during the 1880s silver boom, with State Street serving as the main vice corridor where dozens of dance halls, saloons, and brothels operated openly to serve the enormous mining and smelting workforce. Famous names like Molly Brown and Doc Holliday passed through Leadville's wild streets, and the cribs and parlor houses ran continuously through the decade of peak production. The historic mining town sits at 10,152 feet elevation and retains much of its Victorian commercial architecture, with the surrounding San Isabel National Forest and BLM mining claims accessible for outdoor activities. Detectorists working the old residential and vice district outskirts have recovered Victorian coins, trade tokens, jewelry, and perfume bottles from the silver boom era.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.84,
+    "tier": 1,
+    "detecting_weight": 65
   },
   {
     "name": "Central City Necklace Row",
@@ -176,8 +182,9 @@
     "longitude": -105.5142,
     "description": "Central City, Colorado was the center of Colorado's first major gold rush in 1859, and its red-light district along Eureka Street and adjacent alleys\u2014known locally as Necklace Row for the string of crib houses\u2014served the massive population of placer and hard-rock miners working Clear Creek County throughout the 1860s\u20131880s. The cribs were simple frame structures where women charged modest rates, and the district operated alongside Chinese laundries and gambling dens in the ethnic diversity of the boom camp. Central City is a National Historic Landmark today with a casino district established in the 1990s that altered some of the historic fabric, but the hillside above town retains original foundation remnants and mine tailings. Detecting on accessible BLM mining claims above town has produced period coins, tokens, and personal items from the gold rush era.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.81,
+    "tier": 1,
+    "detecting_weight": 56
   },
   {
     "name": "Cerro Gordo Brothel Row",
@@ -186,8 +193,9 @@
     "longitude": -117.7833,
     "description": "Cerro Gordo, California was the richest silver mine in California history during the 1870s, producing bullion that funded the early growth of Los Angeles, and its high-altitude camp above Owens Valley supported a vice district of cribs and boarding houses serving the several hundred miners and teamsters who worked the remote site. The steep mountain location above 9,000 feet meant the camp was isolated for much of the year, and the women who worked the cribs endured harsh conditions far from any city. The private townsite was recently purchased by preservation-minded owners who have undertaken restoration and allow occasional access through guided tours and detection events. The extremely remote and minimally disturbed site represents exceptional potential for period finds including silver coins, ore sample tokens, and personal items from the 1870s boom.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.78,
+    "tier": 1,
+    "detecting_weight": 77
   },
   {
     "name": "White Oaks Hog Ranch",
@@ -196,8 +204,9 @@
     "longitude": -105.8608,
     "description": "White Oaks, New Mexico was a gold mining camp that flourished in the 1880s in the Jicarilla Mountains of Lincoln County, the same county made famous by Billy the Kid, and a rough hog ranch\u2014a frontier term for a combined brothel, saloon, and dance hall\u2014operated on the edge of town to serve the mining and cattle populations. The hog ranch catered to cowboys from surrounding ranches as well as miners, and cash flow through the establishment was substantial during the 1880s\u20131890s peak years. White Oaks is now a tiny semi-ghost town with a few original adobe and stone structures still standing, and the surrounding Lincoln National Forest and BLM land is accessible. Detecting around the former vice district outskirts has produced territorial-era coins, Mexican copper coinage, and personal items reflecting the mixed Anglo-Hispanic population.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.7,
+    "tier": 1,
+    "detecting_weight": 72
   },
   {
     "name": "Mogollon Crib Row",
@@ -206,8 +215,9 @@
     "longitude": -108.7722,
     "description": "Mogollon, New Mexico was a remote silver and gold mining camp in the Mogollon Mountains that boomed in the 1890s and again in the 1910s\u20131920s, with its tight canyon setting along Silver Creek hosting a small but busy crib row that served miners from the Little Fannie and Cooney mines. The extreme isolation of the camp, accessible only by a single steep mountain road, meant the women who worked there had limited options and minimal oversight, and the vice district operated continuously through multiple boom cycles. Several original false-front commercial buildings survive in the narrow canyon, and the surrounding Gila National Forest land is accessible for outdoor recreation. The remote location and minimal modern traffic make Mogollon one of the more promising detecting sites in New Mexico, with period silver coins and personal items the prime targets.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.75,
+    "tier": 1,
+    "detecting_weight": 75
   },
   {
     "name": "Shakespeare Brothel Area",
