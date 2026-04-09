@@ -887,7 +887,8 @@
     "description": "In March 1847, General Winfield Scott landed 12,000 American troops south of Veracruz in the largest amphibious operation in American history up to that point, then besieged the fortified city and castle of San Juan de Ulúa, pounding them into surrender in 18 days with a massive artillery bombardment. The fall of Veracruz opened Scott's Aztec Club march toward Mexico City along Cortés's ancient route, and the campaign that followed proved a masterclass in strategic maneuver. The port city of Veracruz on Mexico's Gulf coast is a major modern city, with the historic fortress of San Juan de Ulúa preserved on its island in the harbor as a museum. The harbor area and surrounding Veracruz state have preserved period artifacts in archaeological contexts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Cerro Gordo",
@@ -897,7 +898,8 @@
     "description": "On April 17-18, 1847, General Scott's army flanked the seemingly impregnable Mexican position at Cerro Gordo pass in the Sierra Madres, with Captain Robert E. Lee discovering a goat path through the mountains that allowed American forces to appear in the Mexican rear, routing Santa Anna's army and capturing 3,000 prisoners and his coach (and reportedly his cork leg). The battle was a textbook example of operational maneuver that Scott's subordinates — including Lee, Grant, and McClellan — would remember when they commanded their own armies in the Civil War. The pass at Cerro Gordo in Veracruz state, Mexico, is marked by a monument and the terrain is largely open hillside. Period Mexican and American military artifacts have been found in the area during agricultural and construction work.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Contreras",
@@ -907,7 +909,8 @@
     "description": "On August 19-20, 1847, during Scott's final approach to Mexico City, American forces fought a two-stage battle at Contreras (Padierna), where the first day saw General Gideon Pillow's troops pinned by Mexican artillery, and the second day saw a brilliant 500-man flanking column under Brigadier General Persifor Smith execute a lightning 17-minute attack at dawn that routed the Mexican position. The victory at Contreras opened the road to Churubusco and ultimately Mexico City. The battle site is now within the southern suburban sprawl of Mexico City, the terrain largely buried under modern development. This campaign produced a generation of officers who would command the armies of both sides in the Civil War.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 34
   },
   {
     "name": "Battle of Churubusco",
@@ -917,7 +920,8 @@
     "description": "On August 20, 1847, immediately following Contreras, Scott's army fought another fierce engagement at the fortified convent of San Pablo Churubusco south of Mexico City, where the Mexican garrison including the San Patricio Battalion — Irish-American deserters fighting for Mexico — made a desperate defense before being overwhelmed. The San Patricio prisoners taken at Churubusco were later hanged for desertion in one of the most controversial episodes of the war. The convent church at Churubusco is now within the Churubusco neighborhood of Mexico City, preserved as the Museo Nacional de las Intervenciones, a national museum on the site of the battle. The broader Mexico City region was the climax of the 1847 campaign, and archaeological work in the urban core has recovered period military artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 33
   },
   {
     "name": "Battle of Molino del Rey",
@@ -927,7 +931,8 @@
     "description": "On September 8, 1847, General Worth's division attacked the Molino del Rey foundry complex outside Chapultepec Castle on the outskirts of Mexico City, believing the Mexicans were casting cannon there — the assault proved costly and the foundry less important than hoped, with American casualties of nearly 800 men in an attack considered by many historians to be unnecessary. The battle remains one of the bloodiest engagements of the Mexican-American War relative to the numbers engaged, with over 25% American casualties. The site of Molino del Rey is now within the Bosque de Chapultepec (Chapultepec Forest), Mexico City's great urban park. Archaeological investigation in the park has recovered period artifacts, and the castle of Chapultepec overlooking the site is a national museum.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Chapultepec",
@@ -937,7 +942,8 @@
     "description": "On September 13, 1847, American forces stormed the Military Academy atop Chapultepec Hill — the 'Halls of Montezuma' celebrated in the Marine Corps Hymn — in the penultimate battle before the fall of Mexico City, with American troops scaling the 200-foot hill under fire and fighting hand-to-hand with the Mexican cadets defending the castle. The defense by the young Niños Héroes cadets who refused to surrender became one of the most honored sacrifices in Mexican national memory. Chapultepec Castle atop the hill in Mexico City's Bosque de Chapultepec is today the Museo Nacional de Historia and a UNESCO World Heritage site. The hill and surroundings saw the war's heaviest fighting in its final days, and period artifacts have been recovered during renovation and archaeological work.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of El Brazito",
@@ -947,7 +953,8 @@
     "description": "On December 25, 1846, Colonel Alexander Doniphan's Missouri Volunteers defeated a Mexican force at El Brazito on the Rio Grande in southern New Mexico, in a Christmas Day battle that opened the road to El Paso del Norte (present-day Juárez/El Paso). Doniphan's remarkable Expedition — a 3,600-mile march from Fort Leavenworth to Mexico City — is one of the longest military marches in American history. The battle site is near present-day La Mesa, NM, largely within the agricultural Rio Grande valley that is now part of the greater El Paso metropolitan area. The broad Mesilla Valley saw extensive military traffic from the 1846-48 war and the later Civil War, and private land searches have yielded period military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Sacramento",
@@ -957,7 +964,8 @@
     "description": "On February 28, 1847, Doniphan's 1,000-man Missouri volunteer force defeated a 4,000-man Mexican army strongly positioned behind artillery at the Sacramento River crossing north of Chihuahua City, in a brilliantly improvised flanking attack that demonstrated the fighting qualities of American frontier volunteers. The victory opened Chihuahua to American occupation and was one of the most complete tactical successes of the war. The battle site on the Sacramento River valley north of Chihuahua City, Mexico, is marked by a monument and largely consists of open agricultural land. Period military artifacts have been found in the area during farming and construction activities.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of San Pasqual",
@@ -967,7 +975,8 @@
     "description": "On December 6, 1846, Brigadier General Stephen Kearny's exhausted dragoons clashed with California Lancers under Andrés Pico at the Indian village of San Pasqual in the hills east of present-day San Diego, CA, in the bloodiest battle of the California campaign — the lancers' long lances proved deadly against the Americans' damp firearms, killing 21 dragoons. Kearny's surviving force was surrounded for two days before Kit Carson, Edward Fitzgerald Beale, and an Indian guide slipped through enemy lines to bring relief from San Diego. San Pasqual Battlefield State Historic Park near Escondido, CA, preserves a portion of the valley terrain with interpretive trails and a monument. The park prohibits metal detecting, but the surrounding San Pasqual Valley private farmland and equestrian properties have occasionally yielded period artifacts from the 1846 battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of La Mesa",
@@ -977,7 +986,8 @@
     "description": "On January 9, 1847, American forces under Commodore Robert Stockton and General Stephen Kearny defeated the last organized Californio resistance at La Mesa near the San Gabriel River crossing (modern Montebello, CA), one day after a similar engagement at San Gabriel. The twin victories effectively ended the California campaign and led to the capitulation of Los Angeles. The battle site is now within the dense suburban landscape of the eastern San Gabriel Valley in Los Angeles County, with no surviving battlefield landscape. The Rancho era terrain of the Los Angeles basin saw extensive military activity in 1846-47, and period artifacts have occasionally been found during construction projects in the area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 33
   },
   {
     "name": "Battle of Cerro Gordo Pass",
