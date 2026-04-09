@@ -357,6 +357,9 @@ class UserProfilePublic(BaseModel):
     location: Optional[str] = None
     privacy: str = "public"
     created_at: Optional[Any] = None
+    followers_count: int = 0
+    following_count: int = 0
+    is_following: bool = False
 
 
 class UserProfileLimited(BaseModel):
@@ -488,4 +491,90 @@ class PinSubmissionListResponse(BaseModel):
     """Paginated list of pin submissions."""
 
     submissions: List[PinSubmissionResponse]
+    total: int
+
+
+# ---------------------------------------------------------------------------
+# Post / Feed schemas
+# ---------------------------------------------------------------------------
+
+REACTION_TYPES = {"gold", "bullseye", "shovel", "fire"}
+
+
+class PostCreate(BaseModel):
+    """Request payload for creating a new feed post."""
+
+    content: str = Field(..., min_length=1, max_length=1000)
+    privacy: Optional[Literal["public", "followers", "private"]] = "public"
+
+
+class PostResponse(BaseModel):
+    """Full post record with aggregated reaction counts and author info."""
+
+    id: UUID
+    author_id: UUID
+    author_username: Optional[str] = None
+    author_display_name: Optional[str] = None
+    content: str
+    privacy: str
+    created_at: Optional[Any] = None
+    comment_count: int = 0
+    reactions: Dict[str, int] = Field(default_factory=lambda: {"gold": 0, "bullseye": 0, "shovel": 0, "fire": 0})
+    my_reaction: Optional[str] = None
+
+
+class PostListResponse(BaseModel):
+    """Paginated list of posts."""
+
+    posts: List[PostResponse]
+    total: int
+
+
+class CommentCreate(BaseModel):
+    """Request payload for creating a comment on a post."""
+
+    content: str = Field(..., min_length=1, max_length=500)
+
+
+class CommentResponse(BaseModel):
+    """Comment record with author info."""
+
+    id: UUID
+    post_id: UUID
+    author_id: UUID
+    author_username: Optional[str] = None
+    author_display_name: Optional[str] = None
+    content: str
+    created_at: Optional[Any] = None
+
+
+class CommentListResponse(BaseModel):
+    """Paginated list of comments."""
+
+    comments: List[CommentResponse]
+    total: int
+
+
+class ReactRequest(BaseModel):
+    """Request payload for reacting to a post."""
+
+    reaction_type: Literal["gold", "bullseye", "shovel", "fire"]
+
+
+# ---------------------------------------------------------------------------
+# Follow schemas
+# ---------------------------------------------------------------------------
+
+class FollowInfo(BaseModel):
+    """Minimal user info returned in follower/following lists."""
+
+    user_id: UUID
+    username: Optional[str] = None
+    display_name: Optional[str] = None
+
+
+class FollowListResponse(BaseModel):
+    """Paginated list of followers or following users."""
+
+    users: List[FollowInfo]
     total: int

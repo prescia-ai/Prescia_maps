@@ -175,3 +175,56 @@ export interface PinSubmission {
   reviewed_at: string | null;
   submitted_at: string;
 }
+
+// ── Social Feed ───────────────────────────────────────────────────────────────
+
+export type ReactionType = 'gold' | 'bullseye' | 'shovel' | 'fire';
+
+export interface PostReactions {
+  gold: number;
+  bullseye: number;
+  shovel: number;
+  fire: number;
+}
+
+export interface Post {
+  id: string;
+  author_id: string;
+  author_username: string | null;
+  author_display_name: string | null;
+  content: string;
+  privacy: 'public' | 'followers' | 'private';
+  created_at: string;
+  comment_count: number;
+  reactions: PostReactions;
+  my_reaction: ReactionType | null;
+}
+
+export interface Comment {
+  id: string;
+  post_id: string;
+  author_id: string;
+  author_username: string | null;
+  author_display_name: string | null;
+  content: string;
+  created_at: string;
+}
+
+export interface FollowInfo {
+  user_id: string;
+  username: string | null;
+  display_name: string | null;
+}
+
+export interface PublicProfile {
+  id: string;
+  username: string | null;
+  display_name: string | null;
+  bio: string | null;
+  location: string | null;
+  privacy: string;
+  created_at: string | null;
+  followers_count: number;
+  following_count: number;
+  is_following: boolean;
+}

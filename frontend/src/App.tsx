@@ -9,6 +9,7 @@ import ProfileSettingsPage from './pages/ProfileSettingsPage';
 import SubmitPinPage from './pages/SubmitPinPage';
 import AdminSubmissionsPage from './pages/AdminSubmissionsPage';
 import AdminSubmissionReviewPage from './pages/AdminSubmissionReviewPage';
+import FeedPage from './pages/FeedPage';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/setup" element={<ProfileSetupPage />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/feed" element={<FeedPage />} />
         {/* /profile/settings must come before /profile/:username so "settings" isn't treated as a username */}
         <Route path="/profile/settings" element={<ProfileSettingsPage />} />
         <Route path="/profile/:username" element={<ProfilePage />} />
