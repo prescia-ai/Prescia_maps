@@ -8420,7 +8420,8 @@
     "latitude": 47.532554,
     "longitude": -122.127692,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ford Slope Mine in King County, Washington near Newcastle was a coal mine that exploited the rich coal seams of the Issaquah-Black Diamond coalfield in the foothills of the Cascade Range, part of the extensive King County coal industry that supplied fuel for Pacific Coast steamships, railroads, and urban heating systems from the 1860s through the mid-twentieth century. The Newcastle and Black Diamond coal mines powered Seattle's early growth and competed successfully against Vancouver Island coal in the Pacific Coast fuel market, employing thousands of Welsh, Italian, Finnish, and Asian miners in the Cascade foothills east of Lake Washington. The Ford Slope Mine site near Newcastle is now surrounded by suburban development in the rapidly growing eastern King County corridor, and the former mining landscape has been largely transformed by residential construction, though some surface remnants persist in wooded areas. King County's coal mine heritage is interpreted at several county parks in the Newcastle area."
   },
   {
     "name": "Diamond Joe Mine",
@@ -8428,7 +8429,8 @@
     "latitude": 38.448814,
     "longitude": -90.065135,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Diamond Joe Mine in Jefferson County, Missouri near Festus was a lead mining operation in the Missouri Ozarks portion of the Old Lead Belt, one of the world's richest lead deposits, which made Missouri the nation's leading lead producer for most of the twentieth century and the southeastern Missouri Ozarks one of the most intensively mined landscapes in the world. The Old Lead Belt communities of Jefferson, Ste. Genevieve, and St. Francois Counties grew up around lead mining operations that began in French colonial times and reached their peak in the twentieth century before the mines exhausted their ore bodies and closed in the 1970s. The Diamond Joe Mine site is likely a smaller independent operation in Jefferson County's southern fringe, where the Old Lead Belt geology extends north from its main productive areas. Former lead mining sites in the Missouri Ozarks may be Superfund-listed due to lead contamination; access and detecting restrictions vary by site."
   },
   {
     "name": "Davis Pyrite Mine",
@@ -8436,7 +8438,8 @@
     "latitude": 42.697793,
     "longitude": -72.871522,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Davis Pyrite Mine in Windsor County, Vermont near Springfield was an industrial mineral operation extracting iron pyrite — used as a source of sulfuric acid for fertilizer production — from the crystalline schists and greenstones of the Vermont Valley, part of the broader Vermont mining history that included copper, marble, granite, asbestos, and talc production in addition to industrial mineral extraction. Vermont's mining history is less well known than its western counterparts but represents a significant chapter in New England's industrial past, with dozens of operations across the state extracting minerals for the chemical and construction industries. The pyrite mine site in the Connecticut River valley hills of southern Vermont is on largely private or state forest land, and the mine dumps and adit remnants in the Vermont forest have been gradually reclaimed by the recovering hardwood forest. Vermont mine site archaeology in forested terrain can yield period mining implements and early industrial hardware from the nineteenth and early twentieth century operations."
   },
   {
     "name": "Horse Creek Mine",
@@ -8444,7 +8447,8 @@
     "latitude": 41.47067,
     "longitude": -105.25482,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Horse Creek Mine in Albany County, Wyoming in the Medicine Bow Mountains was a coal or gold mining operation in one of the many mineral districts of Wyoming's southern mountain ranges, where the Union Pacific Railroad's crossing of the Medicine Bow Range drove intensive prospecting and mining development in the post-Civil War era. Albany County hosted significant coal production along the UP mainline corridor, and gold was discovered in several mountain ranges in the county during the 1870s and 1880s, creating small mining camps that typically had short productive lives before the ore bodies were exhausted. The Horse Creek drainage in the Snowy Range country of Wyoming is accessible via Forest Service and BLM roads from Laramie or Saratoga, and the high-altitude mining landscape retains excellent preservation due to the cold, dry climate. Wyoming mountain mining sites are productive for hand-tool mining implements, blasting hardware, and the personal artifacts of miners working in remote conditions."
   },
   {
     "name": "Arnold Mine Ruins",
@@ -8452,7 +8456,8 @@
     "latitude": 47.416784,
     "longitude": -88.229885,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arnold Mine Ruins in Keweenaw County, Michigan on the tip of the Keweenaw Peninsula are another remnant of the Lake Superior Copper District's remarkable native copper mining heritage, where dozens of mines operated from the 1840s through the early twentieth century extracting pure unalloyed copper from the ancient basalt flows and conglomerates of the Portage Lake Volcanics. The Arnold Mine was one of the smaller operations in the Keweenaw district, representing the speculative copper mining that accompanied the major producing mines throughout the peninsula. The Keweenaw National Historical Park encompasses much of the peninsula and protects the industrial landscape of the copper country, including numerous mine ruins, stamp mill sites, and company town remnants. Keweenaw copper mining ruins are among the most historically significant and visually dramatic industrial archaeology sites in the Great Lakes region, and the national park setting provides excellent public access to the heritage landscape."
   },
   {
     "name": "Arcturus Mine",
@@ -8460,7 +8465,8 @@
     "latitude": 38.242213,
     "longitude": -108.797877,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arcturus Mine in Montrose County, Colorado near Naturita in the Paradox Valley was a uranium mining operation exploiting the carnotite ore deposits of the Colorado Plateau, which made western Colorado and southeastern Utah the primary domestic source of uranium during the Cold War atomic energy and weapons program of the 1940s through the 1960s. The Paradox Valley and surrounding mesa country were intensively prospected for uranium after WWII when the Atomic Energy Commission offered guaranteed prices for ore, sparking a uranium rush that brought thousands of prospectors into the canyon country of the Colorado Plateau. Arcturus and dozens of similar operations worked small to medium-sized carnotite ore bodies in the Entrada Sandstone and Morrison Formation formations before uranium prices collapsed in the 1980s and the mines closed. Former uranium mine sites on the Colorado Plateau require caution due to residual radioactivity from uranium and radium daughter products in the mine waste; BLM and EPA guidance on site-specific conditions should be consulted before extended exploration."
   },
   {
     "name": "Arcturus Mine",
@@ -8468,7 +8474,8 @@
     "latitude": 40.706568,
     "longitude": -119.229905,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arcturus Mine in Humboldt County, Nevada near Winnemucca (sharing a name with the Colorado mine) was a gold or silver mining operation in the Humboldt Range of north-central Nevada, part of the extensive Nevada mining landscape where hundreds of small and medium-sized operations worked the mineral-bearing volcanic rocks of the Basin and Range province from the 1860s onward. The Humboldt County mining districts south of Winnemucca produced gold, silver, copper, and antimony from a complex geology of volcanic intrusions, contact metamorphic zones, and hydrothermal vein systems. The mine site is on BLM land in the Humboldt Range south of Winnemucca, accessible via dirt roads in a remote high-desert mountain environment typical of northern Nevada. The site may retain surface evidence of mining including prospects, adits, mine dumps, and stone building remnants from the camp that served the operation."
   },
   {
     "name": "Grand Gulch Mine",
@@ -8476,7 +8483,8 @@
     "latitude": 36.326095,
     "longitude": -113.791619,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Grand Gulch Mine in Mohave County, Arizona near Hackberry was a copper mining operation on the western slope of the Hualapai Mountains in northwestern Arizona, part of the dispersed copper mining activity that accompanied the Southern Pacific Railroad's construction through the region in the early 1880s and the subsequent settlement of the Arizona Strip country. The Hualapai Mountains copper mines produced modest amounts of ore for markets in California and Prescott before the lower-grade deposits became uneconomical to process without better technology or higher copper prices. The Grand Gulch Mine is on BLM land in the remote northwestern Arizona desert, accessible via dirt roads from Route 66 or Hackberry, in an area of spectacular Sonoran Desert mountain scenery. The mine dumps, shaft collars, and building remnants of this remote operation provide a tangible connection to the era of small-scale Arizona prospecting."
   },
   {
     "name": "Edison Mine",
@@ -8484,7 +8492,8 @@
     "latitude": 41.063568,
     "longitude": -74.570789,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Edison Mine in Passaic County, New Jersey near Ogdensburg was one of the experimental iron ore mining and concentration operations that Thomas Edison developed in the 1880s-1890s in the New Jersey Highlands, where he invested years of effort and millions of dollars attempting to make low-grade magnetite ore economically viable through magnetic ore separation technology. Edison's Ogdensburg operation was one of his few significant commercial failures — the project consumed $2 million over nearly a decade before the opening of the Mesabi Range in Minnesota, with its astronomically higher-grade and easier-to-mine iron ore, made Edison's New Jersey operations permanently uneconomical. The mine site in the New Jersey Highlands retains significant remains of the massive ore concentration plant, magnetic separators, and related infrastructure, and is part of the Sterling Hill Mining Museum complex near Ogdensburg. The Sterling Hill complex is a public mining museum with accessible underground mine tours and surface artifacts."
   },
   {
     "name": "Edison Mine",
@@ -8492,7 +8501,8 @@
     "latitude": 41.292885,
     "longitude": -73.991287,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Edison Mine (second site) in Bergen County, New Jersey near Suffern represents another of the Edison ore concentration experimental sites in the New Jersey Highlands, where the inventor pursued multiple approaches to solving the low-grade magnetite ore concentration problem that he believed would revolutionize American iron and steel production by opening up the vast low-grade iron ore deposits of the northeastern United States. Edison's magnetite concentration experiments produced genuinely innovative separation technology that found later application in other industries, even though the iron ore venture itself failed commercially. The Bergen County site near the Ramapo Mountains is in a region of state forest and suburban development where the former mining infrastructure has been largely reclaimed by the recovering forest. The New Jersey Highlands mining landscape from this era is best explored through the interpretation provided at the Sterling Hill Mining Museum and related sites."
   },
   {
     "name": "Doodletown Mine",
