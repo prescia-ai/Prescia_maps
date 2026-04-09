@@ -1987,7 +1987,8 @@
     "description": "On August 31 - September 1, 1864, Sherman's forces cut the last remaining Confederate rail line into Atlanta at Jonesborough, GA, forcing Hood to evacuate the city rather than be cut off — Atlanta fell to Sherman on September 2, 1864, in one of the war's most consequential moments, helping ensure Lincoln's reelection. The Battle of Jonesborough was the final engagement of the four-month Atlanta Campaign. The Jonesborough battlefield in Clayton County, GA, is marked by the Road to Tara Museum in Historic Jonesborough and various Civil War Trails markers around the town. Surrounding Clayton County private farmland has produced Civil War Minié balls and military hardware from the August 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Mobile Bay",
@@ -1997,7 +1998,8 @@
     "description": "On August 5, 1864, Admiral David Farragut led his fleet through the heavily mined (torpedoed) entrance to Mobile Bay, AL, uttering (or improvising the reported words) 'Damn the torpedoes, full speed ahead!' when the ironclad Tecumseh struck a mine and sank. The Union fleet destroyed the Confederate defending ships and captured Fort Morgan after a three-week siege, closing Mobile to blockade runners. Fort Morgan State Historic Site at the tip of the Baldwin County peninsula, AL, preserves the original masonry fortification in excellent condition, with the Civil War earthworks overlaying the original masonry. Metal detecting is not permitted at the state historic site, but the Gulf of Mexico off Fort Morgan is a productive dive site with wreck artifacts, and surrounding Baldwin County private land has produced Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Second Deep Bottom",
@@ -2007,7 +2009,8 @@
     "description": "On August 14-20, 1864, Grant launched a combined infantry and cavalry operation at Deep Bottom on the James River north of Richmond to draw Confederate reserves away from the Petersburg front — the action was part of Grant's strategy of keeping Lee's entire line under constant pressure. Despite capturing some ground initially, the operation failed to penetrate the Richmond defenses. The Deep Bottom site in Henrico County, VA, is preserved as part of Richmond National Battlefield Park's Deep Bottom unit. Metal detecting is prohibited in the national park, but surrounding private land in the James River corridor has produced Civil War Minié balls and military hardware from the numerous 1864 operations in this area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Globe Tavern",
@@ -2017,7 +2020,8 @@
     "description": "On August 18-21, 1864, Union forces under General Gouverneur Warren seized the Weldon Railroad at Globe Tavern (Yellow House Tavern) south of Petersburg, VA, cutting one of the last railroads supplying the Confederate city — Confederate counterattacks briefly drove the Federals back but ultimately failed to dislodge them from the critical rail line. The Globe Tavern action was one of several engagements in the Siege of Petersburg that progressively strangled Confederate supply lines. The battlefield at Globe Tavern in Dinwiddie County, VA, is partially preserved within the Petersburg National Battlefield, with other portions on private farmland. Metal detecting is prohibited in the national park units, but the surrounding private land in Dinwiddie County has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Reams Station",
@@ -2027,7 +2031,8 @@
     "description": "On August 25, 1864, Confederate forces under A.P. Hill attacked Union troops at Reams Station on the Weldon Railroad in Dinwiddie County, VA, routing two Union Second Corps divisions whose veterans were exhausted and demoralized after months of hard fighting, capturing 2,700 men and 9 artillery pieces. The defeat was a rare setback for Grant's operations and demonstrated the resilience of the Confederate army even at this late stage of the war. The Reams Station battlefield in Dinwiddie County, VA, is partially preserved with Civil War Trails markers; the terrain is largely private farmland and second-growth forest. Surrounding private land has produced Civil War Minié balls, artillery fragments, and military hardware from the intense August 1864 operations along the Weldon Railroad.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Berryville",
