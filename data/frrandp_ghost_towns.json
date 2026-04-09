@@ -4640,7 +4640,8 @@
     "latitude": 41.677222,
     "longitude": -76.985833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fall Brook was a coal mining and railroad community in Tioga County, Pennsylvania developed in the 1850s-1870s along a productive bituminous coal seam in the rugged Appalachian uplands of north-central Pennsylvania. The Fall Brook Coal Company built the town from scratch, including worker housing, company store, and a railroad branch line to connect the mines to the main rail network. As the accessible coal was worked out and the company reorganized in the early 1900s, the town was gradually abandoned and eventually dismantled. Tioga County's former coal country holds detecting potential on private land near former company town sites, where trade tokens, mining hardware, and Victorian domestic artifacts can be found."
   },
   {
     "name": "Ingleby, PA",
@@ -4648,7 +4649,8 @@
     "latitude": 40.844444,
     "longitude": -77.435,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ingleby was a small agricultural and service community in Centre County, Pennsylvania located in the productive limestone valleys of central Pennsylvania, serving the surrounding farming communities through the 19th century with a local mill, general store, and post office. Centre County's Nittany and Penns Valleys were settled densely by Pennsylvania German farming families, and small crossroads communities like Ingleby were the social and commercial hubs of rural life before the railroads concentrated commerce in larger towns. Today Ingleby is largely absorbed into the surrounding farmland. The limestone valley soils of Centre County, farmed continuously since the colonial era, hold rich deposits of period artifacts for detectorists working with landowner permission."
   },
   {
     "name": "Scotia, PA",
@@ -4656,7 +4658,8 @@
     "latitude": 40.799722,
     "longitude": -77.946111,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Scotia was an iron ore mining and processing community in Centre County, Pennsylvania established by industrialists in the early 1800s to exploit the rich iron ore deposits in the Seven Mountains region of central Pennsylvania. The Scotia Iron Furnace produced pig iron for regional markets through the antebellum period, supporting a community of furnace workers, woodcutters who produced charcoal, and associated tradespeople. When cheaper iron from the Lake Superior region destroyed the economics of Pennsylvania mountain iron production in the 1880s, Scotia was abandoned and the furnace complex fell to ruin. The iron furnace ruins survive as a historic site, and while the immediate monument area is protected, surrounding private land offers detecting opportunities for finding iron-era trade tokens and period artifacts."
   },
   {
     "name": "Peale, PA",
@@ -4664,7 +4667,8 @@
     "latitude": 40.997778,
     "longitude": -78.081389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Peale was a coal mining company town in Centre County, Pennsylvania established in the 1880s by the Beech Creek Railroad and Coal Company to extract bituminous coal from the mountains of the Moshannon State Forest region. The town was named for the nationally prominent Peale family and at its height had over a thousand residents, a company store, church, school, and housing rows for the mixed immigrant workforce. When the mine production declined in the early 20th century, the company systematically dismantled the town, selling or moving the buildings. Today Peale is a fascinating ghost town site with foundations, piles of slate, and the old cemetery visible in the regrown forest of Centre County \u2014 a productive and historically significant detecting location on private land."
   },
   {
     "name": "Sarahville de Viesca, TX",
@@ -4672,7 +4676,8 @@
     "latitude": 31.25,
     "longitude": -95.920833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sarahville de Viesca was an early Texas colonial-era settlement in Houston County established during the empresario land grant period of the 1820s-1830s when Mexico was actively colonizing Texas with Anglo-American settlers. The town was part of the empresario grants and briefly served as a local administrative center for the surrounding agricultural colony, but the Texas Revolution, boundary uncertainties, and the shift of regional commerce to other centers caused its rapid decline. Few if any traces survive above ground in the East Texas piney woods landscape. The region's deep history of early Anglo-American and Spanish colonial settlement makes it productive territory for finding Spanish colonial coins, Mexican-era artifacts, and early Republic of Texas-period items."
   },
   {
     "name": "Pisek, TX",
@@ -4680,7 +4685,8 @@
     "latitude": 29.916667,
     "longitude": -96.583056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pisek was a small Texas farming community in Fayette County settled by Czech immigrants in the late 19th century who named their new home after the famous city in Bohemia, seeking to recreate familiar community structures on the Texas blackland prairie. The town had a Czech Catholic church, school, and community hall during its active period but gradually lost population as the rural economy consolidated through the mid-20th century and young people moved to larger cities. A Czech Catholic church and cemetery remain as the primary surviving landmarks of the community. The Fayette County Czech settlement corridor is productive detecting territory, with period Czech-American domestic artifacts, medals, and coins accessible on private land."
   },
   {
     "name": "Oak Forest, TX",
@@ -4688,7 +4694,8 @@
     "latitude": 29.498667,
     "longitude": -97.584861,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Oak Forest was a small farming community in Guadalupe County, Texas situated in the rolling post oak and blackland prairie country southeast of San Antonio, settled primarily by German and Anglo-American farming families in the late 19th century. The community had a school and possibly a small church to serve surrounding farm families, but was too close to Seguin and other growing towns to develop significant commerce. The former community area is now absorbed into the surrounding agricultural landscape. The Guadalupe County farmland, with its dense history of German, Czech, and Anglo-American settlement dating to the Republic of Texas era, holds productive detecting potential near former homestead and school sites."
   },
   {
     "name": "Albuquerque, TX",
@@ -4696,7 +4703,8 @@
     "latitude": 29.348333,
     "longitude": -97.842778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Albuquerque was a small German-settled farming community in Guadalupe County, Texas near the Guadalupe River valley, founded by Alsatian and German colonists in the mid-19th century as part of the Adelsverein colonization scheme that populated much of the Texas Hill Country. The community briefly had a post office and local church before being absorbed into the orbit of Seguin and New Braunfels as the regional economy matured. The Texas Germanic settlement corridor along the Guadalupe River is exceptionally rich in historical artifacts from the mid-19th century colonial period, and detecting on private land near former German homesteads can yield fascinating imported European artifacts alongside early Republic of Texas-period items."
   },
   {
     "name": "Osage, TX",
@@ -4704,7 +4712,8 @@
     "latitude": 29.741111,
     "longitude": -96.715,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Osage was a small rural community in Fayette County, Texas in the post oak belt country between the Colorado and Lavaca Rivers, settled by farming families of German and Central European descent in the late 19th century as the Texas railroad network opened the interior to agricultural development. The community had a local school and possibly a church, serving surrounding farm families before the rural population consolidated toward larger towns like La Grange through the 20th century. Today the Osage area is quiet farming country with few traces of its former community identity. Fayette County's rich Central European immigrant heritage makes its farmland productive territory for finding period domestic artifacts and coins from the late Victorian era."
   },
   {
     "name": "Grassyville, TX",
@@ -4712,7 +4721,8 @@
     "latitude": 30.137222,
     "longitude": -97.079167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Grassyville was a small agricultural settlement in Travis County, Texas in the productive farming country east of Austin, established in the post-Civil War era as Anglo and German farming families spread across the rolling blackland prairie of central Texas. The community served as a local crossroads with a school district and possibly a country store before being absorbed into the expanding suburban fringe of the Austin metropolitan area. Today the former community area is heavily developed, limiting detecting access. The few remaining undeveloped parcels in the historic Grassyville area retain detecting potential for finding late 19th-century farm implements, domestic artifacts, and coins from the settlement period."
   },
   {
     "name": "Stella, Fayette County, TX",
