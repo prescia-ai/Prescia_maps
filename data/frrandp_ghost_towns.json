@@ -7700,7 +7700,8 @@
     "latitude": 41.503427,
     "longitude": -86.646215,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kingsbury Ordnance Plant near La Porte, LaPorte County, Indiana was a major World War II-era TNT and explosive-fill manufacturing facility established in 1941 on approximately 13,000 acres of northwestern Indiana farmland, producing millions of tons of explosive ordnance for Allied forces in both the European and Pacific theaters. At its wartime peak the plant employed over 20,000 workers around the clock in three shifts, operating its own housing, hospitals, and rail systems across the sprawling campus to minimize the explosion risk inherent in large explosive concentrations. The plant underwent cleanup and partial conversion in the postwar era, and portions are now the Kingsbury Fish & Wildlife Area managed by the Indiana DNR, where concrete igloo bunkers and building foundations are visible in the landscape and fishing, hunting, and wildlife observation are permitted. The public access areas of the Fish & Wildlife Area allow exploration of the industrial landscape remnants in a recovered natural setting."
   },
   {
     "name": "Georgia Nuclear Aircraft Laboratory",
@@ -7708,7 +7709,8 @@
     "latitude": 34.381249,
     "longitude": -84.175165,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Georgia Nuclear Aircraft Laboratory near Dawsonville, Dawson County, Georgia was a Cold War-era research facility operated by Lockheed Aircraft Corporation under contract to the U.S. Air Force from 1954 to 1971, tasked with studying the effects of nuclear reactor radiation on aircraft materials and systems as part of the Aircraft Nuclear Propulsion program — the ambitious and ultimately abandoned project to build a nuclear-powered bomber. The facility operated a small open-air nuclear reactor in the Georgia mountains to irradiate aircraft components and study radiation effects on materials, crews, and systems, exposing the surrounding pine forest to decades of low-level contamination. The program was cancelled in 1961 when ballistic missiles made nuclear-powered aircraft strategically unnecessary, but the facility operated in various capacities until 1971, leaving behind a Superfund-listed cleanup site. The site has been partially remediated and is on private land managed by Lockheed Martin; public access is restricted due to residual contamination."
   },
   {
     "name": "Chanute Air Force Base (Decommissioned)",
@@ -7716,7 +7718,8 @@
     "latitude": 40.288906,
     "longitude": -88.143849,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Chanute Air Force Base in Rantoul, Champaign County, Illinois was one of the U.S. Air Force's premier technical training installations, established in 1917 as a World War I aviation training field and operating continuously for nearly 75 years until its closure in 1993 under the Base Realignment and Closure (BRAC) process. At its Cold War peak, Chanute trained tens of thousands of airmen annually in aircraft maintenance, electronics, and technical specialties, housing a vast complex of historic brick barracks, hangars, training facilities, and officer quarters spread across a mile-long campus adjacent to the Rantoul community. Since closure, the base has been converted into the Rantoul National Aviation Center industrial park, with the historic hangars now housing the Octave Chanute Aerospace Museum featuring a remarkable collection of Cold War aircraft. The museum and surrounding campus are publicly accessible, making this an excellent destination for aviation history enthusiasts."
   },
   {
     "name": "Black Hills Ordnance Plant",
@@ -7724,7 +7727,8 @@
     "latitude": 43.178176,
     "longitude": -103.929244,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Black Hills Ordnance Depot near Edgemont, Fall River County, South Dakota was a massive World War II-era munitions storage and distribution facility established in 1942 in the remote limestone canyon country of the southern Black Hills, where the rugged terrain and geological formations provided natural protection for stored explosives. Covering approximately 22,000 acres, the depot stored artillery shells, bombs, and other munitions in hundreds of concrete igloo magazines scattered across the Black Hills landscape before being declared surplus in 1967 and transferred to various federal and private ownership. Large portions of the former depot are now managed as the Buffalo Gap National Grassland, where the concrete igloos and rail network remnants are visible amid restored shortgrass prairie and ponderosa pine forest. The public lands portions are accessible for hiking and wildlife viewing, with the igloo structures being an unusual and striking feature of the grassland landscape."
   },
   {
     "name": "C-44 Nike missile silo",
@@ -7732,7 +7736,8 @@
     "latitude": 41.736346,
     "longitude": -87.622502,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nike Missile Battery C-44 was one of dozens of Nike Ajax and Nike Hercules anti-aircraft missile batteries that surrounded Chicago in a defensive ring during the late 1950s and 1960s, when Soviet bombers were considered the primary nuclear threat to American cities. The C-44 battery, located in the south suburban Chicago area of Cook County, consisted of a launcher area with underground missile storage magazines connected to a radar and fire control area, typically separated by several miles for safety. Chicago's Nike missile ring was one of the most extensive in the nation, with Launch sites (L-batteries) and Administration/Radar areas (A-batteries) spread around the entire metropolitan area. Most Chicago-area Nike sites have been converted to parks, forest preserve land, or redeveloped for other uses; the concrete underground magazines and launch structures are often still visible though the missiles and electronics have long been removed."
   },
   {
     "name": "Nike Missile Base C-47",
@@ -7740,7 +7745,8 @@
     "latitude": 41.53596,
     "longitude": -87.16773,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nike Missile Base C-47 in the south suburban Chicago area was another element of the Chicago Defense Area's Nike missile network, part of the Cold War-era continental air defense system managed jointly by the U.S. Army and the National Guard that deployed hundreds of surface-to-air missile batteries around American cities from the late 1950s through the early 1970s. Like all Chicago-area Nike sites, C-47 featured underground missile storage magazines capable of storing Nike Hercules missiles armed with nuclear warheads, connected by rail conveyors to above-ground launchers. The Nike program was deactivated in the early 1970s as the Soviet intercontinental ballistic missile threat made point defenses obsolete, and the batteries were systematically decommissioned. Former Nike battery sites in the Chicago area are frequently accessible as forest preserve or park land, and the concrete structures remaining make for interesting Cold War archaeology."
   },
   {
     "name": "Fort Seward",
@@ -7748,7 +7754,8 @@
     "latitude": 46.91273,
     "longitude": -98.721813,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Seward in Jamestown, Stutsman County, North Dakota was a U.S. Army frontier post established in 1872 along the James River to protect Northern Pacific Railroad survey and construction crews and provide a military presence in the rapidly opening Dakota Territory during the period of intense Indian-settler conflict on the northern plains. The post was active during several of the critical years of Great Sioux War-era tensions, serving as a supply depot and staging area for military operations across the region before being abandoned in 1877 as the frontier moved west. The original Fort Seward site was incorporated into the expanding city of Jamestown, and a reconstruction of the original blockhouse structure now stands as a historical attraction in the James River Bottoms near the original site. The surrounding area contains archaeological remains of the original fort infrastructure, and period military hardware from frontier posts in the Dakotas is among the most sought-after material for collectors of American West history."
   },
   {
     "name": "Abandoned POW Camp",
@@ -7756,7 +7763,8 @@
     "latitude": 37.19193,
     "longitude": -104.41684,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "This abandoned POW camp near Trinidad, Las Animas County, Colorado was one of several hundred prisoner of war internment facilities that the United States operated across the country during World War II to house the more than 425,000 Axis prisoners captured in the North African, Italian, and European campaigns. The Colorado prison camps were typically branch camps of larger installation systems, and their German and Italian prisoners provided desperately needed agricultural labor for farms and ranches suffering severe wartime labor shortages. After the war ended in 1945, the prisoners were repatriated, the facilities rapidly dismantled, and the land returned to agricultural or other uses, leaving behind only foundations, fence post lines, and scattered hardware. Former POW camp sites on private Colorado ranchland may be accessible with landowner permission and can yield period military items, European-style handcraft artifacts made by prisoners, and 1940s agricultural hardware."
   },
   {
     "name": "US Military Reservation Vernon Hills",
@@ -7764,7 +7772,8 @@
     "latitude": 42.223174,
     "longitude": -87.949333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "U.S. Military Reservation Vernon Hills in Lake County, Illinois was one of several military training and staging areas maintained by the Army in the northern Illinois suburbs during the twentieth century, taking advantage of the open terrain of Lake County's moraine landscape for military training exercises. The site was part of the broader network of military land reservations that the Army established around major metropolitan areas for training, supply, and logistics purposes, particularly during the World War I and World War II buildup periods. The land was subsequently transferred to other uses as military requirements changed, and the Vernon Hills area developed rapidly as an affluent Lake County suburb in the postwar era. Military reservation land in northern Illinois may retain earthwork features from training exercises, period hardware, and the remnants of temporary structures used during the active military period."
   },
   {
     "name": "Fort Martin Scott",
@@ -7772,7 +7781,8 @@
     "latitude": 30.249444,
     "longitude": -98.846389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Martin Scott near Fredericksburg, Gillespie County, Texas was a U.S. Army frontier post established in 1848 specifically to protect the Texas Hill Country German immigrant settlements from Comanche raids following the Mexican-American War and Texas's admission to the Union. Named for General Martin Scott who died at Molino del Rey, the post was active from 1848 to 1853 when it was determined that the frontier had moved further west, making the fort redundant. Remarkably, several of the original stone buildings survive on private property at the site, which has been developed as Fort Martin Scott Historical Site on the eastern edge of Fredericksburg, open for public tours. The site is an exceptional example of a restored Texas frontier army post, with original limestone structures, reconstructed features, and archaeological remains accessible to the visiting public."
   },
   {
     "name": "Fort Griffin",
