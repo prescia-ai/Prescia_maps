@@ -406,7 +406,8 @@
     "longitude": -107.4539,
     "description": "Sweetwater Station on the Sweetwater River in Wyoming was an important Central Overland relay station where coaches stopped for fresh teams along this critical water source on the high plains approach to South Pass. The station's location along the river made it a vital stopping point with facilities to support stage operations in the remote country between Fort Laramie and the Continental Divide. Relay stations on the Sweetwater are productive for metal detecting, with horseshoes, harness fittings, coins, and personal items from passengers and station workers scattered around the historic station site and river crossing areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.68,
+    "detecting_weight": 85
   },
   {
     "name": "Green River Crossing, WY",
@@ -415,7 +416,8 @@
     "longitude": -109.4668,
     "description": "Green River Crossing, Wyoming was a critical Holladay Overland Mail station where coaches forded or ferried across the Green River on the route between South Pass and Fort Bridger. The challenging river crossing required substantial facilities including ferry operations during high water, with coaches and teams carefully transferred across the powerful current. River crossings are exceptional metal detecting sites where the concentration of waiting travelers and crossing operations led to numerous lost coins, buttons, and personal effects scattered along the riverbanks and ferry landing areas during years of stage traffic.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 76
   },
   {
     "name": "Echo Canyon Station, UT",
@@ -424,7 +426,8 @@
     "longitude": -111.428,
     "description": "Echo Canyon Station in Utah Territory was a Holladay Overland Mail relay station positioned in the dramatic Echo Canyon on the approach to Salt Lake City through the Wasatch Mountains. The station's location in the narrow canyon provided facilities for changing teams after the mountain crossing, with the dramatic red rock walls making it a memorable stop for travelers. Relay stations in mountain canyons are productive metal detecting sites, with horseshoes, harness fittings, coins, and personal items from passengers and station operations concentrated in the limited flat areas around the buildings and corrals.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.68,
+    "detecting_weight": 62
   },
   {
     "name": "Egan Station, NV",
@@ -433,7 +436,8 @@
     "longitude": -114.9063,
     "description": "Egan Station in Egan Canyon, Nevada was a remote Central Overland relay station where coaches stopped for fresh teams in the isolated desert ranges of eastern Nevada. The station maintained minimal facilities to support operations in this harsh environment, with station keepers enduring extreme isolation and the constant threat of Indian raids during the 1860s conflicts. Remote desert relay stations like Egan are excellent metal detecting sites where horseshoes, harness fittings, coins, and equipment accumulated around the station grounds during the years of operations, with artifacts well-preserved in the dry climate.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.78,
+    "detecting_weight": 88
   },
   {
     "name": "Ruby Valley Station, NV",
@@ -442,7 +446,8 @@
     "longitude": -115.496,
     "description": "Ruby Valley Station in Nevada was an important Central Overland relay station positioned in the Ruby Valley where water and grass provided welcome relief after desert crossings. The station maintained facilities for changing teams and resting horses in this relatively hospitable location surrounded by arid mountains and alkali flats. Relay stations in valley locations are highly productive for metal detecting, with horseshoes, harness fittings, coins, buttons, and personal items from passengers and station workers scattered around the corrals, buildings, and water sources from years of stage traffic.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 90
   },
   {
     "name": "Dragoon Springs, AZ",
@@ -451,7 +456,8 @@
     "longitude": -109.968,
     "description": "Dragoon Springs in Arizona's Dragoon Mountains was a critical Butterfield Overland Mail station where coaches stopped for water at this rare spring in the hostile Apache territory of southeastern Arizona. The isolated station operated under constant threat of attack, with several station keepers killed in Apache raids during the route's operation from 1858 to 1861. The violent history and remote location make Dragoon Springs a fascinating metal detecting site, with potential for stage hardware, coins, buttons, and artifacts from both stage operations and the conflicts that occurred at this dangerous desert outpost.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.87,
+    "detecting_weight": 84
   },
   {
     "name": "Apache Pass Station, AZ",
@@ -460,7 +466,8 @@
     "longitude": -109.4707,
     "description": "Apache Pass Station near Fort Bowie, Arizona was one of the most dangerous Butterfield Overland Mail stations, positioned at the critical mountain pass and spring controlled by Chiricahua Apache under Cochise. The station's location at the essential water source in Apache Pass made it a strategic but perilous stop, with the Army eventually establishing Fort Bowie to protect the pass after numerous attacks. The combination of stage operations, military occupation, and Apache conflict makes Apache Pass exceptional for metal detecting, with stage hardware, military artifacts, coins, and battle-related items concentrated around the historic station and fort sites.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.9,
+    "detecting_weight": 85
   },
   {
     "name": "Picacho Pass, AZ",
@@ -469,7 +476,8 @@
     "longitude": -111.4007,
     "description": "Picacho Pass, Arizona was a Butterfield Overland Mail relay station at this distinctive desert pass between Tucson and the Gila River crossing. The station provided fresh horses for coaches crossing the Arizona desert, with the dramatic Picacho Peak serving as a landmark visible for miles across the desert floor. Desert relay stations like Picacho are productive for metal detecting in the dry climate that preserves artifacts, with horseshoes, harness fittings, coins, and stage hardware scattered around the station site from the years of operations.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 65
   },
   {
     "name": "Mesilla, NM",
@@ -478,7 +486,8 @@
     "longitude": -106.8024,
     "description": "Mesilla, New Mexico was an important stop for both the Butterfield Overland Mail and San Antonio-San Diego Mail Line, making it a key junction town in southern New Mexico Territory. The old Mexican plaza town provided substantial facilities for both stage routes, with hotels, corrals, and supplies supporting coaches traveling between El Paso and Tucson. The convergence of multiple stage routes and years of operations make Mesilla an outstanding metal detecting site, with Spanish, Mexican, and American coins, stage hardware, and personal items concentrated in the historic plaza district and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Phantom Hill, TX",
@@ -487,7 +496,8 @@
     "longitude": -99.721,
     "description": "Fort Phantom Hill, Texas was a Butterfield Overland Mail station located at this abandoned military post on the Texas frontier, where the stage company utilized the remaining fort buildings for relay operations. The isolated station maintained horses and equipment in this remote location between Fort Belknap and Fort Chadbourne, with the stone ruins providing shelter for stage operations. Abandoned fort stations are excellent for metal detecting, with army buttons, coins, weapons parts, and stage-era artifacts including horseshoes and harness fittings scattered across the extensive fort grounds and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.88,
+    "detecting_weight": 82
   },
   {
     "name": "Jacksboro, TX",
