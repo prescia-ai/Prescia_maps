@@ -105,7 +105,8 @@
     "latitude": 33.348194,
     "longitude": -115.729354,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Bombay Beach sits on the eastern shore of the Salton Sea in Imperial County, California, once a thriving resort community that boomed in the 1950s when the Salton Sea was marketed as a sparkling inland playground for boaters and vacationers. Rising salinity levels and agricultural runoff devastated fish populations and drove away tourists through the 1970s and 1980s, leaving most structures abandoned to the harsh desert climate. Today Bombay Beach is a surreal landscape of collapsed trailers, rusting car hulks, and half-submerged buildings partly reclaimed by the encroaching shoreline — one of Southern California's most photographed post-apocalyptic scenes. Access is open on public roads, but the soft shoreline mud and private property boundaries require careful navigation for artifact hunters."
   },
   {
@@ -114,7 +115,8 @@
     "latitude": 39.578528,
     "longitude": -106.052908,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Dickey was a small ranching and agricultural community in Summit County, Colorado situated in the upper Blue River valley, serving as a local supply point for surrounding homesteads and cattle operations in the late nineteenth and early twentieth centuries. The remote mountain location and harsh winters made year-round habitation difficult, and when highway improvements made it easier to reach the larger town of Breckenridge, Dickey gradually depopulated. Much of the land in the Blue River valley was later flooded by Dillon Reservoir when it was filled in 1963 to supply Denver's water needs. What wasn't submerged is now largely surrounded by White River National Forest, with the reservoir itself covering the original low-lying portions of the valley."
   },
   {
@@ -123,7 +125,8 @@
     "latitude": 37.002776,
     "longitude": -119.666667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.84,
+    "detecting_weight": 34,
     "description": "Millerton was a bustling Gold Rush–era town in Fresno County, California that developed along the San Joaquin River as a supply center and ferry crossing point during the mining and ranching boom of the 1850s, growing to include hotels, saloons, a courthouse, and several hundred residents. The original townsite was purchased by the Federal Bureau of Reclamation and flooded in 1947 when Friant Dam was completed, creating Millerton Lake. During severe drought years when water levels drop significantly, stone foundations, old roads, and even remnants of the original town's layout emerge from the lakebed — one of California's most remarkable submerged ghost towns. Millerton Lake State Recreation Area surrounds the reservoir, and while detecting on state park land requires a special permit, the shoreline history alone makes this a fascinating destination."
   },
   {
@@ -132,7 +135,8 @@
     "latitude": 40.066242,
     "longitude": -99.228953,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.83,
+    "detecting_weight": 33,
     "description": "Republican City (Old) was the original settlement in Harlan County, Nebraska along the Republican River, platted in the 1870s as the county seat and a center of commerce for surrounding homesteaders during the great westward land rush of that era. The town was displaced when Harlan County Lake was created by the Army Corps of Engineers in the 1950s, inundating the original townsite beneath the reservoir waters. Today the lake is a popular recreation area, but during extended dry periods, old foundations and remnants of streets occasionally become visible along the shoreline. The surrounding Corps of Engineers managed land and state recreation area make this an accessible but regulated site for history enthusiasts."
   },
   {
@@ -141,7 +145,8 @@
     "latitude": 44.073598,
     "longitude": -103.483801,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.83,
+    "detecting_weight": 34,
     "description": "Pactola was a community in Pennington County, South Dakota in the Black Hills along Rapid Creek, originally homesteaded in the 1870s during the Black Hills Gold Rush and sustained by a mill and local farming and ranching through the early twentieth century. The Bureau of Reclamation condemned the valley in the 1950s and completed Pactola Dam in 1956, flooding the town beneath Pactola Reservoir — the largest body of water in the Black Hills. A cemetery was relocated, and most structures were demolished before the valley was flooded. During significant drawdowns, traces of the old settlement have emerged near the reservoir's upper arms, and the surrounding Black Hills National Forest provides access to the historic landscape."
   },
   {
@@ -150,7 +155,8 @@
     "latitude": 41.450383,
     "longitude": -93.157968,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Dunreath was a small Iowa prairie town in Wayne County that platted in the 1880s during the peak of Iowa's agricultural expansion, briefly supporting a post office, church, and a cluster of businesses serving surrounding farm families. The railroad bypassed Dunreath in favor of nearby communities, and the town never achieved the critical mass needed to sustain commerce in the competitive post-Civil War Iowa landscape. The site today is privately held farmland with few visible remnants of the original town. Detecting in former Iowa small towns with landowner permission commonly yields Seated Liberty and early Barber-era coinage, farm tokens, and nineteenth-century household items."
   },
   {
@@ -159,7 +165,8 @@
     "latitude": 41.416362,
     "longitude": -93.032467,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.51,
+    "detecting_weight": 43,
     "description": "Fifield was a tiny nineteenth-century rural community in Davis County, Iowa that came and went within a generation of settlement, leaving little physical evidence of its brief existence on the rolling prairie landscape. Like dozens of would-be Iowa towns of the 1870s and 1880s, Fifield was platted speculatively and supported a post office for a short time before the population consolidated around more strategically located railroad towns. The original site is now productive farmland typical of central Iowa's rich agricultural landscape. Permission from the current landowners is needed to detect here, but the site could yield early Iowa settlement-era artifacts from the brief window of occupation."
   },
   {
@@ -168,7 +175,8 @@
     "latitude": 40.63567,
     "longitude": -111.414139,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Keetley was a small silver and lead mining camp in Summit County, Utah established in the 1890s in the Heber Valley, developing around the ore deposits of the nearby mines and serving as a residential and commercial hub for the surrounding mining district. The town supported a hotel, saloon, and several businesses before declining ore grades and shifting economics reduced operations through the early twentieth century. The site was later flooded when Jordanelle Reservoir was completed in 1993 by the Bureau of Reclamation, submerging much of the original community area. What remains above water is now accessible via the Jordanelle State Park, which surrounds the reservoir on the Wasatch Mountain slopes."
   },
   {
@@ -177,7 +185,8 @@
     "latitude": 40.599676,
     "longitude": -111.422433,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 32,
     "description": "Jordanelle was a small ranching and farming community in Wasatch County, Utah in the Provo River valley, established by pioneer settlers in the late 1800s and sustained by cattle ranching and hay farming in the surrounding high-elevation meadows. The Bureau of Reclamation selected the valley for Jordanelle Dam, and construction completed in 1993 permanently flooded the old homestead sites beneath the reservoir. Several historic pioneer structures were documented before inundation, and the surrounding state park preserves interpretive information about the former community. The Jordanelle State Park offers public access to the reservoir shores, though metal detecting within state parks requires specific permits."
   },
   {
@@ -186,7 +195,8 @@
     "latitude": 40.608286,
     "longitude": -111.410188,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Hailstone was a tiny ranch and farming outpost in Wasatch County, Utah near the confluence of Rock Creek and the Provo River, existing as a small service point for surrounding agricultural operations in the late nineteenth and early twentieth centuries. The community, like neighboring Jordanelle, was condemned and inundated when Jordanelle Reservoir filled in 1993. Interpretive displays at Jordanelle State Park reference the former settlements of the valley. Hailstone today is the name of the marina area on Jordanelle Reservoir's west arm — an ironic preservation of the old placename in a transformed landscape."
   },
   {
