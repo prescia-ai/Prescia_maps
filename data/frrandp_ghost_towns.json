@@ -7790,7 +7790,8 @@
     "latitude": 32.927222,
     "longitude": -99.232222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Griffin State Historic Site near Albany, Shackelford County, Texas preserves the remains of a U.S. Army frontier post established in 1867 on a flat-topped mesa overlooking the Clear Fork of the Brazos River, serving as the base for military campaigns against Comanche and Kiowa raiders during the southern plains wars of the late 1860s and early 1870s. The fort was the anchor of a bawdy frontier community called 'The Flat' that sprang up below the military reservation, a notorious supply town for buffalo hunters, cattle drovers on the Western Trail, and frontier gamblers that at its peak housed several thousand transient residents. After the military abandoned the post in 1881, the community rapidly collapsed as the buffalo were gone and the cattle drives shifted to rail heads, leaving the post and town to deteriorate. Today the Texas Parks & Wildlife Department operates the site as a state park with a longhorn herd, interpretive facilities, and accessible ruins; metal detecting is not permitted within state park boundaries."
   },
   {
     "name": "Fort Quitman",
@@ -7798,7 +7799,8 @@
     "latitude": 31.0625,
     "longitude": -105.583889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Quitman in Hudspeth County, Texas was a remote U.S. Army installation established in 1858 along the Rio Grande near the Presidio Road — the military supply and communication route connecting San Antonio to El Paso — protecting travelers and mail riders from Apache raiders in one of the most desolate stretches of the Texas trans-Pecos desert. The post was abandoned during the Civil War, reoccupied in 1868, and finally closed in 1877 as the Apache threat was suppressed, leaving behind crumbling adobe walls in an extreme desert environment ninety miles below El Paso. The site exists on private ranch land in the harsh Chihuahuan Desert with no formal public access, though the ruins are visible from the general area and represent one of the most isolated and least-visited frontier forts in Texas. The arid conditions have preserved the adobe remarkably well, and the surrounding desert floor may contain period military hardware dropped or discarded during the fort's intermittent occupation."
   },
   {
     "name": "Fort Terrett, Texas",
@@ -7806,7 +7808,8 @@
     "latitude": 30.463056,
     "longitude": -100.185833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Terrett in Edwards County, Texas was a short-lived U.S. Army frontier post established in February 1852 along the North Llano River as part of a chain of forts defending the Texas Hill Country frontier, abandoned just three years later in January 1854 when it was determined that the post was too difficult to supply and too remote to be effective. The post was named for John C. Terrett, a Marine officer killed at Chapultepec during the Mexican-American War, and was occupied by companies of the 1st Infantry during its brief existence. The site on the South Llano River drainage in the Edwards Plateau scrubland retains some stone foundation remnants on private ranch land, and the surrounding limestone country — where springs are rare and landscape features are dramatic — has changed little since cavalry patrols rode these hills in the 1850s. The remote and largely unchanged landscape makes the Fort Terrett area of interest to those researching the antebellum Texas frontier military system."
   },
   {
     "name": "Glenn Springs, TX",
@@ -7814,7 +7817,8 @@
     "latitude": 29.161111,
     "longitude": -103.1475,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Glenn Springs in Brewster County, Texas, in the Big Bend region, was a small farming and wax-producing community that thrived briefly in the early twentieth century along Glenn Springs Creek in the Chisos Mountains piedmont, where candelilla wax, extracted from a desert succulent plant, was processed for use in candles, polishes, and phonograph records. The community's tragic history includes the Pancho Villa raid of May 1916, when a band of Villa's guerrillas crossed the Rio Grande and attacked the isolated American settlement, killing three U.S. soldiers and one child and capturing a store owner, helping precipitate General Pershing's Punitive Expedition into Mexico. The settlement was largely abandoned after the raid, and today the ruins of stone buildings, the wax factory, and the old cavalry camp are accessible within Big Bend National Park. The site is within National Park boundaries — artifact collection is strictly prohibited, but the historical remains are substantial and the story is remarkable."
   },
   {
     "name": "Camp Ellis Army Base",
@@ -7822,7 +7826,8 @@
     "latitude": 40.365982,
     "longitude": -90.396714,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Camp Ellis was a World War II-era U.S. Army training base established in 1942 near Ipava, Fulton County, Illinois along the Illinois River, built to train infantry replacement troops for both the European and Pacific theaters and at its peak housing up to 35,000 soldiers in a vast temporary city of barracks, training facilities, and support infrastructure across the Illinois River bottomlands. The base occupied over 18,000 acres of farmland and included a hospital complex, prisoner of war camp, and complete military city infrastructure, all built with remarkable speed under wartime urgency. After the war the land was returned to agricultural use and most buildings were demolished, but the Emiquon area where Camp Ellis once stood is now a major wetland restoration project managed by The Nature Conservancy. The restored wetlands occasionally expose military-era artifacts during water level manipulations, and the surrounding agricultural area preserves earthwork remnants of the former base."
   },
   {
     "name": "Fort Jay",
@@ -7830,7 +7835,8 @@
     "latitude": 40.691372,
     "longitude": -74.015981,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Jay on Governors Island in New York Harbor is one of the oldest surviving military fortifications in the United States, with origins dating to a Revolutionary War earthwork that was rebuilt as a masonry star fort from 1794 to 1806, commanding the entrance to New York Harbor and the Hudson River approach to Manhattan. The fort served as the headquarters of the U.S. Army's Eastern Department and later Atlantic Command for nearly two centuries, seeing service through every American conflict from the War of 1812 through the Cold War before the Army transferred Governors Island to the federal government in 2003. Today Governors Island National Monument, managed jointly by the National Park Service and the City of New York, offers ferry access and an extraordinary opportunity to explore one of the most historic military landscapes in America. The island's layered military history from colonial through Cold War eras makes it exceptional for historical research, though artifact collection is prohibited in the National Monument."
   },
   {
     "name": "Fort Mifflin",
@@ -7838,7 +7844,8 @@
     "latitude": 39.875229,
     "longitude": -75.213143,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Mifflin on Mud Island in the Delaware River at Philadelphia, Pennsylvania was the site of one of the most heroic defensive actions of the Revolutionary War, where approximately 500 American soldiers withstood 40 days of intense British bombardment in November 1777, defending the river approach to Philadelphia and delaying the British fleet's ability to resupply the city, enabling Washington's army to survive its march to Valley Forge. Originally built by the British in 1771, the fort was rebuilt after the Revolution and continuously upgraded through the Civil War, serving as a military installation for nearly two centuries. Today Fort Mifflin is preserved as a National Historic Landmark and museum, featuring restored eighteenth and nineteenth century fortifications, cannon batteries, and historic buildings open to the public for tours and living history events. The site is fully accessible as a historic site and one of the best-preserved Revolutionary War fortifications in the eastern United States."
   },
   {
     "name": "Fort Michilimackinac",
@@ -7846,7 +7853,8 @@
     "latitude": 45.786502,
     "longitude": -84.736031,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Michilimackinac at Mackinaw City, Cheboygan County, Michigan was a French fur-trading post and military fort established around 1715 at the strategic Straits of Mackinac connecting Lakes Huron and Michigan, controlling the water route between the Great Lakes and serving as the nerve center of the vast French interior fur trade network in the upper Great Lakes region. The British captured the post in 1761 following the French and Indian War, but in 1763 Ojibwe warriors captured the fort in a remarkable stratagem during Pontiac's War — entering the gates during a lacrosse game — killing or capturing most of the garrison. The British eventually rebuilt and reoccupied the post before abandoning it in 1781 and relocating the garrison to the more defensible Mackinac Island. Today Mackinaw City maintains Colonial Michilimackinac as an extraordinary outdoor archaeological museum with reconstructed 18th-century fort buildings and ongoing archaeological excavations that have produced remarkable collections of French colonial trade goods."
   },
   {
     "name": "Fort Dade",
@@ -7854,7 +7862,8 @@
     "latitude": 27.5953,
     "longitude": -82.763719,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Dade on Egmont Key at the entrance to Tampa Bay, Hillsborough County, Florida was a coastal defense installation established after the Spanish-American War in 1898 to protect Tampa Bay — a key military embarkation point from which troops departed for Cuba — from potential Spanish naval counterattack. The fort was named for Major Francis Dade, whose ambush and death along with his entire command in December 1835 near Bushnell launched the devastating Second Seminole War. The island served as a detention center for Seminole prisoners during the Second Seminole War even earlier, connecting this small barrier island to multiple chapters of Florida's complex history. Egmont Key is now a state park and National Wildlife Refuge jointly managed by Florida State Parks and the U.S. Fish & Wildlife Service, with boat-access-only visitation; the brick artillery batteries and foundations are remarkable and freely accessible to day visitors arriving by private boat or charter ferry."
   },
   {
     "name": "Green River Ordnance Plant",
@@ -7862,7 +7871,8 @@
     "latitude": 41.734438,
     "longitude": -89.395281,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Green River Ordnance Plant near Dixon, Lee County, Illinois was a World War II smokeless powder and nitrocellulose production facility established in 1941 along the Rock River, one of numerous munitions plants built with extreme urgency to supply the Allied war effort with propellants for artillery ammunition, small arms cartridges, and rocket propellants. The plant covered several thousand acres of northern Illinois farmland with production buildings, storage magazines, and support facilities, employing thousands of workers from the surrounding Rock River valley communities in dangerous, around-the-clock production. After the war the facilities were largely demolished and the land returned to agricultural use, though concrete foundations and earthwork remnants of the production areas persist in the landscape. The Lee County countryside surrounding the former plant site may be accessed through normal agricultural land protocols, and occasional field surface finds of period industrial hardware occur in the area."
   },
   {
     "name": "Fort St. Louis",
