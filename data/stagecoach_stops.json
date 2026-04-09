@@ -106,7 +106,8 @@
     "longitude": -102.8793,
     "description": "Fort Stockton, Texas operated as a crucial stop for both the Butterfield Overland Mail and the San Antonio-San Diego Mail Line, making it one of the most important stage stations in West Texas. The military fort and stage facilities provided security, fresh horses, and supplies for coaches traversing the dangerous desert country between San Antonio and El Paso. The dual-route traffic and military presence make Fort Stockton an exceptional metal detecting site, with abundant military buttons, weapons parts, horseshoes, harness fittings, and coins from soldiers, teamsters, and passengers lost over many years of operations.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "El Paso, TX",
@@ -115,7 +116,8 @@
     "longitude": -106.485,
     "description": "El Paso, Texas served as a major junction where the Butterfield Overland Mail and San Antonio-San Diego Mail Line both stopped, making it one of the most important stage stations in the Southwest. The town's strategic location at the Rio Grande crossing provided extensive facilities for multiple stage lines, with corrals, shops, hotels, and supply depots supporting regular coach traffic from three directions. As a major transportation hub operating for years with heavy traffic from both routes, El Paso offers remarkable metal detecting potential with period coins, buttons, stage hardware, and personal items concentrated in the historic downtown and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.84,
+    "detecting_weight": 32
   },
   {
     "name": "Tucson, AZ",
@@ -124,7 +126,8 @@
     "longitude": -110.9747,
     "description": "Tucson, Arizona was a major station on both the Butterfield Overland Mail and San Antonio-San Diego Mail Line, serving as the most important settlement in southern Arizona Territory. The old Spanish presidio town provided substantial facilities for stage operations including corrals, repair shops, and lodging, with coaches arriving from California, Texas, and Mexico. The convergence of multiple stage routes and years of continuous operation make Tucson exceptional for metal detecting, with Spanish, Mexican, and American coins, military artifacts, and stage-related items scattered throughout the historic presidio district and station grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 34
   },
   {
     "name": "Yuma, AZ",
@@ -133,7 +136,8 @@
     "longitude": -114.6277,
     "description": "Yuma, Arizona was the critical Colorado River crossing point for the Butterfield Overland Mail, where coaches transferred across the river via ferry after the long desert journey from Tucson. This bottleneck location saw every coach stop for the river crossing, with passengers waiting while their vehicles and teams were ferried across the powerful current to Fort Yuma on the California side. The concentration of travelers at this essential crossing makes it highly productive for metal detecting, with coins, buttons, and personal effects lost along the riverbanks and ferry landing areas during years of stage operations.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.83,
+    "detecting_weight": 36
   },
   {
     "name": "Fort Yuma, CA",
@@ -142,7 +146,8 @@
     "longitude": -114.6244,
     "description": "Fort Yuma, California sat on the California side of the Colorado River crossing where Butterfield Overland Mail coaches arrived after ferrying from Yuma, with the military post providing security and facilities for westbound travelers entering California. The fort's strategic location protecting the vital river crossing made it a hub of activity with soldiers, stage passengers, and freight wagons all passing through this gateway to California. The combination of military installation and major stage station creates excellent metal detecting opportunities, with army buttons, coins, stage hardware, and traveler's effects concentrated around the fort grounds and landing areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.83,
+    "detecting_weight": 55
   },
   {
     "name": "San Bernardino, CA",
@@ -151,7 +156,8 @@
     "longitude": -117.2898,
     "description": "San Bernardino, California served as an important Butterfield Overland Mail station where coaches stopped after crossing the Mojave Desert, with the Mormon settlement providing welcome facilities and fresh teams for the final leg to Los Angeles. The station maintained extensive corrals and equipment to support the regular schedule of coaches approaching the end of their transcontinental journey from Missouri. Metal detectorists value this site where the relief of reaching California civilization after desert crossings led to celebration and commerce, with period coins, buttons, and personal items lost around the busy station and town center.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.8,
+    "detecting_weight": 32
   },
   {
     "name": "Los Angeles, CA",
@@ -160,7 +166,8 @@
     "longitude": -118.2437,
     "description": "Los Angeles, California served as the western terminus of the Butterfield Overland Mail from 1858 to 1860, where coaches completed their 25-day, 2,800-mile journey from Missouri and passengers celebrated reaching the Pacific coast. The growing pueblo town's station facilities handled arriving and departing coaches, mail sorting, and the transfer of passengers continuing to San Francisco by coastal steamer. As a major stage terminus with years of heavy traffic, Los Angeles offers remarkable metal detecting potential with period coins, buttons, personal effects, and stage-related items concentrated in the historic pueblo district and station grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 30
   },
   {
     "name": "San Antonio, TX",
@@ -169,7 +176,8 @@
     "longitude": -98.4936,
     "description": "San Antonio, Texas was the eastern terminus of the San Antonio-San Diego Mail Line (the 'Jackass Mail') beginning in 1857, where mail and passengers departed on the grueling journey to California via the southern desert route. The substantial facilities in this frontier military hub supported the semi-monthly mail service with pack mules and light coaches, serving as the jumping-off point for travelers heading west through hostile territory. The heavy stage traffic combined with San Antonio's role as a major military and commercial center makes it exceptional for metal detecting, with Spanish, Mexican, and American coins, military artifacts, and traveler's items throughout the historic downtown area.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 31
   },
   {
     "name": "Fort Clark, TX",
@@ -178,7 +186,8 @@
     "longitude": -100.4262,
     "description": "Fort Clark near Brackettville, Texas was an essential San Antonio-San Diego Mail Line station where coaches stopped at this active military post for security and fresh teams along the dangerous Texas frontier. The fort provided armed escorts and protection for mail coaches traveling through territory threatened by Apache and Comanche raids between San Antonio and the Rio Grande. The combination of military garrison and stage operations creates excellent metal detecting opportunities, with army buttons, weapons parts, horseshoes, coins, and stage hardware concentrated around the fort grounds and station facilities.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.83,
+    "detecting_weight": 58
   },
   {
     "name": "Fort Davis, TX",
@@ -187,7 +196,8 @@
     "longitude": -103.8947,
     "description": "Fort Davis, Texas served as a critical San Antonio-San Diego Mail Line station in the rugged Davis Mountains of West Texas, where the military post provided security and facilities for coaches traveling through Apache territory. The fort's strategic location in the mountains made it an essential stop for changing teams and obtaining armed escorts before continuing through the dangerous desert country to El Paso. Metal detectorists prize Fort Davis for its rich combination of military and stage artifacts, with army buttons, coins, weapons parts, and stage hardware scattered across the extensive fort grounds and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.9,
+    "detecting_weight": 52
   },
   {
     "name": "San Diego, CA",
