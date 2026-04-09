@@ -6,7 +6,7 @@ import api from '../api/client';
 const BIO_MAX = 250;
 
 export default function ProfileSettingsPage() {
-  const { user, profile, refreshProfile } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
   const navigate = useNavigate();
 
   const [displayName, setDisplayName] = useState('');
@@ -18,12 +18,12 @@ export default function ProfileSettingsPage() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Redirect if not logged in
+  // Redirect if not logged in (only after auth has finished loading)
   useEffect(() => {
-    if (user === null) {
+    if (!authLoading && user === null) {
       navigate('/login', { replace: true });
     }
-  }, [user, navigate]);
+  }, [authLoading, user, navigate]);
 
   // Pre-fill form with existing profile data
   useEffect(() => {

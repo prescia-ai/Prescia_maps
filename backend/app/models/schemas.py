@@ -342,7 +342,7 @@ class UserProfileUpdate(BaseModel):
     display_name: Optional[str] = Field(None, max_length=100)
     bio: Optional[str] = None
     location: Optional[str] = Field(None, max_length=100)
-    privacy: Optional[str] = Field(None, pattern=r"^(public|friends|private)$")
+    privacy: Optional[Literal["public", "friends", "private"]] = None
 
 
 class UserProfilePublic(BaseModel):

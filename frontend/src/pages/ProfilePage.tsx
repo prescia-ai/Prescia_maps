@@ -101,7 +101,7 @@ export default function ProfilePage() {
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-4">
               <Avatar
-                username={publicProfile.username ?? username ?? '?'}
+                username={publicProfile.username ?? username!}
                 displayName={publicProfile.display_name}
                 size="xl"
               />

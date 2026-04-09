@@ -18,6 +18,7 @@ const PALETTE = [
   'bg-pink-600',
 ];
 
+// djb2-inspired polynomial rolling hash — maps a username string to a stable uint32
 function hashUsername(username: string): number {
   let hash = 0;
   for (let i = 0; i < username.length; i++) {
