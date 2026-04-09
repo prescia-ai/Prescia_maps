@@ -325,6 +325,18 @@ export async function fetchFollowing(
   return data;
 }
 
+export async function fetchUserPosts(
+  username: string,
+  limit = 20,
+  offset = 0,
+): Promise<{ posts: Post[]; total: number }> {
+  const { data } = await api.get<{ posts: Post[]; total: number }>(
+    `/posts/user/${encodeURIComponent(username)}`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
 export async function fetchPublicProfile(username: string): Promise<PublicProfile> {
   const { data } = await api.get<PublicProfile>(`/auth/profile/${encodeURIComponent(username)}`);
   return data;
