@@ -4,9 +4,10 @@
     "type": "historic_brothel",
     "latitude": 38.2128,
     "longitude": -119.0125,
-    "description": "Bodie's Maiden Lane was a row of wooden cribs just off the main drag where dozens of soiled doves catered to miners flush with gold dust during the 1877–1882 boom years. The cribs were small single-room shacks where women charged by the hour, serving the thousands of men working the Standard Mine and surrounding claims. Today Bodie is a California State Historic Park with many original structures preserved under a policy of arrested decay, and the crib row footprints are still visible in the dirt. The surrounding BLM land is accessible for metal detecting, and detectorists have reported finding coins, garter clasps, perfume bottle glass, and Chinese trade tokens in the areas just outside the park boundary.",
+    "description": "Bodie's Maiden Lane was a row of wooden cribs just off the main drag where dozens of soiled doves catered to miners flush with gold dust during the 1877\u20131882 boom years. The cribs were small single-room shacks where women charged by the hour, serving the thousands of men working the Standard Mine and surrounding claims. Today Bodie is a California State Historic Park with many original structures preserved under a policy of arrested decay, and the crib row footprints are still visible in the dirt. The surrounding BLM land is accessible for metal detecting, and detectorists have reported finding coins, garter clasps, perfume bottle glass, and Chinese trade tokens in the areas just outside the park boundary.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.83,
+    "detecting_weight": 62,
     "tier": 1
   },
   {
@@ -14,9 +15,10 @@
     "type": "historic_brothel",
     "latitude": 37.7086,
     "longitude": -117.2356,
-    "description": "Goldfield, Nevada was the largest city in the state around 1906–1907 with over 20,000 residents, and its red-light district ran along Columbia Avenue where rows of painted cribs housed hundreds of prostitutes serving the massive gold rush population. The district operated openly under a segregated tolerance policy, with parlor houses for wealthier clientele and cheap cribs for working miners. Today Goldfield is a near-ghost town with many adobe and stone ruins still standing, and much of the surrounding land is BLM-managed open desert. Detectorists working the crib row ruins and surrounding alleys have found silver coins, trade tokens, perfume bottles, jewelry fragments, and military buttons from this era.",
+    "description": "Goldfield, Nevada was the largest city in the state around 1906\u20131907 with over 20,000 residents, and its red-light district ran along Columbia Avenue where rows of painted cribs housed hundreds of prostitutes serving the massive gold rush population. The district operated openly under a segregated tolerance policy, with parlor houses for wealthier clientele and cheap cribs for working miners. Today Goldfield is a near-ghost town with many adobe and stone ruins still standing, and much of the surrounding land is BLM-managed open desert. Detectorists working the crib row ruins and surrounding alleys have found silver coins, trade tokens, perfume bottles, jewelry fragments, and military buttons from this era.",
     "source": "historic_brothels",
     "confidence": 0.8,
+    "detecting_weight": 82,
     "tier": 1
   },
   {
@@ -26,7 +28,8 @@
     "longitude": -116.8267,
     "description": "Rhyolite, Nevada boomed between 1904 and 1911 when its gold mines attracted over 10,000 residents, and a lively red-light district grew on the south side of town to serve miners and railroad workers on the Las Vegas and Tonopah Railroad. The brothels ranged from wood-frame cribs to a few fancier parlor operations, all collapsing rapidly when the mines played out and the town emptied by 1920. The entire townsite is now BLM-managed land on the edge of Death Valley National Park, with stabilized ruins of the Cook Bank and bottle house still standing. Rhyolite is an outstanding detecting site, with finds including gold and silver coins, trade tokens, ladies' jewelry, bottle glass, and everyday personal effects.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.74,
+    "detecting_weight": 78,
     "tier": 1
   },
   {
@@ -34,9 +37,10 @@
     "type": "historic_brothel",
     "latitude": 38.6133,
     "longitude": -116.8731,
-    "description": "Belmont, Nevada served as Nye County seat during the 1860s–1870s silver boom, and a row of stone and adobe cribs operated on the downhill fringe of town to serve miners extracting ore from the Monitor-Belmont Mine. The remote, high-desert location meant the brothels were basic cribs rather than fancy parlor houses, serving the rough mining population at frontier prices. Most of the original stone and adobe structures still stand in various states of collapse across the nearly unpopulated townsite, which is accessible on public land. Detecting around the crib ruins and adjacent lots yields period coins, buttons, buckles, and the occasional piece of ladies' jewelry dropped or discarded over more than a century of abandonment.",
+    "description": "Belmont, Nevada served as Nye County seat during the 1860s\u20131870s silver boom, and a row of stone and adobe cribs operated on the downhill fringe of town to serve miners extracting ore from the Monitor-Belmont Mine. The remote, high-desert location meant the brothels were basic cribs rather than fancy parlor houses, serving the rough mining population at frontier prices. Most of the original stone and adobe structures still stand in various states of collapse across the nearly unpopulated townsite, which is accessible on public land. Detecting around the crib ruins and adjacent lots yields period coins, buttons, buckles, and the occasional piece of ladies' jewelry dropped or discarded over more than a century of abandonment.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.71,
+    "detecting_weight": 74,
     "tier": 1
   },
   {
@@ -46,7 +50,8 @@
     "longitude": -114.4514,
     "description": "Pioche, Nevada was one of the most violent mining camps in the West during its 1870s silver boom, and a string of frame cribs climbed the steep hillside above the main street where women worked the stream of miners, freighters, and gamblers passing through town. The camp's notorious Boot Hill cemetery recorded 72 deaths before anyone died of natural causes, and the vice district matched that rough reputation. Pioche is a living semi-ghost town today with original Victorian buildings still standing on the hillside, and the crib row areas are partially accessible. Detectorists have recovered silver coins, tokens, garter hardware, and personal ornaments from the hillside terraces where the cribs once stood.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.73,
+    "detecting_weight": 67,
     "tier": 1
   },
   {
@@ -54,9 +59,10 @@
     "type": "historic_brothel",
     "latitude": 39.3097,
     "longitude": -119.6493,
-    "description": "Virginia City's D Street was the designated red-light zone during the Comstock Lode boom of the 1860s–1880s, where parlor houses and cribs served the thousands of hard-rock miners, mill workers, and speculators who made the city Nevada's largest. Famous madams like Julia Bulette operated there until her murder in 1867, and the district ran continuously through the boom years generating enormous traffic in cash, jewelry, and personal items. The historic district is largely preserved as a tourist town today, but vacant lots, alleyways, and the outer edges of D Street are occasionally accessible for detecting. Finds from the area include Comstock-era coins, trade tokens, dress accessories, and bottle glass from the period saloons and cribs.",
+    "description": "Virginia City's D Street was the designated red-light zone during the Comstock Lode boom of the 1860s\u20131880s, where parlor houses and cribs served the thousands of hard-rock miners, mill workers, and speculators who made the city Nevada's largest. Famous madams like Julia Bulette operated there until her murder in 1867, and the district ran continuously through the boom years generating enormous traffic in cash, jewelry, and personal items. The historic district is largely preserved as a tourist town today, but vacant lots, alleyways, and the outer edges of D Street are occasionally accessible for detecting. Finds from the area include Comstock-era coins, trade tokens, dress accessories, and bottle glass from the period saloons and cribs.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.89,
+    "detecting_weight": 54,
     "tier": 1
   },
   {
@@ -66,7 +72,8 @@
     "longitude": -113.3225,
     "description": "Garnet, Montana is one of the best-preserved ghost towns in the northern Rockies, with the Wells Hotel serving as the hub of the small mining camp's social life including prostitution during gold production peaks in the 1890s and again in the 1930s. The hotel's upper floors and back rooms served double duty as the camp's informal brothel, catering to miners working the placer and hard-rock gold deposits in the surrounding hills. The BLM manages Garnet as a historic site, and many original log and frame buildings still stand in the deep forest clearing. Detecting is permitted on surrounding BLM land outside the historic site boundaries, where coins, buttons, and small personal items from the mining era are frequently found.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.75,
+    "detecting_weight": 66,
     "tier": 1
   },
   {
@@ -74,9 +81,10 @@
     "type": "historic_brothel",
     "latitude": 45.1583,
     "longitude": -113.0028,
-    "description": "Bannack was Montana's first territorial capital and gold rush camp, booming in 1862–1863 when thousands of placer miners flooded in, and a vice district quickly established itself on the edge of the main street to serve the rough mining population including the infamous Plummer Gang. Several frame buildings served as boarding houses and brothels, blending into the frontier street scene that also housed saloons, merchants, and the sheriff's office. Today Bannack is a Montana State Park with over 60 original buildings preserved under a strict no-detecting policy inside the park. The surrounding public land and Beaverhead National Forest edges are accessible for detecting, where period coins and personal items have been found by patient searchers.",
+    "description": "Bannack was Montana's first territorial capital and gold rush camp, booming in 1862\u20131863 when thousands of placer miners flooded in, and a vice district quickly established itself on the edge of the main street to serve the rough mining population including the infamous Plummer Gang. Several frame buildings served as boarding houses and brothels, blending into the frontier street scene that also housed saloons, merchants, and the sheriff's office. Today Bannack is a Montana State Park with over 60 original buildings preserved under a strict no-detecting policy inside the park. The surrounding public land and Beaverhead National Forest edges are accessible for detecting, where period coins and personal items have been found by patient searchers.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 47,
     "tier": 1
   },
   {
@@ -86,7 +94,8 @@
     "longitude": -113.3167,
     "description": "Granite, Montana was a booming silver camp in the late 1880s with the Granite Mountain Mine producing millions of dollars in ore, and its steep mountainside townsite supported a thriving vice district that included cribs and parlor houses serving the underground miners. The town collapsed almost overnight when silver prices crashed in 1893, leaving behind stone and brick ruins scattered across the forested hillside at 7,000 feet elevation. The remote Deerlodge National Forest site is accessible by forest road with the ruins of the miners' union hall, manager's mansion, and scattered cabin foundations still visible. The high-elevation detecting season is short but productive, with coins, mining camp hardware, and personal items from the brief boom years found among the ruins.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.76,
+    "detecting_weight": 73,
     "tier": 1
   },
   {
@@ -96,7 +105,8 @@
     "longitude": -110.7167,
     "description": "Castle, Montana was a remote silver and gold mining camp in the Crazy Mountains that boomed in the early 1890s, with a small red-light district of cribs and tent brothels operating in the gulch below the main street to serve miners from surrounding claims. The camp emptied quickly after the silver crash of 1893 and is now one of Montana's most remote ghost towns, accessible only by rough four-wheel-drive track through ranch and forest land. Stone and log building ruins survive across the site including several small structures that served as cribs, and the surrounding area has minimal foot traffic from curious visitors. The remote location and minimal modern disturbance make Castle an exceptional detecting site, with period silver and gold coins, tokens, and personal items found by the few detectorists who make the trek.",
     "source": "historic_brothels",
-    "confidence": 0.8,
+    "confidence": 0.68,
+    "detecting_weight": 87,
     "tier": 1
   },
   {
@@ -114,7 +124,7 @@
     "type": "historic_brothel",
     "latitude": 47.2833,
     "longitude": -109.6833,
-    "description": "Kendall, Montana was a gold mining camp that peaked around 1902–1907 in the Judith Mountains of central Montana, with a working-class population of several hundred miners who supported a small but active vice district of cribs and boarding house operations on the edge of the townsite. The mines used a cyanide-leaching process on low-grade ore, and the boom was short-lived, with the camp largely abandoned by 1910 and the buildings salvaged or collapsed. Foundation outlines and scattered debris are all that remain on the open rangeland above Lewistown, accessible via county roads through active ranch country. Detecting on accessible portions of the site has produced gold-rush-era coins, personal items, and mining hardware from this brief but productive camp.",
+    "description": "Kendall, Montana was a gold mining camp that peaked around 1902\u20131907 in the Judith Mountains of central Montana, with a working-class population of several hundred miners who supported a small but active vice district of cribs and boarding house operations on the edge of the townsite. The mines used a cyanide-leaching process on low-grade ore, and the boom was short-lived, with the camp largely abandoned by 1910 and the buildings salvaged or collapsed. Foundation outlines and scattered debris are all that remain on the open rangeland above Lewistown, accessible via county roads through active ranch country. Detecting on accessible portions of the site has produced gold-rush-era coins, personal items, and mining hardware from this brief but productive camp.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -134,7 +144,7 @@
     "type": "historic_brothel",
     "latitude": 42.4675,
     "longitude": -108.8031,
-    "description": "South Pass City, Wyoming was a gold rush camp that boomed in 1867–1872 along the historic Oregon Trail crossing, where thousands of miners working the placer and lode deposits supported several boarding houses and sporting establishments that functioned as de facto brothels. The camp is historically notable as the place where Wyoming passed the first women's suffrage law in the United States in 1869, though the women in the red-light district enjoyed different rights than those voting. Today South Pass City is a Wyoming State Historic Site with 26 original structures preserved, and the surrounding Wind River Mountains public land is accessible for recreation including metal detecting. Period finds from the area include gold-rush coins, mining tokens, and everyday personal items from the brief but historically significant boom.",
+    "description": "South Pass City, Wyoming was a gold rush camp that boomed in 1867\u20131872 along the historic Oregon Trail crossing, where thousands of miners working the placer and lode deposits supported several boarding houses and sporting establishments that functioned as de facto brothels. The camp is historically notable as the place where Wyoming passed the first women's suffrage law in the United States in 1869, though the women in the red-light district enjoyed different rights than those voting. Today South Pass City is a Wyoming State Historic Site with 26 original structures preserved, and the surrounding Wind River Mountains public land is accessible for recreation including metal detecting. Period finds from the area include gold-rush coins, mining tokens, and everyday personal items from the brief but historically significant boom.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -143,8 +153,8 @@
     "name": "Old Homestead Parlor House",
     "type": "historic_brothel",
     "latitude": 38.7495,
-    "longitude": -105.1780,
-    "description": "The Old Homestead at 353 Myers Avenue in Cripple Creek, Colorado was the most famous parlor house in the Colorado gold fields, operated by the notorious Pearl DeVere during the 1890s boom when the Cripple Creek district was producing $18 million in gold annually. The elegant Victorian house offered high-class entertainment to wealthy mine owners and investors, while cheaper cribs lined Myers Avenue serving the ordinary miner population below. The building still stands and operates today as a museum open to the public, preserving the lavish interior décor of Colorado's most celebrated brothel. The surrounding Cripple Creek area including BLM mining claims adjacent to town offers detecting opportunities, with period gold coins, tokens, and jewelry the prime targets.",
+    "longitude": -105.178,
+    "description": "The Old Homestead at 353 Myers Avenue in Cripple Creek, Colorado was the most famous parlor house in the Colorado gold fields, operated by the notorious Pearl DeVere during the 1890s boom when the Cripple Creek district was producing $18 million in gold annually. The elegant Victorian house offered high-class entertainment to wealthy mine owners and investors, while cheaper cribs lined Myers Avenue serving the ordinary miner population below. The building still stands and operates today as a museum open to the public, preserving the lavish interior d\u00e9cor of Colorado's most celebrated brothel. The surrounding Cripple Creek area including BLM mining claims adjacent to town offers detecting opportunities, with period gold coins, tokens, and jewelry the prime targets.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -164,7 +174,7 @@
     "type": "historic_brothel",
     "latitude": 39.8019,
     "longitude": -105.5142,
-    "description": "Central City, Colorado was the center of Colorado's first major gold rush in 1859, and its red-light district along Eureka Street and adjacent alleys—known locally as Necklace Row for the string of crib houses—served the massive population of placer and hard-rock miners working Clear Creek County throughout the 1860s–1880s. The cribs were simple frame structures where women charged modest rates, and the district operated alongside Chinese laundries and gambling dens in the ethnic diversity of the boom camp. Central City is a National Historic Landmark today with a casino district established in the 1990s that altered some of the historic fabric, but the hillside above town retains original foundation remnants and mine tailings. Detecting on accessible BLM mining claims above town has produced period coins, tokens, and personal items from the gold rush era.",
+    "description": "Central City, Colorado was the center of Colorado's first major gold rush in 1859, and its red-light district along Eureka Street and adjacent alleys\u2014known locally as Necklace Row for the string of crib houses\u2014served the massive population of placer and hard-rock miners working Clear Creek County throughout the 1860s\u20131880s. The cribs were simple frame structures where women charged modest rates, and the district operated alongside Chinese laundries and gambling dens in the ethnic diversity of the boom camp. Central City is a National Historic Landmark today with a casino district established in the 1990s that altered some of the historic fabric, but the hillside above town retains original foundation remnants and mine tailings. Detecting on accessible BLM mining claims above town has produced period coins, tokens, and personal items from the gold rush era.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -184,7 +194,7 @@
     "type": "historic_brothel",
     "latitude": 33.7953,
     "longitude": -105.8608,
-    "description": "White Oaks, New Mexico was a gold mining camp that flourished in the 1880s in the Jicarilla Mountains of Lincoln County, the same county made famous by Billy the Kid, and a rough hog ranch—a frontier term for a combined brothel, saloon, and dance hall—operated on the edge of town to serve the mining and cattle populations. The hog ranch catered to cowboys from surrounding ranches as well as miners, and cash flow through the establishment was substantial during the 1880s–1890s peak years. White Oaks is now a tiny semi-ghost town with a few original adobe and stone structures still standing, and the surrounding Lincoln National Forest and BLM land is accessible. Detecting around the former vice district outskirts has produced territorial-era coins, Mexican copper coinage, and personal items reflecting the mixed Anglo-Hispanic population.",
+    "description": "White Oaks, New Mexico was a gold mining camp that flourished in the 1880s in the Jicarilla Mountains of Lincoln County, the same county made famous by Billy the Kid, and a rough hog ranch\u2014a frontier term for a combined brothel, saloon, and dance hall\u2014operated on the edge of town to serve the mining and cattle populations. The hog ranch catered to cowboys from surrounding ranches as well as miners, and cash flow through the establishment was substantial during the 1880s\u20131890s peak years. White Oaks is now a tiny semi-ghost town with a few original adobe and stone structures still standing, and the surrounding Lincoln National Forest and BLM land is accessible. Detecting around the former vice district outskirts has produced territorial-era coins, Mexican copper coinage, and personal items reflecting the mixed Anglo-Hispanic population.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -194,7 +204,7 @@
     "type": "historic_brothel",
     "latitude": 33.3906,
     "longitude": -108.7722,
-    "description": "Mogollon, New Mexico was a remote silver and gold mining camp in the Mogollon Mountains that boomed in the 1890s and again in the 1910s–1920s, with its tight canyon setting along Silver Creek hosting a small but busy crib row that served miners from the Little Fannie and Cooney mines. The extreme isolation of the camp, accessible only by a single steep mountain road, meant the women who worked there had limited options and minimal oversight, and the vice district operated continuously through multiple boom cycles. Several original false-front commercial buildings survive in the narrow canyon, and the surrounding Gila National Forest land is accessible for outdoor recreation. The remote location and minimal modern traffic make Mogollon one of the more promising detecting sites in New Mexico, with period silver coins and personal items the prime targets.",
+    "description": "Mogollon, New Mexico was a remote silver and gold mining camp in the Mogollon Mountains that boomed in the 1890s and again in the 1910s\u20131920s, with its tight canyon setting along Silver Creek hosting a small but busy crib row that served miners from the Little Fannie and Cooney mines. The extreme isolation of the camp, accessible only by a single steep mountain road, meant the women who worked there had limited options and minimal oversight, and the vice district operated continuously through multiple boom cycles. Several original false-front commercial buildings survive in the narrow canyon, and the surrounding Gila National Forest land is accessible for outdoor recreation. The remote location and minimal modern traffic make Mogollon one of the more promising detecting sites in New Mexico, with period silver coins and personal items the prime targets.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -214,7 +224,7 @@
     "type": "historic_brothel",
     "latitude": 35.4136,
     "longitude": -114.2069,
-    "description": "Chloride, Arizona is the oldest continuously inhabited mining town in Arizona, booming in the 1860s–1890s when silver strikes brought thousands of miners to the Cerbat Mountains near the Colorado River, and the small but active vice district catered to the rough mining population throughout those decades. Several frame and adobe structures served as brothels along the main street, and the town's remote location in the Mojave Desert made the local entertainments the only option for men working the remote mines. Chloride today is a living semi-ghost town with a small population, original Western false-front buildings, and murals painted on rocks above town, and the surrounding BLM land in the Cerbat Mountains is accessible. Detecting the old mining camp outskirts and dry washes below the former vice district has produced silver coins, trade tokens, and personal items from the territorial era.",
+    "description": "Chloride, Arizona is the oldest continuously inhabited mining town in Arizona, booming in the 1860s\u20131890s when silver strikes brought thousands of miners to the Cerbat Mountains near the Colorado River, and the small but active vice district catered to the rough mining population throughout those decades. Several frame and adobe structures served as brothels along the main street, and the town's remote location in the Mojave Desert made the local entertainments the only option for men working the remote mines. Chloride today is a living semi-ghost town with a small population, original Western false-front buildings, and murals painted on rocks above town, and the surrounding BLM land in the Cerbat Mountains is accessible. Detecting the old mining camp outskirts and dry washes below the former vice district has produced silver coins, trade tokens, and personal items from the territorial era.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -234,7 +244,7 @@
     "type": "historic_brothel",
     "latitude": 34.7489,
     "longitude": -112.1138,
-    "description": "Jerome, Arizona was a copper mining boom town perched on the steep face of Cleopatra Hill above the Verde Valley, and its vice district along Hull Avenue and the lower town served the thousands of miners working the United Verde and Verde Extension copper mines through the 1880s–1950s. The town was known as the wickedest town in the West at its peak, with a red-light district that operated openly in a segregated zone on the hillside below the main commercial street. Jerome is today a living arts community and tourist destination with many original buildings preserved on the steep hillside, though the former brothel district below Main Street has seen significant collapse and vegetation overgrowth. The mine waste dumps and rural edges of the Jerome Historic District above town are accessible BLM land where period coins, copper mining tokens, and personal items are sometimes found.",
+    "description": "Jerome, Arizona was a copper mining boom town perched on the steep face of Cleopatra Hill above the Verde Valley, and its vice district along Hull Avenue and the lower town served the thousands of miners working the United Verde and Verde Extension copper mines through the 1880s\u20131950s. The town was known as the wickedest town in the West at its peak, with a red-light district that operated openly in a segregated zone on the hillside below the main commercial street. Jerome is today a living arts community and tourist destination with many original buildings preserved on the steep hillside, though the former brothel district below Main Street has seen significant collapse and vegetation overgrowth. The mine waste dumps and rural edges of the Jerome Historic District above town are accessible BLM land where period coins, copper mining tokens, and personal items are sometimes found.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -254,7 +264,7 @@
     "type": "historic_brothel",
     "latitude": 32.7701,
     "longitude": -108.2803,
-    "description": "Silver City, New Mexico was the commercial and vice hub of Grant County during the 1870s–1890s silver mining boom, with its red-light district operating along Bullard Street and connecting alleys where cribs and parlor houses served miners from surrounding camps including Pinos Altos, Chloride, and Hillsboro. The young Billy the Kid, then William Bonney, spent part of his childhood in Silver City before departing for his outlaw career, and the rough frontier atmosphere supported a substantial vice trade throughout the boom decades. Silver City is a living historic town today with adobe commercial buildings from the territorial era still in use, and the surrounding Gila National Forest is accessible for outdoor recreation including detecting. The edges of the historic downtown and the rural roads leading to the former mining camps outside town offer the best detecting opportunities for period finds.",
+    "description": "Silver City, New Mexico was the commercial and vice hub of Grant County during the 1870s\u20131890s silver mining boom, with its red-light district operating along Bullard Street and connecting alleys where cribs and parlor houses served miners from surrounding camps including Pinos Altos, Chloride, and Hillsboro. The young Billy the Kid, then William Bonney, spent part of his childhood in Silver City before departing for his outlaw career, and the rough frontier atmosphere supported a substantial vice trade throughout the boom decades. Silver City is a living historic town today with adobe commercial buildings from the territorial era still in use, and the surrounding Gila National Forest is accessible for outdoor recreation including detecting. The edges of the historic downtown and the rural roads leading to the former mining camps outside town offer the best detecting opportunities for period finds.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -264,7 +274,7 @@
     "type": "historic_brothel",
     "latitude": 44.3706,
     "longitude": -114.7278,
-    "description": "Bonanza, Idaho was a silver and gold mining camp in the remote Salmon River Mountains of Custer County that boomed in the 1870s–1880s, and its vice district of log and frame cribs served the hard-rock miners working the Charles Dickens and other major lode mines in this extremely isolated mountain setting. The camp competed with nearby Custer City for mining trade, and both towns maintained active red-light districts despite—or because of—their extreme remoteness from any established civilization. The townsite is now BLM-managed land with a few original log structures surviving in the Forest Service recreation corridor along the Salmon River, and the surrounding Salmon-Challis National Forest is accessible. The remote location and minimal modern disturbance make Bonanza one of Idaho's better ghost town detecting sites, with period coins and personal items found among the sagebrush and cabin ruins.",
+    "description": "Bonanza, Idaho was a silver and gold mining camp in the remote Salmon River Mountains of Custer County that boomed in the 1870s\u20131880s, and its vice district of log and frame cribs served the hard-rock miners working the Charles Dickens and other major lode mines in this extremely isolated mountain setting. The camp competed with nearby Custer City for mining trade, and both towns maintained active red-light districts despite\u2014or because of\u2014their extreme remoteness from any established civilization. The townsite is now BLM-managed land with a few original log structures surviving in the Forest Service recreation corridor along the Salmon River, and the surrounding Salmon-Challis National Forest is accessible. The remote location and minimal modern disturbance make Bonanza one of Idaho's better ghost town detecting sites, with period coins and personal items found among the sagebrush and cabin ruins.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -284,7 +294,7 @@
     "type": "historic_brothel",
     "latitude": 47.4749,
     "longitude": -115.9258,
-    "description": "Wallace, Idaho was the last city in the United States to officially close its brothels, with the Oasis Rooms bordello on Fourth Street operating continuously from 1895 until the county sheriff finally shut it down in 1988, serving miners from the Silver Valley lead-silver district for nearly a century of continuous operation. The Silver Valley produced more silver than any other district in the country, and the Bunker Hill, Star-Morning, and Sunshine mines employed thousands of men who patronized Wallace's open vice district through multiple generations. The Oasis Rooms building is now a museum open to the public, preserving the original décor, furniture, and artifacts of one of the last operating American brothels. The Wallace Historic District is a National Historic Landmark, and the surrounding Coeur d'Alene National Forest land above the Silver Valley offers detecting opportunities for period mining camp artifacts.",
+    "description": "Wallace, Idaho was the last city in the United States to officially close its brothels, with the Oasis Rooms bordello on Fourth Street operating continuously from 1895 until the county sheriff finally shut it down in 1988, serving miners from the Silver Valley lead-silver district for nearly a century of continuous operation. The Silver Valley produced more silver than any other district in the country, and the Bunker Hill, Star-Morning, and Sunshine mines employed thousands of men who patronized Wallace's open vice district through multiple generations. The Oasis Rooms building is now a museum open to the public, preserving the original d\u00e9cor, furniture, and artifacts of one of the last operating American brothels. The Wallace Historic District is a National Historic Landmark, and the surrounding Coeur d'Alene National Forest land above the Silver Valley offers detecting opportunities for period mining camp artifacts.",
     "source": "historic_brothels",
     "confidence": 0.8,
     "tier": 1
@@ -373,7 +383,7 @@
     "name": "Venus Alley",
     "type": "historic_brothel",
     "latitude": 46.0039,
-    "longitude": -112.5350,
+    "longitude": -112.535,
     "description": "Venus Alley was Butte, Montana's open-air crib district that operated during the peak of the Anaconda Copper Company's dominance in the late 19th and early 20th centuries, where rows of small single-room cribs lined a narrow alley serving the enormous underground mining workforce that made Butte the largest city between Minneapolis and Seattle. The alley's women worked in conditions significantly rougher than the upscale Dumas Brothel a few blocks away, catering to common miners on working-class budgets in a district that operated around the clock to match the three-shift mine schedule. The crib district was cleared in subsequent decades of urban redevelopment, and the Venus Alley area in the Uptown Butte Historic District is now a mix of vacant lots and older buildings. The Superfund cleanup of Butte's massive mine waste has altered much of the surrounding landscape, but the historic district core retains its character from the mining era.",
     "source": "historic_brothels",
     "confidence": 0.8,
