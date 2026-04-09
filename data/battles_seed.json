@@ -2042,7 +2042,8 @@
     "description": "On September 3, 1864, Union cavalry under General Wesley Merritt attacked a Confederate infantry column from Early's army at Berryville, VA, in a fight that demonstrated the continued presence of Confederate forces in the lower Shenandoah Valley even as Sheridan prepared his major offensive. The engagement was a prelude to the decisive Third Battle of Winchester two weeks later. The Berryville battlefield in Clarke County, VA, is largely private farmland in the lower Shenandoah Valley. The Valley corridor from Winchester to Berryville saw intense military operations throughout 1862-1865, and private land in Clarke County has produced Civil War Minié balls, buttons, and cavalry relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 70
   },
   {
     "name": "Third Battle of Winchester (Opequon)",
@@ -2052,7 +2053,8 @@
     "description": "On September 19, 1864, General Philip Sheridan launched his campaign to clear the Shenandoah Valley with a powerful assault on Early's Confederate forces at the Third Battle of Winchester (Battle of Opequon), VA, driving the Confederates through the city in a victory that gave the Union firm control of the northern valley. The battle was the largest Civil War engagement in the Shenandoah Valley, with over 15,000 combined casualties. Winchester, VA, changed hands more than 70 times during the war, and the area saw more sustained military activity than almost any region in America. The Shenandoah Valley Battlefields Foundation and the Civil War Trust have preserved significant portions of all three Winchester battlefields, with private land in the surrounding Frederick County area producing significant quantities of Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Fisher's Hill",
@@ -2062,7 +2064,8 @@
     "description": "On September 22, 1864, three days after Winchester, Sheridan attacked Early's new defensive position at Fisher's Hill near Strasburg, VA — a ridgeline the Confederates considered impregnable — by sending General George Crook's corps on a concealed flank march through Massanutten Mountain's timber while the front was attacked. The Confederate line collapsed, sending Early's army fleeing southward up the Valley. Fisher's Hill Battlefield in Shenandoah County, VA, is preserved by the Civil War Trust and open to the public, with hiking trails through the excellent earthwork remains. Surrounding Shenandoah County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from Sheridan's 1864 Valley Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Cedar Creek",
@@ -2072,7 +2075,8 @@
     "description": "On October 19, 1864, Confederate General Jubal Early launched a surprise dawn attack on Sheridan's encamped Army of the Shenandoah at Cedar Creek near Strasburg, VA, shattering two Union corps before the advance stalled as soldiers plundered the captured camps. Sheridan — famously 20 miles away in Winchester — rode to the battlefield and personally rallied his army for a counterattack that routed the Confederates and ended Southern offensive operations in the Shenandoah Valley. Cedar Creek and Belle Grove National Historical Park in Shenandoah County, VA, preserves the Belle Grove Plantation and portions of the battlefield with excellent walking tours. Metal detecting is prohibited in the national park, but surrounding private farmland in the Cedar Creek corridor has produced Civil War Minié balls, artillery fragments, and military hardware from the October 1864 battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Allatoona Pass",
@@ -2082,7 +2086,8 @@
     "description": "On October 5, 1864, Confederate General Samuel French attacked a small Union garrison defending the vital railroad supply depot at Allatoona Pass, GA, in an attempt to cut Sherman's supply line as Hood began his campaign northward through Georgia. The garrison under General John Corse held off the attackers for hours until relief forces appeared on the distant signal flags — the battle inspired the famous hymn 'Hold the Fort.' Allatoona Pass battlefield in Bartow County, GA, is preserved by the U.S. Army Corps of Engineers and Georgia DNR, with trails through the dramatic natural pass terrain and original earthwork remains. Metal detecting is not permitted in the preserved areas, but surrounding Bartow County private land has produced Civil War Minié balls and military hardware from the October 1864 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 68
   },
   {
     "name": "Siege of Petersburg",
@@ -2092,7 +2097,8 @@
     "description": "From June 1864 to April 1865, Grant's Army of the Potomac and Lee's Army of Northern Virginia faced each other across 37 miles of earthworks at the Siege of Petersburg, VA — the longest sustained siege in American history — while Grant used his numerical superiority to extend the Confederate lines ever westward until Lee's thinning defenses finally broke. The 293-day siege featured mining operations (culminating in the Battle of the Crater), repeated flank extensions, and constant pressure that ultimately wore down the Confederate army. Petersburg National Battlefield preserves portions of the extensive siege lines south and east of Petersburg, including the Crater site and City Point (Grant's headquarters). Metal detecting is strictly prohibited in the national park, but the enormous siege perimeter — much of which crosses private land — has been exceptionally productive, with Minié balls, artillery fragments, CS and US belt plates, buttons, and camp debris documented throughout the area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of the Crater",
@@ -2102,7 +2108,8 @@
     "description": "On July 30, 1864, Pennsylvania coal miners in the Union army tunneled under the Confederate lines at Petersburg, VA, and detonated four tons of black powder in the largest man-made explosion in North American history to that point — but the ensuing assault was mismanaged, with troops crowding into the crater rather than going around it, and Confederate counterattacks eventually retook the ground with heavy casualties including many Black Union troops. The failed attack cost the Union over 3,700 casualties and wasted an extraordinary tactical opportunity. The Crater site is preserved at Petersburg National Battlefield's eastern front units in Petersburg, VA, with a trail descending to the depression still visible in the ground. Metal detecting is strictly prohibited in the national park, but the surrounding Dinwiddie County private land has produced significant Civil War relics from the siege operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Second Reams Station",
@@ -2112,7 +2119,8 @@
     "description": "The second engagement at Reams Station on August 25, 1864, saw Confederate General A.P. Hill attack Union troops tearing up the Weldon Railroad, routing two Union Second Corps divisions that broke and fled despite numerical superiority — a morale failure Grant attributed to the exhaustion of veteran units after months of continuous combat. The defeat temporarily set back Union operations along the railroad south of Petersburg. The second Reams Station battlefield site in Dinwiddie County, VA, overlaps with the first engagement location and is largely private agricultural land. The broader Weldon Railroad corridor has produced Civil War Minié balls, railroad equipment, and military hardware from the intense operations of August 1864 on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Five Forks",
@@ -2122,7 +2130,8 @@
     "description": "On April 1, 1865, General Sheridan and the Army of the Potomac crushed the Confederate force defending the Five Forks road junction in Dinwiddie County, VA — Pickett's division was away at a 'shad bake' fish fry when the attack struck, and the Confederate right flank was shattered, forcing Lee to evacuate Richmond and Petersburg the following night. Five Forks was the decisive engagement that ended the siege of Petersburg and effectively sealed the Confederacy's fate. Five Forks Battlefield, part of Petersburg National Battlefield, preserves the road junction and earthwork remains in Dinwiddie County, VA, with interpretive trails. Metal detecting is prohibited in the national park, but surrounding private land in Dinwiddie County has produced April 1865 relics including Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Nashville",
@@ -2132,7 +2141,8 @@
     "description": "On December 15-16, 1864, General George Thomas's Army of the Cumberland delivered one of the most complete tactical victories of the Civil War, utterly destroying Hood's Army of Tennessee in a two-day battle at Nashville, TN — the Confederate army collapsed completely on the second day, with units simply dissolving and men streaming southward. The battle effectively ended Confederate military operations in the western theater. Nashville is a major modern city, and the battlefield terrain is largely within the metropolitan area — some earthwork fragments survive, with Tennessee Civil War National Heritage Area interpretation available. The Fort Negley and Fort Houston earthwork positions in Nashville are preserved as city parks, and private land on Nashville's outskirts has produced Civil War Minié balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Franklin",
@@ -2142,7 +2152,8 @@
     "description": "On November 30, 1864, in one of the war's most tragic engagements, Confederate General John Bell Hood ordered a frontal assault of 18,000 men across two miles of open ground against Union entrenchments at Franklin, TN — the charge killed six Confederate generals (more than any other battle), including the brilliant Patrick Cleburne, and inflicted horrific losses on the Army of Tennessee without breaking the Union position. The Union army withdrew that night, but the Confederate force had been effectively destroyed as an offensive weapon. The Carter House and Carnton Plantation in Franklin, TN, are preserved as private museums at the core of the battlefield, with the Confederate cemetery at Carnton containing over 1,500 soldier graves. Metal detecting is not permitted at the historic sites, but surrounding Williamson County private land has produced Civil War Minié balls, belt plates, and artillery fragments.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Spring Hill",
@@ -2152,7 +2163,8 @@
     "description": "On November 29, 1864, the day before Franklin, the entire Union Army of the Ohio slipped past Hood's Confederate army at Spring Hill, TN, in one of the war's great controversies — somehow, through a combination of darkness, miscommunication, and confusion, Schofield's entire force marched within earshot of Confederate camps and escaped northward to Franklin. Hood was furious and blamed his subordinates for what became known as 'the Spring Hill affair.' The Spring Hill battlefield in Maury County, TN, is partially preserved at the Thompson-Walker House and along Saturn Parkway, with the town of Spring Hill having grown substantially around the battle area. Surrounding private farmland has produced Civil War Minié balls and military hardware from the November 1864 Tennessee Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Saltville",
@@ -2162,7 +2174,8 @@
     "description": "On October 2, 1864, Union General Stephen Burbridge led a raid to destroy the vital Confederate salt works at Saltville, VA — a critical Confederate supply source — but was repulsed by Confederate defenders. The battle was followed by a massacre of wounded Black Union soldiers left on the field, a war crime attributed to Confederate forces including Champ Ferguson. Saltville, VA, in Smyth County preserves the historic salt works site and a small museum commemorating the battle. The surrounding Smyth County private land has produced Civil War Minié balls and military hardware, and the town's salt heritage museum provides context for the strategic importance of the site.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Tom's Brook",
@@ -2172,7 +2185,8 @@
     "description": "On October 9, 1864, Sheridan's cavalry under General Alfred Torbert achieved a decisive victory over Confederate cavalry under Rosser and Lomax at Tom's Brook in Shenandoah County, VA, routing both Confederate cavalry divisions and pursuing them for 26 miles — a rout so complete that Union troopers called it the 'Woodstock Races' after the pursued Confederates fled through Woodstock. The battle stripped Early's army of effective cavalry protection and contributed to the disaster at Cedar Creek ten days later. The Tom's Brook battlefield along U.S. Route 11 in Shenandoah County, VA, is largely private farmland with Civil War Trails markers. Surrounding private land in the Valley corridor has produced Civil War cavalry relics and Minié balls.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of Darbytown Road",
@@ -2182,7 +2196,8 @@
     "description": "On October 7, 1864, Confederate General Richard Anderson's forces attacked Union positions along the Darbytown Road north of the James River in Henrico County, VA, in one of several Confederate attempts to retake the ground lost at Chaffin's Farm and New Market Heights in late September. The attack was repulsed by Union forces including Black troops. The Darbytown Road battlefield is within the modern Richmond and Henrico County metropolitan area, largely developed. The broad Richmond perimeter north of the James has been productive for Civil War relic hunters on private land with permission, with Minié balls, artillery fragments, and military hardware found throughout the area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Hatcher's Run",
@@ -2192,7 +2207,8 @@
     "description": "On February 5-7, 1865, Grant extended his left flank at Hatcher's Run in Dinwiddie County, VA, in a major operation that failed to reach the Boydton Plank Road but succeeded in stretching the Confederate defensive line to its breaking point and establishing new siege positions. The battle was one of the last major engagements before the final breakthrough at Five Forks. The Hatcher's Run battlefield is partially preserved within Petersburg National Battlefield's western units in Dinwiddie County, VA, with earthwork traces visible in the second-growth forest. Metal detecting is prohibited in the national park, but surrounding private land has produced Civil War Minié balls and military hardware from the late-war Petersburg operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Waynesboro",
@@ -2202,7 +2218,8 @@
     "description": "On March 2, 1865, Sheridan's cavalry struck the remnant of Early's Confederate Valley Army at Waynesboro, VA, capturing over 1,600 men and virtually all of Early's artillery in a brief engagement that ended Confederate organized resistance in the Shenandoah Valley. Early escaped with a handful of officers, and the Shenandoah Valley was effectively cleared. Waynesboro, VA, in Augusta County is a modern small city; the battlefield is within the town and surrounding private farmland. The Shenandoah Valley private farmland in Augusta County has produced Civil War Minié balls, artillery fragments, and military hardware from the March 1865 operation and earlier Valley campaigns.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Bentonville",
@@ -2212,7 +2229,8 @@
     "description": "On March 19-21, 1865, Confederate General Joseph Johnston launched the last major Confederate offensive in the eastern theater at Bentonville, NC, attacking a portion of Sherman's March to the Sea army before the Union forces concentrated and counterattacked — Johnston's force was ultimately too small to achieve a decisive result and was forced to withdraw, ending any hope of stopping Sherman's advance to join Grant. Bentonville Battlefield State Historic Site in Johnston County, NC, preserves over 1,600 acres of the battle terrain with the Harper House (used as a field hospital) and excellent walking trails through intact earthworks. Metal detecting is not permitted in the state historic site, but surrounding Johnston County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from Sherman's March.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Averasborough",
@@ -2222,7 +2240,8 @@
     "description": "On March 16, 1865, Confederate General William Hardee's corps fought a delaying action at Averasborough, NC, against Sherman's left wing — buying Johnston time to concentrate his forces for the larger engagement at Bentonville three days later. The battle was one of the last significant Confederate offensive actions in the Carolinas. The Averasborough battlefield in Harnett County, NC, is preserved by a local foundation with interpretive trails near Dunn. Surrounding Harnett County private farmland has produced Civil War Minié balls and military hardware from the March 1865 Carolina Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 67
   },
   {
     "name": "Battle of Fort Stedman",
@@ -2232,7 +2251,8 @@
     "description": "On March 25, 1865, Lee ordered his last major offensive of the war — a dawn attack by General Gordon's corps on Fort Stedman in the Union siege lines east of Petersburg, VA — breaking through briefly before Union reserves counterattacked and sealed the breach, inflicting 4,000 Confederate casualties the Petersburg garrison could not replace. The defeat accelerated the Confederate collapse that would come just days later. Fort Stedman is preserved as part of Petersburg National Battlefield in Petersburg, VA, with the earthwork positions clearly visible on the tour drive. Metal detecting is prohibited in the national park, but surrounding Dinwiddie County private land has produced Civil War Minié balls and military hardware from the final phase of the Petersburg siege.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Sayler's Creek",
@@ -2242,7 +2262,8 @@
     "description": "On April 6, 1865, in the largest engagement of the Appomattox Campaign, Union forces overtook portions of Lee's retreating army at Sayler's Creek (Sailor's Creek), VA, cutting off two entire Confederate corps and capturing nearly 8,000 men — including eight generals. The disaster at Sayler's Creek prompted Lee's famous lament: 'My God, has the army dissolved?' Three days later he surrendered at Appomattox. Sayler's Creek Battlefield State Historical Park in Amelia and Prince Edward counties, VA, preserves the Hillsman and Overton-Hillsman farmhouses and the creek terrain. Metal detecting is not permitted in the state park, but surrounding private land along the Appomattox Campaign route has produced April 1865 Minié balls, buttons, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of High Bridge",
@@ -2252,7 +2273,8 @@
     "description": "On April 6-7, 1865, retreating Confederate forces burned most of the massive High Bridge railroad trestle over the Appomattox River in Prince Edward County, VA, while Union cavalry fought to prevent the destruction, galloping across the lower wagon bridge to attack the Confederate rear guard. The bridge was one of the engineering marvels of Virginia, and its partial destruction slowed but did not stop the Union pursuit. High Bridge Trail State Park in Prince Edward County, VA, features the restored bridge (now a rail-trail pedestrian bridge) 125 feet above the Appomattox River, a stunning historic landmark in an otherwise rural setting. Metal detecting is not permitted in the state park, but surrounding Prince Edward County private farmland along the Appomattox River has produced April 1865 Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Appomattox Court House",
@@ -2262,7 +2284,8 @@
     "description": "On April 9, 1865, the Army of Northern Virginia — reduced to perhaps 28,000 exhausted men — made its final attempt to break through the Union lines at Appomattox Court House, VA, before Lee sent out the white flag. Grant and Lee met in the parlor of Wilmer McLean's house to sign the terms of surrender that effectively ended the Civil War, four years after the first shots at Fort Sumter. Appomattox Court House National Historical Park preserves the entire village with the McLean House reconstruction, the original brick courthouse, and the surrender field in rural Appomattox County, VA. Metal detecting is strictly prohibited in the national park, but the surrounding private farmland along the retreat route from Petersburg has produced April 1865 Minié balls, discarded equipment, and military hardware — relics of Lee's last desperate march.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Mobile (Spanish Fort)",
@@ -2272,7 +2295,8 @@
     "description": "In March-April 1865, Union General E.R.S. Canby besieged Spanish Fort and Fort Blakely on the eastern shore of Mobile Bay, Alabama — two Confederate strongpoints protecting the city of Mobile. After a three-week siege, Confederate forces evacuated Spanish Fort on April 8, and Fort Blakely fell the following day in a massive Union assault, securing the final surrender of Mobile. The Spanish Fort and Fort Blakely sites in Baldwin County, AL, are partially preserved with earthwork remains; Blakely State Park maintains some of the most intact Civil War earthworks in the South, with hundreds of yards of preserved Confederate defensive lines. Metal detecting is not permitted in Blakely State Park, but the surrounding Baldwin County private land has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Selma",
@@ -2282,7 +2306,8 @@
     "description": "On April 2, 1865, Union cavalry under General James Wilson captured the Confederate industrial city of Selma, AL — home to the Selma Arsenal, foundries, and naval works that had supplied the Confederacy — in a battle where Wilson's troopers broke through a six-mile defensive perimeter and overwhelmed the outnumbered Confederate defenders under General Nathan Bedford Forrest. The fall of Selma destroyed the last major Confederate industrial capacity in the Deep South. Selma is a historic city on the Alabama River, and the battlefield terrain is largely within the modern city, with Old Live Oak Cemetery and various historical markers noting the engagement. The broader Dallas County area has produced Civil War cavalry relics on private land from Wilson's Raid through Alabama in the spring of 1865.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Columbus (Georgia)",
@@ -2292,7 +2317,8 @@
     "description": "On April 16, 1865 — one week after Lee's surrender at Appomattox — Union cavalry under General James Wilson attacked and captured Columbus, GA, in the last significant land battle of the Civil War east of the Mississippi, destroying the Confederate naval works, textile mills, and munitions facilities in the city. Confederate Brigadier General Reuben Wright's force made a spirited defense before being overwhelmed at midnight. Columbus, GA, is a modern city on the Chattahoochee River, and the battlefield is within the city limits, with a Heritage Walk and various historical markers noting the final battle's locations. The broader Chattahoochee Valley corridor has produced Civil War cavalry relics on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 40
   },
   {
     "name": "Second Battle of Corinth",
@@ -2302,7 +2328,8 @@
     "description": "On October 3-4, 1862, Confederate Generals Van Dorn and Price attacked the Union garrison at Corinth, MS, in a determined two-day assault that broke through the outer Union lines on October 3 before being repulsed with devastating losses on October 4 — Battery Robinett, defended by the 11th Missouri Infantry, was the scene of some of the most intense fighting. The Confederate defeat ended organized Southern resistance in northern Mississippi. The Corinth Civil War Interpretive Center in Corinth, MS, is an NPS site at the national cemetery interpreting the 1862 siege and battle; Battery Robinett earthworks are preserved nearby. Surrounding Alcorn County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from both the 1862 siege and battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Tupelo",
@@ -2312,7 +2339,8 @@
     "description": "On July 14-15, 1864, Union General Andrew Smith's force defeated Nathan Bedford Forrest's Confederate cavalry and supporting infantry at Tupelo (Harrisburg), MS, in a battle specifically designed to keep Forrest occupied and away from Sherman's supply lines during the Atlanta Campaign. Though Smith ultimately withdrew back to Memphis, the battle achieved its strategic goal of neutralizing Forrest for the crucial summer weeks. Tupelo National Battlefield is a small NPS unit in Tupelo, MS, preserving a portion of the battlefield terrain along Highway 6 near the city. Surrounding Lee County private farmland has produced Civil War Minié balls, artillery fragments, and cavalry relics from Forrest's operations in northeastern Mississippi.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of New Bern",
@@ -2322,7 +2350,8 @@
     "description": "On March 14, 1862, General Ambrose Burnside's amphibious force of 11,000 men landed at Slocum's Creek and attacked the Confederate defensive line south of New Bern, NC, routing the defenders and capturing the city in a battle that gave the Union a major foothold on the North Carolina coast. New Bern remained in Union hands for the rest of the war, serving as a major logistical base for coastal operations. New Bern, NC, is a well-preserved historic city at the confluence of the Neuse and Trent rivers, with numerous antebellum buildings and the New Bern Battlefield Park preserving a portion of the 1862 defensive positions. Metal detecting is not permitted in the preserved battlefield areas, but surrounding Craven County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Roanoke Island",
@@ -2332,7 +2361,8 @@
     "description": "On February 7-8, 1862, General Burnside and Flag Officer Goldsborough captured Roanoke Island, NC, the Confederate stronghold guarding Croatan Sound, with an amphibious assault that overwhelmed the island's defenders and opened the Albemarle Sound to Union naval operations. The fall of Roanoke Island enabled Burnside's subsequent operations against New Bern, Fort Macon, and the North Carolina coastal plain. The Roanoke Island Freedmen's Colony historical site and Fort Huger earthworks preserve portions of this largely forgotten but strategically vital 1862 operation. Dare County's barrier island landscape retains much of its 19th-century character, and the island's beaches and interior have yielded period artifacts during archaeological surveys.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Drewry's Bluff",
@@ -2342,7 +2372,8 @@
     "description": "On May 15, 1862, Confederate cannon at Drewry's Bluff on the James River below Richmond, VA, stopped a Union naval flotilla including the famous Monitor from steaming up to attack the Confederate capital — the high bluff presented firing angles the Monitor's guns couldn't match, and after an hour the Federal gunboats withdrew. The fort at Drewry's Bluff was a critical Confederate position throughout the war, also serving as a prisoner of war facility. Drewry's Bluff, now Fort Darling, is part of Richmond National Battlefield Park in Chesterfield County, VA, with the fort earthworks, gun emplacements, and the James River overlook well preserved. Metal detecting is prohibited in the national park, but surrounding private land along the James River corridor has produced Civil War naval and fort relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Secessionville",
@@ -2352,7 +2383,8 @@
     "description": "On June 16, 1862, Union forces under General Henry Benham launched an unauthorized predawn assault on Confederate Tower Battery (Fort Lamar) at Secessionville on James Island, SC, but were repulsed by a smaller Confederate garrison in a costly frontal attack that cost 683 Union casualties against 204 Confederate. The defeat ended Union operations toward Charleston from James Island for the time being. The Secessionville battlefield on James Island, SC (now part of suburban Charleston), has been partially preserved by the Secessionville Historical Society. Metal detecting is not permitted on preserved portions, but this area of the Sea Islands and Charleston Harbor has been historically productive for Civil War coastal fortification relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Olustee",
@@ -2362,7 +2394,8 @@
     "description": "On February 20, 1864, Confederate forces under General Joseph Finegan ambushed a Union column advancing from Jacksonville, FL, at Olustee (Ocean Pond) in the pine flatwoods of Baker County, routing the Federals and inflicting over 1,800 casualties in the bloodiest battle ever fought in Florida. Black Union regiments including the 54th Massachusetts and 8th USCT fought with particular distinction during the retreat. Olustee Battlefield Historic State Park near Olustee, FL, preserves the pine flatwood terrain with the original earthwork traces and an annual battle reenactment. Metal detecting is not permitted in the state park, but surrounding Baker County private pineland has produced Civil War Minié balls, artillery fragments, and military hardware from this decisive Florida engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Natural Bridge",
@@ -2372,7 +2405,8 @@
     "description": "On March 6, 1865, Confederate forces including Florida militia, cadets from the West Florida Seminary (Florida State University's predecessor), and regular troops repulsed a Union landing force attempting to cross the St. Marks River at Natural Bridge — the last Confederate defensive victory in the Deep South. The victory prevented the capture of Tallahassee, the only Confederate capital east of the Mississippi never occupied by Union forces. Natural Bridge Battlefield Historic State Park near Woodville, FL, preserves the crossing terrain with earthwork remnants and interpretive markers, holding an annual reenactment. Metal detecting is not permitted in the state park, but surrounding Leon and Wakulla County private land has produced Civil War Minié balls and military hardware from the engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of New Market Heights",
@@ -2382,7 +2416,8 @@
     "description": "On September 29, 1864, thirteen Black Union soldiers earned the Medal of Honor in the assault on New Market Heights north of the James River at Richmond, VA — one of the largest single-day awards of the Medal of Honor to Black soldiers in American history. The assault by USCT (United States Colored Troops) under General David Birney broke the Confederate line after withering close-range fire, demonstrating beyond question the combat effectiveness of Black Union troops. The New Market Heights battlefield in Henrico County, VA, is preserved as a Richmond National Battlefield Park unit. Metal detecting is prohibited in the national park, but surrounding Henrico County private land has produced Civil War Minié balls, USCT military hardware, and military equipment from the September 1864 Richmond operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Chaffin's Farm",
@@ -2392,7 +2427,8 @@
     "description": "On September 29-30, 1864, Union forces attacked the Confederate defenses north of the James River in a combined operation at Chaffin's Farm and New Market Heights, capturing Fort Harrison in one of the boldest Union tactical successes of the Petersburg Campaign and threatening the outer Richmond defenses. Confederate counterattacks on September 30 failed to retake Fort Harrison, which was held by the Union for the rest of the war as a key position in the expanding Richmond-Petersburg siege lines. Richmond National Battlefield Park's Fort Harrison unit in Henrico County, VA, preserves the earthworks with hiking trails along the extensive fortifications. Metal detecting is prohibited in the national park, but surrounding private land has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Boydton Plank Road",
@@ -2402,7 +2438,8 @@
     "description": "On October 27-28, 1864, Grant launched another extension of his siege lines at Petersburg, attempting to cut the Boydton Plank Road — the last Confederate supply route into the city — in a major operation involving 43,000 Union troops. Confederate forces under Hampton and Heth counterattacked and forced the Union forces back, but the operation succeeded in extending the siege lines and maintaining pressure. The Boydton Plank Road battlefield in Dinwiddie County, VA, is partially preserved within Petersburg National Battlefield's western units. Metal detecting is prohibited in the national park areas, but surrounding private farmland in Dinwiddie County has produced Civil War Minié balls, artillery fragments, and military hardware from the late 1864 siege operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Honey Hill",
@@ -2412,7 +2449,8 @@
     "description": "On November 30, 1864, a Union force attempting to cut the railroad between Charleston and Savannah was repulsed at Honey Hill (Grahamville), SC, in a battle fought through dense Carolina lowcountry vegetation that negated Union numerical superiority. The Confederate defenders, including a small force of regulars and militia, held their earthwork position against repeated assaults. The Honey Hill battlefield near Ridgeland, SC, in Hampton County is largely private farmland and woodland in the South Carolina coastal plain. The surrounding coastal plain private land has produced Civil War Minié balls, artillery fragments, and military hardware from the operations supporting Sherman's March through the Carolinas.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Second Fredericksburg",
@@ -2422,7 +2460,8 @@
     "description": "The Second Battle of Fredericksburg on May 3, 1863 — part of the Chancellorsville Campaign — saw Sedgwick's Union Sixth Corps storm the famous Marye's Heights that had slaughtered thousands the previous December, this time capturing the position relatively quickly as the Confederate force was thinner and surprised by the determination of the attack. Sedgwick then moved toward Chancellorsville before being stopped at Salem Church. Fredericksburg and Spotsylvania National Military Park preserves Marye's Heights, the Sunken Road and its famous stone wall, and the National Cemetery with its thousands of Union graves. Surrounding Stafford County private land has produced remarkable quantities of Civil War relics from the multiple engagements at Fredericksburg in 1862 and 1863.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 64
   },
   {
     "name": "Battle of Spotsylvania (Bloody Angle)",
@@ -2432,7 +2471,8 @@
     "description": "On May 12, 1864, the Union assault on the Mule Shoe salient at Spotsylvania Court House reached its climax at the 'Bloody Angle' — a jutting corner of Confederate earthworks where Union and Confederate troops fought hand-to-hand across log parapets for nearly 20 hours in pouring rain, with men pushing bayonets through the logs and using rifle butts as clubs in some of the most savage close-quarters combat of the entire war. The log breastwork at the Bloody Angle was reportedly knee-deep in bodies. Fredericksburg and Spotsylvania National Military Park preserves the original earthworks of the Bloody Angle in Spotsylvania County, VA, with a walking trail along the parapets — some of the most evocative surviving Civil War fortifications in America. Metal detecting is strictly prohibited, but surrounding private land has produced extraordinary quantities of Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 64
   },
   {
     "name": "Battle of North Anna",
@@ -2442,7 +2482,8 @@
     "description": "On May 23-26, 1864, Grant's army crossed the North Anna River in central Virginia and found Lee's army in a brilliant inverted V-shaped defensive position that threatened to destroy any Union force that crossed the river in two separated columns. But Lee fell ill at this critical moment and could not coordinate the offensive stroke that might have devastated Grant's army; Grant disengaged and moved around Lee's flank once more. The North Anna battlefield in Hanover County, VA, is partially preserved at Hanover County's North Anna Battlefield Park and at Jericho Mill, with earthwork traces visible in the forest. Surrounding private land has produced Civil War Minié balls and military hardware from the May 1864 Overland Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Wilson's Raid",
@@ -2452,7 +2493,8 @@
     "description": "In March-April 1865, Union General James Wilson led 13,500 cavalry in a devastating raid through Alabama and Georgia — the largest cavalry operation in the history of the Western Hemisphere — destroying Selma, Montgomery, Columbus (GA), and dozens of Confederate industrial and supply facilities. Wilson's Raid effectively ended Confederate industrial capacity in the Deep South as Lee was surrendering to the north. The raid route crosses hundreds of miles through Alabama and Georgia, with historical markers in multiple communities along the way. The raid corridor has produced Civil War cavalry relics on private land throughout Alabama and Georgia, including cavalry weapons, equipment, and camp debris.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Resaca",
@@ -2462,7 +2504,8 @@
     "description": "On May 13-15, 1864, the first major pitched battle of Sherman's Atlanta Campaign was fought at Resaca, GA, when Sherman tried to envelope Johnston's army through Snake Creek Gap before Johnston slipped away to the Resaca ridgeline. Two days of heavy fighting ended with Johnston withdrawing southward to avoid being flanked. Resaca Battlefield in Gordon County, GA, is preserved by the Resaca Confederate Cemetery and the privately-held Resaca Battlefield Civil War site, with earthwork remains and an ongoing preservation effort. Metal detecting is not permitted on the preserved battlefield, but surrounding Gordon County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the opening phase of the Atlanta Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of New Hope Church",
@@ -2472,7 +2515,8 @@
     "description": "On May 25-26, 1864, Sherman shifted his forces through rough terrain north of Dallas, GA, seeking to flank Johnston's Confederate army, only to encounter entrenched Confederate defenders at New Hope Church in a rainstorm — Union attacks were repulsed in brutal fighting in the densely wooded terrain. The area of New Hope Church, Dallas, and Pickett's Mill became the scene of ten days of constant skirmishing and entrenching that previewed the brutal combat of the Petersburg siege. New Hope Church battlefield in Paulding County, GA, is partially preserved by the Paulding County Historical Society. Surrounding private land in Paulding and Cherokee counties has produced Civil War Minié balls, artillery fragments, and military hardware from the ten days of Dallas-New Hope Church operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Pickett's Mill",
@@ -2482,7 +2526,8 @@
     "description": "On May 27, 1864, General Oliver Howard's Union corps attacked what was believed to be Johnston's exposed right flank at Pickett's Mill, GA — but the attack fell into a ravine with steep sides swept by Confederate fire, resulting in one of the Union's worst tactical defeats of the Atlanta Campaign, with 1,600 casualties against about 500 Confederate. Ambrose Bierce, who fought there, wrote a scathing account of the battle's incompetence. Pickett's Mill Battlefield Historic Site near Dallas, GA, is one of Georgia's finest preserved Civil War sites, with miles of hiking trails through intact ravine terrain and earthwork remains. Metal detecting is not permitted in the state park, but surrounding Paulding County private land has produced Civil War relics from the May 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Dallas",
@@ -2492,7 +2537,8 @@
     "description": "The Dallas, Georgia engagement from May 26 to June 4, 1864, was a week-long series of battles and skirmishes as Sherman's and Johnston's armies probed and entrenched along a line stretching from New Hope Church through Dallas and Pickett's Mill. Union assaults on the Confederate line at Dallas failed, and the campaign shifted back toward the railroad as both armies maneuvered through the dense north Georgia pine and hardwood forests. The Dallas battlefield area in Paulding County, GA, is partly preserved through various private and county preservation efforts. Surrounding Paulding County private land has produced Civil War Minié balls, artillery fragments, and military hardware from the extended May-June 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Kenesaw Mountain",
@@ -2502,7 +2548,8 @@
     "description": "The broader Kennesaw Mountain area saw weeks of skirmishing and maneuvering during June-July 1864 before Sherman's famous frontal assault on June 27. The Kenesaw Mountain battlefield position in Cobb County, GA (the alternate spelling is used in some records), saw Johnston's Confederate army occupy and fortify the mountain's northern and southern faces as Sherman attempted to find a way through. Kennesaw Mountain National Battlefield Park near Marietta, GA, preserves over 2,900 acres with the mountain summit, Big Kennesaw and Little Kennesaw positions, and miles of hiking trails leading to extensive earthwork remains. Metal detecting is strictly prohibited in the national park, but surrounding Cobb County private land has produced Civil War Minié balls, artillery fragments, and military hardware from this key Atlanta Campaign position.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Utoy Creek",
@@ -2512,7 +2559,8 @@
     "description": "On August 5-7, 1864, Union General Schofield's Army of the Ohio launched a series of attacks on the Confederate entrenchments at Utoy Creek on Atlanta's southwestern defenses, attempting to cut the last railroad into the city. The assaults were repulsed in heavy fighting, and Sherman was forced to resort to more extensive flanking maneuvers. The Utoy Creek battlefield is now entirely within the western Atlanta metropolitan area in Fulton County, GA, with the Utoy Creek area partially preserved near Ben Hill neighborhood. Civil War artifacts have been found during construction and development in the area, but conventional metal detecting is limited by urban development.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 35
   },
   {
     "name": "Grierson's Raid",
@@ -2522,7 +2570,8 @@
     "description": "From April 17 to May 2, 1863, Colonel Benjamin Grierson led 1,700 Union cavalrymen on a 600-mile raid from La Grange, TN, through the heart of Mississippi to Baton Rouge, LA, cutting telegraph lines, tearing up railroads, destroying Confederate supplies, and causing panic — all as a diversion supporting Grant's Vicksburg Campaign. Grierson's Raid was one of the most successful cavalry raids of the Civil War and inspired the novel and film 'The Horse Soldiers.' The raid route crosses multiple Mississippi counties from north to south, with Civil War Trails markers in various communities along the way. The corridor has produced Civil War cavalry relics on private farmland throughout central and southern Mississippi from the April-May 1863 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Morgan's Raid into Indiana and Ohio",
@@ -2532,7 +2581,8 @@
     "description": "From July 2 to July 26, 1863, Confederate General John Hunt Morgan led over 2,000 cavalry on a 700-mile raid across Kentucky, Indiana, and Ohio — the deepest penetration of Confederate forces into Northern territory during the war — before being captured near Salineville, Ohio, after his command was destroyed piece by piece. Morgan's bold invasion terrorized the Indiana and Ohio countryside but achieved no lasting strategic result. Morgan's route is marked by historical markers through southern Indiana (Corydon) and across southern Ohio; the Salineville site in Columbiana County, OH, marks the surrender point. The raid corridor across Indiana and Ohio has produced period cavalry relics on private farm and ranch land, where Morgan's troopers abandoned equipment during their desperate flight.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Cloyd's Mountain",
@@ -2542,7 +2592,8 @@
     "description": "On May 9, 1864, General George Crook's Union force defeated Confederate General Albert Jenkins at Cloyd's Mountain, VA, in the opening blow of Grant's coordinated spring offensive — the victory opened the way to the vital New River Bridge and the Virginia and Tennessee Railroad. Jenkins was mortally wounded during the battle. The Cloyd's Mountain battlefield in Pulaski County, VA, is preserved by the Civil War Trust with hiking trails through the wooded mountain terrain. Surrounding Pulaski County private land has produced Civil War Minié balls and military hardware from this important but often overlooked engagement in the Virginia mountains.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of New River Bridge",
@@ -2552,7 +2603,8 @@
     "description": "On May 10, 1864, the day after Cloyd's Mountain, Crook's Union cavalry destroyed the New River Bridge at Central Depot (Radford), VA — the vital Virginia and Tennessee Railroad span — crippling the Confederate supply line to Lee's army in the Shenandoah Valley. The destruction of the bridge forced Confederate forces to make emergency repairs under pressure. The bridge site at the New River in Radford, VA (Montgomery County), is within the modern city; the river gorge terrain is largely unchanged. The Montgomery County area along the New River has produced Civil War relics on private land from Crook's 1864 raid through southwest Virginia.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Piedmont",
@@ -2562,7 +2614,8 @@
     "description": "On June 5, 1864, Union General David Hunter's forces defeated and killed Confederate General William 'Grumble' Jones at Piedmont in Augusta County, VA, opening the Shenandoah Valley to Hunter's subsequent advance on Lexington and the destruction of VMI. Jones's defeat and death left the Valley poorly defended for weeks. The Piedmont battlefield in Augusta County, VA, is largely private farmland in the southern Shenandoah Valley near Port Republic. The Augusta County and Rockingham County corridor has produced significant Civil War relics from the multiple 1862, 1863, and 1864 operations in the central Shenandoah Valley on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Lynchburg",
@@ -2572,7 +2625,8 @@
     "description": "On June 17-18, 1864, General Jubal Early's Confederate forces arrived by railroad from Richmond just in time to defend Lynchburg, VA, from Hunter's advancing Union army — the arrival of Breckinridge's corps emboldened the Confederates to counterattack, and Hunter withdrew westward over the mountains, effectively ceding the Shenandoah Valley and enabling Early's subsequent raid on Washington. The battle preserved Lynchburg — a vital Confederate supply and hospital city — for the rest of the war. The Lynchburg battlefield terrain is partially within the city limits of Lynchburg, VA, with Civil War Trails markers at key positions. Surrounding Campbell County private farmland has produced Civil War Minié balls and military hardware from the June 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Monocacy",
@@ -2582,7 +2636,8 @@
     "description": "On July 9, 1864, Confederate General Jubal Early's invading force of 15,000 men defeated a Union scratch force of 5,000 under General Lew Wallace at the Monocacy River crossing near Frederick, MD — a tactical Confederate victory that was a strategic Union success, as Wallace's doomed stand bought Washington enough time to receive reinforcements before Early arrived at Fort Stevens. Wallace's decision to fight — knowing he would lose — is one of the war's most consequential command decisions. Monocacy National Battlefield near Frederick, MD, preserves over 1,600 acres of the battlefield with the Best Farm, Worthington Farm, and the Thomas Farm, all scene of intense fighting. Metal detecting is prohibited in the national park, but surrounding Frederick County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Fort Stevens",
@@ -2592,7 +2647,8 @@
     "description": "On July 11-12, 1864, Jubal Early's Confederate forces reached the northern defenses of Washington at Fort Stevens in the Brightwood neighborhood (present-day DC), where President Abraham Lincoln came under fire from Confederate sharpshooters — the only time a sitting president has been under enemy fire in combat. The Confederates, seeing the arriving Union reinforcements, withdrew without assaulting the fort. Fort Stevens in Washington, D.C., is preserved as a small park by the National Park Service, with a portion of the earthwork parapet remaining — Lincoln reportedly stood on these very ramparts as soldiers were shot nearby. Metal detecting is not permitted in the national park or in Washington, D.C., but the approach routes through Montgomery County, MD, private land have produced Confederate relics from Early's 1864 invasion.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Rutherford's Farm",
@@ -2602,7 +2658,8 @@
     "description": "On July 20, 1864, Union cavalry under General William Averell defeated a Confederate infantry force at Rutherford's Farm near Winchester, VA, in a sharp engagement that slowed Early's army for a day following the Fort Stevens raid. The battle was a minor tactical success but demonstrated the growing aggressiveness of Union cavalry in the Shenandoah Valley. The Rutherford's Farm battlefield in Frederick County, VA, near Winchester is largely private farmland in the lower Shenandoah Valley. The Winchester area and lower Valley corridor has produced Civil War Minié balls, buttons, and military hardware from the multiple 1864 operations on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Kernstown (Second)",
@@ -2612,7 +2669,8 @@
     "description": "On July 24, 1864, Confederate General Jubal Early routed a Union force under General George Crook at the Second Battle of Kernstown near Winchester, VA — the same ground where Jackson had been defeated in 1862 — driving the Federals back toward the Potomac River and temporarily regaining Confederate control of the lower Shenandoah Valley. The victory emboldened Early's subsequent raids into Pennsylvania. The Second Kernstown battlefield in Frederick County, VA, overlaps with the First Kernstown site from 1862; Civil War Trust has preserved portions of this terrain. Surrounding private farmland in the Winchester-Kernstown corridor has produced Civil War Minié balls, artillery fragments, and military hardware from multiple 1862 and 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Cool Spring",
@@ -2622,7 +2680,8 @@
     "description": "On July 18, 1864, Union General Horatio Wright's Sixth Corps was ambushed while crossing the Shenandoah River at Cool Spring (Castleman's Ferry), Clarke County, VA, by Confederate forces that inflicted over 400 casualties before the Union force withdrew back across the river. The engagement demonstrated the difficulty of Union offensive operations in the Valley before Sheridan's forces were consolidated. Cool Spring Battlefield in Clarke County, VA, is preserved by the Civil War Trust with excellent hiking access along the Shenandoah River corridor. Clarke County's rolling horse country private farmland has produced Civil War Minié balls, cavalry relics, and military hardware from the summer 1864 Shenandoah Valley operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Guard Hill",
@@ -2632,7 +2691,8 @@
     "description": "On August 16, 1864, a Union cavalry force under General Wesley Merritt encountered Confederate cavalry near Guard Hill (Front Royal), Warren County, VA, in a skirmish along the Shenandoah River during the early stages of Sheridan's campaign to clear the Valley. The engagement was one of several daily cavalry fights as Sheridan consolidated his Army of the Shenandoah. The Guard Hill area near Front Royal in Warren County, VA, is largely private farmland along the Shenandoah River. The Front Royal area has produced Civil War cavalry relics and Minié balls on private land from the active 1864 Valley Campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Crooked Run",
@@ -2642,7 +2702,8 @@
     "description": "On August 16, 1864, Union cavalry under General George Custer fought Confederate cavalry at Crooked Run (near Front Royal, VA) on the same day as the Guard Hill engagement — these twin actions were part of the cavalry screening operations as both armies jockeyed for position in the northern Shenandoah Valley before the decisive Third Battle of Winchester in September. The Crooked Run area in Warren County, VA, is largely private farmland. The active cavalry operations of August 1864 left numerous relics across the lower Valley farmlands, and private land in Warren County has produced Civil War cavalry and infantry relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Winchester (First 1862)",
@@ -2652,7 +2713,8 @@
     "description": "On May 25, 1862, Stonewall Jackson's Valley Army struck Nathaniel Banks's Federals at Winchester, VA, driving them north through the streets and out of the city in a rout that swept Union forces all the way to the Potomac River. The victory was the dramatic climax of Jackson's Valley Campaign, threatening Washington and forcing Lincoln to divert 40,000 Union troops from McClellan's Peninsula Campaign to protect the capital. Winchester saw three Civil War battles (1862, 1863, 1864), and the battlefield preservation effort in Frederick County, VA, has protected significant portions of all three engagement sites. The broader Winchester area private farmland has produced remarkable quantities of Civil War relics from the multiple battles fought across this ground.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Second Winchester",
@@ -2662,7 +2724,8 @@
     "description": "On June 13-15, 1863, General Jubal Early's Confederate division routed the Union garrison at Winchester, VA, under General Robert Milroy as part of Lee's opening moves in the Gettysburg Campaign — Milroy refused to believe the reports of Confederate forces until it was too late, losing nearly 4,000 men captured and his entire artillery train. The defeat cleared the Shenandoah Valley for Lee's invasion of Pennsylvania. The Second Winchester battlefield in Frederick County, VA, is partially preserved by the Civil War Trust and the Shenandoah Valley Battlefields Foundation. Private land in the Winchester corridor has produced Civil War Minié balls, artillery fragments, and military hardware from the June 1863 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Snicker's Gap",
@@ -2672,7 +2735,8 @@
     "description": "On July 17-18, 1864, Union forces crossed the Shenandoah River at Snicker's Ferry below Snicker's Gap in Clarke County, VA, to engage Early's retreating Confederates, resulting in a confused action at Parker's Ford that saw the Federals driven back across the river with significant losses. The engagement was part of the Union pursuit of Early following his Fort Stevens raid. The Snicker's Gap and Snicker's Ferry area in Clarke County, VA, is private horse country farmland in the Virginia Blue Ridge foothills. The Clarke County corridor has produced Civil War cavalry relics and Minié balls on private land from the summer 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Ash Hollow (Blue Water Creek)",
@@ -2682,7 +2746,8 @@
     "description": "On September 3, 1855, General William Harney led 600 U.S. Army soldiers in a dawn attack on a Brulé Lakota Sioux village at Blue Water Creek (Ash Hollow) in Nebraska Territory, killing approximately 85 warriors, women, and children and capturing 70 more in retaliation for the Grattan Massacre of 1854. The battle was one of the opening engagements of the Army's sustained campaigns against the Plains Indians and demonstrated the brutal character of frontier warfare. The Blue Water Creek battlefield in Garden County, Nebraska, is near Lewellen; the Ash Hollow State Historical Park nearby preserves the wagon road history of the region. The surrounding Garden County area saw early Plains Indian conflict, and private land in the valley has produced period .58 caliber Springfield musket balls and military hardware from the 1855 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Little Bighorn",
@@ -2692,7 +2757,8 @@
     "description": "On June 25, 1876, Lieutenant Colonel George Armstrong Custer led roughly 210 men of the 7th Cavalry into a massive encampment of Lakota Sioux, Northern Cheyenne, and Arapaho warriors along the Little Bighorn River in Montana Territory, resulting in the complete annihilation of his command in what became the most famous defeat in American military history. The combined Indian force, numbering perhaps 2,000 warriors led by Sitting Bull and Crazy Horse, overwhelmed Custer's divided regiment in a battle that lasted less than an hour. The battlefield is preserved as Little Bighorn Battlefield National Monument, with white marble headstones marking where each soldier fell across the rolling Montana grassland ridges. Metal detecting is strictly prohibited on the monument grounds, but archaeological surveys have recovered hundreds of .45-70 Springfield cartridge casings and Henry rifle rounds that helped reconstruct the battle's flow — the surrounding private ranch land in the Bighorn Valley saw extensive cavalry movements and camp activity.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of the Rosebud",
@@ -2702,7 +2768,8 @@
     "description": "On June 17, 1876, eight days before Little Bighorn, General George Crook's column of 1,300 soldiers and 262 Crow and Shoshone scouts was attacked by approximately 1,500 Lakota and Cheyenne warriors under Crazy Horse on Rosebud Creek in Montana Territory — a fierce six-hour battle that forced Crook to retreat, effectively removing his column from the Little Bighorn campaign and allowing Custer to advance unsupported. The Battle of the Rosebud has been called one of Crazy Horse's greatest tactical achievements. The Rosebud Battlefield State Park near Kirby, Montana, preserves the battlefield terrain, one of Montana's most intact Indian Wars sites. Metal detecting is not permitted in the state park, but surrounding Big Horn and Rosebud County private ranch land has produced .45-70 Springfield and Indian-fired cartridge casings and cavalry equipment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of Wolf Mountains",
@@ -2712,7 +2779,8 @@
     "description": "On January 8, 1877, Colonel Nelson Miles's 5th Infantry regiment fought Crazy Horse's Lakota warriors in the rugged Wolf Mountains of Montana Territory in a winter battle fought in sub-zero temperatures and a blinding snowstorm. Miles's artillery broke the Indian assault, and Crazy Horse withdrew — one of the last significant actions of the Great Sioux War before the surrenders of 1877. The Wolf Mountains battlefield in Rosebud County, Montana, is remote private ranch land in the Tongue River badlands. The surrounding area has produced Indian Wars-era .45-70 Springfield cartridge casings and cavalry equipment, and the remote battlefield is largely unchanged from the January 1877 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 75
   },
   {
     "name": "Battle of Cedar Creek (Montana)",
@@ -2722,7 +2790,8 @@
     "description": "On October 21, 1876, Colonel Nelson Miles's 5th Infantry caught Sitting Bull's band near Cedar Creek in eastern Montana Territory, engaging in several days of negotiations and fighting before Sitting Bull's people escaped northward toward Canada. The engagement was part of Miles's aggressive winter campaign that would eventually drive Sitting Bull and his followers into Canadian exile. The Cedar Creek area in Prairie County, Montana, is remote private ranch and federal land. The eastern Montana badlands have produced Indian Wars cartridge casings and cavalry equipment on private and public land from Miles's sustained 1876-77 campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 74
   },
   {
     "name": "Battle of Slim Buttes",
@@ -2732,7 +2801,8 @@
     "description": "On September 9-10, 1876, General George Crook's starving column — on the desperate 'Horsemeat March' following Little Bighorn — found and attacked a Lakota village at Slim Buttes in Dakota Territory (present-day Harding County, SD), killing the headman American Horse and capturing the village before Crazy Horse arrived with reinforcements that briefly threatened to overrun the camp. The battle was the first Union offensive success following the Little Bighorn disaster. Slim Buttes in Harding County, South Dakota, is remote private ranch land and national grassland in the northern Great Plains. The surrounding area has produced Indian Wars-era .45-70 Springfield casings and cavalry equipment in isolated finds from this remote campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 76
   },
   {
     "name": "Battle of Dull Knife",
@@ -2742,7 +2812,8 @@
     "description": "On November 25, 1876, Colonel Ranald Mackenzie's 4th Cavalry destroyed the Northern Cheyenne village of Dull Knife (Morning Star) and Little Wolf in the Bighorn Mountains of Wyoming Territory, burning their lodges and winter food stores and seizing their horses — forcing the Northern Cheyenne into a desperate winter flight that resulted in enormous suffering. The destruction of Dull Knife's village was one of the decisive blows of the Great Sioux War campaign. The Dull Knife (Red Fork Canyon) battlefield in Johnson County, Wyoming, is remote private ranch land in the Powder River Basin. The region has produced Indian Wars .45-70 Springfield casings and cavalry equipment from Mackenzie's 1876 Powder River Expedition on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of Lame Deer",
@@ -2752,7 +2823,8 @@
     "description": "On May 7, 1877, Colonel Nelson Miles ambushed the last significant Lakota holdout under Chief Lame Deer at Muddy Creek (Lame Deer Creek) in Montana Territory, killing Lame Deer and his war chief Iron Star when a brief peace conference erupted into violence. The engagement effectively ended organized Lakota resistance and brought the Great Sioux War to a close. The Lame Deer battle site on Muddy Creek in Rosebud County, Montana, is near the modern Northern Cheyenne Reservation community of Lame Deer. Indian Wars .45-70 Springfield cartridge casings and cavalry equipment have been found in the region from the 1877 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Nez Perce (Clearwater)",
@@ -2762,7 +2834,8 @@
     "description": "On July 11-12, 1877, the Nez Perce under Chief Looking Glass fought General Oliver Howard's 400-man force on the bluffs above the Clearwater River in Idaho Territory, holding off the Army long enough to escape eastward over the Lolo Trail in the beginning of the famous Nez Perce retreat toward Canada. The Battle of the Clearwater was one of the opening engagements of the 1,700-mile running campaign. The Clearwater Battlefield near Kamiah, Idaho, is preserved as a National Historic Landmark on private and tribal land, with Civil War Trails-style interpretive markers along Highway 12. The surrounding Idaho County area has produced Indian Wars .45-70 Springfield cartridge casings and cavalry equipment from the 1877 Nez Perce campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Big Hole",
@@ -2772,7 +2845,8 @@
     "description": "On August 9-10, 1877, Colonel John Gibbon's 7th Infantry attacked the Nez Perce camp on the Big Hole River in Montana Territory at dawn, initially breaking into the sleeping camp but then being driven back and pinned down by Nez Perce warriors who counter-attacked and besieged Gibbon's force for two days. The Nez Perce lost approximately 60-90 people including many women and children, but the survivors escaped to continue their remarkable flight. Big Hole National Battlefield near Wisdom, Montana, preserves the battlefield with the original tepee pole frames still standing in the meadow, one of the most evocative battlefield landscapes in America. Metal detecting is strictly prohibited in the national monument, but the surrounding Beaverhead County private ranch land has produced Indian Wars .45-70 Springfield cartridge casings and Winchester .44-40 rounds from the engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Canyon Creek",
@@ -2782,7 +2856,8 @@
     "description": "On September 13, 1877, Colonel Samuel Sturgis's 7th Cavalry attempted to intercept the fleeing Nez Perce at Canyon Creek in Montana Territory — a canyon east of present-day Billings — but the Nez Perce rear guard held off the cavalry while the main band escaped up the canyon and onto the plains, continuing the great flight northward toward Canada. The battle demonstrated the Nez Perce's remarkable tactical skill in combining combat with movement. The Canyon Creek battlefield near Billings in Yellowstone County, Montana, is largely private ranch and agricultural land. The surrounding Billings area and Canyon Creek corridor have produced Indian Wars cartridge casings and cavalry equipment from the September 1877 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Bear Paw",
@@ -2792,7 +2867,8 @@
     "description": "In late September and early October 1877, the Nez Perce were caught 40 miles from the Canadian border at Bear Paw Mountain in Montana Territory by Colonel Nelson Miles's troops, fighting a six-day siege before Chief Joseph's famous surrender speech: 'From where the sun now stands, I will fight no more forever.' The capture of Joseph's band ended the 1,700-mile Nez Perce retreat and placed the survivors in reservation captivity far from their Idaho homeland. Bear Paw Battlefield, part of Nez Perce National Historical Park, is a beautifully preserved and interpreted site near Chinook in Blaine County, Montana, with original tepee rings, earthworks, and an evocative landscape. Metal detecting is strictly prohibited in the national park, but surrounding Blaine County ranch land has produced Indian Wars cartridge casings and Nez Perce camp artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 40
   },
   {
     "name": "Sand Creek Massacre",
@@ -2802,7 +2878,8 @@
     "description": "On November 29, 1864, Colonel John Chivington led 700 Colorado volunteers in a dawn assault on Black Kettle's peaceful Cheyenne and Arapaho village at Sand Creek in the Colorado Territory, killing approximately 150 people — mostly women, children, and elderly — and mutilating the bodies in an atrocity that shocked even a war-hardened nation and inflamed the southern Plains wars for years. The massacre is now widely recognized as one of the most horrific war crimes committed against Native Americans. Sand Creek Massacre National Historic Site in Kiowa County, Colorado, is a remote but powerfully interpreted site preserving the cottonwood creek valley where the attack occurred, managed in partnership with Cheyenne and Arapaho tribes. Metal detecting is strictly prohibited in the national site, but the surrounding Kiowa County ranches have produced period .58 caliber musket balls and military hardware from the engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Beecher Island",
@@ -2812,7 +2889,8 @@
     "description": "On September 17-25, 1868, a company of 50 frontier scouts under Colonel George Forsyth was surrounded by approximately 750 Cheyenne, Sioux, and Arapaho warriors on a sandy island in the Arikaree Fork of the Republican River in Colorado Territory — the scouts held out for eight days, killing the renowned Cheyenne war chief Roman Nose and fighting off repeated charges from behind their horses' bodies until relief arrived. Lieutenant Frederick Beecher was killed in the action, giving the site its name. The Beecher Island battlefield in Yuma County, Colorado, is marked by a monument near Wray, CO, on private and public land. The surrounding northeastern Colorado ranch country has produced Indian Wars-era Spencer and Springfield cartridge casings and frontier scout equipment from the 1868 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of Summit Springs",
@@ -2822,7 +2900,8 @@
     "description": "On July 11, 1869, General Eugene Carr's 5th Cavalry — guided by Buffalo Bill Cody as chief scout — surprised and destroyed the village of Cheyenne war chief Tall Bull at Summit Springs in Washington County, Colorado Territory, killing 52 warriors including Tall Bull and rescuing two white captives, breaking the power of the Cheyenne Dog Soldiers on the Republican River. The battle effectively ended Cheyenne raids on the Kansas-Colorado settlements. The Summit Springs battlefield in Washington County, Colorado, is marked by a monument and state historical marker on private ranch land in the northeastern Colorado shortgrass prairie. The surrounding Washington County area has produced Indian Wars-era cartridge casings and cavalry equipment from the 1869 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Adobe Walls",
@@ -2832,7 +2911,8 @@
     "description": "On June 27, 1874, approximately 700 Comanche, Cheyenne, and Kiowa warriors under Quanah Parker launched a dawn assault on 28 buffalo hunters at Adobe Walls in Hutchinson County, Texas — but the hunters' Sharps buffalo rifles, accurate to 1,000 yards, held off the massed cavalry charges in a battle that demonstrated the lethal precision of the buffalo hunters' weapons. One hunter, Billy Dixon, made a famous mile-plus shot that reportedly struck a warrior from the saddle. The Adobe Walls battle site near Canadian, TX, has a monument and state historical marker on private ranch land in the Texas Panhandle. The surrounding Hutchinson County private ranch land has produced Indian Wars-era Sharps .50 caliber cartridge casings, trade goods, and battle debris from the 1874 engagement — a significant but accessible private land detecting site.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 82
   },
   {
     "name": "Battle of Palo Duro Canyon",
@@ -2842,7 +2922,8 @@
     "description": "On September 28, 1874, Colonel Ranald Mackenzie's 4th Cavalry discovered and attacked Quanah Parker's main Comanche camp in the dramatic hidden canyon of Palo Duro in the Texas Panhandle, routing the warriors with few casualties but destroying their lodges, food, and winter supplies — then killing 1,048 captured horses to prevent their recovery. The destruction of their winter resources broke the Comanches' will to fight and ended the Red River War. Palo Duro Canyon State Park near Canyon, TX, is one of Texas's most spectacular parks, with the dramatic 800-foot canyon walls and a replica of the Red River War battlefield interpretive area. Metal detecting is not permitted in the state park, but surrounding Randall County private ranch land has produced Comanche camp artifacts and .45-70 Springfield cartridge casings from the 1874 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Red River (Sweetwater Creek)",
@@ -2852,7 +2933,8 @@
     "description": "The Red River War of 1874 was a multi-column campaign by five U.S. Army columns that relentlessly pursued the Comanche, Kiowa, and Southern Cheyenne across the Texas Panhandle, engaging them in multiple small fights along Sweetwater Creek and other Red River tributaries until the tribes were exhausted and forced back to the reservation. The battle at Sweetwater Creek in Wheeler County, TX, was one of these many actions. The remote Texas Panhandle has been largely unchanged since the 1874 campaign, and the Sweetwater Creek corridor in Wheeler County, TX, is private ranch land. The Red River War campaign corridor has produced Indian Wars-era cartridge casings and military hardware on private ranch land throughout the Texas Panhandle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Wichita Agency",
@@ -2862,7 +2944,8 @@
     "description": "On August 22, 1874, the Red River War opened with an attack by Kiowa warriors on a company of soldiers escorting a surveying party at the Wichita Agency (Anadarko) in Indian Territory (present-day Oklahoma) — warriors from the reservation attacked civilians and soldiers in broad daylight, marking the formal beginning of the Red River War. The town of Anadarko, OK, in Caddo County sits near the original agency location, now largely within the modern community. The Red River War campaign area across southwestern Oklahoma has produced Indian Wars-era cartridge casings and military hardware on private land from the 1874 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 48
   },
   {
     "name": "Wounded Knee Massacre",
@@ -2872,7 +2955,8 @@
     "description": "On December 29, 1890, soldiers of the 7th Cavalry attempted to disarm Chief Big Foot's band of Miniconjou Lakota Sioux at Wounded Knee Creek on the Pine Ridge Reservation in South Dakota — when a deaf warrior named Black Coyote refused to surrender his rifle, a shot was fired (its origin disputed), and the soldiers opened fire with rifles and Hotchkiss mountain guns, killing approximately 250-300 men, women, and children and effectively ending the Plains Indian Wars. The massacre remains one of the most traumatic events in Native American history. Wounded Knee is on the Pine Ridge Indian Reservation in Shannon County, SD; a small church cemetery marks the mass grave, and the site has become a place of pilgrimage and protest. The area is tribal land, and no outside metal detecting is permitted — the site is a deeply sacred place of mourning for the Lakota people.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of White Bird Canyon",
@@ -2882,7 +2966,8 @@
     "description": "On June 17, 1877, the first battle of the Nez Perce War was fought when Captain David Perry led 99 soldiers into White Bird Canyon in Idaho Territory and was ambushed by Nez Perce warriors using the terrain expertly, killing 34 soldiers and wounding 4 in one of the Army's worst small-unit defeats of the Indian Wars. The Nez Perce had not started the fight — young warriors had killed settlers, triggering the war — but their tactical victory at White Bird Canyon showed the Army they faced a formidable opponent. White Bird Battlefield in Idaho County, Idaho, is preserved as part of Nez Perce National Historical Park, with dramatic canyon views and interpretive trails along Highway 95. Metal detecting is prohibited in the national park, but surrounding Idaho County private land has produced Indian Wars .45-70 Springfield and .45-60 Sharps cartridge casings from the 1877 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of the Lolo Trail",
@@ -2892,7 +2977,8 @@
     "description": "In late July 1877, the Nez Perce under Chief Looking Glass crossed the Bitterroot Mountains on the ancient Lolo Trail into Montana Territory, where Captain Charles Rawn's small force had built a small fortification ('Fort Fizzle') to block their passage — the Nez Perce simply went around Rawn's position through the mountains while the settlers negotiated safe passage, continuing their remarkable flight. The Lolo Trail crossing in Lolo, Missoula County, Montana, is commemorated at Fort Fizzle Historical Site along U.S. Highway 12. The Lolo Trail (now a forest service road) traverses rugged Bitterroot Mountain terrain in the Clearwater and Lolo National Forests, and the surrounding area has produced Indian Wars-era artifacts near the trail corridor.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.72,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Camas Creek",
@@ -2902,7 +2988,8 @@
     "description": "On August 19-20, 1877, Nez Perce warriors raided General Howard's camp at Camas Creek (Camas Meadows) in Idaho Territory near present-day Kilgore, stealing approximately 150 mules from the Army pack train in a daring night operation that delayed Howard's pursuit for several days. The brilliant raid was one of the Nez Perce's most effective tactics in slowing the pursuing Army. The Camas Meadows battlefield in Clark County, Idaho, is now within the agricultural fields of the upper Snake River Plain near Kilgore, ID. The surrounding Clark County area has produced Indian Wars-era cartridge casings from the 1877 Nez Perce campaign on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 65
   },
   {
     "name": "Fetterman Fight",
@@ -2912,7 +2999,8 @@
     "description": "On December 21, 1866, Captain William Fetterman led exactly 80 men from Fort Phil Kearny along the Bozeman Trail in Wyoming Territory — reportedly boasting he could ride through the entire Sioux nation with 80 men — and was lured into a perfectly executed ambush by Red Cloud's warriors led by Crazy Horse acting as decoy, resulting in the complete annihilation of the command in what was the worst U.S. Army defeat on the Plains until Little Bighorn a decade later. The disaster forced the Army to close the Bozeman Trail forts and sign the Fort Laramie Treaty of 1868. The Fetterman Fight site in Johnson County, Wyoming, is preserved as Fetterman Battle Site — a small state historic site near Story, WY, with a monument and interpretive markers on the ridge where the soldiers died. Metal detecting is not permitted at the state site, but surrounding Johnson County private ranch land has produced Indian Wars .58 caliber Springfield and .50 caliber cartridge casings, arrowheads, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 48
   },
   {
     "name": "Wagon Box Fight",
@@ -2922,7 +3010,8 @@
     "description": "On August 2, 1867, a small company of 32 soldiers under Captain James Powell were attacked by over 1,000 Sioux warriors near Fort Phil Kearny, Wyoming Territory — but instead of dying as at Fetterman, the soldiers had just received new breech-loading Springfield rifles capable of rapid fire, and the unprecedented volume of fire repulsed repeated charges with enormous warrior casualties. The Wagon Box Fight demonstrated that new repeating technology had fundamentally changed the balance between soldiers and warriors in open terrain. The Wagon Box Fight site near Story in Johnson County, Wyoming, has a state historical marker; the immediate area is largely private ranch land. The Johnson County area has produced Indian Wars-era cartridge casings, arrowheads, and military hardware from the intense 1866-68 Powder River country operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 50
   },
   {
     "name": "Hayfield Fight",
@@ -2932,7 +3021,8 @@
     "description": "On August 1, 1867 — the day before the Wagon Box Fight — a mowing party and their military escort near Fort C.F. Smith in Montana Territory fought off a major Crow and Sioux attack from behind their wagon barricades using new breech-loading rifles, inflicting severe casualties on the warriors. The twin victories at Hayfield and Wagon Box demonstrated to Red Cloud's coalition that the new Springfield repeaters had changed the tactical equation. Fort C.F. Smith was on the Bighorn River near present-day Fort Smith in Big Horn County, Montana; the site is on private and federal land. The surrounding Big Horn County ranch country has produced Indian Wars cartridge casings and military hardware from the 1867 Big Horn campaigns.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Platte Bridge Station",
@@ -2942,7 +3032,8 @@
     "description": "On July 26, 1865, a large Cheyenne, Sioux, and Arapaho force attacked the Platte Bridge Station (near present-day Casper, WY), ambushing Lieutenant Caspar Collins and a small relief column with approximately 3,000 warriors — Collins was killed, and the Sergeant Custard's wagon train escort was wiped out nearby. The battle was one of the most significant Plains Indian victories of 1865. The battle site in Natrona County, Wyoming, near Casper, is commemorated by Fort Caspar Museum and Historic Site on the grounds of the reconstructed fort. Metal detecting is not permitted at the historic site, but surrounding Natrona County private land has produced Indian Wars-era cartridge casings and military hardware from the Platte Bridge operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Killdeer Mountain",
@@ -2952,7 +3043,8 @@
     "description": "On July 28, 1864, General Alfred Sully led 2,200 soldiers against a large encampment of Hunkpapa, Sioux, and allied tribes at Killdeer Mountain in Dakota Territory (present-day North Dakota), driving them from their fortified positions in the badlands with artillery. The battle was part of Sully's punitive expedition following the Dakota War of 1862. Killdeer Mountain Battlefield State Historic Site in Dunn County, North Dakota, preserves the dramatic butte terrain with interpretive trails and a monument. Metal detecting is not permitted in the state historic site, but surrounding Dunn County private ranch land has produced Indian Wars-era .58 caliber Springfield musket balls and military hardware from Sully's 1864 expedition.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Whitestone Hill",
@@ -2962,7 +3054,8 @@
     "description": "On September 3-5, 1863, General Alfred Sully's forces attacked a large Sioux encampment at Whitestone Hill in Dakota Territory (present-day Dickey County, ND), killing approximately 100-150 warriors and capturing 156 in a controversial attack on a camp that included many peaceful bands. The battle sparked intense debate about the indiscriminate nature of Plains Indian warfare. Whitestone Hill State Historic Site in Dickey County, North Dakota, preserves the battlefield with monuments and interpretive markers. Metal detecting is not permitted in the state historic site, but surrounding Dickey County private farmland has produced Indian Wars-era military hardware and musket balls from the 1863 Dakota Expedition.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 76
   },
   {
     "name": "Battle of Wood Lake",
@@ -2972,7 +3065,8 @@
     "description": "On September 23, 1862, the decisive engagement of the Dakota War ended when Colonel Henry Sibley's force defeated Little Crow's warriors at Wood Lake in Yellow Medicine County, Minnesota, after the warriors' pre-dawn ambush was prematurely triggered. The victory ended major combat operations of the Dakota War, leading to the surrender of hundreds of Dakota and the infamous mass execution of 38 warriors at Mankato — the largest mass execution in American history. Wood Lake Battle Site in Yellow Medicine County, Minnesota, is a state historic site with a monument and interpretive markers in the prairie lake country of southwestern Minnesota. Metal detecting is not permitted in the state historic site, but surrounding Yellow Medicine County private farmland has produced Civil War-era musket balls and military hardware from the 1862 Minnesota Dakota War.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Birch Coulee",
@@ -2982,7 +3076,8 @@
     "description": "On September 2-3, 1862, a detachment of Minnesota volunteers under Captain Hiram Grant was surrounded by Dakota warriors at Birch Coulee while burying the dead from earlier massacres, and was besieged for 31 hours before Colonel Sibley's relief column arrived — losing 23 men killed and 60 wounded in one of the costliest engagements of the Dakota War relative to numbers engaged. Birch Coulee Battlefield State Historic Site in Renville County, Minnesota, preserves the defensive perimeter used by the besieged soldiers in a rural prairie setting. Metal detecting is not permitted in the state historic site, but surrounding Renville County private farmland has produced Dakota War-era musket balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of New Ulm",
@@ -2992,7 +3087,8 @@
     "description": "On August 19-23, 1862, the German immigrant community of New Ulm, Minnesota, repulsed two major Dakota Sioux attacks during the Dakota War, with civilian defenders and arriving militia fighting off warriors throughout the town and ultimately burning buildings to create fields of fire. The town was largely destroyed, and survivors were evacuated before the Dakota War ended. New Ulm, MN, in Brown County is a well-preserved German-American historic community; the Battle of New Ulm Museum and Schell's Brewery (used as a refuge during the battle) preserve the history. The Brown County area has produced Dakota War-era musket balls and period hardware on private land near the battle sites.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Fort Ridgely",
@@ -3002,7 +3098,8 @@
     "description": "On August 20-22, 1862, Dakota warriors under Little Crow attacked the undermanned Fort Ridgely on the Minnesota River in Nicollet County, the key military post in the region, twice attempting to overwhelm the garrison before being repulsed both times by cannon fire that the Dakota could not counter. The fort's survival was crucial to preventing the Dakota War from spreading further east. Fort Ridgely State Park and Historic Site in Nicollet County, Minnesota, preserves the original stone commissary building and reconstructed features of the 1862 fort. Metal detecting is not permitted in the state park, but surrounding Nicollet County private farmland has produced Dakota War-era musket balls and military hardware from the August 1862 attacks.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Steptoe Disaster",
@@ -3012,7 +3109,8 @@
     "description": "On May 17, 1858, Lieutenant Colonel Edward Steptoe led a column of 152 dragoons into the Palouse country of Washington Territory to mediate a dispute, only to be attacked by over 1,000 Palouse, Spokane, and Coeur d'Alene warriors who surrounded and overwhelmed the soldiers, forcing a desperate overnight retreat to safety — the Army's worst defeat in the Pacific Northwest. The subsequent punitive expedition under Colonel George Wright forced the submission of the region's tribes. The Steptoe Battlefield near Steptoe, Whitman County, Washington, is marked by a state monument on a farmland butte. Surrounding Whitman County agricultural land (the Palouse wheat-growing region) has produced period .58 caliber musket balls and military equipment from the 1858 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Four Lakes",
@@ -3022,7 +3120,8 @@
     "description": "On September 1, 1858, Colonel George Wright's punitive expedition against the tribes who had defeated Steptoe fought the Battle of Four Lakes near present-day Spokane, WA, defeating a large force of Spokane, Palouse, and Coeur d'Alene warriors with disciplined infantry fire and artillery. Wright's new long-range rifles proved decisive against warriors charging on horseback. The Four Lakes battlefield is within the modern Spokane metropolitan area, largely developed. The Spokane area has produced Indian Wars-era .58 caliber Springfield rounds and military hardware from Wright's 1858 campaign during construction and development projects.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Spokane Plains",
@@ -3032,7 +3131,8 @@
     "description": "On September 5, 1858, four days after Four Lakes, Colonel George Wright's forces decisively defeated a united force of Pacific Northwest tribes at Spokane Plains near present-day Spokane, WA, breaking their military resistance and forcing submission. Wright then executed horses (confiscating over 800) and hanged tribal leaders — brutal measures that ended the Plateau Indian War. The Spokane Plains battlefield is within modern Spokane, WA, entirely developed. Wright's subsequent march through eastern Washington and Idaho resulted in the submission of multiple tribes and the permanent opening of the interior Pacific Northwest to American settlement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Bear River",
@@ -3042,7 +3142,8 @@
     "description": "On January 29, 1863, Colonel Patrick Connor led 300 California Infantry volunteers in a dawn assault on a Shoshone village at the confluence of Beaver Creek and the Bear River in Idaho Territory (near present-day Preston, ID) — killing approximately 250-400 men, women, and children in what is now classified as a massacre and considered one of the largest slaughters of Native Americans in American history. The engagement ended Shoshone resistance to settlement of the Great Salt Lake region. The Bear River Massacre National Historic Landmark near Preston, Franklin County, Idaho, is preserved with a monument and interpretive site on private and public land. Metal detecting is not permitted at the historic site, but surrounding Franklin County farmland has produced Civil War-era musket balls and military hardware from the 1863 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Canyon de Chelly",
@@ -3052,7 +3153,8 @@
     "description": "In January 1864, Colonel Kit Carson led the U.S. Army through Canyon de Chelly in present-day Arizona — the sacred homeland of the Navajo people — capturing or starving out the Navajo who had taken refuge in the canyon's rock alcoves and forcing their surrender, which led to the Long Walk of over 9,000 Navajo to the Bosque Redondo reservation in New Mexico. Carson's campaign ended Navajo resistance and forced a traumatic four-year exile. Canyon de Chelly National Monument in the Navajo Nation of northeastern Arizona preserves the spectacular red rock canyon with 1,000-year-old cliff dwellings and is managed cooperatively with the Navajo tribe. Navajo tribal permit is required to enter the canyon beyond White House Trail; the entire area is tribal land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of the Washita",
@@ -3062,7 +3164,8 @@
     "description": "On November 27, 1868, Lieutenant Colonel George Armstrong Custer led a dawn raid on Black Kettle's Cheyenne village on the Washita River in Indian Territory (present-day Oklahoma) — the same chief who had survived Sand Creek — killing Black Kettle and approximately 103 warriors, women, and children. The surprise attack was controversial both then and now, with critics pointing to the peaceful nature of many of the village's occupants. Washita Battlefield National Historic Site near Cheyenne, OK, in Roger Mills County preserves the village site on a scenic river bend with an excellent visitor center. Metal detecting is prohibited in the national site, but surrounding Roger Mills County private land has produced Indian Wars-era .45-70 Springfield and .50 caliber cartridge casings from the 1868 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 52
   },
   {
     "name": "Marias Massacre",
@@ -3072,7 +3175,8 @@
     "description": "On January 23, 1870, Major Eugene Baker led four cavalry companies in a dawn attack on a peaceful Piegan Blackfoot village of Chief Heavy Runner on the Marias River in Montana Territory — killing approximately 173 Blackfoot people, mostly women and children, as the warriors were away on a hunting trip and much of the village was suffering from smallpox. The massacre was one of the most horrific and unjustified in the Indian Wars and provoked significant controversy in Washington. The Marias Massacre site near the Two Medicine River confluence in Pondera County, Montana, is on private ranch land with a small marker. Metal detecting is not permitted without landowner permission, but the surrounding Marias River valley has produced period .50-70 Springfield Government cartridge casings and cavalry equipment from the 1870 operation.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Lost River",
@@ -3082,7 +3186,8 @@
     "description": "On November 29, 1872, the Modoc War began when U.S. soldiers attempted to arrest Captain Jack's Modoc band at Lost River in Oregon Territory and the confrontation erupted in gunfire, killing soldiers and Modoc warriors and triggering the conflict. The Modoc retreated to the lava beds south of Tule Lake in California. The Lost River battle site near Merrill, Klamath County, Oregon, is on private agricultural land. The Klamath Basin area has produced Indian Wars-era .50 caliber Springfield rounds and military hardware from the 1872-73 Modoc War on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of the Lava Beds",
@@ -3092,7 +3197,8 @@
     "description": "From November 1872 to June 1873, approximately 60 Modoc warriors under Captain Jack (Kintpuash) defended a labyrinthine volcanic lava formation in northern California against repeated Army assaults by forces five to ten times larger — twice routing the soldiers in disastrous frontal attacks through the treacherous terrain. The Modoc War cost the lives of two generals (including Canby, the only general killed in the Indian Wars) and ended only when Captain Jack was betrayed by members of his own band. Lava Beds National Monument in Siskiyou and Modoc counties, California, preserves the remarkable lava fortress with hiking access to Captain Jack's Stronghold and the cave system where the Modoc held off the Army. Metal detecting is strictly prohibited in the national monument, but the surrounding private land in the lava bed region has produced period .50-70 cartridge casings and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Dry Lake",
@@ -3102,7 +3208,8 @@
     "description": "On May 10, 1873, U.S. soldiers caught up with the surviving Modoc warriors at Dry Lake in northern California after Captain Jack's band had fragmented and members began surrendering or fighting separately. The engagement at Dry Lake in Modoc County effectively ended the Modoc War's active combat phase, with the final Modoc leaders captured within weeks and Captain Jack eventually hanged. The Dry Lake area in Modoc County, California, is remote high desert country near Tule Lake. The surrounding region of the Modoc War campaign has produced Indian Wars cartridge casings and military equipment on private and public land from the 1872-73 conflict.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of the Big Dry Wash",
@@ -3112,7 +3219,8 @@
     "description": "On July 17, 1882, the last significant engagement of the Apache Wars in Arizona occurred at Big Dry Wash (General Springs Canyon) on the Mogollon Rim, when U.S. cavalry under Captains Chaffee and MacGowan ambushed a band of White Mountain Apache warriors who had broken out of the San Carlos Reservation. The warriors were routed with heavy casualties, ending White Mountain Apache armed resistance. The Big Dry Wash battlefield is in the Coconino National Forest on the Mogollon Rim near General Springs in Yavapai County, Arizona. Metal detecting is not permitted in national forests without special permit, but the remote Rim Country surrounding area has produced Indian Wars .45-70 Springfield and .45-55 cartridge casings from the 1882 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Turret Peak",
@@ -3122,7 +3230,8 @@
     "description": "On March 27, 1873, Captain George Randall's scouts located and attacked a Yavapai Apache band on the summit of Turret Peak in the Sierra Ancha of central Arizona Territory, killing approximately 23 warriors in a surprise attack that was part of General Crook's Tonto Basin Campaign — the systematic destruction of Apache bands throughout the central Arizona mountains. The Tonto Basin Campaign brought hundreds of Apache in for surrender in the winter and spring of 1873. Turret Peak in Maricopa County, Arizona, is a remote desert mountain accessible via forest service roads. The surrounding Tonto National Forest and private ranch lands have produced Indian Wars .45-55 and .50 caliber cartridge casings from Crook's 1872-73 Apache campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.72,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Skeleton Canyon",
@@ -3132,7 +3241,8 @@
     "description": "In September 1886, Geronimo and his small band of Apache warriors surrendered to General Nelson Miles at Skeleton Canyon in the Peloncillo Mountains along the Arizona-New Mexico border — ending the last significant armed resistance to U.S. authority in the continental United States and closing the Apache Wars. The surrender of Geronimo (who had eluded 5,000 soldiers and 500 Apache scouts for months) was one of the most publicized military events of the late 19th century. Skeleton Canyon in Hidalgo County, New Mexico, is accessible via private ranches and BLM land in the remote Peloncillo Mountains. The surrounding Peloncillo and San Bernardino Valley area has produced Indian Wars .45-70 cartridge casings and cavalry equipment from the final Apache campaigns on private and public land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 80
   },
   {
     "name": "Battle of Apache Pass",
@@ -3142,7 +3252,8 @@
     "description": "In February 1861, the Bascom Affair at Apache Pass (Stein's Peak area) in the Dos Cabezas Mountains of Arizona Territory ignited a decade of Apache warfare when Lieutenant George Bascom accused Cochise of kidnapping a settler's child and attempted to take him hostage — Cochise escaped, and the retaliatory killings of hostages on both sides launched the bloodiest chapter of the Apache Wars. The Apache Pass itself on the route of the Butterfield Overland Mail in Cochise County, Arizona, preserves Fort Bowie National Historic Site, accessible via a 1.5-mile trail through the rocky desert. Metal detecting is prohibited in the national historic site, but surrounding Cochise County private ranch land has produced Indian Wars-era .50 caliber Springfield rounds, Sharps carbine casings, and cavalry equipment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Manila Bay",
@@ -3152,7 +3263,8 @@
     "description": "On May 1, 1898, Commodore George Dewey's Asiatic Squadron steamed into Manila Bay and destroyed the Spanish fleet in a one-sided naval battle — the opening engagement of the Spanish-American War in the Pacific — fighting for seven hours before the last Spanish ship was silenced, sinking ten warships with no American deaths from enemy fire. The victory gave the United States control of the Philippines and launched a Pacific empire. Manila Bay in the Philippines is a major commercial harbor today, with the historic battle site largely in the shipping lanes off Cavite Naval Station. The original Spanish ships (now extensively salvaged) lie in the bay bottom as historic underwater sites, and period naval hardware has been recovered by divers and fishermen over the decades.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of San Juan Hill",
@@ -3162,7 +3274,8 @@
     "description": "On July 1, 1898, the crowning engagement of the Cuba campaign saw American regulars and Theodore Roosevelt's Rough Riders (officially the 1st Volunteer Cavalry) assault the Spanish-held heights above Santiago de Cuba — the charge up Kettle Hill (adjacent to San Juan Hill proper) made Roosevelt a national hero and propelled him toward the presidency. The coordinated assault including Black regular Army units of the 9th and 10th Cavalry captured the heights at heavy cost but opened the road to Santiago. San Juan Hill is now El Viso Hill in Santiago, Cuba, with the famous Charge monument and American Cemetery on the site. Access to Cuban battlefields is limited, but the surrounding Santiago area has produced period .30-40 Krag Springfield rifle casings and Spanish Mauser rounds from the 1898 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Kettle Hill",
@@ -3172,7 +3285,8 @@
     "description": "On July 1, 1898, Theodore Roosevelt led the charge up Kettle Hill — the adjacent position to San Juan Hill that is actually shown in most famous photographs of 'the charge' — in what he later called 'the greatest day of my life.' The Rough Riders and Black cavalry of the 9th and 10th regiments broke the Spanish position and joined the main assault on San Juan Hill. Kettle Hill and San Juan Hill are preserved as El Viso Hill park in Santiago, Cuba, with monuments and the American military cemetery. The surrounding Santiago Province has produced Spanish-American War-era .30-40 Krag and 7mm Mauser cartridge casings on private land from the July 1898 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Las Guasimas",
@@ -3182,7 +3296,8 @@
     "description": "On June 24, 1898, the first land engagement of the Cuba campaign was fought at Las Guasimas when dismounted Rough Riders and Regular Army cavalry pushed through the Cuban jungle toward Santiago, clashing with Spanish rear guard troops. The battle was tactically inconclusive but gave the Americans experience in Cuban terrain before the decisive battles at San Juan Heights. Las Guasimas in Santiago Province, Cuba, is accessible by rural road near the village of Siboney. The coastal Santiago Province has produced Spanish-American War-era cartridge casings from both American and Spanish forces on private land near the 1898 campaign routes.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 37
   },
   {
     "name": "Battle of El Caney",
@@ -3192,7 +3307,8 @@
     "description": "On July 1, 1898 — the same day as San Juan Hill — General William Shafter ordered a secondary assault on the small Spanish blockhouse fort at El Caney, which was expected to fall in two hours but held out all day against 6,600 American soldiers, delaying the entire campaign. The 500-man Spanish garrison under General Vara del Rey fought stubbornly until overwhelmed. El Caney, now a suburb northeast of Santiago de Cuba, preserves a small museum and monument at the fortified blockhouse site. The Santiago Province countryside has produced Spanish-American War cartridge casings and military hardware from the July 1898 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Santiago de Cuba (Naval)",
@@ -3202,7 +3318,8 @@
     "description": "On July 3, 1898, Spanish Admiral Cervera attempted to break out of the blockaded Santiago de Cuba harbor with his four cruisers and two destroyers — all were sunk or beached by the waiting American fleet under Admiral William Sampson and Commodore Winfield Schley in a three-hour battle along the Cuban coast. The destruction of the Spanish Caribbean fleet ended Spain's ability to continue the war in Cuba. The battle was fought in the waters off the southern Cuba coast west of Santiago, with the wrecks of Cervera's ships scattered along the rocky shoreline. The Spanish shipwrecks have been extensively dived and salvaged over the decades, with period naval artifacts recovered by Cuban and international divers.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Guantanamo Bay",
@@ -3212,7 +3329,8 @@
     "description": "In June 1898, U.S. Marines landed at Guantanamo Bay on the southeastern coast of Cuba in the war's first amphibious landing, fighting off Spanish forces and establishing the base that would be used to support the Santiago campaign. The engagement included a famous incident where Stephen Crane (author of 'The Red Badge of Courage') was under fire reporting the battle for the New York World. Guantanamo Bay Naval Station has occupied the site continuously since 1898, now known primarily for its post-2001 detention facility. The base and surrounding area are U.S. military property; the Cuban side of the bay boundary is accessible to Cuban nationals.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 36
   },
   {
     "name": "Battle of Manila",
@@ -3222,7 +3340,8 @@
     "description": "On August 13, 1898, American forces under General Wesley Merritt attacked and captured the walled city of Manila from Spanish defenders in a staged battle — a secret arrangement between the Spanish and American commanders to allow a formal surrender to Americans rather than to Emilio Aguinaldo's Filipino forces, setting the stage for the subsequent Philippine-American War. The Battle of Manila ended the Spanish-American War in the Philippines and began American colonial rule. The Intramuros (walled city of Manila) in modern Manila, Philippines, preserves significant Spanish colonial fortifications that survived World War II damage, with the Fort Santiago complex open to visitors. The Manila Bay area and surrounding provincial land have produced Spanish-American War-era and Philippine-American War artifacts during construction and archaeological work.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Gonzales",
@@ -3232,7 +3351,8 @@
     "description": "On October 2, 1835, the first shots of the Texas Revolution were fired at Gonzales, Texas, when Mexican cavalry attempted to recover a cannon loaned to the Gonzales colonists for defense against Indians. The defiant Texans flew a flag reading 'Come and Take It' and fired the cannon at the Mexican soldiers, who withdrew — a defiance that triggered the broader revolt. Gonzales is a small Texas city on the Guadalupe River, with the Come and Take It cannon and a small downtown historical district commemorating the 'Lexington of Texas.' The surrounding Gonzales County private farmland has produced period Mexican musket balls and early Texas military hardware from the 1835 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of the Alamo",
@@ -3242,7 +3362,8 @@
     "description": "From February 23 to March 6, 1836, approximately 189 Texas defenders including Davy Crockett, Jim Bowie, and William Barret Travis held the fortified Alamo mission in San Antonio against General Santa Anna's army of 2,000-6,000 Mexican soldiers for 13 days before being overwhelmed and killed in a final assault — their deaths rallied Texas and the world to the cause of Texas independence, 'Remember the Alamo' becoming the battle cry. The Alamo (formally Mission San Antonio de Valero) is today the most visited historic site in Texas, preserved in downtown San Antonio by the Daughters of the Republic of Texas (now under State of Texas management). Metal detecting is not permitted at the Alamo and surrounding state park grounds, but the broader Bexar County area has produced Mexican and Texan musket balls, uniform hardware, and military artifacts on private land from the 1836 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Goliad (Coleto Creek)",
@@ -3252,7 +3373,8 @@
     "description": "On March 19-20, 1836, Colonel James Fannin's force of 300 Texan soldiers was surrounded at Coleto Creek in Victoria County, Texas, by General Urrea's Mexican army while retreating from Goliad, and surrendered after a pitched battle in the open prairie. On Palm Sunday, March 27, Santa Anna's order to execute prisoners was carried out and approximately 342 Texan prisoners were marched out and shot — the Goliad Massacre. The Presidio La Bahía and Mission Espíritu Santo near Goliad, Texas, are remarkably preserved Colonial and Revolution-era structures, with the massacre site marked on the grounds. Metal detecting is not permitted at the historic sites, but surrounding Goliad County private farmland has produced period Mexican and Texan musket balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of San Jacinto",
@@ -3262,7 +3384,8 @@
     "description": "On April 21, 1836, General Sam Houston's Texas army caught Santa Anna's force napping during their afternoon siesta at San Jacinto, TX, and launched an 18-minute charge that routed and destroyed the Mexican army — killing or capturing over 1,500 men while suffering only 9 killed, and capturing Santa Anna himself the following day. 'Remember the Alamo, Remember Goliad!' was the battle cry of the charge that secured Texas independence. San Jacinto Battleground State Historic Site near La Marque, TX, preserves the battlefield with the 570-foot San Jacinto Monument (taller than the Washington Monument), the battleship Texas, and the original April 21 terrain. Metal detecting is not permitted in the state historic site, but surrounding Harris and Galveston County private land has produced period Mexican and Texan musket balls and military hardware from the decisive independence battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Refugio",
@@ -3272,7 +3395,8 @@
     "description": "In March 1836, a small force of Texan volunteers under Captain Amon King was sent to rescue settlers near Refugio Mission, only to be caught between Mexican forces from multiple directions. King's force was destroyed, and most survivors were executed — part of the series of Texas Revolution disasters in March 1836 preceding the Alamo and Goliad. Mission Nuestra Señora del Refugio in Refugio, Texas, is preserved as a historic site in Refugio County. The surrounding South Texas ranch country has produced period Mexican musket balls and military hardware from the 1836 Texas Revolution operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Concepción",
@@ -3282,7 +3406,8 @@
     "description": "On October 28, 1835, in the first significant Texan offensive action of the revolution, approximately 90 Texas volunteers under Jim Bowie and James Fannin defeated a Mexican force of 275-400 soldiers near Mission Concepción just south of San Antonio, using the river bank's edge for cover in one of the early demonstrations of Texan riflemen's effectiveness against Mexican formations. Mission Concepción, the oldest unrestored stone church in America, still stands in San Antonio today as part of San Antonio Missions National Historical Park. Metal detecting is not permitted in the national park, but surrounding Bexar County private land has produced period musket balls and military hardware from the 1835 Bexar campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 38
   },
   {
     "name": "Siege of Bexar",
@@ -3292,7 +3417,8 @@
     "description": "In November-December 1835, the Army of Texas besieged and captured San Antonio de Béxar, the main Mexican military base in Texas, in a siege culminating in three days of house-to-house fighting through the city's flat-roofed buildings before General Cos surrendered on December 9. The victory cleared central Texas of Mexican military power, though Santa Anna's subsequent invasion would reverse the situation in early 1836. San Antonio is a modern metropolitan area incorporating multiple historical sites including the Alamo, the four surviving missions, and the de la Villita historic district, all in Bexar County. The broader San Antonio area has produced period Mexican and Texan musket balls and military hardware during construction projects.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Stillman's Run",
@@ -3302,7 +3428,8 @@
     "description": "On May 14, 1832, Illinois militia under Major Isaiah Stillman fled in panic from a small band of Sac warriors under Black Hawk who had approached under a white flag to negotiate — the militia's rout (and the killing of three Sac warriors sent as messengers under the flag) launched the Black Hawk War and gave the battle its derisive name. Abraham Lincoln, then a militia captain, arrived at the battlefield the next day to help bury the dead. The Stillman Valley battlefield in Ogle County, Illinois, has a small cemetery and historical marker at the approximate site. The surrounding Rock River valley agricultural land has produced early 19th-century musket balls and military hardware from the 1832 Black Hawk War operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Wisconsin Heights",
@@ -3312,7 +3439,8 @@
     "description": "On July 21, 1832, Wisconsin militia under Colonel Henry Dodge attacked Black Hawk's band on the bluffs above the Wisconsin River near present-day Sauk City, WI — the warriors fought a fierce rear-guard action to protect women, children, and elderly crossing the river on makeshift rafts during the night. The battle was part of Black Hawk's desperate retreat toward the Mississippi, which would end in the massacre at Bad Axe two weeks later. Wisconsin Heights Battlefield State Historical Site in Sauk County, Wisconsin, preserves a portion of the bluff terrain with markers and trails. The surrounding Sauk County agricultural land along the Wisconsin River has produced early 19th-century musket balls and military hardware from the 1832 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Bad Axe (Black Hawk War)",
@@ -3322,7 +3450,8 @@
     "description": "On August 2, 1832, the Black Hawk War ended in a massacre at the mouth of the Bad Axe River (present-day Vernon County, WI) where Black Hawk's band — reduced from over 1,000 to perhaps 500 exhausted, starving survivors — attempted to cross the Mississippi River and was cut down by soldiers and an armed steamboat, killing approximately 150 warriors, women, and children while many others drowned or were captured. Black Hawk himself surrendered shortly after. The Bad Axe battlefield near Victory, Wisconsin, is marked by a state historical monument, and the Mississippi River bluffs terrain of the site is a striking landscape. The surrounding Vernon County agricultural land along the Mississippi has produced early 19th-century musket balls and military hardware from the final battle of the Black Hawk War.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Pecatonica",
@@ -3332,7 +3461,8 @@
     "description": "On June 16, 1832, a company of Wisconsin volunteers under Colonel Henry Dodge caught up with a Kickapoo raiding party in the rolling hills near the Pecatonica River in present-day Green County, Wisconsin, killing all eleven warriors in a sharp skirmish — one of the few decisive early engagements of the Black Hawk War. The battle helped establish Dodge's reputation and contributed to his political career in Wisconsin Territory. The Pecatonica battle site near Wiota in Lafayette County, Wisconsin, is private agricultural land in the Driftless Area. The surrounding Green and Lafayette county farmland has produced early 19th-century musket balls from the Black Hawk War period.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Okeechobee",
@@ -3342,7 +3472,8 @@
     "description": "On December 25, 1837, the largest battle of the Second Seminole War was fought at Lake Okeechobee, Florida, when Colonel Zachary Taylor led 800 soldiers through a mile of sawgrass swamp to attack Billy Bowlegs's Seminole warriors entrenched in a dense hammock on the lake shore, suffering 26 killed and 112 wounded. Taylor's technical 'victory' sent him on the path toward the presidency ('Old Rough and Ready'), though the Seminoles escaped into the Everglades. Okeechobee Battlefield Historic State Park near Okeechobee, FL, preserves a portion of the battlefield terrain. The Lake Okeechobee area in Okeechobee County, FL, has produced period musket balls and military hardware from the extensive Seminole War operations in south-central Florida.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Lake Apopka",
@@ -3352,7 +3483,8 @@
     "description": "In the spring of 1837, U.S. forces operating in central Florida encountered Seminole resistance near Lake Apopka in Orange County as part of the ongoing Second Seminole War operations through the Florida interior. The Lake Apopka area saw military operations as the Army attempted to clear the central Florida region of Seminole resistance during the prolonged guerrilla war. Lake Apopka in Orange County, FL, is now a significant restoration project (formerly one of Florida's most polluted lakes); the surrounding private land and state wildlife management area have produced period musket balls and Seminole War-era military hardware. The Second Seminole War (1835-1842) left artifacts across a vast swath of central and south Florida.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.72,
+    "detecting_weight": 52
   },
   {
     "name": "Dade Massacre",
@@ -3362,7 +3494,8 @@
     "description": "On December 28, 1835, a column of 108 U.S. soldiers under Major Francis Dade was ambushed and nearly annihilated by approximately 180 Seminole warriors under Micanopy, Alligator, and Jumper near present-day Bushnell, FL, as the soldiers marched from Fort Brooke (Tampa) to Fort King (Ocala) — only three men survived the initial assault. The Dade Massacre launched the Second Seminole War, the longest and most costly Indian war in American history. Dade Battlefield Historic State Park near Bushnell, FL, preserves a remarkable 80-acre site with reconstructed breastworks and the graves of the soldiers who fell. Metal detecting is not permitted in the state park, but surrounding Sumter County private agricultural land has produced period musket balls and military hardware from the 1835 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Wahoo Swamp",
@@ -3372,7 +3505,8 @@
     "description": "On November 21, 1836, General Richard Call led a force of Florida militia and U.S. regulars into Wahoo Swamp along the Withlacoochee River in Sumter County, FL, driving Osceola's Seminole warriors from their hammock stronghold — a rare offensive success in the notoriously frustrating Seminole War. The Withlacoochee River swamps provided ideal defensive terrain for the Seminole, and the Army rarely dislodged them. The Wahoo Swamp battle site in Sumter County, FL, is within the Withlacoochee State Forest, accessible by forest trails but with no formal battlefield preservation. The surrounding Withlacoochee watershed private land has produced Second Seminole War musket balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.72,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Hatcheelustee Creek",
@@ -3382,7 +3516,8 @@
     "description": "In January 1837, U.S. forces operating in south-central Florida clashed with Seminole warriors at Hatcheelustee Creek in Columbia County as part of the ongoing effort to suppress the Second Seminole War and drive the Seminole south of the Withlacoochee River. The engagement was one of dozens of small fights spread across north Florida's swampy terrain during the grinding guerrilla conflict. The Hatcheelustee Creek area in Columbia County, FL, is largely private and state forest land near Lake City. The north Florida private farmland and former military reservation land has produced Second Seminole War period musket balls and military hardware from the extensive 1835-42 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.7,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Loxahatchee",
@@ -3392,7 +3527,8 @@
     "description": "On January 15, 1838, General Thomas Jesup led approximately 1,500 soldiers in an assault across the Loxahatchee River in south Florida, driving Seminole warriors from a prepared position in the dense saw palmetto scrub — one of the largest engagements of the Second Seminole War in south Florida. The battle area is now within the Jonathan Dickinson State Park area in Martin County, FL. Metal detecting is not permitted in the state park, but the surrounding Martin and Palm Beach County private land has produced period musket balls and military hardware from Jesup's 1837-38 south Florida campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Columbus (New Mexico)",
@@ -3402,7 +3538,8 @@
     "description": "In the predawn hours of March 9, 1916, approximately 485 Mexican revolutionary troops under Pancho Villa crossed the border and attacked the town of Columbus, NM, and the adjacent Camp Furlong — the last time a foreign military force attacked the continental United States — killing 18 Americans before being driven off by the 13th Cavalry. The raid triggered General Pershing's Punitive Expedition into Mexico to capture Villa, which failed after nearly a year of chasing. Columbus Historic State Monument in Columbus, Luna County, NM, preserves the town's 1916-era buildings with an excellent museum interpreting the raid and Punitive Expedition. Metal detecting is not permitted in the state monument, but surrounding Luna County private desert land has produced .30-06 Springfield and 7mm Mauser cartridge casings from the 1916 engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Carrizal",
@@ -3412,7 +3549,8 @@
     "description": "On June 21, 1916, during Pershing's Punitive Expedition, a troop of the 10th Cavalry (Buffalo Soldiers) attempted to pass through the town of Carrizal in Chihuahua, Mexico, and was attacked by Mexican Carrancista troops, resulting in a firefight that killed two American officers and nine soldiers. The incident nearly triggered full-scale war with Mexico. The Carrizal battle site is in a small agricultural community in Chihuahua state, Mexico, near the Chihuahua desert. The incident site is accessible via Mexican federal roads, and the surrounding Chihuahua valley has produced period cartridge casings from the Punitive Expedition operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Ojos Azules",
@@ -3422,7 +3560,8 @@
     "description": "On May 5, 1916, during Pershing's Punitive Expedition into Mexico, a squadron of the 11th Cavalry under Major Robert Howze attacked Villista forces at Ojos Azules ranch in Chihuahua, Mexico, in a successful saber charge — one of the last mounted cavalry charges by the U.S. Army in its history — killing approximately 61 Villistas and dispersing the force. The engagement was a tactical success in the otherwise frustrating expedition. The Ojos Azules hacienda is in the remote Chihuahua sierra, accessible via rough mountain roads. The Chihuahua mountain country has produced Punitive Expedition-era .30-06 Springfield and .30-40 Krag cartridge casings from the 1916 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.68,
+    "detecting_weight": 33
   },
   {
     "name": "Battle of Athens (Alabama)",
@@ -3432,7 +3571,8 @@
     "description": "On September 23-24, 1864, Confederate General Nathan Bedford Forrest's cavalry raid into northern Alabama captured the town of Athens and its small Union garrison, briefly threatening the vital Nashville & Decatur Railroad that was Sherman's supply line. Forrest bluffed the Union commander into surrendering with a greatly inflated account of his forces. The town of Athens, AL, in Limestone County is a well-preserved antebellum community; the courthouse square and surrounding streets saw the Confederate cavalry operations. Surrounding Limestone County private farmland along the railroad corridor has produced Civil War Minié balls and military hardware from Forrest's 1864 Tennessee-Alabama raids.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Decatur (Alabama)",
@@ -3442,7 +3582,8 @@
     "description": "On October 26-29, 1864, Confederate General Forrest's force was repulsed attempting to cross the Tennessee River at Decatur, AL — a Union garrison of about 5,000 held off Forrest's cavalry for three days before the Confederates gave up and moved toward Spring Hill and Franklin. The battle demonstrated that Forrest's cavalry was not invincible against prepared defenses. Decatur, AL, in Morgan County is a modern city on the Tennessee River. The surrounding Morgan County private farmland along the river has produced Civil War Minié balls, artillery fragments, and military hardware from the fall 1864 Hood-Forrest operations in northern Alabama.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Sulphur Creek Trestle",
@@ -3452,7 +3593,8 @@
     "description": "On September 25, 1864, Confederate cavalry under General Philip Roddey attacked the Sulphur Creek Trestle on the Nashville & Decatur Railroad near Elk River, AL (present-day Hazel Green area in Limestone County), as part of Forrest's raid to destroy Sherman's supply line. The trestle was briefly captured before Union forces retook and repaired it. The Sulphur Creek Trestle site in Limestone County, Alabama, is on private farmland and in the Elk River bottomland. Surrounding Limestone County private farmland has produced Civil War cavalry relics and Minié balls from Forrest's September 1864 northern Alabama operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Streight's Raid (Day's Gap)",
@@ -3462,7 +3604,8 @@
     "description": "On April 30, 1863, Colonel Abel Streight's Union mounted infantry began their ill-fated raid into Alabama by fighting off Confederate cavalry at Day's Gap in Winston County, AL — the opening engagement of the two-week pursuit that ended in Streight's surrender to Forrest at Cedar Bluff. Forrest's dogged pursuit of Streight's mule-mounted force across 200 miles of Alabama mountains became one of the legendary cavalry pursuits of the Civil War. Day's Gap in Winston County, Alabama, is in the remote Hill Country of north-central Alabama near Double Springs. The surrounding Winston County private land and Bankhead National Forest area has produced Civil War cavalry relics from the April 1863 raid.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Corydon",
@@ -3472,7 +3615,8 @@
     "description": "On July 9, 1863, John Hunt Morgan's Confederate cavalry swept through Corydon, Indiana — the state's first capital — defeating the local Home Guard in a brief skirmish and briefly occupying the town, making Corydon the site of the only Civil War battle fought in Indiana. Morgan's men looted the town before continuing north toward Ohio. The Battle of Corydon site in Harrison County, Indiana, is preserved by the Corydon Capitol State Historic Site with a monument and interpretive markers in the historic county seat. The surrounding Harrison County private farmland has produced Civil War cavalry relics from Morgan's July 1863 Indiana-Ohio Raid.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Buffington Island",
@@ -3482,7 +3626,8 @@
     "description": "On July 19, 1863, Union forces finally caught up with John Hunt Morgan's Confederate cavalry at Buffington Island on the Ohio River in Meigs County, Ohio, cutting off most of Morgan's force as they attempted to cross into West Virginia — Morgan himself escaped with about 360 men but was captured near Salineville a week later. The Battle of Buffington Island ended the deepest Confederate penetration into Northern territory. Buffington Island State Memorial near Portland, Meigs County, Ohio, preserves a small park with interpretive markers on the Ohio River. Surrounding Meigs County private farmland along the river has produced Civil War cavalry relics from the July 1863 pursuit.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Hartsville",
@@ -3492,7 +3637,8 @@
     "description": "On December 7, 1862, Confederate General John Hunt Morgan launched a surprise attack on the Union garrison at Hartsville, TN, capturing over 1,800 Federal troops under Colonel Absalom Moore in an early-morning assault that netted horses, weapons, and supplies for the Confederate army in Middle Tennessee. The victory earned Morgan his commission as brigadier general. The Hartsville battlefield in Trousdale County, Tennessee, is largely private agricultural land along the Cumberland River. Surrounding Trousdale County private farmland has produced Civil War Minié balls, buttons, and military hardware from Morgan's 1862 Tennessee operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Munfordville",
@@ -3502,7 +3648,8 @@
     "description": "On September 14-17, 1862, General Braxton Bragg's Confederate army besieged and captured the Union garrison at Munfordville, KY — on the Green River bridge of the Louisville & Nashville Railroad — in a siege that briefly gave Bragg control of the railroad but also allowed Buell's Union army to slip around him toward Louisville, foiling Bragg's Kentucky invasion strategy. The battle site at Munfordville in Hart County, Kentucky, is preserved by the Green River Civil War Heritage Corridor, with the river bridge site, earthworks, and a small museum. Surrounding Hart County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the September 1862 Kentucky Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Richmond (Kentucky)",
@@ -3512,7 +3659,8 @@
     "description": "On August 29-30, 1862, the Confederate Kentucky invasion began with one of the most complete victories of the war when General Edmund Kirby Smith's force defeated two green Union divisions under General William Nelson at Richmond, KY, killing or wounding 1,100 and capturing nearly 4,000 — approximately 80% of the Federal force. The victory opened Kentucky to Confederate occupation and seemed to portend the loss of the border state. Richmond Battlefield Park in Madison County, Kentucky, preserves a portion of the battlefield with interpretive trails and the Battlefield Visitor Center. Surrounding Madison County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the August 1862 Kentucky Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Ivy Mountain",
@@ -3522,7 +3670,8 @@
     "description": "On November 8-9, 1861, the Battle of Ivy Mountain (or Ivy Creek) near Prestonsburg, KY, saw Union Colonel William 'Bull' Nelson defeat a Confederate force under Colonel John Williams, driving them from eastern Kentucky in one of the early Union successes that helped secure the mountain counties. The engagement was part of the Union effort to clear the Big Sandy River valley. The Ivy Mountain battle site in Floyd County, Kentucky, is in the remote eastern Kentucky mountains along U.S. Highway 23. Surrounding Floyd County private land in the Big Sandy valley has produced Civil War Minié balls from the early 1861-62 eastern Kentucky operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Camp Wildcat",
@@ -3532,7 +3681,8 @@
     "description": "On October 21, 1861, Confederate General Felix Zollicoffer's force attacked a Union position at Camp Wildcat (Wildcat Mountain) in Laurel County, Kentucky, attempting to break through the Union defensive line in the Cumberland Gap corridor. The attack was repulsed by Union Indiana and Kentucky infantry in a Union defensive victory that helped secure central Kentucky. The Camp Wildcat battlefield in Laurel County, Kentucky, is preserved at Camp Wildcat Civil War Battlefield, a county historic site with trails through the mountain terrain. The surrounding Laurel County mountains in the Cumberland foothills have produced Civil War Minié balls and military hardware from the 1861 eastern Kentucky operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Middle Creek",
@@ -3542,7 +3692,8 @@
     "description": "On January 10, 1862, General James Garfield (future president of the United States) defeated Confederate General Humphrey Marshall at the Battle of Middle Creek near Prestonsburg, KY, driving the Confederates out of the Big Sandy Valley and securing eastern Kentucky for the Union. The victory launched Garfield's military and political career. Middle Creek National Battlefield in Floyd County, Kentucky, is managed by the National Park Service as a small battlefield with interpretive trails through the wooded ridge terrain. Metal detecting is prohibited in the national battlefield, but surrounding Floyd County private land in the Big Sandy watershed has produced Civil War Minié balls and military hardware from the January 1862 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Ivy Creek",
@@ -3552,7 +3703,8 @@
     "description": "The Battle of Ivy Creek (sometimes called Ivy Mountain) near Prestonsburg, Kentucky in November 1861 was fought in the rugged Big Sandy River valley as Union forces under Colonel Nelson pushed Confederate General Williams's force south and east toward Virginia. The engagement was among the first in a series of Union operations to secure the mountainous eastern Kentucky region for the Union. The Ivy Creek battle site in Floyd County, Kentucky, is the same general area as Ivy Mountain, in the deeply rural eastern Kentucky mountains. The Big Sandy valley and surrounding Floyd and Pike county private lands have produced Civil War Minié balls and military hardware from the 1861-62 eastern Kentucky campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Lewisburg (West Virginia)",
@@ -3562,7 +3714,8 @@
     "description": "On May 23, 1862, a Union force under General George Crook defeated Confederate forces under Colonel George Patton (grandfather of the WWII general) at Lewisburg, WV, in a sharp engagement that temporarily secured the Greenbrier River valley and the vital James River and Kanawha Turnpike. The battle was a significant Union tactical success in the complex western Virginia mountain theater. Lewisburg, WV, is one of the best-preserved antebellum towns in the eastern United States; Confederate Cemetery on McElhenney Road contains the graves of those who fell. The surrounding Greenbrier County private farmland has produced Civil War Minié balls and military hardware from the multiple 1861-64 engagements in the Lewisburg area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Scary Creek",
@@ -3572,7 +3725,8 @@
     "description": "On July 17, 1861, Confederate forces under Colonel George Patton (grandfather of WWII's General Patton) repulsed a Union attack at Scary Creek in Putnam County, West Virginia, in an early engagement of the western Virginia campaign that contested control of the Kanawha Valley. The Confederate victory temporarily halted the Union advance up the Kanawha River. The Scary Creek battle site near Teays, Putnam County, WV, is largely private suburban and rural land along the Kanawha River valley. The Kanawha Valley saw extensive Civil War operations throughout 1861-65, and private land in the area has produced Civil War Minié balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Gauley Bridge",
@@ -3582,7 +3736,8 @@
     "description": "In September 1861, Union forces under General William Rosecrans and the Confederate forces under Floyd and Wise contested control of the Gauley Bridge area at the confluence of the Gauley and New rivers in Fayette County, WV — a critical position controlling movement into the Virginia mountains and the Kanawha Valley. The Union eventually secured the position and used it as a key base for operations in western Virginia. The Gauley Bridge historic community in Fayette County, WV, preserves several 19th-century buildings; the bridge and river confluence area retain their scenic character. The surrounding New and Gauley river valleys have produced Civil War Minié balls and military hardware from the 1861 mountain campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Cross Lanes",
@@ -3592,7 +3747,8 @@
     "description": "On August 26, 1861, Confederate General John Floyd surprised and routed a Union regiment under Colonel Erastus Tyler at Cross Lanes on the Gauley River in Nicholas County, WV, in one of the Confederacy's few early successes in western Virginia. Floyd's victory temporarily threatened Union control of the Kanawha Valley. The Cross Lanes battle site on Carnifex Ferry Road in Nicholas County, WV, is near the more famous Carnifex Ferry battlefield. The surrounding Nicholas County private farmland along the Gauley River has produced Civil War Minié balls and military hardware from the 1861 western Virginia operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Philippi",
@@ -3602,7 +3758,8 @@
     "description": "On June 3, 1861, the Battle of Philippi in Barbour County, WV, was the first land engagement of the Civil War east of the Ohio River — a Union surprise attack on a Confederate camp that sent the Confederates fleeing in what Northern newspapers gleefully called the 'Philippi Races.' A Confederate soldier named James Hanger lost his leg in the battle and subsequently invented the first articulated prosthetic leg. Philippi, WV, preserves the 1852 covered bridge that stood during the battle (still in use), and the Civil War Skirmish Site is marked downtown. Metal detecting is not permitted at the historic site, but surrounding Barbour County private farmland has produced Civil War Minié balls and military hardware from the early 1861 western Virginia campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Corrick's Ford",
@@ -3612,7 +3769,8 @@
     "description": "On July 13, 1861, Union forces caught the retreating Confederate General Robert Garnett's force at Corrick's Ford on the Cheat River in Tucker County, WV, killing Garnett — the first general officer killed in the Civil War — as the Confederates fled from the Battle of Rich Mountain. The brief action ended the first phase of the western Virginia campaign. The Corrick's Ford battle site on the Cheat River in Tucker County, WV, is in the remote Cheat River gorge, now accessible via Parsons and the Monongahela National Forest. The surrounding Tucker County mountains have produced Civil War Minié balls and military hardware from McClellan's 1861 western Virginia campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Hanging Rock Pass",
@@ -3622,7 +3780,8 @@
     "description": "On May 10, 1864, Confederate forces of the Army of New River under General Albert Jenkins ambushed a Union cavalry column at Hanging Rock Pass in Monroe County, WV (near Salt Sulphur Springs), inflicting casualties and delaying the Union advance before Crook's main force came up and drove them back. The engagement was part of the prelude to the Battle of Cloyd's Mountain the day before Crook began his attack on Saltville. The Hanging Rock Pass battle site in Monroe County, WV, is in the scenic Greenbrier Valley near the Virginia border. The remote Monroe County private land has produced Civil War Minié balls and military hardware from Crook's 1864 spring raid through the Alleghenies.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Droop Mountain",
@@ -3632,7 +3791,8 @@
     "description": "On November 6, 1863, Union General William Averell's cavalry division attacked Confederate forces under General William Jones atop Droop Mountain in Pocahontas County, WV, routing them in the largest Civil War battle fought in what is now West Virginia, and opening the Greenbrier Valley to Union control. Averell's victory also enabled the subsequent destruction of the Virginia & Tennessee Railroad, a critical Confederate supply artery. Droop Mountain Battlefield State Park near Hillsboro, Pocahontas County, WV, preserves the mountain summit terrain with earthwork remains, interpretive trails, and a museum. Metal detecting is not permitted in the state park, but surrounding Pocahontas County private mountain farmland has produced Civil War Minié balls and military hardware from the November 1863 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of White Sulphur Springs",
@@ -3642,7 +3802,8 @@
     "description": "On August 26-27, 1863, Union General William Averell's cavalry raid toward Lewisburg, WV, was stopped at White Sulphur Springs (the famous resort, now The Greenbrier) by Confederate troops under Colonel George Patton in a two-day battle fought around the historic spa grounds. Averell was forced to retreat, limiting the tactical value of his otherwise successful Confederacy-deep penetration. The Greenbrier Resort in White Sulphur Springs, WV, now occupies the original resort property, which saw the Civil War battle in its wooded grounds. The surrounding Greenbrier County private farmland has produced Civil War Minié balls and military hardware from the August 1863 operations in the Greenbrier Valley.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Buffington Ford",
@@ -3652,7 +3813,8 @@
     "description": "On July 18-19, 1863, a Union force caught part of Morgan's Confederate cavalry at Buffington Island and Ford on the Ohio River in Meigs County, Ohio — the main engagement where most of Morgan's force was captured or dispersed while attempting to cross the Ohio River back into West Virginia. Morgan himself escaped with a small force but was captured near Salineville days later. Buffington Island State Memorial near Portland, Meigs County, Ohio, is a small riverside park marking the battle site on the Ohio River shore. Surrounding Meigs County private farmland along the river has produced Civil War cavalry relics from Morgan's July 1863 Ohio Raid.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Chancellorsville (Second Day)",
@@ -3662,7 +3824,8 @@
     "description": "On May 2, 1863 — the pivotal second day of the Battle of Chancellorsville — Stonewall Jackson's corps completed its famous 12-mile flank march and struck the exposed right flank of the Union XI Corps at dusk, routing two divisions in the biggest single flank attack of the Civil War and creating a crisis for Hooker's army. Jackson was mortally wounded in the darkness returning from a night reconnaissance when his own soldiers fired on his party, a loss that Robert E. Lee called 'my right arm.' Fredericksburg and Spotsylvania National Military Park preserves the Wilderness Run area, the Chancellor House site, and the spot where Jackson was wounded on the Plank Road. Metal detecting is strictly prohibited in the national park, but surrounding Spotsylvania County private land has produced Civil War Minié balls and military hardware from this crucial engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 46
   },
   {
     "name": "Battle of Paducah",
@@ -3672,7 +3835,8 @@
     "description": "On March 25, 1864, Nathan Bedford Forrest's Confederate cavalry swept into Paducah, KY, at the confluence of the Tennessee and Ohio rivers — a major Union supply depot — driving Federal troops into Fort Anderson and demanding surrender. The garrison under Colonel Stephen Hicks refused; Forrest's men plundered the town before withdrawing when ironclad gunboats arrived. The Battle of Paducah site is within the modern city of Paducah, KY, in McCracken County, with a historical marker and River Heritage Museum interpreting the attack. The surrounding McCracken County area along the Ohio River has produced Civil War Minié balls and military hardware from Forrest's 1864 Kentucky operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Fort Anderson",
@@ -3682,7 +3846,8 @@
     "description": "On February 19-20, 1865, the second Battle of Fort Anderson on the Cape Fear River in Brunswick County, NC, saw Union naval gunfire and infantry pressure force the Confederate garrison to evacuate the earthen fort protecting Wilmington from the south — the Fort Anderson position fell without direct assault as Confederate forces retreated northward. Fort Anderson in Brunswick County, NC (now part of Brunswick Town/Fort Anderson State Historic Site), preserves the remarkable earthwork fortifications with excellent walking trails through the mounds and gun positions. Metal detecting is not permitted in the state historic site, but the surrounding Brunswick County coastal plain private land has produced Civil War artillery fragments and military hardware from the February 1865 Wilmington campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Southwest Creek",
@@ -3692,7 +3857,8 @@
     "description": "On March 7-8, 1865, Confederate forces under General Braxton Bragg skirmished with the advance of General John Schofield's Union army at Southwest Creek in Lenoir County, NC, delaying the Union advance toward Goldsborough and the final junction of Union forces in the Carolinas. The engagement was part of the brief Confederate resistance during Sherman's march through North Carolina. The Southwest Creek battle site in Lenoir County, NC, is private agricultural land in the coastal plain near Kinston. Surrounding Lenoir County private farmland has produced Civil War Minié balls and military hardware from the March 1865 Carolinas Campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Monroe's Cross Roads",
@@ -3702,7 +3868,8 @@
     "description": "On March 10, 1865, Confederate cavalry under Generals Wade Hampton and Joseph Wheeler launched a surprise dawn attack on the camp of Kilpatrick's Union cavalry at Monroe's Cross Roads in Cumberland County, NC, catching the cavalrymen in their bedrolls and nearly capturing Kilpatrick himself, who fled in his nightshirt. Kilpatrick's cavalry reorganized and drove off the Confederates, but it remains the most humiliating near-capture of a Union general of the war. Monroe's Cross Roads Battlefield near Fayetteville, NC, is preserved by Fort Bragg (now Fort Liberty) and accessible to the public through the military installation. Metal detecting is not permitted on the military installation, but surrounding Cumberland County private land has produced Civil War cavalry relics from Sherman's March through North Carolina.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of White Oak Road",
@@ -3712,7 +3879,8 @@
     "description": "On March 31, 1865, a Union assault along the White Oak Road in Dinwiddie County, VA, broke through the Confederate right flank outside Petersburg before Confederate counterattacks partially restored the line — a prelude to the decisive battle at Five Forks the following day. The battle demonstrated the progressive collapse of the Confederate defensive perimeter around Petersburg. The White Oak Road battlefield is partially preserved within Petersburg National Battlefield's western units in Dinwiddie County, VA, with earthwork traces along the original road corridor. Metal detecting is prohibited in the national park areas, but surrounding private farmland in Dinwiddie County has produced Civil War Minié balls and military hardware from the April 1865 Appomattox Campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Lewis Farm",
@@ -3722,7 +3890,8 @@
     "description": "On March 29, 1865, Union forces pushing westward toward the Boydton Plank Road engaged Confederate defenders at Lewis Farm (Quaker Road) in Dinwiddie County, VA, opening the final offensive moves of the Appomattox Campaign. The engagement was the first step in the sequence of battles leading to Five Forks and the fall of Petersburg. The Lewis Farm battle site in Dinwiddie County, VA, is largely private farmland with Civil War Trails markers. Surrounding private land in Dinwiddie County has produced Civil War Minié balls and military hardware from the intense March-April 1865 Petersburg Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Dinwiddie Court House",
@@ -3732,7 +3901,8 @@
     "description": "On March 31, 1865, Sheridan's cavalry was pushed back through the crossroads at Dinwiddie Court House by Confederate cavalry under Fitzhugh Lee and George Pickett — a rare Confederate cavalry success in the final weeks of the war. The following day at Five Forks, the tables turned completely. The Dinwiddie Court House battlefield in Dinwiddie County, VA, is within and near the small courthouse town of Dinwiddie. Civil War Trails interpretive markers and the historic courthouse building can be found along the original road. Surrounding private farmland in Dinwiddie County has produced Civil War cavalry relics from the final Appomattox Campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Namozine Church",
@@ -3742,7 +3912,8 @@
     "description": "On April 3, 1865, the first day of the Appomattox Campaign proper, Union cavalry and infantry caught the Confederate rear guard at Namozine Church in Amelia County, VA, capturing hundreds of men in the first significant action of Lee's desperate retreat westward from Petersburg and Richmond. The battle site is near the historic Namozine Church (still standing) in Amelia County, VA. The surrounding Amelia County private farmland has produced Civil War Minié balls and discarded military equipment from Lee's April 1865 retreat route — this corridor has been moderately productive for private land detecting.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Amelia Springs",
@@ -3752,7 +3923,8 @@
     "description": "On April 5, 1865, Union cavalry intercepted Confederate cavalry and wagons at Amelia Springs in Amelia County, VA, as Lee's retreating army desperately sought food and the road to Danville was being blocked by Union forces. The engagement added to the pressure of Lee's collapsing march. The Amelia Springs battle site in Amelia County, VA, is largely private farmland and the former spa grounds around Amelia Springs. The Amelia Court House and surrounding Amelia County private land has produced Civil War Minié balls and discarded military equipment from Lee's April 1865 retreat.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Farmville",
@@ -3762,7 +3934,8 @@
     "description": "On April 7, 1865, the day after Sayler's Creek, Union forces engaged Confederate rear guards at Farmville, VA, and High Bridge, fighting through the small Southside Railroad town as Lee's retreating army attempted to reach supplies waiting at the depot — only to find the rations could not be distributed before Union pressure forced another retreat. That evening, Grant sent Lee his first note suggesting surrender. The town of Farmville in Prince Edward County, VA, retains its antebellum character with several historic buildings; the High Bridge Trail State Park corridor connects the town to the High Bridge battle site. The surrounding Prince Edward County private farmland has produced Civil War Minié balls and discarded equipment from the retreat.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Appomattox Station",
@@ -3772,7 +3945,8 @@
     "description": "On April 8, 1865, the evening before the final surrender, Union cavalry under General George Custer raced ahead of Lee's retreating army and captured the Confederate supply trains waiting at Appomattox Station, VA — destroying Lee's last hope of resupplying his army and completing the encirclement of the Army of Northern Virginia. Lee now had no choice but to surrender or attempt a breakout through the Union cavalry. Appomattox Station is now part of Appomattox Court House National Historical Park in Appomattox County, VA, with the station site marked near the village. Metal detecting is prohibited in the national park, but surrounding private farmland in Appomattox County has produced Civil War Minié balls and military equipment from the final retreat.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Sailor's Creek",
@@ -3782,7 +3956,8 @@
     "description": "Sailor's Creek (also Sayler's Creek) on April 6, 1865, was the largest engagement of the Appomattox Campaign, where Union forces cut off and overwhelmed two Confederate corps in a catastrophic series of battles across three separate fight sites — the naval-gun-supported assault on Ewell's corps at Hillsman's Farm, the routing of Anderson's corps at Marshall's Crossroads, and the defeat of Gordon's rear guard at Lockett's Farm. The loss of nearly 8,000 men — a quarter of Lee's remaining army — made Appomattox inevitable. Sayler's Creek Battlefield State Historical Park in Prince Edward and Amelia counties, VA, preserves portions of the three battle sites with interpretive trails. Surrounding private land along the Sailor's Creek corridor has produced Civil War Minié balls and military hardware from the final campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Gravelly Run",
@@ -3792,7 +3967,8 @@
     "description": "On March 29, 1865, the opening day of the final Appomattox Campaign, Union troops under General Gouverneur Warren skirmished with Confederate defenders at Gravelly Run (Quaker Road) in Dinwiddie County, VA, as the Union army moved to extend its lines west and cut the Southside Railroad. The engagement was the prelude to the larger battles at White Oak Road and Five Forks. The Gravelly Run battle site in Dinwiddie County, VA, is private farmland along the stream. Surrounding Dinwiddie County private land has produced Civil War Minié balls and military hardware from the final Petersburg Campaign operations of March-April 1865.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Totopotomoy Creek",
@@ -3802,7 +3978,8 @@
     "description": "On May 28-30, 1864, Grant's army clashed with Lee's forces along Totopotomoy Creek in Hanover County, VA, as Grant continued his relentless effort to find a way to flank Lee's army and reach Richmond. The fighting along Totopotomoy Creek was part of the bloody sequence of battles that would culminate at Cold Harbor. The Totopotomoy Creek battlefield in Hanover County, VA, is preserved by the American Battlefield Trust and Hanover County, with hiking trails along the creek corridor. Metal detecting is not permitted on the preserved land, but surrounding private Hanover County farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the May-June 1864 Overland Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 63
   },
   {
     "name": "Battle of Old Church",
@@ -3812,7 +3989,8 @@
     "description": "On May 30, 1864, Union and Confederate cavalry clashed at Old Church in Hanover County, VA, as the armies jockeyed for position following the battle at Totopotomoy Creek — Sheridan's cavalry drove off Confederate horsemen near the historic Old Church meetinghouse. The battle was part of the preliminary maneuvering before Cold Harbor. The Old Church area near Mechanicsville in Hanover County, VA, retains the historic church building and surrounding rural character. Surrounding private farmland in Hanover County has produced Civil War cavalry relics and Minié balls from the May 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Hawes' Shop",
@@ -3822,7 +4000,8 @@
     "description": "On May 28, 1864, the largest cavalry battle of the Overland Campaign was fought at Hawes' Shop (Enon Church) in Hanover County, VA, when Sheridan's cavalry met Confederate cavalry in an all-day dismounted firefight — the new Union Spencer repeating carbines were used in action for the first time in substantial numbers, demonstrating their overwhelming firepower advantage. The battle site at Enon Church in Hanover County, VA, is private farmland; Enon Church Road follows the original route. The surrounding Hanover County private agricultural land has produced Civil War cavalry relics including Spencer cartridge casings, Minié balls, and military hardware from the May 1864 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Haw's Shop",
@@ -3832,7 +4011,8 @@
     "description": "The Battle of Haw's Shop (sometimes Hawes' Shop) on May 28, 1864, in Hanover County, VA, was a prolonged cavalry engagement where Sheridan's horsemen used new Spencer repeating carbines to fight Confederate cavalry to a standstill in the dense Virginia woods. The battle confirmed the superiority of breech-loading repeaters over single-shot carbines and demonstrated the growing tactical capability of the Union cavalry. The Haw's Shop area near Studley, Hanover County, VA, is private agricultural land. The Hanover County corridor between the North Anna and Cold Harbor has produced Civil War cavalry relics and Minié balls on private land from the Overland Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Trevilian Station",
@@ -3842,7 +4022,8 @@
     "description": "On June 11-12, 1864, the largest all-cavalry battle of the Civil War was fought at Trevilian Station (Louisa Court House), VA, when Sheridan's cavalry raided the Virginia Central Railroad and was intercepted by Confederate cavalry under Hampton and Fitzhugh Lee — the two-day battle cost both sides over 1,000 casualties and forced Sheridan to abandon his raid and retreat. Trevilian Station battlefield in Louisa County, VA, is partially preserved by the American Battlefield Trust with walking access to key positions. Metal detecting is not permitted on the preserved land, but surrounding Louisa County private farmland has produced Civil War cavalry relics including carbine casings, saber fragments, and horse equipment from the intense June 1864 cavalry battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of St. Mary's Church",
@@ -3852,7 +4033,8 @@
     "description": "On June 24, 1864, Confederate cavalry under Wade Hampton caught Sheridan's cavalry at St. Mary's Church in Charles City County, VA, during the Union cavalry's return from the Trevilian Station raid, forcing Sheridan to fight off repeated Confederate attacks while crossing the James River. The engagement cost both sides significant casualties. St. Mary's Church in Charles City County, VA, is the historic Colonial-era church that still stands; the surrounding landscape retains its 18th and 19th-century rural character. The Charles City County private farmland in the James River tidewater has produced Civil War cavalry relics and Minié balls from the June-July 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Deep Bottom (First)",
@@ -3862,7 +4044,8 @@
     "description": "On July 27-29, 1864, the first Battle of Deep Bottom on the James River north of Richmond saw Union General Hancock's Second Corps cross the James and push toward Richmond, attempting to draw Confederate reserves away from the Petersburg lines before the Crater assault. The operation achieved limited gains before withdrawing. Deep Bottom in Henrico County, VA, is now a boat landing and open space area along the James River; the fortification remains are part of Richmond National Battlefield Park. Metal detecting is prohibited in the national park, but surrounding private farmland in Henrico County along the James has produced Civil War Minié balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Burgess Mill",
@@ -3872,7 +4055,8 @@
     "description": "On October 27-28, 1864, Grant's attempt to cut the Boydton Plank Road at Burgess Mill in Dinwiddie County, VA, involved Hancock's corps fighting toward the road when Confederate counterattacks cut the Union force in two — Hancock was able to extricate his command but the road remained in Confederate hands. Burgess Mill (Dabney's Mill area) in Dinwiddie County is within the western Petersburg National Battlefield units, with earthwork remains visible. Metal detecting is prohibited in the national park areas, but surrounding Dinwiddie County private farmland has produced Civil War Minié balls and military hardware from the late-war Petersburg operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Stony Creek Depot",
@@ -3882,7 +4066,8 @@
     "description": "On June 29, 1864, Confederate cavalry under General William Lee attacked a Union cavalry force destroying the Weldon Railroad at Stony Creek Depot in Sussex County, VA — part of Wilson's Raid to cut Confederate supply lines to Petersburg. The Confederate counterattack, combined with the action at Reams Station the same day, forced Wilson's cavalry to abandon its captured guns and fight through Confederate encirclement to reach Union lines. The Stony Creek Depot battlefield in Sussex County, VA, is along the Weldon Railroad corridor on private farmland. Surrounding Sussex County private land has produced Civil War cavalry relics and Minié balls from Wilson's June 1864 Weldon Railroad Raid.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Ream's Station (First)",
@@ -3892,6 +4077,7 @@
     "description": "On June 22-23, 1864, the first Battle of Reams Station on the Weldon Railroad in Dinwiddie County, VA, saw Union cavalry under Wilson attempting to destroy the railroad as far south as possible when Confederate cavalry under Hampton attacked and drove off the Union troopers, reclaiming the destroyed track positions. The engagement was the opening phase of the prolonged contest for the Weldon Railroad that continued through August 1864. The first Reams Station battle site in Dinwiddie County, VA, is private farmland near Dinwiddie. Surrounding private land in the Weldon Railroad corridor has produced Civil War cavalry relics and Minié balls from the summer 1864 Petersburg operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   }
 ]
