@@ -13,6 +13,7 @@ import type {
   LocationType,
   LayerState,
   HeatmapPoint,
+  UserPin,
 } from '../types';
 import type { Feature, Geometry, LineString, MultiLineString } from 'geojson';
 import type { LinearProperties } from '../types';
@@ -58,6 +59,56 @@ function ClickHandler({ onClick }: { onClick: (lat: number, lon: number) => void
     },
   });
   return null;
+}
+
+function ContextMenuHandler({ onContextMenu }: { onContextMenu: (lat: number, lon: number) => void }) {
+  useMapEvents({
+    contextmenu(e: LeafletMouseEvent) {
+      e.originalEvent.preventDefault();
+      onContextMenu(e.latlng.lat, e.latlng.lng);
+    },
+  });
+  return null;
+}
+
+function UserPinMarkers({ pins }: { pins: UserPin[] }) {
+  if (!pins.length) return null;
+  return (
+    <>
+      {pins.map((pin) => {
+        const dateLabel = pin.hunt_date
+          ? new Date(pin.hunt_date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+          : null;
+        return (
+          <CircleMarker
+            key={pin.id}
+            center={[pin.latitude, pin.longitude]}
+            radius={8}
+            pathOptions={{
+              color: '#ffffff',
+              fillColor: '#10b981',
+              fillOpacity: 0.9,
+              weight: 2,
+            }}
+          >
+            <Popup>
+              <div className="min-w-[180px]">
+                <strong className="block text-sm">{pin.name}</strong>
+                {dateLabel && <span className="text-xs text-gray-500">{dateLabel}</span>}
+                {pin.time_spent && (
+                  <p className="text-xs text-gray-600 mt-0.5">⏱ {pin.time_spent}</p>
+                )}
+                {pin.finds_count != null && (
+                  <p className="text-xs text-gray-600 mt-0.5">🪙 {pin.finds_count} find{pin.finds_count !== 1 ? 's' : ''}</p>
+                )}
+                {pin.notes && <p className="text-xs mt-1 text-gray-700">{pin.notes}</p>}
+              </div>
+            </Popup>
+          </CircleMarker>
+        );
+      })}
+    </>
+  );
 }
 
 function LocationMarkers({
@@ -179,6 +230,8 @@ interface MapViewProps {
   onMapClick: (lat: number, lon: number) => void;
   onLocationSelect: (f: LocationFeature) => void;
   onLandAccessClick?: (lat: number, lon: number) => void;
+  onContextMenu?: (lat: number, lon: number) => void;
+  userPins?: UserPin[];
 }
 
 export default function MapView({
@@ -189,6 +242,8 @@ export default function MapView({
   onMapClick,
   onLocationSelect,
   onLandAccessClick,
+  onContextMenu,
+  userPins,
 }: MapViewProps) {
   const handleClick = useCallback(
     (lat: number, lon: number) => {
@@ -225,6 +280,8 @@ export default function MapView({
 
       <ClickHandler onClick={handleClick} />
 
+      {onContextMenu && <ContextMenuHandler onContextMenu={onContextMenu} />}
+
       <LocationMarkers
         features={locations}
         layers={layers}
@@ -235,6 +292,10 @@ export default function MapView({
 
       {heatmapPoints.length > 0 && (
         <HeatmapLayer points={heatmapPoints} visible={layers.heatmap} />
+      )}
+
+      {userPins && userPins.length > 0 && (
+        <UserPinMarkers pins={userPins} />
       )}
     </MapContainer>
   );

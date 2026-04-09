@@ -225,6 +225,30 @@ class User(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
+class UserPin(Base):
+    """
+    A user-logged metal detecting hunt (personal pin).
+
+    Each hunt is a point on the map with a date, notes, time spent,
+    finds count, and privacy setting.
+    """
+
+    __tablename__ = "user_pins"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    name = Column(String(200), nullable=False)
+    latitude = Column(Float, nullable=False)
+    longitude = Column(Float, nullable=False)
+    geom = Column(Geometry("POINT", srid=4326, spatial_index=True), nullable=True)
+    hunt_date = Column(DateTime(timezone=True), nullable=False)
+    time_spent = Column(String(50), nullable=True)
+    notes = Column(Text, nullable=True)
+    finds_count = Column(Integer, nullable=True)
+    privacy = Column(String(20), default="public")
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------

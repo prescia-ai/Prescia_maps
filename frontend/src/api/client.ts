@@ -92,4 +92,28 @@ export async function importFeatures(data: any): Promise<ImportSummaryResponse> 
   return result;
 }
 
+export async function fetchMyPins(limit = 50, offset = 0): Promise<{ pins: any[]; total: number }> {
+  const { data } = await api.get('/pins/me', { params: { limit, offset } });
+  return data;
+}
+
+export async function fetchUserPins(username: string, limit = 50, offset = 0): Promise<{ pins: any[]; total: number }> {
+  const { data } = await api.get(`/pins/user/${encodeURIComponent(username)}`, { params: { limit, offset } });
+  return data;
+}
+
+export async function createPin(data: any): Promise<any> {
+  const { data: result } = await api.post('/pins', data);
+  return result;
+}
+
+export async function updatePin(id: string, data: any): Promise<any> {
+  const { data: result } = await api.put(`/pins/${id}`, data);
+  return result;
+}
+
+export async function deletePin(id: string): Promise<void> {
+  await api.delete(`/pins/${id}`);
+}
+
 export default api;

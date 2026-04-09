@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { LayerState } from '../types';
+import { useAuth } from '../contexts/AuthContext';
 
 interface LayerControlsProps {
   layers: LayerState;
@@ -84,6 +85,7 @@ const SECTIONS: SectionDef[] = [
 
 export default function LayerControls({ layers, onChange }: LayerControlsProps) {
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+  const { user } = useAuth();
 
   const toggle = (key: keyof LayerState) => {
     onChange({ ...layers, [key]: !layers[key] });
@@ -199,7 +201,51 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
         })}
       </div>
 
+      {/* Personal layers — only when authenticated */}
+      {user && (
+        <>
+          <div className="mt-3 mb-1 flex items-center gap-2 px-1">
+            <div className="h-px flex-1 bg-slate-700" />
+            <span className="text-xs text-slate-500 uppercase tracking-wider">Personal</span>
+            <div className="h-px flex-1 bg-slate-700" />
+          </div>
+
+          <div className="border border-slate-700/50 rounded-lg overflow-hidden">
+            <ul className="px-2 py-1 space-y-0.5">
+              <li>
+                <button
+                  onClick={() => toggle('my_hunts')}
+                  className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
+                    ${layers.my_hunts
+                      ? 'bg-slate-700/60 text-white'
+                      : 'bg-transparent text-slate-400 hover:bg-slate-800/60 hover:text-slate-200'
+                    }`}
+                >
+                  <span
+                    className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0 border border-white/20"
+                    style={{ backgroundColor: layers.my_hunts ? '#10b981' : '#475569' }}
+                  />
+                  <span className="text-xs font-medium leading-tight flex-1">My Hunts</span>
+                  <span
+                    className={`relative inline-flex h-4 w-7 flex-shrink-0 rounded-full transition-colors duration-200
+                      ${layers.my_hunts ? 'bg-emerald-600' : 'bg-slate-600'}`}
+                  >
+                    <span
+                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                        ${layers.my_hunts ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                    />
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </>
+      )}
+
       <p className="mt-3 text-xs text-slate-500 text-center">Click map to score a location</p>
+      {user && (
+        <p className="mt-1 text-xs text-slate-600 text-center">Right-click to log a hunt</p>
+      )}
     </div>
   );
 }

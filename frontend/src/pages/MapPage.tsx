@@ -8,10 +8,13 @@ import LandAccessPanel from '../components/LandAccessPanel';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Navbar from '../components/Navbar';
 import ImportModal from '../components/ImportModal';
+import LogHuntModal from '../components/LogHuntModal';
 import { useLocations } from '../hooks/useLocations';
 import { useFeatures } from '../hooks/useFeatures';
 import { useHeatmap } from '../hooks/useHeatmap';
 import { useScore } from '../hooks/useScore';
+import { useMyPins } from '../hooks/useMyPins';
+import { useAuth } from '../contexts/AuthContext';
 import { fetchLandAccess, putLandAccessOverride } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
@@ -41,14 +44,18 @@ const DEFAULT_LAYERS: LayerState = {
   road:            true,
   heatmap:         false,
   blm:             false,
+  my_hunts:        false,
 };
 
 export default function MapPage() {
   const queryClient = useQueryClient();
+  const { user } = useAuth();
   const [layers, setLayers] = useState<LayerState>(DEFAULT_LAYERS);
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [showImportModal, setShowImportModal] = useState(false);
+  const [showLogHuntModal, setShowLogHuntModal] = useState(false);
+  const [logHuntCoords, setLogHuntCoords] = useState<{ lat: number; lon: number } | null>(null);
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
@@ -60,6 +67,7 @@ export default function MapPage() {
   const featuresQuery  = useFeatures();
   const heatmapQuery   = useHeatmap();
   const scoreQuery     = useScore(clickedCoords?.lat ?? null, clickedCoords?.lon ?? null);
+  const myPinsQuery    = useMyPins();
 
   const handleMapClick = useCallback((lat: number, lon: number) => {
     setSelectedFeature(null);
@@ -112,9 +120,21 @@ export default function MapPage() {
     queryClient.invalidateQueries({ queryKey: ['features'] });
   }, [queryClient]);
 
+  const handleContextMenu = useCallback((lat: number, lon: number) => {
+    if (user) {
+      setLogHuntCoords({ lat, lon });
+      setShowLogHuntModal(true);
+    }
+  }, [user]);
+
+  const handleHuntSuccess = useCallback(() => {
+    queryClient.invalidateQueries({ queryKey: ['my-pins'] });
+  }, [queryClient]);
+
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
+  const userPins       = (user && layers.my_hunts) ? (myPinsQuery.data?.pins ?? []) : [];
 
   const isInitialLoading =
     locationsQuery.isLoading || featuresQuery.isLoading || heatmapQuery.isLoading;
@@ -140,6 +160,8 @@ export default function MapPage() {
           onMapClick={handleMapClick}
           onLocationSelect={handleLocationSelect}
           onLandAccessClick={handleLandAccessClick}
+          onContextMenu={handleContextMenu}
+          userPins={userPins}
         />
       </div>
 
@@ -191,6 +213,16 @@ export default function MapPage() {
         <ImportModal
           onClose={() => setShowImportModal(false)}
           onImportSuccess={handleImportSuccess}
+        />
+      )}
+
+      {/* Log Hunt modal (right-click) */}
+      {showLogHuntModal && logHuntCoords && (
+        <LogHuntModal
+          lat={logHuntCoords.lat}
+          lon={logHuntCoords.lon}
+          onClose={() => setShowLogHuntModal(false)}
+          onSuccess={handleHuntSuccess}
         />
       )}
     </div>
