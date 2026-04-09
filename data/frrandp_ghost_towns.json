@@ -2205,7 +2205,8 @@
     "latitude": 46.274788,
     "longitude": -111.946213,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Elkhorn was a silver mining community in Jefferson County, Montana in the Elkhorn Mountains south of Boulder, established in the 1870s and producing significant silver wealth through the 1880s — particularly from the Elkhorn Mine that produced over $14 million in silver during its peak years. The town had a population of 2,500 at its height with a hotel, several saloons, a school, and the Fraternity Hall — a two-story structure that became one of Montana's most photographed ghost town buildings. Montana State Parks manages Elkhorn Ghost Town as a state park with two original structures preserved, and the remaining mine workings and townsite are accessible via a dirt road south of Boulder. Metal detecting is prohibited within the state park boundaries."
   },
   {
@@ -2214,7 +2215,8 @@
     "latitude": 47.010381,
     "longitude": -122.016221,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Fairfax was a small coal mining community in Pierce County, Washington in the Carbon River valley on the western slope of the Cascades, established in the early twentieth century to house miners working the Carbon Hill coal mines that supplied fuel to Puget Sound industries and the Northern Pacific Railroad. The community had company housing, a school, and basic services for the mining families who worked the underground coal seams in this rugged Cascade Mountain valley. The Carbon River valley today is part of Mount Rainier National Park's carbon river area, accessible via a trail that follows the old Carbon River Road (closed to vehicles). The national park designation prohibits metal detecting, but the dramatic Cascade rainforest setting makes this a spectacular hiking destination with significant natural and industrial heritage."
   },
   {
@@ -2223,7 +2225,8 @@
     "latitude": 47.030596,
     "longitude": -122.034899,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Melmont was another Carbon River coal mining community in Pierce County, Washington along the Carbon River upstream of Fairfax, established in the late nineteenth century as one of several coal camps that exploited the Carbon Hill coal seams of the western Cascade foothills. The community had company housing and basic services, and like Fairfax was eventually absorbed into the Carbon River landscape when coal mining operations ceased and the community was abandoned. The Carbon River area's coal mining heritage is preserved in historical accounts and the landscape itself, though the national park status means the accessible areas are managed for natural and historical preservation rather than recreational artifact recovery."
   },
   {
@@ -2232,7 +2235,8 @@
     "latitude": 34.210979,
     "longitude": -118.120506,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.65,
+    "detecting_weight": 52,
     "description": "White City was a small Kern County, California community in the southern Sierra Nevada foothills or San Joaquin Valley that existed briefly as an agricultural or service community in the early twentieth century California landscape. The Central Valley and surrounding foothills of Kern County have been intensively developed for agriculture and petroleum production, and many small early twentieth century communities have been absorbed into the broader agricultural and industrial landscape of what is now one of California's most productive oil and farming regions."
   },
   {
@@ -2241,7 +2245,8 @@
     "latitude": 37.57495,
     "longitude": -100.44257,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.74,
+    "detecting_weight": 66,
     "description": "Montezuma (Old) was the original county seat of Gray County, Kansas in the short grass prairie of the southwestern Kansas plains, established during the great land boom of the late 1880s that brought hundreds of settlers to western Kansas with inflated promises of agricultural prosperity in a region that receives barely 15 inches of rainfall per year. The county seat was relocated and Montezuma declined as the devastating drought and agricultural bust of the early 1890s — the same period that inspired the Populist political movement — drove most settlers from western Kansas. The Gray County landscape today is working agricultural land devoted to wheat farming and feedlot cattle operations, with the original Montezuma site now a small surviving community adjacent to the historic location."
   },
   {
@@ -2250,7 +2255,8 @@
     "latitude": 27.858313,
     "longitude": -81.374627,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.65,
+    "detecting_weight": 52,
     "description": "Sumica was a small Hillsborough County, Florida community in the interior of the Florida peninsula that existed briefly as a farming or turpentine community during the early twentieth century settlement of central Florida's pine flatwood interior. The turpentine industry was a major driver of early Florida settlement, with crews harvesting longleaf pine resin from the vast pine forests of the interior, creating a network of small camps and communities across central and north Florida. The Hillsborough County landscape today is dominated by the greater Tampa metropolitan area in its western portions and agricultural land and wildlife management areas in the eastern interior. Former turpentine era communities in central Florida's private rural land are typically inaccessible to recreational detectorists."
   },
   {
@@ -2259,7 +2265,8 @@
     "latitude": 44.851916,
     "longitude": -89.259837,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Ingersoll was a small Wisconsin community briefly existing as a local post office and farming service point in the agricultural landscape of the Upper Midwest, one of many modest rural communities that platted during Wisconsin's peak agricultural settlement era in the 1870s-1880s. The exact county location and history of this entry is somewhat uncertain, but it represents the broad pattern of Wisconsin's small agricultural communities that failed to achieve railroad connections and were subsequently absorbed into the surrounding farmland. Former Wisconsin rural post office communities can yield late Victorian agricultural and domestic artifacts with landowner permission."
   },
   {
@@ -2268,7 +2275,8 @@
     "latitude": 34.152877,
     "longitude": -91.543458,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Waldstein was a small Arkansas community in the Ozark Mountain region of the state, one of many modest hill country settlements that developed during the late nineteenth century Arkansas settlement era as families moved into the rugged Ozark plateau seeking farming and timbering opportunities in the cedar and hardwood uplands. Arkansas's Ozark region communities were shaped by Scotch-Irish and German immigrant settlement and had a rich folk culture that persisted long after the communities themselves faded. The remote Ozark landscape of western Arkansas today is a mix of private farmland, national forest, and state parks, with many former small community sites accessible within the Ozara National Forest."
   },
   {
@@ -2277,7 +2285,8 @@
     "latitude": 34.472909,
     "longitude": -81.768995,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Renno was a small South Carolina community likely in the Piedmont or coastal plain region, existing as a minor agricultural and post office community during the cotton-era farming economy of the nineteenth century South Carolina. The state's antebellum cotton culture created a landscape of small communities and crossroads serving the plantation and small farm economy, many of which declined precipitously after the Civil War when the plantation system collapsed. Former South Carolina farming communities from the antebellum and Reconstruction eras can yield interesting period artifacts from both before and after the war."
   },
   {
@@ -2286,7 +2295,8 @@
     "latitude": 34.474539,
     "longitude": -84.023244,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 76,
     "description": "Auraria was Georgia's first gold rush town in Lumpkin County in the Blue Ridge Mountains, established after gold was discovered there in 1832 — nearly two decades before the California Gold Rush — making this corner of north Georgia the site of America's first significant gold rush. The town briefly had a population of several thousand miners before being overshadowed by the nearby town of Dahlonega (which had the federal mint) and eventually declined as the surface gold was worked out. Today Auraria is a National Register Historic District in Lumpkin County, with some original structures surviving and significant archaeological potential from the gold rush era. The surrounding Lumpkin County landscape includes gold panning opportunities along the Chestatee River that draw prospectors from across the Southeast."
   },
   {
