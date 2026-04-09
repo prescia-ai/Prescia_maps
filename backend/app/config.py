@@ -42,5 +42,9 @@ class Settings(BaseSettings):
     # Semantic scoring
     SEMANTIC_SCORING_ENABLED: bool = False
 
+    # Supabase Auth
+    SUPABASE_JWT_SECRET: str = ""
+    SUPABASE_URL: str = ""
+
 
 settings = Settings()

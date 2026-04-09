@@ -1,3 +1,6 @@
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+
 interface NavbarProps {
   locationCount: number;
   isLoading: boolean;
@@ -13,6 +16,9 @@ export default function Navbar({
   isFeaturesError,
   onImportClick,
 }: NavbarProps) {
+  const { user, profile, signOut } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <div className="absolute top-0 left-0 right-0 z-20 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700">
       <div className="flex items-center gap-3 px-4 h-12">
@@ -72,6 +78,30 @@ export default function Navbar({
             <span className="text-xs text-green-400 bg-green-900/40 px-2 py-1 rounded-full">
               ✓ {locationCount} locations
             </span>
+          )}
+
+          {/* Auth section */}
+          {user ? (
+            <div className="flex items-center gap-2 border-l border-slate-700 pl-2 ml-1">
+              <span className="text-xs text-slate-300">
+                {profile?.username ?? user.email}
+              </span>
+              <button
+                onClick={() => signOut()}
+                className="text-xs text-slate-400 hover:text-white hover:bg-slate-700/60 px-2 py-1 rounded-lg transition-colors"
+              >
+                Log out
+              </button>
+            </div>
+          ) : (
+            <div className="border-l border-slate-700 pl-2 ml-1">
+              <button
+                onClick={() => navigate('/login')}
+                className="text-xs text-slate-300 hover:text-white hover:bg-slate-700/60 px-3 py-1 rounded-lg transition-colors"
+              >
+                Log in
+              </button>
+            </div>
           )}
         </div>
       </div>
