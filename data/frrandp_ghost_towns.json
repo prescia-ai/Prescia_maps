@@ -205,7 +205,8 @@
     "latitude": 40.763736,
     "longitude": -85.592122,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.65,
+    "detecting_weight": 38,
     "description": "Monument City was a small Indiana farming community in Howard County that platted during the mid-nineteenth century land boom, briefly supporting a post office and local services before being absorbed by the growth of nearby Kokomo, which became the dominant commercial center of the county. The site today is subsumed within the greater Kokomo area, with no distinct physical remnant of the original plat. Farmstead-era artifact hunting in former Howard County communities can be productive when access is secured from private landowners."
   },
   {
@@ -214,7 +215,8 @@
     "latitude": 44.969737,
     "longitude": -112.865602,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.83,
+    "detecting_weight": 34,
     "description": "Armstead was a small agricultural town in Beaverhead County, Montana along the Beaverhead River valley, established in the late nineteenth century as a ranching and farming hub for the surrounding high-elevation plateau. The town was condemned and flooded in the 1960s when the Bureau of Reclamation completed Clark Canyon Dam, creating Clark Canyon Reservoir to provide irrigation water for the Dillon area. Old foundations and remnants of the townsite sometimes emerge at the reservoir's upper end during low water years. The surrounding Bureau of Reclamation and BLM lands offer open access to history-minded visitors exploring this scenic southwest Montana landscape."
   },
   {
@@ -223,7 +225,8 @@
     "latitude": 38.009933,
     "longitude": -120.497063,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.82,
+    "detecting_weight": 35,
     "description": "Melones was a Gold Rush settlement in Calaveras County, California established in the 1850s along the Stanislaus River, growing through multiple mining eras to become a moderate-sized community with hotels, stores, and miners' amenities serving the hydraulic and dredge mining operations of the region. The original town was condemned and inundated in 1979 when New Melones Lake was created by the Army Corps of Engineers, submerging the historic townsite beneath hundreds of feet of water. During California's severe drought years, dramatically lowered reservoir levels occasionally expose portions of the old townsite including stone foundations and debris fields. The New Melones Lake area is managed by the Bureau of Reclamation and the state, with access varying by conditions."
   },
   {
@@ -232,7 +235,8 @@
     "latitude": 34.885502,
     "longitude": -88.084944,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 42,
     "description": "Riverton was a small community in Cherokee County, Alabama that existed in the valley of the Coosa River before the construction of Weiss Lake by Alabama Power Company in 1961, which flooded many of the small river-bottom settlements of the region. The town had a modest agricultural and fishing economy tied to the natural rhythms of the Coosa River before impoundment transformed the landscape into one of Alabama's largest reservoirs. During drawdowns, stone foundations and old homesites have appeared along the lake's marshy margins. Weiss Lake is popular for recreation, and surrounding Cherokee County shoreline land is a mix of private and public access areas."
   },
   {
@@ -241,7 +245,8 @@
     "latitude": 33.522026,
     "longitude": -86.282954,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 38,
     "description": "Easonville was one of several small communities in Talladega County, Alabama that was submerged beneath Lay Lake when Alabama Power Company dammed the Coosa River in 1914, making it one of the earliest Alabama River Power reservoirs and one of the state's first significant twentieth-century town-flooding events. The farming and timber community had sustained itself for decades along the fertile river bottomlands before the power company's land purchases and reservoir filling displaced residents. Fragments of the old community occasionally surface near the lake's shallower arms during drawdown periods. The Lay Lake area along the Coosa River corridor is popular for fishing and outdoor recreation."
   },
   {
@@ -250,7 +255,8 @@
     "latitude": 32.729519,
     "longitude": -85.934797,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 42,
     "description": "Irma was a small Alabama community in Talladega County displaced by the creation of Lay Lake when Alabama Power Company completed Logan Martin Dam's predecessor dam on the Coosa River in the early twentieth century, flooding bottomland farms and homesteads that had been established since the antebellum era. The community's residents were among the earliest Alabamians to experience the displacement that would become common with the extensive damming of Alabama's river system. The Coosa River lakes today form a popular recreation corridor, with some historic artifacts occasionally surfacing at the lower reservoir levels during dry-season drawdowns."
   },
   {
@@ -259,7 +265,8 @@
     "latitude": 32.801452,
     "longitude": -85.871418,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 38,
     "description": "Ozella was an agricultural community in Talladega County, Alabama that existed along the Coosa River before the impoundment of Lay Lake by Alabama Power Company, farming the rich bottomlands that the river periodically flooded and enriched with silt. The town shared the fate of its neighbors Irma, Easonville, and others in the Coosa valley — condemned and flooded as the Alabama Power system of dams reshaped the river for hydroelectric production. Low-water periods at Lay Lake can expose old homesites near the lake's margins, particularly in the quieter coves where the original town areas once stood."
   },
   {
@@ -268,7 +275,8 @@
     "latitude": 32.741547,
     "longitude": -85.846442,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 42,
     "description": "Susanna was a small farming community in Talladega County, Alabama along the Coosa River drainage, one of several rural settlements displaced by the construction of Alabama Power's hydroelectric dams that began transforming the Coosa River system in the early twentieth century. Like neighboring communities Ozella and Irma, Susanna represented the small-scale agricultural life of Alabama's piedmont river valleys that was permanently altered by industrialization and electrification. The Lay Lake area today offers recreation access, and during extreme low-water periods some of the older shoreline areas reveal structural remnants from the pre-reservoir era."
   },
   {
@@ -277,7 +285,8 @@
     "latitude": 32.134311,
     "longitude": -87.403607,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Prairie Bluff was an antebellum Alabama community in Wilcox County along the Alabama River, once a significant cotton shipping point where steamboats loaded bales for the journey down to Mobile Bay and the broader cotton trade network of the Deep South. The town thrived in the 1840s and 1850s on King Cotton's prosperity but declined sharply after the Civil War as the plantation economy collapsed and the Alabama River's commercial role diminished with the coming of railroads. Today only scattered remnants mark the site, which is on private land typical of Alabama's Black Belt rural landscape. The antebellum history makes this an intriguing research destination, though access requires landowner permission."
   },
   {
@@ -286,7 +295,8 @@
     "latitude": 39.561944,
     "longitude": -83.965556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.84,
+    "detecting_weight": 33,
     "description": "New Burlington was a Quaker farming community in Clinton County, Ohio established in the early nineteenth century by Friends who had migrated from North Carolina and Virginia seeking fertile Ohio farmland and freedom from the slave economy of the South. The community thrived for generations, with a meetinghouse and school serving as the center of civic life for surrounding Quaker farms. New Burlington was condemned in the 1960s to construct Caesar Creek Lake by the Army Corps of Engineers, flooding the historic Quaker town beneath the reservoir waters. The Caesar Creek State Park surrounds the lake and offers access to the general area, with the former town now interpreted at the park's visitor center."
   },
   {
