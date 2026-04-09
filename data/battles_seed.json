@@ -337,7 +337,8 @@
     "description": "On September 11, 1777, General Howe again outflanked Washington's army at Brandywine Creek in Pennsylvania, sending the bulk of his force on a wide sweep through an unguarded ford while pinning the Americans frontally, routing the Continental right wing and nearly capturing the army. Despite the defeat — the largest single-day engagement of the Revolution — Washington preserved his force and Lafayette, wounded in the leg, distinguished himself rallying the troops. Brandywine Battlefield Park in Chadds Ford, PA, preserves the Chad House (Lafayette's headquarters) and the Birmingham Hill fighting area, with ongoing archaeological programs identifying the extent of the battlefield. Metal detecting is prohibited in the state historic park, but private farmland in the broad Brandywine Valley corridor has yielded British and Hessian buttons, musket balls, pewter items, and camp debris from the extensive operations in 1777.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Freeman's Farm (First Saratoga)",
@@ -347,7 +348,8 @@
     "description": "On September 19, 1777, the first of two battles at Saratoga saw American riflemen and Continentals under Daniel Morgan and Henry Dearborn contest Burgoyne's advancing columns in the cleared farmland of Freeman's Farm near the Hudson River, fighting the British to a costly standstill in a grueling all-day engagement. Burgoyne held the field but his army had suffered over 600 casualties it could not replace, and the fight demonstrated the growing effectiveness of the Continental Army. Saratoga National Historical Park in Stillwater, NY, preserves 3,000 acres of the battlefield with driving tours, period earthworks, and the Boot Monument marking where Arnold's leg was wounded. Metal detecting is strictly prohibited in the national park, but the surrounding Saratoga County farmland has produced Continental and British buttons, musket balls, and artillery fragments on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Germantown",
@@ -357,7 +359,8 @@
     "description": "On October 4, 1777, Washington launched a bold four-column dawn assault on the British camp at Germantown, PA, briefly driving Howe's forces back before the attack collapsed in confusion, fog, and a costly detour to reduce an isolated redoubt in the Chew House. Though a tactical failure, the battle convinced French observers that the Americans could mount complex offensive operations, helping tip France toward open alliance with the United States. The Germantown battlefield is now within the densely populated northwest Philadelphia neighborhood of Germantown, with Cliveden (the Chew House) a National Trust for Historic Preservation site open to the public. No detecting is possible in the urban landscape, but Cliveden still bears musket ball scars on its stone walls from the battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.87,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Bemis Heights (Second Saratoga)",
@@ -367,7 +370,8 @@
     "description": "On October 7, 1777, General Burgoyne sent a reconnaissance-in-force against the American left flank at Bemis Heights, NY, triggering a furious counterattack led by the brilliant but insubordinate Benedict Arnold that smashed through the British lines and captured key redoubts before nightfall. The American victory forced Burgoyne's full retreat and then surrender of his entire army of 6,000 men on October 17 — the first time a British army had surrendered in the field — convincing France to enter the war as America's ally and transforming the Revolution into a world war. Saratoga National Historical Park preserves the battlefield across rolling Hudson Valley farmland, with fortification remains, monuments, and a tour road giving access to key positions. Detecting is prohibited in the park, but the Saratoga region's private lands have yielded significant quantities of period military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 48
   },
   {
     "name": "Valley Forge Encampment",
@@ -377,7 +381,8 @@
     "description": "From December 1777 to June 1778, George Washington's Continental Army endured the legendary winter encampment at Valley Forge, PA — a crucible of suffering and transformation where approximately 2,000 soldiers died of disease, exposure, and starvation, but where Baron Friedrich von Steuben drilled the surviving force into a disciplined professional army. The months of misery and training produced the soldiers who would fight the British to a standstill at Monmouth Court House and ultimately win the war. Valley Forge National Historical Park preserves 3,500 acres of the encampment with reconstructed huts, earthworks, Washington's headquarters, and miles of interpretive trails. Metal detecting is strictly prohibited in the national park, but Valley Forge represents one of the most significant metal detecting sites in American history — outside park boundaries, private land in Chester and Montgomery counties has yielded Continetal buttons, pewter spoons, musket balls, and countless camp artifacts from the six-month occupation.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Monmouth",
@@ -387,7 +392,8 @@
     "description": "On June 28, 1778, Washington's army intercepted the British column retreating across New Jersey from Philadelphia to New York at Monmouth Court House, launching an attack that initially went badly when General Charles Lee ordered an unauthorized retreat — prompting Washington to famously relieve Lee on the spot and rally the army. The battle that followed was the longest single-day engagement of the Revolution, fought in brutal heat that killed as many men as the fighting; it ended essentially as a draw, with both sides holding their positions. Monmouth Battlefield State Park in Freehold, NJ, preserves over 3,000 acres of rolling farmland that remarkably retains its 18th-century appearance, with earthworks, the Craig House, and the Tennent Church still visible. Metal detecting is prohibited in the state park, but surrounding Monmouth County private lands have produced Continental and British military buttons, Brown Bess musket balls, pewter canteen fragments, and numerous camp items.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Rhode Island",
@@ -397,7 +403,8 @@
     "description": "In August 1778, the first Franco-American combined military operation unfolded when General John Sullivan's 10,000-man army attempted to drive the British from Newport, RI, supported by the French fleet under d'Estaing. When the French fleet was damaged by a storm and withdrew to Boston for repairs, Sullivan was left alone and had to withdraw his army from Aquidneck Island after a rear-guard action at Quaker Hill on August 29 that repulsed British pursuit. The battlefield on the northern end of Aquidneck Island is now largely within the town of Portsmouth, RI, with the Butts Hill Fort earthworks — the main American defensive position — surviving as a local historic site. The battle area offers limited private land access, but the broader Rhode Island campaign zone has produced period military hardware and camp debris.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Kings Mountain",
@@ -407,7 +414,8 @@
     "description": "On October 7, 1780, a force of Patriot 'Overmountain Men' — frontier militia from Virginia, North Carolina, and what would become Tennessee — surrounded and destroyed a Loyalist force under Major Patrick Ferguson on the wooded summit of Kings Mountain, SC, in a battle of about an hour that killed Ferguson and eliminated the left wing of Cornwallis's army. The victory shattered British plans for a Loyalist pacification of the Carolinas and forced Cornwallis to abandon his invasion of North Carolina, a turning point in the Southern Campaign. Kings Mountain National Military Park near Blacksburg, SC, preserves the battlefield with trails around the ridge and Ferguson's grave. Detecting is prohibited in the national park, but the surrounding piedmont farmland of York County, SC, saw extensive Patriot and Loyalist raids throughout the war and private land searches have yielded period buttons, musket balls, and accoutrements.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Camden",
@@ -417,7 +425,8 @@
     "description": "On August 16, 1780, British General Cornwallis's army shattered General Horatio Gates's hastily assembled force of Continentals and militia at Camden, SC, in one of the worst American defeats of the Revolution, killing or capturing over 2,000 men and destroying the Southern Army as an effective force. Gates himself fled the field on one of the fastest horses in the army, leaving his troops to their fate — a humiliation that ended his military career. Historic Camden Revolutionary War Site preserves portions of the British fortified town and the broader battle area, with ongoing archaeology. Metal detecting is prohibited at the preserved sites, but the broad Kershaw County landscape north of Camden, scene of the approach march and the rout, has yielded British regimental buttons, musket balls, and period camp debris on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Springfield",
@@ -427,7 +436,8 @@
     "description": "On June 23, 1780, a British force of 5,000 men under General Wilhelm von Knyphausen launched a second invasion of New Jersey, advancing on Springfield and burning much of the town in a battle that was intended to draw Washington's army out of the Watchung Mountains for a decisive engagement. New Jersey Continentals and militia under General Nathanael Greene fought a tenacious delaying action, and the British eventually withdrew — never again invading New Jersey in force. The town of Springfield, NJ, was largely rebuilt after the burning and is now a modern suburb, with a small marker at the Old First Church and a monument noting the battle. The broader short hills and Watchung Mountain corridor saw extensive Continental encampment and fortification activity, and private property in the region has yielded Continental and British military artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Cowpens",
