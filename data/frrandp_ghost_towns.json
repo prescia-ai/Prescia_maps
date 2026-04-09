@@ -505,7 +505,8 @@
     "latitude": 40.936,
     "longitude": -90.161,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Appleton was a small farming community in Hancock County, Illinois along the Illinois River that developed in the mid-nineteenth century as a river landing and agricultural supply point, serving the surrounding flat prairie farmland during the great Illinois settlement era. The town struggled to maintain commercial viability as larger river towns monopolized trade and rail connections bypassed many smaller Illinois River communities. The site today is low-lying Illinois bottomland, privately farmed with few above-ground remnants of the original community. River-bottom Illinois sites from the 1840s-1880s can yield interesting finds including boat hardware, trade goods, and agricultural implements when access is secured."
   },
   {
@@ -514,7 +515,8 @@
     "latitude": 37.771406,
     "longitude": -89.384052,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Brownsville was a small rural community in Jackson County, Illinois in the Shawnee Hills region of southern Illinois, a part of the state settled early in the nineteenth century by Upland South migrants who established small farms and local trade centers in the wooded hills. The community faded as transportation routes evolved and the relative isolation of the Shawnee region made it difficult to sustain commercial growth. Today the former site is within or near the Shawnee National Forest, which covers much of Jackson County's public lands. Detecting in the Shawnee region requires careful attention to land status, as public forest land prohibits artifact removal while private agricultural parcels may be accessed with permission."
   },
   {
@@ -523,7 +525,8 @@
     "latitude": 36.737962,
     "longitude": -89.269289,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Pinhook was a small Missouri bootheel community in Mississippi County that was entirely destroyed when the Birds Point-New Madrid Floodway was intentionally detonated by the Army Corps of Engineers in May 2011, flooding the community to relieve pressure on the levee system during the catastrophic Mississippi River flood of that year. The predominantly African American community of Pinhook had 26 homes, a church, and a community center that were all destroyed when the levee was blown — and unlike the hundreds of thousands of acres of farmland that the flood control measure was designed to protect, Pinhook's residents were not compensated fairly and could not rebuild. The site today is private farmland in the Missouri bootheel, with the community's story serving as a stark example of environmental injustice. The former community area is now low-lying cropland with little surface evidence of the homes and lives lost."
   },
   {
@@ -532,7 +535,8 @@
     "latitude": 40.7959,
     "longitude": -76.3392,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.82,
+    "detecting_weight": 42,
     "description": "Byrnesville was a small Pennsylvania coal mining community in Carbon County that developed to house miners working the region's extensive anthracite deposits, building the close-knit working-class social structure typical of Pennsylvania coal patch towns with a church, company store, and rows of company-owned housing. Like dozens of other carbon county coal patches, Byrnesville declined as deep mining operations closed and miners sought work in other industries or relocated to larger centers. The site today shows typical post-coal patch characteristics — some foundation remnants, disturbed ground, and the coal dust that still lingers in the soil of former mining communities. Metal detecting in former Pennsylvania coal patches can yield late-Victorian coins, mining company tokens, and immigrant-era personal artifacts."
   },
   {
@@ -541,7 +545,8 @@
     "latitude": 31.4028,
     "longitude": -100.44,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.76,
+    "detecting_weight": 65,
     "description": "Ben Ficklin was the original county seat of Tom Green County, Texas located at the confluence of Spring Creek and the Middle Concho River, established in 1875 and serving as a significant supply point along the frontier military road system in the post-Civil War development of West Texas. The town was catastrophically destroyed on August 23, 1882, when a flash flood down the Concho swept through the settlement, killing over 65 people in one of Texas's deadliest natural disasters and washing away most of the town's structures. The county seat was moved to the surviving higher ground at nearby San Angelo, and Ben Ficklin was never rebuilt. The site today is private ranchland outside San Angelo, and the historic marker commemorating the flood can be found near the original location."
   },
   {
@@ -550,7 +555,8 @@
     "latitude": 31.225,
     "longitude": -101.689444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 65,
     "description": "Texon was a West Texas company oil town in Reagan County that emerged from the desert literally overnight after the discovery of the prolific Santa Rita No. 1 oil well in 1923, with the Texon Oil and Land Company building an entire planned community including housing, a hotel, school, country club, and movie theater to support the exploding oil field workforce. The company town thrived through the boom years of West Texas oil production but began declining in the 1950s as oil production gradually waned and the Texon company restructured. The company sold off properties and Texon was depopulated by the 1960s, leaving mostly empty lots and a handful of surviving structures baking in the West Texas sun. The remote site in the Permian Basin is accessible by road, and period oil field and domestic artifacts have been found in the area."
   },
   {
@@ -559,7 +565,8 @@
     "latitude": 29.1225,
     "longitude": -89.107222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "La Balize was a French colonial river pilot station and small community at the very mouth of the Mississippi River in Plaquemines Parish, Louisiana, established by the French in the early 1700s as a mandatory stopping point where incoming ships took on river pilots familiar with the treacherous delta passes. The settlement at the Southwest Pass entrance served for generations as America's gateway to the inland continent via New Orleans, though the low-lying delta land was perpetually at risk from storms and flood. Over centuries of storms, floods, and Mississippi River channel migration, the original settlement sites have been repeatedly destroyed and rebuilt until the land itself was lost to Gulf of Mexico erosion. Today the original La Balize site is under Gulf of Mexico waters — one of Louisiana's most historically significant lost places."
   },
   {
@@ -568,7 +575,8 @@
     "latitude": 42.410825,
     "longitude": -87.810686,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Mayville was a small agricultural community in Madison County, Illinois in the American Bottom region near the confluence of the Missouri and Mississippi Rivers, developing in the early nineteenth century as a farming supply point in this fertile but flood-prone lowland landscape. The Mississippi River's periodic destructive floods and the availability of better-situated town sites gradually drained Mayville of its population and commerce. The site is now within the broader St. Louis metropolitan area's Madison County bottomland, with the original community long since absorbed into the landscape. The American Bottom region has yielded French colonial and early American artifacts at sites where the original ground surface survives beneath agricultural disturbance."
   },
   {
@@ -577,7 +585,8 @@
     "latitude": 37.888029,
     "longitude": -113.667021,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Beryl was a small junction community in Iron County, Utah along the route of the now-defunct Union Pacific branch line that served the agriculture and mining interests of the Escalante Valley in the early twentieth century. The town existed primarily as a railroad service point and small farming community before rail service declined and the branch line was eventually abandoned, leaving the community without its primary economic reason for existence. The site today preserves a small remnant settlement, with the surrounding agricultural land of the Escalante Valley still actively farmed. Former railroad junction communities in rural Utah can yield railroad hardware, early automotive era items, and domestic artifacts from the 1910s-1950s with landowner permission."
   },
   {
@@ -586,7 +595,8 @@
     "latitude": 38.297762,
     "longitude": -90.310997,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Valmeyer (original location) was a small village in Monroe County, Illinois along the Mississippi River floodplain that was catastrophically flooded in the Great Flood of 1993 — one of the most damaging floods in American history — which put the entire town underwater for months and destroyed or severely damaged most structures. Rather than rebuild in the floodplain, residents voted to relocate the entire community to the bluffs above the river, moving Valmeyer to higher ground and creating a rare modern example of deliberate whole-community relocation in American history. The original townsite has been largely cleared and returned to floodplain, with only scattered foundation remnants and the altered landscape speaking to the community that stood there for over a century. The relocation story makes Valmeyer a fascinating modern ghost town case study."
   },
   {
