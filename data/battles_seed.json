@@ -1437,7 +1437,8 @@
     "description": "On June 8, 1862, during Stonewall Jackson's brilliant Shenandoah Valley Campaign, Confederate General Richard Ewell's division fought off a Federal assault at Cross Keys, VA, near Port Republic in Rockingham County, defeating General John Frémont's pursuing force and protecting Jackson's flank from destruction. The following day, Jackson defeated another Union force at Port Republic, ending the Valley Campaign. The Cross Keys battlefield in Rockingham County, VA, is a Virginia Civil War Trails site on private agricultural land, with interpretive markers along the road. The Shenandoah Valley saw some of the most intense and repeated military activity of the entire Civil War, and private land in Rockingham and Augusta counties has produced remarkable quantities of Civil War artifacts including Minié balls, buttons, and buckles.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Port Republic",
@@ -1447,7 +1448,8 @@
     "description": "On June 9, 1862, Stonewall Jackson fought the final battle of his Valley Campaign at Port Republic, VA, where he personally directed the attack on a Union force under General James Shields, routing them after fierce fighting around a coaling (charcoal-making facility). The twin victories at Cross Keys and Port Republic freed Jackson to join Lee in the Seven Days Battles, and completed one of the most remarkable military campaigns in American history. The Port Republic battlefield in Rockingham County, VA, is largely private farmland along the Shenandoah River, with Civil War Trails markers accessible from the road. The Valley Campaign corridor from Staunton to Strasburg has produced extraordinary quantities of Civil War relics on private land throughout the Shenandoah Valley.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 68
   },
   {
     "name": "First Battle of Winchester",
@@ -1457,7 +1459,8 @@
     "description": "In May 1862, during the Shenandoah Valley Campaign, Stonewall Jackson's forces drove the Union garrison under General Nathaniel Banks out of Winchester, VA — the first of three battles that would be fought in and around this key Valley town over the course of the war. Jackson's men swept northward through the Valley, threatening Washington and pulling troops away from McClellan's Peninsula Campaign. Winchester is a modern city in Frederick County, VA, and the battlefield terrain of the 1862 fight is largely within the urban and suburban environment. Shenandoah Valley battlefield protection organizations have worked to preserve portions of all three Winchester battles; private land in the surrounding countryside has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Front Royal",
@@ -1467,7 +1470,8 @@
     "description": "On May 23, 1862, Stonewall Jackson achieved complete tactical surprise at Front Royal, VA, when his forces — guided through the Blue Ridge by Belle Boyd's intelligence — routed a Union garrison under Colonel John Kenly and captured over 700 men, capturing enormous stores of supplies and forcing Nathaniel Banks to abandon Strasburg and flee northward. The attack at Front Royal triggered the chain of events that would lead to the battles at Winchester and ultimately Jackson's raid to the Potomac. The Front Royal area in Warren County, VA, has preserved some battlefield terrain, with Civil War Trails interpretive sites marking the route of the attack. The broader Shenandoah Valley private farmland in this area has produced significant Civil War artifact assemblages.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of McDowell",
@@ -1477,7 +1481,8 @@
     "description": "On May 8, 1862, in the opening engagement of Stonewall Jackson's Valley Campaign, Confederate forces under General Edward Johnson clashed with a Union advance force under General Robert Milroy on Sitlington's Hill above the village of McDowell in Highland County, VA — the Federals actually attacked uphill to prevent the Confederates from bringing artillery to bear, inflicting heavier casualties than they suffered. The battle at 2,500 feet elevation in the Allegheny Mountains is among the more remote and intact Civil War battlefield landscapes in Virginia. McDowell Battlefield in Highland County, VA, is preserved by the Civil War Trust (American Battlefield Trust) and offers excellent hiking access to the Sitlington's Hill terrain. The remote Highland County area has produced Civil War Minié balls and military hardware, and the preserved battlefield is one of the most scenic and accessible of the smaller Virginia engagements.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 70
   },
   {
     "name": "Battle of Chancellorsville",
@@ -1487,7 +1492,8 @@
     "description": "The Battle of Chancellorsville in May 1863 is widely considered Robert E. Lee's masterpiece — outnumbered nearly two to one by General Joseph Hooker's 130,000-man Army of the Potomac, Lee divided his army three ways, sending Stonewall Jackson on an 11-mile flank march that crushed Hooker's exposed right flank at dusk on May 2 in a devastating surprise attack. The Confederate victory came at a terrible cost: Jackson was accidentally shot by his own men during a night reconnaissance and died eight days later. Fredericksburg and Spotsylvania National Military Park's Chancellorsville unit preserves the Fairview and Hazel Grove artillery positions, the Chancellor House site, and Jackson's wounding location in the Wilderness. Metal detecting is prohibited in the national park, but surrounding Spotsylvania County private land has produced significant Civil War relics including Minié balls, artillery fragments, and military hardware from this intensely contested zone.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Fredericksburg (Second)",
@@ -1497,7 +1503,8 @@
     "description": "On May 3, 1863, during the Chancellorsville campaign, General John Sedgwick's Union Sixth Corps attacked Marye's Heights at Fredericksburg — the same position that had slaughtered thousands in December 1862 — and this time captured it quickly, then advanced toward Chancellorsville until stopped at Salem Church. The action, known as the Second Battle of Fredericksburg or Banks' Ford battle, was part of Hooker's broader but ultimately failed turning movement. The Fredericksburg and Spotsylvania National Military Park preserves Marye's Heights, the Sunken Road, and Salem Church as part of the 1863 Chancellorsville campaign units. Private land in the broader Fredericksburg corridor has produced Civil War Minié balls, artillery fragments, and military hardware from the intense 1862 and 1863 operations in this area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Salem Church",
@@ -1507,7 +1514,8 @@
     "description": "On May 3-4, 1863, Sedgwick's Sixth Corps — having captured Marye's Heights — was stopped and then nearly surrounded at Salem Church, VA, when Confederate reinforcements arrived from Chancellorsville and counterattacked from both flanks. Sedgwick was forced to retreat back across the Rappahannock at Banks' Ford, abandoning the brief Union lodgment on the south bank. Salem Church, a brick antebellum church that served as a field hospital during the battle, still stands in Spotsylvania County and is part of the Fredericksburg and Spotsylvania National Military Park. The surrounding private farmland in the church vicinity has produced Civil War Minié balls and military artifacts from the brief but fierce engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Brandy Station",
@@ -1517,7 +1525,8 @@
     "description": "On June 9, 1863, the largest cavalry battle ever fought on American soil took place at Brandy Station, VA, when Union cavalry under Alfred Pleasonton launched a surprise raid on J.E.B. Stuart's Confederate cavalry corps that had been reviewed in grand parade the day before. Stuart was caught off guard, and the Union horsemen fought the Confederates to a tactical draw in a day-long battle across the rolling Culpeper County fields — demonstrating for the first time that the Union cavalry could match their Confederate counterparts. The Brandy Station Foundation has preserved a significant portion of Fleetwood Hill and the core battlefield in Culpeper County, VA, with a small museum. Metal detecting is prohibited on the preserved battlefield, but surrounding private farmland in Culpeper County has produced cavalry battle relics including carbine bullets, saber fragments, horse equipment, and buttons.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Aldie",
@@ -1527,7 +1536,8 @@
     "description": "On June 17, 1863, the opening engagement of the Loudoun Valley cavalry battles saw Union cavalry under General Judson Kilpatrick clash with Confederate cavalry under Colonel Thomas Munford at Aldie, VA, as Union horsemen tried to pierce the Blue Ridge screen and discover Lee's invasion route northward. The battle, fought in the narrow streets of the village and surrounding fields, was costly for the Federals. The town of Aldie in Loudoun County, VA, is a well-preserved historic village where the Aldie Mill historic site preserves the antebellum landscape of the battle. The surrounding Loudoun County piedmont farmland has produced Civil War cavalry relics and Minié balls on private land with permission.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Middleburg",
