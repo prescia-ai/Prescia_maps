@@ -1547,7 +1547,8 @@
     "description": "On June 17-19, 1863, Union cavalry under General David Gregg fought a series of engagements at Middleburg, VA, as part of the Loudoun Valley cavalry battles that screened Lee's northward march toward Pennsylvania. The fighting around the historic Loudoun Valley village resulted in both sides suffering significant casualties without a clear decision. Middleburg, VA, is today an upscale equestrian community in Loudoun County with many of its antebellum buildings intact. The surrounding private horse country has produced Civil War cavalry relics on lands that have been lightly developed, making Loudoun County one of the more accessible private land detecting regions in Virginia.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Upperville",
@@ -1557,7 +1558,8 @@
     "description": "On June 21, 1863, the final engagement of the Loudoun Valley cavalry battles was fought at Upperville, VA, where Union cavalry finally pushed through the Blue Ridge gaps into the Shenandoah Valley — but found Lee's army of invasion already well on its way to Pennsylvania. The fighting at Upperville, won by the Confederates who retired in order, closed the prelude to Gettysburg. Upperville is a historic village in Fauquier County, VA, preserved in its antebellum appearance with stone walls and farmsteads. The surrounding Fauquier and Clarke county private farmland in the Virginia horse country has produced Civil War cavalry relics and camp artifacts on private property.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Gettysburg",
@@ -1567,7 +1569,8 @@
     "description": "The three-day Battle of Gettysburg in July 1863 was the bloodiest engagement of the Civil War, with over 50,000 combined casualties as Robert E. Lee's Army of Northern Virginia clashed with George Meade's Army of the Potomac across the rolling farmland, rocky hills, and orchards of southern Pennsylvania. Lee's failed assault on the third day — Pickett's Charge — broke the Confederate offensive momentum and marked the decisive turning point of the war. Gettysburg National Military Park is one of the most extensively preserved Civil War sites in America, with monuments, earthworks, stone walls, and thousands of acres of interpreted terrain. Metal detecting is strictly prohibited within the national park, but the surrounding Adams County farmland saw massive troop movements, camps, and hospital sites that have produced significant finds on private property with landowner permission.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.95,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Pickett's Charge",
@@ -1577,7 +1580,8 @@
     "description": "On July 3, 1863, the third day at Gettysburg culminated in the Confederate assault on the Union center at Cemetery Ridge — 12,500 men advancing nearly a mile across open fields under murderous artillery and infantry fire toward the Angle and Copse of Trees. Only a fraction reached the Union line, and their brief penetration was repulsed by the defenders; Pickett's division alone lost over 50% of its men. The charge site is the most-visited spot in Gettysburg National Military Park, preserved as open farmland almost exactly as it appeared in 1863. Metal detecting is strictly prohibited in the national park, but the private farmland of Adams County in the approach corridors and flanking areas has produced exceptional quantities of Civil War relics including Minié balls, canister rounds, belt plates, and artillery fragments.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.95,
+    "detecting_weight": 40
   },
   {
     "name": "Siege of Vicksburg",
@@ -1587,7 +1591,8 @@
     "description": "From May 18 to July 4, 1863, General Grant besieged the Confederate fortress city of Vicksburg, MS, after his brilliant Vicksburg Campaign had cut off and surrounded General John Pemberton's 30,000-man garrison. The 47-day siege reduced the Confederate defenders and civilian population to near starvation before Pemberton surrendered on Independence Day — combined with the Gettysburg defeat, the fall of Vicksburg split the Confederacy along the Mississippi and was one of the war's decisive turning points. Vicksburg National Military Park preserves over 1,800 acres of siege lines, Confederate and Union earthworks, and the famous ironclad USS Cairo (raised from the Yazoo River and displayed in an outdoor pavilion). Metal detecting is strictly prohibited in the national park, but surrounding Warren County private land has produced Minié balls, artillery fragments, CS and US belt plates, buttons, and camp debris from the extensive siege operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Champion Hill",
@@ -1597,7 +1602,8 @@
     "description": "On May 16, 1863, the largest and most decisive engagement of Grant's Vicksburg Campaign was fought at Champion Hill (Baker's Creek), MS, where three Confederate divisions under Pemberton were driven from their defensive ridge position in a battle that effectively sealed Vicksburg's fate — preventing the Confederate army from escaping the trap Grant was closing around it. The victory at Champion Hill was called by Grant's chief engineer the 'decisive battle of the Vicksburg campaign.' The Champion Hill battlefield in Hinds County, MS, is largely private farmland with the Champion House (also called Sid Champion House) serving as the campaign's most recognizable landmark. The surrounding farmland has produced Civil War Minié balls, artillery fragments, and military hardware from this important but often overlooked engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 72
   },
   {
     "name": "Battle of Big Black River Bridge",
@@ -1607,7 +1613,8 @@
     "description": "On May 17, 1863, the day after Champion Hill, Grant's army attacked the Confederate rear guard at the Big Black River railroad bridge in Warren County, MS, routing them in a brief engagement and capturing over 1,700 men — the fleeing Confederates abandoned artillery and equipment to escape across the bridge before destroying it. The defeat completed the Confederate retreat into the Vicksburg defenses. The battlefield at Big Black River Bridge is largely private farmland in Warren and Hinds counties, MS, with a Civil War Trails marker at the crossing. Private land in the area has produced Civil War Minié balls, artillery fragments, and accoutrements from the intense May 1863 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Port Gibson",
@@ -1617,7 +1624,8 @@
     "description": "On May 1, 1863, the first major engagement of Grant's overland Vicksburg campaign was fought at Port Gibson, MS, after Union forces landed at Bruinsburg — the largest amphibious landing in American history before World War II. Grant's army fought its way through the dense bayou ridges against Confederate defenders under John Bowen, winning a victory that prompted the abandonment of Grand Gulf and opened the route to Vicksburg's rear. The Port Gibson battlefield in Claiborne County, MS, is partially preserved as a National Historic Landmark, with the Shaifer House and excellent interpretive signage. The surrounding Claiborne County private farmland has produced Civil War Minié balls and military hardware from this initial stage of Grant's masterful campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Raymond",
@@ -1627,7 +1635,8 @@
     "description": "On May 12, 1863, Confederate General John Gregg attacked what he thought was a small Federal reconnaissance force near Raymond, MS — but encountered McPherson's entire 17th Corps in a sharp fight that was ultimately a Confederate tactical defeat. The surprise at Raymond forced Grant to alter his march route and strike Jackson before turning against Vicksburg, adding another dimension to his remarkable Vicksburg campaign. The Raymond battlefield in Hinds County, MS, is partially preserved at the Courthouse Square area in Raymond, with an NPS Civil War Trails interpretive stop. Surrounding Hinds County private farmland has produced Civil War Minié balls and military hardware from the May 1863 campaign corridor.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Jackson (Mississippi)",
@@ -1637,7 +1646,8 @@
     "description": "On May 14, 1863, Grant's forces captured the Mississippi state capital at Jackson, MS, after a brief battle against Confederate defenders under Joseph Johnston, destroying the rail hub and manufacturing base that supported Vicksburg. Sherman's force briefly held the city before abandoning it to march on Vicksburg, and Johnston later returned to partially occupy the burned city. The battlefield at Jackson is within the modern capital city of Mississippi, largely developed, with the Old Capitol Museum and Mississippi Museum of Natural Science preserving antebellum buildings in the downtown core. Civil War artifacts have been found during construction projects in the Jackson metropolitan area, but conventional metal detecting opportunities are limited in the urban environment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Chickamauga",
