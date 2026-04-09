@@ -1107,7 +1107,8 @@
     "description": "On July 2, 1861, a Federal column under General Robert Patterson skirmishing with Confederate forces under General Thomas Jackson at Falling Waters (Hoke's Run) near Martinsburg, WV, gave Jackson — still weeks before his famous 'Stonewall' nickname — his first engagement of the war. The skirmish delayed Patterson's pursuit and allowed Jackson's force to withdraw in good order toward Winchester. The battle site along Back Creek at Hoke's Run in Berkeley County, WV, is largely private farmland in the Shenandoah Valley. The Eastern Panhandle of West Virginia saw extensive military activity from 1861 through 1865, and the valley farmland has produced Civil War Minié balls, buttons, and buckles on private land with permission.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Fort Henry",
@@ -1117,7 +1118,8 @@
     "description": "On February 6, 1862, Flag Officer Andrew Foote's Union river gunboat fleet pounded Confederate Fort Henry on the Tennessee River into surrender before Grant's ground troops even arrived — the first time a U.S. Navy vessel had reduced a Confederate fort. The victory opened the Tennessee River as a highway deep into the Confederate heartland and set the stage for the larger victory at Fort Donelson days later, cementing Grant's rising reputation. The original site of Fort Henry is now beneath Kentucky Lake (the reservoir created by Kentucky Dam in 1944), a submerged Civil War fortification. The surrounding Stewart County, TN, area saw extensive military operations in early 1862, and private land in the region has yielded Civil War artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Fort Donelson",
@@ -1127,7 +1129,8 @@
     "description": "On February 11-16, 1862, Grant besieged Fort Donelson on the Cumberland River, repulsing a Confederate breakout attempt and forcing the surrender of over 12,000 Confederate troops — the largest surrender of soldiers in American history up to that point — earning him the nickname 'Unconditional Surrender Grant' that propelled him to national fame. The fall of Fort Donelson opened Nashville to Union occupation and effectively split the Confederacy's western defensive line. Fort Donelson National Battlefield near Dover, TN, preserves the earthworks, water batteries, the Dover Hotel (where the surrender occurred), and the national cemetery. Metal detecting is prohibited in the national park, but surrounding Stewart County private farmland has yielded Civil War Minié balls, CS and US belt plates, buttons, and artillery fragments from the intense February 1862 siege.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Pea Ridge (Elkhorn Tavern)",
@@ -1137,7 +1140,8 @@
     "description": "On March 7-8, 1862, the largest Civil War battle west of the Mississippi was fought at Pea Ridge in the Ozark Mountains of northwestern Arkansas, when Union General Samuel Curtis's 10,500-man Army of the Southwest defeated a Confederate force of over 16,000 under Van Dorn in a two-day battle that secured Missouri for the Union and is remarkable for involving three Confederate generals (McCulloch, McIntosh, and Hébert) either killed or captured. The battle effectively ended Confederate hopes of retaking Missouri. Pea Ridge National Military Park near Garfield, AR, preserves the battlefield with the reconstructed Elkhorn Tavern, driving tour, and excellent interpretive trails across the rolling Ozark terrain. Metal detecting is prohibited in the national park, but surrounding Benton County private land has produced Civil War Minié balls, buttons, and artillery fragments.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Shiloh (Pittsburg Landing)",
@@ -1147,7 +1151,8 @@
     "description": "On April 6-7, 1862, the Battle of Shiloh in Tennessee was the bloodiest engagement in American history to that point, with nearly 24,000 combined casualties over two days as Confederate General Albert Sidney Johnston's surprise attack nearly destroyed Grant's Army of the Tennessee on the first day before Johnston was killed and Union reinforcements under Buell turned the tide for a Union victory on the second. The battle shattered the comfortable illusion that the war would be short and shocked both North and South into the reality of what lay ahead. Shiloh National Military Park near Savannah, TN, preserves 4,200 acres of the battlefield with the distinctive 'Hornet's Nest' position, Bloody Pond, and hundreds of monuments. Metal detecting is strictly prohibited in the national park, but surrounding Hardin County private land has yielded significant quantities of Civil War Minié balls, artillery shell fragments, US and CS buttons, belt plates, and camp debris.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Island Number Ten",
@@ -1157,7 +1162,8 @@
     "description": "In March-April 1862, a Union combined arms operation of gunboats and mortar boats besieged and captured Island No. 10 — a heavily fortified Confederate position in a bend of the Mississippi River on the Tennessee-Missouri border — using a remarkable canal cut through the Missouri swamps to flank the island's defenses. The fall of the island opened the river to Union traffic deep into the Confederacy and represented one of the most innovative amphibious operations of the war. The original island is now partially submerged and reconfigured by the shifting Mississippi River channel near New Madrid, MO, with no developed historic site. The surrounding river bottoms have yielded Civil War naval and military artifacts from the months-long siege operation.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Williamsburg",
@@ -1167,7 +1173,8 @@
     "description": "On May 5, 1862, as the Confederate army withdrew up the Virginia Peninsula toward Richmond, a Confederate rear guard under General James Longstreet fought a day-long delaying action against the pursuing Union Army of the Potomac at Williamsburg, VA, giving the main Confederate force time to escape northward. General Winfield Scott Hancock's spectacular attack on the Confederate left won him the 'Superb' sobriquet from McClellan. The battlefield is partially preserved at the Williamsburg battlefield sites within the growing James City and York County, VA, suburban area, with some earthworks visible. The broader Colonial/Peninsula Campaign corridor in the Virginia Tidewater has produced significant Civil War relics on private land, including Minié balls, US and CS buttons, and camp debris.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Fair Oaks (Seven Pines)",
@@ -1177,7 +1184,8 @@
     "description": "On May 31 - June 1, 1862, Confederate General Joseph Johnston attacked the Union Army's left wing that had crossed the Chickahominy River and was isolated by flooding at Fair Oaks Station and Seven Pines, VA. Johnston was severely wounded on the first day — an event that brought Robert E. Lee to command the Army of Northern Virginia — and the battle ended inconclusively with over 11,000 combined casualties. The battlefield is now within the Richmond metropolitan area in Henrico and Charles City counties, VA, largely developed but with a small marker at the Fair Oaks battlefield site. The Richmond and Chickahominy area has been exceptionally productive for relic hunters on private land, with Minié balls, artillery fragments, US and CS buttons, and belt plates documented from the Seven Days Battles area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Mechanicsville (Beaver Dam Creek)",
@@ -1187,7 +1195,8 @@
     "description": "On June 26, 1862, Robert E. Lee launched his first offensive as commander of the Army of Northern Virginia by attacking the Union right flank at Beaver Dam Creek (Mechanicsville), VA, where Stonewall Jackson's force was expected to flank the position but failed to appear on time, causing frontal Confederate assaults to be repulsed with heavy losses. Despite the tactical failure, McClellan's reaction was to order a 'change of base' — what critics called a retreat — toward the James River. The battlefield area is partially preserved at the Richmond National Battlefield Park's Mechanicsville unit in Hanover County, VA. Metal detecting is prohibited in the national park units, but the surrounding Hanover and Henrico County private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the Seven Days campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Gaines' Mill",
@@ -1197,7 +1206,8 @@
     "description": "On June 27, 1862, Robert E. Lee launched massed Confederate assaults against the Union position on Turkey Hill above Boatswain's Creek at Gaines' Mill, VA, in the largest of the Seven Days Battles — 57,000 Confederate troops against 35,000 Union defenders. The assault finally broke through at dusk when John Bell Hood's Texans and Law's Alabamians stormed the heights, forcing Fitz-John Porter's corps to retreat across the Chickahominy River. Richmond National Battlefield Park's Gaines' Mill unit preserves portions of the battlefield terrain in Hanover County, VA, with the restored Watt House serving as an interpretive stop. The surrounding private farmland in Hanover County has yielded exceptional quantities of Civil War Minié balls, artillery fragments, CS and US buttons, and belt plates from this intense engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Savage's Station",
