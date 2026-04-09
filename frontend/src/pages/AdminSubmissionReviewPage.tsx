@@ -101,11 +101,13 @@ export default function AdminSubmissionReviewPage() {
   }, [authLoading, user, id, navigate]);
 
   function buildPayload(statusOverride?: 'pending' | 'approved' | 'rejected') {
+    const parsedLat = parseFloat(latitude);
+    const parsedLon = parseFloat(longitude);
     return {
       name: name || undefined,
       pin_type: pinType || null,
-      latitude: parseFloat(latitude) || undefined,
-      longitude: parseFloat(longitude) || undefined,
+      latitude: !isNaN(parsedLat) ? parsedLat : undefined,
+      longitude: !isNaN(parsedLon) ? parsedLon : undefined,
       date_era: dateEra || null,
       description: description || null,
       source_reference: sourceReference || null,
