@@ -6440,7 +6440,8 @@
     "latitude": 45.345496,
     "longitude": -118.110264,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Orodell was a small farming and homestead community in Union County, Oregon, established in the 1880s in the Grande Ronde Valley where the Blue Mountains and Wallowa highlands frame one of eastern Oregon's most fertile agricultural basins. The town had a post office and served outlying farm families in the foothills east of La Grande, but like many small Blue Mountain valley communities it eventually lost ground to larger agricultural centers with rail service. The well-watered valley soils in Union County produce excellent detecting conditions, and homestead-era Oregon coinage, farm hardware, and immigrant personal items are regularly found with permission on cultivated lands throughout the Grande Ronde Valley."
   },
   {
     "name": "Auburn, OR",
@@ -6448,7 +6449,8 @@
     "latitude": 44.69314,
     "longitude": -117.932138,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Auburn was the site of Oregon's first major gold discovery in 1862, when a prospector named Henry Griffin found placer gold in Griffin Creek in Baker County, touching off one of the Pacific Northwest's most consequential mining rushes and making Auburn briefly the largest city in Oregon with a population estimated near 5,000 at its 1863 peak. The camp supported a post office, saloons, stores, a butcher, and a newspaper as miners poured in from California and the eastern states, but the placer ground was worked out within a few seasons and the population rapidly dispersed to new strikes in Idaho and Montana. Today a historical marker stands at the original townsite, and the surrounding Baker County placer ground — much of it on open BLM land — is one of the Pacific Northwest's most historically significant detecting areas, with early American gold coins, mining-era merchandise, and equipment fragments from the 1860s rush still surfacing."
   },
   {
     "name": "Old Irontown, UT",
@@ -6456,7 +6458,8 @@
     "latitude": 37.599893,
     "longitude": -113.449501,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Old Irontown was a frontier iron-smelting community in Iron County, Utah, established in 1868 by Brigham Young's direction to create a Mormon iron industry from the rich iron ore deposits of the Parowan area in the Great Basin foothills. The community operated a blast furnace, a foundry, and worker housing, producing iron goods for the Utah Territory at a time when every piece of metal otherwise had to be freighted hundreds of miles. The venture shut down by 1877 when cheaper eastern iron undersold the local product and the investment proved unsustainable, and the town was abandoned. The BLM-managed site today preserves a remarkably intact 150-year-old stone blast furnace, slag heaps, stone foundations, and scattered industrial debris — an extraordinary piece of American industrial archaeology, though detecting on BLM historic sites requires special research permit consideration."
   },
   {
     "name": "Watervale, CO",
@@ -6464,7 +6467,8 @@
     "latitude": 37.02004,
     "longitude": -103.96627,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Watervale was a small agricultural community in Las Animas County, Colorado, established in the southeastern Colorado plains country along a creek drainage where homesteaders and Hispanic ranching families settled the shortgrass prairie in the late 1870s and 1880s. The community had a post office and a school serving widely scattered families in the Purgatoire River drainage country, but the combination of drought, low cattle prices, and the isolation of southeastern Colorado gradually emptied the settlement through the early twentieth century. The Purgatoire River valley is rich in historic presence — from Spanish colonial trail routes to Colorado cattle drives — and cultivated fields near the old Watervale site can produce coins, cartridge cases, and personal artifacts from multiple eras of settlement."
   },
   {
     "name": "Indianapolis, CO",
@@ -6472,7 +6476,8 @@
     "latitude": 37.102152,
     "longitude": -103.961451,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Indianapolis was a small Colorado farming and ranching community in Las Animas County, not related to the Indiana city of the same name, established in the 1880s by homesteaders drawn to the semi-arid southeastern Colorado plains by the promise of dry-land farming and cattle grazing. The community had a post office for a period but never developed into a real town center, and as the farming experiment proved marginal in this rainfall-deficient country, families departed and the post office closed. The southeastern Colorado plains around Las Animas County are excellent detecting territory — the relatively undisturbed grassland preserves old trail routes, ranch sites, and homestead scatters, and permission-based detecting near the old Indianapolis site has produced early Colorado coinage and frontier-era artifacts."
   },
   {
     "name": "Conda, ID",
@@ -6480,7 +6485,8 @@
     "latitude": 42.728254,
     "longitude": -111.532445,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Conda was a phosphate mining company town in Caribou County, Idaho, established in the early twentieth century by the Conda Consolidated Mining Company to house workers extracting the massive phosphate deposits of the Gem Valley, which sit atop one of the world's largest known phosphate reserves. At its peak the company town had worker housing, a company store, a school, and recreational facilities, operating continuously through most of the twentieth century before the last operations wound down and the community was largely demolished. The Caribou County phosphate country remains an active mining district today, and access to old company town foundations is restricted; however, the surrounding BLM lands and Gem Valley historic sites reward detectorists interested in early twentieth-century industrial and frontier artifacts."
   },
   {
     "name": "Neiber, WY",
@@ -6488,7 +6494,8 @@
     "latitude": 43.926631,
     "longitude": -108.064614,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Neiber was a homestead farming community in Big Horn County, Wyoming, established in the early 1900s when federal irrigation projects along the Shoshone River system made dry agricultural settlement possible on the Wyoming plains east of Thermopolis. The Neiber post office served scattered farming families who hoped the new irrigation ditches would stabilize production in an otherwise semi-arid landscape, but declining water availability and the economic pressures of the Great Depression emptied the community by the 1930s. The Bighorn Basin landscape retains old homestead trace features including fence lines, cellar depressions, and orchard remnants on what is now largely private ranch land, and with permission, the original settlement sites can yield homestead-era coinage and domestic artifacts."
   },
   {
     "name": "Gilletts, IL",
@@ -6496,7 +6503,8 @@
     "latitude": 41.517254,
     "longitude": -87.936998,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gilletts was a small farming community in Cook County, Illinois, established in the mid-nineteenth century in the rich black-soil agricultural country southwest of Chicago in what would eventually become the Chicago metropolitan area's suburban fringe. The community had a post office and a school serving local farm families, but the inexorable expansion of Chicago's suburbs and transportation networks absorbed the old farming landscape, leaving little trace of the original rural community. The heavily urbanized and suburbanized Cook County landscape makes traditional metal detecting difficult, though old park edges, undeveloped lots, and permission-based access to historic properties can yield interesting nineteenth-century Illinois domestic artifacts."
   },
   {
     "name": "Nicodemus, KS",
@@ -6504,7 +6512,8 @@
     "latitude": 39.391998,
     "longitude": -99.617656,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nicodemus was founded in 1877 by freed Black Americans from Kentucky who homesteaded the treeless Graham County prairies of northwestern Kansas in the largest and most successful African American homestead colony in the post-Civil War Great Plains, reaching a peak population of several hundred in the early 1880s. The community built churches, a school, a hotel, and social clubs, and survived multiple droughts and the railroad bypassing the town in the 1880s — when the community refused to move despite the economic blow — maintaining its identity as a living community into the present day. Today Nicodemus is a National Historic Site, with several original nineteenth-century structures still standing and preserved as a testament to Black homestead resilience. Metal detecting is prohibited within the National Historic Site boundaries, but the extraordinary historical significance of this surviving community makes it a must-visit landmark for any student of Great Plains history."
   },
   {
     "name": "Royal",
@@ -6512,7 +6521,8 @@
     "latitude": 39.746174,
     "longitude": -110.883522,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Royal was a small mining and ranching community in Emery County, Utah, established in the coal-rich Carbon County borderlands where early twentieth-century coal operations and Castle Valley ranching created scattered service communities throughout the Book Cliffs and canyon country. The post office served outlying ranch families and mine workers in this remote Utah canyon country, but the consolidation of coal operations and the Depression-era economic collapse emptied most of the small service communities in the region. The Carbon/Emery County canyon country is exceptional detecting ground — Spanish colonial trail routes, Fremont Indian sites, and historic cattle drive routes cross this landscape, and BLM land access is good for permission-based detecting of historic artifact scatters."
   },
   {
     "name": "Haxby, MT",
