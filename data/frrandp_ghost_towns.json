@@ -4550,7 +4550,8 @@
     "latitude": 40.374167,
     "longitude": -78.159167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Aitch was a remote paper mill and logging community in Huntingdon County, Pennsylvania set deep in the Juniata River valley, operating through the late 19th century when the surrounding mountains provided abundant timber for the pulp and paper industry. The settlement took its unusual single-letter name from the H-shaped river bend where it sat, and it hosted workers, their families, and supporting businesses during the active timber era. When the accessible timber was cut out and the mill closed, Aitch's population scattered and the buildings fell to ruin. The rugged Juniata River corridor offers productive detecting around former mill and logging camp sites where period coins, logging hardware, and domestic artifacts can be found."
   },
   {
     "name": "Rausch Gap, PA",
@@ -4558,7 +4559,8 @@
     "latitude": 40.499444,
     "longitude": -76.597778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rausch Gap was a coal mining and railroad community in Lebanon County, Pennsylvania situated in a remote gap of the Blue Mountain ridge where the Schuylkill and Susquehanna canals' feeder lines crossed. The town served as a service point for rail operations on the Reading Railroad's mountain line through the mid-19th century, with a tavern, hotel, and worker housing clustered around the railroad junction. Rausch Gap was abandoned by 1910 as rail operations consolidated, and the buildings gradually collapsed into the forest. Today the site is part of the Weiser State Forest, where hikers can find stone foundations and an intact cemetery \u2014 detecting is restricted on state land, but the site is historically fascinating."
   },
   {
     "name": "Fricks Locks, PA",
@@ -4566,7 +4568,8 @@
     "latitude": 40.2225,
     "longitude": -75.596389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fricks Locks was a canal-era village in Chester County, Pennsylvania that grew along the Schuylkill Navigation Canal in the early to mid 1800s, serving canal boat operators, lock tenders, and their families at a key point on the busy waterway connecting Reading and Philadelphia. The community had a post office, general store, and several dozen homes during the peak canal era, but when the Reading Railroad made canal transport obsolete in the 1870s, Fricks Locks was gradually abandoned. The intact stone lock structures and several building foundations survive today within the Schuylkill Canal Park. This is a designated historic site where artifact removal is prohibited, but the preserved canal infrastructure is exceptional."
   },
   {
     "name": "Milford Mills, PA",
@@ -4574,7 +4577,8 @@
     "latitude": 40.065,
     "longitude": -75.728333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Milford Mills was a small milling community in Lancaster County, Pennsylvania located along a productive mill stream in the intensively settled Pennsylvania Dutch farm country of southeastern Pennsylvania, operating through much of the 19th century as a local grist and saw mill. The settlement that gathered around the mill included a miller's house, workers' cottages, and possibly a small store, all typical of Pennsylvania's dense pre-railroad rural industrial landscape. Today the area is absorbed into Lancaster County's continuous agricultural and residential landscape, with the former mill site difficult to distinguish. The Lancaster County countryside, with its centuries of dense settlement, holds rich deposits of colonial and federal-era artifacts near old mill and farmstead sites."
   },
   {
     "name": "Conashaugh, PA",
@@ -4582,7 +4586,8 @@
     "latitude": 41.271111,
     "longitude": -74.849167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Conashaugh was a remote settlement in Pike County, Pennsylvania in the Upper Delaware River valley, situated in one of the most rugged and sparsely settled corners of the Pocono Plateau region in the late 19th and early 20th centuries. The community served as a local service point for timber and farm operations in the surrounding uplands, but declining timber resources and the area's distance from major transportation routes led to its abandonment. Today the Pike County forest landscape has reclaimed most traces of the settlement. The Upper Delaware corridor offers productive detecting opportunities on private land near former homestead sites, where pioneer coins, farm hardware, and domestic items can be found."
   },
   {
     "name": "Eshback, PA",
@@ -4590,7 +4595,8 @@
     "latitude": 41.15371,
     "longitude": -74.91491,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Eshback was a small rural community in Pike County, Pennsylvania in the forested Pocono Mountain region of northeastern Pennsylvania, likely serving as a local post office community and crossroads for surrounding timber and farming operations through the late 19th century. The settlement was never substantial, and the surrounding forest land eventually reclaimed the site as population moved toward more accessible communities. The Pike County uplands were settled relatively late due to the challenging terrain, and most artifacts from the area date to the post-Civil War era. Detectorists working private land in the upper Delaware watershed may find late Victorian era domestic items, logging camp hardware, and occasional coins."
   },
   {
     "name": "Ricketts, PA",
@@ -4598,7 +4604,8 @@
     "latitude": 41.391111,
     "longitude": -76.277778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ricketts was a lumber company town in Sullivan County, Pennsylvania established by Eugene Ricketts in the late 1880s as a base for intensive logging operations in the virgin forests of the Loyalsock Creek headwaters. At its peak the company town had a railroad, sawmill, hotel, store, and housing for hundreds of workers who stripped the surrounding mountains of their old-growth timber within two decades. When the timber ran out around 1913, Ricketts was completely abandoned, and the Ricketts Glen area was eventually preserved as a state park. The former mill complex site within Ricketts Glen State Park is protected, but surrounding private timberlands may yield logging-era artifacts including cant hooks, axe heads, and lumber camp tokens."
   },
   {
     "name": "Barclay, PA",
@@ -4606,7 +4613,8 @@
     "latitude": 41.655833,
     "longitude": -76.626389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Barclay was a coal mining settlement in Bradford County, Pennsylvania developed in the 1840s-1860s when anthracite coal deposits were discovered in the remote northern tier of the state, drawing Welsh and Irish miners to the isolated upland community. The coal quality proved inconsistent and the seams thin, and after two decades of marginal operation, the mines closed and the community dissolved, with miners moving to more productive fields in the Wyoming and Lackawanna Valleys. The former coal workings and settlement site are now forested, and while surface coal outcropings are still visible, the mine infrastructure has long since collapsed. The Barclay area offers detecting potential on private land for finding miners' trade tokens, mining hardware, and mid-Victorian domestic artifacts."
   },
   {
     "name": "Laquin, PA",
@@ -4614,7 +4622,8 @@
     "latitude": 41.632222,
     "longitude": -76.650833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Laquin was a lumber company town in Bradford County, Pennsylvania established in the late 19th century along the Loyalsock Creek watershed where the virgin hemlock and hardwood forests of the northern Pennsylvania plateau offered immense timber wealth. The town was built by and for the Laquin Lumber Company, providing housing, a company store, and basic services for the workforce stripping the surrounding mountains. When the accessible timber was exhausted around 1900-1910, the company dismantled what it could and abandoned the rest, leaving the forest to reclaim the site. Detectorists on private land in the area can find logging-era brass checks, tool fragments, and domestic coins from the brief but intensive occupation period."
   },
   {
     "name": "Masten, PA",
@@ -4622,7 +4631,8 @@
     "latitude": 41.507222,
     "longitude": -76.820556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Masten was a remote logging and mill community in Sullivan County, Pennsylvania located along a tributary of the Loyalsock Creek in the dense hardwood forests of the northern Pennsylvania plateau, active primarily in the final decades of the 19th century during the great Pennsylvania timber boom. The settlement consisted of company housing, a store, and mill operations that processed the old-growth timber of the surrounding uplands until the resource was exhausted. Like most of Pennsylvania's timber company towns, Masten was abandoned once the logs ran out, leaving behind scattered foundations in the regrown forest. The Sullivan County forest lands, now partly within the Wyoming State Forest, contain numerous logging-era artifact deposits accessible on private parcels with permission."
   },
   {
     "name": "Fall Brook, PA",
