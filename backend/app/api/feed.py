@@ -265,9 +265,6 @@ async def delete_post(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Post not found")
 
     # Cascade delete comments and reactions
-    await db.execute(
-        select(PostComment).where(PostComment.post_id == post_id)
-    )
     comments_result = await db.execute(select(PostComment).where(PostComment.post_id == post_id))
     for c in comments_result.scalars().all():
         await db.delete(c)
