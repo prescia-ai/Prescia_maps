@@ -122,24 +122,44 @@ async def get_locations(
     if per_type_limit is not None and not type_filter:
         # Balanced query: up to per_type_limit records per type, ordered by id
         # so results are consistent across calls.
-        balanced_sql = text(
-            """
-            SELECT id, name, type, latitude, longitude, year, description,
-                   source, confidence
-            FROM (
+        # Split into two branches to avoid passing None as a bind parameter,
+        # which causes asyncpg AmbiguousParameterError.
+        if source is not None:
+            balanced_sql = text(
+                """
                 SELECT id, name, type, latitude, longitude, year, description,
-                       source, confidence,
-                       ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
-                FROM locations
-                WHERE (:source_filter IS NULL OR source = :source_filter)
-            ) ranked
-            WHERE rn <= :per_type_limit
-            ORDER BY type, id
-            """
-        ).bindparams(
-            per_type_limit=per_type_limit,
-            source_filter=source,
-        )
+                       source, confidence
+                FROM (
+                    SELECT id, name, type, latitude, longitude, year, description,
+                           source, confidence,
+                           ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
+                    FROM locations
+                    WHERE source = :source_filter
+                ) ranked
+                WHERE rn <= :per_type_limit
+                ORDER BY type, id
+                """
+            ).bindparams(
+                per_type_limit=per_type_limit,
+                source_filter=source,
+            )
+        else:
+            balanced_sql = text(
+                """
+                SELECT id, name, type, latitude, longitude, year, description,
+                       source, confidence
+                FROM (
+                    SELECT id, name, type, latitude, longitude, year, description,
+                           source, confidence,
+                           ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
+                    FROM locations
+                ) ranked
+                WHERE rn <= :per_type_limit
+                ORDER BY type, id
+                """
+            ).bindparams(
+                per_type_limit=per_type_limit,
+            )
         result = await db.execute(balanced_sql)
         rows = result.mappings().all()
 
