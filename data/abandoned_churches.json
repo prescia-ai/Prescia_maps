@@ -54,15 +54,6 @@
     "confidence": 0.65
   },
   {
-    "name": "Sacred Heart Church (Vernon, CT)",
-    "type": "abandoned_church",
-    "latitude": 41.8321,
-    "longitude": -72.4733,
-    "description": "Sacred Heart Church at 550 Hartford Turnpike in Vernon, Connecticut was a striking modernist Catholic structure completed in 1971, featuring seven stories of bare poured concrete in an angular pyramidal form that earned local nicknames such as the Cement Tent and St. Cement. The brutalist interior featured a soaring 85-foot concrete ceiling converging on an angel-shaped skylight, a dramatic departure from traditional ecclesiastical architecture. Concrete spalling became a serious structural hazard by 1980, and the building was condemned for worship in 1997 after chunks of ceiling fell toward the pews; the parish merged with St. Bernard's in 2017. The vacant church stood for over twenty years before demolition crews began dismantling it in March 2019, attracting urban explorers until its final days.",
-    "source": "obsidian_urbex_churches",
-    "confidence": 0.85
-  },
-  {
     "name": "Woodward Avenue Presbyterian Church",
     "type": "abandoned_church",
     "latitude": 42.3779,
@@ -86,24 +77,6 @@
     "latitude": 39.9398,
     "longitude": -75.2316,
     "description": "Most Blessed Sacrament Church at 5600 Chester Avenue in Philadelphia's Kingsessing neighborhood was a large Gothic Revival Catholic parish built in the early twentieth century to serve the Southwest Philadelphia working-class community of Irish and Italian descent. The structure features a broad nave with pointed clerestory windows, a prominent bell tower, and decorative brick corbeling characteristic of the Philadelphia Gothic style. Demographic shifts accelerated by urban renewal projects gradually emptied the surrounding neighborhood, and the Archdiocese of Philadelphia closed the parish in 2005. The substantial masonry shell remains standing, drawing urban explorers documenting the loss of Philadelphia's dense network of neighborhood Catholic parishes.",
-    "source": "obsidian_urbex_churches",
-    "confidence": 0.85
-  },
-  {
-    "name": "St. Boniface Church",
-    "type": "abandoned_church",
-    "latitude": 41.8981,
-    "longitude": -87.662,
-    "description": "St. Boniface Catholic Church at 1358 West Chestnut Street in Chicago was designed by architect Henry Schlacks in a German Romanesque Revival style and built between 1902 and 1904, serving a German immigrant parish founded in 1864 on Chicago's near northwest side. The red brick exterior features rounded Romanesque arches, a prominent bell tower, and elaborate decorative brickwork, while the interior retains exceptional murals and decorative plasterwork commissioned by the original German congregation. As the surrounding Noble Square neighborhood transitioned through successive immigrant waves and then deindustrialization, membership fell and the Archdiocese closed the church in 1990. The building has attracted urban explorers since the early 2000s, its interior still exhibiting its remarkable original artistic program despite severe deterioration.",
-    "source": "obsidian_urbex_churches",
-    "confidence": 0.85
-  },
-  {
-    "name": "Holy Trinity Catholic Church",
-    "type": "abandoned_church",
-    "latitude": 40.3713,
-    "longitude": -79.8526,
-    "description": "Holy Trinity Catholic Church on South First Street in Duquesne, Pennsylvania was built between 1904 and 1907 by Slovak immigrant steelworkers employed at the nearby Carnegie Steel mills, featuring a modest Gothic Revival design with pointed arched windows and a small bell tower characteristic of immigrant parish construction. The parish flourished through the first half of the twentieth century, but by the late 1960s the Diocese of Pittsburgh determined that deferred structural repairs exceeded available funds and opted to build a new Holy Trinity in neighboring West Mifflin instead; the Duquesne church closed in 1970 when the replacement building opened. The original structure stood vacant for nearly five decades before the roof collapsed in 2016, exposing the interior to the elements and accelerating deterioration. The roofless shell remains standing along the Monongahela River valley, a somber monument to the Slovak-American industrial community that built it.",
     "source": "obsidian_urbex_churches",
     "confidence": 0.85
   },
@@ -223,15 +196,6 @@
     "description": "St. John the Baptist Catholic Church near Michigan Avenue in southwest Detroit was founded to serve one of the city's early Polish immigrant communities, with the existing brick structure built in the early twentieth century in a Polish Baroque style featuring a prominent facade with decorative pilasters and a barrel-vaulted interior richly decorated with painted murals and carved woodwork. The parish occupied a densely populated ethnic neighborhood through the mid-twentieth century, serving as a center for Polish cultural life, religious education, and social services. The collapse of southwest Detroit's residential population through suburbanization and disinvestment left the parish without a sustainable congregation, leading to closure around 2000. The building has suffered considerable deterioration from deferred maintenance and vandalism, though substantial portions of the decorative interior remain for urban explorers to document.",
     "source": "obsidian_urbex_churches",
     "confidence": 0.75
-  },
-  {
-    "name": "Pilgrim Baptist Church",
-    "type": "abandoned_church",
-    "latitude": 41.835,
-    "longitude": -87.62,
-    "description": "The building at 3301 South Indiana Avenue in Chicago's Bronzeville neighborhood was designed by the celebrated architectural firm of Adler and Louis Sullivan in 1891 as Kehilath Anshe Ma'ariv, a Reform Jewish synagogue that became Sullivan's only surviving synagogue design before the congregation relocated to the North Shore. The building was sold to Pilgrim Baptist Church in 1922 and served as a legendary venue for the development of gospel music under the direction of Thomas A. Dorsey, widely considered the father of gospel music, through the mid-twentieth century. A fire swept through the building in January 2006, destroying the roof and the Sullivan-designed interior while leaving the exterior limestone walls standing. The roofless ruin, designated a Chicago Landmark, remains standing with preservation efforts debating whether the walls can anchor a restored structure.",
-    "source": "obsidian_urbex_churches",
-    "confidence": 0.85
   },
   {
     "name": "St. Casimir's Church (Detroit)",
@@ -504,15 +468,6 @@
     "confidence": 0.75
   },
   {
-    "name": "Bradford Christian School and Pryor Christian Center",
-    "type": "abandoned_church",
-    "latitude": 36.3084,
-    "longitude": -95.3169,
-    "description": "Bradford Christian School and the Pryor Christian Center operated as a combined church and private school campus in Pryor, Mayes County, Oklahoma, founded in 1987 by John and Brenda Alley within the Pryor Christian Center building, serving the evangelical community of northeastern Oklahoma with both religious services and K-12 Christian education until the school separated and relocated to a new site in 2000. The remaining building continued as the Pryor Christian Center until the congregation dissolved and the property was abandoned, with the building later suffering a fire that resulted in significant structural damage before it was eventually demolished. The site represents the pattern of independent evangelical church-school campuses that proliferated in Oklahoma's small cities during the 1980s religious revival and subsequently declined with congregation splits and economic pressures. Abandoned Oklahoma documented the building's deteriorated state before its eventual demolition.",
-    "source": "obsidian_urbex_churches",
-    "confidence": 0.65
-  },
-  {
     "name": "Victory Baptist Church (Pershing)",
     "type": "abandoned_church",
     "latitude": 36.5933,
@@ -567,15 +522,6 @@
     "source": "obsidian_urbex_churches"
   },
   {
-    "name": "Nicodemus First Baptist Church, Nicodemus, Kansas",
-    "latitude": 39.393,
-    "longitude": -99.617,
-    "description": "Founded in 1877 by freed slaves from Kentucky who established the only remaining all-Black frontier town on the Great Plains in Graham County, this Baptist congregation was the spiritual anchor of Nicodemus from its earliest days. The town's population plummeted after the railroad bypassed it in 1888; by the 20th century only a handful of families remained. The original church building is preserved within the Nicodemus National Historic Site.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
     "name": "Bloodland Methodist Church, Pulaski County, Missouri",
     "latitude": 37.687,
     "longitude": -92.152,
@@ -621,37 +567,10 @@
     "source": "obsidian_urbex_churches"
   },
   {
-    "name": "Cades Cove Primitive Baptist Church, Blount County, Tennessee",
-    "latitude": 35.6,
-    "longitude": -83.843,
-    "description": "Organized in 1827 as the oldest congregation in Cades Cove, this Primitive Baptist church built its original log structure that same year to serve the isolated Great Smoky Mountains farming valley. The congregation held its last formal service in 1915 as younger generations left the cove, and the National Park Service acquired the land in the 1940s. The preserved white-frame building and adjacent cemetery are among the most visited historic structures in Great Smoky Mountains National Park.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
-    "name": "Cades Cove Methodist Church, Blount County, Tennessee",
-    "latitude": 35.614,
-    "longitude": -83.834,
-    "description": "The Methodist Episcopal, South congregation of Cades Cove traced its origins to 1827 and erected its simple white frame meeting house in 1902 to replace earlier structures in the remote Tennessee mountain valley. NPS acquisition of the Cades Cove area in the 1940s ended active congregational use, though the building was carefully preserved. It stands today as a restored historic structure with no active congregation, open to park visitors year-round.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
     "name": "Rocky Valley Lutheran Church, Dooley, Montana",
     "latitude": 48.882,
     "longitude": -104.389,
     "description": "Built in 1915 by Norwegian Lutheran homesteaders on the remote Montana Hi-Line in Sheridan County, this prairie church served the scattered farming families who dry-farmed the windswept benchlands east of Wolf Point. Congregation numbers fell sharply after World War II as small farms consolidated and young people moved away, leaving the church unused for decades. A powerful windstorm in 2019 collapsed the structure, leaving only foundation remnants and the adjacent cemetery.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
-    "name": "Bannack Methodist-Episcopal Church, Bannack, Montana",
-    "latitude": 45.165,
-    "longitude": -113.001,
-    "description": "Erected in 1877 in Montana's first territorial capital in Beaverhead County, this church also housed a Masonic hall on its upper floor, reflecting the dual social functions of frontier religious buildings. Bannack's placer gold mines were largely exhausted by the 1870s and the town steadily emptied through the early 20th century. The church is now a preserved structure in Bannack State Park, a Montana ghost town on the National Register of Historic Places.",
     "confidence": 0.85,
     "type": "abandoned_church",
     "source": "obsidian_urbex_churches"
@@ -855,24 +774,6 @@
     "source": "obsidian_urbex_churches"
   },
   {
-    "name": "Grafton LDS Meetinghouse, Grafton, Utah",
-    "latitude": 37.167,
-    "longitude": -113.08,
-    "description": "Built in 1886 to serve as both church and schoolhouse for this Church of Jesus Christ of Latter-day Saints pioneer settlement on the Virgin River in Washington County, the meetinghouse survived when periodic flooding and Black Hawk War raids of the 1860s drove settlers away and back repeatedly. The last residents departed by 1944 and the LDS branch was discontinued in 1921, leaving behind one of the most photographed ghost towns in the American West. The meetinghouse, pioneer homes, and cemetery are now preserved by the Grafton Heritage Partnership.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
-    "name": "Chesterfield LDS Meetinghouse, Chesterfield, Idaho",
-    "latitude": 42.867,
-    "longitude": -111.902,
-    "description": "Established in 1879 by Latter-day Saint pioneers in Bannock County as part of the 'Bear Lake Stake' colonization effort ordered by Brigham Young, the Chesterfield community built a Greek Revival-style meetinghouse that anchored the farming village for half a century. When the railroad bypassed Chesterfield and younger families departed for more connected communities, the town emptied by the late 1930s. It is now considered one of Idaho's best-preserved Mormon ghost towns and is listed on the National Register.",
-    "confidence": 0.85,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
     "name": "Our Lady of Tears Catholic Church, Silver City, Idaho",
     "latitude": 43.023,
     "longitude": -116.733,
@@ -932,15 +833,6 @@
     "longitude": -106.319,
     "description": "Built around 1744 as the Roman Catholic church of the Spanish colonial plaza settlement of Santa Rosa de Lima in Rio Arriba County, this adobe structure was part of an early frontier community established by Hispanic settlers pushing north along the Chama River. Repeated Ute and Comanche raids forced abandonment of the plaza in 1747, and the ruins have remained largely intact on Archdiocese of Santa Fe land ever since. Listed on the National Register of Historic Places, the substantial adobe walls remain a striking reminder of Spain's northern frontier.",
     "confidence": 0.75,
-    "type": "abandoned_church",
-    "source": "obsidian_urbex_churches"
-  },
-  {
-    "name": "Bodie Methodist Church, Bodie, California",
-    "latitude": 38.213,
-    "longitude": -119.013,
-    "description": "Erected in 1882 to serve a Mono County gold camp that had swelled to perhaps 10,000 residents during its late-1870s peak, this Methodist church was the center of Bodie's respectable social life in a town notorious for its lawlessness and saloons. The gold ran out and Bodie gradually depopulated; the church held its last service in 1932. Now maintained by California State Parks in a policy of 'arrested decay,' the building retains original furnishings including its piano.",
-    "confidence": 0.85,
     "type": "abandoned_church",
     "source": "obsidian_urbex_churches"
   },
