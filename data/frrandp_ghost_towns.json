@@ -6350,7 +6350,8 @@
     "latitude": 42.785556,
     "longitude": -101.977778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bayonne was a remote Nebraska homestead community in the Sandhills country of Sheridan County, platted in the late 1880s when the Burlington Railroad extension encouraged settlers to attempt farming on land better suited to cattle ranching. The post office and a country store served a scattered farming population for a decade before drought and market failure drove families out, and Bayonne became one of dozens of Great Plains paper towns that never achieved the growth their platters imagined. Grass-covered Sandhills now reclaim the old lots, and the few remaining traces of the original settlement — depressions marking foundations, old fence lines, and road traces — sit on private ranch land. With landowner permission, the original store and post office sites are worth a careful sweep for homestead-era coins and personal artifacts."
   },
   {
     "name": "Belmont, NE",
@@ -6358,7 +6359,8 @@
     "latitude": 42.548673,
     "longitude": -103.354428,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Belmont was a small ranching and homestead supply community in Dawes County, Nebraska, near the Nebraska-South Dakota border in the Pine Ridge country where the Great Plains rise toward the Black Hills. Established in the 1880s to serve outlying cattle ranches and immigrant homesteaders, Belmont had a post office and a general store before the harsh economics of western Nebraska ranching and the 1890s drought eliminated the customer base. The Pine Ridge landscape of cedar breaks and mixed-grass prairie preserves old road traces and foundation remnants on what is now private ranch land, and with permission, the original town lots are worth investigating for trade goods, early Nebraska coinage, and ranch-era hardware."
   },
   {
     "name": "Brocksburg, NE",
@@ -6366,7 +6368,8 @@
     "latitude": 42.930279,
     "longitude": -99.332326,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Brocksburg was a small Nebraska frontier town in Keya Paha County, one of the most sparsely populated counties in the state, established in the 1880s along Keya Paha River to serve the cattlemen and homesteaders attempting to settle the remote Niobrara River country. The town had a post office, a school, and a saloon but faded through the 1890s as the harsh winters and thin soils made farming unprofitable and cattle operations consolidated into fewer, larger ranches. The Keya Paha River valley remains sparsely populated rangeland today, and the old townsite on the river bottom — mostly private ranch land — has produced early Nebraska territorial-era artifacts, including Indian Head cents and cartridge cases from the frontier period."
   },
   {
     "name": "Burton, NE",
@@ -6374,7 +6377,8 @@
     "latitude": 42.911669,
     "longitude": -99.591779,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Burton was a small community in Keya Paha County, Nebraska, the remote tier-one ranching country along the Niobrara River corridor where cattle operations stretched across vast acreages and small service towns tried to anchor themselves as county centers. The town had a post office and a school district, serving a wide area, but Keya Paha County proved too sparsely populated to sustain multiple commercial centers, and Burton gradually declined through the early twentieth century. The Niobrara River country remains one of Nebraska's most scenic and least-traveled regions, and the old Burton townsite on private ranch land can yield homestead-era coins, brass harness hardware, and trade goods from the cattle drives and freighting operations that once passed through."
   },
   {
     "name": "Aledo, OK",
@@ -6382,7 +6386,8 @@
     "latitude": 35.827268,
     "longitude": -99.124264,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Aledo was an early Oklahoma Territory community in what is now Dewey County, established after the 1892 Cheyenne-Arapaho land opening when homesteaders rushed into the former reservation lands of western Oklahoma and built towns wherever a creek crossing or prairie trail seemed to promise commerce. The community had a post office and a country store but was bypassed by the Rock Island Railroad, which anchored its own towns on the new main line, dooming Aledo to gradual abandonment by the early 1900s. The Oklahoma red clay fields in this region have excellent metal detecting conditions, and cultivated ground near the old town lots has produced Indian Head cents, early Oklahoma statehood-era coins, and domestic hardware from the homestead rush period."
   },
   {
     "name": "Covington, NE",
@@ -6390,7 +6395,8 @@
     "latitude": 42.456066,
     "longitude": -96.482318,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Covington was a Missouri River town in Dakota County, Nebraska, established in the 1850s and 1860s as a ferry crossing point and supply center for settlers moving into the Dakota Territory. The town boomed briefly as a Missouri River port during the territorial era but lost its commercial advantage when the Sioux City and Pacific Railroad bypassed it in favor of nearby South Sioux City, triggering a steady decline through the 1870s and 1880s. The Missouri River bluffs above the old townsite have eroded and shifted over the decades, but cultivated fields in the area have produced pre-Civil War American coinage, territorial Dakota period artifacts, and Missouri River trade goods from the steamboat era that once brought commerce to this forgotten landing."
   },
   {
     "name": "Eclipse, NE",
@@ -6398,7 +6404,8 @@
     "latitude": 41.77055,
     "longitude": -101.259335,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Eclipse was a small Nebraska homestead community in Valley County on the Loup River system, established during the great homestead rush of the 1880s when settlers filed claims on the rich prairie soils of central Nebraska with hopes of wheat and corn prosperity. The town had a post office and a school but lacked a rail connection, and the 1890s drought combined with the national financial panic emptied the community in less than a decade. The Loup River valley in Valley County is good agricultural country today, and permission-based detecting on cultivated fields near the old Eclipse townsite has produced homestead-era Indian Head cents, flat buttons from immigrant clothing, and domestic hardware dating to the boom years."
   },
   {
     "name": "Albee, OR",
@@ -6406,7 +6413,8 @@
     "latitude": 45.207305,
     "longitude": -118.909032,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Albee was a small farming and ranching settlement in Umatilla County, Oregon, established in the late 1880s as immigrant homesteaders pushed into the Blue Mountains foothills seeking wheat land in the rolling palouse country of eastern Oregon. The community had a post office and a school district, serving scattered farmsteads across a broad wheat-growing area, but consolidation of agriculture and improved roads to Pendleton gradually drew commerce away from the smaller outlying communities. Umatilla County wheat fields are exceptional detecting ground — the heavy annual plowing and the long history of settlement routinely surface early Oregon territorial-era coins, farm hardware, and personal items from the immigrant families who built the region."
   },
   {
     "name": "Pine Grove, OR",
@@ -6414,7 +6422,8 @@
     "latitude": 45.320257,
     "longitude": -118.849025,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pine Grove was a small community in Umatilla County, Oregon, nestled in the foothills of the Blue Mountains where settlers established farms and small orchards in the 1870s and 1880s along a tributary creek drainage in the wheat-growing country of eastern Oregon. The post office served a rural school district and scattered homesteads, but the community was always too small to support sustained commercial development and faded as families gravitated toward the rail towns. Old orchard sites and homestead clearings in the Blue Mountain foothills preserve good artifact concentrations, and with landowner permission, the original farm sites are worth investigating for Oregon pioneer-era coinage, glass, and domestic hardware."
   },
   {
     "name": "Vinson, OR",
@@ -6422,7 +6431,8 @@
     "latitude": 45.46788,
     "longitude": -119.094444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Vinson was a small agricultural service community in Morrow County, Oregon, established in the late 1880s in the wheat-growing country of the Columbia Plateau where the dry summers and rich volcanic soils produced exceptional cereal grain crops. The town had a post office and served outlying farm families across a broad area, but the economics of small-town commerce in the eastern Oregon grain belt were unforgiving, and Vinson faded as larger towns with rail access consolidated regional trade. Morrow County's deep agricultural soils have a long tradition of producing early Oregon coinage and territorial-era artifacts from plowed field detecting, and the old Vinson townsite area is worth a permission-based visit."
   },
   {
     "name": "Orodell, OR",
