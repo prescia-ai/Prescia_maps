@@ -305,7 +305,8 @@
     "latitude": 40.461667,
     "longitude": -79.333056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Livermore was a small community in Westmoreland County, Pennsylvania along the Conemaugh River that dated to the early nineteenth century, developing around a river crossing and mill site that served travelers and local farmers in the southwestern Pennsylvania hills. The town's fate was sealed when the Army Corps of Engineers built Conemaugh River Lake — a flood control reservoir completed in 1952 — inundating the Conemaugh valley to protect Pittsburgh and downstream communities from floods like the catastrophic Johnstown Flood of 1889. The reservoir operates in dry mode, holding back water only during flood events, which means the old townsite is occasionally exposed during normal conditions — a fascinating window into a submerged western Pennsylvania community. The surrounding Westmoreland County landscape is privately owned, requiring permission to access the former townsite."
   },
   {
@@ -314,7 +315,8 @@
     "latitude": 39.819722,
     "longitude": -77.452778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Tartown was a small community in Westmoreland County, Pennsylvania that also fell within the Conemaugh River Lake flood control pool, sharing the fate of neighboring Livermore when the Army Corps of Engineers acquired and cleared the Conemaugh River valley for the dry dam project completed in 1952. The community had existed as a modest farming and mill settlement for over a century before being condemned. Since the dam operates primarily empty except during flood events, the former townsite is accessible much of the year, and old building foundations, cellar holes, and remnant orchards are sometimes visible. The flood pool lands are managed by the Army Corps and access policies vary by location."
   },
   {
@@ -323,7 +325,8 @@
     "latitude": 42.421944,
     "longitude": -72.2275,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.87,
+    "detecting_weight": 32,
     "description": "Dana was one of four Swift River valley towns in Worcester County, Massachusetts — along with Greenwich, Enfield, and Prescott — condemned and demolished in the 1930s so the Metropolitan District Commission could flood the valley and create the Quabbin Reservoir to supply Boston's drinking water. The town had thrived since colonial times, with farms, mills, and a classic New England village character centered on a Congregational church and town common. More than 2,500 people were displaced as their homes, churches, and cemeteries were razed or relocated by 1939. The Quabbin watershed is protected state land where metal detecting is not permitted, but the interpretive facilities and occasional archaeology programs make this a historically rich destination."
   },
   {
@@ -332,7 +335,8 @@
     "latitude": 42.316667,
     "longitude": -72.332778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.87,
+    "detecting_weight": 32,
     "description": "Enfield was another of the four Swift River valley towns erased by the Quabbin Reservoir project in central Massachusetts, a prosperous farming community with a long Congregational history dating to the 1700s that was completely demolished and flooded by 1939. The Swift River valley towns collectively represented an entire subregion of rural Massachusetts that was sacrificed to provide drinking water for the growing Boston metropolitan population — a contentious land-taking that remains a point of regional memory. The Quabbin Reservoir watershed is now strictly protected state land administered by the Massachusetts Department of Conservation and Recreation, and detecting or digging is prohibited throughout the reservation. Annual Quabbin Commemorations draw descendants of the displaced families to remember the lost communities."
   },
   {
@@ -341,7 +345,8 @@
     "latitude": 45.448602,
     "longitude": -100.305965,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Evarts was a small South Dakota farming community in Charles Mix County that platted during the homesteading era of the late nineteenth century, supporting a post office and local agricultural commerce before the marginal soil conditions and harsh climate of the Missouri River Breaks made sustainable farming difficult. The community dissolved in the early twentieth century as drought and economic pressures consolidated the population into larger regional centers. The former townsite is now privately held grassland in the Missouri River agricultural region of southeast South Dakota. Homestead-era artifacts from short-lived Dakota Territory communities occasionally surface at such sites with landowner permission."
   },
   {
@@ -350,7 +355,8 @@
     "latitude": 40.9713,
     "longitude": -96.8631,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Crouse was a small Nebraska farming community in Antelope County that briefly held a post office in the late nineteenth century before being absorbed into the surrounding agricultural landscape as the county's settlement patterns consolidated around larger railroad towns. The site is now typical north-central Nebraska farmland with few visible remnants of the original platted community. Detecting with permission in former Nebraska post office towns can yield copper and silver coinage from the territorial and early statehood era."
   },
   {
@@ -359,7 +365,8 @@
     "latitude": 42.78482,
     "longitude": -112.868706,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 38,
     "description": "American Falls (original townsite) was the original settlement in Power County, Idaho along the Snake River that dated to the fur trade era and grew into a modest agricultural and ranching community serving the upper Snake River valley in the late nineteenth and early twentieth centuries. The original town was condemned and inundated in 1927 when American Falls Dam was completed, raising the Snake River's level and flooding the original site beneath American Falls Reservoir. The town was relocated to higher ground, and the new American Falls still thrives today, but the original townsite lies beneath the reservoir. During severe drought years, portions of the original foundation remnants have been observed during drawdown periods."
   },
   {
@@ -368,7 +375,8 @@
     "latitude": 39.84859,
     "longitude": -84.02658,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Osborn was a small Ohio farming community in Greene County that existed in the Mad River valley before the Army Corps of Engineers constructed Huffman Dam in the 1940s, converting the valley into a dry flood-control reservoir known as Huffman Lake. The community, along with neighboring Fairfield, was acquired and cleared by the Corps to protect Dayton from catastrophic flooding following the devastating 1913 Flood that killed hundreds in the Miami Valley. The dry reservoir area is now part of Wright-Patterson Air Force Base's environmental reservation, making public access highly restricted. The military nature of the surrounding land closes this area to recreational metal detecting."
   },
   {
@@ -377,7 +385,8 @@
     "latitude": 36.609191,
     "longitude": -95.54851,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 38,
     "description": "Alluwe was a Cherokee Nation community in Craig County, Oklahoma that was established in Indian Territory following the removal era, developing as a small farming and ranching settlement along the Verdigris River with a post office, school, and trading post. The town was condemned and flooded in the 1960s when the Army Corps of Engineers completed Pensacola Dam and created Grand Lake O' the Cherokees, one of Oklahoma's largest reservoirs. The history of Alluwe is entwined with the complex story of the Five Civilized Tribes who rebuilt their nations in Indian Territory only to face further displacement from resource projects in the twentieth century. The Grand Lake area in northeast Oklahoma is popular for recreation, with some shoreline access available around the reservoir."
   },
   {
@@ -386,7 +395,8 @@
     "latitude": 37.921441,
     "longitude": -89.913164,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.92,
+    "detecting_weight": 55,
     "description": "Kaskaskia was the original capital of Illinois and one of the oldest European settlements in the American Midwest, a French colonial town established in the early 1700s along the Mississippi River that later became the state's first capital in 1818. The town was devastated by repeated Mississippi River floods and channel migration — the most catastrophic in 1881, when the river cut a new channel and literally moved the town to the Missouri side of its historical boundary with Illinois, creating an anomalous piece of Illinois territory accessible only through Missouri. The historic Kaskaskia Island retains its Illinois jurisdiction and the historic Kaskaskia Bell, but only a handful of residents remain. Metal detecting on Kaskaskia Island is subject to state and private landowner rules, but the colonial history of the site makes it remarkable for potential artifact recovery."
   },
   {
