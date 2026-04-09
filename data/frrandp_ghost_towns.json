@@ -8780,7 +8780,8 @@
     "latitude": 36.142415,
     "longitude": -81.071806,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Virginia Renaissance Faire in Fredericksburg-area Virginia operated as a seasonal outdoor theme event recreating the culture and entertainment of sixteenth-century England, part of the nationwide Renaissance faire movement that combined historical reenactment, costumed performers, craft vendors, and period-inspired food and entertainment in accessible outdoor settings. Virginia's proximity to the Washington D.C. metropolitan area's large population provided an excellent customer base for such seasonal events, and the rolling Piedmont farmland of Virginia provided typical faire settings of forests and meadows. The site at the given coordinates in Stafford County is likely a private fairground that operated seasonal events before ceasing operations, leaving behind the infrastructure of an outdoor event venue. Former Renaissance faire sites typically feature cleared areas, earthwork features from permanent structures, and the remnants of vendor stalls and stage infrastructure."
   },
   {
     "name": "Virginia Renaissance Faire",
@@ -8788,7 +8789,8 @@
     "latitude": 38.110769,
     "longitude": -77.763665,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Tanks of Flamenco Beach on Culebra Island, Puerto Rico are two Sherman M4 tanks partially submerged in the Caribbean shallows at the edge of Flamenco Beach, bizarre relics of the U.S. Navy's long use of Culebra as a live-fire training range from 1940 until 1975, when the Puerto Rican community's successful protest movement forced the Navy to cease bombing and gunnery training on the island. The tanks were used as targets for Navy practice and have rusted dramatically in the salt water, becoming heavily graffiti-covered local landmarks that have been paradoxically transformed from weapons of destruction into iconic art installations over the decades of their marine decay. Flamenco Beach is now widely considered one of the most beautiful beaches in the Caribbean and a premier snorkeling destination, and the tanks are a remarkable and accessible artifact of the island's complicated military history. The tanks are freely visible and accessible on the public beach."
   },
   {
     "name": "The Tanks of Flamenco Beach\\n",
@@ -8796,7 +8798,8 @@
     "latitude": 18.328,
     "longitude": -65.3153,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rikard's Mill Historical Park in Bibb County, Alabama near Centreville preserves one of Alabama's few remaining antebellum grist mills, a water-powered stone-grinding facility built around 1845 on Mulberry Creek that ground corn and wheat for the surrounding plantation and farming communities of the Black Belt region through the Civil War and into the twentieth century. The mill served as the economic hub of a small rural community, grinding grain for settlers from miles around who brought their corn for meal and their wheat for flour in exchange for a portion of the milled product. The site is maintained as a county historical park by the Bibb County Historical Society, with the original millrace, millpond, and grinding machinery preserved and occasionally demonstrated for visitors. The surrounding historic rural landscape retains the character of antebellum Alabama agriculture, and the park is open to the public as a tangible connection to the grinding-mill economy that fed the pre-industrial South."
   },
   {
     "name": "Rikard's Mill Historical Park",
@@ -8804,7 +8807,8 @@
     "latitude": 31.782925,
     "longitude": -87.223389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Swallow Cliff Stairs in Palos Park, Cook County, Illinois are a remarkable set of 123 hand-built limestone steps descending the steep bluff face of the Valparaiso Moraine into the Sag Valley — constructed as a WPA project in the 1930s to provide access to a toboggan run that once operated on the south-facing bluff. The toboggan slides at Swallow Cliff were enormously popular from their 1940s opening through the 1980s, when thousands of Chicago-area families packed the Forest Preserve site on winter weekends to sled down the bluff's long runs. The Forest Preserve District of Cook County closed the toboggan slides in the 2000s for safety and liability reasons, but the distinctive stone staircase remains a beloved landmark in the Palos Hills forest preserve system. The stairs are freely accessible as part of the Palos Forest Preserve trail network and are a unique piece of 1930s public works craftsmanship in the Cook County natural landscape."
   },
   {
     "name": "Swallow Cliff Stairs",
@@ -8812,7 +8816,8 @@
     "latitude": 41.680749,
     "longitude": -87.862555,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Detroit Race Course in Livonia, Wayne County, Michigan was a premier thoroughbred horse racing track that operated from 1949 to 1998 on a suburban site between Detroit and the growing western suburbs, attracting major stakes races and top horses during the golden era of Midwest thoroughbred racing. The track was built on farmland in rapidly developing Livonia and hosted the track's signature race, the Michigan Mile and One-Eighth, along with other significant stakes events that drew national attention to Detroit's racing scene. The course closed in 1998 amid the broader decline of Midwest thoroughbred racing as slot machine revenues shifted to other states and the Detroit market declined. The property was subsequently redeveloped as a mixed-use commercial development, and the former racing oval's footprint has been largely erased by strip malls and parking lots in the western Wayne County suburban landscape."
   },
   {
     "name": "Detroit Race Course",
@@ -8820,7 +8825,8 @@
     "latitude": 42.379495,
     "longitude": -83.323154,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hazel Park Raceway in Hazel Park, Oakland County, Michigan was a harness racing track that operated from 1949 to 2013 in the inner-ring suburbs of Detroit, serving the significant Detroit metropolitan harness racing market during the sport's mid-century heyday when standardbred racing was enormously popular throughout the Midwest industrial cities. Hazel Park was considered one of the finest harness racing facilities in the Midwest, with state-of-the-art timing systems, a full card of races multiple nights per week, and a loyal local following among the auto industry working class community that surrounded the track in Oakland County. The track's 2013 closure reflected the collapse of harness racing's business model as Michigan's voters approved slot machine gambling at casinos but not at racetracks, eliminating the revenue stream that had kept harness tracks viable. The Hazel Park property has been redeveloped, ending sixty-four years of harness racing history in one of Michigan's most important suburban communities."
   },
   {
     "name": "Hazel Park Raceway",
@@ -8828,7 +8834,8 @@
     "latitude": 42.473611,
     "longitude": -83.086389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Pinnacle Race Course in New Boston, Wayne County, Michigan was Michigan's newest horse racing facility when it opened in 2008 with great fanfare as a thoroughbred track intended to revitalize the sport in the Detroit metro area, closing just two years later in 2010 after proving unable to compete with the regional casino market that had eliminated racing's traditional revenue base. The track was built with modern facilities and significant investment in Wayne County's Huron Township, expecting to capture Detroit-area racing fans who had followed racing at Hazel Park and Detroit Race Course. The rapid failure of Pinnacle represents the broader collapse of the Great Lakes Thoroughbred racing industry in the 2000s and 2010s as casino gambling changed the entertainment economics across the region. The track facilities sat largely vacant after closure in the flat Wayne County farmland, representing one of the most short-lived major racing facility investments in American horse racing history."
   },
   {
     "name": "Pinnacle Race Course",
@@ -8836,7 +8843,8 @@
     "latitude": 42.17237,
     "longitude": -83.37074,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Pennsylvania Turnpike through the Sideling Hill and Rays Hill tunnel sections in Bedford and Fulton Counties, Pennsylvania represents one of the most remarkable industrial archaeological sites in the eastern United States — eight miles of the original Pennsylvania Turnpike, including two full-length mountain tunnels, were bypassed and abandoned in 1968 when a new alignment replaced the bottlenecked tunnel sections. The original turnpike, opened in 1940 as America's first superhighway, pioneered the concept of limited-access, high-speed travel and served millions of travelers for nearly three decades before its mountain tunnel sections became traffic bottlenecks. Today the abandoned road and tunnels are preserved as a Rails-to-Trails Conservancy linear park called 'Abandoned Pennsylvania Turnpike Bike Path,' where cyclists and hikers can pedal or walk through the original 1940 tunnel bores and along the old highway grade in a remarkable time capsule of mid-century American transportation infrastructure."
   },
   {
     "name": "Abandoned Pennsylvania Turnpike",
@@ -8844,7 +8852,8 @@
     "latitude": 40.046972,
     "longitude": -78.155051,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned PA-61 through Centralia, Columbia County, Pennsylvania is the remarkable highway relict of America's most famous ongoing mine fire disaster — the Centralia coal mine fire that has been burning underground since 1962, gradually destroying the town of 1,400 above it and forcing the evacuation and demolition of virtually the entire community. Route 61 through Centralia was closed and rerouted in the 1990s when the underground mine fire began cracking and subsiding the road surface, and the abandoned original alignment has become one of Pennsylvania's most-visited urban ruin destinations, covered with graffiti murals and buckled, cracked asphalt that dramatically illustrates the power of the underground conflagration. The ongoing mine fire — which will burn for an estimated 250 more years based on available coal reserves — makes the site uniquely dynamic and ever-changing. Centralia itself, a near-ghost town with just a handful of remaining residents, is accessible via the abandoned highway grade from the bypass."
   },
   {
     "name": "Abandoned PA-61",
@@ -8852,7 +8861,8 @@
     "latitude": 40.796,
     "longitude": -76.343871,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned PA-61 through Centralia, Columbia County, Pennsylvania is the remarkable highway relict of America's most famous ongoing mine fire disaster — the Centralia coal mine fire that has been burning underground since 1962, gradually destroying the town of 1,400 above it and forcing the evacuation and demolition of virtually the entire community. Route 61 through Centralia was closed and rerouted in the 1990s when the underground mine fire began cracking and subsiding the road surface, and the abandoned original alignment has become one of Pennsylvania's most-visited urban ruin destinations, covered with graffiti murals and buckled, cracked asphalt that dramatically illustrates the power of the underground conflagration. The ongoing mine fire — which will burn for an estimated 250 more years based on available coal reserves — makes the site uniquely dynamic and ever-changing, with steam vents and subsidence craters appearing as the subterranean fire consumes the coal. Centralia itself, a near-ghost town with just a handful of remaining residents, is accessible via the abandoned highway grade, making it one of the most haunting abandoned communities in the eastern United States."
   },
   {
     "name": "Abandoned Lime Kiln",
@@ -8860,7 +8870,8 @@
     "latitude": 41.676611,
     "longitude": -88.032996,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Lime Kiln in Will County, Illinois near Joliet was an industrial structure used to convert limestone into quicklime by heating the rock in a high-temperature furnace fueled by coal or wood, producing an essential building material and soil amendment that was in continuous demand throughout the nineteenth and early twentieth centuries in the rapidly developing Chicago metropolitan region. Will County sits atop extensive Silurian and Devonian limestone formations that were quarried and kilned for lime production beginning in the pioneer era, with dozens of lime kilns operating throughout the county to supply the Chicago construction market. The kilns were typically built as cylindrical stone structures with a firepot at the base and charging opening at the top, and their ruins — thick walls of heat-fused limestone and mortar — are often the most durable structures remaining on former industrial sites. Former lime kiln sites in the Chicago metro area limestone belt may retain industrial hardware, ceramics, and early nineteenth century artifacts from the surrounding quarry operations."
   },
   {
     "name": "LowerTown Depot",
@@ -8868,7 +8879,8 @@
     "latitude": 44.95245,
     "longitude": -93.073113,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "LowerTown Depot in St. Paul, Ramsey County, Minnesota was a historic railroad station facility in the LowerTown neighborhood — the original commercial core of St. Paul developed along the Upper Mississippi River levee — that served the railroads connecting St. Paul and Minneapolis to the transcontinental network that made the Twin Cities the commercial capital of the upper Midwest. LowerTown developed as St. Paul's warehouse and railroad district from the 1880s through the early twentieth century, when dozens of wholesale merchants, agricultural processors, and manufacturing firms occupied the massive brick warehouses along the Mississippi bluff above the rail yards. The neighborhood experienced decades of decline as industry moved out and the railroad depot fell into disuse, before an extraordinary revitalization in the 1990s-2000s transformed LowerTown into one of America's premier historic warehouse neighborhood renovations, with the depot building repurposed as a light rail station. The revitalized LowerTown is now one of St. Paul's most vibrant neighborhoods and accessible to visitors."
   },
   {
     "name": "Abandoned Route 66 in McCook",
@@ -8876,7 +8888,8 @@
     "latitude": 41.786761,
     "longitude": -87.84978,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Route 66 in McCook, Berwyn, Cook County, Illinois represents one of the rare surviving stretches of the original 1920s-1930s concrete alignment of US Highway 66 in the Chicago metropolitan area, bypassed when the modern four-lane commercial strip replaced it but not entirely demolished, leaving a ghostly strip of crumbling concrete through the suburban landscape as a tangible remnant of the historic route. Route 66 began at Grant Park in Chicago and followed this southwestern corridor through Cicero, Berwyn, and McCook before heading toward Joliet on its way to Los Angeles, and the original concrete pavement in this section — some of it original 1920s construction — survived beneath the commercial strip for decades. The Route 66 preservation movement has documented and marked surviving original alignments across the country, and the McCook section is notable as one of the closest surviving original alignments to the Chicago terminus. The historic concrete is visible from public roads and is an accessible piece of American highway history."
   },
   {
     "name": "Abandoned Park",
@@ -8884,7 +8897,8 @@
     "latitude": 35.720622,
     "longitude": -83.510813,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Park in Great Smoky Mountains area of Sevier County, Tennessee near Gatlinburg was a recreational facility in one of the most visited tourism corridors in the United States — the Smoky Mountain resort area that surrounds Great Smoky Mountains National Park. The Gatlinburg corridor has seen continuous tourism development and redevelopment since the park's establishment in 1934, with amusement parks, water parks, and family attractions rising and falling as visitor tastes change and the competitive resort market evolves. An abandoned park in this location represents one of the casualties of the region's intense commercial competition, where outdated attractions are quickly replaced by newer developments in the booming mountain resort economy. The surrounding mountains and accessible park land provide excellent context for understanding the evolution of American outdoor recreation and resort culture in the twentieth century."
   },
   {
     "name": "Calamity Camp",
@@ -8892,7 +8906,8 @@
     "latitude": 38.607719,
     "longitude": -108.848279,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Calamity Camp near Naturita, Montrose County, Colorado in the Paradox Valley was likely a uranium prospecting camp established during the Colorado Plateau uranium boom of the 1950s, when the Atomic Energy Commission's guaranteed $3.50-per-pound price for uranium ore prompted an extraordinary rush of prospectors into the canyon country of western Colorado and southeastern Utah. The Paradox Valley was a center of carnotite uranium mining even before the atomic age, as the ore had been mined for radium and vanadium in the early twentieth century, and the postwar uranium boom revived and massively expanded this activity. Calamity Camp's evocative name suggests a small prospectors' camp in the harsh canyon country where the combination of remote terrain, scorching summers, flash floods, and uranium radiation created genuinely hazardous conditions for the men who worked the claims. The western Colorado uranium country is BLM land and largely accessible, though mine sites may have residual radioactivity from uranium and daughter products."
   },
   {
     "name": "Abandoned Hotel",
@@ -8900,7 +8915,8 @@
     "latitude": 43.128509,
     "longitude": -77.657871,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Hotel near Rochester, Monroe County, New York represents one of the commercial accommodation facilities that served Rochester's substantial business travel and tourism market during the mid-twentieth century, before the combination of highway bypasses, suburban sprawl, and chain hotel competition decimated the traditional downtown and highway hotel industry that had served American travelers since the automobile era. Rochester, as a major Eastman Kodak and Xerox company city, generated significant business travel that supported numerous hotels through the postwar decades before the corporate headquarters culture and Rochester's economic decline reduced business travel and left hotels struggling. The specific structure at the given coordinates may be an older roadside or downtown hotel from the 1940s-1960s era of American commercial hospitality. Former hotel sites in upstate New York's Rust Belt cities often retain the architectural character of mid-century commercial design."
   },
   {
     "name": "Six Flags New Orleans",
@@ -8908,7 +8924,8 @@
     "latitude": 30.052701,
     "longitude": -89.935626,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Six Flags New Orleans in New Orleans East, Orleans Parish, Louisiana opened in 2000 as Jazzland, a regional theme park conceived as an economic development anchor for the underdeveloped eastern New Orleans suburban corridor, before being acquired by Six Flags in 2003 and rebranded. The park was just entering its operating stride when Hurricane Katrina struck on August 29, 2005, flooding the entire facility under several feet of contaminated floodwater that devastated the rides, buildings, and electrical systems. Six Flags abandoned the park rather than undertaking the expensive rehabilitation, and the flooded, moldering theme park — with its rusting roller coasters, faded murals, and storm-scattered debris — became one of the most dramatic and photogenic urban ruins in post-Katrina New Orleans. The site remained closed and largely inaccessible for over a decade, becoming a symbol of the storm's destruction and the city's uneven recovery, before eventually being cleared for redevelopment."
   },
   {
     "name": "Historic Saltair Location",
@@ -8916,7 +8933,8 @@
     "latitude": 40.773318,
     "longitude": -112.171005,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Historic Saltair was a grand Victorian-era resort established on the south shore of the Great Salt Lake in Tooele County, Utah in 1893 by the Church of Jesus Christ of Latter-day Saints, featuring a massive pavilion built on pilings over the hypersaline lake water where visitors could experience the remarkable buoyancy of bathing in the 27% salt water. The original Saltair was a spectacular Moorish fantasy of domes and minarets that could accommodate 10,000 visitors daily, connected to Salt Lake City by a dedicated railway spur, and served as a entertainment resort for multiple generations of Utah families during its peak decades from 1893 to the 1930s. The original pavilion burned in 1925, was rebuilt smaller, and subsequent versions of Saltair continued on the site through the late twentieth century before the fluctuating lake level — which rose dramatically in the 1980s — repeatedly flooded the facilities. The current Saltair venue is a modern building near the original site, and the Great Salt Lake's ongoing dramatic water level changes continue to shape the shoreline landscape."
   },
   {
     "name": "Ghost Town In The Sky",
