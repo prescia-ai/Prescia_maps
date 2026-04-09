@@ -206,7 +206,8 @@
     "longitude": -117.1611,
     "description": "San Diego, California was the western terminus of the San Antonio-San Diego Mail Line from 1857 to 1861, where mail and passengers completed their journey across the southwestern deserts from Texas. The growing coastal town's station facilities marked the end of the first regular mail service to California, with coaches and pack trains arriving after weeks of travel through hostile territory. As a stage line terminus with years of operations, San Diego offers good metal detecting potential around the historic Old Town area where station facilities, hotels, and mail offices concentrated the traffic of arriving and departing travelers.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 32
   },
   {
     "name": "Atchison, KS",
@@ -215,7 +216,8 @@
     "longitude": -95.1213,
     "description": "Atchison, Kansas served as the eastern terminus of the Central Overland California & Pike's Peak Express and its successor the Holladay Overland Mail from 1860 to 1866, where passengers boarded coaches for the 1,900-mile journey to Sacramento via the Platte River route. The bustling Missouri River town maintained extensive stage facilities including corrals, shops, offices, and hotels serving as the jumping-off point for travelers heading to California and the Pony Express operations. As a major overland terminus with years of heavy traffic from multiple stage lines, Atchison offers exceptional metal detecting potential with period coins, buttons, stage hardware, and personal effects throughout the historic riverfront and downtown districts.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.8,
+    "detecting_weight": 48
   },
   {
     "name": "Fort Kearny, NE",
@@ -224,7 +226,8 @@
     "longitude": -99.0012,
     "description": "Fort Kearny, Nebraska was one of the most important stops on the Central Overland California & Pike's Peak Express and Holladay Overland Mail routes, serving as a major military post protecting emigrant trails and stage lines along the Platte River. The fort provided security, supplies, and fresh horses for coaches heading west to California, with extensive facilities supporting both military and stage operations. The years of combined military garrison and heavy stage traffic make Fort Kearny an outstanding metal detecting site, with army buttons, coins, weapons parts, horseshoes, harness fittings, and traveler's personal items scattered across the fort grounds and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.88,
+    "detecting_weight": 54
   },
   {
     "name": "Julesburg, CO",
@@ -233,7 +236,8 @@
     "longitude": -102.2693,
     "description": "Julesburg, Colorado was a vital relay station on the Central Overland and Holladay routes where coaches stopped for fresh teams at this important junction along the South Platte River. The station's strategic location made it a hub of activity with stage operations, trading posts, and telegraph facilities all concentrated at this key point on the overland trail. Relay stations like Julesburg are exceptionally productive for metal detecting, with the constant changing of teams and flow of passengers resulting in abundant horseshoes, harness fittings, coins, buttons, and personal effects lost around the corrals and station buildings during years of operations.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.76,
+    "detecting_weight": 62
   },
   {
     "name": "Fort Laramie, WY",
@@ -242,7 +246,8 @@
     "longitude": -104.5491,
     "description": "Fort Laramie, Wyoming was a major stop on the Central Overland and Holladay Overland routes, serving as one of the most important military posts protecting emigrant trails and stage lines in the West. The substantial fort provided security, supplies, and repair facilities for coaches traveling between Fort Kearny and South Pass, with the garrison protecting stage operations from hostile encounters. The extensive military and stage activity over many years makes Fort Laramie one of the finest metal detecting sites on the overland routes, with abundant army buttons, coins, weapons parts, stage hardware, and personal items from soldiers, passengers, and emigrants concentrated throughout the fort grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.92,
+    "detecting_weight": 48
   },
   {
     "name": "South Pass, WY",
@@ -251,7 +256,8 @@
     "longitude": -108.8442,
     "description": "South Pass, Wyoming marked the Continental Divide crossing for the Central Overland and Holladay routes, where coaches reached the summit of the Rocky Mountains at this relatively gentle passage used by emigrants and stage lines. The critical location required relay stations on both approaches to the pass, with facilities for changing exhausted teams after the climb and preparing for the descent into the Green River country. The concentration of stage traffic at this geographic landmark creates good metal detecting opportunities, with coins, buttons, and stage hardware lost around the relay stations and resting areas where thousands of travelers paused at the symbolic crossing.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.78,
+    "detecting_weight": 78
   },
   {
     "name": "Fort Bridger, WY",
@@ -260,7 +266,8 @@
     "longitude": -110.3939,
     "description": "Fort Bridger, Wyoming was a major supply and relay stop on the Holladay Overland Mail route, where the fort and trading post founded by mountain man Jim Bridger provided crucial facilities in southwestern Wyoming. The military post and stage station supplied fresh horses, repairs, and provisions for coaches before the long haul to Salt Lake City through the Wasatch Mountains. The combination of trading post history, military occupation, and years of stage operations makes Fort Bridger exceptional for metal detecting, with trade goods, military artifacts, coins, stage hardware, and emigrant items scattered across the extensive fort and station grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.88,
+    "detecting_weight": 52
   },
   {
     "name": "Salt Lake City, UT",
@@ -269,7 +276,8 @@
     "longitude": -111.891,
     "description": "Salt Lake City, Utah served as a major hub on the Central Overland and Holladay Overland Mail routes, where coaches stopped in the Mormon capital for substantial facilities including hotels, corrals, shops, and supplies midway on the transcontinental journey. The city's strategic location made it an essential provisioning point with stage operations, freight companies, and telegraph offices all maintaining significant presence to support overland traffic. The years of heavy stage and freight traffic through Salt Lake City create outstanding metal detecting opportunities, with period coins, buttons, stage hardware, and personal effects concentrated in the historic downtown district and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.87,
+    "detecting_weight": 32
   },
   {
     "name": "Carson City, NV",
@@ -278,7 +286,8 @@
     "longitude": -119.7674,
     "description": "Carson City, Nevada was an important Central Overland California & Pike's Peak Express stop in the eastern Sierra Nevada, where coaches paused at this booming silver mining town before crossing the mountains to Sacramento. The town's facilities provided fresh horses, repairs, and lodging for passengers nearing the end of their transcontinental journey from Kansas. The combination of stage traffic and silver mining activity makes Carson City a productive metal detecting site, with period coins, mining artifacts, stage hardware, and personal effects from travelers and miners concentrated in the historic downtown and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.8,
+    "detecting_weight": 44
   },
   {
     "name": "Sacramento, CA",
@@ -287,7 +296,8 @@
     "longitude": -121.4944,
     "description": "Sacramento, California served as the western terminus of the Central Overland California & Pike's Peak Express from 1860 to 1862, where coaches completed their journey across the continent and Pony Express riders arrived with mail from the East. The capital city's extensive stage facilities handled arriving and departing coaches, with hotels, corrals, and offices supporting the overland operations including the famous Pony Express. As a major transportation terminus with years of stage traffic and California's capital, Sacramento offers exceptional metal detecting potential with period coins, stage hardware, and personal items throughout the historic Old Sacramento district and riverfront areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 31
   },
   {
     "name": "Kansas City, MO",
