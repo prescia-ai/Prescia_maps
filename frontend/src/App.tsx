@@ -6,6 +6,9 @@ import ProfileSetupPage from './pages/ProfileSetupPage';
 import MapPage from './pages/MapPage';
 import ProfilePage from './pages/ProfilePage';
 import ProfileSettingsPage from './pages/ProfileSettingsPage';
+import SubmitPinPage from './pages/SubmitPinPage';
+import AdminSubmissionsPage from './pages/AdminSubmissionsPage';
+import AdminSubmissionReviewPage from './pages/AdminSubmissionReviewPage';
 
 export default function App() {
   return (
@@ -18,6 +21,9 @@ export default function App() {
         {/* /profile/settings must come before /profile/:username so "settings" isn't treated as a username */}
         <Route path="/profile/settings" element={<ProfileSettingsPage />} />
         <Route path="/profile/:username" element={<ProfilePage />} />
+        <Route path="/submit" element={<SubmitPinPage />} />
+        <Route path="/admin/submissions/:id" element={<AdminSubmissionReviewPage />} />
+        <Route path="/admin/submissions" element={<AdminSubmissionsPage />} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>

@@ -423,3 +423,69 @@ class UserPinListResponse(BaseModel):
 
     pins: List[UserPinResponse]
     total: int
+
+
+# ---------------------------------------------------------------------------
+# PinSubmission schemas
+# ---------------------------------------------------------------------------
+
+class PinSubmissionCreate(BaseModel):
+    """Request model for creating a community pin submission."""
+
+    name: str = Field(..., min_length=1, max_length=200)
+    pin_type: Optional[str] = None
+    suggested_type: Optional[str] = Field(None, max_length=100)
+    latitude: float = Field(..., ge=-90.0, le=90.0)
+    longitude: float = Field(..., ge=-180.0, le=180.0)
+    date_era: Optional[str] = Field(None, max_length=100)
+    description: Optional[str] = Field(None, max_length=500)
+    source_reference: Optional[str] = None
+    tags: Optional[str] = None
+
+
+class PinSubmissionResponse(BaseModel):
+    """Full pin submission record returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    submitter_id: UUID
+    submitter_username: Optional[str] = None
+    name: str
+    pin_type: Optional[str] = None
+    suggested_type: Optional[str] = None
+    latitude: float
+    longitude: float
+    date_era: Optional[str] = None
+    description: Optional[str] = None
+    source_reference: Optional[str] = None
+    tags: Optional[str] = None
+    status: str
+    admin_notes: Optional[str] = None
+    rejection_reason: Optional[str] = None
+    reviewed_at: Optional[Any] = None
+    submitted_at: Optional[Any] = None
+
+
+class PinSubmissionAdminUpdate(BaseModel):
+    """Request model for admin edits on a submission."""
+
+    name: Optional[str] = Field(None, max_length=200)
+    pin_type: Optional[str] = None
+    suggested_type: Optional[str] = Field(None, max_length=100)
+    latitude: Optional[float] = Field(None, ge=-90.0, le=90.0)
+    longitude: Optional[float] = Field(None, ge=-180.0, le=180.0)
+    date_era: Optional[str] = Field(None, max_length=100)
+    description: Optional[str] = None
+    source_reference: Optional[str] = None
+    tags: Optional[str] = None
+    admin_notes: Optional[str] = None
+    rejection_reason: Optional[str] = None
+    status: Optional[Literal["pending", "approved", "rejected"]] = None
+
+
+class PinSubmissionListResponse(BaseModel):
+    """Paginated list of pin submissions."""
+
+    submissions: List[PinSubmissionResponse]
+    total: int

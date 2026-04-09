@@ -55,6 +55,28 @@ export default function Navbar({
             </svg>
             Import Data
           </button>
+
+          {user && (
+            <Link
+              to="/submit"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-300 hover:text-white hover:bg-slate-700/60 rounded-lg transition-colors"
+            >
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              Submit a Pin
+            </Link>
+          )}
         </div>
 
         {/* Status badges */}
