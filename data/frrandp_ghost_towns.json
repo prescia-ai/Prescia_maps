@@ -9320,7 +9320,8 @@
     "latitude": 40.343317,
     "longitude": -78.918936,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rosedale Coke Plant in Cambria County, Pennsylvania in the Johnstown region was a coal coking facility processing bituminous coal from the Cambria County coalfield into metallurgical coke for the Bethlehem Steel Cambria Works blast furnaces in Johnstown, which were among the most important integrated steelmaking operations in the nation during the late nineteenth and early twentieth centuries. The Johnstown region's iron and steel industry was built on the remarkable coincidence of coking coal, iron ore transportation by rail from Lake Superior, and the Conemaugh River's water supply, and the coke plants that dotted the mountain valleys around Johnstown were essential links in the steelmaking chain. The Cambria Steel / Bethlehem Steel Johnstown complex was devastated by the catastrophic Johnstown Floods of 1889 and 1936, each time being rebuilt as a testament to the industrial determination of the city's steel workers and owners. Former coke plant sites in the Johnstown region are historically significant and the remains of beehive ovens, retaining walls, and coal handling infrastructure are visible in multiple locations."
   },
   {
     "name": "Eliza Furnace",
@@ -9328,7 +9329,8 @@
     "latitude": 40.484262,
     "longitude": -78.922128,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Eliza Furnace in Cambria County, Pennsylvania in the Johnstown region was one of the historic blast furnaces associated with the Cambria Iron Company's integrated steelmaking complex, which grew from a modest iron works founded in 1852 to become one of the most important steel producers in the United States by the early twentieth century when it was acquired by Bethlehem Steel. The Cambria Iron Company played a crucial role in American metallurgical development — it was at Cambria Iron that engineer Alexander Holley first successfully adapted the Bessemer steel process to American conditions in 1871, launching the American steel age. The Eliza Furnace represents the older iron-making infrastructure that preceded the Bessemer and open-hearth steel era, preserving an element of the technological transition that transformed American manufacturing. Cambria County's industrial archaeology landscape is rich with the physical evidence of American steel's foundational history."
   },
   {
     "name": "Geneva Steel Plant",
@@ -9336,7 +9338,8 @@
     "latitude": 40.318486,
     "longitude": -111.744508,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Geneva Steel Plant in Orem, Utah County, Utah was one of the most ambitious industrial projects in western American history — a fully integrated steel mill built by the federal government on Utah Lake's shore during World War II to supply Pacific war needs using Utah iron ore, coal, and water, costing $200 million in 1943 dollars (equivalent to over $3 billion today). Geneva Steel became Utah's largest employer after the war when it was sold to U.S. Steel Corporation, producing structural steel for the western construction market for five decades before bankruptcy, environmental problems, and import competition forced its closure in 2001. The sprawling plant site on the lake's eastern shore was an environmental nightmare, contributing to Utah Lake's severe water quality degradation over decades of operation, and the cleanup of the site has been a long-running environmental restoration project. The former Geneva Steel site is now partially redeveloped as a mixed-use waterfront area, with some industrial ruins still visible near the lake shore."
   },
   {
     "name": "Abrasive Alloys",
@@ -9344,7 +9347,8 @@
     "latitude": 40.026266,
     "longitude": -74.930034,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abrasive Alloys in Burlington County, New Jersey near Medford was a specialty industrial manufacturer producing abrasive materials — grinding wheels, cutting compounds, or similarly specialized abrasive products — serving the machining and manufacturing industries of the Philadelphia metropolitan area, which hosted a dense ecosystem of precision manufacturers requiring abrasive products for metal cutting, finishing, and surface preparation. New Jersey's industrial heritage is less celebrated than neighboring Pennsylvania's steel and coal industries, but the state was home to extraordinary concentrations of chemical, pharmaceutical, precision, and specialty manufacturing that served the broader northeastern industrial economy. The abandoned Abrasive Alloys facility represents a specific niche in New Jersey's complex manufacturing history, and former specialty industrial sites in the Delaware River valley may retain period manufacturing implements, industrial hardware, and mid-century commercial artifacts from their operational decades."
   },
   {
     "name": "Coal Miner’s Cross Memorial",
@@ -9352,7 +9356,8 @@
     "latitude": 40.77608,
     "longitude": -76.675857,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Coal Miner's Cross Memorial in Schuylkill County, Pennsylvania in the hard anthracite coal country of the northern Appalachians was erected to honor the thousands of miners who died in the anthracite coal mines of the Wyoming and Schuylkill valleys — one of the most dangerous industries in American history, where cave-ins, explosions, black damp, flooding, and equipment accidents killed tens of thousands of immigrant miners from the 1850s through the mid-twentieth century. Schuylkill County was the heart of the Pennsylvania anthracite coal industry, producing the clean-burning hard coal that heated the homes and fired the factories of the northeastern United States for a century. The memorial acknowledges the human cost of the anthracite industry's wealth — the Irish, Welsh, Polish, Lithuanian, and Slovak miners who gave their lives in the dark underground workings of America's energy economy. The memorial is publicly accessible and stands as a solemn reminder of the labor history of Pennsylvania's coal country."
   },
   {
     "name": "Ground Zero",
@@ -9360,7 +9365,8 @@
     "latitude": 40.71154,
     "longitude": -74.013226,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ground Zero in Lower Manhattan, New York City is the site of the September 11, 2001 terrorist attacks that destroyed the Twin Towers of the World Trade Center, killing 2,977 people in the deadliest attack on American soil in history and permanently changing the national security, foreign policy, and urban landscape of the United States. The sixteen-acre site in the Financial District was excavated down to bedrock to remove the catastrophic debris and human remains, revealing the original 1960s construction of the massive underground 'bathtub' that had made the Twin Towers possible by keeping out Hudson River groundwater. Today the site is the National September 11 Memorial & Museum, featuring two massive reflecting pools in the footprints of the original towers, the names of every victim inscribed in bronze parapets around the pools, and a museum chronicling the attacks and their aftermath. The memorial is freely accessible and one of the most visited sites in America, serving as both a tribute to the victims and an educational resource for understanding the attacks."
   },
   {
     "name": "World War II Memorial",
@@ -9368,7 +9374,8 @@
     "latitude": 38.889421,
     "longitude": -77.040498,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "World War II Memorial on the National Mall in Washington, D.C. honors the 16 million Americans who served in the armed forces during the Second World War, the 400,000 who died in service, and the millions of home front workers who supported the war effort, dedicated in 2004 after a long design and funding campaign that reflected the determination of the Greatest Generation to be formally recognized before the last veterans passed away. The memorial, designed by Friedrich St.Florian, features 56 granite pillars representing the states and territories, two arched pavilions for the Atlantic and Pacific theaters of war, and a Freedom Wall with 4,048 gold stars representing 100 American war dead each. The design has been criticized by some architectural critics as overwrought but celebrated by veterans and their families as appropriately monumental for the sacrifice it represents. The memorial is freely accessible on the National Mall between the Lincoln Memorial Reflecting Pool and the Washington Monument."
   },
   {
     "name": "Lincoln Memorial",
@@ -9376,7 +9383,8 @@
     "latitude": 38.889269,
     "longitude": -77.050176,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lincoln Memorial in Washington, D.C. is one of the most iconic structures in American public life — a massive neoclassical temple completed in 1922 housing Daniel Chester French's monumental seated Lincoln statue, set at the western end of the National Mall's long axis in a position of supreme national symbolic importance where it has been the backdrop for some of the most significant public events in American history. The memorial's design by Henry Bacon evokes the Greek Doric temple tradition and is one of the finest examples of the American Renaissance architectural movement, while the quotations from Lincoln's Gettysburg Address and Second Inaugural Address carved into the interior walls represent the highest expression of American political philosophy. Martin Luther King Jr. delivered his 'I Have a Dream' speech from the memorial steps in August 1963 during the March on Washington, cementing the building's role as the defining civic space of the civil rights movement. The memorial is freely accessible and one of the most visited sites in the United States."
   },
   {
     "name": "The National Memorial for Peace and Justice",
@@ -9384,7 +9392,8 @@
     "latitude": 32.372256,
     "longitude": -86.312759,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The National Memorial for Peace and Justice in Montgomery, Alabama, opened in 2018, is America's first national memorial dedicated to the legacy of racial terror and lynching — a haunting open-air structure by MASS Design Group featuring 800 steel monuments representing every American county where a racial terror lynching occurred, hanging like coffins from the memorial's ceiling as visitors descend a ramp that progressively elevates the monuments above their heads. The Equal Justice Initiative, founded by Bryan Stevenson, created the memorial to document the more than 4,000 racial terror lynchings in the American South between 1877 and 1950, a systematic campaign of violence that enforced racial hierarchy and whose perpetrators were never prosecuted. The memorial is located in Montgomery, Alabama — the first capital of the Confederacy and a city that grappled profoundly with its role in both slavery and civil rights — as a deliberate act of historical reckoning. The memorial is open to the public and is one of the most powerful and significant new American memorial spaces created in the twenty-first century."
   },
   {
     "name": "Martin Luther King, Jr. Memorial",
@@ -9392,7 +9401,8 @@
     "latitude": 38.886199,
     "longitude": -77.044204,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Martin Luther King Jr. Memorial on the National Mall in Washington, D.C. was dedicated in 2011, the first memorial on the Mall honoring a non-president and the first honoring an African American, featuring a 30-foot tall granite relief of King emerging from a 'Stone of Hope' split from a 'Mountain of Despair,' based on his famous 'I Have a Dream' speech language. The memorial is situated in West Potomac Park on the Tidal Basin, aligned symbolically with the Lincoln Memorial (where King delivered his 1963 speech) and the Jefferson Memorial, placing King's legacy in direct dialogue with America's foundational ideals. The design by sculptor Lei Yixin was controversial because of both the stern facial expression of the figure and the use of a Chinese sculptor for a uniquely American civil rights monument, but the overall memorial has been widely embraced as a worthy addition to the Mall's commemorative landscape. The memorial is freely accessible and one of the National Mall's most visited sites."
   },
   {
     "name": "Thomas Jefferson Memorial",
