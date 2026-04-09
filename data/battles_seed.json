@@ -1767,7 +1767,8 @@
     "description": "On November 7, 1863, Union General John Sedgwick's Sixth Corps executed a brilliant twilight assault on the Confederate bridgehead at Rappahannock Station, VA, capturing two Louisiana brigades — over 1,600 men — in a surprise attack that cleared the north bank of the Rappahannock River. The battle demonstrated the growing tactical effectiveness of the Union Army of the Potomac and was one of its most one-sided victories of 1863. The battle site near Remington, VA (formerly Rappahannock Station), in Fauquier County has Civil War Trails markers, and the bridge area along the Rappahannock has been the subject of private land investigation. The surrounding Culpeper and Fauquier county farmland has produced Civil War Minié balls, buttons, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 67
   },
   {
     "name": "Battle of Kelly's Ford",
@@ -1777,7 +1778,8 @@
     "description": "On March 17, 1863, Union cavalry under General William Averell crossed the Rappahannock at Kelly's Ford and fought Confederate cavalry under General Fitzhugh Lee in the first significant all-cavalry engagement in the Eastern Theater — a battle that killed Confederate horse artillery commander Major John Pelham, 'the Gallant Pelham,' on a field visit. The fight was tactically inconclusive but showed the growing confidence of Union cavalry. Kelly's Ford in Culpeper County, VA, is a Virginia Civil War Trail site along the Rappahannock River, with private farmland surrounding the historic crossing. The Kelly's Ford area has produced Civil War cavalry relics and Minié balls on private land in the Culpeper-Fauquier corridor.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Port Hudson",
@@ -1787,7 +1789,8 @@
     "description": "From May 22 to July 9, 1863, Union forces under General Nathaniel Banks besieged the last Confederate stronghold on the Mississippi River at Port Hudson, LA — the longest siege in American military history, lasting 48 days. The siege included two major assaults by Black Union troops (the 1st and 3rd Louisiana Native Guards) who fought with such courage that their actions became a turning point in attitudes toward Black military service. Port Hudson State Historic Site near Zachary, LA, preserves extensive Confederate earthwork systems with walking trails through remarkably intact siege terrain. Metal detecting is not permitted in the state historic site, but surrounding East Feliciana and West Feliciana parish private farmland has produced Civil War Minié balls, artillery fragments, and military hardware from the siege operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Milliken's Bend",
@@ -1797,7 +1800,8 @@
     "description": "On June 7, 1863, Confederate cavalry attacked the Union post at Milliken's Bend on the Louisiana side of the Mississippi River, where newly recruited Black Union soldiers of the 9th and 11th Louisiana Infantry (African Descent) fought in brutal hand-to-hand combat against the attackers — one of the first significant engagements involving Black troops in the war, who fought with exceptional bravery before being reinforced by Union gunboats. The battle was cited as evidence that former enslaved men would fight effectively and contributed to the expansion of Black recruitment. The battle site at Milliken's Bend in Madison Parish, LA, is now beneath the Mississippi River's altered course or flooded by the river's rerouting over the decades. The surrounding Madison Parish area has produced Civil War artifacts from the Vicksburg campaign logistics operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Sabine Pass",
@@ -1807,7 +1811,8 @@
     "description": "On September 8, 1863, one of the most remarkable small-unit actions of the Civil War occurred at Sabine Pass, TX, where Confederate Lieutenant Richard 'Dick' Dowling and just 47 Irish dock-workers from the Davis Guards manned Fort Griffin and sank two Union gunboats, captured 350 prisoners, and forced the withdrawal of a 5,000-man Union invasion fleet — all without suffering a single casualty. The defense of Sabine Pass thwarted a Union invasion of Texas and became a Confederate legendary story of the war. Sabine Pass Battleground State Historic Site and Park in Jefferson County, TX, preserves the fort site on the Texas Gulf Coast, with a small museum and picnic area. Metal detecting is not permitted in the state park, but the surrounding southeast Texas coastline has produced Civil War naval hardware and period artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Bristoe Station",
@@ -1817,7 +1822,8 @@
     "description": "On October 14, 1863, A.P. Hill's Confederate corps attacked what appeared to be the rear of the retreating Union Second Corps near Bristoe Station, VA, only to find Warren's Fifth Corps concealed behind the railroad embankment — the Confederates were cut down by flanking fire before the situation was understood, losing over 1,900 men. The defeat prompted Lee's famous gentle reproof to Hill: 'Well, well, General, bury these poor men and let us say no more about it.' The Bristoe Station battlefield in Prince William County, VA, is partially preserved by Prince William County's battlefield parks, with the railroad cut and key terrain protected. The surrounding Prince William County private farmland — one of the most intensively used Civil War corridors in Virginia — has produced significant quantities of Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Auburn",
@@ -1827,7 +1833,8 @@
     "description": "On October 13-14, 1863, Confederate General J.E.B. Stuart's cavalry was surrounded by Union infantry at Auburn, VA, and spent a tense night concealed in a ravine while Union troops camped around them, before breaking out at dawn — a remarkable escape that preceded the Battle of Bristoe Station by hours. The incidents at Auburn and nearby Catlett's Station were part of Lee's autumn maneuvering in the Rappahannock-Rapidan corridor. The Auburn battle site in Fauquier County, VA, is largely private farmland along Cedar Run, with Civil War Trails interpretive markers along the road. The Fauquier and Prince William county corridor has produced Civil War cavalry relics and Minié balls on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Wauhatchie",
@@ -1837,7 +1844,8 @@
     "description": "On the night of October 28-29, 1863, Confederate General Micah Jenkins attacked a Union supply column and position at Wauhatchie in the Lookout Valley below Chattanooga, TN, in one of the few true nighttime battles of the Civil War. The attack was repulsed by Union forces under General Geary, and the engagement helped secure the 'Cracker Line' — the supply route that ended the siege of Chattanooga. The Wauhatchie battlefield in Hamilton County, TN, is now beneath the suburban development of Lookout Valley, with limited preservation. The surrounding Lookout Valley private land has produced Civil War Minié balls and military hardware from the intense 1863 Chattanooga campaign operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 44
   },
   {
     "name": "Streight's Raid",
@@ -1847,7 +1855,8 @@
     "description": "In April-May 1863, Colonel Abel Streight led 1,700 Union mounted infantry deep into Alabama on mule-back to destroy the Western and Atlantic Railroad supplying Bragg's Confederate army — but the raid was dogged by Confederate cavalry commander Nathan Bedford Forrest, who pursued and harassed Streight's force for two weeks before bluffing the entire Union column into surrender at Cedar Bluff, AL. Forrest achieved the remarkable feat of capturing a force twice the size of his own through deception — marching his small force in circles to create the impression of a large army. The route of Streight's Raid crosses northwestern Georgia and northeastern Alabama; Cedar Bluff in Cherokee County, AL, marks the surrender site. The corridor has produced Civil War artifacts on private land from this dramatic pursuit.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.75,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Fort Pillow",
@@ -1857,7 +1866,8 @@
     "description": "On April 12, 1864, Confederate General Nathan Bedford Forrest's cavalry attacked and captured Fort Pillow on the Mississippi River in Lauderdale County, TN, and what followed became one of the war's most controversial atrocities — Black Union soldiers and their white officers, having surrendered or attempted to surrender, were killed in large numbers by Confederate troops. The 'Fort Pillow Massacre' outraged the North and stiffened Union resolve to fight to the end. Fort Pillow State Historic Park preserves the earthworks on a dramatic bluff above the Mississippi River in Lauderdale County, TN, with interpretive trails and a museum. Metal detecting is not permitted in the state park, but the surrounding Lauderdale County private farmland along the river corridor has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.87,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of the Wilderness",
