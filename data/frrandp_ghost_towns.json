@@ -6890,7 +6890,8 @@
     "latitude": 44.406429,
     "longitude": -92.928728,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sogn was a Norwegian Lutheran farming community in Goodhue County, Minnesota, established in the 1850s and 1860s by immigrants from the Sognefjord region of western Norway who settled the rolling limestone bluffland country above the Mississippi River and named their new home after the Old Country. The community centered on the Sogn Lutheran Church, which still stands and holds services, making Sogn one of Minnesota's surviving immigrant community identity landmarks rather than a fully vanished ghost town. The surrounding Goodhue County farmland — some of Minnesota's finest — has yielded Norwegian immigrant personal items, early American coinage from the settlement era, and farm hardware in the deep prairie soils for detectorists with landowner permission."
   },
   {
     "name": "O'Neil, OR",
@@ -6898,7 +6899,8 @@
     "latitude": 44.330592,
     "longitude": -121.08859,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "O'Neil was a small farming and ranching community in Jefferson County, Oregon, in the high desert country east of the Cascade Mountains where the Deschutes River drainage and the surrounding sage-covered plateaus attracted homesteaders in the early twentieth century hoping to dry-farm wheat or run cattle on the remote Oregon plateau. The post office served a dispersed farming population but could not sustain itself as consolidation and improved roads made the small community irrelevant, and O'Neil faded through the mid-twentieth century. The Jefferson County high desert preserves old homestead sites in native sagebrush and juniper, and with BLM access in many areas, the old O'Neil community vicinity is worth investigating for homestead-era coinage and domestic hardware."
   },
   {
     "name": "Leo, WY",
@@ -6906,7 +6908,8 @@
     "latitude": 42.250238,
     "longitude": -106.803375,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Leo was a small Wyoming homestead community in Natrona County, established in the early twentieth century by settlers who attempted dry-land farming and small-scale ranching in the sage-covered high plains east of Casper, drawn by promotional literature about Wyoming's agricultural potential. The community had a post office but collapsed quickly when the combination of Wyoming's harsh climate, meager rainfall, and the 1920s agricultural depression proved too formidable for the farming experiment. The Natrona County high plains retain good artifact visibility in the sparse native grass and sage, and old homestead sites — cellar depressions, windmill ruins, and fence lines — are common on the BLM lands and private ranches of this still-remote landscape."
   },
   {
     "name": "Bitter Lick, OR",
@@ -6914,7 +6917,8 @@
     "latitude": 42.792903,
     "longitude": -122.638652,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bitter Lick was a small community in Jackson County, Oregon, in the Cascades foothills country south of Crater Lake, associated with the early settlement of the Rogue River valley region where ranchers and timber interests pushed into the timbered mountains in the late nineteenth century. The isolated location in the heavily forested Cascades made commercial development impossible, and Bitter Lick remained a rural neighborhood name rather than a true town. The Jackson County Cascades country is rich in Oregon pioneer history, and old ranch and homestead sites in the mountain valleys preserve early Oregon coinage and ranching-era hardware in the forest soils, with most access through USFS lands or private landowner permission."
   },
   {
     "name": "Divine, IL",
@@ -6922,7 +6926,8 @@
     "latitude": 41.387076,
     "longitude": -88.291348,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Divine was a small farming community in Grundy County, Illinois, in the Illinois and Michigan Canal corridor country southwest of Joliet, established in the mid-nineteenth century when the canal brought commercial traffic and agricultural prosperity to this section of the Illinois River valley. The community had a post office and served local farm families, but the railroad era reorganized commerce around larger channel cities and Divine faded into the agricultural landscape. The I&M Canal country of Grundy County is rich detecting territory — heavy nineteenth-century commercial and immigrant traffic along the canal generated significant coin and artifact loss, and old farm sites adjacent to the old canal route have produced early American coinage, immigrant personal items, and canal-era hardware."
   },
   {
     "name": "Mallard, MN",
@@ -6930,7 +6935,8 @@
     "latitude": 47.311111,
     "longitude": -95.266944,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mallard was a small farming and logging community in Clearwater County, Minnesota, near the Beltrami-Clearwater county line in the lake-dotted cutover country of northwestern Minnesota, where Scandinavian and German immigrants settled after the timber companies cleared the white pine in the 1890s and early 1900s. The post office served homesteaders who hoped the cutover land would prove as productive as the forests had suggested, but the short growing season and thin soils disappointed many, and Mallard faded through the Depression era. The northwestern Minnesota cutover preserves old homestead traces in birch and aspen forest, and early twentieth-century coins, Scandinavian immigrant items, and farm hardware are the typical finds in permission-based detecting on the old farm sites."
   },
   {
     "name": "Trask, IN",
@@ -6938,7 +6944,8 @@
     "latitude": 40.422883,
     "longitude": -85.523021,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Trask was a small farming community in Grant County, Indiana, in the flat agricultural country of east-central Indiana where the National Road and the early railroad network encouraged dense rural settlement in the mid-nineteenth century. The community had a post office and a school serving outlying farm families in one of Indiana's most productive corn and wheat-growing counties, but consolidation drew commerce to larger centers and Trask faded from formal recognition by the early twentieth century. Grant County's deep agricultural soils preserve a good inventory of Indiana pioneer-era artifacts, and cultivated fields near the old Trask community area have produced Indian Head cents, early American coins, and domestic hardware from the 1850s-1890s settlement peak."
   },
   {
     "name": "Downs, OK",
@@ -6946,7 +6953,8 @@
     "latitude": 35.807152,
     "longitude": -97.681393,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Downs was a small Oklahoma Territory community in Payne County, established after the Land Run of 1889 opened the Unassigned Lands to settlement when thousands of homesteaders rushed to claim 160-acre plots across the central Oklahoma prairie. The community had a post office and a country store serving the surrounding homestead townships, but the railroad chose routes that bypassed many small Oklahoma communities, and Downs was among the casualties, losing its commercial base to better-connected neighbors. Oklahoma red clay fields in this part of the state are productive detecting ground, and cultivated land near the old Downs site has produced Land Run-era Indian Head cents, early Oklahoma statehood coins, and domestic hardware from the homestead rush period."
   },
   {
     "name": "Chahta Tamaha, Indian Territory\\n",
@@ -6954,7 +6962,8 @@
     "latitude": 34.050278,
     "longitude": -96.199722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Chahta Tamaha — Choctaw for 'Choctaw Town' — was the capital of the Choctaw Nation in Indian Territory, serving as the seat of tribal government in what is now Bryan County, Oklahoma, from the mid-nineteenth century through the late 1800s when federal allotment policies began dismantling the tribal land system established by the removal treaties of the 1830s. The capital had a council house, a tribal school, churches, and a commercial district where both tribal citizens and traders conducted business under Choctaw law. The Five Civilized Tribes capitals of Indian Territory are among the most historically significant and least-detected sites in Oklahoma — access is sensitive given tribal sovereignty considerations, but the Bryan County landscape around the old capital site is deep in Native American, early settler, and Civil War-era Indian Territory history."
   },
   {
     "name": "Acme, OK",
@@ -6962,7 +6971,8 @@
     "latitude": 34.798889,
     "longitude": -98.019167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Acme was a small Oklahoma Territory community in Caddo County, established in the late 1890s following the opening of the Kiowa-Comanche-Apache reservation to settlement in 1901, when thousands of homesteaders rushed into southwestern Oklahoma and platted dozens of small towns across the former reservation. The community had a post office and a small commercial presence, but the dense grid of small Oklahoma towns meant that only those with railroad connections survived long-term, and Acme was among the many that faded within a generation. The southwest Oklahoma red soil country is excellent detecting territory — the combination of homestead-era and former reservation-period artifacts makes the old townsite areas in Caddo County particularly interesting for Indian Head cents, early statehood coins, and trade goods."
   },
   {
     "name": "Alpha, OK",
