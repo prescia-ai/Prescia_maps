@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import api from '../api/client';
@@ -13,17 +13,13 @@ export default function ProfileSetupPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // If not logged in, go to login
-  if (!user) {
-    navigate('/login', { replace: true });
-    return null;
-  }
-
-  // If username already set, go to map
-  if (profile?.username) {
-    navigate('/map', { replace: true });
-    return null;
-  }
+  useEffect(() => {
+    if (!user) {
+      navigate('/login', { replace: true });
+    } else if (profile?.username) {
+      navigate('/map', { replace: true });
+    }
+  }, [user, profile, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
