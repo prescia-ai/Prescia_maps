@@ -9131,7 +9131,8 @@
     "latitude": 33.114839,
     "longitude": -87.106938,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "West Blocton Coke Ovens Park in Bibb County, Alabama preserves a remarkable collection of intact beehive coke ovens from the Alabama iron and steel industry's early era, when the rich coal seams of the Cahaba Coal Field supplied the fuel for Birmingham district iron furnaces and the coke ovens at West Blocton converted raw coal into the metallurgical coke required for blast furnace iron smelting. The Alabama coal and iron industry was the economic foundation of Birmingham's extraordinary industrial rise in the 1870s-1920s — the city grew from nothing to a major industrial center in a single generation because of the rare geological coincidence of iron ore, coal, and limestone occurring within close proximity in the southern Appalachian foothills. West Blocton was a coal mining and coke-making community that served this industrial ecosystem before the rationalization of the regional steel industry shifted production to larger, more efficient operations. The coke ovens are preserved as a county park and represent an accessible and historically significant piece of Alabama's industrial archaeology."
   },
   {
     "name": "Cherry Valley Coke Ovens",
@@ -9139,7 +9140,8 @@
     "latitude": 40.886944,
     "longitude": -80.766389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cherry Valley Coke Ovens in Mercer County, Pennsylvania near Sharon were beehive coke ovens that processed the coking coal of the Shenango Valley coalfield into metallurgical coke for the iron and steel industry of western Pennsylvania, part of the dense industrial ecosystem that made Mercer County and the Shenango River valley one of the most important steel-producing districts outside of Pittsburgh. The Shenango Valley steelworks — Sharon Steel, Westinghouse, and others — required a constant supply of high-quality metallurgical coke, and the local coal seams of Mercer County supplied the raw material while the coke ovens converted it to the form needed for blast furnace operation. The coke oven ruins in western Pennsylvania are distributed widely across the landscape of the former steel district, and the Cherry Valley site represents a specific element of this industrial infrastructure in Mercer County. Former coke oven sites in the Pennsylvania steel district are historically significant and the arch ruins make distinctive and impressive archaeological features."
   },
   {
     "name": "Chickamauga Coke Ovens",
@@ -9147,7 +9149,8 @@
     "latitude": 34.881471,
     "longitude": -85.295257,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Chickamauga Coke Ovens in Walker County, Georgia near LaFayette were beehive coke ovens serving the Chattanooga-area iron industry's Tennessee-Georgia coalfield operations, taking advantage of the coal seams in the Lookout Mountain country to produce metallurgical coke for the blast furnaces at Chattanooga and the emerging Birmingham district to the south. The Tennessee Valley and northern Georgia iron and coal industry was part of the broader New South industrial development program that attempted to replicate the Pittsburgh steel model in the southern Appalachians using cheap regional labor, abundant mineral resources, and railroad connections to national markets. The Walker County coalfield supplied the Chickamauga Creek basin iron operations through the late nineteenth and early twentieth centuries before consolidation eliminated the smaller operations in favor of larger integrated facilities. The coke oven ruins in the Walker County landscape are accessible remnants of the northern Georgia iron industry's formative era."
   },
   {
     "name": "Minersville Coke Ovens",
@@ -9155,7 +9158,8 @@
     "latitude": 40.216306,
     "longitude": -78.184216,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Minersville Coke Ovens in Cambria County, Pennsylvania near Ebensburg were beehive coke ovens serving the central Pennsylvania iron industry's coking coal operations in the Somerset and Cambria County coalfields, which were among the nation's most important sources of metallurgical-grade bituminous coal from the 1870s through the mid-twentieth century. Cambria County's coal mines fed the blast furnaces of Johnstown — just downriver from Ebensburg — where Bethlehem Steel's Cambria Iron Company operated one of the most important steel plants in the nation and where the Johnstown Flood of 1889 was one of the deadliest disasters in American history. The coke ovens that processed Cambria County coal were scattered across the mountain valleys above Johnstown, and the Minersville site represents a specific element of this industrial landscape. Pennsylvania's coke oven ruins are among the most historically significant industrial archaeology sites in the eastern United States."
   },
   {
     "name": "Redstone Coke Oven Historic District",
@@ -9163,7 +9167,8 @@
     "latitude": 39.181111,
     "longitude": -107.241367,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Redstone Coke Oven Historic District in Redstone, Pitkin County, Colorado near Carbondale was one of the most remarkable industrial-era experiments in worker welfare in American history — coal baron John Cleveland Osgood built the Crystal River coalfields' coke operations and simultaneously constructed the model village of Redstone as an idealized workers' community with exceptional amenities including a 40-room inn for bachelor workers, a stone schoolhouse, a theater, comfortable cottages for family workers, and his own 42-room chalet mansion (Cleveholm). The beehive coke ovens at Redstone processed Crystal River coal for Osgood's Colorado Fuel & Iron Company, which supplied the steel mills at Pueblo with metallurgical coke. The coke ovens closed after Osgood's business empire collapsed in the 1910s, and the entire community fell into a deep historical slumber that preserved the extraordinary Victorian-era architecture. The Redstone coke ovens, the village, and the Cleveholm Manor are now a remarkable time capsule of Gilded Age paternalistic industrialism accessible from Colorado 133."
   },
   {
     "name": "Tintic Standard Reduction Mill",
@@ -9171,7 +9176,8 @@
     "latitude": 39.957695,
     "longitude": -111.855289,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tintic Standard Reduction Mill in Eureka, Juab County, Utah was a massive twentieth-century ore processing facility serving the Tintic Mining District — one of Utah's richest and most historically significant mining districts, producing gold, silver, lead, zinc, and copper from the lead-silver ore bodies of the East Tintic and West Tintic mountains from 1869 through the mid-twentieth century. The Tintic District was briefly one of the most productive mining regions in the United States during the 1870s-1880s, with mines like the Mammoth, Chief Consolidated, and Dragon producing millions in precious metals for the Silver City and Eureka camp economies. The Standard Reduction Mill processed complex ore from multiple district mines, applying the stamp milling and chemical leaching technologies of the twentieth century to the lower-grade ores that remained after the rich oxidized deposits were worked out. The mill ruins are accessible in Juab County's Tintic Valley landscape and are part of the broader Tintic Mining District archaeological resource."
   },
   {
     "name": "Solvay Coke \\u0026 Gas, Co.",
@@ -9179,7 +9185,8 @@
     "latitude": 43.016768,
     "longitude": -87.907953,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Solvay Coke & Gas Company in Milwaukee, Milwaukee County, Wisconsin was an industrial chemical plant that produced metallurgical coke and coal gas from bituminous coal using the Solvay-process byproduct ovens, supplying Milwaukee's gas utility network and the Lake Michigan industrial corridor with coke and coal chemical byproducts. Milwaukee's industrial history is dominated by heavy manufacturing — brewing, meatpacking, machinery, electrical equipment — and the Solvay plant served the industrial ecosystem's fuel and chemical needs in the city's north side manufacturing district. The former Solvay plant site on Milwaukee's waterfront is a contaminated brownfield site requiring environmental remediation due to the coal tar and coke oven gas contamination associated with a century of coal chemical processing. Former coking plant sites are typically heavily contaminated with polycyclic aromatic hydrocarbons, and public access is generally restricted pending cleanup."
   },
   {
     "name": "Gas Works Park",
@@ -9187,7 +9194,8 @@
     "latitude": 47.645114,
     "longitude": -122.334782,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gas Works Park in Seattle, King County, Washington preserves the extraordinary rusting industrial ruins of the Seattle Gas Light Company's coal gasification plant — a massive structure of retorts, condensers, and gas holders that processed coal into town gas for Seattle's lighting and heating needs from 1906 to 1956, before natural gas pipelines made the coal gas industry obsolete. When the plant closed in 1956 the derelict industrial site sat contaminated and unused until Seattle landscape architect Richard Haag proposed the radical idea of preserving the industrial ruins rather than demolishing them, designing a public park around the decaying factory in 1975 — one of the first industrial heritage parks in the United States. Gas Works Park on the north shore of Lake Union became an internationally recognized model for industrial landscape preservation and brownfield parkland conversion, inspiring similar projects worldwide. The park is a Seattle landmark and popular public space, with the rusted hulk of the gasification plant now painted and converted into a children's play area and picnic shelter."
   },
   {
     "name": "Abandoned Crown Vintage Paper Mills",
@@ -9195,7 +9203,8 @@
     "latitude": 42.330329,
     "longitude": -85.571056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Crown Vintage Paper Mills in Battle Creek, Calhoun County, Michigan were paper manufacturing facilities on the Kalamazoo River that produced paper and paperboard products during the era when Michigan's southern river valleys hosted a significant paper industry taking advantage of the water power and rail access of the river corridor. Battle Creek is better known as the headquarters of Kellogg's and Post cereals, but the Kalamazoo River watershed supported diverse manufacturing including paper production that pre-dated and accompanied the cereal industry's development of the city. Paper mills along Michigan's river systems operated through the late nineteenth and early twentieth centuries before consolidation and technological change concentrated paper production in larger facilities. Former paper mill sites along the Kalamazoo River corridor may have residual environmental contamination from the bleaching and chemical processing associated with historical paper manufacturing."
   },
   {
     "name": "Phoenixville Foundry",
@@ -9203,7 +9212,8 @@
     "latitude": 40.135119,
     "longitude": -75.517308,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Phoenixville Foundry in Phoenixville, Chester County, Pennsylvania was an iron and steel manufacturing facility associated with the Phoenix Iron Company — a nationally significant nineteenth-century ironworks that produced the Phoenix column, a patented structural iron column that was used in hundreds of American bridges and buildings from the 1860s through the early twentieth century. Phoenix columns made from Phoenixville iron are found in bridges across America, and the company was a leader in structural iron innovation during the period when cast and wrought iron were being superseded by steel for structural applications. The Phoenix Iron Company site along the Schuylkill River in Phoenixville is a significant industrial archaeology location that has been partly redeveloped as the Foundry mixed-use development, preserving some of the original ironworks structures while adapting the historic industrial buildings for contemporary commercial and residential use. The preserved portions of the foundry are publicly accessible as part of Phoenixville's remarkable downtown revitalization."
   },
   {
     "name": "Kenosha Engine",
@@ -9211,7 +9221,8 @@
     "latitude": 42.58587,
     "longitude": -87.843925,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kenosha Engine in Kenosha, Kenosha County, Wisconsin represents the automotive and manufacturing heritage of this Lake Michigan industrial city, where the American Motors Corporation (AMC) operated a major automobile manufacturing plant from 1902 through 1988 — an eighty-six-year run that made Kenosha's Lake Shore Drive one of the most enduring automobile manufacturing sites in American history. Kenosha's Jeffrey Manufacturing facility became the Nash automobile plant, then Nash-Hudson after the 1954 merger, then American Motors Corporation in 1954, and finally Chrysler's Kenosha Assembly Plant before shutting forever in 1988. The closure eliminated 5,500 jobs and devastated the community, but Kenosha has undergone remarkable revitalization including conversion of the old AMC plant to mixed-use development and the creation of an electric streetcar system that connects the downtown to the lakefront. The Kenosha Public Museum's extensive automotive collection, including many AMC models, documents this remarkable manufacturing heritage."
   },
   {
     "name": "Bamberton",
