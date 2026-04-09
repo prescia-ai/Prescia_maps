@@ -5,6 +5,7 @@ Routes (all mounted under /api/v1 in main.py):
   POST   /posts                              — create a post
   GET    /feed                               — global feed (public posts)
   GET    /feed/home                          — home feed (followed users, auth required)
+  GET    /posts/user/{username}              — list posts by a specific user
   GET    /posts/{post_id}                    — single post
   DELETE /posts/{post_id}                    — delete own post
   GET    /posts/{post_id}/comments           — list comments
@@ -217,6 +218,70 @@ async def home_feed(
     )
     posts = list(result.scalars().all())
     post_responses = await _build_post_responses(posts, db, current_user.id)
+    return PostListResponse(posts=post_responses, total=total)
+
+
+# ---------------------------------------------------------------------------
+# GET /posts/user/{username} — list posts by a specific user
+# ---------------------------------------------------------------------------
+
+@router.get("/posts/user/{username}", response_model=PostListResponse)
+async def user_posts(
+    username: str,
+    limit: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    current_user: Optional[User] = Depends(optional_user),
+    db: AsyncSession = Depends(get_db),
+) -> PostListResponse:
+    """
+    Return posts authored by *username*, filtered by privacy rules:
+
+    - Viewer is the author → all posts (public, followers, private).
+    - Viewer is authenticated and follows the author → public + followers posts.
+    - Otherwise (anonymous or not following) → public posts only.
+    """
+    # Resolve the target user
+    author_result = await db.execute(select(User).where(User.username == username))
+    author = author_result.scalar_one_or_none()
+    if author is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    # Determine which privacy levels the viewer may see
+    if current_user is not None and current_user.id == author.id:
+        # Own profile — see everything
+        privacy_filter = Post.author_id == author.id
+    elif current_user is not None:
+        # Check if viewer follows the author
+        follow_result = await db.execute(
+            select(UserFollow).where(
+                UserFollow.follower_id == current_user.id,
+                UserFollow.following_id == author.id,
+            )
+        )
+        is_following = follow_result.scalar_one_or_none() is not None
+        if is_following:
+            privacy_filter = (Post.author_id == author.id) & Post.privacy.in_(["public", "followers"])
+        else:
+            privacy_filter = (Post.author_id == author.id) & (Post.privacy == "public")
+    else:
+        # Anonymous viewer
+        privacy_filter = (Post.author_id == author.id) & (Post.privacy == "public")
+
+    total_result = await db.execute(
+        select(func.count()).select_from(Post).where(privacy_filter)
+    )
+    total = total_result.scalar_one()
+
+    result = await db.execute(
+        select(Post)
+        .where(privacy_filter)
+        .order_by(Post.created_at.desc())
+        .limit(limit)
+        .offset(offset)
+    )
+    posts = list(result.scalars().all())
+    current_user_id = current_user.id if current_user else None
+    post_responses = await _build_post_responses(posts, db, current_user_id)
     return PostListResponse(posts=post_responses, total=total)
 
 
