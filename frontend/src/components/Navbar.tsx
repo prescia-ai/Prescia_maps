@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import Avatar from './Avatar';
 
 interface NavbarProps {
   locationCount: number;
@@ -83,9 +84,17 @@ export default function Navbar({
           {/* Auth section */}
           {user ? (
             <div className="flex items-center gap-2 border-l border-slate-700 pl-2 ml-1">
-              <span className="text-xs text-slate-300">
-                {profile?.username ?? user.email}
-              </span>
+              <Link
+                to={profile?.username ? `/profile/${profile.username}` : '/map'}
+                className="flex items-center gap-1.5 text-xs text-slate-300 hover:text-white transition-colors"
+              >
+                <Avatar
+                  username={profile?.username ?? user.email ?? 'user'}
+                  displayName={profile?.display_name}
+                  size="sm"
+                />
+                <span>{profile?.username ?? user.email}</span>
+              </Link>
               <button
                 onClick={() => signOut()}
                 className="text-xs text-slate-400 hover:text-white hover:bg-slate-700/60 px-2 py-1 rounded-lg transition-colors"

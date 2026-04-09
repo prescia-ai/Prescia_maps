@@ -2,14 +2,16 @@
 Auth API routes — /auth prefix is added in main.py.
 
 Endpoints:
-  GET  /auth/me             — return current user profile
-  PUT  /auth/profile-setup  — first-time username setup
-  PUT  /auth/profile        — update editable profile fields
+  GET  /auth/me                  — return current user profile
+  GET  /auth/profile/{username}  — public profile lookup (no auth required)
+  PUT  /auth/profile-setup       — first-time username setup
+  PUT  /auth/profile             — update editable profile fields
 """
 
 from __future__ import annotations
 
 import re
+from typing import Union
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
@@ -17,7 +19,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user
 from app.models.database import User, get_db
-from app.models.schemas import UserProfile, UserProfileSetup, UserProfileUpdate
+from app.models.schemas import (
+    UserProfile,
+    UserProfileLimited,
+    UserProfilePublic,
+    UserProfileSetup,
+    UserProfileUpdate,
+)
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -28,6 +36,32 @@ _USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,30}$")
 async def get_me(current_user: User = Depends(get_current_user)) -> User:
     """Return the authenticated user's profile."""
     return current_user
+
+
+@router.get(
+    "/profile/{username}",
+    response_model=Union[UserProfilePublic, UserProfileLimited],
+    summary="Get public profile by username",
+)
+async def get_public_profile(
+    username: str,
+    db: AsyncSession = Depends(get_db),
+) -> User:
+    """
+    Return a public profile for *username*.
+
+    If the user's privacy is set to "private", only limited fields are returned.
+    No authentication is required.
+    """
+    result = await db.execute(select(User).where(User.username == username))
+    user = result.scalar_one_or_none()
+    if user is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    if user.privacy == "private":
+        return UserProfileLimited.model_validate(user)
+
+    return UserProfilePublic.model_validate(user)
 
 
 @router.put(
@@ -80,13 +114,15 @@ async def update_profile(
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> User:
-    """Update display_name, bio, and/or location for the current user."""
+    """Update display_name, bio, location, and/or privacy for the current user."""
     if payload.display_name is not None:
         current_user.display_name = payload.display_name
     if payload.bio is not None:
         current_user.bio = payload.bio
     if payload.location is not None:
         current_user.location = payload.location
+    if payload.privacy is not None:
+        current_user.privacy = payload.privacy
 
     await db.flush()
     return current_user

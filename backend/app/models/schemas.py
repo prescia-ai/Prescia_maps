@@ -342,3 +342,29 @@ class UserProfileUpdate(BaseModel):
     display_name: Optional[str] = Field(None, max_length=100)
     bio: Optional[str] = None
     location: Optional[str] = Field(None, max_length=100)
+    privacy: Optional[str] = Field(None, pattern=r"^(public|friends|private)$")
+
+
+class UserProfilePublic(BaseModel):
+    """Public profile fields — safe to expose to any viewer."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    username: Optional[str] = None
+    display_name: Optional[str] = None
+    bio: Optional[str] = None
+    location: Optional[str] = None
+    privacy: str = "public"
+    created_at: Optional[Any] = None
+
+
+class UserProfileLimited(BaseModel):
+    """Limited profile for private accounts — only basic identity fields."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    username: Optional[str] = None
+    display_name: Optional[str] = None
+    privacy: str = "private"
+    created_at: Optional[Any] = None
