@@ -6170,7 +6170,8 @@
     "latitude": 41.170882,
     "longitude": -85.145805,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Academie was a small rural community in Noble County, Indiana, established in the mid-nineteenth century by German and Swiss immigrant farmers who settled the flat glacial lake country of northeastern Indiana. The town had a school, a church, and a small general store serving the surrounding agricultural townships, but it never developed the commercial base needed to survive the automobile era. Today the site is absorbed into the surrounding farmland, and local roads retain the old plat lines. Cultivated fields near the original school and store sites are worth a permission-based detecting visit, with German immigrant personal items, flat buttons, and early American coins among the finds reported in similar Noble County communities."
   },
   {
     "name": "Peeling, NH",
@@ -6178,7 +6179,8 @@
     "latitude": 43.984984,
     "longitude": -71.681617,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Peeling was an early township in Carroll County, New Hampshire, settled by New England farmers in the late eighteenth century who cleared the rocky upland forests for subsistence agriculture and small-scale logging. The community had a meetinghouse and a school district but was always sparsely populated, and as agricultural depression drove families west throughout the early 1800s, the township was effectively depopulated and eventually unorganized. Stone walls threading through the mature second-growth forest mark the old farm boundaries with remarkable clarity, and the cellar holes of abandoned farmsteads are classic New England detecting ground — producing King George-era coppers, flat buttons, and buckles from the era when these hills were cleared and farmed."
   },
   {
     "name": "De Lamar",
@@ -6186,7 +6188,8 @@
     "latitude": 43.024325,
     "longitude": -116.831518,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "De Lamar was one of Idaho's most celebrated silver mining camps, born in 1888 when Captain Joseph De Lamar purchased a rich silver-gold property in Owyhee County and developed it into one of the most productive mines in the Pacific Northwest, eventually producing over $12 million in silver ore through the 1890s. The town grew to nearly 3,000 residents at its peak, supporting hotels, saloons, a newspaper, a hospital, and a red-light district — a full frontier city at 5,500 feet in the Owyhee high desert. The mines shut down by 1914 as the ore body was exhausted, and the town slowly emptied into the sagebrush. Today De Lamar's substantial adobe and stone ruins make it one of Idaho's finest ghost towns, with numerous foundations and the old stamp mill ruins still visible, though the site is on private land requiring access permission."
   },
   {
     "name": "Columbus, NV",
@@ -6194,7 +6197,8 @@
     "latitude": 38.100975,
     "longitude": -118.029426,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Columbus was a silver mining camp in Esmeralda County, Nevada, that briefly boomed in the 1860s and 1870s when rich chloride silver ores were discovered in the Columbus Mountains east of Basalt. The town supported a smelter, stores, and a post office, but the ore deposits proved shallow, and Columbus collapsed as quickly as it had risen by the mid-1870s. The high Nevada desert has preserved scattered adobe walls, stone foundations, and mine dump tailings across the old townsite, which sits on open BLM land. The mine dumps and old tent-camp areas are productive for silver coins, Mexican reales that circulated widely in Nevada mining camps, and hand-forged tools from the early boom period."
   },
   {
     "name": "Alkali, NV",
@@ -6202,7 +6206,8 @@
     "latitude": 37.825833,
     "longitude": -117.3375,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Alkali was a sparse Nevada settlement in the Alkali Flat area of Esmeralda County, named for the caustic white flats that characterize this remote basin where occasional borax and salt mining operations attracted small clusters of workers in the 1870s and 1880s. The community never developed into a proper town, remaining a transient camp that shifted location with different extraction operations. The alkaline lake margin and surrounding bajadas sit on open BLM land, and while vegetation is sparse and access is challenging in wet seasons, the old camp areas can yield period hardware, mule harness fittings, and camp utensils from the extraction crews who worked this remote valley."
   },
   {
     "name": "Arlemont, NV",
@@ -6210,7 +6215,8 @@
     "latitude": 37.824444,
     "longitude": -118.078889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arlemont was a brief mining settlement in the Fish Lake Valley area of Esmeralda County, Nevada, established during one of the several small silver and gold rushes that swept through the region in the 1880s and 1890s. Like many of Nevada's forgotten boom-and-bust camps, Arlemont swelled quickly when nearby strikes attracted prospectors and then emptied just as fast when the ore proved disappointing or capital dried up. The open rangeland and BLM desert around the old site preserve faint traces of the camp layout, and the surrounding prospect holes and shallow mine workings are worth exploring for period mining hardware, coins, and personal items lost by the transient mining workforce."
   },
   {
     "name": "Blair Jct., NV",
@@ -6218,7 +6224,8 @@
     "latitude": 38.008333,
     "longitude": -117.773611,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Blair Junction was a Nevada railroad station and service point in Esmeralda County where the Tonopah and Goldfield Railroad branched toward the silver towns of Blair and Candelaria, forming a critical logistics node for the region's early twentieth-century mining economy. Junction communities like this attracted a mobile workforce of railroad laborers, teamsters, and supply merchants who cycled through with the boom cycles. The desert junction site sits on open BLM land today, and the old rail grade, station footprint, and nearby water tank site are worth a careful sweep for railroad spike plates, uniform buttons, coins, and the personal effects of the transient work camps that rotated through."
   },
   {
     "name": "Blair, NV",
@@ -6226,7 +6233,8 @@
     "latitude": 37.79306,
     "longitude": -117.64833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Blair was a silver mining town in Esmeralda County, Nevada, that flourished in the early 1900s when the Pittsburg-Silver Peak Gold Mining Company developed rich ore deposits in the Silver Peak Range and built a company town to house the workforce. The operation supported a post office, company store, and boarding houses for several hundred miners before declining ore grades and falling silver prices shut the operation down by the 1910s. The remote desert site retains foundations, concrete mill slabs, and scattered debris from the company era, all sitting on open BLM land. The old mine dumps and company housing sites are productive for period coins, mining tokens, and company store merchandise fragments."
   },
   {
     "name": "Coaldale, NV",
@@ -6234,7 +6242,8 @@
     "latitude": 38.027119,
     "longitude": -117.883855,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Coaldale was a small Nevada community in Esmeralda County that served as a railroad station on the Carson and Colorado (later Southern Pacific) narrow-gauge line, positioned at the junction point where teamsters and freight wagons made the transition between rail and desert road for mines in the surrounding valleys. The station supported a store, saloon, and small hotel catering to the transient mining and freighting trade of the 1880s and 1890s. The old railroad grade, station ruins, and corral areas sit in open BLM desert today, and the compacted soil around the former corrals and loading areas has produced horse tack hardware, coins, and freight-related artifacts for detectorists willing to make the remote drive."
   },
   {
     "name": "Fish Lake Valley, NV",
@@ -6242,7 +6251,8 @@
     "latitude": 37.796597,
     "longitude": -118.009271,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fish Lake Valley was a broad agricultural and ranching community in Esmeralda County, Nevada, that drew settlers in the late 1880s who hoped to raise cattle and grow hay crops in the valley's artesian-watered meadows, serving the string of mining camps nearby. The valley supported scattered homesteads, a post office, and a school district at its height before the economics of isolated Nevada ranching proved too thin to sustain a permanent community. The valley today is lightly inhabited rangeland, and the old homestead sites, many on open BLM land or accessible with permission, have produced early Nevada coinage, domestic hardware, and ranch-era artifacts along the old spring-fed meadow margins."
   },
   {
     "name": "Gilbert, NV",
