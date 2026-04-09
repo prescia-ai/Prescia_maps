@@ -94,6 +94,24 @@ export interface LayerState {
   // Special layers
   heatmap: boolean;
   blm: boolean;
+  // Personal layers
+  my_hunts: boolean;
+}
+
+// ── User Hunt Pins ────────────────────────────────────────────────────────────
+
+export interface UserPin {
+  id: string;
+  user_id: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  hunt_date: string;
+  time_spent: string | null;
+  notes: string | null;
+  finds_count: number | null;
+  privacy: 'public' | 'friends' | 'private';
+  created_at: string;
 }
 
 // ── Land Access ──────────────────────────────────────────────────────────────

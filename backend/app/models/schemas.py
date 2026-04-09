@@ -368,3 +368,58 @@ class UserProfileLimited(BaseModel):
     display_name: Optional[str] = None
     privacy: str = "private"
     created_at: Optional[Any] = None
+
+
+# ---------------------------------------------------------------------------
+# UserPin schemas
+# ---------------------------------------------------------------------------
+
+class UserPinCreate(BaseModel):
+    """Request payload for logging a new hunt pin."""
+
+    name: str = Field(..., min_length=1, max_length=200)
+    latitude: float = Field(..., ge=-90.0, le=90.0)
+    longitude: float = Field(..., ge=-180.0, le=180.0)
+    hunt_date: str
+    time_spent: Optional[str] = None
+    notes: Optional[str] = Field(None, max_length=500)
+    finds_count: Optional[int] = Field(None, ge=0)
+    privacy: Optional[Literal["public", "friends", "private"]] = "public"
+
+
+class UserPinUpdate(BaseModel):
+    """Request payload for updating an existing hunt pin (all fields optional)."""
+
+    name: Optional[str] = Field(None, min_length=1, max_length=200)
+    latitude: Optional[float] = Field(None, ge=-90.0, le=90.0)
+    longitude: Optional[float] = Field(None, ge=-180.0, le=180.0)
+    hunt_date: Optional[str] = None
+    time_spent: Optional[str] = None
+    notes: Optional[str] = Field(None, max_length=500)
+    finds_count: Optional[int] = Field(None, ge=0)
+    privacy: Optional[Literal["public", "friends", "private"]] = None
+
+
+class UserPinResponse(BaseModel):
+    """Full hunt pin record returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    user_id: UUID
+    name: str
+    latitude: float
+    longitude: float
+    hunt_date: Optional[Any] = None
+    time_spent: Optional[str] = None
+    notes: Optional[str] = None
+    finds_count: Optional[int] = None
+    privacy: str = "public"
+    created_at: Optional[Any] = None
+
+
+class UserPinListResponse(BaseModel):
+    """Paginated list of hunt pins."""
+
+    pins: List[UserPinResponse]
+    total: int

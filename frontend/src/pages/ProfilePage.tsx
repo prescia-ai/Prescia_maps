@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import api from '../api/client';
+import { fetchMyPins, fetchUserPins } from '../api/client';
+import type { UserPin } from '../types';
 
 interface PublicProfile {
   id?: string;
@@ -22,6 +24,11 @@ function formatMemberSince(dateStr: string | null): string {
   return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
+function formatHuntDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+}
+
 export default function ProfilePage() {
   const { username } = useParams<{ username: string }>();
   const { profile: myProfile } = useAuth();
@@ -31,6 +38,8 @@ export default function ProfilePage() {
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [activeTab, setActiveTab] = useState<ActiveTab>('activity');
+  const [pins, setPins] = useState<UserPin[]>([]);
+  const [pinsLoading, setPinsLoading] = useState(false);
 
   const isOwnProfile = myProfile?.username === username;
 
@@ -47,6 +56,19 @@ export default function ProfilePage() {
       })
       .finally(() => setLoading(false));
   }, [username]);
+
+  // Fetch pins whenever profile loads
+  useEffect(() => {
+    if (!username) return;
+    setPinsLoading(true);
+    const fetchFn = isOwnProfile
+      ? fetchMyPins()
+      : fetchUserPins(username);
+    fetchFn
+      .then(({ pins: p }) => setPins(p))
+      .catch(() => setPins([]))
+      .finally(() => setPinsLoading(false));
+  }, [username, isOwnProfile]);
 
   if (loading) {
     return (
@@ -167,9 +189,9 @@ export default function ProfilePage() {
           <div className="bg-slate-900/50 border border-slate-800 rounded-3xl px-6 py-4">
             <div className="flex items-center divide-x divide-slate-800">
               {[
-                { label: 'Hunts', value: 0 },
+                { label: 'Hunts', value: pins.length },
                 { label: 'Pins', value: 0 },
-                { label: 'Friends', value: 0 },
+                { label: 'Followers', value: 0 },
               ].map((stat) => (
                 <div key={stat.label} className="flex-1 flex flex-col items-center py-2 first:pl-0 last:pr-0 px-4">
                   <span className="text-2xl font-semibold text-white">{stat.value}</span>
@@ -212,14 +234,50 @@ export default function ProfilePage() {
               )}
               {activeTab === 'hunts' && (
                 <>
-                  <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p className="text-slate-400 text-sm">No hunts logged yet</p>
-                  <Link to="/map" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
-                    Head to the map →
-                  </Link>
+                  {pinsLoading ? (
+                    <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+                  ) : pins.length > 0 ? (
+                    <div className="w-full space-y-3 text-left">
+                      {pins.map((pin) => (
+                        <div key={pin.id} className="bg-slate-800/60 border border-slate-700 rounded-2xl p-4 space-y-1.5">
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="text-sm font-semibold text-white leading-tight">{pin.name}</h3>
+                            <span className="text-xs text-slate-500 flex-shrink-0">{formatHuntDate(pin.hunt_date)}</span>
+                          </div>
+                          <div className="flex flex-wrap gap-3 text-xs text-slate-400">
+                            {pin.time_spent && (
+                              <span className="flex items-center gap-1">
+                                <span>⏱</span>
+                                <span>{pin.time_spent}</span>
+                              </span>
+                            )}
+                            {pin.finds_count != null && (
+                              <span className="flex items-center gap-1">
+                                <span>🪙</span>
+                                <span>{pin.finds_count} find{pin.finds_count !== 1 ? 's' : ''}</span>
+                              </span>
+                            )}
+                          </div>
+                          {pin.notes && (
+                            <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{pin.notes}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <>
+                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      <p className="text-slate-400 text-sm">No hunts logged yet</p>
+                      {isOwnProfile && (
+                        <Link to="/map" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                          Head to the map →
+                        </Link>
+                      )}
+                    </>
+                  )}
                 </>
               )}
               {activeTab === 'friends' && (

@@ -16,6 +16,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router
+from app.api.pins import router as pins_router
 from app.auth.routes import router as auth_router
 from app.models.database import create_tables
 
@@ -92,6 +93,7 @@ def create_app() -> FastAPI:
     # Routers
     # -----------------------------------------------------------------------
     app.include_router(router, prefix="/api/v1")
+    app.include_router(pins_router, prefix="/api/v1")
     app.include_router(auth_router, prefix="/api/v1")
 
     return app
