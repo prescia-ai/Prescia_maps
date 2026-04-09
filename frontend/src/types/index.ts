@@ -85,6 +85,8 @@ export interface LayerState {
   trading_post: boolean;
   shipwreck: boolean;
   pony_express: boolean;
+  abandoned_church: boolean;
+  historic_brothel: boolean;
   // Linear feature types
   railroad: boolean;
   road: boolean;

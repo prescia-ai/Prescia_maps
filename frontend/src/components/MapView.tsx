@@ -41,6 +41,8 @@ const TYPE_COLORS: Record<string, string> = {
   trading_post:    '#b45309', // brown-amber
   shipwreck:       '#0369a1', // dark blue
   pony_express:    '#dc2626', // dark red
+  abandoned_church: '#ec4899', // pink (same family as church)
+  historic_brothel: '#f43f5e', // rose
 };
 
 function markerColor(type: LocationType): string {
