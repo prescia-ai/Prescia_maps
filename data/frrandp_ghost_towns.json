@@ -2605,7 +2605,8 @@
     "latitude": 36.132564,
     "longitude": -92.57106,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Rush was a small Arkansas mining community in Marion County in the Ozark Mountains along the Buffalo River, established in the 1880s when zinc deposits in the Buffalo River valley attracted miners and their families to this remote Ozark highland. The Rush Mining District produced zinc intermittently through the early twentieth century, with the Morning Star Mine being the principal operation, before declining zinc prices and ore exhaustion ended active mining by the 1940s. Today the Rush ghost town is preserved within the Buffalo National River, the nation's first national river designated in 1972 to protect the free-flowing Buffalo River. The accessible national river site includes several original mining structures and interpretive signage, though metal detecting is prohibited within the national park system."
   },
   {
@@ -2614,7 +2615,8 @@
     "latitude": 41.263502,
     "longitude": -81.557968,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Boston was a small Summit County, Ohio farming community in the Cuyahoga Valley, established in the early nineteenth century as a mill and agricultural service point along the Cuyahoga River that later became part of the Ohio and Erie Canal corridor — one of the most transformative transportation projects in early American history. The mill community at Boston included a general store and tavern serving canal travelers and valley farmers, and the Boston Store — preserved and restored by the National Park Service — survives as one of the finest examples of an 1836 Ohio canal-era general store. The site today is within Cuyahoga Valley National Park, which protects the historic Cuyahoga Valley and the Ohio and Erie Canal Towpath. Metal detecting is prohibited within the national park, but the interpreted historic site and towpath trail make this an excellent destination for Ohio history enthusiasts."
   },
   {
@@ -2623,7 +2625,8 @@
     "latitude": 35.696998,
     "longitude": -81.428264,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Henry River Mill Village was a North Carolina cotton mill community in Burke County, built in 1905 by the Henry family to house workers in their cotton spinning mill in the Catawba River watershed of the Blue Ridge foothills, operating as a self-contained company town with worker housing, a company store, and a church for nearly 80 years until the mill closed in 1987. The remarkably intact collection of mill worker cottages achieved national fame when it was used as a filming location for the fictional District 12 in 'The Hunger Games' (2012), drawing movie fans from across the country to this remote Burke County hollow. Most of the original structures have survived in various states of deterioration, and the site was recently acquired and is being developed as a heritage attraction. The current private ownership status means access and any artifact activity requires explicit permission."
   },
   {
@@ -2632,7 +2635,8 @@
     "latitude": 29.321586,
     "longitude": -103.616019,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Terlingua was a significant quicksilver (mercury) mining district and ghost town in Brewster County, Texas in the Big Bend country near the Rio Grande, producing over one-third of the entire United States mercury supply at its World War II peak from the rich cinnabar deposits in the Chisos Mountains region. The Chisos Mining Company dominated Terlingua for decades, employing hundreds of Mexican-American workers in a company town with a theater, store, and housing for several thousand residents. The mine closed in 1946 when lower-cost foreign mercury competed with the dwindling Texas deposits, leaving a remarkable collection of abandoned adobe ruins in the dramatic Big Bend landscape. The area now supports a small artistic and tourism community, and the original ghost town ruins are accessible — one of Texas's most atmospheric and historically significant abandoned places."
   },
   {
@@ -2641,7 +2645,8 @@
     "latitude": 45.307083,
     "longitude": -111.968095,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 76,
     "description": "Nevada City was a small Madison County, Montana placer gold mining community along Alder Gulch, established in 1863-1864 in the wake of the great Alder Gulch gold discovery that triggered one of the most spectacular gold rushes in Rocky Mountain history and immediately populated the region with tens of thousands of miners. Nevada City and neighboring Virginia City were part of the same gold camp cluster, and Nevada City briefly had its own post office and commercial district before Virginia City became the dominant center. The site of Nevada City has been restored and expanded as a historical attraction adjacent to Virginia City, with original and relocated historic buildings making it one of Montana's most complete gold rush heritage experiences. The restored village operates seasonally as a tourist attraction, and metal detecting requires permission from the property owners."
   },
   {
@@ -2650,7 +2655,8 @@
     "latitude": 41.88,
     "longitude": -72.011,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Bara-Hack was a small Connecticut colonial farming community in Pomfret, Windham County, established in the late eighteenth century by Welsh settlers who cleared the dense Connecticut forest for farming and operated the settlement through a brief period before the community dispersed. The Bara-Hack name is Welsh for 'breaking of bread,' reflecting the community's cultural origins. The site was abandoned by the mid-nineteenth century and has since acquired a reputation as one of New England's most famously haunted places — allegedly featuring phantom voices, apparitions, and strange phenomena that have drawn paranormal investigators for over a century. The cellar holes, old mill site, and cemetery are on private land in Pomfret, Connecticut, though the site has been historically semi-accessible to visitors."
   },
   {
@@ -2659,7 +2665,8 @@
     "latitude": 31.473251,
     "longitude": -83.12154,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Lax was a small Georgia community — likely in the agricultural interior of the state — that existed as a minor farming settlement or crossroads community in the post-Civil War era Georgia landscape, one of many modest rural communities that developed during the Reconstruction and New South period as Georgia's agricultural economy slowly recovered from the Civil War's devastation. Georgia's interior counties have a rich ante-bellum and Civil War history, and former small community sites in the state's piedmont and coastal plain regions can yield artifacts from multiple historical periods. The exact county location and history of this entry makes detailed description challenging, but the Georgia agricultural landscape retains significant historical character from the antebellum through early twentieth century eras."
   },
   {
@@ -2668,7 +2675,8 @@
     "latitude": 47.520278,
     "longitude": -115.819167,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Burke was a significant silver and lead mining community in Shoshone County, Idaho in the Canyon Creek drainage of the Coeur d'Alene Mining District, one of the world's most productive silver mining districts, where ore was so rich that the canyon was literally too narrow for both the railroad and the creek — the railroad occupied the canyon floor while Canyon Creek flowed underneath it through a series of culverts. The community was subject to violent labor conflict in the 1890s, when mine owners and the Western Federation of Miners fought a series of increasingly violent confrontations culminating in the Bunker Hill explosion of 1899, when miners blew up the Frisco Mill. The canyon narrowness meant buildings were built on multiple levels up the canyon walls, creating a unique architectural character that has been partly preserved. Burke today is largely abandoned, with ruins accessible in the steep canyon above Wallace, Idaho."
   },
   {
@@ -2677,7 +2685,8 @@
     "latitude": 42.056972,
     "longitude": -90.752563,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Buckhorn was a small Iowa community in the rolling agricultural landscape of the state, briefly holding a post office and serving surrounding farm families during Iowa's peak settlement era in the 1870s-1880s before the regional economy consolidated around railroad-connected market towns. Iowa's extraordinarily productive agricultural land supported a dense network of small farming communities in its early settlement decades, but the competitive pressure of better-positioned railroad towns quickly eliminated those without transportation connections. The site today is private farmland in one of America's most productive agricultural states. Former Iowa post office communities from the homestead era can yield period coins and farm implements with landowner permission."
   },
   {
@@ -2686,7 +2695,8 @@
     "latitude": 40.678855,
     "longitude": -74.389045,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Feltville was an early New Jersey industrial village in Union County in the Watchung Mountains, built in 1845 by David Felt — a New York City stationery manufacturer — as a complete planned community to house workers in his paper mill and associated industries, becoming one of the most complete surviving examples of a mid-nineteenth century paternalistic industrial village in the northeastern United States. The community was later converted to a resort area called Glenside Park before being acquired by Union County in 1921 and eventually becoming part of the Watchung Reservation. Today the site is preserved within the Watchung Reservation, with several original Greek Revival worker cottages, the mill owner's house, and other structures maintained for historical interpretation. Metal detecting is not permitted within the county reservation."
   },
   {
