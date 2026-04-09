@@ -2505,7 +2505,8 @@
     "latitude": 36.79675,
     "longitude": -95.353305,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Centralia was a small Oklahoma community in Carter County or a neighboring county that existed briefly as a farming settlement or crossroads community in the Indian Territory/Oklahoma Territory transitional era of the late nineteenth and early twentieth centuries. The Oklahoma settlement landscape was dramatically reorganized after the Land Runs of 1889 and subsequent years, creating intense competition among new communities for commercial viability. Many small Oklahoma communities like Centralia that lacked railroad connections or favorable geography failed to sustain themselves. The surrounding Oklahoma landscape is working ranch and farm country with private landholdings predominating."
   },
   {
@@ -2514,7 +2515,8 @@
     "latitude": 37.672343,
     "longitude": -96.642767,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Keighley was a small Comanche County, Kansas agricultural community on the southern Kansas plains in the Arkansas River watershed, one of the many short-lived farming communities that attempted to sustain themselves in the semiarid margins of western Kansas during the dryland homesteading boom of the 1870s-1880s. The combination of insufficient rainfall, harsh winters, and the devastating agricultural bust of the early 1890s — which wiped out most of western Kansas's farming communities — made Keighley's fate typical of the region. The Comanche County landscape today is primarily native shortgrass prairie and cattle ranch country, much of it preserved as the Comanche National Grassland. Former homestead sites on the Comanche National Grassland offer limited access for historical research."
   },
   {
@@ -2523,7 +2525,8 @@
     "latitude": 37.143078,
     "longitude": -100.807382,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Arkalon was a small Seward County, Kansas community along the Cimarron River in the extreme southwestern corner of the state, developing briefly during the railroad and farming boom of the late 1880s before the catastrophic drought and agricultural bust of the early 1890s drove most settlers from this marginal corner of the Kansas plains. Southwest Kansas was dubbed 'No Man's Land' and 'The Cimarron Country' by early travelers for its extreme climate and minimal moisture, and many communities in Seward County that briefly appeared during the boom never recovered from the bust. The surrounding Cimarron National Grassland covers much of the southwestern Kansas landscape today, preserving the shortgrass prairie ecosystem and some historical remnants of the homesteading era."
   },
   {
@@ -2532,7 +2535,8 @@
     "latitude": 44.297743,
     "longitude": -92.640746,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Forest Mills was a small Minnesota community likely in the agricultural interior of the state, existing briefly as a mill and farming service community during Minnesota's great settlement era of the 1860s-1880s. Mill communities in Minnesota — particularly those on small streams providing waterpower — often failed when steam-powered mills in railroad-connected towns proved more economical, eliminating the geographic advantage that water power had provided. The Minnesota agricultural landscape today is dominated by the corn and soybean monoculture of modern industrial farming, with former small mill community sites absorbed into private farmland."
   },
   {
@@ -2541,7 +2545,8 @@
     "latitude": 31.46182,
     "longitude": -111.237286,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Ruby was an Arizona ghost town in Santa Cruz County near the Mexican border in the Tumacacori Highlands, established as a mining community in the 1870s around lead and zinc deposits in the rugged border mountains, growing to a population of over 1,200 in the 1930s when the Montana Mine produced significant quantities of lead, zinc, and gold. The remote border location made Ruby both isolated and dangerous — the town experienced multiple violent robberies in the 1920s in which the Pearson family who ran the post office and store were brutally murdered. The mine closed in 1941 and Ruby was completely abandoned, and the site is now privately owned and operated as a fee-based ghost town attraction with original buildings remarkably preserved by the dry Arizona climate. Metal detecting at Ruby requires permission from and payment to the private owners."
   },
   {
@@ -2550,7 +2555,8 @@
     "latitude": 33.817205,
     "longitude": -112.832461,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Vulture City was one of Arizona's most productive and historically significant gold mining communities, established in Wickenburg area of Maricopa County in 1863 when Henry Wickenburg discovered the Vulture Mine — eventually one of the richest gold mines in Arizona Territory's history, producing over $200 million in gold by some estimates. The mine and associated town operated on and off for nearly a century, supporting hundreds of workers at peak production periods, and the notorious practice of 'high-grading' (miners stealing ore) was so rampant that the company's assay office and mine buildings featured iron bars on the windows and a hanging tree was reportedly used to deter theft. The Vulture Mine is now preserved as a fee-access ghost town attraction, with original adobe and wood structures remarkably preserved. Metal detecting on-site requires permission from the private owners."
   },
   {
@@ -2559,7 +2565,8 @@
     "latitude": 39.106802,
     "longitude": -106.60357,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Independence was a high-altitude Colorado ghost town in Pitkin County at 11,000 feet in the Elk Mountains near Independence Pass on the Continental Divide, established in 1879 after a gold discovery on July 4th (hence the patriotic name) and briefly growing to 2,000 residents before the easily accessible ore was exhausted within a few years. The extreme altitude and brutal winter conditions — the site receives enormous snowfall and can be snowed in for months — made year-round habitation nearly impossible, and Independence was abandoned by the mid-1880s. The site today is preserved by the Aspen Historical Society with several original log structures, accessible via a short walk from the paved Highway 82 over Independence Pass. The accessible public road and interpretive preservation make Independence one of Colorado's most easily visited high-altitude ghost towns."
   },
   {
@@ -2568,7 +2575,8 @@
     "latitude": 37.593836,
     "longitude": -105.202923,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Uptop was a small community in Las Animas County, Colorado at the summit of Raton Pass on the Colorado-New Mexico border along the Santa Fe Trail route, existing as a railroad service community along the Atchison, Topeka and Santa Fe Railway's critical mountain crossing in the late nineteenth and early twentieth centuries. The pass crossing was of immense strategic importance in both commercial and military history — the Santa Fe Trail crossed here, and Civil War forces fought for control of the Raton Pass approach in 1862. The railroad grade over Raton Pass has since been modernized and the service community at the summit is no longer needed. The Trinidad area of Las Animas County has significant coal mining and labor history alongside the Santa Fe Trail heritage."
   },
   {
@@ -2577,7 +2585,8 @@
     "latitude": 31.861272,
     "longitude": -91.199832,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Rodney was an early Mississippi River town in Jefferson County, Mississippi that flourished briefly as a cotton shipping port on the lower Mississippi River before the river changed course and left the town stranded on an oxbow lake — one of the Mississippi's most dramatic cases of channel migration eliminating a community's reason for existence. At its antebellum peak Rodney had hopes of becoming a major city and even briefly competed for the state capital designation, with churches, commercial buildings, and a prosperous economy tied to the Mississippi cotton trade. Today a small cluster of antebellum brick buildings — including a church with a cannonball embedded in its wall from the Civil War — remains in the isolated Jefferson County woodland. The site's historic buildings and remote landscape make it one of Mississippi's most atmospheric ghost towns."
   },
   {
@@ -2586,7 +2595,8 @@
     "latitude": 37.269256,
     "longitude": -95.752459,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.74,
+    "detecting_weight": 66,
     "description": "Le Hunt was a small Barton County, Kansas agricultural community in the central Kansas Great Bend Prairie region, one of the modest farming communities that developed during the post-Civil War settlement of the Arkansas River valley of central Kansas. Barton County's county seat of Great Bend and the nearby Arkansas River provided the commercial and transportation focus for the region, leaving smaller communities like Le Hunt without a sustainable economic niche. The central Kansas plains landscape around Le Hunt today is private farmland and rangeland in the heart of Kansas wheat country. Former Kansas farming community sites from the homestead era can yield period coins and agricultural implements with landowner permission."
   },
   {
