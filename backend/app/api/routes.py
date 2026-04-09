@@ -173,7 +173,7 @@ async def get_locations(
     result = await db.execute(stmt)
     locations = result.scalars().all()
 
-    features = []
+    features: List[FeatureResponse] = []
     for loc in locations:
         features.append(
             FeatureResponse(

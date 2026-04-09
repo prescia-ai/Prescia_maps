@@ -122,10 +122,14 @@ _LOA_USER_AGENT = (
     "https://github.com/prescia-ai/Prescia_maps)"
 )
 
+# Minimum number of state pages we expect to find via dynamic discovery.
+# When fewer are found, the hardcoded slug list is used as a supplement.
+_MIN_EXPECTED_STATE_PAGES = 10
+
 # Hardcoded state ghost-town page slugs for Legends of America.
 # These follow the pattern /ghost-towns/{slug}/ on legendsofamerica.com.
 # Used as a reliable fallback when dynamic link-discovery finds fewer than
-# the expected number of state pages.
+# _MIN_EXPECTED_STATE_PAGES state pages.
 _LOA_STATE_SLUGS: List[str] = [
     "al-ghosttowns", "ak-ghosttowns", "az-ghosttowns", "ar-ghosttowns",
     "ca-ghosttowns", "co-ghosttowns", "ct-ghosttowns", "de-ghosttowns",
@@ -309,6 +313,21 @@ def _parse_gnis_records(
             return
 
 
+def _loa_alternate_url(url: str) -> str:
+    """
+    Return an alternate form of a Legends of America URL by toggling the
+    ``.html`` suffix.  Used to retry 404 responses with the other variant.
+
+    Examples::
+
+        "https://…/al-ghosttowns"      →  "https://…/al-ghosttowns.html"
+        "https://…/al-ghosttowns.html" →  "https://…/al-ghosttowns/"
+    """
+    if url.endswith(".html"):
+        return url[: -len(".html")] + "/"
+    return url.rstrip("/") + ".html"
+
+
 # ---------------------------------------------------------------------------
 # Legends of America scraper
 # ---------------------------------------------------------------------------
@@ -357,9 +376,9 @@ async def _scrape_legends_of_america(
             "Found %d state pages on Legends of America (dynamic).", len(state_links)
         )
 
-        # If dynamic discovery found fewer than 10 pages the index structure
-        # has likely changed — supplement with the hardcoded slug list.
-        if len(state_links) < 10:
+        # If dynamic discovery found fewer than the expected number of pages,
+        # the index structure has likely changed — supplement with the hardcoded slug list.
+        if len(state_links) < _MIN_EXPECTED_STATE_PAGES:
             logger.info(
                 "Dynamic discovery found only %d page(s); supplementing with "
                 "hardcoded state slug list (%d slugs).",
@@ -395,12 +414,8 @@ async def _scrape_legends_of_america(
             rate_limiter.wait()
             resp = await client.get(state_url, headers=headers)
             if resp.status_code == 404:
-                # Try adding/removing .html suffix before giving up
-                alt = (
-                    state_url.rstrip("/") + ".html"
-                    if not state_url.endswith(".html")
-                    else state_url[: -len(".html")] + "/"
-                )
+                # Try the alternate URL variant (.html suffix or without it)
+                alt = _loa_alternate_url(state_url)
                 rate_limiter.wait()
                 resp = await client.get(alt, headers=headers)
             resp.raise_for_status()
