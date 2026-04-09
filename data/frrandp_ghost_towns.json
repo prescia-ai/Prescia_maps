@@ -1005,7 +1005,8 @@
     "latitude": 33.458889,
     "longitude": -111.487222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.58,
+    "detecting_weight": 50,
     "description": "Youngberg was a tiny Arizona community in Yavapai County that existed as a minor agricultural and ranching settlement along a desert watercourse in the Prescott area in the early to mid-twentieth century, never developing into a significant community and leaving little documentary or physical record of its existence. The Arizona central highlands landscape around the Prescott area has seen extensive development in the modern era, and many former small ranch communities have been absorbed into suburban or recreational land uses. The surrounding Prescott National Forest and private ranch holdings dominate the landscape in this region of central Arizona."
   },
   {
@@ -1014,7 +1015,8 @@
     "latitude": 37.930833,
     "longitude": -107.5675,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.89,
+    "detecting_weight": 80,
     "description": "Animas Forks was a silver mining camp perched at 11,200 feet in the San Juan Mountains of San Juan County, Colorado, booming in the 1870s-1880s when hundreds of miners worked the surrounding claims despite brutal winters that buried the buildings to their rooftops. The town had a post office, general store, saloon, and several boarding houses before declining silver prices and avalanche danger drove the last residents out by the early 1900s. Several remarkably preserved structures still stand today, including the iconic Bay Window House, accessible via a rugged 4WD road from Silverton. The high-altitude townsite and surrounding mine dumps are rich territory for finding period artifacts, mining tokens, and hand-forged tools."
   },
   {
@@ -1023,7 +1025,8 @@
     "latitude": 45.087222,
     "longitude": -110.755,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Aldridge was a small Montana mining camp in Park County in the Paradise Valley at the northern edge of Yellowstone country, established in the 1890s to support coal mining operations that supplied fuel to the Northern Pacific Railroad's smelting and processing operations in the region. The coal mines operated for roughly two decades before exhaustion of the economically viable seams forced closure, and the camp was abandoned in the early twentieth century. The site today is on private land in the northern Yellowstone gateway area, where ranching and tourism have supplanted the old mining economy. Former coal mining camps in Park County can yield early twentieth century mining equipment and domestic artifacts from the company housing era."
   },
   {
@@ -1032,7 +1035,8 @@
     "latitude": 44.370556,
     "longitude": -114.727778,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Bonanza was a silver mining camp in Custer County, Idaho in the heart of the Salmon River Mountains, established in the 1870s after rich silver and lead deposits were discovered in the upper Yankee Fork of the Salmon River. The town boomed through the 1870s-1880s with saloons, stores, and a small hotel serving the mining population before the ore ran out and the population dispersed. A small number of historic structures survive in the valley, accessible via the Yankee Fork Road through the Challis National Forest. The Yankee Fork Dredge, a massive gold dredge that worked the river valley downstream, is now preserved as a state historic site nearby."
   },
   {
@@ -1041,7 +1045,8 @@
     "latitude": 46.490833,
     "longitude": -118.339444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Pleasant View was a small agricultural community in Stevens County, Washington in the upper Columbia River basin region of northeastern Washington state, established by homesteaders in the late nineteenth century who farmed the rolling hills and river bottoms of this fertile agricultural territory. The community served the surrounding farms with a post office and local commerce before the regional economy consolidated in larger centers like Colville and Chewelah. The site is now private farmland in Stevens County, whose agricultural landscape has remained remarkably consistent with its nineteenth-century character. Detecting in former Stevens County farming communities with landowner permission can yield homestead-era agricultural and domestic artifacts."
   },
   {
@@ -1050,7 +1055,8 @@
     "latitude": 34.436629,
     "longitude": -112.366297,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.62,
+    "detecting_weight": 58,
     "description": "Poland was a mining camp in Yavapai County, Arizona in the Bradshaw Mountains south of Prescott, established in the 1870s near gold and silver mining claims in the rugged central Arizona mountain terrain. The camp developed around the Congress and nearby mines but never grew into a substantial town, existing primarily as a supply point for the surrounding prospectors and miners. The site today is in the Prescott National Forest in the Bradshaw Mountains, with old mine workings and camp remnants scattered across the rugged terrain. The national forest land in this area generally requires a permit for artifact recovery, though the surrounding prospecting history makes the Bradshaw Mountains a popular destination for rockhounders and history enthusiasts."
   },
   {
@@ -1059,7 +1065,8 @@
     "latitude": 38.212779,
     "longitude": -119.01251,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.95,
+    "detecting_weight": 42,
     "description": "Bodie is California's most famous gold mining ghost town, perched at 8,375 feet in the eastern Sierra Nevada in Mono County, booming from the late 1870s through the 1880s when the Standard Mine produced millions in gold and a rough population of several thousand miners, gamblers, and opportunists created one of the West's most notoriously wild frontier towns. Bodie's reputation for lawlessness, with gunfights and robberies reported almost daily at its peak, made it a byword for frontier violence — the local newspaper reported 'a man for breakfast every morning.' The town survived in arrested decline through the twentieth century, and in 1962 it became Bodie State Historic Park, now preserved in a state of 'arrested decay' — frozen as it was abandoned. Metal detecting is strictly prohibited within the state park, but the site itself — with over 100 original structures remaining — is one of America's most spectacular historic preservation sites."
   },
   {
@@ -1068,7 +1075,8 @@
     "latitude": 38.20352,
     "longitude": -116.181536,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.74,
+    "detecting_weight": 78,
     "description": "Reveille was a small silver mining camp in Nye County, Nevada in the remote Reveille Range of the central Nevada Basin and Range country, established in the 1860s when silver strikes drew prospectors to these isolated mountains in one of America's most sparsely populated regions. The camp had a brief but productive mining period before the accessible ore was exhausted and the miners moved on to fresher strikes, leaving the desert to reclaim the townsite. The remote central Nevada location — accessible only via long stretches of unpaved desert road — means the site sees relatively few visitors today. The surrounding BLM desert land offers open access, and the high-desert climate of central Nevada preserves metallic artifacts exceptionally well."
   },
   {
@@ -1077,7 +1085,8 @@
     "latitude": 41.647802,
     "longitude": -91.077376,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Lime City was a small Iowa community in Hamilton County that developed in the mid-nineteenth century around limestone quarrying operations along the Des Moines River, supplying building stone and lime for construction throughout central Iowa during the great period of prairie settlement. The community faded as concrete and alternative building materials supplanted lime in construction and the local quarry operations declined. The site today is private farmland along the Des Moines River valley in Hamilton County. Central Iowa river valley communities from the limestone quarrying era can yield interesting industrial artifacts alongside standard homestead-era domestic items."
   },
   {
@@ -1086,7 +1095,8 @@
     "latitude": 40.717778,
     "longitude": -76.147635,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Lorraine was a small agricultural community in Butler County, Pennsylvania in the rolling farmland of western Pennsylvania, briefly existing as a post office and local service point for surrounding farm families before being absorbed into the regional agricultural landscape. Western Pennsylvania communities from the mid-to-late nineteenth century carry a rich history tied to the canal era, early oil industry, and agricultural settlement, with Butler County positioned at the heart of Pennsylvania's early oil country. Former rural communities in Butler County can yield artifacts from the county's agricultural and early oil industry heritage."
   },
   {
