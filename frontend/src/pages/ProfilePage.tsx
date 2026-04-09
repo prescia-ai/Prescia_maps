@@ -3,18 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import api from '../api/client';
-import { fetchMyPins, fetchUserPins } from '../api/client';
-import type { UserPin } from '../types';
-
-interface PublicProfile {
-  id?: string;
-  username: string | null;
-  display_name: string | null;
-  bio: string | null;
-  location: string | null;
-  privacy: string;
-  created_at: string | null;
-}
+import { fetchMyPins, fetchUserPins, followUser, unfollowUser } from '../api/client';
+import type { UserPin, PublicProfile } from '../types';
 
 type ActiveTab = 'activity' | 'hunts' | 'friends';
 
@@ -40,6 +30,7 @@ export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState<ActiveTab>('activity');
   const [pins, setPins] = useState<UserPin[]>([]);
   const [pinsLoading, setPinsLoading] = useState(false);
+  const [followLoading, setFollowLoading] = useState(false);
 
   const isOwnProfile = myProfile?.username === username;
 
@@ -69,6 +60,28 @@ export default function ProfilePage() {
       .catch(() => setPins([]))
       .finally(() => setPinsLoading(false));
   }, [username, isOwnProfile]);
+
+  async function handleFollow() {
+    if (!publicProfile || !username) return;
+    setFollowLoading(true);
+    try {
+      if (publicProfile.is_following) {
+        await unfollowUser(username);
+        setPublicProfile((p) =>
+          p ? { ...p, is_following: false, followers_count: Math.max(0, p.followers_count - 1) } : p,
+        );
+      } else {
+        await followUser(username);
+        setPublicProfile((p) =>
+          p ? { ...p, is_following: true, followers_count: p.followers_count + 1 } : p,
+        );
+      }
+    } catch {
+      // ignore
+    } finally {
+      setFollowLoading(false);
+    }
+  }
 
   if (loading) {
     return (
@@ -157,6 +170,25 @@ export default function ProfilePage() {
                 Edit Profile
               </Link>
             )}
+
+            {/* Follow / Unfollow button (other users' profiles) */}
+            {!isOwnProfile && myProfile && (
+              <button
+                onClick={handleFollow}
+                disabled={followLoading}
+                className={`flex-shrink-0 text-sm px-4 py-1.5 rounded-xl transition-colors font-medium ${
+                  publicProfile?.is_following
+                    ? 'text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white'
+                    : 'bg-amber-500 hover:bg-amber-400 text-black'
+                }`}
+              >
+                {followLoading
+                  ? '…'
+                  : publicProfile?.is_following
+                  ? 'Following'
+                  : 'Follow'}
+              </button>
+            )}
           </div>
 
           {/* Bio */}
@@ -190,8 +222,8 @@ export default function ProfilePage() {
             <div className="flex items-center divide-x divide-slate-800">
               {[
                 { label: 'Hunts', value: pins.length },
-                { label: 'Pins', value: 0 },
-                { label: 'Followers', value: 0 },
+                { label: 'Followers', value: publicProfile?.followers_count ?? 0 },
+                { label: 'Following', value: publicProfile?.following_count ?? 0 },
               ].map((stat) => (
                 <div key={stat.label} className="flex-1 flex flex-col items-center py-2 first:pl-0 last:pr-0 px-4">
                   <span className="text-2xl font-semibold text-white">{stat.value}</span>

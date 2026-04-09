@@ -18,6 +18,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router
 from app.api.pins import router as pins_router
 from app.api.submissions import router as submissions_router
+from app.api.feed import router as feed_router
+from app.api.social import router as social_router
 from app.auth.routes import router as auth_router
 from app.models.database import create_tables
 
@@ -96,6 +98,8 @@ def create_app() -> FastAPI:
     app.include_router(router, prefix="/api/v1")
     app.include_router(pins_router, prefix="/api/v1")
     app.include_router(submissions_router, prefix="/api/v1")
+    app.include_router(feed_router, prefix="/api/v1")
+    app.include_router(social_router, prefix="/api/v1")
     app.include_router(auth_router, prefix="/api/v1")
 
     return app

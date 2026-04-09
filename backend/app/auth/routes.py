@@ -14,11 +14,11 @@ import re
 from typing import Union
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.deps import get_current_user
-from app.models.database import User, get_db
+from app.auth.deps import get_current_user, optional_user
+from app.models.database import User, UserFollow, get_db
 from app.models.schemas import (
     UserProfile,
     UserProfileLimited,
@@ -40,18 +40,19 @@ async def get_me(current_user: User = Depends(get_current_user)) -> User:
 
 @router.get(
     "/profile/{username}",
-    response_model=Union[UserProfilePublic, UserProfileLimited],
     summary="Get public profile by username",
 )
 async def get_public_profile(
     username: str,
+    current_user: User | None = Depends(optional_user),
     db: AsyncSession = Depends(get_db),
-) -> User:
+) -> Union[UserProfilePublic, UserProfileLimited]:
     """
     Return a public profile for *username*.
 
     If the user's privacy is set to "private", only limited fields are returned.
-    No authentication is required.
+    No authentication is required, but if the viewer is authenticated
+    their ``is_following`` status and follow counts are included.
     """
     result = await db.execute(select(User).where(User.username == username))
     user = result.scalar_one_or_none()
@@ -61,7 +62,40 @@ async def get_public_profile(
     if user.privacy == "private":
         return UserProfileLimited.model_validate(user)
 
-    return UserProfilePublic.model_validate(user)
+    # Compute follower / following counts
+    followers_count_result = await db.execute(
+        select(func.count()).select_from(UserFollow).where(UserFollow.following_id == user.id)
+    )
+    followers_count = followers_count_result.scalar_one()
+
+    following_count_result = await db.execute(
+        select(func.count()).select_from(UserFollow).where(UserFollow.follower_id == user.id)
+    )
+    following_count = following_count_result.scalar_one()
+
+    # Determine if the current viewer is following this user
+    is_following = False
+    if current_user is not None and current_user.id != user.id:
+        follow_result = await db.execute(
+            select(UserFollow).where(
+                UserFollow.follower_id == current_user.id,
+                UserFollow.following_id == user.id,
+            )
+        )
+        is_following = follow_result.scalar_one_or_none() is not None
+
+    return UserProfilePublic(
+        id=user.id,
+        username=user.username,
+        display_name=user.display_name,
+        bio=user.bio,
+        location=user.location,
+        privacy=user.privacy,
+        created_at=user.created_at,
+        followers_count=followers_count,
+        following_count=following_count,
+        is_following=is_following,
+    )
 
 
 @router.put(

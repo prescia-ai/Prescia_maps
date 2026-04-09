@@ -20,6 +20,7 @@ from sqlalchemy import (
     Integer,
     String,
     Text,
+    UniqueConstraint,
     func,
     text,
 )
@@ -279,6 +280,70 @@ class PinSubmission(Base):
     rejection_reason = Column(Text, nullable=True)
     reviewed_at = Column(DateTime(timezone=True), nullable=True)
     submitted_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class Post(Base):
+    """
+    A user-authored text post visible in the social feed.
+
+    Privacy:
+    - "public"    — appears in the Global feed and Home feeds of followers.
+    - "followers" — appears only in the Home feeds of followers.
+    - "private"   — visible only to the author.
+    """
+
+    __tablename__ = "posts"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    author_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    content = Column(Text, nullable=False)
+    privacy = Column(String(20), default="public", nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PostComment(Base):
+    """A comment left on a Post by a user."""
+
+    __tablename__ = "post_comments"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    post_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    author_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    content = Column(Text, nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PostReaction(Base):
+    """
+    A themed reaction to a Post.
+
+    Each user may have at most one reaction per post (enforced by the
+    composite primary key on ``user_id`` + ``post_id``).
+
+    ``reaction_type`` is one of: "gold", "bullseye", "shovel", "fire".
+    """
+
+    __tablename__ = "post_reactions"
+
+    user_id = Column(UUID(as_uuid=True), primary_key=True)
+    post_id = Column(UUID(as_uuid=True), primary_key=True, index=True)
+    reaction_type = Column(String(20), nullable=False)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class UserFollow(Base):
+    """
+    A follow relationship between two users.
+
+    ``follower_id`` follows ``following_id``.
+    The composite primary key naturally enforces uniqueness.
+    """
+
+    __tablename__ = "user_follows"
+
+    follower_id = Column(UUID(as_uuid=True), primary_key=True)
+    following_id = Column(UUID(as_uuid=True), primary_key=True, index=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
 # ---------------------------------------------------------------------------

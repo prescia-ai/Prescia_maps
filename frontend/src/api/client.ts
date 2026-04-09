@@ -11,6 +11,11 @@ import type {
   ImportSummaryResponse,
   UserPin,
   PinSubmission,
+  Post,
+  Comment,
+  ReactionType,
+  FollowInfo,
+  PublicProfile,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -222,6 +227,107 @@ export async function exportApprovedSubmissions(): Promise<void> {
   link.click();
   link.remove();
   window.URL.revokeObjectURL(url);
+}
+
+// ── Social Feed ───────────────────────────────────────────────────────────────
+
+export async function createPost(
+  content: string,
+  privacy: 'public' | 'followers' | 'private' = 'public',
+): Promise<Post> {
+  const { data } = await api.post<Post>('/posts', { content, privacy });
+  return data;
+}
+
+export async function fetchGlobalFeed(
+  limit = 20,
+  offset = 0,
+): Promise<{ posts: Post[]; total: number }> {
+  const { data } = await api.get<{ posts: Post[]; total: number }>('/feed', {
+    params: { limit, offset },
+  });
+  return data;
+}
+
+export async function fetchHomeFeed(
+  limit = 20,
+  offset = 0,
+): Promise<{ posts: Post[]; total: number }> {
+  const { data } = await api.get<{ posts: Post[]; total: number }>('/feed/home', {
+    params: { limit, offset },
+  });
+  return data;
+}
+
+export async function deletePost(postId: string): Promise<void> {
+  await api.delete(`/posts/${postId}`);
+}
+
+export async function fetchComments(
+  postId: string,
+  limit = 50,
+  offset = 0,
+): Promise<{ comments: Comment[]; total: number }> {
+  const { data } = await api.get<{ comments: Comment[]; total: number }>(
+    `/posts/${postId}/comments`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
+export async function createComment(postId: string, content: string): Promise<Comment> {
+  const { data } = await api.post<Comment>(`/posts/${postId}/comments`, { content });
+  return data;
+}
+
+export async function deleteComment(postId: string, commentId: string): Promise<void> {
+  await api.delete(`/posts/${postId}/comments/${commentId}`);
+}
+
+export async function reactToPost(postId: string, reactionType: ReactionType): Promise<Post> {
+  const { data } = await api.put<Post>(`/posts/${postId}/react`, {
+    reaction_type: reactionType,
+  });
+  return data;
+}
+
+// ── Follow System ─────────────────────────────────────────────────────────────
+
+export async function followUser(username: string): Promise<void> {
+  await api.post(`/users/${encodeURIComponent(username)}/follow`);
+}
+
+export async function unfollowUser(username: string): Promise<void> {
+  await api.delete(`/users/${encodeURIComponent(username)}/follow`);
+}
+
+export async function fetchFollowers(
+  username: string,
+  limit = 50,
+  offset = 0,
+): Promise<{ users: FollowInfo[]; total: number }> {
+  const { data } = await api.get<{ users: FollowInfo[]; total: number }>(
+    `/users/${encodeURIComponent(username)}/followers`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchFollowing(
+  username: string,
+  limit = 50,
+  offset = 0,
+): Promise<{ users: FollowInfo[]; total: number }> {
+  const { data } = await api.get<{ users: FollowInfo[]; total: number }>(
+    `/users/${encodeURIComponent(username)}/following`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchPublicProfile(username: string): Promise<PublicProfile> {
+  const { data } = await api.get<PublicProfile>(`/auth/profile/${encodeURIComponent(username)}`);
+  return data;
 }
 
 export default api;
