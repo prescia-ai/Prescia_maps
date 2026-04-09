@@ -506,7 +506,8 @@
     "longitude": -98.1598,
     "description": "Jacksboro near Fort Richardson, Texas was a Butterfield Overland Mail stop where coaches paused at this military post and frontier town in North Texas. The fort provided security for stage operations in territory threatened by Comanche and Kiowa raids, with the garrison protecting both the stage line and local settlements. The combination of military and stage operations creates good metal detecting potential, with army buttons, coins, stage hardware, and personal items from soldiers and travelers scattered around the historic fort grounds and town center.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 57
   },
   {
     "name": "Emigrant Spring, OR",
@@ -515,7 +516,8 @@
     "longitude": -118.603,
     "description": "Emigrant Spring, Oregon was a stage stop on the route through the Blue Mountains, where coaches and emigrant wagons stopped for water at this essential spring in the challenging mountain crossing. The spring's location made it a natural gathering point for trail traffic, with stage facilities developing to support regular coach service through the mountains to the Columbia River. Mountain spring stations offer good metal detecting opportunities, with coins, buttons, emigrant items, and stage hardware concentrated around the water source and camping areas from years of combined stage and emigrant trail traffic.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.75
+    "confidence": 0.63,
+    "detecting_weight": 70
   },
   {
     "name": "Castle Rock Station, CO",
@@ -524,7 +526,8 @@
     "longitude": -104.8561,
     "description": "Castle Rock Station, Colorado was an Overland Stage to Denver relay station positioned at this distinctive rock formation south of Denver on the route from Kansas. The station provided fresh horses for coaches on the final leg to Denver, with the prominent Castle Rock landmark serving as a waypoint visible across the Colorado plains. Relay stations approaching major destinations like Denver are productive for metal detecting, with horseshoes, harness fittings, coins, and personal items from anxious passengers nearing journey's end accumulated around the corrals and station buildings.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.7,
+    "detecting_weight": 45
   },
   {
     "name": "Bijou Creek Station, CO",
@@ -533,7 +536,8 @@
     "longitude": -103.989,
     "description": "Bijou Creek Station, Colorado was an Overland Stage to Denver relay station on Bijou Creek, providing water and fresh teams for coaches crossing the dry country of eastern Colorado. The isolated station maintained minimal facilities to support operations in this remote location between Kansas settlements and Denver, with station keepers enduring harsh conditions on the high plains. Remote prairie relay stations like Bijou Creek are excellent metal detecting sites where horseshoes, harness fittings, coins, and equipment from station operations accumulated around the creek and buildings during the Colorado gold rush years.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.8
+    "confidence": 0.63,
+    "detecting_weight": 80
   },
   {
     "name": "Solomon's Fork Station, KS",
@@ -542,7 +546,8 @@
     "longitude": -98.871,
     "description": "Solomon's Fork Station on the Solomon River in Kansas was an Overland Stage to Denver relay station where coaches stopped for fresh teams along this important water source in central Kansas. The station's position along the river made it a vital stopping point with corrals and facilities to support stage operations on the route to Colorado Territory. River valley relay stations are highly productive for metal detecting, with horseshoes, harness fittings, coins, and personal items scattered around the station grounds and river crossing areas from years of stage traffic during the Denver rush.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.8
+    "confidence": 0.66,
+    "detecting_weight": 74
   },
   {
     "name": "Smoky Hill Spring, KS",
@@ -551,6 +556,7 @@
     "longitude": -100.152,
     "description": "Smoky Hill Spring, Kansas was a critical Overland Stage to Denver relay station on the Smoky Hill route, where this rare spring provided essential water in the dry stretch of western Kansas. The spring's importance made it a vital stopping point for coaches traveling the challenging Smoky Hill Trail, with facilities maintained despite the isolation and danger from Indian raids during the 1860s. Desert spring stations are exceptional metal detecting sites where the concentration of thirsty travelers and stage operations led to coins, buttons, horseshoes, and personal effects accumulated around the precious water source during years of frontier traffic.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.8
+    "confidence": 0.7,
+    "detecting_weight": 82
   }
 ]
