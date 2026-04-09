@@ -6800,7 +6800,8 @@
     "latitude": 39.515777,
     "longitude": -74.780609,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Weymouth Furnace was a colonial-era iron manufacturing complex in Atlantic County, New Jersey, along the Great Egg Harbor River in the Pine Barrens, operating from 1801 through the 1850s and producing cast-iron goods including stoves, pots, and machinery for the regional market. The furnace village at its peak supported several hundred workers and their families in a company-town arrangement typical of the Pinelands ironworks era. After the furnace closed, the forest reclaimed the site, and today Weymouth Furnace Park preserves the atmospheric ruins of the old ironworks — millpond, dam, and building foundations — in a county park setting where metal detecting is generally prohibited, but the well-preserved ruins and interpretive trail make it a rewarding history stop for anyone touring the New Jersey Pine Barrens industrial ghost towns."
   },
   {
     "name": "Atsion, NJ",
@@ -6808,7 +6809,8 @@
     "latitude": 39.742305,
     "longitude": -74.727433,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Atsion was one of the most complete and historically significant of the New Jersey Pine Barrens company towns, established around 1765 when iron ore was first smelted on this Burlington County site and growing through successive iterations as an iron furnace, cotton mill, and paper mill complex through the early nineteenth century. The village at its height had worker housing, a church, and a general store, making it a fully self-contained Pine Barrens community before the combined decline of the bog iron industry and the depression of agricultural demand emptied the site by the 1850s. Today Atsion is within Wharton State Forest, where a historic mansion, lake, and foundations of the old village are preserved — metal detecting is restricted within the state forest, but the site is an outstanding historical destination and the adjacent private farmlands in Burlington County have historically produced Pine Barrens-era coinage and domestic artifacts."
   },
   {
     "name": "Ketterman, WV",
@@ -6816,7 +6818,8 @@
     "latitude": 38.87808,
     "longitude": -79.254135,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ketterman was a small community in Grant County, West Virginia, in the Lost River Valley of the Potomac Highlands, established by Scots-Irish farming families who settled the isolated limestone valleys of the Allegheny Mountains in the late eighteenth and early nineteenth centuries. The community had a church and a school serving outlying farm families in the high mountain valley, persisting as a rural neighborhood identity through the nineteenth century before the community name faded from formal use. The Lost River Valley of Grant County is one of West Virginia's most scenic and historically intact landscapes, and the limestone-rich soils of the old farm sites preserve colonial and early American coins, military buttons from the Virginia frontier wars, and domestic hardware from the pioneer era with reasonable access through local landowners."
   },
   {
     "name": "Gee Town, OH",
@@ -6824,7 +6827,8 @@
     "latitude": 39.012868,
     "longitude": -82.524547,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gee Town was a small rural community in Gallia County, Ohio, in the rolling hill country of the Ohio River valley region where Scots-Irish and Virginia-origin settlers established farms along creek drainages in the early nineteenth century. Named for an early settler family, the community had a church and a school district serving outlying farms but never developed the commercial infrastructure of a proper town, remaining a named rural neighborhood. The Gallia County hill country in southeastern Ohio is classic detecting territory — this was the first wave of Ohio settlement from the Virginia and Kentucky crossing points, and old church and farm sites in the region have produced early American large cents, Virginia military warrants, and pre-Civil War domestic hardware in the red clay soils."
   },
   {
     "name": "Haff, MI",
@@ -6832,7 +6836,8 @@
     "latitude": 46.193312,
     "longitude": -84.928447,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Haff was a small logging and farming community in Chippewa County, Michigan, in the eastern Upper Peninsula where the great Lake Superior timber operations of the late nineteenth century created temporary mill towns and logging camp supply communities that lived and died with the timber harvest. The community had a post office and a small general store serving the lumber camp crews and their families during the peak logging era before the timber was cut out and the operations moved on, leaving Haff to return to second-growth forest. The eastern Upper Peninsula timber ghost towns are accessible by forest roads, and old company camp and mill sites on USFS and private land have produced logging-era coins, camp hardware, and personal items from the diverse immigrant workforce that drove the Michigan lumber industry."
   },
   {
     "name": "Vawter, MN",
@@ -6840,7 +6845,8 @@
     "latitude": 45.912188,
     "longitude": -94.244997,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Vawter was a small farming community in Stearns County, Minnesota, in the St. Cloud-area agricultural country where German Catholic immigrant farmers settled the glacial lake and prairie country in the 1860s and 1870s, building churches, schools, and township communities across one of Minnesota's most agriculturally productive regions. The community had a post office serving surrounding farm families, but the consolidation of commerce in larger Stearns County centers like St. Cloud and Albany gradually absorbed the smaller rural communities. The Stearns County agricultural soils are productive detecting ground, and German immigrant communities in this part of central Minnesota left behind distinctive artifact assemblages including German-style religious medals, early American coinage from the homestead era, and European-made domestic hardware."
   },
   {
     "name": "Jakeville, MN",
@@ -6848,7 +6854,8 @@
     "latitude": 45.750245,
     "longitude": -93.98665,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Jakeville was a small settlement in Kanabec or Mille Lacs County, Minnesota, established during the mid-to-late nineteenth century by Scandinavian and German immigrants who cleared the cutover pineland country of east-central Minnesota for farming after the great white pine timber harvest moved through. The community had a school district and a rural church congregation, but the thin soils and cold climate of the Minnesota cutover country proved less productive than hoped, and Jakeville faded through the early twentieth century as farm families moved to better land or to the growing cities. The cutover country of east-central Minnesota preserves old homestead traces in second-growth aspen and birch forest, and the old farm site foundations and cellar holes occasionally yield early Minnesota coinage and Scandinavian immigrant personal items."
   },
   {
     "name": "Garen, MN",
@@ -6856,7 +6863,8 @@
     "latitude": 45.225012,
     "longitude": -92.981857,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Garen was a small community in Chisago County, Minnesota, in the St. Croix River valley country of east-central Minnesota where Swedish and Norwegian immigrants settled in large numbers from the 1850s onward, building Lutheran churches, cooperative grain elevators, and small township service communities across the beautiful lake-dotted landscape. The post office served a dispersed farming population in the Chisago Lakes area before the automobile era made access to larger commercial centers easy and the small rural communities less necessary. The Chisago County St. Croix River country is rich in Scandinavian immigrant history, and old farm sites in the lake-country soils have yielded early Minnesota coinage, Swedish immigrant religious medals, and farm hardware from the homestead era."
   },
   {
     "name": "Brickton, MN",
@@ -6864,7 +6872,8 @@
     "latitude": 45.607187,
     "longitude": -93.606073,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Brickton was a small community in Isanti County, Minnesota, that — as its name suggests — was associated with clay extraction and brick manufacturing operations that served the booming construction industry of the Twin Cities metropolitan area in the late nineteenth and early twentieth centuries, taking advantage of the thick blue clay deposits in this part of the Rum River valley. The community had a post office and worker housing associated with the brick-making operations, but when cheaper alternatives and changes in construction materials ended the brick industry, Brickton dissolved. The Rum River valley preserves old clay pit remnants and brickyard foundations, and the surrounding agricultural land has produced Minnesota pioneer-era artifacts including early American coinage and farm implements from the settlement and industrial eras."
   },
   {
     "name": "Nininger, MN",
@@ -6872,7 +6881,8 @@
     "latitude": 44.769167,
     "longitude": -92.902222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nininger was one of Minnesota's most ambitious failed townsite speculations, platted in 1856 in Dakota County on the Mississippi River south of St. Paul by promoter John Nininger, who attracted hundreds of investors and settlers to what he promoted as the future metropolis of the upper Mississippi valley before the Panic of 1857 collapsed real estate values and froze development. At its brief peak, Nininger had a newspaper, hotels, stores, and over 500 residents, but within two years the land was nearly empty and Hastings across the river took the commerce that Nininger had hoped to capture. Today the Mississippi blufftop site is private land and woodland, but the brief intense occupation left a rich artifact scatter — 1850s American coinage, immigrant personal items, and early Minnesota domestic hardware — in a blufftop setting that detectorists with landowner access have found very productive."
   },
   {
     "name": "Sogn, MN",
