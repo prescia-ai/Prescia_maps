@@ -5720,7 +5720,8 @@
     "latitude": 29.2877,
     "longitude": -103.8969,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Contrabando was a historic smuggling community along the Rio Grande in Presidio County, Texas where the remote Big Bend country made border enforcement virtually impossible and cross-border trade in contraband goods was an open fact of life for generations. The community existed as a semi-permanent settlement of Mexican and American borderlanders who traded in goods that bypassed customs, including candelilla wax, mercury, livestock, and other commodities. The remote Big Bend setting and dramatic Rio Grande canyon scenery make Contrabando historically fascinating, and the site is now occasionally used as a film location. The surrounding Chihuahuan Desert landscape holds detecting potential on private land for period artifacts from the ranching and smuggling era."
   },
   {
     "name": "Belknap, TX",
@@ -5728,7 +5729,8 @@
     "latitude": 33.152335,
     "longitude": -98.733117,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Belknap was the site of Fort Belknap, established in 1851 in Young County, Texas as one of the original line of frontier forts protecting settlement from Comanche and Kiowa raids along the Texas frontier. The associated civilian settlement of Fort Belknap community grew around the military post and served as the terminus of the Butterfield Overland Mail stage route through the 1850s. After the Civil War, the fort was not reoccupied and the community faded, though the fort ruins have been preserved as a county museum. The Fort Belknap area in Young County represents one of the most historically significant locations on the Texas frontier, and while the monument itself is protected, surrounding private land in the Brazos River valley holds excellent detecting potential."
   },
   {
     "name": "Edith, TX",
@@ -5736,7 +5738,8 @@
     "latitude": 31.903611,
     "longitude": -100.610556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Edith was a small farming community in Lynn County, Texas on the flat Llano Estacado high plains, established during the early 20th century dryland farming boom as homesteaders attempted to cultivate the ancient Panhandle grasslands with new techniques and drought-resistant crops. The community had a school and church during its active years, serving surrounding farm families who struggled with the thin soils and erratic rainfall of the high plains. Lynn County's agricultural history, including both the initial farming boom and the devastating Dust Bowl years of the 1930s, is documented in the landscape through abandoned homesteads and windmills. Detecting on private land in the area can yield early 20th-century homestead artifacts, farm implements, and period coins."
   },
   {
     "name": "Acala, TX",
@@ -5744,7 +5747,8 @@
     "latitude": 31.333889,
     "longitude": -105.914444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Acala was a small farming community in Hudspeth County, Texas in the Diablo Plateau and Rio Grande valley region of far West Texas, established in the early 20th century as irrigation from the Rio Grande made agricultural development possible in this otherwise arid desert landscape. The community was notably associated with the development of Acala cotton, a long-staple variety cultivated in the region's alkaline soils that became economically significant. The Rio Grande valley farming communities of Hudspeth County declined as water rights, salinity problems, and economic pressures reduced irrigated agriculture in the region. Today Acala is a ghost town in the West Texas desert, and detecting on private land may yield early 20th-century farming community artifacts."
   },
   {
     "name": "Birchville, TX",
@@ -5752,7 +5756,8 @@
     "latitude": 31.375,
     "longitude": -105.965833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Birchville was a small mining or logging community in Texas, established in the late 19th century to exploit local natural resources in a region where such extraction industries briefly drove economic development before the resource was exhausted or the market collapsed. Like many Texas resource-extraction communities, Birchville existed for perhaps a decade or two at peak activity before the driving industry moved on, leaving behind a scattering of former residents who either departed or attempted to transition to farming or ranching. The Texas landscape holds dozens of such briefly occupied resource extraction sites where patient detectorists working on private land can find period artifacts, trade tokens, and domestic items from the active occupation period."
   },
   {
     "name": "Finlay, TX",
@@ -5760,7 +5765,8 @@
     "latitude": 31.258611,
     "longitude": -105.63,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Finlay was a small community in Hudspeth County, Texas along the Southern Pacific Railroad in the vast desert country of far West Texas, established as a railroad service point and water stop in the 1880s-1890s when the transcontinental railroad crossed this remote desert region. Railroad water stations and section house communities in West Texas were small but strategically important, providing maintenance workers, water for steam locomotives, and a minimum of commercial services. When diesel locomotives made water stops unnecessary in the mid-20th century, Finlay's reason for existence evaporated. The West Texas railroad corridor holds detecting potential on private land for railroad-era hardware, section house artifacts, and coins from the long service period."
   },
   {
     "name": "Lasca, TX",
@@ -5768,7 +5774,8 @@
     "latitude": 31.234444,
     "longitude": -105.475,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lasca was a small community in Hudspeth County, Texas in the remote desert country near El Paso, made famous by the poem \"Lasca\" by Frank Desprez published in 1882 that romanticized a cattle drive story set on the Texas plains \u2014 though whether the poem was inspired by an actual place called Lasca or whether the community took its name from the poem is unclear. The area around Lasca in far West Texas is extremely remote and arid Chihuahuan Desert country where only scattered ranching has been possible. Detecting on private ranch land in the extreme isolation of the West Texas desert near the Rio Grande can yield period ranch hardware, cattle drive artifacts, and occasional coins from the sparse occupation history."
   },
   {
     "name": "Etholen, TX",
@@ -5776,7 +5783,8 @@
     "latitude": 31.225556,
     "longitude": -105.424444,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Etholen was a small farming community in Dawson County, Texas on the flat Llano Estacado south of Lamesa, established during the early 20th century dryland farming boom as cotton farmers pushed west from the established farming areas of West Texas. Dawson County's remarkable agricultural history centers on the development of cotton farming on the high plains, enabled by the discovery of the Ogallala Aquifer's groundwater resources and improved dryland farming techniques. The former Etholen community area is now active cotton farmland in Dawson County. Detecting on private land near former homestead sites in the area can yield early 20th-century farm implements, domestic artifacts, and period coins from the farming settlement era."
   },
   {
     "name": "Shafter Lake, TX",
@@ -5784,7 +5792,8 @@
     "latitude": 32.404444,
     "longitude": -102.666111,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Shafter Lake was a small ranching community in Andrews County, Texas near a saline playa lake that gave the community its name, serving the sparse ranching population of the Permian Basin country in the late 19th and early 20th centuries. Andrews County's economy was dominated by cattle ranching on the semiarid grassland until the discovery of significant Permian Basin oil reserves in the mid-20th century transformed the economic landscape. The former Shafter Lake community area is now Permian Basin ranch and oil country. Detecting on private land in Andrews County near former ranch headquarters and homestead sites can yield period ranch hardware, early oil field artifacts, and coins from the ranching and early oil era."
   },
   {
     "name": "Stiles, TX",
@@ -5792,7 +5801,8 @@
     "latitude": 31.316667,
     "longitude": -101.866667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Stiles was the original county seat of Reagan County, Texas established in 1903 when the county was organized, serving as the governmental and commercial center for a vast but sparsely populated Permian Basin ranching county until Big Lake was established and replaced it as county seat. The town had a courthouse, school, and small commercial district during its county seat years, but the shift of regional development toward the new railroad town of Big Lake effectively killed Stiles. Today Stiles is a classic West Texas ghost town, with a few deteriorating structures remaining in the remote Reagan County ranchland. The former county seat site holds excellent detecting potential for artifacts from the early 20th-century ranch community era."
   },
   {
     "name": "Upland, TX",
