@@ -447,7 +447,8 @@
     "description": "On January 17, 1781, Brigadier General Daniel Morgan executed a masterful tactical double envelopment at Cowpens, SC, using a deliberately planned three-line defense to draw the British cavalry charge, then having the militia feign retreat before the Continentals and militia turned together to destroy Banastre Tarleton's feared Legion — killing, wounding, or capturing over 900 British troops. The victory was one of the most tactically brilliant of the entire war and effectively crippled Cornwallis's light forces, contributing directly to the Yorktown campaign. Cowpens National Battlefield near Gaffney, SC, preserves the rolling piedmont terrain with an auto tour, walking trail, and visitor center marking Morgan's positions. Metal detecting is prohibited in the national park, but surrounding Cherokee County farmland in the piedmont of South Carolina saw Patriot and Loyalist operations throughout the war, with private land yielding period musket balls, buttons, and accoutrements.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 55
   },
   {
     "name": "Siege of Ninety-Six",
@@ -457,7 +458,8 @@
     "description": "In May and June 1781, General Nathanael Greene besieged the Loyalist-held Star Fort at Ninety Six, SC — a key backcountry fortification garrisoned by New Jersey Loyalists — in the longest siege of the Southern Campaign. Though a relief column under Rawdon forced Greene to abandon the siege before the fort fell, the British subsequently abandoned Ninety Six as untenable, effectively ending Loyalist power in the South Carolina backcountry. Ninety Six National Historic Site in Ninety Six, SC, preserves the remarkably intact Star Fort earthworks and the siege approaches in an open field setting with excellent interpretive trails. Metal detecting is prohibited in the national park, but the surrounding Greenwood County area has yielded period buttons, musket balls, and camp artifacts from the extensive military operations in this region.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 57
   },
   {
     "name": "Battle of Guilford Court House",
@@ -467,7 +469,8 @@
     "description": "On March 15, 1781, General Nathanael Greene's army fought Cornwallis's regulars in the forests and fields around Guilford Court House, NC, in a brutal three-line engagement that inflicted approximately 530 British casualties — over 25% of Cornwallis's force — though the British technically held the field. The pyrrhic British 'victory' left Cornwallis unable to continue campaigning in the Carolinas and prompted his march to Virginia that ended at Yorktown. Guilford Courthouse National Military Park in Greensboro, NC, is one of the better preserved Southern Campaign sites, with monuments, earthworks traces, and a visitor center. Metal detecting is prohibited in the national park, but surrounding Guilford County farmland has produced period relics on private property, and the site remains one of the most archaeologically productive Southern Campaign battlefields.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Hobkirk's Hill",
@@ -477,7 +480,8 @@
     "description": "On April 25, 1781, General Nathanael Greene's Continental Army attacked a smaller British force under Lord Rawdon at Hobkirk's Hill near Camden, SC, but the assault fell apart when a Continental regiment broke ranks in response to a British flanking maneuver, turning a near-victory into an unnecessary defeat. Despite the tactical setback, Greene's campaign in the Carolinas was succeeding strategically — the British were being forced back toward the coast even when they won on the battlefield. The battle site is now largely within modern Camden, SC, with the Historic Camden Revolutionary War Site nearby preserving portions of the fortified town. The Camden area remains one of the better hunting grounds in the Southeast for private land searches, with the surrounding Kershaw County farmland having yielded numerous period artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Eutaw Springs",
@@ -487,7 +491,8 @@
     "description": "On September 8, 1781, the last major battle in the Carolinas was fought at Eutaw Springs, SC, when General Greene's army attacked a British force under Colonel Stewart, initially routing the British camp before the assault dissolved as hungry American troops stopped to plunder the British food stores. The battle was tactically inconclusive, but the British retreated to Charleston and never again ventured into the South Carolina interior, effectively ending British presence outside the coastal cities. The Eutaw Springs battlefield near Eutawville, SC, is now beneath Lake Marion — the Santee Cooper reservoir built in 1941 flooded the site. The flooding makes this a unique underwater battlefield of the Revolution, inaccessible to conventional metal detecting but a poignant reminder of lost history.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Green Spring",
@@ -497,7 +502,8 @@
     "description": "On July 6, 1781, Anthony Wayne's Pennsylvania Continentals were lured into an ambush by Cornwallis's army near Green Spring Plantation in Virginia, after Cornwallis feigned a river crossing to deceive the pursuing Americans into thinking he had already crossed the James River. Wayne escaped destruction by boldly charging forward with his vastly outnumbered force in a calculated risk that created confusion and allowed most of his command to withdraw. The battle site near Williamsburg, VA, is partially preserved as part of the Colonial National Historical Park system, though much of the terrain has been absorbed into the James City County area. The tidewater Virginia region saw extensive 1781 campaign movements, and private property along Cornwallis's march route has produced period military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 62
   },
   {
     "name": "Siege of Yorktown",
@@ -507,7 +513,8 @@
     "description": "From September to October 1781, General Washington and French General Rochambeau besieged Cornwallis's 8,000-man British army in its fortifications at Yorktown, VA, in the decisive operation of the Revolutionary War, with the French fleet under de Grasse blocking rescue by sea. After parallel siege approaches and the storming of key redoubts on October 14 — including a famous charge by Alexander Hamilton — Cornwallis surrendered his army on October 19, effectively ending major combat operations of the Revolution. Colonial National Historical Park at Yorktown, VA, preserves extensive earthworks, redoubt remains, and the surrender field, with ongoing archaeology revealing remarkable artifact concentrations. Metal detecting is strictly prohibited in the national park, but the surrounding York County peninsula saw the passage of thousands of troops and has produced significant finds on private property including Minié balls from the later Civil War occupation as well as 18th-century artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.95,
+    "detecting_weight": 43
   },
   {
     "name": "Battle of Groton Heights",
@@ -517,7 +524,8 @@
     "description": "On September 6, 1781, the same day Benedict Arnold burned New London, CT, a British force under Colonel Edmund Eyre attacked Fort Griswold across the Thames River in Groton, where 150 militia under Colonel William Ledyard defended the small fortification against 800 British regulars. After a fierce defense, Ledyard surrendered the fort but was immediately killed with his own sword; the British then massacred much of the garrison, killing 85 men in one of the most notorious war crimes of the Revolution. Fort Griswold Battlefield State Park in Groton, CT, preserves the fort earthworks, the monument to the fallen, and a state museum on the site of the massacre. Detecting is not permitted in the state park, but the Thames River valley and surrounding New London County have yielded period musket balls and military hardware on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Blue Licks",
@@ -527,7 +535,8 @@
     "description": "On August 19, 1782, the last major Revolutionary War battle east of the Mississippi was fought at the Blue Licks salt springs crossing in Kentucky, where a pursuing force of Kentucky militia was ambushed by Wyandot, Shawnee, and Loyalist rangers, killing 70 men including Daniel Boone's son Israel in a disastrous rout. The defeat at Blue Licks came months after Yorktown, as frontier warfare in Kentucky continued beyond the formal end of the eastern war. Blue Licks Battlefield State Resort Park near Mount Olivet, KY, preserves the crossing and rolling meadow terrain of the fight, with a monument to the fallen and an interpretive museum. The surrounding Nicholas County countryside has produced period musket balls and frontier-era hardware on private land, and the salt lick itself attracted trade and travel for generations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 58
   },
   {
     "name": "Battle of Cowan's Ford",
@@ -537,7 +546,8 @@
     "description": "On February 1, 1781, Cornwallis's army crossed the Catawba River at Cowan's Ford in present-day Huntersville, NC, driving off a defending force of North Carolina militia under General William Davidson, who was killed in the crossing. The British fording of the rain-swollen Catawba was a daring feat that kept up the pressure on Greene's retreating army as Cornwallis raced northward in pursuit. The battle site at the Catawba River is now largely within the Duke Power / Lake Norman reservoir area north of Charlotte, with a small marker near McDowell Nature Center. The broader Piedmont North Carolina region saw Cornwallis's army march across private farmland for weeks in early 1781, and the route has produced period British military buttons, musket balls, and horseshoe hardware on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.78,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Wetzell's Mill",
