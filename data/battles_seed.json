@@ -997,7 +997,8 @@
     "description": "On April 17-18, 1847, General Winfield Scott's Army executed a bold flanking movement discovered personally by Captain Robert E. Lee through the rugged mountains at Cerro Gordo, Veracruz, enabling American troops to attack Santa Anna's rear defenses and causing the entire Mexican defensive line to collapse. The victory cleared the mountain approaches to the Valley of Mexico and demonstrated the superior operational planning of Scott's staff, with Lee's reconnaissance proving decisive. The mountain pass between Veracruz and Jalapa in modern Veracruz state, Mexico, is accessible via Federal Highway 140, with a small monument near the site of the battle. The rugged terrain largely retains its 1847 appearance, and period artifacts including Mexican cannon balls and military hardware have been found in the area.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Fort Sumter",
@@ -1007,7 +1008,8 @@
     "description": "On April 12-13, 1861, Confederate forces under General P.G.T. Beauregard bombarded the Federal garrison at Fort Sumter in Charleston Harbor, South Carolina, for 34 hours before Major Robert Anderson surrendered the island fort — the first shots of the Civil War. Miraculously, no one was killed in the bombardment itself (two Union soldiers died in an accidental explosion during the surrender salute), but the attack on a Federal installation electrified both North and South and triggered Lincoln's call for 75,000 volunteers. Fort Sumter National Monument is accessible by ferry from Charleston, SC, with the original fort walls still standing above the modern water level — the fort was built up with rubble as a gun platform during the long 1863-1865 siege. Metal detecting is prohibited in the national monument, but the Charleston Harbor bottom and surrounding barrier islands have been fruitful for underwater archaeological recovery of Civil War naval hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.95,
+    "detecting_weight": 38
   },
   {
     "name": "First Battle of Bull Run (First Manassas)",
@@ -1017,7 +1019,8 @@
     "description": "On July 21, 1861, the first major land battle of the Civil War ended in a shocking Confederate victory when Thomas Jackson earned his 'Stonewall' nickname holding the Henry House Hill as the Union army of 35,000 broke and fled back toward Washington in a rout, dashing Northern hopes for a quick, easy war. Confederate General Beauregard and General Joe Johnston, combining their forces, overwhelmed the Federal army under McDowell with a flank attack that caused the Union line to collapse. Manassas National Battlefield Park in Prince William County, VA, preserves both the First and Second Manassas battlefields with miles of driving and walking tours, earthworks, and the restored Henry House. Metal detecting is strictly prohibited in the national park, but surrounding Prince William County private land has yielded Minié balls, US and CS belt buckles, buttons, and artillery fragments from both 1861 and 1862 battles.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 43
   },
   {
     "name": "Battle of Wilson's Creek",
@@ -1027,7 +1030,8 @@
     "description": "On August 10, 1861, the first major Civil War battle west of the Mississippi was fought at Wilson's Creek, MO, where General Nathaniel Lyon led 5,400 Union soldiers in a two-column surprise attack on a Confederate force of 12,000 under General Ben McCulloch. Lyon was killed leading a charge — the first Union general killed in the war — and his outnumbered force was ultimately driven from the field, leaving southwestern Missouri contested ground for the rest of the war. Wilson's Creek National Battlefield near Republic, MO, preserves the rolling Ozark terrain with a 5-mile driving tour, walking trails, and the restored Ray House farm. Metal detecting is prohibited in the national park, but surrounding Christian and Greene County farmland has yielded Civil War Minié balls, buttons, US and CS buckles, and artillery fragments on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Ball's Bluff",
@@ -1037,7 +1041,8 @@
     "description": "On October 21, 1861, a Federal reconnaissance across the Potomac River at Ball's Bluff near Leesburg, VA, turned into a disaster when Colonel Edward Baker (a close friend and former Senate colleague of Lincoln) led his command over the cliff-edged bluff and was slaughtered by Confederate forces, with Baker killed and hundreds of Union soldiers driven into the river. The defeat triggered Congress to create the Joint Committee on the Conduct of the War and led to the arrest of General Charles Stone. Ball's Bluff Battlefield Regional Park in Leesburg, VA, preserves the wooded bluff and a small National Cemetery — one of the smallest in the country — with the graves of those who drowned. Metal detecting is prohibited in the regional park, but the surrounding Loudoun County farmland and river corridor has yielded Civil War artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Belmont",
@@ -1047,7 +1052,8 @@
     "description": "On November 7, 1861, Brigadier General Ulysses Grant led 3,100 Union soldiers across the Mississippi River from Cairo, IL, to attack a Confederate camp at Belmont, MO — Grant's first Civil War combat command. Though Grant initially routed the Confederate camp, a Confederate counterattack cut off his force and he barely escaped back to his transports, learning harsh lessons about maintaining cohesion after success. The battlefield at Belmont, near Columbus, KY (across the river), is on private agricultural land in Mississippi County, MO, with a small state monument. The bottoms farmland along the Mississippi has produced Civil War Minié balls and camp debris from this early 1861 fight.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Carnifex Ferry",
@@ -1057,7 +1063,8 @@
     "description": "On September 10, 1861, Union forces under General William Rosecrans attacked a Confederate position commanded by General John Floyd at Carnifex Ferry on the Gauley River in western Virginia, driving Floyd from his entrenchments in a battle that helped secure the largely Unionist western Virginia counties that would become West Virginia in 1863. Floyd's nighttime retreat left behind camp equipment and supplies that the Union forces captured. Carnifex Ferry Battlefield State Park in Nicholas County, WV, preserves the high bluff above the Gauley River with earthwork traces, interpretive trails, and a museum in a restored farmhouse. Metal detecting is not permitted in West Virginia state parks, but the surrounding Nicholas County farmland along the river corridor has produced Civil War relics on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 62
   },
   {
     "name": "Battle of Cheat Mountain",
@@ -1067,7 +1074,8 @@
     "description": "In September 1861, Confederate General Robert E. Lee's first independent field command ended in failure when his planned five-column attack on the Union position atop Cheat Mountain Summit in western Virginia never coordinated properly, with one column prematurely revealing its presence and the attack called off without a general engagement. The battle — fought in dense forest, rain, and cold — gave Lee his first nickname: 'Granny Lee' and 'Evacuating Lee' from critical Southern newspapers. Cheat Summit Fort, part of Monongahela National Forest, preserves the earthwork remains of the Union fortification in a remarkable forest setting along U.S. Route 250 in Pocahontas County, WV. The surrounding national forest and private lands saw extensive 1861 military operations, and the area is one of the more remote and historically intact Civil War mountain campaign zones in the country.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Rich Mountain",
@@ -1077,7 +1085,8 @@
     "description": "On July 11, 1861, General George B. McClellan's subordinate General William Rosecrans flanked a Confederate position at Rich Mountain, WV, capturing the mountain pass and precipitating the surrender of the main Confederate force under Colonel John Pegram — an early Federal victory that launched McClellan's national reputation and his appointment to command the Army of the Potomac. The campaign in western Virginia was the Union's first significant land success of the war. Rich Mountain Battlefield Civil War Site in Randolph County, WV, preserves a portion of the terrain with interpretive trails through the forested mountain landscape. The remote mountain setting has preserved much of the terrain, and private land in the surrounding area has yielded Civil War buttons, Minié balls, and camp artifacts from the 1861 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 65
   },
   {
     "name": "First Battle of Lexington (Missouri)",
@@ -1087,7 +1096,8 @@
     "description": "In September 1861, Confederate General Sterling Price besieged and captured a Union garrison of 3,500 men under Colonel James Mulligan at the Missouri River town of Lexington, MO, in a three-day battle notable for the Confederate use of hemp bales soaked in the river as a rolling breastwork that advanced their siege lines without casualties. The fall of Lexington secured Price's control of western Missouri and boosted Confederate morale in the border state. Battle of Lexington State Historic Site preserves Anderson House (used as a field hospital), earthworks, and the battle site along the Missouri River bluffs. Metal detecting is not permitted in the state historic site, but the broader Lafayette County private farmland along the Missouri River has produced Civil War Minié balls, buttons, and camp debris from 1861 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Hoke's Run",
