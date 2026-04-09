@@ -1657,7 +1657,8 @@
     "description": "The two-day Battle of Chickamauga on September 19-20, 1863 — fought in the thick forests and fields of northwestern Georgia — was the second-bloodiest battle of the Civil War, with nearly 35,000 combined casualties. On the second day, a miscommunication in the Union line created a gap just as General Longstreet's Confederate corps struck, shattering the Army of the Cumberland and sending it fleeing toward Chattanooga — with General George Thomas's heroic defense on Horseshoe Ridge earning him the name 'Rock of Chickamauga.' Chickamauga and Chattanooga National Military Park — America's oldest military park — preserves the densely wooded battlefield terrain with the Visitor Center at Ft. Oglethorpe, GA, featuring one of the finest collections of Civil War artillery in existence. Metal detecting is strictly prohibited in the national park, but surrounding Walker and Catoosa county private land has produced Minié balls, artillery fragments, and military hardware from this brutal engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 43
   },
   {
     "name": "Battle of Chattanooga",
@@ -1667,7 +1668,8 @@
     "description": "In November 1863, the newly arrived Ulysses Grant directed a Union offensive that lifted the Confederate siege of Chattanooga, TN, culminating in one of the war's most dramatic moments: the unauthorized charge of the Army of the Cumberland up Missionary Ridge on November 25, where soldiers stormed the Confederate line in a fury born of their humiliation at Chickamauga. Bragg's army was routed from its seemingly impregnable positions, opening the gateway to Atlanta and marking the beginning of the end for Confederate forces in the western theater. Chickamauga and Chattanooga National Military Park encompasses Lookout Mountain, Missionary Ridge, Orchard Knob, and other key positions in and around Chattanooga. Metal detecting is prohibited in all park units, but the surrounding Hamilton County, TN, private land has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 44
   },
   {
     "name": "Battle of Lookout Mountain",
@@ -1677,7 +1679,8 @@
     "description": "On November 24, 1863, Union forces under General Joseph Hooker swept Confederate defenders from the slopes of Lookout Mountain above Chattanooga, TN, in a battle fought in the clouds — literally, as a fog bank covered the upper mountain — that was romanticized as the 'Battle Above the Clouds' though much of the actual fighting occurred below the fog line. The capture of Lookout Mountain enabled the full-scale assault on Missionary Ridge the following day. Point Park on the Lookout Mountain summit is part of Chickamauga and Chattanooga National Military Park, with dramatic views over the Tennessee River gorge and the city below. The surrounding Hamilton County, TN, residential and protected lands largely cover the battlefield approaches, but private land in outlying areas has produced Civil War artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 43
   },
   {
     "name": "Battle of Missionary Ridge",
@@ -1687,7 +1690,8 @@
     "description": "On November 25, 1863, the Army of the Cumberland spontaneously charged Missionary Ridge — the main Confederate defensive line above Chattanooga, TN — without orders, swarming up the steep ridge and sweeping the Confederate army from its seemingly impregnable position in one of the most dramatic moments of the entire Civil War. Grant and Thomas watched in disbelief as their soldiers charged unauthorized and succeeded, breaking Bragg's army and sending it retreating into Georgia. Missionary Ridge is today a residential ridge in Chattanooga, TN, with the national park preserving several unit positions including the Bragg Reservation and the tunnel area. Private land in the outer positions of the ridge and surrounding valley areas has produced Civil War Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Fort Wagner",
@@ -1697,7 +1701,8 @@
     "description": "On July 18, 1863, the 54th Massachusetts Infantry — one of the North's first Black regiments, commanded by white Colonel Robert Gould Shaw — led the assault on Battery Wagner, a Confederate earthen fort guarding the entrance to Charleston Harbor, SC, in a frontal attack across a narrow beach that resulted in over 40% casualties and the death of Shaw. Though the assault failed to capture the fort, the 54th's courage under fire became a powerful argument for Black military service and is depicted in the film 'Glory.' The original site of Battery Wagner is now beneath the eroded shoreline of Morris Island, SC, with the spit of land continuing to erode into the sea. The Charleston Harbor area and Morris Island shoreline are periodically uncovered by erosion, and Civil War artifacts including artillery shells and military hardware have been found along the beach.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Chickamauga Creek",
@@ -1707,7 +1712,8 @@
     "description": "The Battle of Chickamauga on September 19-20, 1863, was fought across the farms and thickets along Chickamauga Creek and its tributaries in northwestern Georgia — a landscape of dense second-growth forest broken by small clearings, making unit coordination and visibility nearly impossible, contributing to the brutal, disjointed nature of the two-day battle. The creek itself, whose Cherokee name means 'River of Blood' (though this etymology is disputed), flows through the preserved Chickamauga battlefield to this day, still flanked by the same dense forest that confused both armies. Chickamauga and Chattanooga National Military Park's Chickamauga battlefield unit in Fort Oglethorpe, GA, is an exceptionally well-preserved 5,500-acre Civil War landscape. Metal detecting is strictly prohibited in the park, but surrounding Walker County private farmland has produced Minié balls, artillery fragments, and CS/US military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 43
   },
   {
     "name": "Second Battle of Fort Fisher",
@@ -1717,7 +1723,8 @@
     "description": "On January 13-15, 1865, the largest combined land-sea assault in American history up to that point saw Admiral David Porter's fleet bombard Confederate Fort Fisher at the mouth of the Cape Fear River, NC, for three days before Union troops stormed its massive sand parapets in brutal hand-to-hand fighting. The fall of Fort Fisher closed Wilmington — the last major Confederate port — and cut the Confederacy's final lifeline to blockade runners. Fort Fisher State Historic Site near Kure Beach, NC, preserves the surviving portions of the earthen fortification on the barrier island, with a visitor center and walking trail along the earthworks. Metal detecting is not permitted in the state historic site, but the barrier island beaches have periodically revealed Civil War naval hardware and battle debris through erosion, and surrounding private land in Brunswick and New Hanover counties has produced period artifacts.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.87,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Knoxville",
@@ -1727,7 +1734,8 @@
     "description": "In November 1863, Confederate General James Longstreet besieged the Union garrison at Knoxville, TN, under General Ambrose Burnside, attempting to retake the city while Grant's forces were breaking the siege of Chattanooga. The siege was relatively ineffective, and Longstreet's attempted assault on Fort Sanders failed disastrously, with Confederate troops falling into an icy ditch and being cut down trying to scale the earthworks. Fort Sanders (now a Knoxville neighborhood named for the fort) is largely absorbed into the University of Tennessee campus area, with a small marker and preserved earthwork fragment. The broader Knoxville area saw intense Civil War operations in 1863, and private farmland on the city's fringes has produced Civil War Minié balls and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Fort Sanders",
@@ -1737,7 +1745,8 @@
     "description": "On November 29, 1863, Longstreet's Confederate forces launched a dawn assault on Fort Sanders — a Union earthwork strongpoint defending Knoxville, TN — but the attack collapsed in a well-engineered ditch covered with telegraph wire entanglements and swept by concentrated artillery fire. The attacking Confederate column lost over 800 men in minutes while Union defenders suffered minimal casualties, demonstrating how field fortifications could devastate even determined assaults. The Fort Sanders neighborhood in Knoxville, TN, near the University of Tennessee campus, preserves only traces of the original earthwork; a small historical marker identifies the site. Civil War Minié balls and military hardware have been found during construction projects in the area over the years.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of Mine Run",
@@ -1747,7 +1756,8 @@
     "description": "In late November 1863, General Meade advanced his Army of the Potomac across the Rapidan River in a flanking attempt that found Lee's Confederate army entrenched along Mine Run in Orange County, VA — the Union assault was called off after General William French's corps was delayed, and the armies retired for winter without a general engagement. The campaign foreshadowed the grinding attritional strategy of the 1864 Overland Campaign. The Mine Run battlefield is largely private farmland in Orange County, VA, with Civil War Trails markers along the roads. The Orange County and Culpeper County corridor has been exceptionally productive for private land metal detecting, yielding Minié balls, artillery fragments, and military hardware from multiple 1863 and 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 68
   },
   {
     "name": "Battle of Rappahannock Station",
