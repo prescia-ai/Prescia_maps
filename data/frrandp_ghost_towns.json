@@ -705,7 +705,8 @@
     "latitude": 45.3055,
     "longitude": -100.3004,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 42,
     "description": "LeBeau was the original county seat of Campbell County, South Dakota, a Missouri River community that thrived as an agricultural trading center and government seat in the late nineteenth century before the Missouri River repeatedly threatened and ultimately undermined the town's position. The town was inundated by Lake Oahe when Oahe Dam was completed in 1962 by the Army Corps of Engineers, creating one of the world's largest reservoirs by surface area and displacing communities throughout the Standing Rock Sioux and Cheyenne River Sioux territories. During extended droughts and seasonal drawdowns, portions of the LeBeau townsite have been exposed, revealing old streets and building foundations. The surrounding Lake Oahe reservoir area spans South and North Dakota with variable public access along its vast shoreline."
   },
   {
@@ -714,7 +715,8 @@
     "latitude": 39.300524,
     "longitude": -90.602332,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Columbiana was a small farming community in Randolph County, Illinois in the southeastern Illinois hill country that developed in the first half of the nineteenth century as a local trading and mill center for the surrounding small farms. The rugged terrain of Randolph and Randolph County's hill country preserved smaller, less commercially connected communities like Columbiana longer than the flat prairie regions, but the community ultimately declined as the regional economy consolidated. The site is now privately held rural land in southern Illinois. Randolph County's long settlement history, dating to the French colonial period along the Mississippi, makes southern Illinois a historically rich detecting region when access can be arranged."
   },
   {
@@ -723,7 +725,8 @@
     "latitude": 39.282131,
     "longitude": -90.578156,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.64,
+    "detecting_weight": 50,
     "description": "Boyle was a tiny agricultural community in Randolph County, Illinois that existed briefly as a local service point for the surrounding farming area in the nineteenth century, supporting a post office for a short time before the community dissolved as population concentrated in larger market towns. The site today is private farmland in the rolling terrain of southern Illinois's Randolph County. This region of Illinois, settled from the early American colonial period, can yield a variety of nineteenth-century artifacts in former community sites."
   },
   {
@@ -732,7 +735,8 @@
     "latitude": 39.115311,
     "longitude": -90.574722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Reardon was a small community in Madison County, Illinois in the American Bottom region near the confluence of the Missouri and Mississippi Rivers, one of the most historically significant geographic zones in North American history as the crossroads of French, Native American, and American frontier cultures. The community developed in the farming era following American settlement of the region but failed to sustain growth as larger American Bottom towns captured the regional commerce. The low-lying American Bottom landscape around Reardon has been subject to repeated Mississippi River floods that complicate both settlement and preservation. The region's long and rich history from the French colonial era through the American frontier period makes it archaeologically significant."
   },
   {
@@ -741,7 +745,8 @@
     "latitude": 46.447468,
     "longitude": -89.289966,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Choate was a small Michigan community in Mackinac County in the Upper Peninsula that developed during the lumbering era of the late nineteenth century when northern Michigan's forests were systematically clear-cut by industrial logging operations. Like dozens of Upper Peninsula lumber towns, Choate existed to support logging camp operations and faded rapidly once the timber was exhausted in the early twentieth century. The cut-over lands of Mackinac County were largely unsuccessful as farmland and have reverted to second-growth forest, much of it now in national forest or state-owned land. Old logging camp sites in the Upper Peninsula can yield period equipment, camp hardware, and personal items from the 1880s-1910s in areas where land access is permitted."
   },
   {
@@ -750,7 +755,8 @@
     "latitude": 38.409818,
     "longitude": -80.233219,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.65,
+    "detecting_weight": 52,
     "description": "Three Forks of Gauley was a small community at the junction of three tributaries of the Gauley River in Nicholas County, West Virginia, a remote mountain settlement that served the limited farming and timbering activities of the rugged Appalachian terrain in the mid-nineteenth century. The community never grew large given the challenging mountain landscape, and improved transportation elsewhere made the isolated location untenable for sustained commercial activity. The site today is within the Monongahela National Forest or surrounding private mountain land in one of West Virginia's most remote and scenic regions. The rugged terrain limits access but the forest and river corridor make for spectacular countryside."
   },
   {
@@ -759,7 +765,8 @@
     "latitude": 39.425659,
     "longitude": -105.981813,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Farnham was a small farming community in Prowers County, Colorado in the southeastern Colorado plains along the Arkansas River drainage that developed during the homesteading era of the late nineteenth century as settlers moved into the semiarid High Plains. Periodic drought, the collapse of the cattle market in 1886-1887, and the marginal nature of dryland farming in southeast Colorado combined to defeat most small communities like Farnham that lacked railroad connections. The site today is typical southeastern Colorado high plains farmland and ranchland, privately held. Former homestead communities in the Arkansas River valley region can yield late-Victorian domestic artifacts and farm implements with landowner permission."
   },
   {
@@ -768,7 +775,8 @@
     "latitude": 38.640251,
     "longitude": -106.360614,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Hancock was a small railroad supply community at the summit of the Continental Divide in Chaffee County, Colorado along the Denver, South Park & Pacific Railroad's Alpine Tunnel route, established in the 1880s as a supply and maintenance base for the railroad's challenging high-altitude operations through the 11,523-foot Alpine Tunnel. The railroad ceased operations through the tunnel in 1910 due to the prohibitive cost of maintaining the high-altitude route, and the railroad facilities and support community at Hancock were abandoned. The original site at roughly 11,000 feet in elevation in the Sawatch Range is accessible via a rough 4WD road and sits within San Isabel National Forest. Several log building remnants survive at the site, and the surrounding mine dumps and railroad grade are rich territory for period artifacts."
   },
   {
@@ -777,7 +785,8 @@
     "latitude": 41.93245,
     "longitude": -93.021686,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Van Cleve was a small agricultural community in Story County, Iowa that platted during the peak of Iowa's settlement era in the 1870s-1880s, briefly supporting a post office and local commercial services for surrounding farm families. The community never secured a railroad connection and was quickly outcompeted by railroad towns in Story County, which is home to Iowa State University and the prosperous city of Ames. The site today is private farmland in one of Iowa's most productive agricultural counties. Story County's long farming history from the 1850s onward makes former post office communities like Van Cleve productive sites for detecting with landowner permission."
   },
   {
@@ -786,7 +795,8 @@
     "latitude": 31.745102,
     "longitude": -97.099571,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Crush was a small Texas community in McLennan County that achieved its sole moment of fame on September 15, 1896, when William George Crush of the Missouri-Kansas-Texas Railroad staged a deliberate head-on collision of two locomotives as a publicity stunt, attracting an estimated 40,000 spectators — the largest gathering in Texas history to that date. The collision was catastrophically more violent than anticipated, with the boilers exploding and killing two spectators and injuring many more; Crush was fired the same day but rehired the next. The site near West, Texas (McLennan County) was never a permanent community and returned to farmland immediately after the event. The historical significance of the site is documented only by markers, as no community infrastructure was ever built there."
   },
   {
