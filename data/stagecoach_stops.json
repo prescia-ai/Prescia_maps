@@ -6,7 +6,8 @@
     "longitude": -92.7796,
     "description": "Tipton, Missouri served as the eastern terminus of the Butterfield Overland Mail route beginning in 1858, where passengers arriving by the Pacific Railroad transferred to stagecoaches for the grueling 2,800-mile journey to San Francisco. The small depot town buzzed with activity as mail, passengers, and freight were loaded onto Concord coaches and celerity wagons bound for the western frontier. Stagecoach stations like Tipton saw heavy foot traffic and commerce for years, making them prime locations for finding period coins, buttons, and personal effects lost by thousands of travelers passing through over the years.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.78,
+    "detecting_weight": 52
   },
   {
     "name": "Springfield, MO",
@@ -15,7 +16,8 @@
     "longitude": -93.2923,
     "description": "Springfield, Missouri was a major station on the Butterfield Overland Mail route where coaches stopped for fresh teams and passengers took meals during the multi-day journey westward. The town served as an important provisioning point where stage operators maintained corrals, stock, and repair facilities for the demanding overland service. Metal detectorists find this a rewarding site as the constant flow of travelers, teamsters, and station workers over several years resulted in numerous lost coins, buttons, pocket items, and horse tack scattered around the old station grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.76,
+    "detecting_weight": 44
   },
   {
     "name": "Fayetteville, AR",
@@ -24,7 +26,8 @@
     "longitude": -94.1574,
     "description": "Fayetteville, Arkansas served as a crucial stop on the Butterfield Overland Mail route as coaches wound through the Ozark Mountains on their way to Indian Territory and Texas. The station provided a welcome rest for passengers after navigating the challenging mountain terrain, with facilities for changing teams and taking refreshment. The heavy traffic through this station between 1858 and 1861 makes it an excellent metal detecting location, with coins, personal items, and stage hardware frequently lost in the station yard and surrounding areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.75,
+    "detecting_weight": 46
   },
   {
     "name": "Fort Smith, AR",
@@ -33,7 +36,8 @@
     "longitude": -94.3985,
     "description": "Fort Smith, Arkansas was one of the most important stops on the Butterfield Overland Mail route, serving as the last major settlement before entering Indian Territory to the west. The military fort and adjacent civilian town provided substantial facilities for the stage line including corrals, shops, and lodging, with coaches arriving and departing on strict schedules. As both a military installation and busy stagecoach junction operating for years, Fort Smith offers exceptional metal detecting potential with military artifacts, stage-related hardware, and countless personal items from soldiers, travelers, and settlers concentrated in the historic fort and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.82,
+    "detecting_weight": 48
   },
   {
     "name": "Colbert's Ferry",
@@ -42,7 +46,8 @@
     "longitude": -96.5814,
     "description": "Colbert's Ferry was the critical Red River crossing point for the Butterfield Overland Mail where coaches transferred from Arkansas into Texas via ferry barge operated by the Chickasaw Nation. This bottleneck location saw every westbound and eastbound coach wait for river crossing, with passengers disembarking while their vehicles were ferried across the often-turbulent waters. The combination of a busy ferry operation and stage station makes this site highly productive for metal detecting, with lost coins, buttons, and personal effects from thousands of anxious travelers concentrated along the riverbanks and waiting areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.82,
+    "detecting_weight": 72
   },
   {
     "name": "Sherman, TX",
@@ -51,7 +56,8 @@
     "longitude": -96.6089,
     "description": "Sherman, Texas served as an important relay station on the Butterfield Overland Mail route as it crossed North Texas, providing fresh horses and brief respite for passengers on the demanding overland journey. The station maintained corrals and stock facilities to support the regular schedule of eastbound and westbound coaches passing through the growing Texas settlement. Metal detectorists value these Texas prairie stations where dropped coins, harness fittings, and traveler's personal items accumulated around the busy relay facilities during the line's years of operation.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 50
   },
   {
     "name": "Gainesville, TX",
@@ -60,7 +66,8 @@
     "longitude": -97.1331,
     "description": "Gainesville, Texas operated as a Butterfield Overland Mail relay station in North Texas, where stage crews changed horses and passengers stretched their legs during brief stops. The station sat along the critical route segment connecting Fort Smith to the Texas frontier forts farther west, seeing regular traffic from 1858 to 1861. Relay stations like Gainesville are prime metal detecting sites where the constant activity of hostlers, drivers, and passengers over several years resulted in numerous lost coins, buttons, and stage hardware around the corrals and station buildings.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.71,
+    "detecting_weight": 55
   },
   {
     "name": "Fort Belknap, TX",
@@ -69,7 +76,8 @@
     "longitude": -98.896,
     "description": "Fort Belknap, Texas served as a vital Butterfield Overland Mail station at the abandoned military fort on the Texas frontier, providing protection and facilities in an area threatened by Comanche raids. The stage company utilized the existing fort buildings for their operations, maintaining horses, equipment, and armed guards to protect coaches traveling through this dangerous section of the route. The combination of military and stage operations makes Fort Belknap exceptional for metal detecting, with army buttons, buckles, weapons parts, horseshoes, and traveler's coins scattered across the fort grounds and station yard.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.88,
+    "detecting_weight": 80
   },
   {
     "name": "Fort Chadbourne, TX",
@@ -78,7 +86,8 @@
     "longitude": -100.5301,
     "description": "Fort Chadbourne, Texas was a key Butterfield Overland Mail station located at another abandoned military post in West Texas, where coaches stopped for fresh teams and passengers found shelter at this isolated frontier outpost. The stage line converted the fort's remaining structures into station facilities, maintaining stock and equipment needed to traverse the arid country between settlements. Metal detectorists prize these combined fort-and-station sites where military artifacts like buttons, cartridges, and buckles mix with stage-era coins, hardware, and personal items from years of overland traffic.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.87,
+    "detecting_weight": 82
   },
   {
     "name": "Fort Concho, TX",
@@ -87,7 +96,8 @@
     "longitude": -100.4395,
     "description": "Fort Concho near San Angelo, Texas served as an important Butterfield Overland Mail station where the route passed through this key military installation protecting West Texas settlements and trails. The active fort provided security for stage operations, with coaches stopping to change teams and passengers receiving protection from hostile encounters in this remote region. The extensive military and civilian activity at Fort Concho creates outstanding metal detecting opportunities, with army artifacts, stage hardware, coins, and personal effects concentrated around the fort buildings and adjacent station grounds.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 58
   },
   {
     "name": "Fort Stockton, TX",
