@@ -1217,7 +1217,8 @@
     "description": "On June 29, 1862, the Army of the Potomac fought a rear-guard action at Savage's Station on the Richmond and York River Railroad as it retreated toward the James River, leaving behind a field hospital of 2,500 wounded men who fell into Confederate hands — a humanitarian tragedy of the Seven Days campaign. Confederate General John Magruder's attack was repulsed, but the Union army continued its retreat. The battlefield in the White Oak Swamp area of Henrico County, VA, is now within the Richmond metropolitan area, largely developed. The White Oak Swamp corridor has produced Civil War relics during private land searches, including Minié balls, buttons, and accoutrements from the retreat.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Glendale (White Oak Swamp)",
@@ -1227,7 +1228,8 @@
     "description": "On June 30, 1862, the most dangerous day of the Seven Days Battles saw coordinated Confederate attacks converge on the Union army's retreating columns at Glendale and White Oak Swamp in Henrico County, VA, with A.P. Hill's and Longstreet's divisions driving into the Union flank — nearly cutting the army in two before the line was stabilized by desperate fighting. Stonewall Jackson inexplicably failed to press his attack at White Oak Swamp, allowing the Union army to escape what could have been annihilation. Richmond National Battlefield Park's Glendale/Malvern Hill unit preserves portions of the terrain, and private land in the surrounding area has produced significant Civil War artifact assemblages.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Malvern Hill",
@@ -1237,7 +1239,8 @@
     "description": "On July 1, 1862, the final battle of the Seven Days saw Robert E. Lee order repeated frontal assaults on the formidable Union artillery position atop Malvern Hill at Harrison's Landing, VA — massed Union cannon firing case shot and canister devastated the attacking Confederate brigades, killing or wounding 5,600 men in a battle D.H. Hill called 'not war, it was murder.' Despite the lopsided tactical victory, McClellan retreated to Harrison's Landing the following day, effectively ending the Peninsula Campaign. Richmond National Battlefield Park's Malvern Hill unit preserves the crest and approach terrain in Charles City County, VA, with excellent interpretive interpretation. The surrounding private farmland in Charles City and Henrico counties has yielded Civil War artillery shell fragments, Minié balls, canister rounds, and military equipment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Cedar Mountain",
@@ -1247,7 +1250,8 @@
     "description": "On August 9, 1862, Confederate General Stonewall Jackson's corps attacked a Federal advance force under General Nathaniel Banks at Cedar Mountain (Slaughter Mountain) in Culpeper County, VA, in a hard-fought engagement where Banks's outnumbered men briefly broke Jackson's line before Confederate reinforcements restored the position. The battle was a prelude to the Second Manassas campaign and demonstrated the aggressive Confederate strategy that would characterize Lee's summer 1862 operations. Cedar Mountain Battlefield is partially preserved as a Virginia Civil War Trail site in Culpeper County, with interpretive markers and access to the mountain. The surrounding Culpeper County private farmland — one of the most intensively fought-over regions of the entire war — has produced large quantities of Civil War relics including Minié balls, artillery fragments, buttons, and belt plates.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 65
   },
   {
     "name": "Second Battle of Bull Run (Second Manassas)",
@@ -1257,7 +1261,8 @@
     "description": "On August 28-30, 1862, Robert E. Lee and Stonewall Jackson executed one of the most brilliant strategic combinations in Civil War history at Second Manassas, with Jackson drawing the Union army into battle on the old First Manassas ground while Longstreet secretly massed his corps on the Union flank — Longstreet's devastating assault on August 30 crushed John Pope's Army of Virginia and sent it fleeing back toward Washington. Manassas National Battlefield Park preserves both battlefields with driving tours, earthworks, and interpretive walking trails across the rolling Virginia piedmont. Metal detecting is strictly prohibited in the national park, but surrounding Prince William and Fauquier County private land has been exceptionally productive, yielding Minié balls, artillery fragments, US and CS belt plates, buttons, and enormous quantities of camp debris.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 43
   },
   {
     "name": "Battle of Chantilly (Ox Hill)",
@@ -1267,7 +1272,8 @@
     "description": "On September 1, 1862, a violent thunderstorm battle near Chantilly (Ox Hill) in Fairfax County, VA, saw Confederate forces under A.P. Hill attempt to cut off the retreating Union army, resulting in the deaths of two Union generals — Philip Kearny (killed accidentally riding into Confederate lines) and Isaac Stevens (shot through the head carrying a flag) — while the Confederates were repulsed. The battle effectively ended Lee's pursuit after Second Manassas. The Ox Hill (Chantilly) Battlefield Park in Fairfax County, VA, is a small urban park preserving a fragment of the original battlefield that survived development. Metal detecting is not permitted in the park, but the broader Fairfax County corridor has yielded Civil War relics during authorized private land investigations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of South Mountain",
@@ -1277,7 +1283,8 @@
     "description": "On September 14, 1862, three days before Antietam, Union forces forced three gaps through the South Mountain range in Maryland — Turner's Gap, Fox's Gap, and Crampton's Gap — against Confederate defenders, in a battle that revealed Lee's invasion plans (captured as 'Special Orders 191') and foreshadowed the catastrophic events at Antietam. The fighting at Fox's Gap was particularly brutal, with the death of Confederate General Samuel Garland and the wounding of several Union officers. South Mountain State Battlefield in Frederick and Washington counties, MD, preserves portions of the three gaps along the Appalachian Trail corridor, with earthwork traces still visible in the wooded terrain. Metal detecting is prohibited in the state park, but surrounding Maryland mountain private farmland has produced Civil War relics from the September 1862 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Harpers Ferry",
@@ -1287,7 +1294,8 @@
     "description": "On September 12-15, 1862, Stonewall Jackson besieged and captured the Union garrison at Harpers Ferry, WV, with 12,500 men — the largest single Union surrender of the war — after surrounding the town from the heights of Loudoun, Maryland, and Bolivar heights. The capture freed Lee's army to concentrate at Antietam, though it nearly cost him the campaign when McClellan moved faster than expected. Harpers Ferry National Historical Park preserves the historic armory town at the confluence of the Potomac and Shenandoah rivers, with extensive 19th-century buildings and interpretive programs. Metal detecting is prohibited in the national park, but the surrounding Jefferson County, WV, private farmland on the approaches to Harpers Ferry has yielded Civil War Minié balls, buttons, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Antietam (Sharpsburg)",
@@ -1297,7 +1305,8 @@
     "description": "The Battle of Antietam on September 17, 1862, remains the bloodiest single day in American military history, with approximately 23,000 combined casualties as McClellan's Army of the Potomac attacked Lee's Army of Northern Virginia along Antietam Creek in Maryland, fighting through Cornfield, Bloody Lane, and the Lower Bridge. Despite tactical opportunities to destroy Lee's army against the Potomac, McClellan's cautious generalship allowed the Confederates to escape — but the Union's qualified 'victory' gave Lincoln the platform to issue the Emancipation Proclamation. Antietam National Battlefield near Sharpsburg, MD, is one of America's most intact Civil War battlefields, with miles of preserved farmland, the Sunken Road, Burnside Bridge, and the national cemetery. Metal detecting is strictly prohibited in the national park, but surrounding Washington County private land has been remarkably productive — Minié balls, artillery fragments, US and CS belt plates, buttons, and canteen fragments have all been documented on private land in the campaign corridor.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.95,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Perryville",
@@ -1307,7 +1316,8 @@
     "description": "On October 8, 1862, the largest Civil War battle in Kentucky was fought at Perryville when Confederate General Braxton Bragg's invading army clashed with the Union Army of the Ohio under General Don Buell along Doctor's Creek in Boyle County. An acoustic shadow caused by atmospheric conditions meant that Buell and most of his army heard nothing of the fighting taking place nearby, delaying his response. Perryville Battlefield State Historic Site preserves approximately 1,000 acres of the original terrain with earthworks, the H.P. Bottom House, and a small museum. Metal detecting is prohibited in the state park, but surrounding Boyle County private farmland has produced Civil War Minié balls, artillery fragments, CS and US buttons, and belt plates from this overlooked but significant western theater battle.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 60
   },
   {
     "name": "Battle of Fredericksburg",
