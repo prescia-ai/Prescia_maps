@@ -5270,7 +5270,8 @@
     "latitude": 34.379167,
     "longitude": -100.061389,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Kirkland was a small farming and ranching community in Childress County, Texas in the Rolling Plains near the Red River, established in the early 20th century as the Texas Panhandle region was opened to dryland farming following the removal of the great cattle herds. The community had a school and local store serving surrounding farm families who grew cotton and grain sorghum on the red clay soils. Recurring droughts and the Dust Bowl years of the 1930s devastated the agricultural economy, and Kirkland's population dwindled significantly. The Childress County region, near the site of early cattle trail history and the Battle of the Pease River, holds detecting potential on private land for period coins, homestead artifacts, and early 20th-century farm implements."
   },
   {
     "name": "Narcisso, TX",
@@ -5278,7 +5279,8 @@
     "latitude": 34.000278,
     "longitude": -100.473333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Narcisso was a small rural community in a remote area of Texas, serving a scattered ranching or farming population during the late 19th and early 20th centuries in a region where isolation and limited resources kept community development minimal. Like many of Texas's smallest communities, Narcisso existed primarily as a local post office designation and school district before the consolidation of rural life eliminated the need for such small-scale community identities. The Texas ranch country surrounding the former community site holds detecting potential for period artifacts from the ranch and homestead era, including domestic coins, ranch hardware, and personal items from the active occupation period."
   },
   {
     "name": "Jud, TX",
@@ -5286,7 +5288,8 @@
     "latitude": 33.282319,
     "longitude": -99.95843,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Jud was a small farming community in Stonewall County, Texas in the rolling mesquite prairie country of the Rolling Plains south of Aspermont, established in the early 20th century as dryland farming expanded across the former open range country following the introduction of windmill technology and new drought-resistant crops. The community had a school and local store during its active years, but recurring droughts and declining farm prices through the mid-20th century steadily reduced the population. Stonewall County's dryland farming history, overlaid on a landscape of earlier frontier ranching and cattle trailing, offers detecting on private land for period homestead artifacts and early 20th-century agricultural items."
   },
   {
     "name": "Rath City, TX",
@@ -5294,7 +5297,8 @@
     "latitude": 33.009722,
     "longitude": -100.181667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rath City was a frontier buffalo hunters' camp and trading post in Stonewall County, Texas established around 1876-1877 by Charles Rath to supply the final years of the great southern buffalo slaughter on the Texas plains. The camp served as a supply base for hunters working the last great buffalo herds in the Clear Fork of the Brazos country, and briefly hosted a significant transient population of hunters, skinners, and traders. When the buffalo were gone by 1878-1879, Rath City was immediately abandoned. The site near present-day Hamlin holds significant historical importance as one of the last frontier buffalo hunting camps in Texas, and detecting on private land in the area may yield period buffalo-era artifacts, trade goods, and frontier coins."
   },
   {
     "name": "Anarene, TX",
@@ -5302,7 +5306,8 @@
     "latitude": 33.485,
     "longitude": -98.665833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Anarene was a small oil field and ranching community in Archer County, Texas established in the early 20th century during the first oil boom in the Texas Rolling Plains country. The community served oil field workers and ranch hands in this transitional landscape between the farming country to the east and the ranch country to the west, having a school, church, and local store during its active years. Declining oil production and rural population shifts through the mid-20th century emptied most of the town. Archer County's history of frontier ranching, oil discovery, and early 20th-century settlement makes its private ranchland productive detecting territory for period homestead artifacts, oil hardware, and early 20th-century coins."
   },
   {
     "name": "Biggers, TX",
@@ -5310,7 +5315,8 @@
     "latitude": 33.196667,
     "longitude": -96.546667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Biggers was a small farming community in Bowie County, Texas in the Red River bottomland country of far northeast Texas near Texarkana, established by farming families who worked the fertile alluvial soils of the Red River valley in the late 19th and early 20th centuries. The community had a local school and church serving the rural population before being absorbed into the expanding suburban fringe of Texarkana. Bowie County's Red River bottomlands, one of the most fertile agricultural areas in Texas, hold a rich archaeological record from thousands of years of human occupation, and detecting on private agricultural land can yield artifacts ranging from early historic to pre-Columbian periods."
   },
   {
     "name": "Elizabethtown, TX",
@@ -5318,7 +5324,8 @@
     "latitude": 33.021667,
     "longitude": -97.276667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Elizabethtown was a small agricultural community in Cass County, Texas in the piney woods and bottomland country of northeast Texas near Atlanta, established by farming families in the post-Civil War era as the region was resettled after the destruction of the war. Cass County's combination of fertile bottomlands, pine timber resources, and post-Civil War freedmen communities makes its rural landscape historically rich. The former Elizabethtown community area is now farm and woodland in the Cass County countryside. Detecting on private land near former homestead sites in Cass County can yield period domestic artifacts, agricultural implements, and late Victorian coins from the community's active years."
   },
   {
     "name": "Camey Spur, TX",
@@ -5326,7 +5333,8 @@
     "latitude": 33.084792,
     "longitude": -96.856242,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Camey Spur was a small ranching community or railroad shipping point in West Texas established to facilitate the movement of cattle and agricultural products in a region where the railroad determined which settlements survived and which died. The community existed primarily as a service point for the surrounding ranch operations, with perhaps a loading facility, small store, and minimal permanent housing. When railroad operations changed and ranching economies shifted, such spur communities quickly lost their reason for existence. The West Texas ranch country around former railroad spur communities holds detecting potential on private land for late 19th through early 20th-century ranch hardware, railroad artifacts, and period coinage."
   },
   {
     "name": "Lawson, Mesquite, TX",
@@ -5334,7 +5342,8 @@
     "latitude": 32.702222,
     "longitude": -96.565,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lawson near Mesquite was a small community in Dallas County, Texas that existed on the rural fringes of what is now the Dallas metropolitan area, serving farming families in the late 19th and early 20th centuries before being absorbed into the suburban expansion radiating from Dallas and Mesquite. Dallas County's transformation from agricultural to urban landscape was among the most dramatic in Texas, swallowing dozens of small rural communities through the 20th century. Today the former Lawson area is completely developed. The few remaining archaeological traces of the settlement period are buried under suburban infrastructure, making detecting opportunities extremely limited."
   },
   {
     "name": "Illinois Bend, TX",
@@ -5342,7 +5351,8 @@
     "latitude": 33.881667,
     "longitude": -97.487222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Illinois Bend was a small farming community in Montague County, Texas in the Red River bottomlands, established in the antebellum era by settlers from Illinois who gave the bend in the Red River its distinctive name. The fertile Red River bottomlands attracted early settlers from the Upper South and Midwest, and communities like Illinois Bend served as local trading and social centers for the surrounding farming households. The community maintained some identity through the 19th century before being absorbed into the broader rural landscape. Montague County's Red River frontier history, including early settler conflicts with Comanche raiders, makes its farmland rich in period artifacts accessible on private land."
   },
   {
     "name": "Belle Plain, TX",
