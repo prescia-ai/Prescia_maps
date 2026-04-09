@@ -7610,7 +7610,8 @@
     "latitude": 43.627204,
     "longitude": -70.212714,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Williams was a Spanish-American War-era coastal defense installation on Cape Elizabeth, Cumberland County, Maine, established in 1872 and expanded significantly from 1898 through World War II as part of Portland Harbor's outer defensive ring. The fort featured massive reinforced concrete gun batteries mounting twelve and sixteen-inch disappearing guns capable of defending against naval attack, along with barracks, administration buildings, and military infrastructure spread across a spectacular oceanfront promontory. Decommissioned after World War II and transferred to the town of Cape Elizabeth, the former fort is now Fort Williams Park — one of Maine's most visited public parks, featuring the iconic Portland Head Light lighthouse, the ruins of the Goddard Mansion, and the concrete gun batteries open to public exploration. The park is freely accessible and the gun battery ruins are excellent for exploring mid-century military engineering, though artifact collection from this public park is not permitted."
   },
   {
     "name": "Armour's Warehouse",
@@ -7618,7 +7619,8 @@
     "latitude": 41.315002,
     "longitude": -88.611643,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Armour's Warehouse in Morris, Grundy County, Illinois was a commercial storage facility associated with the Armour meatpacking empire, one of Chicago's 'Big Four' meatpackers that dominated American meat production from the 1870s through the mid-twentieth century and operated an extensive network of refrigerated distribution warehouses along Illinois river and rail corridors. The Morris area along the Illinois River was a key link in the Chicago-based meatpacking distribution network that moved dressed beef and pork from Chicago's Union Stock Yards to eastern markets. The warehouse reflects the infrastructure of industrial-era food distribution before modern refrigerated trucking made fixed cold-storage depots less essential. Former meatpacking warehouse sites along the Illinois River corridor may retain period crating hardware, commercial metalwork, and early twentieth century commercial artifacts."
   },
   {
     "name": "Wasioja Seminary Ruins",
@@ -7626,7 +7628,8 @@
     "latitude": 44.077132,
     "longitude": -92.816263,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Wasioja Seminary in Wasioja, Dodge County, Minnesota was an academic institution established in 1860 by German Protestant settlers in the fertile Zumbro River valley, part of the wave of educational institution-founding that accompanied the rapid settlement of southern Minnesota during the late 1850s and early 1860s. The seminary provided secondary and college-level education to the surrounding agricultural community but struggled financially from its founding, and the Civil War draft, which drew away its students and faculty, proved a fatal blow — the school never fully recovered and closed within a few years of opening. Today limestone ruins of the seminary building stand as a testament to the ambitious civic spirit of Minnesota's frontier generation, surrounded by farmland that has barely changed since the 1860s. The ruins are on private land in rural Dodge County, and the surrounding farmland may retain artifacts from the school's brief period of operation."
   },
   {
     "name": "Ruins of old building",
@@ -7634,7 +7637,8 @@
     "latitude": 45.974654,
     "longitude": -94.867209,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "These ruins of an old building near Kimball, Stearns County, Minnesota likely represent one of the hundreds of farmsteads, agricultural processing facilities, or small commercial buildings established during the intensive settlement of central Minnesota's granite-and-lake country from the 1880s through the early twentieth century. Stearns County was settled primarily by German Catholic immigrants who built a distinctive agricultural landscape of family farms, rural parishes, and small market towns along the Great Northern Railway corridor. The stone and brick construction visible in rural Minnesota ruins typically reflects the German and Scandinavian tradition of solid masonry farm buildings meant to last generations, contrasting with the wooden structures of less permanent frontier settlement. Rural central Minnesota ruins of this period may yield period farm implements, household goods, and early twentieth century agricultural hardware from the immigrant farming communities that broke this landscape."
   },
   {
     "name": "Spivey Building",
@@ -7642,7 +7646,8 @@
     "latitude": 38.626437,
     "longitude": -90.158948,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Spivey Building in St. Louis, Missouri was a commercial structure in the central city district reflecting St. Louis's complex commercial history as a gateway city that reached its peak prominence in the early twentieth century before losing population and economic vitality to suburban sprawl and Sunbelt competition. St. Louis's downtown commercial district saw dramatic change throughout the twentieth century, with historic structures alternating between active use, abandonment, and selective redevelopment as the city struggled to reinvent its urban core. The building's location near the central riverfront places it in one of St. Louis's historically significant commercial corridors, where the city's wholesale, banking, and commercial trade infrastructure was concentrated during the gilded age of river commerce. Urban archaeological investigation of former commercial buildings in St. Louis often reveals the layered material culture of a major American city across multiple centuries of occupation."
   },
   {
     "name": "Gebhard Brewery Building",
@@ -7650,7 +7655,8 @@
     "latitude": 41.357309,
     "longitude": -88.430172,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gebhard Brewing Company in Ottawa, LaSalle County, Illinois was one of the dozens of small-city Midwestern breweries established by German immigrant entrepreneurs in the post-Civil War decades, taking advantage of Illinois River towns' access to ice from the river, grain from surrounding farms, and growing immigrant workforces with an appetite for lager beer. Ottawa was a thriving Illinois River city during the nineteenth century, serving as a commercial and industrial hub for LaSalle County and the surrounding Illinois River valley, and its German immigrant community supported the local brewing industry enthusiastically. Like most small regional breweries, Gebhard's operation ceased during Prohibition and never reopened in the postwar consolidation era dominated by national brands. Former brewery sites in Illinois River towns are productive for embossed stoneware crockery, period glassware, brewery tokens, and late-nineteenth century artifacts from the surrounding brewery district."
   },
   {
     "name": "Stanley R. Mickelsen Safeguard Complex",
@@ -7658,7 +7664,8 @@
     "latitude": 48.588704,
     "longitude": -98.365364,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Stanley R. Mickelsen Safeguard Complex near Nekoma, Cavalier County, North Dakota was the world's only operational Anti-Ballistic Missile (ABM) defense system in American history, built at a cost of approximately $6 billion between 1970 and 1975 to defend Minuteman ICBM silos against Soviet nuclear warheads. The site featured the iconic pyramid-shaped Missile Site Radar building — one of the most distinctive Cold War structures ever built in America — along with underground missile silos housing Sprint and Spartan interceptor missiles, and an elaborate network of underground command facilities. The entire complex operated for only 24 hours before Congress shut it down in 1976 as too expensive and strategically flawed. The facility is partially accessible and the pyramid radar structure still stands as a remarkable artifact of Cold War nuclear deterrence strategy; the site is on private land but tours are sometimes available."
   },
   {
     "name": "Joliet Munitions Plant",
@@ -7666,7 +7673,8 @@
     "latitude": 41.372723,
     "longitude": -88.115983,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Joliet Army Ammunition Plant (also called the Elwood Ordnance Plant) in Elwood, Will County, Illinois was one of the largest munitions manufacturing facilities ever built, covering nearly 36,000 acres across Will County and producing millions of artillery shells, bombs, and TNT filler for World War II and the Korean War. Built in 1940-1941 under the urgency of wartime mobilization, the facility employed tens of thousands of workers at its peak and operated as a virtual city with its own rail system, fire departments, and infrastructure networks spread across the Kankakee River bottomlands. The plant closed after the Korean War and portions were converted to the Midewin National Tallgrass Prairie, one of the first national grassland restorations in the eastern United States, where bison were reintroduced in 2015. The prairie restoration area is open to hiking and wildlife viewing, and the foundations and remnants of munitions buildings are visible throughout; collection of artifacts is prohibited on federal land."
   },
   {
     "name": "Indiana Army Ammunition Plant",
@@ -7674,7 +7682,8 @@
     "latitude": 38.42357,
     "longitude": -85.657406,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Indiana Army Ammunition Plant (INAAP) near Charlestown, Clark County, Indiana was a major World War II-era munitions production facility established in 1940 along the Ohio River, eventually covering over 10,000 acres and employing 20,000 workers producing smokeless powder, propellants, and explosive loads for artillery and naval ammunition. The facility operated through World War II and the Korean War, with production surges during the Vietnam War era before the plant began winding down operations in the 1990s and was formally placed on the BRAC closure list. Large portions of the former plant have been transferred to the Charlestown State Park and the Indiana National Guard, with the western section becoming a remarkable natural area where the abandoned industrial infrastructure is being reclaimed by forest and wildlife. The public access areas of Charlestown State Park allow exploration of the surrounding landscape, but the remaining active National Guard areas are restricted."
   },
   {
     "name": "Sunflower Army Ammunition Plant",
@@ -7682,7 +7691,8 @@
     "latitude": 38.932492,
     "longitude": -95.007822,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sunflower Army Ammunition Plant near De Soto, Johnson County, Kansas was a World War II-era smokeless powder and propellant production facility established in 1942 on the broad Kansas plains, covering approximately 9,000 acres and employing thousands of workers in 850 individual production, storage, and support buildings during its peak operations. The plant produced propellants for small arms ammunition, artillery shells, and rocket motors through World War II, Korea, and Vietnam before being declared surplus in the 1990s under BRAC-related closures. Large portions of the former plant have been transferred for public and private development, including the Sunflower Development — a mixed-use conversion of former industrial land near the original townsite of Lawrence — while other sections have been restored as wildlife habitat. Former ammunition plant lands contain concrete igloos (ammunition storage bunkers), rail networks, and processing building foundations across a vast Kansas grassland landscape."
   },
   {
     "name": "Kingsbury Ordinance Plant",
