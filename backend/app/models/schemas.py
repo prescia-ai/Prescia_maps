@@ -39,6 +39,8 @@ class LocationType(str, enum.Enum):
     trading_post = "trading_post"
     shipwreck = "shipwreck"
     pony_express = "pony_express"
+    abandoned_church = "abandoned_church"
+    historic_brothel = "historic_brothel"
 
 
 class LinearFeatureType(str, enum.Enum):

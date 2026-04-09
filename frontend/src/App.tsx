@@ -30,6 +30,7 @@ const DEFAULT_LAYERS: LayerState = {
   fairground:      true,
   school:          true,
   spring:          true,
+  locale:          true,
   mission:         true,
   trading_post:    true,
   shipwreck:        true,

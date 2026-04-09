@@ -122,6 +122,26 @@ _LOA_USER_AGENT = (
     "https://github.com/prescia-ai/Prescia_maps)"
 )
 
+# Hardcoded state ghost-town page slugs for Legends of America.
+# These follow the pattern /ghost-towns/{slug}/ on legendsofamerica.com.
+# Used as a reliable fallback when dynamic link-discovery finds fewer than
+# the expected number of state pages.
+_LOA_STATE_SLUGS: List[str] = [
+    "al-ghosttowns", "ak-ghosttowns", "az-ghosttowns", "ar-ghosttowns",
+    "ca-ghosttowns", "co-ghosttowns", "ct-ghosttowns", "de-ghosttowns",
+    "fl-ghosttowns", "ga-ghosttowns", "id-ghosttowns", "il-ghosttowns",
+    "in-ghosttowns", "ia-ghosttowns", "ks-ghosttowns", "ky-ghosttowns",
+    "la-ghosttowns", "me-ghosttowns", "md-ghosttowns", "ma-ghosttowns",
+    "mi-ghosttowns", "mn-ghosttowns", "ms-ghosttowns", "mo-ghosttowns",
+    "mt-ghosttowns", "ne-ghosttowns", "nv-ghosttowns", "nh-ghosttowns",
+    "nj-ghosttowns", "nm-ghosttowns", "ny-ghosttowns", "nc-ghosttowns",
+    "nd-ghosttowns", "oh-ghosttowns", "ok-ghosttowns", "or-ghosttowns",
+    "pa-ghosttowns", "ri-ghosttowns", "sc-ghosttowns", "sd-ghosttowns",
+    "tn-ghosttowns", "tx-ghosttowns", "ut-ghosttowns", "vt-ghosttowns",
+    "va-ghosttowns", "wa-ghosttowns", "wv-ghosttowns", "wi-ghosttowns",
+    "wy-ghosttowns",
+]
+
 # Ghosttowns.com base
 _GT_BASE = "https://www.ghosttowns.com"
 
@@ -307,6 +327,10 @@ async def _scrape_legends_of_america(
     records: List[Dict[str, Any]] = []
     headers = {"User-Agent": _LOA_USER_AGENT}
 
+    # Try to discover state links dynamically from the index page first.
+    # Fall back to the hardcoded slug list when fewer than 10 pages are found
+    # (the index page structure changes occasionally).
+    state_links: List[str] = []
     try:
         rate_limiter.wait()
         response = await client.get(
@@ -319,8 +343,7 @@ async def _scrape_legends_of_america(
         # LOA state pages follow a consistent pattern like:
         #   /ghost-towns/al-ghosttowns.html  (two-letter state code prefix)
         # Reject generic navigation links that happen to contain /ghost-towns/.
-        seen_urls = set()
-        state_links = []
+        seen_urls: Set[str] = set()
         for a_tag in soup.find_all("a", href=True):
             href = a_tag["href"]
             if _LOA_STATE_PAGE_RE.search(href):
@@ -330,63 +353,101 @@ async def _scrape_legends_of_america(
                     seen_urls.add(href)
                     state_links.append(href)
 
-        logger.info("Found %d state pages on Legends of America.", len(state_links))
+        logger.info(
+            "Found %d state pages on Legends of America (dynamic).", len(state_links)
+        )
 
-        for state_url in state_links:
-            if limit is not None and len(records) >= limit:
-                break
-
-            try:
-                rate_limiter.wait()
-                resp = await client.get(state_url, headers=headers)
-                resp.raise_for_status()
-                state_soup = BeautifulSoup(resp.text, "lxml")
-
-                # Target the main content area to avoid nav/sidebar junk.
-                # LOA pages typically wrap article content in <article>, <main>,
-                # or a div with id/class containing "content" or "entry".
-                content_area = (
-                    state_soup.find("article")
-                    or state_soup.find("main")
-                    or state_soup.find(id=re.compile(r"content|entry|article", re.I))
-                    or state_soup.find(class_=re.compile(r"entry-content|post-content|article-body", re.I))
-                    or state_soup  # fall back to whole page if no wrapper found
-                )
-
-                # Extract ghost town names from list items and paragraphs
-                # within the identified content area only.
-                for li in content_area.find_all(["li", "p"]):
-                    # Skip elements that are inside nav, header, footer, or aside
-                    if li.find_parent(["nav", "header", "footer", "aside"]):
-                        continue
-                    text = li.get_text(strip=True)
-                    if len(text) > 10 and len(text) < 500:
-                        # Try to extract a town name (first bold text or first link)
-                        name_tag = li.find(["b", "strong", "a"])
-                        if name_tag:
-                            town_name = name_tag.get_text(strip=True)
-                            # Filter out nav/sidebar junk
-                            if (
-                                len(town_name) > 2
-                                and len(town_name) <= 60
-                                and "/" not in town_name
-                                and "&" not in town_name
-                                and town_name.lower().strip() not in _LOA_JUNK_NAMES
-                                and any(c.isalpha() for c in town_name)
-                                # Reject strings that look like site navigation
-                                and not _LOA_NAV_WORDS_RE.search(town_name)
-                            ):
-                                records.append({
-                                    "name": town_name,
-                                    "description": text[:500],
-                                    "source": "legends_of_america",
-                                })
-            except (httpx.HTTPError, Exception) as exc:
-                logger.debug("Failed to scrape %s: %s", state_url, exc)
-                continue
+        # If dynamic discovery found fewer than 10 pages the index structure
+        # has likely changed — supplement with the hardcoded slug list.
+        if len(state_links) < 10:
+            logger.info(
+                "Dynamic discovery found only %d page(s); supplementing with "
+                "hardcoded state slug list (%d slugs).",
+                len(state_links), len(_LOA_STATE_SLUGS),
+            )
+            existing = {u.rstrip("/").rstrip(".html") for u in state_links}
+            for slug in _LOA_STATE_SLUGS:
+                for suffix in ("", ".html"):
+                    candidate = f"{_LOA_BASE}/ghost-towns/{slug}{suffix}"
+                    candidate_key = candidate.rstrip("/").rstrip(".html")
+                    if candidate_key not in existing:
+                        state_links.append(candidate)
+                        existing.add(candidate_key)
+                        break  # only add one variant per slug
 
     except (httpx.HTTPError, Exception) as exc:
-        logger.warning("Failed to access Legends of America: %s", exc)
+        logger.warning(
+            "Failed to access Legends of America index page: %s. "
+            "Falling back to hardcoded slug list.", exc
+        )
+        state_links = [
+            f"{_LOA_BASE}/ghost-towns/{slug}"
+            for slug in _LOA_STATE_SLUGS
+        ]
+
+    logger.info("Scraping %d Legends of America state page(s).", len(state_links))
+
+    for state_url in state_links:
+        if limit is not None and len(records) >= limit:
+            break
+
+        try:
+            rate_limiter.wait()
+            resp = await client.get(state_url, headers=headers)
+            if resp.status_code == 404:
+                # Try adding/removing .html suffix before giving up
+                alt = (
+                    state_url.rstrip("/") + ".html"
+                    if not state_url.endswith(".html")
+                    else state_url[: -len(".html")] + "/"
+                )
+                rate_limiter.wait()
+                resp = await client.get(alt, headers=headers)
+            resp.raise_for_status()
+            state_soup = BeautifulSoup(resp.text, "lxml")
+
+            # Target the main content area to avoid nav/sidebar junk.
+            # LOA pages typically wrap article content in <article>, <main>,
+            # or a div with id/class containing "content" or "entry".
+            content_area = (
+                state_soup.find("article")
+                or state_soup.find("main")
+                or state_soup.find(id=re.compile(r"content|entry|article", re.I))
+                or state_soup.find(class_=re.compile(r"entry-content|post-content|article-body", re.I))
+                or state_soup  # fall back to whole page if no wrapper found
+            )
+
+            # Extract ghost town names from list items and paragraphs
+            # within the identified content area only.
+            for li in content_area.find_all(["li", "p"]):
+                # Skip elements that are inside nav, header, footer, or aside
+                if li.find_parent(["nav", "header", "footer", "aside"]):
+                    continue
+                text = li.get_text(strip=True)
+                if len(text) > 10 and len(text) < 500:
+                    # Try to extract a town name (first bold text or first link)
+                    name_tag = li.find(["b", "strong", "a"])
+                    if name_tag:
+                        town_name = name_tag.get_text(strip=True)
+                        # Filter out nav/sidebar junk
+                        if (
+                            len(town_name) > 2
+                            and len(town_name) <= 60
+                            and "/" not in town_name
+                            and "&" not in town_name
+                            and town_name.lower().strip() not in _LOA_JUNK_NAMES
+                            and any(c.isalpha() for c in town_name)
+                            # Reject strings that look like site navigation
+                            and not _LOA_NAV_WORDS_RE.search(town_name)
+                        ):
+                            records.append({
+                                "name": town_name,
+                                "description": text[:500],
+                                "source": "legends_of_america",
+                            })
+        except (httpx.HTTPError, Exception) as exc:
+            logger.debug("Failed to scrape %s: %s", state_url, exc)
+            continue
 
     logger.info("Scraped %d ghost town records from Legends of America.", len(records))
     return records

@@ -16,7 +16,9 @@ const api = axios.create({
 });
 
 export async function fetchLocations(): Promise<LocationFeatureCollection> {
-  const { data } = await api.get<LocationFeatureCollection>('/locations');
+  const { data } = await api.get<LocationFeatureCollection>('/locations', {
+    params: { per_type_limit: 2000 },
+  });
   return data;
 }
 
