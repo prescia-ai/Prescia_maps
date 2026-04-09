@@ -16,6 +16,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.routes import router
+from app.auth.routes import router as auth_router
 from app.models.database import create_tables
 
 # ---------------------------------------------------------------------------
@@ -81,8 +82,8 @@ def create_app() -> FastAPI:
     # -----------------------------------------------------------------------
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],           # Restrict to specific domains in production
-        allow_credentials=False,       # Must be False when allow_origins=["*"]
+        allow_origins=["http://localhost:5173", "http://localhost:3000"],
+        allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
     )
@@ -91,6 +92,7 @@ def create_app() -> FastAPI:
     # Routers
     # -----------------------------------------------------------------------
     app.include_router(router, prefix="/api/v1")
+    app.include_router(auth_router, prefix="/api/v1")
 
     return app
 

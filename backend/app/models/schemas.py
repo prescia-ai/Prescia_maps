@@ -305,3 +305,40 @@ class LandAccessOverrideResponse(BaseModel):
     notes: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# User / Auth schemas
+# ---------------------------------------------------------------------------
+
+class UserProfile(BaseModel):
+    """Full user profile returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    supabase_id: str
+    email: str
+    username: Optional[str] = None
+    display_name: Optional[str] = None
+    bio: Optional[str] = None
+    location: Optional[str] = None
+    privacy: str = "public"
+    created_at: Optional[Any] = None
+
+
+class UserProfileSetup(BaseModel):
+    """Request model for first-time profile setup (username required)."""
+
+    username: str = Field(..., min_length=3, max_length=30, pattern=r"^[a-zA-Z0-9_]+$")
+    display_name: Optional[str] = Field(None, max_length=100)
+    bio: Optional[str] = None
+    location: Optional[str] = Field(None, max_length=100)
+
+
+class UserProfileUpdate(BaseModel):
+    """Request model for updating profile fields (all optional)."""
+
+    display_name: Optional[str] = Field(None, max_length=100)
+    bio: Optional[str] = None
+    location: Optional[str] = Field(None, max_length=100)

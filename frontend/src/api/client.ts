@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { supabase } from '../lib/supabase';
 import type {
   LocationFeatureCollection,
   LinearFeatureCollection,
@@ -13,6 +14,16 @@ import type {
 const api = axios.create({
   baseURL: '/api/v1',
   timeout: 15_000,
+});
+
+// Attach Supabase access token to every request when a session exists
+api.interceptors.request.use(async (config) => {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session?.access_token) {
+    config.headers = config.headers ?? {};
+    config.headers['Authorization'] = `Bearer ${session.access_token}`;
+  }
+  return config;
 });
 
 export async function fetchLocations(): Promise<LocationFeatureCollection> {
@@ -80,3 +91,5 @@ export async function importFeatures(data: any): Promise<ImportSummaryResponse> 
   const { data: result } = await api.post<ImportSummaryResponse>('/import/features', data);
   return result;
 }
+
+export default api;

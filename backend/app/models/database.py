@@ -204,6 +204,27 @@ class LandAccessOverride(Base):
     updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
 
+class User(Base):
+    """
+    Authenticated user profile.
+
+    ``supabase_id`` mirrors the ``sub`` claim from the Supabase JWT so that
+    incoming requests can be quickly matched to a local profile row.
+    """
+
+    __tablename__ = "users"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    supabase_id = Column(String(255), unique=True, nullable=False, index=True)
+    email = Column(String(255), unique=True, nullable=False)
+    username = Column(String(50), unique=True, nullable=True)
+    display_name = Column(String(100), nullable=True)
+    bio = Column(Text, nullable=True)
+    location = Column(String(100), nullable=True)
+    privacy = Column(String(20), default="public")
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------
