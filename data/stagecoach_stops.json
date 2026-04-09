@@ -306,7 +306,8 @@
     "longitude": -94.5786,
     "description": "Kansas City, Missouri was the eastern terminus of the Overland Stage to Denver, where passengers departed on coaches bound for the Colorado gold fields via the Smoky Hill Trail or Kansas Pacific route. The bustling frontier town on the Missouri River maintained stage facilities to support the regular service to Denver, with prospectors, settlers, and businessmen all passing through on their way to Colorado Territory. The heavy traffic from multiple stage lines and years of operations make Kansas City a productive metal detecting site, with period coins, buttons, and personal effects concentrated in the historic downtown riverfront and station districts.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.83,
+    "detecting_weight": 30
   },
   {
     "name": "Junction City, KS",
@@ -315,7 +316,8 @@
     "longitude": -96.8314,
     "description": "Junction City, Kansas served as an important stop on the Overland Stage to Denver, where coaches paused at this Kansas River town near Fort Riley for fresh teams and supplies. The town's location at the junction of multiple trails made it a hub for stage operations, military traffic, and emigrant parties heading to Colorado. Stage stops like Junction City offer good metal detecting potential, with coins, buttons, and personal items from travelers and station workers accumulated around the town center and station facilities during the Colorado gold rush years.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.73,
+    "detecting_weight": 58
   },
   {
     "name": "Fort Riley, KS",
@@ -324,7 +326,8 @@
     "longitude": -96.7808,
     "description": "Fort Riley, Kansas was a major military post near the Overland Stage to Denver route, where the stage line benefited from the fort's protection and facilities as coaches traveled across Kansas toward Colorado Territory. The substantial cavalry post maintained extensive operations to protect trails and settlements, with stage coaches often stopping nearby for security and fresh horses. The military installation's years of operations create excellent metal detecting opportunities, with army buttons, coins, weapons parts, cavalry equipment, and stage-related artifacts scattered throughout the fort grounds and surrounding areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.82,
+    "detecting_weight": 55
   },
   {
     "name": "Fort Hays, KS",
@@ -333,7 +336,8 @@
     "longitude": -99.3218,
     "description": "Fort Hays, Kansas was a critical stop on the Overland Stage to Denver route, where coaches stopped at this important military post protecting stage lines and railroads across western Kansas. The fort provided security, supplies, and fresh teams for coaches traveling through territory threatened by Indian raids during the 1860s conflicts on the plains. The combination of military garrison and stage operations makes Fort Hays an outstanding metal detecting site, with army buttons, coins, cavalry equipment, weapons parts, horseshoes, and stage hardware concentrated around the fort buildings and station areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 57
   },
   {
     "name": "Salina, KS",
@@ -342,7 +346,8 @@
     "longitude": -97.6114,
     "description": "Salina, Kansas operated as a stop on the Overland Stage to Denver, where coaches paused in this growing Kansas town for fresh horses and supplies during the journey across the central plains. The town's facilities supported stage operations with corrals and equipment needed to maintain the regular schedule to Colorado Territory. Stage towns like Salina provide good metal detecting opportunities around the historic downtown and station areas, where coins, buttons, and personal items from travelers accumulated during the years of stage operations and frontier settlement.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.7,
+    "detecting_weight": 50
   },
   {
     "name": "Denver, CO",
@@ -351,7 +356,8 @@
     "longitude": -104.9903,
     "description": "Denver, Colorado was the western terminus of the Overland Stage to Denver, where coaches arriving from Kansas City completed their journey to the booming gold rush capital of Colorado Territory. The city's stage facilities handled heavy traffic from multiple routes bringing prospectors, settlers, and supplies to the Rocky Mountain mining district throughout the 1860s and beyond. As a major stage terminus and mining boomtown, Denver offers exceptional metal detecting potential with period coins, mining artifacts, stage hardware, and personal effects concentrated in the historic downtown Larimer Street district and surrounding areas.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.85,
+    "detecting_weight": 31
   },
   {
     "name": "Plum Creek Station, NE",
@@ -360,7 +366,8 @@
     "longitude": -99.626,
     "description": "Plum Creek Station near present-day Lexington, Nebraska was an important Central Overland relay station along the Platte River route, where coaches stopped for fresh teams during the long haul across the Nebraska plains. The isolated relay station maintained corrals, stock, and minimal facilities to support the regular coach schedule, with station keepers living in constant vigilance for Indian raids during the 1860s conflicts. Relay stations like Plum Creek are prime metal detecting sites where horseshoes, harness fittings, coins, and personal items from station workers and passengers accumulated around the corrals and buildings during years of stage operations.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.7,
+    "detecting_weight": 72
   },
   {
     "name": "Cottonwood Springs, NE",
@@ -369,7 +376,8 @@
     "longitude": -100.8404,
     "description": "Cottonwood Springs in the North Platte area of Nebraska served as a Central Overland relay station where coaches stopped for fresh horses at this important location along the emigrant trail. The station's position near abundant water and grass made it a vital stopping point, with facilities to support both stage operations and the thousands of emigrants passing through on the Oregon and California trails. The concentration of trail traffic and stage operations creates excellent metal detecting opportunities, with coins, buttons, emigrant items, and stage hardware lost around the station grounds and camping areas during peak travel years.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.71,
+    "detecting_weight": 70
   },
   {
     "name": "Scotts Bluff, NE",
@@ -378,7 +386,8 @@
     "longitude": -103.6673,
     "description": "Scotts Bluff, Nebraska was a Central Overland stage stop near this famous landmark on the emigrant trails, where coaches paused at relay stations positioned to serve the heavy traffic passing the distinctive bluffs. The dramatic geological formation served as a waypoint for both stage lines and emigrant trains, with facilities clustered near this recognizable feature on the plains. The combination of stage and emigrant trail traffic makes the Scotts Bluff area productive for metal detecting, with period coins, emigrant items, buttons, and stage hardware scattered around the historic trails and station sites.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.76,
+    "detecting_weight": 55
   },
   {
     "name": "Horseshoe Station, WY",
@@ -387,7 +396,8 @@
     "longitude": -105.0147,
     "description": "Horseshoe Station, Wyoming was a Central Overland relay station positioned between Fort Laramie and South Pass, where coaches stopped for fresh teams in the remote country north of the Laramie Mountains. The isolated relay station required hardy station keepers to maintain horses and facilities in dangerous territory, with minimal shelter and constant threat from Indian raids during the 1860s. Remote relay stations like Horseshoe are excellent metal detecting sites where horseshoes, harness fittings, coins, buttons, and equipment from station operations accumulated around the corrals and buildings during the years of stage service.",
     "source": "seed:stagecoach_stops",
-    "confidence": 0.85
+    "confidence": 0.66,
+    "detecting_weight": 82
   },
   {
     "name": "Sweetwater Station, WY",
