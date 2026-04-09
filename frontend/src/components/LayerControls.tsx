@@ -47,7 +47,7 @@ const SECTIONS: SectionDef[] = [
       { key: 'stagecoach_stop', label: 'Stagecoach Stop', color: '#84cc16' },
       { key: 'ferry',          label: 'Ferry',           color: '#06b6d4' },
       { key: 'pony_express',   label: 'Pony Express',    color: '#dc2626' },
-      { key: 'road',           label: 'Road (linear)',   color: '#84cc16' },
+      { key: 'road',           label: 'Road (linear)',   color: '#d97706' },
     ],
   },
   {
@@ -69,6 +69,7 @@ const SECTIONS: SectionDef[] = [
     title: 'Other',
     items: [
       { key: 'town',      label: 'Town / Ghost Town', color: '#3b82f6' },
+      { key: 'locale',    label: 'Historic Locale',   color: '#94a3b8' },
       { key: 'shipwreck', label: 'Shipwreck',         color: '#0369a1' },
     ],
   },

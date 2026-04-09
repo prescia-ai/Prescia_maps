@@ -132,7 +132,7 @@ function LinearFeatures({
         const LINEAR_COLORS: Record<string, { color: string; dashArray?: string; weight: number }> = {
           railroad: { color: '#ef4444', weight: 2.5 },
           trail:    { color: '#22c55e', weight: 2, dashArray: '8 6' },
-          road:     { color: '#84cc16', weight: 2, dashArray: '6 4' },
+          road:     { color: '#d97706', weight: 2, dashArray: '6 4' },
           water:    { color: '#06b6d4', weight: 2, dashArray: '4 4' },
         };
         const lineStyle = LINEAR_COLORS[type] ?? { color: '#94a3b8', weight: 2, dashArray: '4 4' };

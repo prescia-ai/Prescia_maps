@@ -81,6 +81,7 @@ export interface LayerState {
   fairground: boolean;
   school: boolean;
   spring: boolean;
+  locale: boolean;
   mission: boolean;
   trading_post: boolean;
   shipwreck: boolean;

@@ -43,6 +43,8 @@ WEIGHTS: Dict[str, float] = {
     "trading_post": 85.0,    # Trading posts = high commerce = high coin loss
     "pony_express": 85.0,    # Pony Express stations = documented high value
     "shipwreck": 60.0,       # River shipwrecks
+    "abandoned_church": 50.0, # Same family as church
+    "historic_brothel": 65.0, # High commerce area, likely coin loss
 }
 
 # Modifiers (additive, applied before clamping)

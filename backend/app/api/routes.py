@@ -104,15 +104,65 @@ async def health_check(db: AsyncSession = Depends(get_db)) -> HealthResponse:
 async def get_locations(
     type_filter: Optional[str] = Query(None, alias="type"),
     source: Optional[str] = Query(None),
-    limit: int = Query(1000, ge=1, le=10000),
+    limit: int = Query(5000, ge=1, le=100000),
+    per_type_limit: Optional[int] = Query(None, ge=1, le=10000),
     offset: int = Query(0, ge=0),
     db: AsyncSession = Depends(get_db),
 ) -> GeoJSONFeatureCollection:
     """
-    Return all historical locations as a GeoJSON FeatureCollection.
+    Return historical locations as a GeoJSON FeatureCollection.
 
     Supports optional filtering by ``type`` and ``source``.
+
+    When ``per_type_limit`` is set (and no ``type`` filter is active), returns
+    up to that many records **per location type** so that all categories are
+    represented on the map even when one type (e.g. mines) vastly outnumbers
+    the others.
     """
+    if per_type_limit is not None and not type_filter:
+        # Balanced query: up to per_type_limit records per type, ordered by id
+        # so results are consistent across calls.
+        balanced_sql = text(
+            """
+            SELECT id, name, type, latitude, longitude, year, description,
+                   source, confidence
+            FROM (
+                SELECT id, name, type, latitude, longitude, year, description,
+                       source, confidence,
+                       ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
+                FROM locations
+                WHERE (:source_filter IS NULL OR source = :source_filter)
+            ) ranked
+            WHERE rn <= :per_type_limit
+            ORDER BY type, id
+            """
+        ).bindparams(
+            per_type_limit=per_type_limit,
+            source_filter=source,
+        )
+        result = await db.execute(balanced_sql)
+        rows = result.mappings().all()
+
+        features: List[FeatureResponse] = []
+        for row in rows:
+            features.append(
+                FeatureResponse(
+                    geometry=PointGeometry(
+                        coordinates=[row["longitude"], row["latitude"]]
+                    ),
+                    properties=LocationProperties(
+                        id=row["id"],
+                        name=row["name"],
+                        type=row["type"],
+                        year=row["year"],
+                        description=row["description"],
+                        source=row["source"],
+                        confidence=row["confidence"],
+                    ),
+                )
+            )
+        return GeoJSONFeatureCollection(features=features)
+
     stmt = select(Location)
     if type_filter:
         stmt = stmt.where(Location.type == type_filter)
