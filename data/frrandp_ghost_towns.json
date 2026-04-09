@@ -5990,7 +5990,8 @@
     "latitude": 41.651832,
     "longitude": -88.253789,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tamarak was a small farming community in Bureau County, Illinois in the Illinois River country of north-central Illinois, established by farming families in the mid-19th century in the rich glacial till plain that made Illinois one of America's most productive agricultural states. Bureau County's flat, fertile farmland was settled rapidly after the Black Hawk War opened the territory in the 1830s, and communities like Tamarak served as local school and church centers for the surrounding rural population. As transportation improved and the rural population consolidated toward larger towns, Tamarak's separate identity faded. The Illinois corn belt farmland surrounding the former community site, with its dense 19th-century settlement history, holds good detecting potential on private land for period domestic artifacts and coins."
   },
   {
     "name": "Dover, WI",
@@ -5998,7 +5999,8 @@
     "latitude": 43.162055,
     "longitude": -89.839085,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dover was a small farming community in Racine County, Wisconsin in the glaciated agricultural country south of Milwaukee, established by New England and mid-Atlantic settlers in the mid-19th century who found the rich Wisconsin till soils ideal for dairy and grain farming. Racine County's proximity to Milwaukee made it one of Wisconsin's most intensively settled agricultural areas, and communities like Dover served local farming neighborhoods before improved roads and railroads concentrated commerce in Racine and other larger centers. Today Dover is a quiet rural community in southeastern Wisconsin with some historic character remaining. The surrounding Racine County farmland, with its dense 19th-century settlement history, offers detecting potential on private land for period domestic artifacts and early Wisconsin settlement-era coins."
   },
   {
     "name": "Messer, KS",
@@ -6006,7 +6008,8 @@
     "latitude": 37.147552,
     "longitude": -94.648483,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Messer was a small farming community in Rooks County, Kansas on the High Plains of north-central Kansas, established during the great Kansas homesteading era of the 1870s-1890s when the Homestead Act and railroad promotion brought waves of settlers to the treeless plains. The community had a local school and possibly a small church serving surrounding farm families who grew wheat and raised cattle on the challenging High Plains landscape subject to drought, grasshopper plagues, and blizzards. When drought in the 1880s and again in the 1930s devastated the agricultural economy, many High Plains communities including Messer lost their populations. Rooks County's homesteading history makes its former community sites productive detecting locations for period coins and domestic artifacts on private farmland."
   },
   {
     "name": "Hadley, IL",
@@ -6014,7 +6017,8 @@
     "latitude": 41.570807,
     "longitude": -87.943317,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hadley was a small farming community in Hancock County, Illinois in the western Illinois river country near the Mississippi, established by settlers in the mid-19th century on the productive glacial soils of western Illinois. Hancock County has a notable history as the location of Nauvoo, the Mormon city that was the largest city in Illinois in the 1840s before the Mormons were expelled, and the broader county landscape holds rich historical deposits from this turbulent period. The former Hadley community area is now agricultural land in western Illinois. Detecting on private farmland in the area can yield period domestic artifacts, agricultural implements, and coins from the mid-to-late 19th-century settlement era."
   },
   {
     "name": "Monterey, IL",
@@ -6022,7 +6026,8 @@
     "latitude": 40.53115,
     "longitude": -89.945947,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Monterey was a small farming community in Putnam County, Illinois in the Illinois River valley country, established in the mid-19th century amid the rich glacial till farmland of north-central Illinois where grain farming and livestock operations built prosperous rural communities. Putnam County, one of Illinois's smallest counties, has a history of intensive agricultural settlement dating to the 1830s, and communities like Monterey served as local school and church centers. The Illinois River corridor, a major historical transportation route from the French colonial era through the 19th century, contains rich archaeological deposits from multiple periods. Detecting on private farmland near former Monterey community sites can yield period domestic artifacts, river trade goods, and mid-19th-century coins."
   },
   {
     "name": "Mormontown, IL",
@@ -6030,7 +6035,8 @@
     "latitude": 39.614869,
     "longitude": -90.734538,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mormontown was a small informal community in Illinois associated with the early Mormon presence in the state during the 1830s-1840s when the Church of Jesus Christ of Latter-day Saints was headquartered at Nauvoo in Hancock County. Small satellite communities of Mormon settlers existed throughout western Illinois during this period, and after the Mormon exodus to Utah in 1846, these communities were either absorbed by non-Mormon settlers or abandoned. The Illinois Mormon heritage sites are poorly documented outside of Nauvoo itself, making informal communities like Mormontown historically intriguing but geographically uncertain. The western Illinois landscape holds detecting potential on private farmland for artifacts from the antebellum period including early Mormon settlement era domestic items."
   },
   {
     "name": "New Philadelphia, IL",
@@ -6038,7 +6044,8 @@
     "latitude": 39.698035,
     "longitude": -90.961322,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "New Philadelphia was a pioneering free Black community in Pike County, Illinois established in 1836 by Frank McWorter, a formerly enslaved man who purchased his own freedom and that of many of his family members, making New Philadelphia one of the earliest towns in the United States founded by an African American. The community had a post office, school, and several dozen residents during its active years from the 1830s through the early 20th century, representing a remarkable story of Black self-determination in the antebellum Midwest. New Philadelphia was designated a National Historic Landmark and is the subject of ongoing archaeological investigation by the University of Illinois. Active archaeological work and its landmark status make this site restricted for detecting, but its historical significance is extraordinary."
   },
   {
     "name": "Mitchell, MN",
@@ -6046,7 +6053,8 @@
     "latitude": 47.445617,
     "longitude": -92.893754,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Mitchell was a small farming community in Lyon County, Minnesota in the prairie country of southwestern Minnesota near the South Dakota border, established during the great Minnesota homesteading era of the 1870s-1890s when the railroads opened the prairie to agricultural settlement. Lyon County's rich glacial till soils attracted Norwegian, Swedish, German, and Yankee farming families who built prosperous dairy and grain operations on the southwest Minnesota prairie. The former Mitchell community area is now active agricultural land in southwestern Minnesota. Detecting on private farmland in Lyon County near former community sites can yield period domestic artifacts, Scandinavian and German immigrant items, and late 19th-century coins from the homesteading era."
   },
   {
     "name": "Senate, TX",
@@ -6054,7 +6062,8 @@
     "latitude": 33.174991,
     "longitude": -98.29505,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Senate was a small community in Texas that may have served as a local agricultural center or railroad stop during the late 19th or early 20th century, bearing the politically inspired name common to communities founded with civic aspirations during the height of Texas settlement. Like many of Texas's minor community sites, Senate existed for a generation or two as a local post office and school district before being absorbed into the orbit of a larger nearby town as transportation improved through the 20th century. The Texas agricultural landscape surrounding the former Senate community site holds detecting potential on private land for period domestic artifacts, farm hardware, and coins from the community's active years."
   },
   {
     "name": "Ethel, SC",
@@ -6062,7 +6071,8 @@
     "latitude": 32.6826,
     "longitude": -80.28928,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Ethel was a small farming community in Marlboro County, South Carolina in the coastal plain country of the Pee Dee region, established by farming families in the post-Civil War era who cultivated tobacco and cotton on the sandy coastal plain soils of the Carolina Low Country. Marlboro County's history spans colonial-era plantations through Reconstruction-era freedmen communities and 20th-century tobacco farming, giving its landscape a rich and layered archaeological record. The former Ethel community area is now agricultural land in the Marlboro County coastal plain. Detecting on private farmland in the area, with landowner permission, can yield artifacts from the post-Civil War through early 20th-century farming period, including domestic coins, agricultural implements, and personal items from the tobacco farming era."
   },
   {
     "name": "Kingburg, SD",
