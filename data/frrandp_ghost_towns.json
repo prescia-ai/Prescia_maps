@@ -7880,7 +7880,8 @@
     "latitude": 41.321135,
     "longitude": -88.990419,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort St. Louis was a French colonial fort and trading settlement established by René-Robert Cavelier, Sieur de La Salle in 1682-1683 atop Starved Rock along the Illinois River in present-day LaSalle County, Illinois, serving as the capital of La Salle's Illinois Country colony and one of the earliest permanent European settlements in the interior of North America. The fort commanded a spectacular natural fortress — a 125-foot sandstone butte rising from the Illinois River floodplain — and served as the political and commercial center of the Illinois Country fur trade for nearly a decade before being abandoned around 1691. Today Starved Rock State Park occupies the site, protecting the dramatic sandstone canyons and the blufftop where Fort St. Louis once stood, with interpretive trails and exhibits explaining the French colonial history. The state park is freely accessible and one of Illinois's most popular natural areas, though artifact collection within the park boundaries is not permitted."
   },
   {
     "name": "Sangamon Ordnance Plant",
@@ -7888,7 +7889,8 @@
     "latitude": 39.863992,
     "longitude": -89.287485,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Sangamon Ordnance Plant near Illiopolis, Sangamon County, Illinois was a World War II smokeless powder manufacturing facility established in 1942 in the heart of Illinois farm country, producing propellants for small arms, artillery, and rockets that helped supply Allied forces across multiple theaters of the war. The plant covered several thousand acres of central Illinois farmland south of Springfield, operating around the clock in the wartime urgency of 1942-1945 before rapidly winding down operations in the immediate postwar period. The land was returned to agricultural use and most above-ground structures were demolished, though concrete pad foundations, igloo storage bunkers, and the rail alignment that served the facility remain as surface features in the Sangamon County landscape. The surrounding area's agricultural character has preserved the ordnance plant footprint in a remarkably unchanged landscape, and occasional field finds of period industrial hardware occur on the former plant grounds."
   },
   {
     "name": "Fort Walla Walla",
@@ -7896,7 +7898,8 @@
     "latitude": 46.052696,
     "longitude": -118.357229,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Walla Walla in Walla Walla, Washington was established in 1856 following the Whitman Massacre and the Cayuse War, initially as a temporary garrison that was made permanent in 1858 after the Battle of Four Lakes and the defeat of the Yakama-Palouse coalition to protect American settlement of the Columbia Plateau. The fort served as the major military hub of the interior Pacific Northwest for three decades, supporting campaigns against the Nez Perce in 1877 and providing a base for the settlement of the Palouse and Blue Mountain country by wheat farmers who transformed the region into one of America's premier grain-producing areas. Today the fort grounds are occupied by a Veterans Affairs medical complex on the southern edge of Walla Walla, with a small outdoor museum featuring historic military equipment and interpretive materials on the site's military history. The surrounding Walla Walla area has been intensively developed but the landscape retains the agricultural character established during the fort's active period."
   },
   {
     "name": "Fort Ethan Allen",
@@ -7904,7 +7907,8 @@
     "latitude": 44.504968,
     "longitude": -73.146157,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fort Ethan Allen in Colchester, Chittenden County, Vermont was a U.S. Army cavalry post established in 1892 on land north of Burlington overlooking Lake Champlain, serving as a training base for cavalry and horse artillery units as the Army modernized its mounted arm in the post-Indian Wars period of the late nineteenth century. The fort was named for the Vermont patriot who captured Fort Ticonderoga in 1775, and its imposing brick barracks, stables, and officer quarters — designed in the Victorian military Gothic style — created one of New England's finest military campuses. The cavalry mission became obsolete with mechanization in World War I, and the fort transitioned through various uses including as a convalescent hospital before being transferred to the University of Vermont for use as an agricultural research station and housing complex. The historic buildings on the former fort grounds are now part of the Essex Junction community and the University of Vermont's Horsebarn Hill Farm, with the architectural heritage largely intact."
   },
   {
     "name": "US Badger Army Ammunition Plt",
@@ -7912,7 +7916,8 @@
     "latitude": 43.370028,
     "longitude": -89.766878,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Badger Army Ammunition Plant near Baraboo, Sauk County, Wisconsin was one of America's most important smokeless powder production facilities, established in 1942 on the Baraboo River in the Driftless Area of south-central Wisconsin, producing powder for artillery shells and small arms ammunition through World War II, Korea, and Vietnam before ceasing operations in 1975. At peak production the plant employed over 6,000 workers from surrounding communities and operated its own railroad, fire department, and community facilities across its 7,400-acre campus in the Wisconsin River valley. After closure the plant sat idle for decades while cleanup proceeded on mercury, lead, and solvent contamination, before being transferred in stages to the Ho-Chunk Nation, the University of Wisconsin, and the Department of Natural Resources for development into Aldo Leopold's Prairie. The prairie restoration area is open to public hiking, and the concrete manufacturing buildings, igloo magazines, and former rail network are being preserved or interpretively marked as the landscape recovers."
   },
   {
     "name": "Old Fort Gilbert",
@@ -7920,7 +7925,8 @@
     "latitude": 47.788475,
     "longitude": -104.10831,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Old Fort Gilbert in McCone County, Montana was one of the numerous small trading posts and fur trade establishments that dotted the Yellowstone and Missouri River valleys during the American Fur Company era of the 1830s-1860s, serving as a stopping point for river traders, military expeditions, and the last free-ranging bands of the northern plains tribes before reservation confinement. The upper Missouri River region of eastern Montana was among the last areas of the continental interior to be settled by American ranchers and farmers, and frontier trading posts in this remote landscape were the first permanent American structures in a vast wilderness. The site is in the vast ranching country of eastern Montana with minimal development, and the general area — accessible via county roads across private and BLM land — has changed little from the period of the post's brief operation. Eastern Montana trading post sites are among the most historically evocative and least disturbed early American frontier sites remaining."
   },
   {
     "name": "Camp Ibis",
@@ -7928,7 +7934,8 @@
     "latitude": 34.969516,
     "longitude": -114.832913,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Camp Ibis near Needles, San Bernardino County, California was a World War II desert warfare training camp established in the Mojave Desert in 1942 as part of General Patton's Desert Training Center — the largest military training installation in world history, covering approximately 18,000 square miles of the California, Arizona, and Nevada desert where American troops prepared for combat against Rommel's Afrika Korps in the North African campaign. The camp was one of hundreds of temporary installations in the DTC network, housing tens of thousands of troops in canvas tent cities before being rapidly dismantled after North Africa was secured in 1943 and the training mission shifted to European invasion preparation. Today the Camp Ibis area is accessible via unpaved roads from Interstate 40 on BLM land, where concrete foundations, tent platform remnants, rifle ranges, and the ghostly grid of camp streets remain visible in the desert landscape. The site is productive territory for World War II military artifacts — buttons, buckles, insignia, and period hardware — on BLM land where surface collection of non-archeological items is generally permitted."
   },
   {
     "name": "Camp Barkley",
@@ -7936,7 +7943,8 @@
     "latitude": 32.34995,
     "longitude": -99.83961,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Camp Barkley near Abilene, Taylor County, Texas was a massive World War II Army ground forces training center established in 1940 on 1,000 acres of West Texas ranch country, eventually expanding to cover over 100,000 acres and training more than 100,000 soldiers of the 45th Infantry Division, 11th Armored Division, and dozens of other units that went on to fight in North Africa, Sicily, Italy, and Northern Europe. At its peak in 1943 Camp Barkley was a temporary city of 45,000 soldiers with its own hospital complex, recreation facilities, and airfield, before rapid demobilization after V-J Day in 1945 returned the land to ranching and dry-land farming. The site is now almost entirely private ranch land outside Abilene, with scattered concrete foundations, the old hospital complex, and various earthwork remnants visible across the landscape. West Texas camp followers, training range debris, and period WWII military hardware are periodically encountered in the surrounding Taylor County ranch country."
   },
   {
     "name": "Gopher Ordnance Works",
@@ -7944,7 +7952,8 @@
     "latitude": 44.724695,
     "longitude": -93.053885,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gopher Ordnance Works near Rosemount, Dakota County, Minnesota was a World War II smokeless powder manufacturing facility established in 1942 in the farm country south of the Twin Cities, producing propellants for the war effort before transitioning to chemical research and production in the postwar era. The facility occupied several thousand acres of Dakota County farmland and operated continuously through the Korean and Vietnam War eras under various management arrangements before finally ceasing production in the 1990s. The site was subsequently cleaned up and transferred, with portions now occupied by the University of Minnesota's research farms, the Dakota County Technical College, and a logistics park development, representing one of the more successful adaptive reuse efforts for a former ordnance plant. The surrounding area's mixed development of agricultural research and light industry preserves some of the former plant's character while creating new economic activity in this rapidly suburbanizing section of Dakota County."
   },
   {
     "name": "Area Historical Tribute Park",
@@ -7952,7 +7961,8 @@
     "latitude": 44.609908,
     "longitude": -90.982982,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Area Historical Tribute Park in Neillsville, Clark County, Wisconsin preserves a collection of historic structures, monuments, and artifacts representing the settlement history of central Wisconsin's Clark County — an area settled primarily by Norwegian, German, and Polish immigrants in the late nineteenth century who established a distinctive agricultural landscape of family dairy farms in the cutover forest region. The park functions as an open-air museum and historical preservation site, collecting relocated historic farm buildings, schools, churches, and community structures from around the county that would otherwise face demolition as rural Wisconsin's population continues to consolidate. Wisconsin county historical parks of this type are invaluable repositories of rural Midwest material culture, often containing original farm machinery, household furnishings, and trade implements from the settlement era. The park is generally accessible to visitors and represents an excellent educational resource for understanding Clark County's immigrant agricultural heritage."
   },
   {
     "name": "Historical Marker 72: The Spark",
