@@ -35,7 +35,9 @@ const SECTIONS: SectionDef[] = [
       { key: 'mission',      label: 'Mission',         color: '#d97706' },
       { key: 'school',       label: 'School',          color: '#8b5cf6' },
       { key: 'fairground',   label: 'Fairground',      color: '#eab308' },
-      { key: 'trading_post', label: 'Trading Post',    color: '#b45309' },
+      { key: 'trading_post',    label: 'Trading Post',     color: '#b45309' },
+      { key: 'abandoned_church', label: 'Abandoned Church', color: '#ec4899' },
+      { key: 'historic_brothel', label: 'Historic Brothel', color: '#f43f5e' },
     ],
   },
   {
