@@ -7160,7 +7160,8 @@
     "latitude": 41.473364,
     "longitude": -81.721954,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Joseph & Feiss Company was one of Cleveland's most significant garment manufacturing firms, established in 1845 as Kahnweiler's Sons and evolving into one of the largest producers of men's suits and work clothing in the United States, occupying a large factory complex in the near west side of Cleveland that employed thousands of workers including many European immigrant women and men through the early and mid twentieth century. The company pioneered progressive labor practices and was among the first American manufacturers to establish an employment bureau, medical services, and a school for immigrant workers. The Cleveland plant closed as garment manufacturing shifted overseas in the late twentieth century, and the factory building has been converted to other uses — a reminder of the city's once-dominant role in American clothing manufacturing."
   },
   {
     "name": "Warner And Swasey Observatory",
@@ -7168,7 +7169,8 @@
     "latitude": 41.5361,
     "longitude": -81.5685,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Warner and Swasey Observatory was a major astronomical research facility established on a hill in East Cleveland, Cuyahoga County, Ohio, in 1920 by Case Western Reserve University, housing a 9.375-inch refractor telescope and later a 24-inch reflector that enabled significant astronomical research through the mid-twentieth century. Light pollution from Cleveland's expanding urban area eventually made the hilltop observatory less useful for research, and the facility was decommissioned as an active observatory in the 1980s, though the historic telescope dome remains a neighborhood landmark. The observatory building and grounds are historically significant as part of Case Western Reserve's scientific legacy and Cleveland's cultural heritage."
   },
   {
     "name": "Warner \\u0026 Swasey Company",
@@ -7176,7 +7178,8 @@
     "latitude": 41.502215,
     "longitude": -81.65006,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Warner & Swasey Company was a Cleveland, Ohio precision machine tool and observatory instrument manufacturer founded in 1880 that became one of the world's leading producers of turret lathes, gun-sight mechanisms, and astronomical telescopes — supplying precision instruments to the U.S. military in both World Wars and building observatories across the United States and internationally. The company's Cuyahoga County factories were a cornerstone of Cleveland's precision manufacturing economy through most of the twentieth century before foreign competition and changing industrial conditions led to acquisitions, reorganizations, and eventual closure of the original Cleveland operations. The Warner & Swasey factory complex represents the extraordinary precision manufacturing heritage of northeast Ohio that made Cleveland one of America's great industrial cities."
   },
   {
     "name": "Grayslake Gelatin",
@@ -7184,7 +7187,8 @@
     "latitude": 42.346443,
     "longitude": -88.038951,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Grayslake Gelatin plant was an industrial facility in Grayslake, Lake County, Illinois, that processed animal by-products into gelatin for food, pharmaceutical, and industrial uses, part of the broader meatpacking and animal products processing industry that once defined the economies of many small Illinois cities in the shadow of Chicago's great slaughterhouses. Industrial gelatin plants were essential suppliers to the food processing, candy, and pharmaceutical industries through the early and mid twentieth century before consolidation and modernization shuttered many smaller regional facilities. The former industrial site in Grayslake reflects the lost industrial character of many Lake County communities that were once defined by processing and manufacturing before suburban residential development transformed the landscape."
   },
   {
     "name": "Central State Hospital",
@@ -7192,7 +7196,8 @@
     "latitude": 39.7693,
     "longitude": -86.2112,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Central State Hospital was Indiana's largest psychiatric institution, established in Indianapolis in 1848 as the Indiana Hospital for the Insane and growing into a sprawling campus of over 100 buildings and 3,000 patients at its mid-twentieth century peak, housing patients under conditions that evolved from Victorian-era custodial care to more therapeutic models before the deinstitutionalization movement of the 1970s began closing large state psychiatric facilities. The hospital closed in 1994, and its vast campus — including the National Register-listed pathological building — deteriorated for years before redevelopment efforts began converting portions of the property. The former hospital grounds, a significant piece of Indiana institutional history, have been the subject of preservation battles and urban exploration interest."
   },
   {
     "name": "Waverly Hills Sanatorium",
@@ -7200,7 +7205,8 @@
     "latitude": 38.130071,
     "longitude": -85.841742,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Waverly Hills Sanatorium was a tuberculosis treatment facility in Jefferson County, Kentucky, just south of Louisville, built in 1910 and expanded in 1926 into an imposing Gothic castle-like structure that housed up to 400 patients at a time during the height of Louisville's tuberculosis epidemic in the early twentieth century, employing experimental treatments including heliotherapy, fresh air, and surgical collapse of infected lung lobes. The sanatorium's mortality rate during its peak operation was devastating — thousands of patients died there — and the facility closed in 1961 when antibiotic treatment made the sanatorium model obsolete. Today Waverly Hills is operated as a haunted attraction and paranormal tourism site, consistently ranked among America's most haunted locations, with public tours available year-round — making it both a genuine historical landmark and one of Kentucky's most visited dark tourism destinations."
   },
   {
     "name": "Arlington House (Natchez, Mississippi)",
@@ -7208,7 +7214,8 @@
     "latitude": 31.553019,
     "longitude": -91.392777,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arlington House in Natchez, Mississippi was a grand Greek Revival antebellum mansion in Adams County built in the 1830s on the fashionable blufftop above the city, serving as the residence of prominent Natchez planter families who accumulated extraordinary wealth from the Mississippi cotton economy and the enslaved labor that produced it. The house changed hands multiple times through the Civil War era and postbellum period before falling into disrepair, becoming one of Natchez's many documented endangered antebellum structures. The Adams County Natchez area contains the highest concentration of antebellum plantation architecture in the United States, and the surrounding landscape is rich in antebellum-era domestic artifacts, plantation hardware, and Civil War military equipment from the Union army's occupation of Natchez — with most detection opportunities on private property requiring permission."
   },
   {
     "name": "Lemp Brewery Haunted House",
@@ -7216,7 +7223,8 @@
     "latitude": 38.591751,
     "longitude": -90.21832,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Lemp Brewery complex in St. Louis, Missouri was a nineteenth-century brewing empire established by Johann Adam Lemp in the 1840s that grew into one of America's largest breweries before Prohibition killed the operation in 1919, with the Lemp family selling off the complex in 1922 following a series of family tragedies including four suicides among the Lemp heirs. The sprawling underground cave system beneath the brewery was used for natural refrigeration of the lager before mechanical refrigeration, and the entire complex — mansion, brewery buildings, and cave network — became famous for paranormal activity legends. The William Lemp Mansion is now a restaurant and bed-and-breakfast that offers ghost tours, while portions of the old brewery complex are used for events and urban exploration — one of St. Louis's most atmospheric and historically significant nineteenth-century industrial heritage sites."
   },
   {
     "name": "Hudson River State Hospital",
@@ -7224,7 +7232,8 @@
     "latitude": 41.732736,
     "longitude": -73.927907,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hudson River State Hospital was a massive psychiatric institution in Poughkeepsie, Dutchess County, New York, established in 1871 on a 300-acre Hudson River blufftop campus designed by Calvert Vaux in the Kirkbride plan style — the Victorian-era belief that park-like surroundings with fresh air and beautiful architecture could themselves aid mental healing. The hospital grew to house over 5,000 patients at its peak before the deinstitutionalization movement of the 1970s began its decline, closing in 2003 after 130 years of operation. The magnificent Kirkbride building — one of the finest examples of Victorian institutional architecture in the Northeast — has been designated a National Historic Landmark and is undergoing restoration as a mixed-use development, making Hudson River State Hospital one of the most dramatic adaptive reuse projects in New York State."
   },
   {
     "name": "Hyde Manor",
@@ -7232,7 +7241,8 @@
     "latitude": 43.783396,
     "longitude": -73.202614,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hyde Manor was a historic country estate in Washington County or Addison County, Vermont, set in the Green Mountain foothills country where wealthy Gilded Age families built substantial summer retreats in the late nineteenth and early twentieth centuries, taking advantage of Vermont's cool summers and scenic landscapes. The manor house and associated outbuildings served as a seasonal residence and later various institutional uses before falling into disrepair and abandonment. Vermont country estates of this era are interesting historical sites — the combination of wealthy owner occupation, seasonal domestic use, and institutional history creates layered artifact assemblages in the surrounding grounds, and with private landowner permission, old estate sites in Vermont can yield late Victorian and Edwardian domestic goods, estate hardware, and period coinage."
   },
   {
     "name": "East Illinois Hospital",
