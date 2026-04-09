@@ -8330,7 +8330,8 @@
     "latitude": 47.166761,
     "longitude": -95.415022,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Old Headquarters Monument near Park Rapids, Hubbard County, Minnesota commemorates the original headquarters site of one of Minnesota's early timber company operations in the vast pine forests of the northern lake country, where lumber barons from the Twin Cities, Chicago, and the East Coast established logging empires that stripped the white and Norway pine forests of the Mississippi headwaters region from the 1870s through the early 1900s. The Park Rapids area was a center of the northern Minnesota logging industry before the transition to a tourism economy as the cut-over forests gradually regenerated, and the monument marks a specific headquarters that coordinated logging operations across a significant portion of the Hubbard County timber country. Today the surrounding lakes district is one of Minnesota's premier resort and recreation areas, where the resurgent forest has largely healed the wounds of the logging era. The monument is accessible in Hubbard County's lake country."
   },
   {
     "name": "Walkerville History Marker",
@@ -8338,7 +8339,8 @@
     "latitude": 46.028525,
     "longitude": -112.532245,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Walkerville History Marker in Silver Bow County, Montana near Butte documents the industrial suburb established by the Anaconda Copper Mining Company on the north slope of Butte Hill to house the copper mine managers and skilled workers who operated the massive Berkeley Pit and the surrounding underground mines that made Butte one of the richest mining districts on Earth in the early twentieth century. Walkerville was platted in 1876 and was briefly an independent municipality before being absorbed by Butte-Silver Bow County, and its Victorian-era frame houses and the remains of its commercial district still stand on the windy hillside above the Berkeley Pit — one of the largest open-pit copper mines ever operated in North America. The Berkeley Pit itself is now a Superfund site containing a toxic lake of acid mine drainage that has become paradoxically one of Montana's most visited tourist attractions. The Walkerville neighborhood and surrounding Butte hill are rich in copper mining history and period artifacts from a century of intense industrial activity."
   },
   {
     "name": "Plank Road Memorial",
@@ -8346,7 +8348,8 @@
     "latitude": 32.710273,
     "longitude": -114.923162,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Plank Road Memorial near Yuma, Yuma County, Arizona honors the remarkable engineering feat of constructing a plank road across the Imperial Sand Dunes in 1915 to connect Arizona to California through the Algodones Dunes, solving the problem of vehicles bogging down in the soft sand by laying wooden planking over the dune surface along an eight-mile corridor. The plank road made automobile travel across the desert possible for the first time and was an essential part of the early transcontinental highway system before the modern paved highway was constructed. Original sections of the plank road material are occasionally exposed when sand dune movement uncovers the buried wooden planking, providing a tangible artifact of this early automotive age engineering. The site is in the Algodones Dunes recreation area, which is managed by the BLM and is popular with off-highway vehicle enthusiasts who sometimes encounter exposed sections of the original wooden planks."
   },
   {
     "name": "Cliff Mine",
@@ -8354,7 +8357,8 @@
     "latitude": 47.372867,
     "longitude": -88.313116,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cliff Mine in Keweenaw County, Michigan on the Keweenaw Peninsula was one of the pioneering copper mines of the Lake Superior Copper District, opened in 1844 as one of the very first underground copper mines in the United States and producing remarkable pure native copper from the Portage Lake Volcanics formations that make the Keweenaw Peninsula the world's most extraordinary copper deposit. The mine employed hundreds of Cornish, German, and Finnish miners in deep shaft operations before exhausting its profitable ore bodies in the 1870s and closing, making way for the deeper and more mechanized mines of the copper boom era. The surrounding Keweenaw Peninsula landscape is now part of the Keweenaw National Historical Park, and the Cliff Mine site retains significant surface ruins including rock piles, engine house foundations, and adits that make it an excellent destination for industrial archaeology. The site is accessible from public roads in Keweenaw County and is one of the oldest documented hard-rock mining sites in the United States."
   },
   {
     "name": "Rochester Mine",
@@ -8362,7 +8366,8 @@
     "latitude": 40.285476,
     "longitude": -118.154132,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rochester Mine in Pershing County, Nevada is one of Nevada's historically significant silver mining districts in the Humboldt Range, active from the 1860s through multiple revival periods into the modern era, with the large open-pit operation visible today representing one of Nevada's most productive silver mines of the late twentieth century. The district encompasses both historic nineteenth-century underground workings and a modern large-scale open-pit operation, making Rochester one of the few Nevada mining districts with truly continuous production from the silver frontier era through the present. The surrounding Humboldt Range desert is scattered with evidence of the earlier hand-mining era — dry-stacked stone walls, prospect holes, and mine dumps — while the active modern mine dominates the center of the district. The area around the historic workings is BLM land and accessible on foot, though the active mine perimeter is restricted."
   },
   {
     "name": "Marblehead, UT",
@@ -8370,7 +8375,8 @@
     "latitude": 40.853175,
     "longitude": -112.829412,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Marblehead in Tooele County, Utah on the south shore of the Great Salt Lake was an early Utah Territory community associated with the marble quarrying operations that extracted the distinctive grey-white limestone (misidentified as marble) from the Oquirrh Mountains for use in construction, including some of the early buildings of Salt Lake City. The Great Salt Lake shoreline communities of the nineteenth century reflected the Mormon settlement pattern of small agricultural villages combined with extractive industries that supported the Zion-building mission of the Latter-day Saint pioneers. The lake's dramatically fluctuating water levels have submerged and re-exposed the area around former shoreline communities multiple times over the past century, and the Great Salt Lake's low-water periods expose historic artifacts from the nineteenth-century settlements. Tooele County's western shore has seen significant industrial history including the Kennecott copper smelter complex, and the area's archaeology spans Native American, pioneer, and industrial periods."
   },
   {
     "name": "Cherry Mine",
@@ -8378,7 +8384,8 @@
     "latitude": 41.432095,
     "longitude": -89.215436,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cherry Mine in Bureau County, Illinois near Cherry was the site of one of the most devastating mining disasters in American history — on November 13, 1909, a fire ignited by a bale of hay set ablaze by a miners' torch spread through the ventilation system of the St. Paul Coal Company mine, trapping 481 miners underground and killing 259 men and boys in the deadliest coal mine disaster in Illinois history. The Cherry Mine disaster was a watershed moment in American mine safety reform, galvanizing the labor movement and state legislatures to demand improved ventilation, escape routes, and inspection regimens in the coal mines that powered the industrial economy. The mine closed permanently after the disaster, and a monument and cemetery in Cherry honor the victims of the tragedy. The site is accessible as a historical commemoration, and the small village of Cherry itself is a sobering reminder of the human cost of the industrial coal economy."
   },
   {
     "name": "Nuttallburg Coal Tipple",
@@ -8386,7 +8393,8 @@
     "latitude": 38.050539,
     "longitude": -81.042559,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Nuttallburg Coal Tipple in Fayette County, West Virginia in the New River Gorge is a remarkably preserved example of the overhead cable conveyor coal tipple technology that characterized early twentieth century Appalachian coal mining, built in 1905 by John Nuttall and rebuilt several times through the 1950s to transport coal from the mine face to the Chesapeake & Ohio Railway line below. The Nuttall family operated the mine and the company town of Nuttallburg — which included a company store, housing, and a school — from 1870 until the mine's final closure in 1958, representing nearly a century of continuous coal extraction from the famous New River Coalfield. Today the Nuttallburg tipple and associated structures are preserved within New River Gorge National Park and are accessible via a hiking trail from the Fern Creek trailhead, providing an extraordinary opportunity to see Appalachian industrial coal heritage in its original gorge setting. The National Park status means artifact collection is prohibited, but the historical experience is exceptional."
   },
   {
     "name": "Vipont Mine",
@@ -8394,7 +8402,8 @@
     "latitude": 41.965749,
     "longitude": -113.845845,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Vipont Mine in Box Elder County, Utah in the remote Raft River Mountains of northwestern Utah was a lead-silver mining operation that exploited the mineral-rich formations of the Raft River Range in one of the most isolated corners of the Great Basin, far from the major mining districts and served only by desert roads across the Great Salt Lake Desert. The Box Elder County mountains harbor numerous small mining districts that operated intermittently from the 1870s through the mid-twentieth century, producing modest amounts of lead, silver, and some gold without achieving the sustained production that would have supported permanent towns. The Vipont area is on largely BLM land in the remote northwest corner of Utah, accessible via dirt roads from Snowville or Lucin, and the high-clearance vehicle requirements ensure that the site sees minimal visitor traffic. Remote Great Basin silver-lead mine sites like Vipont are productive territory for serious relic hunters with appropriate wilderness preparedness."
   },
   {
     "name": "Cardiff Mine",
@@ -8402,7 +8411,8 @@
     "latitude": 41.057617,
     "longitude": -88.299485,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Cardiff Mine near Odell, Livingston County, Illinois was a coal mining operation in the Illinois coalfield that provided fuel for the surrounding agricultural region and the Chicago market during the late nineteenth and early twentieth centuries, when Illinois was one of the nation's leading coal-producing states and small shaft mines throughout the state served local and regional markets. Livingston County's coal deposits were thinner and of lower quality than the great southern Illinois coalfield, and the Cardiff and other nearby mines operated as relatively modest local producers rather than major industrial operations. The mine's closure followed the pattern of most small Illinois coal operations — a combination of geological limitations, economic pressure from larger mines, and the eventual shift from coal to natural gas for heating. Former small-scale Illinois coal mine sites are characterized by soil banks, slight surface subsidence, and occasional coal fragments that mark the buried shaft and haulage infrastructure."
   },
   {
     "name": "Ford Slope Mine",
