@@ -226,8 +226,9 @@
     "longitude": -108.7383,
     "description": "Shakespeare, New Mexico is one of the most intact ghost towns in the Southwest, a silver and turquoise mining camp that saw multiple boom cycles from the 1870s through the 1890s, and the Grant House hotel served double duty as the main brothel operation in this rough frontier settlement near the Mexican border. The camp was so remote and lawless that it hosted notorious outlaws including Russian Bill and Sandy King, who were both hanged in the dining room, and the vice district matched the camp's violent reputation. The private townsite is managed by the Graham family who offer periodic tours and special access events for enthusiasts. The well-preserved adobe and stone ruins on the Chihuahuan Desert scrubland make Shakespeare one of the most compelling ghost town detecting destinations in the Southwest when access is permitted.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.82,
+    "tier": 1,
+    "detecting_weight": 71
   },
   {
     "name": "Chloride AZ Brothels",
@@ -236,8 +237,9 @@
     "longitude": -114.2069,
     "description": "Chloride, Arizona is the oldest continuously inhabited mining town in Arizona, booming in the 1860s\u20131890s when silver strikes brought thousands of miners to the Cerbat Mountains near the Colorado River, and the small but active vice district catered to the rough mining population throughout those decades. Several frame and adobe structures served as brothels along the main street, and the town's remote location in the Mojave Desert made the local entertainments the only option for men working the remote mines. Chloride today is a living semi-ghost town with a small population, original Western false-front buildings, and murals painted on rocks above town, and the surrounding BLM land in the Cerbat Mountains is accessible. Detecting the old mining camp outskirts and dry washes below the former vice district has produced silver coins, trade tokens, and personal items from the territorial era.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.78,
+    "tier": 1,
+    "detecting_weight": 73
   },
   {
     "name": "Ruby AZ Brothel",
@@ -246,8 +248,9 @@
     "longitude": -111.2536,
     "description": "Ruby, Arizona was a lead-zinc-silver mining camp that operated from the 1910s through 1940 in the remote Santa Cruz County mountains near the Mexican border, and the Montana Mine company town included a boarding house that doubled as the camp's brothel serving the predominantly Mexican and Mexican-American workforce. The camp is famous for two brutal murders of store owners in 1920 and 1921 that occurred in the store across from the bordello, and the isolated site attracted desperadoes from across the border throughout its operating years. The private ghost town is exceptionally well-preserved with original adobe, stone, and frame buildings still standing including the jail, school, and mine structures, and the owners offer guided tours and detecting events. The remote Sonoran Desert setting and lack of modern disturbance make Ruby one of the most rewarding detecting sites in Arizona.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.79,
+    "tier": 1,
+    "detecting_weight": 80
   },
   {
     "name": "Jerome Red-Light Area",
@@ -256,8 +259,9 @@
     "longitude": -112.1138,
     "description": "Jerome, Arizona was a copper mining boom town perched on the steep face of Cleopatra Hill above the Verde Valley, and its vice district along Hull Avenue and the lower town served the thousands of miners working the United Verde and Verde Extension copper mines through the 1880s\u20131950s. The town was known as the wickedest town in the West at its peak, with a red-light district that operated openly in a segregated zone on the hillside below the main commercial street. Jerome is today a living arts community and tourist destination with many original buildings preserved on the steep hillside, though the former brothel district below Main Street has seen significant collapse and vegetation overgrowth. The mine waste dumps and rural edges of the Jerome Historic District above town are accessible BLM land where period coins, copper mining tokens, and personal items are sometimes found.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.73,
+    "tier": 1,
+    "detecting_weight": 60
   },
   {
     "name": "Tombstone Vice District",
@@ -266,8 +270,9 @@
     "longitude": -110.0676,
     "description": "Tombstone, Arizona was the site of the richest silver strike in Arizona Territory in 1877, and the boom town's vice district along Sixth Street and adjacent alleys became one of the most famous in the American West, operating saloons, gambling halls, and brothels that served the 15,000-person population at its 1881 peak. The silver mining population spent freely on entertainment, and the brothels ranged from cribs for common miners to parlor houses catering to mine owners and gamblers passing through town on the way to the OK Corral area. Tombstone is a living tourist town today with the historic commercial district on Allen Street largely preserved and open to visitors, and the surrounding BLM mining claims in the Dragoon Mountains are accessible. Detecting the rural fringes of the Tombstone Courthouse State Historic Park area and surrounding desert has produced Territorial-era coins, trade tokens, and silver-era personal items.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.86,
+    "tier": 1,
+    "detecting_weight": 63
   },
   {
     "name": "Silver City NM Red-Light District",
@@ -276,8 +281,9 @@
     "longitude": -108.2803,
     "description": "Silver City, New Mexico was the commercial and vice hub of Grant County during the 1870s\u20131890s silver mining boom, with its red-light district operating along Bullard Street and connecting alleys where cribs and parlor houses served miners from surrounding camps including Pinos Altos, Chloride, and Hillsboro. The young Billy the Kid, then William Bonney, spent part of his childhood in Silver City before departing for his outlaw career, and the rough frontier atmosphere supported a substantial vice trade throughout the boom decades. Silver City is a living historic town today with adobe commercial buildings from the territorial era still in use, and the surrounding Gila National Forest is accessible for outdoor recreation including detecting. The edges of the historic downtown and the rural roads leading to the former mining camps outside town offer the best detecting opportunities for period finds.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.79,
+    "tier": 1,
+    "detecting_weight": 57
   },
   {
     "name": "Bonanza ID Brothels",
@@ -286,8 +292,9 @@
     "longitude": -114.7278,
     "description": "Bonanza, Idaho was a silver and gold mining camp in the remote Salmon River Mountains of Custer County that boomed in the 1870s\u20131880s, and its vice district of log and frame cribs served the hard-rock miners working the Charles Dickens and other major lode mines in this extremely isolated mountain setting. The camp competed with nearby Custer City for mining trade, and both towns maintained active red-light districts despite\u2014or because of\u2014their extreme remoteness from any established civilization. The townsite is now BLM-managed land with a few original log structures surviving in the Forest Service recreation corridor along the Salmon River, and the surrounding Salmon-Challis National Forest is accessible. The remote location and minimal modern disturbance make Bonanza one of Idaho's better ghost town detecting sites, with period coins and personal items found among the sagebrush and cabin ruins.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.74,
+    "tier": 1,
+    "detecting_weight": 79
   },
   {
     "name": "Silver City ID Brothels",
@@ -296,8 +303,9 @@
     "longitude": -116.7333,
     "description": "Silver City, Idaho was the county seat of Owyhee County and the center of a massive gold and silver mining district that produced over $40 million in ore from the 1860s through the 1880s, and its red-light district on the steep streets above Jordan Creek served a population of several thousand miners and their suppliers. The remote high-desert setting at 6,200 feet elevation meant the town was snowbound for months each year, making the local vice district the primary entertainment option for the trapped mining population. Silver City is one of the best-preserved large ghost towns in the West, with over 75 original buildings still standing including the Idaho Hotel, and it is managed by BLM with seasonal access. Detecting on BLM land surrounding the historic district has produced gold-rush coins, mining tokens, and personal items from the decades-long boom.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.87,
+    "tier": 1,
+    "detecting_weight": 83
   },
   {
     "name": "Wallace Oasis Bordello",
@@ -306,8 +314,9 @@
     "longitude": -115.9258,
     "description": "Wallace, Idaho was the last city in the United States to officially close its brothels, with the Oasis Rooms bordello on Fourth Street operating continuously from 1895 until the county sheriff finally shut it down in 1988, serving miners from the Silver Valley lead-silver district for nearly a century of continuous operation. The Silver Valley produced more silver than any other district in the country, and the Bunker Hill, Star-Morning, and Sunshine mines employed thousands of men who patronized Wallace's open vice district through multiple generations. The Oasis Rooms building is now a museum open to the public, preserving the original d\u00e9cor, furniture, and artifacts of one of the last operating American brothels. The Wallace Historic District is a National Historic Landmark, and the surrounding Coeur d'Alene National Forest land above the Silver Valley offers detecting opportunities for period mining camp artifacts.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 1
+    "confidence": 0.95,
+    "tier": 1,
+    "detecting_weight": 44
   },
   {
     "name": "Fort Laramie Three-Mile Hog Ranch",
@@ -316,8 +325,9 @@
     "longitude": -104.6222,
     "description": "The Three-Mile Hog Ranch operated from approximately 1849 through the 1880s exactly three miles east of Fort Laramie along the Oregon Trail, providing whiskey, gambling, and prostitution to soldiers, emigrants, and traders who could not obtain these services on the military post. The hog ranch served as a critical waypoint where thousands of Oregon Trail emigrants stopped before or after the fort, and soldiers from the garrison spent their meager pay on the available entertainments. The site is listed on the National Register of Historic Places, and the surrounding Goshen County ranch land along the North Platte River is open high plains terrain. Metal detecting the open prairie around the documented hog ranch site has yielded Oregon Trail-era coins, military buttons, buckles, and personal items from the enormous traffic that passed through over four decades.",
     "source": "historic_brothels",
-    "confidence": 0.8,
-    "tier": 2
+    "confidence": 0.88,
+    "tier": 2,
+    "detecting_weight": 92
   },
   {
     "name": "Fort Fetterman One-Mile Hog Ranch",
