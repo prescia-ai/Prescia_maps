@@ -6,13 +6,14 @@
     "longitude": -94.4155,
     "description": "The 'Queen City of the Trails,' Independence was the primary jumping-off point for the Oregon, California, and Santa Fe Trails. Emigrants from the eastern states gathered here each spring to outfit for the long journey west.",
     "source": "seed:historic_trail_landmarks",
-    "confidence": 0.9,
+    "confidence": 0.92,
     "trails": [
       "Oregon Trail",
       "California Trail",
       "Santa Fe Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 32
   },
   {
     "name": "Westport, MO",
@@ -25,7 +26,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 32
   },
   {
     "name": "Council Grove, KS",
@@ -37,7 +39,8 @@
     "confidence": 0.9,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 58
   },
   {
     "name": "Fort Kearny, NE",
@@ -52,7 +55,8 @@
       "California Trail",
       "Mormon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Chimney Rock, NE",
@@ -66,7 +70,8 @@
       "Oregon Trail",
       "California Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Scotts Bluff, NE",
@@ -80,7 +85,8 @@
       "Oregon Trail",
       "California Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Fort Laramie, WY",
@@ -96,7 +102,8 @@
       "Mormon Trail",
       "Pony Express Route",
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Register Cliff, WY",
@@ -109,7 +116,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Independence Rock, WY",
@@ -124,7 +132,8 @@
       "California Trail",
       "Mormon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 60
   },
   {
     "name": "South Pass, WY",
@@ -133,14 +142,15 @@
     "longitude": -108.9417,
     "description": "The broad, gentle crossing of the Continental Divide at South Pass made overland wagon travel to the Pacific possible, and was perhaps the single most important geographic feature in the history of westward expansion. Emigrants crossing here were technically halfway to Oregon City, though the most difficult terrain still lay ahead.",
     "source": "seed:historic_trail_landmarks",
-    "confidence": 0.95,
+    "confidence": 0.93,
     "trails": [
       "Oregon Trail",
       "California Trail",
       "Mormon Trail",
       "Pony Express Route",
       "Lander Road / Lander Cutoff"
-    ]
+    ],
+    "detecting_weight": 88
   },
   {
     "name": "Fort Bridger, WY",
@@ -157,7 +167,8 @@
       "Pony Express Route",
       "Cherokee Trail",
       "Hastings Cutoff"
-    ]
+    ],
+    "detecting_weight": 48
   },
   {
     "name": "Fort Hall, ID",
@@ -173,7 +184,8 @@
       "Pony Express Route",
       "Lander Road / Lander Cutoff",
       "Emigrant Trail / Humboldt Route"
-    ]
+    ],
+    "detecting_weight": 45
   },
   {
     "name": "Three Island Crossing, ID",
@@ -185,7 +197,8 @@
     "confidence": 0.8,
     "trails": [
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 68
   },
   {
     "name": "Fort Boise, ID",
@@ -197,7 +210,8 @@
     "confidence": 0.85,
     "trails": [
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "The Dalles, OR",
@@ -210,7 +224,8 @@
     "trails": [
       "Oregon Trail",
       "Barlow Road"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Oregon City, OR",
@@ -223,7 +238,8 @@
     "trails": [
       "Oregon Trail",
       "Barlow Road"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "City of Rocks, ID",
@@ -235,7 +251,8 @@
     "confidence": 0.85,
     "trails": [
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Humboldt Sink, NV",
@@ -248,7 +265,8 @@
     "trails": [
       "California Trail",
       "Emigrant Trail / Humboldt Route"
-    ]
+    ],
+    "detecting_weight": 82
   },
   {
     "name": "Carson Sink, NV",
@@ -260,7 +278,8 @@
     "confidence": 0.8,
     "trails": [
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 78
   },
   {
     "name": "Donner Pass, CA",
@@ -273,7 +292,8 @@
     "trails": [
       "California Trail",
       "Donner Pass Route"
-    ]
+    ],
+    "detecting_weight": 45
   },
   {
     "name": "Sutter's Fort, CA",
@@ -286,7 +306,8 @@
     "trails": [
       "California Trail",
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Nauvoo, IL",
@@ -298,7 +319,8 @@
     "confidence": 0.9,
     "trails": [
       "Mormon Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Winter Quarters, NE",
@@ -310,7 +332,8 @@
     "confidence": 0.85,
     "trails": [
       "Mormon Trail"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Salt Lake City, UT",
@@ -324,7 +347,8 @@
       "Mormon Trail",
       "Pony Express Route",
       "Cherokee Trail"
-    ]
+    ],
+    "detecting_weight": 32
   },
   {
     "name": "Arrow Rock, MO",
@@ -336,7 +360,8 @@
     "confidence": 0.85,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Fort Osage, MO",
@@ -348,7 +373,8 @@
     "confidence": 0.85,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Fort Larned, KS",
@@ -360,7 +386,8 @@
     "confidence": 0.9,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Bent's Old Fort, CO",
@@ -373,7 +400,8 @@
     "trails": [
       "Santa Fe Trail",
       "Trapper's Trail / Cache Valley Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Raton Pass, NM",
@@ -387,7 +415,8 @@
       "Santa Fe Trail",
       "Goodnight-Loving Trail",
       "Cherokee Trail"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Cimarron Crossing, KS",
@@ -400,7 +429,8 @@
     "trails": [
       "Santa Fe Trail",
       "Cimarron Cutoff / Dry Route"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Fort Union, NM",
@@ -412,7 +442,8 @@
     "confidence": 0.9,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Santa Fe, NM",
@@ -427,7 +458,8 @@
       "El Camino Real de Tierra Adentro",
       "Old Spanish Trail",
       "Kearny Trail"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "St. Joseph, MO",
@@ -439,7 +471,8 @@
     "confidence": 0.9,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Gothenburg Station, NE",
@@ -451,7 +484,8 @@
     "confidence": 0.85,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Julesburg, CO",
@@ -464,7 +498,8 @@
     "trails": [
       "Pony Express Route",
       "Smoky Hill Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Fort Caspar, WY",
@@ -477,7 +512,8 @@
     "trails": [
       "Pony Express Route",
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Camp Floyd, UT",
@@ -489,7 +525,8 @@
     "confidence": 0.8,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 68
   },
   {
     "name": "Ruby Valley Station, NV",
@@ -498,10 +535,11 @@
     "longitude": -115.5,
     "description": "Ruby Valley Station was one of the home stations on the Nevada stretch of the Pony Express where riders could rest and eat a hot meal. The Ruby Mountains provided a dramatic backdrop and the valley offered water and forage in the otherwise harsh Great Basin landscape.",
     "source": "seed:historic_trail_landmarks",
-    "confidence": 0.8,
+    "confidence": 0.78,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 85
   },
   {
     "name": "Friday's Station, NV",
@@ -513,7 +551,8 @@
     "confidence": 0.8,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Natchez, MS",
@@ -525,7 +564,8 @@
     "confidence": 0.9,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Mount Locust Inn, MS",
@@ -537,7 +577,8 @@
     "confidence": 0.85,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Port Gibson, MS",
@@ -549,7 +590,8 @@
     "confidence": 0.85,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "French Camp, MS",
@@ -561,7 +603,8 @@
     "confidence": 0.8,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Tupelo, MS",
@@ -573,7 +616,8 @@
     "confidence": 0.9,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "Colbert's Ferry, TN",
@@ -585,7 +629,8 @@
     "confidence": 0.8,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Nashville, TN",
@@ -597,7 +642,8 @@
     "confidence": 0.9,
     "trails": [
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Fort Reno, WY",
@@ -609,7 +655,8 @@
     "confidence": 0.8,
     "trails": [
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Fort Phil Kearny, WY",
@@ -621,7 +668,8 @@
     "confidence": 0.85,
     "trails": [
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Fort C.F. Smith, MT",
@@ -633,7 +681,8 @@
     "confidence": 0.8,
     "trails": [
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Virginia City, MT",
@@ -645,7 +694,8 @@
     "confidence": 0.9,
     "trails": [
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Cumberland Gap, KY",
@@ -657,7 +707,8 @@
     "confidence": 0.95,
     "trails": [
       "Wilderness Road / Boone's Trace"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Boonesborough, KY",
@@ -669,7 +720,8 @@
     "confidence": 0.9,
     "trails": [
       "Wilderness Road / Boone's Trace"
-    ]
+    ],
+    "detecting_weight": 48
   },
   {
     "name": "Lexington, KY",
@@ -681,7 +733,8 @@
     "confidence": 0.9,
     "trails": [
       "Wilderness Road / Boone's Trace"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Winchester, VA",
@@ -693,7 +746,8 @@
     "confidence": 0.9,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Staunton, VA",
@@ -705,7 +759,8 @@
     "confidence": 0.85,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 45
   },
   {
     "name": "Roanoke, VA",
@@ -717,7 +772,8 @@
     "confidence": 0.85,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Salem, NC",
@@ -729,7 +785,8 @@
     "confidence": 0.85,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Charlotte, NC",
@@ -741,7 +798,8 @@
     "confidence": 0.85,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Camden, SC",
@@ -753,7 +811,8 @@
     "confidence": 0.8,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Augusta, GA",
@@ -765,7 +824,8 @@
     "confidence": 0.85,
     "trails": [
       "Great Wagon Road"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "San Antonio, TX",
@@ -780,7 +840,8 @@
       "Goodnight-Loving Trail",
       "Western Trail / Dodge City Trail",
       "King's Highway / El Camino Real de los Tejas"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "Waco, TX",
@@ -792,7 +853,8 @@
     "confidence": 0.85,
     "trails": [
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Fort Worth, TX",
@@ -805,7 +867,8 @@
     "trails": [
       "Chisholm Trail",
       "Western Trail / Dodge City Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Gainesville, TX",
@@ -817,7 +880,8 @@
     "confidence": 0.8,
     "trails": [
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Red River Station, TX",
@@ -829,7 +893,8 @@
     "confidence": 0.8,
     "trails": [
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 70
   },
   {
     "name": "Caldwell, KS",
@@ -841,7 +906,8 @@
     "confidence": 0.85,
     "trails": [
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Wichita, KS",
@@ -853,7 +919,8 @@
     "confidence": 0.9,
     "trails": [
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Abilene, KS",
@@ -866,7 +933,8 @@
     "trails": [
       "Chisholm Trail",
       "Smoky Hill Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Fort Sumner, NM",
@@ -878,7 +946,8 @@
     "confidence": 0.85,
     "trails": [
       "Goodnight-Loving Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Bosque Redondo, NM",
@@ -890,7 +959,8 @@
     "confidence": 0.8,
     "trails": [
       "Goodnight-Loving Trail"
-    ]
+    ],
+    "detecting_weight": 48
   },
   {
     "name": "Pueblo, CO",
@@ -903,7 +973,8 @@
     "trails": [
       "Goodnight-Loving Trail",
       "Cherokee Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Denver, CO",
@@ -917,7 +988,8 @@
       "Goodnight-Loving Trail",
       "Smoky Hill Trail",
       "Trapper's Trail / Cache Valley Trail"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Cheyenne, WY",
@@ -929,7 +1001,8 @@
     "confidence": 0.9,
     "trails": [
       "Goodnight-Loving Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Fort Riley, KS",
@@ -941,7 +1014,8 @@
     "confidence": 0.85,
     "trails": [
       "Smoky Hill Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Fort Hays, KS",
@@ -953,7 +1027,8 @@
     "confidence": 0.85,
     "trails": [
       "Smoky Hill Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Fort Wallace, KS",
@@ -965,7 +1040,8 @@
     "confidence": 0.8,
     "trails": [
       "Smoky Hill Trail"
-    ]
+    ],
+    "detecting_weight": 60
   },
   {
     "name": "Cumberland, MD",
@@ -977,7 +1053,8 @@
     "confidence": 0.9,
     "trails": [
       "National Road / Cumberland Road"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Wheeling, WV",
@@ -990,7 +1067,8 @@
     "trails": [
       "National Road / Cumberland Road",
       "Zane's Trace"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Zanesville, OH",
@@ -1003,7 +1081,8 @@
     "trails": [
       "National Road / Cumberland Road",
       "Zane's Trace"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Columbus, OH",
@@ -1015,7 +1094,8 @@
     "confidence": 0.9,
     "trails": [
       "National Road / Cumberland Road"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Indianapolis, IN",
@@ -1027,7 +1107,8 @@
     "confidence": 0.9,
     "trails": [
       "National Road / Cumberland Road"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Vandalia, IL",
@@ -1039,7 +1120,8 @@
     "confidence": 0.85,
     "trails": [
       "National Road / Cumberland Road"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Fort Benton, MT",
@@ -1051,7 +1133,8 @@
     "confidence": 0.85,
     "trails": [
       "Mullan Road"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Helena, MT",
@@ -1064,7 +1147,8 @@
     "trails": [
       "Mullan Road",
       "Bozeman Road - Northern Extension"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Missoula, MT",
@@ -1076,7 +1160,8 @@
     "confidence": 0.85,
     "trails": [
       "Mullan Road"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Coeur d'Alene, ID",
@@ -1088,7 +1173,8 @@
     "confidence": 0.85,
     "trails": [
       "Mullan Road"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Walla Walla, WA",
@@ -1101,7 +1187,8 @@
     "trails": [
       "Mullan Road",
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Abiquiu, NM",
@@ -1113,7 +1200,8 @@
     "confidence": 0.85,
     "trails": [
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Moab, UT",
@@ -1125,7 +1213,8 @@
     "confidence": 0.85,
     "trails": [
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 68
   },
   {
     "name": "Las Vegas, NV",
@@ -1137,7 +1226,8 @@
     "confidence": 0.85,
     "trails": [
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Cajon Pass, CA",
@@ -1149,7 +1239,8 @@
     "confidence": 0.8,
     "trails": [
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 62
   },
   {
     "name": "Nacogdoches, TX",
@@ -1161,7 +1252,8 @@
     "confidence": 0.85,
     "trails": [
       "King's Highway / El Camino Real de los Tejas"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "San Augustine, TX",
@@ -1173,7 +1265,8 @@
     "confidence": 0.8,
     "trails": [
       "King's Highway / El Camino Real de los Tejas"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Natchitoches, LA",
@@ -1186,7 +1279,8 @@
     "trails": [
       "King's Highway / El Camino Real de los Tejas",
       "Natchez Trace"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Wallowa Lake, OR",
@@ -1198,7 +1292,8 @@
     "confidence": 0.8,
     "trails": [
       "Nez Perce Trail - Flight of 1877"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Lolo Pass, MT",
@@ -1210,7 +1305,8 @@
     "confidence": 0.8,
     "trails": [
       "Nez Perce Trail - Flight of 1877"
-    ]
+    ],
+    "detecting_weight": 55
   },
   {
     "name": "Big Hole Battlefield, MT",
@@ -1222,7 +1318,8 @@
     "confidence": 0.85,
     "trails": [
       "Nez Perce Trail - Flight of 1877"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Bear Paw Battlefield, MT",
@@ -1234,7 +1331,8 @@
     "confidence": 0.85,
     "trails": [
       "Nez Perce Trail - Flight of 1877"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Fort Smith, AR",
@@ -1246,7 +1344,8 @@
     "confidence": 0.85,
     "trails": [
       "Cherokee Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Fort Scott, KS",
@@ -1258,7 +1357,8 @@
     "confidence": 0.8,
     "trails": [
       "Cherokee Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Goose Lake, OR/CA",
@@ -1270,7 +1370,8 @@
     "confidence": 0.75,
     "trails": [
       "Applegate Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Klamath Falls, OR",
@@ -1282,7 +1383,8 @@
     "confidence": 0.8,
     "trails": [
       "Applegate Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Jacksonville, OR",
@@ -1294,7 +1396,8 @@
     "confidence": 0.8,
     "trails": [
       "Applegate Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Chillicothe, OH",
@@ -1306,7 +1409,8 @@
     "confidence": 0.85,
     "trails": [
       "Zane's Trace"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Maysville, KY",
@@ -1318,7 +1422,8 @@
     "confidence": 0.8,
     "trails": [
       "Zane's Trace"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Bandera, TX",
@@ -1330,7 +1435,8 @@
     "confidence": 0.8,
     "trails": [
       "Western Trail / Dodge City Trail"
-    ]
+    ],
+    "detecting_weight": 58
   },
   {
     "name": "Dodge City, KS",
@@ -1343,7 +1449,8 @@
     "trails": [
       "Western Trail / Dodge City Trail",
       "Chisholm Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Ogallala, NE",
@@ -1355,7 +1462,8 @@
     "confidence": 0.85,
     "trails": [
       "Western Trail / Dodge City Trail"
-    ]
+    ],
+    "detecting_weight": 58
   },
   {
     "name": "El Paso, TX",
@@ -1370,7 +1478,8 @@
       "Cooke's Wagon Road",
       "El Camino Real de Tierra Adentro",
       "Kearny Trail"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "Tucson, AZ",
@@ -1383,7 +1492,8 @@
     "trails": [
       "Gila Trail",
       "Cooke's Wagon Road"
-    ]
+    ],
+    "detecting_weight": 35
   },
   {
     "name": "Yuma, AZ",
@@ -1396,7 +1506,8 @@
     "trails": [
       "Gila Trail",
       "Cooke's Wagon Road"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "San Diego, CA",
@@ -1409,7 +1520,8 @@
     "trails": [
       "Gila Trail",
       "Cooke's Wagon Road"
-    ]
+    ],
+    "detecting_weight": 33
   },
   {
     "name": "Donner Lake, CA",
@@ -1422,7 +1534,8 @@
     "trails": [
       "Donner Pass Route",
       "Hastings Cutoff"
-    ]
+    ],
+    "detecting_weight": 45
   },
   {
     "name": "Salt Lake Desert, UT",
@@ -1434,7 +1547,8 @@
     "confidence": 0.75,
     "trails": [
       "Hastings Cutoff"
-    ]
+    ],
+    "detecting_weight": 80
   },
   {
     "name": "Pacific Springs, WY",
@@ -1447,7 +1561,8 @@
     "trails": [
       "Lander Road / Lander Cutoff",
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 85
   },
   {
     "name": "Hollenberg Station, KS",
@@ -1459,7 +1574,8 @@
     "confidence": 0.8,
     "trails": [
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 62
   },
   {
     "name": "Taos, NM",
@@ -1472,7 +1588,8 @@
     "trails": [
       "Trapper's Trail / Cache Valley Trail",
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 40
   },
   {
     "name": "Fort Leavenworth, KS",
@@ -1485,7 +1602,8 @@
     "trails": [
       "Kearny Trail",
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 38
   },
   {
     "name": "Horsehead Crossing, TX",
@@ -1497,7 +1615,8 @@
     "confidence": 0.8,
     "trails": [
       "Goodnight-Loving Trail"
-    ]
+    ],
+    "detecting_weight": 75
   },
   {
     "name": "Pecos, TX",
@@ -1509,7 +1628,8 @@
     "confidence": 0.8,
     "trails": [
       "Goodnight-Loving Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Raton, NM",
@@ -1522,7 +1642,8 @@
     "trails": [
       "Goodnight-Loving Trail",
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Ash Hollow, NE",
@@ -1535,7 +1656,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 62
   },
   {
     "name": "South Pass City, WY",
@@ -1548,7 +1670,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 50
   },
   {
     "name": "Scotts Bluff Pass, NE",
@@ -1561,7 +1684,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 42
   },
   {
     "name": "Alcove Spring, KS",
@@ -1574,7 +1698,8 @@
     "trails": [
       "Oregon Trail",
       "Mormon Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Big Blue River Crossing, KS",
@@ -1588,7 +1713,8 @@
       "Oregon Trail",
       "California Trail",
       "Mormon Trail"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Courthouse Rock, NE",
@@ -1601,7 +1727,8 @@
     "trails": [
       "Oregon Trail",
       "California Trail"
-    ]
+    ],
+    "detecting_weight": 60
   },
   {
     "name": "Platte River Road, NE",
@@ -1616,7 +1743,8 @@
       "California Trail",
       "Mormon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Fort McPherson, NE",
@@ -1629,7 +1757,8 @@
     "trails": [
       "Oregon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 48
   },
   {
     "name": "Rock Creek Station, NE",
@@ -1642,7 +1771,8 @@
     "trails": [
       "Oregon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 58
   },
   {
     "name": "Emigrant Gap, CA",
@@ -1655,7 +1785,8 @@
     "trails": [
       "California Trail",
       "Donner Pass Route"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Johnson's Ranch, CA",
@@ -1668,7 +1799,8 @@
     "trails": [
       "California Trail",
       "Donner Pass Route"
-    ]
+    ],
+    "detecting_weight": 62
   },
   {
     "name": "Rabbit Ears Pass, CO",
@@ -1681,7 +1813,8 @@
     "trails": [
       "Cherokee Trail",
       "Trapper's Trail / Cache Valley Trail"
-    ]
+    ],
+    "detecting_weight": 68
   },
   {
     "name": "Pawnee Rock, KS",
@@ -1693,7 +1826,8 @@
     "confidence": 0.85,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 60
   },
   {
     "name": "Point of Rocks, NM",
@@ -1705,7 +1839,8 @@
     "confidence": 0.8,
     "trails": [
       "Santa Fe Trail"
-    ]
+    ],
+    "detecting_weight": 72
   },
   {
     "name": "Jornada del Muerto, NM",
@@ -1717,7 +1852,8 @@
     "confidence": 0.8,
     "trails": [
       "El Camino Real de Tierra Adentro"
-    ]
+    ],
+    "detecting_weight": 80
   },
   {
     "name": "Mesilla, NM",
@@ -1730,7 +1866,8 @@
     "trails": [
       "El Camino Real de Tierra Adentro",
       "Gila Trail"
-    ]
+    ],
+    "detecting_weight": 52
   },
   {
     "name": "Fort Craig, NM",
@@ -1742,7 +1879,8 @@
     "confidence": 0.8,
     "trails": [
       "El Camino Real de Tierra Adentro"
-    ]
+    ],
+    "detecting_weight": 70
   },
   {
     "name": "Fort Defiance, AZ",
@@ -1754,7 +1892,8 @@
     "confidence": 0.75,
     "trails": [
       "Old Spanish Trail"
-    ]
+    ],
+    "detecting_weight": 45
   },
   {
     "name": "South Platte River Crossing, CO",
@@ -1768,7 +1907,8 @@
       "Oregon Trail",
       "California Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 68
   },
   {
     "name": "Fetterman Massacre Site, WY",
@@ -1780,7 +1920,8 @@
     "confidence": 0.85,
     "trails": [
       "Bozeman Trail"
-    ]
+    ],
+    "detecting_weight": 58
   },
   {
     "name": "Crossing of the Platte, WY",
@@ -1795,7 +1936,8 @@
       "California Trail",
       "Mormon Trail",
       "Pony Express Route"
-    ]
+    ],
+    "detecting_weight": 65
   },
   {
     "name": "Whitman Mission, WA",
@@ -1807,6 +1949,7 @@
     "confidence": 0.85,
     "trails": [
       "Oregon Trail"
-    ]
+    ],
+    "detecting_weight": 40
   }
 ]
