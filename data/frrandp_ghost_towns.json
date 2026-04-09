@@ -6710,7 +6710,8 @@
     "latitude": 41.403644,
     "longitude": -88.280597,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Dresden was an early Illinois settlement in Grundy County along the upper Kankakee River system, established in the 1830s and 1840s by New England and New York settlers who laid out a townsite in the fertile prairie and timber country of northeastern Illinois. The community had a store, a tavern, and a post office serving local farm families, but the more commercially advantaged town of Morris on the Illinois and Michigan Canal drew business away from Dresden, and the community faded through the 1850s. The Grundy County bottomlands along the Illinois and Kankakee Rivers are exceptional detecting ground — this is Illinois canal country where the I&M Canal trade generated heavy coin loss and artifact deposition in the 1840s-1870s, and permission-based detecting near the old Dresden area has produced early American large cents and pioneer-era domestic hardware."
   },
   {
     "name": "Nine Mile Creek Settlement, IL",
@@ -6718,7 +6719,8 @@
     "latitude": 38.047191,
     "longitude": -89.909556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "The Nine Mile Creek Settlement was an early Illinois farming community in Monroe County, established in the 1810s and 1820s by Scots-Irish and American-born settlers who pushed into the American Bottom country south of St. Louis during the first wave of Illinois territorial settlement. The settlement had a school and a church congregation in the rolling limestone country east of the Mississippi River, and the community identity persisted for decades before formal town organization faded into the broader Monroe County rural fabric. Monroe County's position just east of the American Bottom — one of the most historically trafficked river crossings in the continent — makes it exceptional detecting territory, and old church and school sites in the settlement-era limestone country have produced early American coinage and frontier domestic hardware."
   },
   {
     "name": "Topaz Mill, MO",
@@ -6726,7 +6728,8 @@
     "latitude": 36.946238,
     "longitude": -92.202942,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Topaz Mill was a water-powered grist and flour mill community in Ozark County, Missouri, established in the mid-nineteenth century along a spring-fed tributary of the North Fork of the White River in the remote Missouri Ozarks, serving the isolated farming communities of the Irish Wilderness country. The mill and associated community provided critical services to outlying Ozark farms through the post-Civil War period before improved roads and the automobile era made the remote mill site unnecessary. The North Fork of the White River country in Ozark County is one of the most historically intact detecting landscapes in the Missouri Ozarks — the area was briefly cleared for farming, then abandoned during the Depression era, and the shallow rocky soils preserve pioneer and Civil War-era artifact scatters accessible with landowner permission."
   },
   {
     "name": "Somerfield, PA",
@@ -6734,7 +6737,8 @@
     "latitude": 39.755476,
     "longitude": -79.394864,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Somerfield was a small community in Somerset County, Pennsylvania, on the National Road — the first federally funded highway in American history — that thrived as a tavern and trading stop for the heavy wagon and coach traffic crossing the Allegheny Mountains from the 1820s through the 1850s. The town and surrounding bottomland were permanently flooded in the 1940s when the Army Corps of Engineers completed the Youghiogheny River Lake as a flood control and recreation reservoir, submerging the original National Road community beneath the reservoir's southern arm. During drought years, the old townsite margin is occasionally exposed in the drawdown zone, and the National Road corridor is known for producing coins, wagon hardware, harness fittings, and tavern-era artifacts from the era of heavy westward traffic."
   },
   {
     "name": "Na-Au-Say, IL",
@@ -6742,7 +6746,8 @@
     "latitude": 41.568987,
     "longitude": -88.353218,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Na-Au-Say was an early Illinois township in Kendall County, taking its name from the Potawatomi word for the location, settled in the 1830s and 1840s by New England and New York immigrants who established farms in the Fox River valley country southwest of Chicago. The township had a school and a church serving local farm families, and the community identity persisted through the early settlement decades before being absorbed into the broader Kendall County rural fabric as farms consolidated and commerce centralized in Yorkville. The Fox River valley in Kendall County preserves a good inventory of early Illinois pioneer-era artifacts, and the loamy bottomland soils near the old Na-Au-Say settlement area have produced pre-Civil War American coinage and early domestic hardware with permission from landowners."
   },
   {
     "name": "Spencer, IL",
@@ -6750,7 +6755,8 @@
     "latitude": 41.498088,
     "longitude": -87.94172,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Spencer was a small farming community in Will County, Illinois, established in the mid-nineteenth century in the flat, rich prairie country southwest of Chicago where speculators and farmers platted ambitious town grids on the fertile black soil only to see commerce bypass them in favor of larger railroad towns. The community had a post office and a small store but faded quickly as the railroad era reorganized the Will County commercial landscape around larger centers. The Will County prairie soils are among Illinois's richest in agricultural terms and also in detecting terms — the early settlement era left a good inventory of pioneer coinage, early Illinois state artifacts, and domestic hardware in the plow layer of fields throughout the county."
   },
   {
     "name": "Friendship, NJ",
@@ -6758,7 +6764,8 @@
     "latitude": 39.75068,
     "longitude": -74.585046,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Friendship was a bog-iron industrial and village community in Burlington County, New Jersey, in the heart of the Pine Barrens, established in the early nineteenth century around an iron furnace that smelted local bog ore into pig iron and hollow-ware castings for the regional market. The ironworks operated through the mid-nineteenth century before cheaper Pennsylvania iron and the decline of the bog ore industry shut the furnace down, and the workers' village slowly emptied into the surrounding pines. The Pinelands industrial ghost towns of southern New Jersey are fascinating detecting environments — the sandy iron-rich soils preserve ironware, domestic artifacts, and early American coinage in a landscape otherwise protected by the Pinelands National Reserve, requiring attention to access rules for individual parcels."
   },
   {
     "name": "Hampton Furnace, NJ",
@@ -6766,7 +6773,8 @@
     "latitude": 39.769562,
     "longitude": -74.680435,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Hampton Furnace was one of the Pine Barrens iron furnace communities of Burlington County, New Jersey, operating in the late eighteenth and early nineteenth centuries when the region's bog iron deposits fueled a thriving furnace industry that supplied iron goods to the colonial and early American market. The furnace village had worker housing, a forge, and supporting trades before the industry collapsed under competition from Pennsylvania iron and the exhaustion of the accessible bog ore deposits. The Sandy Pinelands landscape preserves ironwork fragments, slag heaps, and old worker village foundations accessible for exploration, and the iron-stained Pinelands soils have yielded colonial-era coppers, early American coins, and furnace-era hardware to detectorists working the old industrial sites."
   },
   {
     "name": "Harrisville, NJ",
@@ -6774,7 +6782,8 @@
     "latitude": 39.661507,
     "longitude": -74.521819,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Harrisville was a nineteenth-century mill and company village in the New Jersey Pine Barrens, straddling the Burlington and Ocean County line where the Toms River headwaters powered a succession of industrial operations including sawmills, grist mills, and paper mills that exploited the Pinelands' timber and water resources. The community had worker housing, a store, and a church congregation at its peak industrial period before the mill operations closed and the workers dispersed. A remarkably intact set of ruins — millpond earthworks, building foundations, and industrial machinery remnants — remain visible at the old Harrisville site, now within the Wharton State Forest where metal detecting is prohibited, though the site is a significant piece of New Jersey industrial history worth visiting for its atmospheric ruins."
   },
   {
     "name": "Martha's Furnace, NJ",
@@ -6782,7 +6791,8 @@
     "latitude": 39.68279,
     "longitude": -74.510922,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Martha's Furnace was an eighteenth-century bog-iron smelting operation deep in the New Jersey Pine Barrens of Burlington County, one of the many furnace and forge operations that made the Pinelands a significant center of American iron production in the colonial and early national period, casting iron goods for domestic and military use including cannon balls and camp equipment during the Revolutionary War. The furnace village had housing for several dozen workers and their families before the industry played out in the early nineteenth century and the forest reclaimed the site. The old furnace site is within the Wharton State Forest today where metal detecting restrictions apply, but the surrounding private Pinelands parcels adjacent to the old industrial zone have yielded colonial-era coins, iron slag, and early American domestic hardware."
   },
   {
     "name": "Weymouth Furnace, NJ",
