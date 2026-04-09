@@ -1905,7 +1905,8 @@
     "latitude": 21.1525,
     "longitude": -156.923889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Waikolu was a traditional Hawaiian settlement in a remote valley on the Kalaupapa Peninsula of Molokai's north coast, one of several valley communities that existed along this spectacular isolated shoreline accessible only by mule trail over a 1,700-foot sea cliff. The Waikolu Valley's residents, like those of other Kalaupapa-area valleys, were eventually displaced as the Hawaiian Kingdom established the Hansen's disease (leprosy) settlement at Kalaupapa in 1866, dramatically altering the human geography of this remote peninsula. The Kalaupapa National Historical Park today encompasses the settlement and surrounding valleys, and access is strictly controlled — visitors must arrange permits and are guided by park rangers or settlement residents. Metal detecting is prohibited within the national historical park."
   },
   {
@@ -1914,7 +1915,8 @@
     "latitude": 21.180278,
     "longitude": -156.951111,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Kalawao was the original Hansen's disease (leprosy) settlement established on the remote Kalaupapa Peninsula of Molokai's north coast by the Hawaiian Kingdom in 1866, where those afflicted with leprosy were forcibly exiled to a physically isolated community surrounded by 1,700-foot sea cliffs and the open Pacific Ocean. The Belgian priest Father Damien de Veuster famously chose to live and minister among the patients from 1873 until his own death from leprosy in 1889, and his story brought international attention to the settlement's conditions. Kalawao County remains today the smallest county in the United States by both area and population, with the settlement now within Kalaupapa National Historical Park — accessible only by mule, small plane, or a steep trail, and only with advance permit arrangements. The site's extraordinary historical significance and continued habitation by elderly former patients makes it one of America's most poignant and carefully managed historic communities."
   },
   {
@@ -1923,7 +1925,8 @@
     "latitude": 43.939146,
     "longitude": -104.207441,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Cambria was a small Wyoming coal mining community in Weston County in the northeast corner of the state, established in the 1880s when Cambria Coal Company developed significant coal deposits in the Black Hills foothills and built an entire company town to house the miners and their families. The Cambria Mine produced millions of tons of coal that fueled the Burlington and Missouri Railroad's operations through the late nineteenth and early twentieth centuries, and the town had a hotel, school, churches, and substantial worker housing. Operations ceased in 1928 when more economical coal sources elsewhere in the region made the Cambria deposits uncompetitive, and the town was rapidly abandoned and demolished. The site today is accessible on private land in Weston County, with some foundation remnants visible in the landscape."
   },
   {
@@ -1932,7 +1935,8 @@
     "latitude": 42.950286,
     "longitude": -72.986247,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Somerset was an early Vermont community in Windham County in the Green Mountains that was settled in the early nineteenth century as part of the general colonization of Vermont's mountain terrain, but the extreme climate, thin soils, and difficulty of farming the high-elevation landscape made the location essentially unviable for sustained agricultural settlement. Vermont's hill towns and mountain communities experienced a widespread pattern of abandonment in the mid-to-late nineteenth century as farms failed and residents migrated to better agricultural land or to growing industrial cities. The Windham County Green Mountains are now largely forested, with Somerset included in the Green Mountain National Forest. The old cellar holes, stone walls, and remnant orchards typical of abandoned Vermont hill towns are still visible in the forest understory."
   },
   {
@@ -1941,7 +1945,8 @@
     "latitude": 37.336389,
     "longitude": -76.645556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Bigler's Mill was an early Virginia settlement in Shenandoah County in the Shenandoah Valley, connected to the mill industry that was crucial to Virginia's early agricultural economy — transforming grain into flour for both local consumption and export down the Valley and beyond. The Shenandoah Valley was a major corridor of colonial settlement and a theater of intensive Civil War operations, and former mill sites in this region often carry multiple layers of historical significance from the colonial, early American republic, and Civil War eras. The site is in the private agricultural landscape of the northern Shenandoah Valley, where numerous historic mill sites dot the waterways. Civil War-era and earlier artifacts from former mill communities in the Shenandoah Valley are of significant historical and collecting interest."
   },
   {
@@ -1950,7 +1955,8 @@
     "latitude": 35.832477,
     "longitude": -115.434166,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Goodsprings was a small lead and zinc mining community in Clark County, Nevada in the Spring Mountains south of Las Vegas, establishing itself in the 1890s when ore discoveries in the Yellow Pine district attracted miners and businessmen to this Nevada desert community near the California border. The town had a post office, saloon, general store, and the Pioneer Club (saloon) — still standing and operating as one of Nevada's oldest continuously licensed bars — while the surrounding mines produced zinc, lead, and silver through the 1930s. Goodsprings became historically significant when the plane carrying Hollywood actress Carole Lombard crashed into Mount Potosi in January 1942, and Clark Gable famously waited at the Pioneer Club for news while rescue parties searched the mountain. The Pioneer Club and several original structures survive in Goodsprings, which retains its character as a working-class Nevada mining community."
   },
   {
@@ -1959,7 +1965,8 @@
     "latitude": 31.824794,
     "longitude": -103.908539,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Orla was a small Reeves County, Texas community in the Permian Basin desert near the Pecos River, established as a railroad stop on the Texas and Pacific Railway in the late nineteenth century and serving as a modest supply point for ranching operations in the arid trans-Pecos region. The remote West Texas location, extreme heat, scarce water, and the constant wind that defines the Permian Basin landscape made permanent community development extremely difficult, and Orla's population has always been minimal. The Pecos River valley around Orla today is dominated by oil and gas infrastructure from the Permian Basin's massive energy industry. Former ranch and railroad communities in the trans-Pecos region can yield interesting frontier-era artifacts with landowner permission."
   },
   {
@@ -1968,7 +1975,8 @@
     "latitude": 31.73398,
     "longitude": -109.829794,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 75,
     "description": "Gleeson was a small Cochise County, Arizona copper and silver mining community in the Dragoon Mountains of southeastern Arizona, established in the late 1890s near the rich Turquoise Mine and other copper deposits that made this corner of Arizona Territory one of the late Victorian era's productive mineral districts. The town had a post office, jail, hospital, and several commercial buildings serving the mining population through the early twentieth century before the mines declined in the 1920s-1930s and the population dispersed. The adobe ruins of Gleeson — including the remarkably preserved hospital, jail, and schoolhouse — are accessible on BLM land, making this one of southeastern Arizona's most rewarding ghost town destinations for metal detectorists and history enthusiasts. The accessible BLM land and well-preserved adobe ruins make Gleeson one of the more productive detecting sites in Cochise County."
   },
   {
@@ -1977,7 +1985,8 @@
     "latitude": 32.229592,
     "longitude": -108.99034,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Steins was a small Hidalgo County, New Mexico railroad ghost town in the Peloncillo Mountains along the Southern Pacific Railroad mainline in the bootheel of New Mexico, serving as a section house community and modest supply point for travelers crossing this remote corner of the Southwest from the 1880s through the mid-twentieth century. The town had a post office, store, and railroad facilities, and was notable for being on the old Butterfield Overland Mail route that crossed this mountain pass in the late 1850s — one of the most historically significant transportation corridors in the antebellum Southwest. Steins has been privately acquired and developed as a privately operated ghost town attraction with original structures, artifacts, and interpretive displays. Entry requires paying a modest fee to the private owners who have preserved the site's remarkable collection of early twentieth-century railroad and small-town artifacts."
   },
   {
@@ -1986,7 +1995,8 @@
     "latitude": 37.460537,
     "longitude": -114.776154,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 80,
     "description": "Delamar was a significant silver mining boomtown in Owyhee County, Idaho in the Owyhee Mountains, established in 1889 after Captain Joseph Delamar purchased the struggling mines and used modern stamp mill technology to process the ore at a scale that transformed the camp into a proper town of 3,000 people by the mid-1890s. The intensive milling of the siliceous ore created a cloud of deadly silica dust that killed hundreds of miners and workers in a phenomenon so widespread that Delamar became known as 'the widowmaker' — an early and tragic example of industrial occupational disease. The mines closed in 1900 when the ore was exhausted, and Delamar was rapidly abandoned. The remote Owyhee Mountains site is accessible via dirt roads on BLM land, with extensive mine waste dumps, building foundations, and old stamp mill ruins visible in the landscape."
   },
   {
