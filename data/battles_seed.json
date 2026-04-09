@@ -667,7 +667,8 @@
     "description": "On June 24, 1813, a party of 500 American soldiers under Lieutenant Colonel Charles Boerstler marching to destroy a British outpost at Beaver Dams, Ontario, was ambushed by Mohawk and Caughnawaga warriors who had been warned of the movement — according to legend, by the heroic Laura Secord's 20-mile warning walk. The warriors surrounded and harassed the American column for hours until a small British force arrived and the exhausted Americans surrendered. The battle site near Thorold, Ontario, is commemorated by a monument and small park at the Decew House area. The surrounding Niagara Peninsula farmland has produced War of 1812 military buttons, musket balls, and equipment from the intense 1813 campaign on private land with permission.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.8,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Lake Erie",
@@ -677,7 +678,8 @@
     "description": "On September 10, 1813, Master Commandant Oliver Hazard Perry won a decisive naval battle against a British squadron on Lake Erie at Put-in-Bay, Ohio, immortalized by his after-action report: 'We have met the enemy and they are ours.' The American victory gave the U.S. control of Lake Erie, cut British supply lines to the west, and enabled Harrison's invasion of Canada that would kill Tecumseh at the Thames. The battle site on Lake Erie near the Bass Islands, Ohio, is commemorated by Perry's Victory and International Peace Memorial on South Bass Island (Put-in-Bay) — a 352-foot Doric column and national monument. The surrounding Bass Islands and Erie shoreline are accessible by ferry, and the lake bed in the battle area (mostly in Canadian waters) represents an underwater archaeological site of significance.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of the Thames",
@@ -687,7 +689,8 @@
     "description": "On October 5, 1813, General William Henry Harrison's army crossed into Upper Canada and caught the retreating British and Indian forces under General Procter at the Thames River (Moraviantown, Ontario), routing the British in minutes and killing the great Shawnee confederacy leader Tecumseh in the melee — ending the most serious Native American military resistance in the eastern half of North America. The death of Tecumseh broke the Western Confederacy and secured American dominance in the Great Lakes region. The battle site at Moraviantown (Thamesville), Ontario, is marked by a monument and local historic site near Chatham-Kent. The surrounding Thames River valley farmland in Ontario has produced period military buttons, musket balls, and related artifacts from the 1813 campaign on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.85,
+    "detecting_weight": 50
   },
   {
     "name": "Battle of Châteauguay",
@@ -697,7 +700,8 @@
     "description": "On October 26, 1813, a Canadian force of fewer than 500 men — primarily French-Canadian Voltigeurs under Lieutenant Colonel Charles de Salaberry — repulsed an American army of 4,000 under General Wade Hampton at the Châteauguay River south of Montreal, using the forested terrain and disciplined fire to create the impression of a much larger defending force. The victory saved Montreal from capture and is one of the most celebrated engagements in Canadian military history, celebrated as proof that French Canadians were defenders of their homeland. The Châteauguay battlefield is preserved as a national historic site in Allan's Corners, Quebec, with a monument and interpretive panels. The surrounding Châteauguay Valley farmland has produced period musket balls, military buttons, and camp debris from both the American approach and the engagement on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Crysler's Farm",
@@ -707,7 +711,8 @@
     "description": "On November 11, 1813, a British force of 800 regulars and Canadian militia under Lieutenant Colonel Joseph Morrison defeated over 2,000 Americans under General John Boyd at Crysler's Farm on the St. Lawrence River near present-day Morrisburg, Ontario, ending the American attempt to capture Montreal via the river route. The British regulars used close-order fire discipline to repeatedly repulse the disordered American attacks, demonstrating the superiority of professional troops over militia in open battle. The original Crysler's Farm site was flooded by the St. Lawrence Seaway construction in 1958, but the battle is commemorated at Upper Canada Village and the Crysler's Farm Battlefield Memorial in Morrisburg, Ontario. The flooding makes this a unique underwater battlefield, and the surrounding shoreline area has produced period artifacts during low-water periods and dredging operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Horseshoe Bend",
@@ -717,7 +722,8 @@
     "description": "On March 27, 1814, General Andrew Jackson led 3,000 Tennessee militia and Cherokee allies against approximately 1,000 Red Stick Creek warriors fortified in a horseshoe-shaped bend of the Tallapoosa River in Alabama, killing approximately 800 warriors in the most decisive engagement of the Creek War. The victory broke the military power of the Red Stick faction and forced the Creek Nation to cede 23 million acres of territory in the Treaty of Fort Jackson, opening much of Alabama and Georgia to white settlement. Horseshoe Bend National Military Park near Dadeville, AL, preserves the battlefield peninsula with trails, an auto tour, and a museum. Metal detecting is prohibited in the national park, but surrounding Tallapoosa County private land along the river has produced War of 1812-era musket balls, arrowheads, and military equipment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 52
   },
   {
     "name": "Battle of Lundy's Lane",
@@ -727,7 +733,8 @@
     "description": "On July 25, 1814, the bloodiest battle of the War of 1812 was fought at Lundy's Lane just yards from Niagara Falls, as British and American forces fought a brutal, close-range nighttime battle for a hill and its artillery that neither side could clearly see. Both armies suffered enormous casualties — roughly 1,700 combined — and the Americans withdrew to Fort Erie despite claiming a tactical victory, effectively ending offensive American operations on the Niagara frontier. The battlefield at Drummond Hill Cemetery in Niagara Falls, Ontario, contains the burial mound of soldiers killed in the battle and is maintained as a historic site. The Niagara Falls area is heavily developed, but the broader Niagara frontier private farmland corridor has yielded War of 1812 musket balls, military buttons, belt plates, and canteen fragments.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Bladensburg",
@@ -737,7 +744,8 @@
     "description": "On August 24, 1814, British General Robert Ross's veterans routed an American force of 6,000 — including President Madison and his cabinet watching from a nearby hill — at Bladensburg, MD, in what became known as the 'Bladensburg Races' for the speed of the American flight. The defeat opened the road to Washington, and that night the British burned the Capitol, the White House, and other public buildings in retaliation for the American burning of York. Bladensburg Waterfront Park and the Bladensburg battlefield in Prince George's County, MD, are within the modern Washington metropolitan area; a small state park preserves a portion of the field. The surrounding Maryland suburbs have occasional private land access where the approach routes have yielded period military buttons and musket balls.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.87,
+    "detecting_weight": 40
   },
   {
     "name": "Burning of Washington",
@@ -747,7 +755,8 @@
     "description": "On the night of August 24-25, 1814, following their victory at Bladensburg, British forces under Admiral Cockburn and General Ross marched into Washington and burned the Capitol building, the White House, the Treasury, and the War Department in the only successful foreign capture of the U.S. capital — though a fortuitous rainstorm limited the destruction. The burning was ostensibly in retaliation for the American burning of York (Toronto) the previous year, though it also served as a demonstration of British military power. The sites of the burned buildings are now within the core of modern Washington, D.C., rebuilt and expanded through the 19th and 20th centuries with the White House and Capitol still occupying their original locations. No detecting is possible in the federal capital, but the British march routes through Maryland and Virginia have produced period military artifacts on private land.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 32
   },
   {
     "name": "Battle of Fort McHenry",
@@ -757,7 +766,8 @@
     "description": "From September 13-14, 1814, a British fleet bombarded Fort McHenry at the entrance to Baltimore Harbor for 25 hours — the attack that inspired Francis Scott Key to write what would become 'The Star-Spangled Banner' — but the fort's garrison under Major George Armistead held firm, and the British fleet withdrew without capturing the city. The failed attack on Baltimore, combined with the American naval victory at Plattsburgh the same week, contributed to British willingness to negotiate the peace that ended the war. Fort McHenry National Monument and Historic Shrine in Baltimore, MD, preserves the star-shaped fort with its original earthworks in excellent condition, a national monument with a moving interpretive program. Metal detecting is prohibited on the national monument grounds, but the Baltimore Harbor area and surrounding private land in Baltimore County saw extensive military operations and encampment activity during the 1814 campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Plattsburgh",
