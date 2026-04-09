@@ -4460,7 +4460,8 @@
     "latitude": 40.538667,
     "longitude": -82.777833,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Jamestown was a small rural community in Morrow County, Ohio platted in the early 19th century among the rolling till-plain farmland of north-central Ohio, drawing settlers from New England and the mid-Atlantic states who gave it a patriotic name common across frontier Ohio. The community failed to secure sufficient commercial momentum to compete with nearby Mount Gilead and Cardington, and its population drifted toward those larger county towns over time. Today Jamestown in Morrow County exists as a quiet rural neighborhood whose original commercial core has long since disappeared. The region's strong agricultural heritage from continuous farming since the 1820s yields good detecting results near old homestead and school sites."
   },
   {
     "name": "Florida Grove, OH",
@@ -4468,7 +4469,8 @@
     "latitude": 40.550729,
     "longitude": -82.776623,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Florida Grove was a small agricultural settlement in Morrow County, Ohio whose optimistic name suggests early settlers may have had grander visions for their north-central Ohio community. Platted during the great mid-19th century Ohio town-building era, Florida Grove never grew beyond a local school district and farm crossroads before being absorbed into the surrounding rural landscape. The area around the former settlement is now entirely farmland. Morrow County's long agricultural history, undisturbed by significant industrial development, makes its farmstead sites productive detecting locations for 19th-century coins, domestic buttons, and farm hardware."
   },
   {
     "name": "Newville, OH",
@@ -4476,7 +4478,8 @@
     "latitude": 40.630278,
     "longitude": -82.385556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Newville was a small agricultural village in Ashland County, Ohio located in the gently rolling terrain between the Black Fork of the Mohican River and the county's rich central farmland, settled by New England and Pennsylvania families in the early 1800s. The community had a sufficient population to support a post office and local services, but the railroad bypassed Newville in favor of Ashland and Loudonville, sealing the town's fate as a quiet backwater. Today Newville is a small rural hamlet, its original commercial district gone though a few historic homes may survive. The surrounding Ashland County farmland, with its dense early settlement history, offers productive detecting near former tavern and store sites."
   },
   {
     "name": "Winchester, Richland County, OH",
@@ -4484,7 +4487,8 @@
     "latitude": 40.609444,
     "longitude": -82.405278,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Winchester was an early settlement in Richland County, Ohio situated in the glaciated agricultural countryside of north-central Ohio, drawing settlers from Pennsylvania and Virginia who named it after the famous Shenandoah Valley town. The community had a brief period of commercial activity with a tavern and store before the arrival of the railroads cemented Mansfield's dominance as the regional center. Today Winchester in Richland County is a small rural crossroads whose historic identity has largely faded. The Richland County agricultural landscape, one of Ohio's most productive farming regions, holds abundant deposits of 19th-century artifacts near former homestead and tavern sites."
   },
   {
     "name": "Homer, Union County, OH",
@@ -4492,7 +4496,8 @@
     "latitude": 40.121944,
     "longitude": -83.4575,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Homer was a small farming settlement in Union County, Ohio named with classical inspiration by educated New England settlers who flooded into the rich Scioto River farmland of central Ohio in the early 1800s. Like many classically named Ohio communities, Homer never grew into the Athens it aspired to be, remaining a local crossroads with a church and school district before consolidating into Milford Center as transportation improved. The Union County agricultural heartland surrounding Homer's former site is among Ohio's most fertile, with continuous farming since pioneer settlement producing a rich archaeological record. Detectorists working area farmsteads may find early Ohio land tokens, silver coins, and domestic hardware."
   },
   {
     "name": "Shattucksburg, OH",
@@ -4500,7 +4505,8 @@
     "latitude": 40.050762,
     "longitude": -83.044916,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Shattucksburg was a small crossroads community in Franklin County, Ohio in the rapidly developing agricultural fringe of what would become the Columbus metropolitan area, platted during the early 19th century when the Ohio capital was still a small frontier town. Named for an early pioneer family, the settlement briefly served nearby farmers before being overwhelmed by Columbus's expanding commercial reach. The former townsite is now deeply buried under suburban and urban development associated with the Columbus metro area. While detecting opportunities are limited by development, occasional construction projects in the area have exposed 19th-century artifacts from the early settlement era."
   },
   {
     "name": "West Buffalo, OH",
@@ -4508,7 +4514,8 @@
     "latitude": 41.513889,
     "longitude": -84.695556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "West Buffalo was a small farming community in Williams County, Ohio in the far northwest corner of the state along the Tiffin River drainage, settled by farmers who drained the surrounding Black Swamp wetlands in the mid-19th century to reveal some of Ohio's most productive agricultural soil. The community briefly supported a post office and local school but was too close to Bryan and Montpelier to sustain independent commercial development. The incredibly fertile former Black Swamp soils of Williams County have been intensively farmed for over 150 years, and old farmstead sites in the area can yield excellent 19th-century artifact finds for detectorists with landowner permission."
   },
   {
     "name": "Fagundus, PA",
@@ -4516,7 +4523,8 @@
     "latitude": 41.6325,
     "longitude": -79.433056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fagundus was a small oil boom settlement in Warren County, Pennsylvania that emerged during the frenzied early days of Pennsylvania's oil rush following the Drake Well discovery in 1859, perched in the Allegheny River valley country of northwestern Pennsylvania. Like dozens of hastily built oil camps across the region, Fagundus boomed briefly as oil workers, speculators, and merchants flooded in to exploit the producing wells, only to bust when nearby fields played out. The rough terrain of Warren County has preserved some traces of the boom era, and stream valley locations in the oil country can yield period coins, flask caps, and oil industry hardware for detectorists."
   },
   {
     "name": "Petroleum Center, PA",
@@ -4524,7 +4532,8 @@
     "latitude": 41.516111,
     "longitude": -79.6825,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Petroleum Center was a significant early oil industry town in Venango County, Pennsylvania located along Oil Creek near Titusville, booming spectacularly in the 1860s as one of the world's first major petroleum production zones. At its height the town had hotels, newspapers, machine shops, and thousands of residents working the surrounding oil leases, only to collapse rapidly when the oil played out in the 1870s and the workforce moved on to new fields. The former townsite, now within Oil Creek State Park, has reverted to second-growth forest along the scenic creek valley. Detecting within the state park boundary is prohibited, but the surrounding area and former lease lands on private property can yield oil era coins, tool checks, and period hardware."
   },
   {
     "name": "Wehrum, PA",
@@ -4532,7 +4541,8 @@
     "latitude": 40.470833,
     "longitude": -78.949722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Wehrum was a company coal mining town in Cambria County, Pennsylvania built and owned by the Berwind-White Coal Mining Company in the late 1800s to house miners working the rich bituminous coal seams of the Allegheny Mountain region. The entire community \u2014 housing, store, church, and school \u2014 belonged to the company, and when the coal was exhausted in the early 20th century, the company simply closed Wehrum and sold off what it could, leaving the rest to decay. Today the forest has largely reclaimed the former townsite, with stone foundations and occasional building debris visible in the undergrowth of the Gallitzin State Forest. The forested setting and its history of company town life make Wehrum productive territory for finding trade tokens, lamp parts, and miner's personal effects."
   },
   {
     "name": "Aitch, PA",
