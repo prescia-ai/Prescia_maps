@@ -1805,7 +1805,8 @@
     "latitude": 34.085204,
     "longitude": -107.201501,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 69,
     "description": "Kelly was a New Mexico silver mining community in Socorro County in the Magdalena Mountains, established in the 1860s near rich silver, lead, and zinc deposits that made the Kelly Mine one of New Mexico's most productive mineral operations for over 50 years. The town had a post office, stores, a school, and churches serving the mining population through the height of operations in the 1880s-1910s, producing millions of dollars in lead, zinc, and silver. Kelly declined rapidly after World War I as ore values and grades fell, and the town was abandoned. The Cibola National Forest surrounds the site, and the ruins of the Kelly Mine's substantial stone buildings are visible from the dirt road accessing the area, on national forest land where surface observation is permitted."
   },
   {
@@ -1814,7 +1815,8 @@
     "latitude": 37.167406,
     "longitude": -113.08183,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 65,
     "description": "Grafton was a small pioneer community in Washington County, Utah in the Virgin River valley below Zion Canyon, established by Mormon settlers in the 1860s as part of Brigham Young's ambitious program to colonize the red rock canyon country of southern Utah. The settlers struggled against floods, drought, conflicts with the indigenous Paiute population, and the general harshness of the desert canyon environment, and Grafton was essentially abandoned by 1921 after years of struggle. The remarkably photogenic adobe ruins of Grafton — including a well-preserved church and several crumbling homes — are accessible via a dirt road near Rockville, and the site became famous as a filming location for Butch Cassidy and the Sundance Kid. Metal detecting is not permitted on the historic site, but it is one of Utah's most visually spectacular and accessible ghost towns."
   },
   {
@@ -1823,7 +1825,8 @@
     "latitude": 46.825372,
     "longitude": -113.33864,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 80,
     "description": "Garnet was one of Montana's finest preserved ghost towns in Granite County in the Garnet Range near Missoula, established in the 1860s as a gold mining camp that went through multiple boom and bust cycles — first for placer gold, then for hard rock mining in the 1890s-1900s, then briefly for tungsten during World War II — before finally being abandoned in 1942. The town had a hotel, saloon, general store, and multiple cabins at its peak, and the remote mountain location and dry climate preserved many structures through the twentieth century. Today Garnet Ghost Town is managed cooperatively by the Bureau of Land Management and a local preservation group, with over 30 structures preserved and accessible via a dirt road. The BLM manages the site, and while detecting is generally prohibited at managed historic sites, the surrounding Garnet Range BLM land may offer opportunities."
   },
   {
@@ -1832,7 +1835,8 @@
     "latitude": 36.537636,
     "longitude": -117.795275,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Cerro Gordo was a silver and lead mining boomtown perched at 8,500 feet on the eastern escarpment of the Inyo Mountains in Inyo County, California, producing over $17 million in silver and lead from the 1860s through the 1880s and at its peak shipping 250 tons of silver bullion per year down the steep mountain road to Owens Valley. The ore was so rich that mule teams hauled silver ingots directly to Los Angeles, providing a significant portion of the capital that helped transform early Los Angeles from a pueblo to a growing city. The remote mountain site was purchased in 2020 and is operated as a private ghost town attraction, with guided tours available seasonally and the owners working to preserve the remarkable collection of original Victorian-era structures. Metal detecting requires explicit permission from the current private owners."
   },
   {
@@ -1841,7 +1845,8 @@
     "latitude": 35.709984,
     "longitude": -114.803348,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.86,
+    "detecting_weight": 71,
     "description": "Nelson was a gold mining community in Eldorado Canyon on the Nevada side of the Colorado River in Clark County, established in the 1850s-1860s when the Techatticup Mine discovered rich gold and silver deposits in the volcanic canyon walls above the Colorado River. The mine produced gold intermittently through the twentieth century — last operated in the 1940s — and the surrounding community went through multiple cycles of boom and bust tied to the mine's fortunes. Today Nelson and Eldorado Canyon are operated as a private attraction and film location, with the remarkably preserved buildings, vintage vehicles, and mining equipment drawing photographers and history enthusiasts. The private ownership of the site means access requires the owners' permission and often an entry fee."
   },
   {
@@ -1850,7 +1855,8 @@
     "latitude": 36.901157,
     "longitude": -116.828914,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 69,
     "description": "Rhyolite was one of the American Southwest's most spectacular gold mining ghost towns, a Nevada boomtown in Nye County that exploded to life in 1904 after the Bullfrog Mine discovery and reached 10,000-12,000 residents by 1908, complete with a three-story bank building, a railroad depot, electric lights, running water, and all the amenities of a modern early twentieth-century city. The bust was as spectacular as the boom — by 1911 the population had collapsed to barely 600, and by 1920 Rhyolite was entirely abandoned as the mines proved disappointing. The ruins of Rhyolite, including the iconic bottle house built from 51,000 beer and liquor bottles and the dramatic ruins of the Cook Bank Building, are accessible on BLM land near Beatty, Nevada. Metal detecting in the area requires BLM permits but the site is one of Nevada's most impressive and accessible ghost towns."
   },
   {
@@ -1859,7 +1865,8 @@
     "latitude": 36.848286,
     "longitude": -117.060936,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Leadfield was a Mojave Desert mining fraud in Death Valley National Park in Inyo County, California, promoted in 1926 by the flamboyant promoter C.C. Julian who organized a spectacular publicity train excursion to the desert site and sold stock in a company claiming enormous lead deposits in Titus Canyon. The 'rush' attracted over $1 million in investment before the California Corporation Commissioner shut down Julian's operation in 1927, having determined the site contained virtually no economically viable ore. The town was abandoned almost immediately, leaving behind scattered foundations and debris in the remote Titus Canyon area of Death Valley. Today the site is within Death Valley National Park, where metal detecting is strictly prohibited, but the area is accessible via the scenic one-way Titus Canyon Road."
   },
   {
@@ -1868,7 +1875,8 @@
     "latitude": 45.616,
     "longitude": -69.839,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Askwith was a tiny farming community in Washington County, Maine in the remote Downeast Maine coastal region, one of the many small communities that attempted to sustain themselves through marginal agriculture, fishing, and small-scale logging in this rocky, forested corner of New England. Washington County is the largest county east of the Mississippi by area and has always been sparsely populated, with many small communities rising and fading over the generations as economic conditions shifted. The site today is typical Washington County landscape — second-growth spruce-fir forest interspersed with wild blueberry fields and coastal wetlands, largely privately owned."
   },
   {
@@ -1877,7 +1885,8 @@
     "latitude": 42.496622,
     "longitude": -108.730668,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 71,
     "description": "Atlantic City was a significant Wyoming gold mining camp in Fremont County in the South Pass area of the Wind River Mountains, discovered in 1868 and producing gold and uranium at various periods through the twentieth century, making it one of Wyoming's most persistently active mining communities. The town had a colorful history of boom and bust cycles, with periodic revivals each time rising metal prices made the deposits economically attractive, and small populations of hardy residents maintained the community through the lean years. Atlantic City today survives as a tiny but still-inhabited community with a saloon and a handful of year-round residents, serving as a supply point for backcountry travelers in the South Pass high country. The surrounding BLM South Pass land and historic mine workings offer a rich landscape for history enthusiasts."
   },
   {
@@ -1886,7 +1895,8 @@
     "latitude": 41.157482,
     "longitude": -105.173311,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 80,
     "description": "Hecla was a small Fremont County, Wyoming mining camp in the South Pass gold district near Atlantic City, one of the satellite communities that developed around the South Pass gold deposits discovered in the 1860s. The camp had a brief period of activity during the gold rush years of the late 1860s before declining as the most accessible deposits were worked out. The South Pass area of Fremont County, Wyoming has been mined periodically for gold and uranium for over 150 years, and the surrounding BLM land contains extensive historic mine workings. The South Pass area is rich with history connected to the Oregon Trail — emigrants on the trail crossed the Continental Divide at South Pass just a few miles from these mining camps."
   },
   {
