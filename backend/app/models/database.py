@@ -12,6 +12,7 @@ from typing import AsyncGenerator
 from geoalchemy2 import Geometry
 from sqlalchemy import (
     JSON,
+    Boolean,
     Column,
     DateTime,
     Enum,
@@ -222,6 +223,7 @@ class User(Base):
     bio = Column(Text, nullable=True)
     location = Column(String(100), nullable=True)
     privacy = Column(String(20), default="public")
+    is_admin = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
@@ -247,6 +249,36 @@ class UserPin(Base):
     finds_count = Column(Integer, nullable=True)
     privacy = Column(String(20), default="public")
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PinSubmission(Base):
+    """
+    Community-submitted historical pin awaiting admin review.
+
+    Users submit candidate pins; admins review, edit, then approve or reject.
+    Approved submissions are copied to the ``locations`` table with
+    ``source = "community:{username}"``.
+    """
+
+    __tablename__ = "pin_submissions"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    submitter_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    submitter_username = Column(String(50), nullable=True)
+    name = Column(String(200), nullable=False)
+    pin_type = Column(String(50), nullable=True)
+    suggested_type = Column(String(100), nullable=True)
+    latitude = Column(Float, nullable=False)
+    longitude = Column(Float, nullable=False)
+    date_era = Column(String(100), nullable=True)
+    description = Column(Text, nullable=True)
+    source_reference = Column(Text, nullable=True)
+    tags = Column(Text, nullable=True)
+    status = Column(String(20), default="pending", nullable=False, index=True)
+    admin_notes = Column(Text, nullable=True)
+    rejection_reason = Column(Text, nullable=True)
+    reviewed_at = Column(DateTime(timezone=True), nullable=True)
+    submitted_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
 # ---------------------------------------------------------------------------

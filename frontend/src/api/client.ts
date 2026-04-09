@@ -10,6 +10,7 @@ import type {
   LandAccessOverrideResponse,
   ImportSummaryResponse,
   UserPin,
+  PinSubmission,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -138,6 +139,89 @@ export async function updatePin(id: string, data: UserPinUpdate): Promise<UserPi
 
 export async function deletePin(id: string): Promise<void> {
   await api.delete(`/pins/${id}`);
+}
+
+// ── Community Pin Submissions ─────────────────────────────────────────────────
+
+interface PinSubmissionCreate {
+  name: string;
+  pin_type?: string | null;
+  suggested_type?: string | null;
+  latitude: number;
+  longitude: number;
+  date_era?: string | null;
+  description?: string | null;
+  source_reference?: string | null;
+  tags?: string | null;
+}
+
+interface PinSubmissionAdminUpdate {
+  name?: string;
+  pin_type?: string | null;
+  suggested_type?: string | null;
+  latitude?: number;
+  longitude?: number;
+  date_era?: string | null;
+  description?: string | null;
+  source_reference?: string | null;
+  tags?: string | null;
+  admin_notes?: string | null;
+  rejection_reason?: string | null;
+  status?: 'pending' | 'approved' | 'rejected';
+}
+
+export async function createSubmission(data: PinSubmissionCreate): Promise<PinSubmission> {
+  const { data: result } = await api.post<PinSubmission>('/submissions', data);
+  return result;
+}
+
+export async function fetchMySubmissions(
+  status?: string,
+  limit = 50,
+  offset = 0,
+): Promise<{ submissions: PinSubmission[]; total: number }> {
+  const { data } = await api.get<{ submissions: PinSubmission[]; total: number }>(
+    '/submissions/me',
+    { params: { status, limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchAdminSubmissions(
+  status?: string,
+  limit = 50,
+  offset = 0,
+): Promise<{ submissions: PinSubmission[]; total: number }> {
+  const { data } = await api.get<{ submissions: PinSubmission[]; total: number }>(
+    '/admin/submissions',
+    { params: { status, limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchAdminSubmission(id: string): Promise<PinSubmission> {
+  const { data } = await api.get<PinSubmission>(`/admin/submissions/${id}`);
+  return data;
+}
+
+export async function updateAdminSubmission(
+  id: string,
+  data: PinSubmissionAdminUpdate,
+): Promise<PinSubmission> {
+  const { data: result } = await api.put<PinSubmission>(`/admin/submissions/${id}`, data);
+  return result;
+}
+
+export async function exportApprovedSubmissions(): Promise<void> {
+  const response = await api.get('/admin/submissions/export', { responseType: 'blob' });
+  const url = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', 'community_pins_export.json');
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.URL.revokeObjectURL(url);
 }
 
 export default api;

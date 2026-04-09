@@ -153,3 +153,25 @@ export interface ImportSummaryResponse {
   skipped_invalid: number;
   errors: string[];
 }
+
+// ── Community Pin Submissions ─────────────────────────────────────────────────
+
+export interface PinSubmission {
+  id: string;
+  submitter_id: string;
+  submitter_username: string | null;
+  name: string;
+  pin_type: string | null;
+  suggested_type: string | null;
+  latitude: number;
+  longitude: number;
+  date_era: string | null;
+  description: string | null;
+  source_reference: string | null;
+  tags: string | null;
+  status: 'pending' | 'approved' | 'rejected';
+  admin_notes: string | null;
+  rejection_reason: string | null;
+  reviewed_at: string | null;
+  submitted_at: string;
+}
