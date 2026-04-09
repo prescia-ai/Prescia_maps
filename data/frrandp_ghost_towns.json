@@ -2705,7 +2705,8 @@
     "latitude": 35.031153,
     "longitude": -104.408067,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Cuervo was a small Guadalupe County, New Mexico ranching and Route 66 community along historic US Route 66 in the eastern New Mexico plains, developing in the early twentieth century as a modest service community for travelers crossing the High Plains of northeastern New Mexico on the Mother Road. The community had a post office, church, and basic services before Interstate 40 bypassed the old highway alignment and eliminated the cross-country traffic that sustained Route 66 communities across New Mexico and Arizona. Today only a handful of crumbling adobe and stone buildings remain at Cuervo, accessible from a frontage road along I-40 in one of the most lonesome stretches of the old route. The sparse and windy Guadalupe County mesa landscape preserves the ruins and is accessible for exploration."
   },
   {
@@ -2714,7 +2715,8 @@
     "latitude": 43.958044,
     "longitude": -103.35852,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Rockerville was a Black Hills, South Dakota gold mining community in Pennington County established in 1876 shortly after the great Black Hills gold rush began, thriving briefly as a placer and sluice mining community before the most accessible surface gold was exhausted and miners moved on to deeper operations at Deadwood and Lead. The community had several businesses, a hotel, and a post office during its brief boom years, and a famous hydraulic mining operation that used high-pressure water jets to wash the gold-bearing gravel. Rockerville was later revived in the early twentieth century as a tourist attraction and small community on the road between Rapid City and Custer State Park. The historic core of Rockerville is accessible today, and the surrounding Black Hills National Forest offers open access for gold prospecting in the gulches and streams."
   },
   {
@@ -2723,7 +2725,8 @@
     "latitude": 35.660555,
     "longitude": -83.583874,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Elkmont was a small Sevier County, Tennessee community in the Great Smoky Mountains that developed in the early twentieth century as a logging community and subsequently as a summer resort colony, where Knoxville and Chattanooga elite families built summer cottages along Jakes Creek and the Little River beginning in the 1910s-1920s through the Appalachian Club. The Smoky Mountains were heavily logged in the early 1900s, with communities like Elkmont serving as bases for the Little River Lumber Company's operations before the land was acquired for the national park. Today Elkmont's collection of aging summer cottages — some of the oldest structures in Great Smoky Mountains National Park — is the subject of ongoing debate about preservation versus restoration. Metal detecting is prohibited within the national park, but the accessible campground area near the old colony is popular with visitors."
   },
   {
@@ -2732,7 +2735,8 @@
     "latitude": 35.62083,
     "longitude": -83.6775,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Tremont was a small Sevier County, Tennessee logging and community in the Smoky Mountains area, part of the Little River drainage that was logged extensively by the Little River Lumber Company in the early twentieth century before the land was incorporated into Great Smoky Mountains National Park in the 1930s. The community at Tremont served as a base for logging operations in the upper Little River watershed before the park's establishment required relocating the remaining residents. The Tremont area today is home to the Great Smoky Mountains Institute at Tremont, an environmental education center, accessible via a road through the national park from Townsend, Tennessee. The rich natural and logging heritage of the Tremont area is interpreted through the institute's educational programs."
   },
   {
@@ -2741,7 +2745,8 @@
     "latitude": 41.199167,
     "longitude": -111.112222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Wahsatch was a small Summit County, Utah community along the Union Pacific Railroad's mainline near the Utah-Wyoming border in the Wasatch Mountains, serving as a railroad section house community and modest service point for travelers and railroad workers crossing the high mountain terrain in the late nineteenth and early twentieth centuries. The Echo Canyon approach to the Wasatch was one of the most dramatic sections of the transcontinental railroad, and communities like Wahsatch existed primarily to service the railroad's operations through the mountain terrain. As diesel locomotives replaced steam and railroad technology reduced the need for section house communities, Wahsatch faded from its already modest existence. The surrounding Summit County landscape includes Echo Canyon and the Weber River corridor, with the historic railroad grade still clearly visible in the dramatic canyon terrain."
   },
   {
@@ -2750,7 +2755,8 @@
     "latitude": 39.264229,
     "longitude": -110.351402,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 69,
     "description": "Woodside was a small railroad and ranching community in Emery County, Utah, established in the early 1900s as a stop along the Denver and Rio Grande Western Railroad in the Price River canyon corridor. The town served as a fuel and water station for steam locomotives and supported a modest cluster of homes, a post office, and a saloon catering to railroad workers and stockmen moving cattle through the region. As diesel locomotives replaced steam engines and the railroad reduced its service stops, Woodside's reason for existing evaporated by the mid-20th century, leaving only scattered debris fields. Metal detectorists may find railroad spikes, bottle glass, and personal items from the worker community on the publicly accessible Bureau of Land Management terrain surrounding the site."
   },
   {
@@ -2759,7 +2765,8 @@
     "latitude": 39.432778,
     "longitude": -112.633333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Woodrow was a small agricultural settlement in Millard County, Utah, founded by Mormon homesteaders in the late 19th century who sought to dry-farm the arid basin lands west of the Sevier River. Thin soils, unpredictable rainfall, and the crushing economics of the Great Depression combined to drive families away by the 1930s, leaving little more than collapsed dugouts and fence lines. Today the area is open BLM rangeland with few visible markers of its settlement history. Careful searching along old field boundaries and around farmstead depressions can turn up hand-wrought farm tools, harness hardware, and homestead-era coins."
   },
   {
@@ -2768,7 +2775,8 @@
     "latitude": 39.72056,
     "longitude": -111.18694,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.78,
+    "detecting_weight": 35,
     "description": "Winter Quarters was a coal mining camp in Carbon County, Utah, best remembered as the site of one of the deadliest mine disasters in American history — the May 1, 1900 explosion that killed 200 miners in a single day, making it the worst coal mine accident in U.S. history to that point. The camp supported thousands of miners and their families through the 1880s–1900s as part of the Pleasant Valley coal fields that fueled the Denver and Rio Grande Western Railroad. After the explosion, operations eventually ceased and the population scattered; a cemetery with dozens of victims' graves still survives on the hillside above the old mine portal. The surrounding area around Scofield Reservoir is accessible, and the historic cemetery is maintained — detectorists should respect the burial ground but may explore surrounding mine dump areas for period hardware and mining tokens."
   },
   {
@@ -2777,7 +2785,8 @@
     "latitude": 37.832207,
     "longitude": -111.995469,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Widtsoe was a Mormon farming community founded in the early 1900s in the high valleys of Garfield County, Utah, settled by homesteaders who hoped to dryland-farm the Paunsaugunt Plateau at over 7,000 feet elevation. Persistent drought, severe winters, and poor soil productivity forced most residents to abandon their farms during the 1930s Dust Bowl era, and the community was officially dissolved. A handful of stone foundations and old corrals survive amid the sagebrush flats, and the area is surrounded by Grand Staircase-Escalante National Monument lands. The remote location and BLM access make it accessible territory for finds like homestead hardware, cast iron fragments, and 1910s–1930s coins."
   },
   {
@@ -2786,7 +2795,8 @@
     "latitude": 39.078318,
     "longitude": -109.112335,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 69,
     "description": "Westwater was a tiny railroad watering stop and community in Grand County, Utah, perched along the Colorado River at the Utah-Colorado border where the Denver and Rio Grande Western Railroad skirted the canyon rim. The settlement served railroad workers and a few ranchers during the early 20th century before automated water systems and route changes rendered the stop obsolete. Today the Westwater Canyon area is managed by the Bureau of Land Management as a popular whitewater rafting destination, and the old railroad grade is still visible along the riverside. Detectorists exploring the riparian terraces outside the canyon proper may encounter railroad-era iron hardware, old bottle glass, and camp debris from early rail crews."
   },
   {
