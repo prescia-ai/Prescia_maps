@@ -1877,7 +1877,8 @@
     "description": "On May 5-7, 1864, Grant launched the Overland Campaign by crossing the Rapidan River and attacking Lee in the tangled second-growth forest of the Wilderness, where the terrain negated Union artillery superiority and turned the two-day battle into a nightmarish close-range struggle in which brush fires killed many of the wounded. Though technically a Confederate tactical victory, Grant refused to retreat — instead marching south toward Spotsylvania, transforming the nature of the war. Fredericksburg and Spotsylvania National Military Park preserves the Wilderness battlefield with interpretive drives, earthwork remains, and the Wilderness Exhibit Shelter. Metal detecting is strictly prohibited in the national park, but surrounding Orange and Spotsylvania county private land has produced extraordinary quantities of Civil War relics including Minié balls, artillery fragments, and military hardware from the intense May 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 48
   },
   {
     "name": "Battle of Spotsylvania Court House",
@@ -1887,7 +1888,8 @@
     "description": "From May 8-21, 1864, some of the Civil War's most brutal fighting occurred at Spotsylvania Court House, VA, where Grant and Lee fought a prolonged battle of earthworks and assaults, culminating in the 'Bloody Angle' on May 12 — where Union and Confederate troops fought hand-to-hand across a log parapet for nearly 20 hours in pouring rain in the most sustained close-quarters combat of the entire war. Grant's army suffered 18,000 casualties at Spotsylvania but continued the relentless advance south. Fredericksburg and Spotsylvania National Military Park's Spotsylvania unit preserves the Bloody Angle earthworks, the McCool House site, and miles of surviving fieldworks in Spotsylvania County, VA. Metal detecting is strictly prohibited in the national park, but surrounding private land in Spotsylvania County has produced enormous quantities of Civil War relics.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.93,
+    "detecting_weight": 45
   },
   {
     "name": "Battle of Yellow Tavern",
@@ -1897,7 +1899,8 @@
     "description": "On May 11, 1864, during Sheridan's raid toward Richmond, Union cavalry under General Philip Sheridan defeated Confederate cavalry at Yellow Tavern, a crossroads 6 miles north of Richmond, VA, and mortally wounded J.E.B. Stuart — the Confederacy's most celebrated cavalry commander — ending the Confederacy's ability to screen and gather intelligence as it had done throughout the war. Stuart died in Richmond the following day. The Yellow Tavern battlefield in Henrico County, VA, is now within the northern Richmond suburban area near Mechanicsville Turnpike. The surrounding Henrico County private land has produced Civil War cavalry relics, and the broader Richmond area has yielded significant quantities of military hardware from the numerous 1864 operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 40
   },
   {
     "name": "Battle of New Market",
@@ -1907,7 +1910,8 @@
     "description": "On May 15, 1864, Confederate General John C. Breckinridge's force — which included over 200 cadets from the Virginia Military Institute ranging in age from 15 to 17 — defeated Union General Franz Sigel's army at New Market in the Shenandoah Valley, ending the Federal threat to Staunton and the Valley railroad. The VMI cadets who fought and died at New Market are still honored in the school's annual ceremony. New Market Battlefield State Historical Park in Shenandoah County, VA, preserves the Hall of Valor Civil War Museum and the Bushong Farm, with excellent walking trails across the original battlefield terrain. Metal detecting is not permitted in the state park, but the surrounding Shenandoah County Valley farmland has produced Civil War Minié balls, buttons, and military hardware from the 1864 Valley operations.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 55
   },
   {
     "name": "Battle of Cold Harbor",
@@ -1917,7 +1921,8 @@
     "description": "On June 3, 1864, Grant launched a massive frontal assault at Cold Harbor, VA, that was repulsed in less than an hour with approximately 7,000 Union casualties — later described by veterans as the worst 8 minutes of the war. The attack was Grant's greatest tactical mistake of the war, and he later expressed regret that it had been ordered. Cold Harbor Battlefield, part of Richmond National Battlefield Park, preserves the well-preserved trench lines including remarkably intact earthworks dug by both armies, now silent lines in second-growth forest. Metal detecting is strictly prohibited in the national park, but the Mechanicsville area private farmland in Hanover County, VA, has produced significant Civil War relics from the June 1864 operations including Minié balls, artillery fragments, and military hardware.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.9,
+    "detecting_weight": 47
   },
   {
     "name": "Battle of Brice's Cross Roads",
@@ -1927,7 +1932,8 @@
     "description": "On June 10, 1864, Nathan Bedford Forrest led 3,500 Confederate cavalry on an assault against 8,000 Union troops at Brice's Cross Roads (Tishomingo Creek), MS, routing the Federal force and pursuing them for miles — one of the most tactically brilliant cavalry victories of the war, achieved through Forrest's genius for reading terrain and controlling the tempo of battle. The defeat prompted Sherman to say he would be willing to lose 10,000 men to stop Forrest. Brice's Cross Roads National Battlefield Site in Lee County, MS, is a small NPS unit preserving the battle site near Baldwyn with a monument and an NPS visitor contact station nearby. Surrounding Lee County private farmland has produced Civil War Minié balls and cavalry relics from this remarkable engagement.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.88,
+    "detecting_weight": 65
   },
   {
     "name": "Battle of Kennesaw Mountain",
@@ -1937,7 +1943,8 @@
     "description": "On June 27, 1864, General William T. Sherman launched his major frontal assault on Johnston's Confederate position at Kennesaw Mountain, GA, as Sherman grew impatient with the constant flanking maneuvers of his Atlanta Campaign. The attacks were repulsed with nearly 3,000 Union casualties against 500 Confederate, prompting Sherman to return to flanking — a lesson that the natural strength of entrenched infantry was too great for costly frontal assaults. Kennesaw Mountain National Battlefield Park near Marietta, GA, preserves the mountain and extensive original earthworks with driving and hiking access to the summit fortifications. Metal detecting is strictly prohibited in the national park, but surrounding Cobb and Cherokee County private land has produced Civil War Minié balls, artillery fragments, and military hardware from Sherman's 1864 Atlanta Campaign.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.92,
+    "detecting_weight": 42
   },
   {
     "name": "Battle of Peachtree Creek",
@@ -1947,7 +1954,8 @@
     "description": "On July 20, 1864, newly appointed Confederate General John Bell Hood launched his first offensive — an attack on the Union Army of the Cumberland crossing Peachtree Creek north of Atlanta, GA — hoping to destroy the separated Union corps before they could concentrate. The assault was well-executed but ultimately repulsed by Thomas's Army of the Cumberland, costing Hood nearly 2,500 men. The Peachtree Creek battlefield is now entirely within the northern Atlanta metropolitan area, with a small marker at the creek crossing in DeKalb and Fulton counties. Civil War artifacts have been found during construction projects throughout the north Atlanta area, but conventional metal detecting is limited in the dense urban environment.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.83,
+    "detecting_weight": 38
   },
   {
     "name": "Battle of Atlanta (Bald Hill)",
@@ -1957,7 +1965,8 @@
     "description": "On July 22, 1864, John Bell Hood launched his most ambitious assault of the Atlanta Campaign — an overnight march by Hardee's corps around the Union left flank and a dawn attack on Bald Hill east of Atlanta — that succeeded in capturing the hill briefly and killing Union General James McPherson (the highest-ranking Union general killed in the war) but ultimately failed to break Sherman's grip on Atlanta. The battle saw some of the most intense fighting of the entire campaign, with three Confederate corps attacking simultaneously. The Atlanta battlefield is now the urban core of Atlanta, GA, with Inman Park and the site of Bald Hill (now Oakland Cemetery vicinity) marking portions of the engagement. Civil War artifacts have been found throughout the Atlanta metropolitan area during construction and development projects.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 35
   },
   {
     "name": "Battle of Ezra Church",
@@ -1967,7 +1976,8 @@
     "description": "On July 28, 1864, Hood launched his third offensive in eight days — an attack on the Union Fifteenth Corps moving to cut the last Confederate rail line into Atlanta at Ezra Church, GA — only to be repulsed with over 3,000 casualties against minimal Union losses. The battle demonstrated that Hood's aggressive strategy was bleeding the Army of Tennessee white without achieving strategic goals. The Ezra Church battlefield is now within the western Atlanta metropolitan area in the Mozley Park neighborhood. Civil War Minié balls and artifacts have been found in the area during development, but the dense urban landscape limits modern detecting opportunities.",
     "type": "battle",
     "source": "seed:battles",
-    "confidence": 0.95
+    "confidence": 0.82,
+    "detecting_weight": 37
   },
   {
     "name": "Battle of Jonesborough",
