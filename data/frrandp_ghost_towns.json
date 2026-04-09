@@ -9230,7 +9230,8 @@
     "latitude": 48.585833,
     "longitude": -123.522222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Bamberton in the Saanich Inlet on Vancouver Island, British Columbia, Canada was a cement company town established in 1912 by the British Columbia Cement Company to house the workers of its Portland cement plant, which quarried limestone from the surrounding hills and processed it into cement for the construction boom sweeping the Pacific Northwest. The Bamberton community was a complete planned industrial town with company housing, a school, recreation hall, store, and associated infrastructure, representing the classic company town model transplanted to the British Columbia coast. The plant operated through the Great Depression and World War II before finally closing in 1980, after which the site sat dormant for decades as plans for various redevelopments — including a substantial new town — failed to materialize. The Bamberton site retains significant ruins of the cement plant infrastructure, visible from the water of Saanich Inlet, and is accessible by boat or hiking trail in the provincial recreation area."
   },
   {
     "name": "SteelStacks",
@@ -9238,7 +9239,8 @@
     "latitude": 40.615251,
     "longitude": -75.368121,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "SteelStacks in Bethlehem, Northampton County, Pennsylvania preserves the iconic five blast furnaces of the Bethlehem Steel Corporation's No. 2 Machine Shop complex as an extraordinary public arts and culture campus — the largest surviving blast furnace complex in the western hemisphere — where the rusting towers of the most powerful steel company in American history have been transformed into the backdrop for concerts, festivals, and permanent exhibitions. Bethlehem Steel was the second-largest steel producer in the United States for most of the twentieth century, producing steel for the Brooklyn Bridge, the Golden Gate Bridge, battleships, aircraft carriers, and skyscrapers before the company declared bankruptcy in 2001 after decades of competition from cheaper foreign steel. The blast furnaces, which last operated in 1995, are now a National Museum of Industrial History site, with guided tours of the furnace interiors and interpretive exhibits documenting 140 years of steelmaking in the Lehigh Valley. SteelStacks is one of the most successful industrial heritage conversions in the United States, welcoming over a million visitors annually."
   },
   {
     "name": "Farrandsville Iron Furnace",
@@ -9246,7 +9248,8 @@
     "latitude": 41.174812,
     "longitude": -77.514439,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Farrandsville Iron Furnace in Clinton County, Pennsylvania along the West Branch Susquehanna River was a charcoal-fired iron blast furnace built in 1837 to smelt iron ore from the local Clinton County mines, part of the wave of iron furnace construction that transformed the central Pennsylvania iron industry in the antebellum era when Pennsylvania was the nation's leading iron producer. Farrandsville developed briefly as an iron company town supporting the furnace complex before the ore bodies proved insufficient for sustainable long-term production, and the community declined after the mid-nineteenth century. The stone stack of the furnace survives in the West Branch valley, a massive monument to the antebellum iron industry preserved by the durability of the stone construction and the relative isolation of the Clinton County river valley. Central Pennsylvania iron furnace ruins like Farrandsville are significant archaeological sites documenting the charcoal iron industry that preceded the coke and coal iron revolution of the Pittsburgh era."
   },
   {
     "name": "Barber–Colman Company\\n",
@@ -9254,7 +9257,8 @@
     "latitude": 42.259886,
     "longitude": -89.098206,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Barber-Colman Company in Rockford, Winnebago County, Illinois was a manufacturing giant that produced specialized machinery — particularly textile machinery for the weaving industry and later industrial controls and process automation systems — making it one of Rockford's most important employers for nearly a century from its founding in 1894 through its gradual downsizing and corporate restructuring in the late twentieth century. Horace Colman and Howard Barber built their company on the foundation of innovative textile machinery design, with Colman inventing the first workable warp-tying machine that dramatically improved the efficiency of setting up looms in textile mills worldwide. The company diversified into industrial process controls, HVAC control systems, and motion control in the mid-twentieth century before corporate restructuring broke up the original enterprise. The Barber-Colman complex on South Madison Street is a significant piece of Rockford's industrial heritage and represents the precision manufacturing tradition that distinguished Rockford from other Midwest industrial cities."
   },
   {
     "name": "Illinois Iron Furnace",
@@ -9262,7 +9266,8 @@
     "latitude": 37.499504,
     "longitude": -88.32793,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Illinois Iron Furnace in the Shawnee National Forest, Pope County, Illinois was a charcoal-fired iron blast furnace built in 1839 by Clark Dispensary, exploiting the iron ore deposits and hardwood forests of the southern Illinois Ozark foothills in one of the earliest successful iron-making ventures in the state. The furnace produced pig iron that was shipped by flatboat down the Big Bay Creek to the Ohio River for sale in downstream markets, representing the integration of southern Illinois into the national iron trade during the antebellum era. The furnace was abandoned by the Civil War era as the iron industry shifted to larger coke-fired operations in northern Illinois and neighboring Ohio, leaving the stone stack standing in the Shawnee forest where it has been preserved and interpreted by the U.S. Forest Service. The Illinois Iron Furnace is accessible via a Forest Service trail and is one of the finest surviving charcoal iron furnace ruins in the Midwest."
   },
   {
     "name": "Abandoned Sugar Factory",
@@ -9270,7 +9275,8 @@
     "latitude": 25.784102,
     "longitude": -109.000591,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abandoned Sugar Factory in Los Mochis, Sinaloa, Mexico was one of the large-scale industrial sugar processing plants that dominated the agricultural economy of the Sinaloa and Nayarit coastal plain from the early twentieth century through the present, where the warm climate, reliable irrigation water from the Sierra Madre river systems, and flat alluvial soils created ideal conditions for sugarcane cultivation. The Los Mochis area was developed as a sugar colony by Benjamin Johnston and the United Sugar Companies beginning in the 1890s, and at its peak the region around Los Mochis was one of Mexico's most productive sugar-producing areas. Industrial sugar processing requires sophisticated infrastructure including mills, crystallizers, centrifuges, and distillation equipment, and the ruins of abandoned sugar facilities in Sinaloa retain significant industrial archaeology. The surrounding Los Mochis agricultural plain has undergone intensive development for vegetable export agriculture in recent decades, making abandoned sugar infrastructure a time capsule of the earlier sugar economy."
   },
   {
     "name": "Fruen Mill",
@@ -9278,7 +9284,8 @@
     "latitude": 44.979742,
     "longitude": -93.31431,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Fruen Mill in Minneapolis, Hennepin County, Minnesota was a flour milling operation on the east bank of the Mississippi at St. Anthony Falls, part of the extraordinary concentration of milling power that made Minneapolis the flour milling capital of the world for several decades beginning in the 1870s. The Fruen mill was one of dozens of mills that lined both banks of the Mississippi between the Hennepin Avenue Bridge and the Third Avenue Bridge, taking power from the falls through a sophisticated hydraulic canal system that distributed water power to individual mills. The Minneapolis milling industry was destroyed in 1878 by the Washburn A Mill explosion — the largest industrial disaster in Minnesota history — but rebuilt rapidly with new, safer technologies. Mill ruins and the hydraulic canal infrastructure along the Minneapolis riverfront are preserved as Mill Ruins Park and the St. Anthony Falls Heritage Trail, one of the most significant industrial archaeological parks in the Midwest."
   },
   {
     "name": "Custom Iron Works",
@@ -9286,7 +9293,8 @@
     "latitude": 42.484304,
     "longitude": -89.029984,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Custom Iron Works in Rockford, Winnebago County, Illinois was a foundry and metal fabrication facility serving the precision manufacturing ecosystem that made Rockford one of Illinois's most important industrial cities from the 1880s through the late twentieth century, producing custom castings, machine components, and specialized metalwork for the city's machine tool, furniture, and agricultural equipment manufacturers. Rockford's foundry district along the Rock River supplied the castings and metalwork that kept the city's hundreds of small and medium manufacturers supplied with precision metal parts, and Custom Iron Works represented the commercial foundry tradition within this industrial ecosystem. The deindustrialization of Rockford from the 1980s onward closed dozens of foundries and metal fabricators, leaving behind a landscape of empty factory buildings in the river corridor industrial district. Former foundry sites in Rockford's industrial zone may retain sand casting material, pattern remnants, and industrial hardware from their operational decades."
   },
   {
     "name": "Refinery",
@@ -9294,7 +9302,8 @@
     "latitude": 30.246579,
     "longitude": -85.667723,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Refinery near Panama City Beach, Bay County, Florida represents an industrial petroleum processing facility in the Florida Panhandle — an unusual industrial presence in what is primarily known as a beach resort corridor, but consistent with the broader Gulf Coast petroleum infrastructure that extends from Texas through Louisiana and Mississippi to the Florida Panhandle. Florida's Panhandle region has modest petroleum reserves that were developed in the twentieth century, and small-scale refinery operations in the Gulf Coast region processed crude oil from the shallow coastal fields for local fuel distribution. The Panama City Beach area's development as a resort destination has gradually displaced the industrial and military uses that once shared the waterfront with the beach resorts. The specific refinery site near Panama City Beach may be an artifact of the Panhandle's pre-resort era when the waterfront served more diverse industrial functions."
   },
   {
     "name": "Virginia Mills",
@@ -9302,7 +9311,8 @@
     "latitude": 36.022839,
     "longitude": -79.363638,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Virginia Mills in Guilford County, North Carolina near Greensboro was a textile manufacturing facility in the heart of the Piedmont Triad's massive textile and apparel industry, which made North Carolina the leading textile-producing state in America through much of the twentieth century before overseas competition eliminated hundreds of mills and hundreds of thousands of jobs in the 1990s-2000s. The Piedmont Triad of Greensboro, Winston-Salem, and High Point developed the deepest concentration of textile manufacturing in the United States, with cotton mills, hosiery mills, denim producers, and apparel manufacturers filling the Piedmont's river valleys with mill villages and factory complexes. Virginia Mills produced textile products for national markets before the combination of NAFTA-era trade competition and technological change forced the closure of many mid-sized Piedmont mills. Former textile mill buildings in the Piedmont are now targets for adaptive reuse as loft apartments, office space, and arts districts in the revitalization of North Carolina's post-industrial communities."
   },
   {
     "name": "Rosedale Coke Plant",
