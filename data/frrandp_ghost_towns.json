@@ -5540,7 +5540,8 @@
     "latitude": 28.91,
     "longitude": -96.56,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Texana was an early and important town in Jackson County, Texas established in 1832 near the Lavaca River as one of the first Anglo-American communities in Stephen F. Austin's colonial land grants, briefly serving as the county seat and a significant center of early Texas colonial life. The town had a courthouse, churches, and commercial establishments during its antebellum heyday, but a yellow fever epidemic, the Civil War, and the railroads bypassing the area in favor of Edna caused a dramatic population collapse by the 1870s-1880s. Today the former Texana townsite is within Lake Texana State Park, with the historic cemetery preserved and accessible to visitors. Detecting within the state park is prohibited, but surrounding private land holds rich potential for early Texas Republic-era artifacts."
   },
   {
     "name": "New Fountain, TX",
@@ -5548,7 +5549,8 @@
     "latitude": 29.386667,
     "longitude": -99.06,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "New Fountain was a small agricultural community in Texas established in the late 19th century to serve farming families in a rural area where a new water source provided the optimistic community name. Such optimistically named communities were common in the water-scarce regions of Texas, where access to reliable water determined settlement patterns. Like many of these aspirational communities, New Fountain likely had a local school and church district for a generation or two before the rural population consolidated. Detecting on private land near former Texas homestead communities with water-related names often reveals period domestic artifacts concentrated around the original well or spring site where community activity was focused."
   },
   {
     "name": "Concrete, Guadalupe County, TX",
@@ -5556,7 +5558,8 @@
     "latitude": 29.238333,
     "longitude": -97.293056,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Concrete in Guadalupe County was a small German farming community in the Texas Hill Country transition zone southeast of San Antonio, established by German immigrants in the mid-to-late 19th century in the fertile farmland of Guadalupe County near the confluence of the Guadalupe and San Marcos Rivers. The community had a German Lutheran church and school serving the tight-knit immigrant farming families, and the Guadalupe County German settlement corridor maintained distinct cultural traditions well into the 20th century. Today Concrete is an extremely small community whose German church may still stand as a local landmark. The area holds detecting potential on private land for German-American domestic artifacts and late 19th-century coins."
   },
   {
     "name": "Plainview, Wharton County, TX",
@@ -5564,7 +5567,8 @@
     "latitude": 29.113297,
     "longitude": -96.325489,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Plainview in Wharton County was a small farming community in the flat coastal prairie farmland of Southeast Texas, established by farming families in the late 19th century who worked the rich but poorly-drained clay soils that would later become famous rice country. Wharton County's agricultural history spans antebellum cotton and sugar culture through the transformation to mechanized rice farming in the early 20th century, giving its landscape a rich and layered archaeological record. The former Plainview community area is now active agricultural land in the Wharton County coastal prairie. Detecting on private farmland in the area can yield artifacts from multiple periods of agricultural use, from the antebellum plantation era through the early 20th century."
   },
   {
     "name": "Waterville, TX",
@@ -5572,7 +5576,8 @@
     "latitude": 29.238333,
     "longitude": -95.996667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Waterville was a small community in Texas, likely a farming or ranching settlement that drew its optimistic name from reliable water access in a region where such resources were valued. Texas has dozens of communities with water-themed names, each reflecting the fundamental importance of water to frontier settlement in the semi-arid state. Like most of these minor Texas communities, Waterville likely existed for a generation or two before being absorbed into a larger nearby community as transportation improved. The Texas rural landscape around former water-source communities holds detecting potential for period domestic artifacts concentrated around the original well or creek site where community life was centered."
   },
   {
     "name": "Provident City, TX",
@@ -5580,7 +5585,8 @@
     "latitude": 29.282778,
     "longitude": -96.632222,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Provident City was a small community in Wharton County, Texas in the coastal prairie farmland of Southeast Texas, established with an aspirational name during the late 19th century agricultural development of the region. Wharton County's agricultural history, with its antebellum sugar and cotton plantation economy transitioning to freedmen farming communities and later rice agriculture, gives even minor community sites significant historical depth. The former Provident City area is now agricultural land in the flat Wharton County coastal prairie. Detecting on private farmland in the area with landowner permission can yield artifacts from the late 19th and early 20th century farming era, including domestic coins, agricultural implements, and personal items."
   },
   {
     "name": "Preston, Wharton County, TX",
@@ -5588,7 +5594,8 @@
     "latitude": 29.278056,
     "longitude": -95.963889,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Preston in Wharton County was a small farming community in the coastal prairie of Southeast Texas, likely serving the agricultural population of Wharton County's rich but challenging clay soils in the late 19th and early 20th centuries. The Wharton County farming landscape transitioned dramatically from antebellum plantation agriculture to diversified smallholder farming after the Civil War, and communities like Preston served as local centers during this agricultural transition period. Today the former Preston area is agricultural land in the flat Gulf coastal plain. The underlying landscape of Wharton County, with its pre-Civil War plantation heritage and post-war freedmen communities, holds detecting potential for multiple periods of human activity."
   },
   {
     "name": "Rexville, TX",
@@ -5596,7 +5603,8 @@
     "latitude": 29.726389,
     "longitude": -96.213333,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Rexville was a small rural community in Texas established during the late 19th century to serve a farming or ranching population in a region where the community name honored a local pioneer family or prominent settler. These small named communities provided essential local services \u2014 a school, a church, a post office, sometimes a general store \u2014 for rural populations living too far from established towns to rely on them for daily needs. When roads improved and automobile transportation made longer journeys practical, such minor communities lost their reason for existence and faded quickly. Detecting on private land near former Texas community sites can yield period domestic artifacts, agricultural hardware, and coins from the community's brief but active years."
   },
   {
     "name": "Tascosa, TX",
@@ -5604,7 +5612,8 @@
     "latitude": 35.531111,
     "longitude": -102.255556,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Tascosa was one of the most wild and lawless frontier towns in the Texas Panhandle, established in 1876 along the Canadian River in Oldham County as a supply point for the great cattle ranches spreading across the newly opened Llano Estacado, and briefly hosting a population of cowboys, gamblers, gunfighters, and merchants that made it the most notorious town in West Texas. The arrival of the Fort Worth and Denver Railroad in 1887 bypassed Tascosa entirely, and the town collapsed rapidly as commerce shifted to new railroad towns. Today the Boot Hill cemetery with its 23 graves of violence victims survives at the Cal Farley's Boys Ranch site, and while the ranch property restricts public access, the Canadian River bottomland setting was once rich in frontier-era artifacts before decades of surface collection."
   },
   {
     "name": "Phillips, TX",
@@ -5612,7 +5621,8 @@
     "latitude": 35.68742,
     "longitude": -101.35111,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Phillips was a company town in Carson County in the Texas Panhandle, built by the Phillips Petroleum Company in the 1920s to house workers at one of the largest natural gas processing plants in the world, located in the panhandle's enormous Hugoton-Anadarko gas field. The planned company town had well-constructed housing, a company store, school, and community facilities during its active decades, but as the plant was modernized and the workforce reduced, Phillips was gradually depopulated and eventually demolished in the 1990s. Today only scattered foundations and debris fields remain in the flat Panhandle grassland. The former Phillips company town site offers detecting potential for mid-20th-century domestic artifacts, oil field company tokens, and personal items from the former residents."
   },
   {
     "name": "Plemons, TX",
