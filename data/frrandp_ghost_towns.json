@@ -1705,7 +1705,8 @@
     "latitude": 34.172806,
     "longitude": -113.844391,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.79,
+    "detecting_weight": 80,
     "description": "Swansea was a small La Paz County, Arizona copper mining camp and smelter town along the Bill Williams River in the western Arizona desert, established in 1908 when the Clara Consolidated Gold and Copper Mining Company developed rich copper deposits in the Swansea Hills and built a smelter, housing, a school, and all the infrastructure of a functioning mining town. The smelter processed ore from several local mines through the 1910s before declining copper prices and ore depletion forced closure in 1924, and the buildings were subsequently stripped of usable materials. The ruins of Swansea — including the distinctive smelter stack and building foundations — are accessible via dirt roads on BLM land in the Swansea Wilderness area. The BLM-managed site is one of Arizona's more accessible copper mining ghost towns with visible structural ruins."
   },
   {
@@ -1714,7 +1715,8 @@
     "latitude": 34.668323,
     "longitude": -116.003061,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Klondike was a small Tuolumne County, California Gold Rush-era mining camp in the Sierra Nevada foothills established in the 1850s during the great California gold rush, one of hundreds of transient camps that sprang up along the gold-bearing rivers and streams of the Mother Lode country. The camp took its name from the general Gold Rush-era enthusiasm for evocative mining district names and existed through the initial placer mining period before the easily accessible gold was worked out and the miners moved on. The Tuolumne County Mother Lode landscape today is a mix of private ranchland, state parks, and national forest, with many former Gold Rush sites preserved or partially accessible. Former California Gold Rush era camp sites in Tuolumne County can occasionally yield period coins and mining artifacts."
   },
   {
@@ -1723,7 +1725,8 @@
     "latitude": 41.228048,
     "longitude": -115.057767,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.86,
+    "detecting_weight": 82,
     "description": "Metropolis was an ambitious Nevada agricultural colony in Elko County in the northeastern Nevada desert, planned and developed starting in 1910 by the Pacific Reclamation Company with great fanfare — a hotel, school, church, and hundreds of colonists were brought to the site with promises of irrigated farming prosperity in the high desert. The project failed catastrophically when water rights were disputed and the agricultural vision could not be sustained in the arid Basin and Range terrain without reliable irrigation, and most colonists abandoned their claims within a few years. Today the ruins of the Metropolis Hotel, the abandoned school building, and scattered structural remnants are accessible on BLM land near Wells, Nevada, making this one of the most poignant ghost towns in the American West — a dream of agricultural prosperity that died in the desert. The accessible BLM site and well-preserved ruins make Metropolis a productive destination for history enthusiasts."
   },
   {
@@ -1732,7 +1735,8 @@
     "latitude": 46.851875,
     "longitude": -88.400405,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Pequaming was a Michigan Upper Peninsula company town on the Keweenaw Bay in Baraga County, built in the 1870s by the L'Anse and Baraga Lumber Company and later acquired by the Ford Motor Company in 1923, who operated it as a model company town producing wooden components for Ford vehicles from the surrounding hardwood forest. Henry Ford personally renovated the community and ran it according to his paternalistic vision of ideal rural worker life, including strict prohibition of alcohol and mandatory social activities. Ford sold Pequaming in 1942 when it was no longer economically necessary, and the community gradually declined. Several structures from the Ford era survive along the scenic Keweenaw Bay shoreline, accessible to visitors in this remote corner of Baraga County."
   },
   {
@@ -1741,7 +1745,8 @@
     "latitude": 45.950751,
     "longitude": -100.550626,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.7,
+    "detecting_weight": 57,
     "description": "Nosodak was a small Divide County, North Dakota farming community in the extreme northwestern corner of the state near the North Dakota-Montana border, established during the homesteading era of the early twentieth century when the Great Northern Railway encouraged settlement of the High Plains with promises of agricultural prosperity that the harsh climate and marginal soils could rarely fulfill. The community briefly held a post office and supported a few businesses before drought, agricultural hardship, and the broader depopulation of northwestern North Dakota's marginal farming country left the site empty. The remote northwestern North Dakota landscape today is cattle ranch country with private landholdings predominating. Former post office communities in this region can yield early twentieth century homestead artifacts."
   },
   {
@@ -1750,7 +1755,8 @@
     "latitude": 31.049068,
     "longitude": -86.618288,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Falco was a small Lawrence County, Alabama community in the northern Alabama hill country along a creek drainage in the upland terrain north of the Tennessee River valley, existing as a modest farming and timber community in the early twentieth century before the rural depopulation typical of Alabama's marginal upland farming areas eliminated the community's commercial base. The northern Alabama hill country is geologically diverse, with the Highland Rim and foothills of the Cumberland Plateau creating varied terrain that supported limited farming and more substantial timber industries. Former small Alabama upland communities like Falco are typically on private land in Lawrence County's rural landscape."
   },
   {
@@ -1759,7 +1765,8 @@
     "latitude": 34.945046,
     "longitude": -116.864762,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.81,
+    "detecting_weight": 76,
     "description": "Calico was a silver and borax mining boomtown in San Bernardino County, California in the Calico Mountains of the Mojave Desert, booming from 1881 to 1896 when silver discoveries produced over $86 million in precious metals and the town grew to over 2,500 residents with 22 saloons, a school, a newspaper, and all the infrastructure of a thriving frontier city. The silver crash of 1893 gutted the local economy and the town was abandoned by the early 1900s, though subsequent borax mining kept small crews working in the area. Walter Knott of Knott's Berry Farm purchased the site in the 1950s and partially restored it, and Calico is now a San Bernardino County Regional Park operated as a tourist attraction. Metal detecting is prohibited within the county park, though the accessible ruins and living history programs make Calico one of Southern California's most visited ghost towns."
   },
   {
@@ -1768,7 +1775,8 @@
     "latitude": 29.781317,
     "longitude": -101.39761,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.85,
+    "detecting_weight": 42,
     "description": "Shumla was a small Val Verde County, Texas community in the Pecos River canyon country of far West Texas near the confluence of the Pecos and Devil's Rivers with the Rio Grande, an area of extraordinary archaeological significance where the Lower Pecos Canyonlands contain some of North America's oldest and best-preserved rock art — ancient pictographs painted in the deep limestone canyons thousands of years before European contact. The community served as a modest ranching and stage stop in the late nineteenth century before the remote location and harsh terrain made sustained settlement impractical. The Val Verde County canyon country today is a mix of private ranch land and the Seminole Canyon State Park and Historic Site, which protects some of the region's remarkable prehistoric rock art."
   },
   {
@@ -1777,7 +1785,8 @@
     "latitude": 46.77042,
     "longitude": -101.495834,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.91,
+    "detecting_weight": 33,
     "description": "Sims was a small Morton County, North Dakota community in the badlands country of the Missouri River breaks in western North Dakota, briefly supporting a post office and small commercial services for surrounding homesteaders who attempted dryland farming in this challenging terrain during the early twentieth century homesteading boom. The combination of unpredictable rainfall, harsh winters, and the spectacular but agriculture-hostile badlands terrain made sustained farming impossible, and Sims faded as quickly as it appeared. The North Dakota badlands today are primarily Theodore Roosevelt National Park and private ranch land, with the state's lignite coal fields providing the main resource economy. Former badlands post office communities in Morton County are now buried in the ranch landscape."
   },
   {
@@ -1786,7 +1795,8 @@
     "latitude": 41.08277,
     "longitude": -80.03847,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8,
+    "confidence": 0.72,
+    "detecting_weight": 59,
     "description": "Redmond was a small Westmoreland County, Pennsylvania community in the rolling hills of southwestern Pennsylvania that existed as a local agricultural and small business community in the nineteenth century before being absorbed into the broader Westmoreland County landscape as the region's economy modernized. Westmoreland County's history is tied to the early Pennsylvania iron industry, the canal era, and the coal and coke industries that transformed western Pennsylvania in the nineteenth century. Former community sites in western Pennsylvania farmland carry archaeological potential from the early American industrial and agricultural eras."
   },
   {
