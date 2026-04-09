@@ -285,6 +285,9 @@ async def user_posts(
     return PostListResponse(posts=post_responses, total=total)
 
 
+# ---------------------------------------------------------------------------
+# GET /posts/{post_id} — single post
+# ---------------------------------------------------------------------------
 
 @router.get("/posts/{post_id}", response_model=PostResponse)
 async def get_post(

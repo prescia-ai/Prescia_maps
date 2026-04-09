@@ -397,13 +397,13 @@ export default function ProfilePage() {
                     </div>
                   ) : (followSubTab === 'followers' ? followersList : followingList).length > 0 ? (
                     <div className="space-y-2">
-                      {(followSubTab === 'followers' ? followersList : followingList).map((user) => (
+                      {(followSubTab === 'followers' ? followersList : followingList).filter((user) => user.username).map((user) => (
                         <Link
                           key={user.user_id}
                           to={`/profile/${user.username}`}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/60 transition-colors"
                         >
-                          <Avatar username={user.username ?? ''} displayName={user.display_name} size="sm" />
+                          <Avatar username={user.username!} displayName={user.display_name} size="sm" />
                           <div className="min-w-0">
                             <p className="text-sm font-medium text-white truncate">@{user.username}</p>
                             {user.display_name && (
