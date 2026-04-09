@@ -9,7 +9,31 @@ import type {
   LandAccessOverrideCreate,
   LandAccessOverrideResponse,
   ImportSummaryResponse,
+  UserPin,
 } from '../types';
+
+// Minimal request payload types for pin operations
+interface UserPinCreate {
+  name: string;
+  latitude: number;
+  longitude: number;
+  hunt_date: string;
+  time_spent?: string | null;
+  notes?: string | null;
+  finds_count?: number | null;
+  privacy?: 'public' | 'friends' | 'private';
+}
+
+interface UserPinUpdate {
+  name?: string;
+  latitude?: number;
+  longitude?: number;
+  hunt_date?: string;
+  time_spent?: string | null;
+  notes?: string | null;
+  finds_count?: number | null;
+  privacy?: 'public' | 'friends' | 'private';
+}
 
 const api = axios.create({
   baseURL: '/api/v1',
@@ -92,23 +116,23 @@ export async function importFeatures(data: any): Promise<ImportSummaryResponse> 
   return result;
 }
 
-export async function fetchMyPins(limit = 50, offset = 0): Promise<{ pins: any[]; total: number }> {
-  const { data } = await api.get('/pins/me', { params: { limit, offset } });
+export async function fetchMyPins(limit = 50, offset = 0): Promise<{ pins: UserPin[]; total: number }> {
+  const { data } = await api.get<{ pins: UserPin[]; total: number }>('/pins/me', { params: { limit, offset } });
   return data;
 }
 
-export async function fetchUserPins(username: string, limit = 50, offset = 0): Promise<{ pins: any[]; total: number }> {
-  const { data } = await api.get(`/pins/user/${encodeURIComponent(username)}`, { params: { limit, offset } });
+export async function fetchUserPins(username: string, limit = 50, offset = 0): Promise<{ pins: UserPin[]; total: number }> {
+  const { data } = await api.get<{ pins: UserPin[]; total: number }>(`/pins/user/${encodeURIComponent(username)}`, { params: { limit, offset } });
   return data;
 }
 
-export async function createPin(data: any): Promise<any> {
-  const { data: result } = await api.post('/pins', data);
+export async function createPin(data: UserPinCreate): Promise<UserPin> {
+  const { data: result } = await api.post<UserPin>('/pins', data);
   return result;
 }
 
-export async function updatePin(id: string, data: any): Promise<any> {
-  const { data: result } = await api.put(`/pins/${id}`, data);
+export async function updatePin(id: string, data: UserPinUpdate): Promise<UserPin> {
+  const { data: result } = await api.put<UserPin>(`/pins/${id}`, data);
   return result;
 }
 

@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import uuid
 from datetime import datetime
-from typing import Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.functions import ST_MakePoint, ST_SetSRID
@@ -22,6 +21,13 @@ from app.models.schemas import UserPinCreate, UserPinListResponse, UserPinRespon
 
 router = APIRouter(prefix="/pins", tags=["pins"])
 
+HUNT_DATE_FORMATS = (
+    "%Y-%m-%dT%H:%M:%S.%fZ",
+    "%Y-%m-%dT%H:%M:%SZ",
+    "%Y-%m-%dT%H:%M:%S",
+    "%Y-%m-%d",
+)
+
 
 def _build_geom(lon: float, lat: float):
     """Return a PostGIS POINT expression for the given coordinates."""
@@ -30,7 +36,7 @@ def _build_geom(lon: float, lat: float):
 
 def _parse_hunt_date(hunt_date_str: str) -> datetime:
     """Parse an ISO 8601 date/datetime string into a datetime object."""
-    for fmt in ("%Y-%m-%dT%H:%M:%S.%fZ", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+    for fmt in HUNT_DATE_FORMATS:
         try:
             return datetime.strptime(hunt_date_str, fmt)
         except ValueError:
@@ -143,7 +149,7 @@ async def list_user_pins(
 @router.get("/{pin_id}", response_model=UserPinResponse)
 async def get_pin(
     pin_id: uuid.UUID,
-    current_user: Optional[User] = Depends(get_current_user),
+    current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> UserPin:
     result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
