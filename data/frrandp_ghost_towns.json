@@ -6260,7 +6260,8 @@
     "latitude": 38.196111,
     "longitude": -117.696667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Gilbert was a small silver mining town in Mineral County, Nevada, established in the early 1900s when ore discoveries in the Candelaria Hills attracted a wave of prospectors to a region already scarred by decades of earlier boom-and-bust cycles. The camp supported a post office, several stores, and a saloon before the thin ore bodies proved insufficient to sustain large-scale production, and Gilbert was abandoned by the mid-1910s. The high desert site sits on open BLM land accessible by dirt road, with adobe ruins, mine dumps, and scattered debris marking the old townsite. Detectorists working the camp areas and surrounding prospect pits have found silver coins, mining hardware, and personal items from the brief flurry of activity."
   },
   {
     "name": "Lida, NV",
@@ -6268,7 +6269,8 @@
     "latitude": 37.458264,
     "longitude": -117.498138,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Lida was a silver and gold mining settlement tucked into the southern Esmeralda County desert of Nevada, established in the 1870s when prospectors found silver outcrops in the Lida Valley and a small community formed around the workings. The camp had a post office and a store but never achieved the size of nearby Goldfield or Tonopah, and it dissolved in stages as the ore ran thin. The remote desert valley, accessible via unpaved roads from Goldfield, preserves ruins of stone and adobe structures on open BLM terrain. The surrounding mine dumps and old camp areas can produce silver coins, Mexican reales, and early Nevada mining tokens for persistent detectorists."
   },
   {
     "name": "McLeans, NV",
@@ -6276,7 +6278,8 @@
     "latitude": 38.047709,
     "longitude": -117.652041,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "McLeans was a brief Nevada mining camp and supply point in Esmeralda County, one of many small communities that flickered to life during the great Nevada silver booms of the 1860s through 1900s and vanished just as quickly when the ore or the capital ran out. The camp served as a waystation for freighters and prospectors moving between the bigger strikes in the region, with a saloon and a small boarding establishment meeting the needs of the transient workforce. Open BLM desert now covers the site, and the old freight road corridor and camp perimeter are worth a careful sweep for horseshoe fragments, freight hardware, coins, and lost personal items from the crews who passed through."
   },
   {
     "name": "Millers, NV",
@@ -6284,7 +6287,8 @@
     "latitude": 38.13667,
     "longitude": -117.45667,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Millers was a Nevada railroad station and supply community in Mineral County, positioned on the Carson and Colorado Railroad where the line swung through the Esmeralda mineral belt, creating a stopping point for ore shipments from surrounding mines. The station attracted a small permanent population — a stationmaster, saloon keeper, and a few merchants — but never grew into a real town. The old rail grade, collapsed station foundations, and adjacent loading corrals remain on BLM land, and the packed earth around the old corrals and water tank sites tends to concentrate period coins, harness hardware, and railroad-related items for detectorists willing to search systematically."
   },
   {
     "name": "Palmetto, NV",
@@ -6292,7 +6296,8 @@
     "latitude": 37.444444,
     "longitude": -117.694722,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Palmetto was a silver mining camp in the remote southern reaches of Esmeralda County, Nevada, established in the 1860s when Paiute guides and prospectors identified silver ore in the Palmetto Mountains along the California border. A small tent-and-adobe community formed to service the mines, with a post office operating intermittently through the 1870s before declining ore grades ended the town's reason for existence. The high desert site is on open BLM land with a rough dirt road approach, and the mine dumps and camp perimeters retain a good inventory of period artifacts including silver coins, Mexican pesos that circulated widely in early Nevada, and hand-forged mining tools."
   },
   {
     "name": "Abdal, NE",
@@ -6300,7 +6305,8 @@
     "latitude": 40.12223,
     "longitude": -98.12338,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Abdal was a short-lived homestead farming community in Webster County, Nebraska, established during the land rush of the 1870s and 1880s when thousands of settlers filed claims on the Kansas-Nebraska border country hoping the rains would follow the plow. Like scores of similar Great Plains communities, Abdal had a post office, a school, and a country store before a combination of drought, falling grain prices, and the great die-out of the 1890s forced most families off the land. Flat cultivated fields now cover the old townsite, and plowed ground near the old store and school site tends to produce homestead-era artifacts including Indian Head cents, flat buttons, domestic hardware, and the occasional silver coin dropped by early settlers."
   },
   {
     "name": "Andrews, NE",
@@ -6308,7 +6314,8 @@
     "latitude": 42.631354,
     "longitude": -103.733821,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Andrews was a small Panhandle-area homestead community in Sheridan County, Nebraska, platted in the 1880s on the semi-arid rangeland of the Nebraska Sandhills fringe where optimistic settlers attempted grain farming on marginal ground. The post office operated for a few years, supported by the homestead wave, but droughts and the harsh economics of dry-land farming in this region ended the experiment before Andrews could develop into a real town. The surrounding Sandhills rangeland is lightly grazed today, and the old townsite depression is accessible on what is now agricultural land — a promising location for homestead-era coins, trade goods, and personal items brought by families who ultimately could not make it work."
   },
   {
     "name": "Anoka, NE",
@@ -6316,7 +6323,8 @@
     "latitude": 42.946942,
     "longitude": -98.830922,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Anoka was a small Nebraska settlement in Boyd County along the Missouri River bluffs, established in the 1880s as the homestead frontier pushed into the transition zone between the tallgrass prairies and the Sandhills. The town had a post office and a general store serving a dispersed farming population but never attracted the railroad connection that would have secured its future, and residents drifted to O'Neill and other rail towns through the 1890s. The Missouri blufflands around Anoka are rich agricultural ground, and cultivated fields near the old townsite have produced a variety of homestead-era artifacts, from early American coinage to farm implement hardware dropped during the settlement decades."
   },
   {
     "name": "Antioch, NE",
@@ -6324,7 +6332,8 @@
     "latitude": 42.068779,
     "longitude": -102.587097,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Antioch was a small Nebraska community in Sheridan County that experienced an unlikely moment of national attention during World War I when the surrounding Sandhills were discovered to contain deposits of potash, a critical agricultural and industrial mineral then cut off from European supply chains by the war. A brief mining and processing boom brought workers and investors to the remote Sandhills community, but the potash industry collapsed in 1919 when cheap German potash returned to the market, and Antioch returned to quiet ranching country. Today the old town grid is largely reclaimed by Sandhills grass, but the WWI-era processing plant ruins and the old town lots are interesting detecting ground for early twentieth-century coins and industrial artifacts."
   },
   {
     "name": "Arago, NE",
@@ -6332,7 +6341,8 @@
     "latitude": 40.1173,
     "longitude": -95.498756,
     "source": "frrandp_ghost_towns",
-    "confidence": 0.8
+    "confidence": 0.8,
+    "description": "Arago was an early Missouri River community in Richardson County, Nebraska, established in the 1850s and 1860s by settlers pushing up the river from Missouri into the southeast Nebraska bottomlands where rich alluvial soils promised good farming. The community had a post office and served local farmers, but competition from better-positioned towns on the rail lines drew commerce away, and Arago faded by the 1880s. The Missouri River bottomlands in this area are among the most artifact-rich soils in Nebraska — decades of flood and plowing have churned up an inventory of pre-Civil War and Civil War-era coins, military buttons, and frontier trade goods from the heavy Missouri River traffic of the settlement era."
   },
   {
     "name": "Bayonne, NE",
