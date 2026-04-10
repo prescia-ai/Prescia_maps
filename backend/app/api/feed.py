@@ -21,6 +21,7 @@ from collections import defaultdict
 from typing import Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi.responses import Response
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -329,7 +330,7 @@ async def get_post(
 # DELETE /posts/{post_id} — delete own post
 # ---------------------------------------------------------------------------
 
-@router.delete("/posts/{post_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/posts/{post_id}", status_code=status.HTTP_204_NO_CONTENT, response_class=Response)
 async def delete_post(
     post_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
@@ -481,6 +482,7 @@ async def create_comment(
 @router.delete(
     "/posts/{post_id}/comments/{comment_id}",
     status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
 )
 async def delete_comment(
     post_id: uuid.UUID,

@@ -13,6 +13,7 @@ from datetime import datetime
 from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi.responses import Response
 from geoalchemy2.functions import ST_MakePoint, ST_SetSRID
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -242,7 +243,7 @@ async def update_pin(
 # DELETE /pins/{pin_id}  — delete a pin (owner only)
 # ---------------------------------------------------------------------------
 
-@router.delete("/{pin_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{pin_id}", status_code=status.HTTP_204_NO_CONTENT, response_class=Response)
 async def delete_pin(
     pin_id: uuid.UUID,
     current_user: User = Depends(get_current_user),

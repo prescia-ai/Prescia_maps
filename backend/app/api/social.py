@@ -11,6 +11,7 @@ Routes (all mounted under /api/v1 in main.py):
 from __future__ import annotations
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi.responses import Response
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -37,6 +38,7 @@ async def _get_user_by_username(username: str, db: AsyncSession) -> User:
 @router.post(
     "/users/{username}/follow",
     status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
     summary="Follow a user",
 )
 async def follow_user(
@@ -75,6 +77,7 @@ async def follow_user(
 @router.delete(
     "/users/{username}/follow",
     status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
     summary="Unfollow a user",
 )
 async def unfollow_user(
