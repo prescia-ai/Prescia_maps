@@ -6,6 +6,7 @@ import {
   Polyline,
   Popup,
   useMapEvents,
+  ZoomControl,
 } from 'react-leaflet';
 import type { LeafletMouseEvent } from 'leaflet';
 import type {
@@ -260,8 +261,9 @@ export default function MapView({
       center={[39.5, -98.35]}
       zoom={5}
       className="w-full h-full"
-      zoomControl={true}
+      zoomControl={false}
     >
+      <ZoomControl position="bottomright" />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
