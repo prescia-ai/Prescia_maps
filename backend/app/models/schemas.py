@@ -55,6 +55,7 @@ class MapLayerType(str, enum.Enum):
     railroad = "railroad"
     trail = "trail"
     mining = "mining"
+    blm = "blm"
 
 
 # ---------------------------------------------------------------------------

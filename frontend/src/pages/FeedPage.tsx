@@ -27,6 +27,7 @@ export default function FeedPage() {
   const [previewUrls, setPreviewUrls] = useState<string[]>([]);
   const [googleConnected, setGoogleConnected] = useState<boolean | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [imageUploadError, setImageUploadError] = useState<string | null>(null);
 
   const PAGE_SIZE = 20;
   const offsetRef = useRef(0);
@@ -100,14 +101,17 @@ export default function FeedPage() {
         try {
           const { images } = await uploadPostImages(post.id, pendingFiles);
           post.images = images;
+          setImageUploadError(null);
         } catch {
-          // Image upload failure doesn't block post creation
+          setImageUploadError('Photos failed to upload. Your post was created without images.');
+          setTimeout(() => setImageUploadError(null), 8000);
         }
       }
       setPosts((prev) => [post, ...prev]);
       setTotal((t) => t + 1);
       setPostContent('');
       setShowCreateForm(false);
+      setImageUploadError(null);
       previewUrls.forEach((u) => URL.revokeObjectURL(u));
       setPendingFiles([]);
       setPreviewUrls([]);
@@ -266,6 +270,24 @@ export default function FeedPage() {
                 </div>
               </div>
             </form>
+          </div>
+        )}
+
+        {/* Image upload error banner */}
+        {imageUploadError && (
+          <div className="bg-amber-900/40 border border-amber-700 rounded-2xl px-4 py-3 text-amber-300 text-sm flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+              <span>{imageUploadError}</span>
+            </div>
+            <button
+              onClick={() => setImageUploadError(null)}
+              className="text-amber-400 hover:text-amber-200 text-xs ml-2 flex-shrink-0"
+            >
+              ✕
+            </button>
           </div>
         )}
 

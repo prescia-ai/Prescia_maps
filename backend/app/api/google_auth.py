@@ -366,6 +366,12 @@ async def upload_post_images(
     if not (1 <= len(files) <= 4):
         raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
 
+    # Validate post_id format
+    try:
+        post_uuid = uuid.UUID(post_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid post_id format")
+
     # Validate and read all files first
     file_data: List[Tuple[bytes, str]] = []
     for f in files:
@@ -378,14 +384,14 @@ async def upload_post_images(
         file_data.append((contents, ct))
 
     # Verify post ownership
-    post_result = await db.execute(select(Post).where(Post.id == post_id))
+    post_result = await db.execute(select(Post).where(Post.id == post_uuid))
     post = post_result.scalar_one_or_none()
     if post is None or post.author_id != current_user.id:
         raise HTTPException(status_code=404, detail="Post not found")
 
     # Check no existing images
     count_result = await db.execute(
-        select(func.count()).select_from(PostImage).where(PostImage.post_id == post_id)
+        select(func.count()).select_from(PostImage).where(PostImage.post_id == post_uuid)
     )
     if count_result.scalar_one() > 0:
         raise HTTPException(status_code=400, detail="Post already has images. Delete existing images first.")
@@ -399,7 +405,7 @@ async def upload_post_images(
         file_name = f"post_{post_id}_{i}.{ext}"
         file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
         img = PostImage(
-            post_id=uuid.UUID(post_id),
+            post_id=post_uuid,
             drive_file_id=file_id,
             url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
             position=i,
@@ -435,6 +441,12 @@ async def upload_pin_images(
     if not (1 <= len(files) <= 4):
         raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
 
+    # Validate pin_id format
+    try:
+        pin_uuid = uuid.UUID(pin_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid pin_id format")
+
     # Validate and read all files first
     file_data: List[Tuple[bytes, str]] = []
     for f in files:
@@ -447,14 +459,14 @@ async def upload_pin_images(
         file_data.append((contents, ct))
 
     # Verify pin ownership
-    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
+    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_uuid))
     pin = pin_result.scalar_one_or_none()
     if pin is None or pin.user_id != current_user.id:
         raise HTTPException(status_code=404, detail="Pin not found")
 
     # Check no existing images
     count_result = await db.execute(
-        select(func.count()).select_from(PinImage).where(PinImage.pin_id == pin_id)
+        select(func.count()).select_from(PinImage).where(PinImage.pin_id == pin_uuid)
     )
     if count_result.scalar_one() > 0:
         raise HTTPException(status_code=400, detail="Pin already has images. Delete existing images first.")
@@ -468,7 +480,7 @@ async def upload_pin_images(
         file_name = f"pin_{pin_id}_{i}.{ext}"
         file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
         img = PinImage(
-            pin_id=uuid.UUID(pin_id),
+            pin_id=pin_uuid,
             drive_file_id=file_id,
             url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
             position=i,
@@ -511,13 +523,18 @@ async def delete_post_images(
     db: AsyncSession = Depends(get_db),
 ) -> dict:
     """Delete all images attached to a post (and remove Drive files)."""
-    post_result = await db.execute(select(Post).where(Post.id == post_id))
+    try:
+        post_uuid = uuid.UUID(post_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid post_id format")
+
+    post_result = await db.execute(select(Post).where(Post.id == post_uuid))
     post = post_result.scalar_one_or_none()
     if post is None or post.author_id != current_user.id:
         raise HTTPException(status_code=404, detail="Post not found")
 
     images_result = await db.execute(
-        select(PostImage).where(PostImage.post_id == post_id)
+        select(PostImage).where(PostImage.post_id == post_uuid)
     )
     images = list(images_result.scalars().all())
 
@@ -554,13 +571,18 @@ async def delete_pin_images(
     db: AsyncSession = Depends(get_db),
 ) -> dict:
     """Delete all images attached to a hunt pin (and remove Drive files)."""
-    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
+    try:
+        pin_uuid = uuid.UUID(pin_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid pin_id format")
+
+    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_uuid))
     pin = pin_result.scalar_one_or_none()
     if pin is None or pin.user_id != current_user.id:
         raise HTTPException(status_code=404, detail="Pin not found")
 
     images_result = await db.execute(
-        select(PinImage).where(PinImage.pin_id == pin_id)
+        select(PinImage).where(PinImage.pin_id == pin_uuid)
     )
     images = list(images_result.scalars().all())
 
