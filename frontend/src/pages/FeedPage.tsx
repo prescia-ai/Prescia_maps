@@ -25,6 +25,7 @@ export default function FeedPage() {
   const [googleConnected, setGoogleConnected] = useState<boolean | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [imageUploadError, setImageUploadError] = useState<string | null>(null);
+  const [createError, setCreateError] = useState<string | null>(null);
 
   const PAGE_SIZE = 20;
   const offsetRef = useRef(0);
@@ -105,12 +106,15 @@ export default function FeedPage() {
       setTotal((t) => t + 1);
       setPostContent('');
       setShowCreateForm(false);
+      setCreateError(null);
       setImageUploadError(null);
       previewUrls.forEach((u) => URL.revokeObjectURL(u));
       setPendingFiles([]);
       setPreviewUrls([]);
-    } catch {
-      // ignore
+    } catch (err: any) {
+      const msg = err?.response?.data?.detail ?? err?.message ?? 'Failed to create post. Please try again.';
+      setCreateError(msg);
+      console.error('Create post failed:', err);
     } finally {
       setCreating(false);
     }
@@ -146,7 +150,10 @@ export default function FeedPage() {
           <div className="ml-auto flex items-center gap-2">
             {user && (
               <button
-                onClick={() => setShowCreateForm((v) => !v)}
+                onClick={() => {
+                  setShowCreateForm((v) => !v);
+                  setCreateError(null);
+                }}
                 className="flex items-center gap-1 text-xs bg-stone-800 hover:bg-stone-700 text-white font-semibold px-3 py-1.5 rounded-xl transition-colors"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -164,6 +171,11 @@ export default function FeedPage() {
         {user && showCreateForm && (
           <div className="bg-white border border-stone-200 rounded-2xl p-4 shadow-sm">
             <form onSubmit={handleCreatePost} className="space-y-3">
+              {createError && (
+                <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-red-700 text-sm">
+                  {createError}
+                </div>
+              )}
               <div className="flex items-start gap-3">
                 <Avatar
                   username={profile?.username ?? user.email ?? 'user'}

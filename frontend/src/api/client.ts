@@ -471,4 +471,8 @@ export async function deleteCollectionPhoto(photoId: string): Promise<void> {
   await api.delete(`/collection/${photoId}`);
 }
 
+export async function deleteAccount(): Promise<void> {
+  await api.delete('/auth/account');
+}
+
 export default api;

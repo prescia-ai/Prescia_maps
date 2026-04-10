@@ -2,10 +2,11 @@
 Auth API routes — /auth prefix is added in main.py.
 
 Endpoints:
-  GET  /auth/me                  — return current user profile
-  GET  /auth/profile/{username}  — public profile lookup (no auth required)
-  PUT  /auth/profile-setup       — first-time username setup
-  PUT  /auth/profile             — update editable profile fields
+  GET    /auth/me                  — return current user profile
+  GET    /auth/profile/{username}  — public profile lookup (no auth required)
+  PUT    /auth/profile-setup       — first-time username setup
+  PUT    /auth/profile             — update editable profile fields
+  DELETE /auth/account             — permanently delete the current user's account
 """
 
 from __future__ import annotations
@@ -14,11 +15,24 @@ import re
 from typing import Union
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy import func, select
+from fastapi.responses import Response
+from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user, optional_user
-from app.models.database import User, UserFollow, get_db
+from app.models.database import (
+    CollectionPhoto,
+    PinImage,
+    PinSubmission,
+    Post,
+    PostComment,
+    PostImage,
+    PostReaction,
+    User,
+    UserFollow,
+    UserPin,
+    get_db,
+)
 from app.models.schemas import (
     UserProfile,
     UserProfileLimited,
@@ -161,3 +175,58 @@ async def update_profile(
 
     await db.flush()
     return current_user
+
+
+@router.delete(
+    "/account",
+    status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
+    summary="Permanently delete the current user's account",
+)
+async def delete_account(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Permanently delete the current user's account and all associated data.
+
+    Deletes in dependency order: pin images, pins, post images, post comments,
+    post reactions, posts, collection photos, follows (both directions),
+    pin submissions, then the user row itself.
+    """
+    uid = current_user.id
+
+    # Delete pin images for this user's pins
+    await db.execute(
+        delete(PinImage).where(PinImage.pin_id.in_(select(UserPin.id).where(UserPin.user_id == uid)))
+    )
+
+    # Delete user's pins
+    await db.execute(delete(UserPin).where(UserPin.user_id == uid))
+
+    # Delete post images, comments, and reactions for this user's posts
+    user_posts_subq = select(Post.id).where(Post.author_id == uid)
+    await db.execute(delete(PostImage).where(PostImage.post_id.in_(user_posts_subq)))
+    await db.execute(delete(PostComment).where(PostComment.post_id.in_(user_posts_subq)))
+    await db.execute(delete(PostReaction).where(PostReaction.post_id.in_(user_posts_subq)))
+
+    # Also delete comments and reactions this user made on other posts
+    await db.execute(delete(PostComment).where(PostComment.author_id == uid))
+    await db.execute(delete(PostReaction).where(PostReaction.user_id == uid))
+
+    # Delete user's posts
+    await db.execute(delete(Post).where(Post.author_id == uid))
+
+    # Delete collection photos
+    await db.execute(delete(CollectionPhoto).where(CollectionPhoto.user_id == uid))
+
+    # Delete follows (both directions)
+    await db.execute(delete(UserFollow).where(UserFollow.follower_id == uid))
+    await db.execute(delete(UserFollow).where(UserFollow.following_id == uid))
+
+    # Delete pin submissions
+    await db.execute(delete(PinSubmission).where(PinSubmission.submitter_id == uid))
+
+    # Finally delete the user
+    await db.delete(current_user)
+    await db.flush()
