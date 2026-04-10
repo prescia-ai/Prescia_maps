@@ -19,8 +19,10 @@ from app.auth.deps import get_current_user
 from app.auth.google import (
     build_google_auth_url,
     encrypt_token,
+    ensure_prescia_folder,
     exchange_code_for_tokens,
     fetch_google_user_email,
+    get_valid_access_token,
 )
 from app.config import settings
 from app.models.database import User, get_db
@@ -117,3 +119,68 @@ async def google_oauth_callback(
         return error_redirect
 
     return success_redirect
+
+
+@router.get("/status")
+async def google_drive_status(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Return the Google Drive connection status for the current user.
+
+    If connected, also verifies the token is still valid and ensures the
+    Prescia Maps folder exists.
+    """
+    if not current_user.google_refresh_token:
+        return {
+            "connected": False,
+            "google_email": None,
+            "connected_at": None,
+            "has_folder": False,
+        }
+
+    # Try to get a valid access token and verify the folder exists.
+    has_folder = False
+    try:
+        access_token = await get_valid_access_token(current_user, db)
+        await ensure_prescia_folder(access_token, user=current_user, db=db)
+        has_folder = True
+    except HTTPException:
+        # Token revoked or Drive unavailable — has_folder stays False.
+        # get_valid_access_token clears Google fields on revocation.
+        pass
+
+    # After get_valid_access_token, the user may have been disconnected
+    # (fields cleared) if the refresh token was revoked.
+    if not current_user.google_refresh_token:
+        return {
+            "connected": False,
+            "google_email": None,
+            "connected_at": None,
+            "has_folder": False,
+        }
+
+    connected_at = current_user.google_connected_at
+    return {
+        "connected": True,
+        "google_email": current_user.google_email,
+        "connected_at": connected_at.isoformat() if connected_at else None,
+        "has_folder": has_folder,
+    }
+
+
+@router.post("/disconnect")
+async def google_drive_disconnect(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Disconnect Google Drive for the current user.
+
+    Clears all Google-related fields on the User row.
+    """
+    current_user.google_refresh_token = None
+    current_user.google_connected_at = None
+    current_user.google_email = None
+    current_user.google_folder_id = None
+    await db.flush()
+    return {"status": "disconnected"}

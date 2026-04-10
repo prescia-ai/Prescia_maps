@@ -230,6 +230,7 @@ class User(Base):
     google_refresh_token = Column(Text, nullable=True)  # Encrypted refresh token
     google_connected_at = Column(DateTime(timezone=True), nullable=True)
     google_email = Column(String(255), nullable=True)  # The Google account email they connected
+    google_folder_id = Column(String(255), nullable=True)  # Google Drive "Prescia Maps" folder ID
 
 
 class UserPin(Base):

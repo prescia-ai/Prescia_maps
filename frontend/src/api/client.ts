@@ -347,4 +347,18 @@ export async function fetchGoogleAuthUrl(): Promise<string> {
   return data.url;
 }
 
+export async function fetchGoogleStatus(): Promise<{
+  connected: boolean;
+  google_email: string | null;
+  connected_at: string | null;
+  has_folder: boolean;
+}> {
+  const { data } = await api.get('/google/status');
+  return data;
+}
+
+export async function disconnectGoogle(): Promise<void> {
+  await api.post('/google/disconnect');
+}
+
 export default api;

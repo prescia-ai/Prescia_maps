@@ -327,6 +327,7 @@ class UserProfile(BaseModel):
     created_at: Optional[Any] = None
     google_email: Optional[str] = None
     google_connected_at: Optional[Any] = None
+    google_folder_id: Optional[str] = None
 
 
 class UserProfileSetup(BaseModel):
