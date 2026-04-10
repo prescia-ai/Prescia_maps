@@ -43,25 +43,25 @@ export default function ProfileSetupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-slate-900 border border-slate-700 rounded-2xl p-8 shadow-2xl">
+    <div className="min-h-screen bg-amber-50/30 flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-2 mb-6">
           <span className="text-2xl">🗺️</span>
-          <h1 className="text-white text-xl font-bold">Prescia Maps</h1>
+          <h1 className="text-stone-900 text-xl font-bold">Prescia Maps</h1>
         </div>
-        <h2 className="text-slate-200 text-lg font-semibold mb-2">Set up your profile</h2>
-        <p className="text-slate-400 text-sm mb-6">Choose a username to get started.</p>
+        <h2 className="text-stone-800 text-lg font-semibold mb-2">Set up your profile</h2>
+        <p className="text-stone-500 text-sm mb-6">Choose a username to get started.</p>
 
         {error && (
-          <div className="mb-4 px-4 py-3 rounded-lg bg-red-900/40 border border-red-700 text-red-300 text-sm">
+          <div className="mb-4 px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-slate-400 text-sm mb-1" htmlFor="username">
-              Username <span className="text-red-400">*</span>
+            <label className="block text-stone-600 text-sm mb-1" htmlFor="username">
+              Username <span className="text-red-500">*</span>
             </label>
             <input
               id="username"
@@ -72,13 +72,13 @@ export default function ProfileSetupPage() {
               pattern="^[a-zA-Z0-9_]+$"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-slate-400 placeholder-slate-500"
+              className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-900 text-sm focus:outline-none focus:border-stone-400 placeholder-stone-400"
               placeholder="cool_detector"
             />
-            <p className="text-slate-500 text-xs mt-1">3–30 characters, letters, numbers and underscores only</p>
+            <p className="text-stone-400 text-xs mt-1">3–30 characters, letters, numbers and underscores only</p>
           </div>
           <div>
-            <label className="block text-slate-400 text-sm mb-1" htmlFor="displayName">
+            <label className="block text-stone-600 text-sm mb-1" htmlFor="displayName">
               Display Name
             </label>
             <input
@@ -87,12 +87,12 @@ export default function ProfileSetupPage() {
               maxLength={100}
               value={displayName}
               onChange={(e) => setDisplayName(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-slate-400 placeholder-slate-500"
+              className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-900 text-sm focus:outline-none focus:border-stone-400 placeholder-stone-400"
               placeholder="Your Name"
             />
           </div>
           <div>
-            <label className="block text-slate-400 text-sm mb-1" htmlFor="bio">
+            <label className="block text-stone-600 text-sm mb-1" htmlFor="bio">
               Bio
             </label>
             <textarea
@@ -100,12 +100,12 @@ export default function ProfileSetupPage() {
               rows={3}
               value={bio}
               onChange={(e) => setBio(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-slate-400 placeholder-slate-500 resize-none"
+              className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-900 text-sm focus:outline-none focus:border-stone-400 placeholder-stone-400 resize-none"
               placeholder="Tell the community about yourself…"
             />
           </div>
           <div>
-            <label className="block text-slate-400 text-sm mb-1" htmlFor="location">
+            <label className="block text-stone-600 text-sm mb-1" htmlFor="location">
               Location
             </label>
             <input
@@ -114,14 +114,14 @@ export default function ProfileSetupPage() {
               maxLength={100}
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-slate-400 placeholder-slate-500"
+              className="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-900 text-sm focus:outline-none focus:border-stone-400 placeholder-stone-400"
               placeholder="City, State"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-50 text-white font-semibold py-2 rounded-lg transition-colors text-sm"
+            className="w-full bg-stone-800 hover:bg-stone-700 disabled:opacity-50 text-white font-semibold py-2 rounded-xl transition-colors text-sm"
           >
             {loading ? 'Saving…' : 'Save and continue'}
           </button>

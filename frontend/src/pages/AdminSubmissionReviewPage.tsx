@@ -184,55 +184,55 @@ export default function AdminSubmissionReviewPage() {
 
   if (isAdmin === false) {
     return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
-        <p className="text-red-400 text-sm">Access denied. Redirecting…</p>
+      <div className="min-h-screen bg-stone-50 text-stone-900 flex items-center justify-center">
+        <p className="text-red-600 text-sm">Access denied. Redirecting…</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10">
+      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
           <Link
             to="/admin/submissions"
-            className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Submissions
           </Link>
-          <span className="text-slate-600">·</span>
-          <span className="text-slate-400 text-sm truncate">{submission?.name ?? 'Review'}</span>
+          <span className="text-stone-300">·</span>
+          <span className="text-stone-500 text-sm truncate">{submission?.name ?? 'Review'}</span>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-8">
         {loading ? (
           <div className="flex items-center justify-center py-16">
-            <span className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <span className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
           </div>
         ) : !submission ? (
-          <p className="text-slate-400 text-sm">{error ?? 'Submission not found.'}</p>
+          <p className="text-stone-500 text-sm">{error ?? 'Submission not found.'}</p>
         ) : (
           <>
             {/* Submitter info */}
-            <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-4 mb-6 text-sm space-y-1">
-              <p className="text-slate-300">
-                <span className="text-slate-500">Submitted by</span>{' '}
+            <div className="bg-white border border-stone-200 rounded-2xl p-4 mb-6 text-sm space-y-1 shadow-sm">
+              <p className="text-stone-700">
+                <span className="text-stone-400">Submitted by</span>{' '}
                 <span className="font-medium">@{submission.submitter_username ?? 'unknown'}</span>
               </p>
-              <p className="text-slate-400">
+              <p className="text-stone-500">
                 {relativeTime(submission.submitted_at)}
               </p>
-              <p className="text-slate-400">
+              <p className="text-stone-500">
                 Status:{' '}
                 <span className={
-                  submission.status === 'approved' ? 'text-green-400' :
-                  submission.status === 'rejected' ? 'text-red-400' :
-                  'text-yellow-400'
+                  submission.status === 'approved' ? 'text-green-600' :
+                  submission.status === 'rejected' ? 'text-red-600' :
+                  'text-yellow-600'
                 }>
                   {submission.status}
                 </span>
@@ -240,41 +240,41 @@ export default function AdminSubmissionReviewPage() {
             </div>
 
             {successMsg && (
-              <div className="mb-4 px-4 py-3 rounded-2xl bg-green-900/40 border border-green-800 text-green-300 text-sm">
+              <div className="mb-4 px-4 py-3 rounded-2xl bg-green-50 border border-green-200 text-green-700 text-sm">
                 {successMsg}
               </div>
             )}
             {error && (
-              <div className="mb-4 px-4 py-3 rounded-2xl bg-red-900/40 border border-red-800 text-red-300 text-sm">
+              <div className="mb-4 px-4 py-3 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-sm">
                 {error}
               </div>
             )}
 
             <div className="space-y-4">
-              <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 space-y-5">
-                <h2 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-5 shadow-sm">
+                <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wider">
                   Submission Details
                 </h2>
 
                 {/* Name */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Location Name</label>
+                  <label className="block text-sm font-medium text-stone-700">Location Name</label>
                   <input
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value.slice(0, 200))}
                     maxLength={200}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                   />
                 </div>
 
                 {/* Pin Type */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Pin Type</label>
+                  <label className="block text-sm font-medium text-stone-700">Pin Type</label>
                   <select
                     value={pinType}
                     onChange={(e) => setPinType(e.target.value)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                   >
                     <option value="">-- Select type --</option>
                     {LOCATION_TYPES.map((t) => (
@@ -284,8 +284,8 @@ export default function AdminSubmissionReviewPage() {
                     ))}
                   </select>
                   {submission.suggested_type && (
-                    <p className="text-xs text-slate-400">
-                      User suggested: <span className="text-slate-300">{submission.suggested_type}</span>
+                    <p className="text-xs text-stone-400">
+                      User suggested: <span className="text-stone-600">{submission.suggested_type}</span>
                     </p>
                   )}
                 </div>
@@ -293,104 +293,104 @@ export default function AdminSubmissionReviewPage() {
                 {/* Coordinates */}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="space-y-1.5">
-                    <label className="block text-sm font-medium text-slate-300">Latitude</label>
+                    <label className="block text-sm font-medium text-stone-700">Latitude</label>
                     <input
                       type="number"
                       step="any"
                       value={latitude}
                       onChange={(e) => setLatitude(e.target.value)}
-                      className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                     />
                   </div>
                   <div className="space-y-1.5">
-                    <label className="block text-sm font-medium text-slate-300">Longitude</label>
+                    <label className="block text-sm font-medium text-stone-700">Longitude</label>
                     <input
                       type="number"
                       step="any"
                       value={longitude}
                       onChange={(e) => setLongitude(e.target.value)}
-                      className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                      className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                     />
                   </div>
                 </div>
 
                 {/* Date/Era */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Date / Era</label>
+                  <label className="block text-sm font-medium text-stone-700">Date / Era</label>
                   <input
                     type="text"
                     value={dateEra}
                     onChange={(e) => setDateEra(e.target.value.slice(0, 100))}
                     maxLength={100}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                   />
                 </div>
 
                 {/* Description */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Description</label>
+                  <label className="block text-sm font-medium text-stone-700">Description</label>
                   <textarea
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     rows={5}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors resize-none"
                   />
                 </div>
 
                 {/* Source/Reference */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Source / Reference</label>
+                  <label className="block text-sm font-medium text-stone-700">Source / Reference</label>
                   <input
                     type="text"
                     value={sourceReference}
                     onChange={(e) => setSourceReference(e.target.value)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                   />
                 </div>
 
                 {/* Tags */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">Tags</label>
+                  <label className="block text-sm font-medium text-stone-700">Tags</label>
                   <input
                     type="text"
                     value={tags}
                     onChange={(e) => setTags(e.target.value)}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                   />
                 </div>
               </div>
 
               {/* Admin-only fields */}
-              <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 space-y-5">
-                <h2 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-5 shadow-sm">
+                <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wider">
                   Admin Fields
                 </h2>
 
                 {/* Admin Notes */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">
-                    Admin Notes <span className="text-slate-500 font-normal">(private)</span>
+                  <label className="block text-sm font-medium text-stone-700">
+                    Admin Notes <span className="text-stone-400 font-normal">(private)</span>
                   </label>
                   <textarea
                     value={adminNotes}
                     onChange={(e) => setAdminNotes(e.target.value)}
                     rows={3}
                     placeholder="Internal notes — user will never see these"
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors resize-none"
                   />
                 </div>
 
                 {/* Rejection Reason */}
                 <div className="space-y-1.5">
-                  <label className="block text-sm font-medium text-slate-300">
-                    Rejection Reason <span className="text-slate-500 font-normal">(visible to submitter)</span>
+                  <label className="block text-sm font-medium text-stone-700">
+                    Rejection Reason <span className="text-stone-400 font-normal">(visible to submitter)</span>
                   </label>
                   <textarea
                     value={rejectionReason}
                     onChange={(e) => setRejectionReason(e.target.value)}
                     rows={3}
                     placeholder="Explain why the submission was rejected (required when rejecting)"
-                    className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors resize-none"
                   />
                 </div>
               </div>
@@ -409,14 +409,14 @@ export default function AdminSubmissionReviewPage() {
                   <button
                     onClick={handleSaveDraft}
                     disabled={saving}
-                    className="flex-1 bg-transparent hover:bg-slate-800 border border-slate-700 text-slate-300 font-medium py-3 rounded-2xl transition-colors text-sm"
+                    className="flex-1 bg-white hover:bg-stone-50 border border-stone-300 text-stone-700 font-medium py-3 rounded-2xl transition-colors text-sm"
                   >
                     Save Draft
                   </button>
                   <button
                     onClick={handleReject}
                     disabled={saving || submission.status === 'rejected'}
-                    className="flex-1 bg-red-900/40 hover:bg-red-900/60 border border-red-800 text-red-300 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-3 rounded-2xl transition-colors text-sm"
+                    className="flex-1 bg-red-50 hover:bg-red-100 border border-red-200 text-red-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-3 rounded-2xl transition-colors text-sm"
                   >
                     Reject
                   </button>

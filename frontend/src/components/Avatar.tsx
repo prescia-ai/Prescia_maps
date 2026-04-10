@@ -11,14 +11,14 @@
 import { useState } from 'react';
 
 const PALETTE = [
-  'bg-teal-600',
-  'bg-indigo-600',
-  'bg-rose-600',
-  'bg-amber-600',
-  'bg-emerald-600',
-  'bg-violet-600',
-  'bg-sky-600',
-  'bg-pink-600',
+  'bg-amber-700',
+  'bg-stone-600',
+  'bg-teal-700',
+  'bg-rose-700',
+  'bg-emerald-700',
+  'bg-indigo-700',
+  'bg-orange-700',
+  'bg-slate-600',
 ];
 
 // djb2-inspired polynomial rolling hash — maps a username string to a stable uint32

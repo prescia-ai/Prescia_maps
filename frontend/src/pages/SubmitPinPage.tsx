@@ -97,37 +97,37 @@ export default function SubmitPinPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-slate-950 text-white flex flex-col">
-        <div className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm">
+      <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col">
+        <div className="border-b border-stone-200 bg-white shadow-sm">
           <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
             <Link
               to="/map"
-              className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+              className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
               Map
             </Link>
-            <span className="text-slate-600">·</span>
-            <span className="text-slate-400 text-sm">Submit a Pin</span>
+            <span className="text-stone-300">·</span>
+            <span className="text-stone-500 text-sm">Submit a Pin</span>
           </div>
         </div>
         <div className="max-w-2xl mx-auto px-4 py-16 flex flex-col items-center text-center gap-6">
-          <div className="w-16 h-16 bg-green-900/40 border border-green-800 rounded-full flex items-center justify-center">
-            <svg className="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <div className="w-16 h-16 bg-green-100 border border-green-200 rounded-full flex items-center justify-center">
+            <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-white mb-2">Submitted!</h2>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+            <h2 className="text-xl font-semibold text-stone-900 mb-2">Submitted!</h2>
+            <p className="text-stone-500 text-sm leading-relaxed max-w-sm">
               Your pin has been submitted! We'll review it and add it to the map if approved.
             </p>
           </div>
           <Link
             to="/map"
-            className="text-blue-400 hover:text-blue-300 text-sm transition-colors"
+            className="text-amber-700 hover:text-amber-600 text-sm transition-colors"
           >
             ← Back to Map
           </Link>
@@ -137,43 +137,43 @@ export default function SubmitPinPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm">
+      <div className="border-b border-stone-200 bg-white shadow-sm">
         <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
           <Link
             to="/map"
-            className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Map
           </Link>
-          <span className="text-slate-600">·</span>
-          <span className="text-slate-400 text-sm">Submit a Pin</span>
+          <span className="text-stone-300">·</span>
+          <span className="text-stone-500 text-sm">Submit a Pin</span>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-8">
-        <h1 className="text-xl font-semibold text-white mb-1">Submit a Historical Pin</h1>
-        <p className="text-slate-400 text-sm mb-6">
+        <h1 className="text-xl font-semibold text-stone-900 mb-1">Submit a Historical Pin</h1>
+        <p className="text-stone-500 text-sm mb-6">
           Know a spot that should be on the map? Submit it for review.
         </p>
 
         {error && (
-          <div className="mb-4 px-4 py-3 rounded-2xl bg-red-900/40 border border-red-800 text-red-300 text-sm">
+          <div className="mb-4 px-4 py-3 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-sm">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 space-y-5">
+          <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-5 shadow-sm">
 
             {/* Location Name */}
             <div className="space-y-1.5">
-              <label htmlFor="name" className="block text-sm font-medium text-slate-300">
-                Location Name <span className="text-red-400">*</span>
+              <label htmlFor="name" className="block text-sm font-medium text-stone-700">
+                Location Name <span className="text-red-500">*</span>
               </label>
               <input
                 id="name"
@@ -183,20 +183,20 @@ export default function SubmitPinPage() {
                 required
                 maxLength={200}
                 placeholder="e.g. Miller's Crossing Battleground"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
 
             {/* Pin Type */}
             <div className="space-y-1.5">
-              <label htmlFor="pinType" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="pinType" className="block text-sm font-medium text-stone-700">
                 Pin Type
               </label>
               <select
                 id="pinType"
                 value={pinType}
                 onChange={(e) => setPinType(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 text-sm focus:outline-none focus:border-stone-400 transition-colors"
               >
                 <option value="">-- Select a type --</option>
                 {LOCATION_TYPES.map((t) => (
@@ -211,7 +211,7 @@ export default function SubmitPinPage() {
             {/* Suggested type (shown when Other selected) */}
             {isOtherType && (
               <div className="space-y-1.5">
-                <label htmlFor="suggestedType" className="block text-sm font-medium text-slate-300">
+                <label htmlFor="suggestedType" className="block text-sm font-medium text-stone-700">
                   Suggested Type Name
                 </label>
                 <input
@@ -221,7 +221,7 @@ export default function SubmitPinPage() {
                   onChange={(e) => setSuggestedType(e.target.value.slice(0, 100))}
                   maxLength={100}
                   placeholder="e.g. tavern, fort, powder house"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                 />
               </div>
             )}
@@ -229,8 +229,8 @@ export default function SubmitPinPage() {
             {/* Coordinates */}
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1.5">
-                <label htmlFor="latitude" className="block text-sm font-medium text-slate-300">
-                  Latitude <span className="text-red-400">*</span>
+                <label htmlFor="latitude" className="block text-sm font-medium text-stone-700">
+                  Latitude <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="latitude"
@@ -240,12 +240,12 @@ export default function SubmitPinPage() {
                   onChange={(e) => setLatitude(e.target.value)}
                   required
                   placeholder="e.g. 38.8977"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                 />
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="longitude" className="block text-sm font-medium text-slate-300">
-                  Longitude <span className="text-red-400">*</span>
+                <label htmlFor="longitude" className="block text-sm font-medium text-stone-700">
+                  Longitude <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="longitude"
@@ -255,17 +255,17 @@ export default function SubmitPinPage() {
                   onChange={(e) => setLongitude(e.target.value)}
                   required
                   placeholder="e.g. -77.0365"
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
                 />
               </div>
             </div>
-            <p className="text-xs text-slate-500 -mt-2">
+            <p className="text-xs text-stone-400 -mt-2">
               💡 Tip: Note coordinates from the map page first
             </p>
 
             {/* Date / Era */}
             <div className="space-y-1.5">
-              <label htmlFor="dateEra" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="dateEra" className="block text-sm font-medium text-stone-700">
                 Date / Era
               </label>
               <input
@@ -275,17 +275,17 @@ export default function SubmitPinPage() {
                 onChange={(e) => setDateEra(e.target.value.slice(0, 100))}
                 maxLength={100}
                 placeholder="e.g. 1840s, Civil War, 1860-1870"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
 
             {/* Description */}
             <div className="space-y-1.5">
               <div className="flex items-center justify-between">
-                <label htmlFor="description" className="block text-sm font-medium text-slate-300">
+                <label htmlFor="description" className="block text-sm font-medium text-stone-700">
                   Description
                 </label>
-                <span className={`text-xs ${description.length > DESC_MAX * 0.9 ? 'text-amber-400' : 'text-slate-500'}`}>
+                <span className={`text-xs ${description.length > DESC_MAX * 0.9 ? 'text-amber-600' : 'text-stone-400'}`}>
                   {description.length}/{DESC_MAX}
                 </span>
               </div>
@@ -295,13 +295,13 @@ export default function SubmitPinPage() {
                 onChange={(e) => setDescription(e.target.value.slice(0, DESC_MAX))}
                 rows={4}
                 placeholder="Describe the historical significance of this location..."
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors resize-none"
               />
             </div>
 
             {/* Source / Reference */}
             <div className="space-y-1.5">
-              <label htmlFor="sourceReference" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="sourceReference" className="block text-sm font-medium text-stone-700">
                 Source / Reference
               </label>
               <input
@@ -310,13 +310,13 @@ export default function SubmitPinPage() {
                 value={sourceReference}
                 onChange={(e) => setSourceReference(e.target.value)}
                 placeholder="URL, book, county records, etc."
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
 
             {/* Tags */}
             <div className="space-y-1.5">
-              <label htmlFor="tags" className="block text-sm font-medium text-slate-300">
+              <label htmlFor="tags" className="block text-sm font-medium text-stone-700">
                 Tags
               </label>
               <input
@@ -325,7 +325,7 @@ export default function SubmitPinPage() {
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
                 placeholder="comma-separated tags"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 placeholder-stone-400 text-sm focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
           </div>
@@ -333,7 +333,7 @@ export default function SubmitPinPage() {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-2xl transition-colors flex items-center justify-center gap-2 text-sm"
+            className="w-full bg-stone-800 hover:bg-stone-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-2xl transition-colors flex items-center justify-center gap-2 text-sm"
           >
             {submitting ? (
               <>
@@ -346,7 +346,7 @@ export default function SubmitPinPage() {
           </button>
 
           <div className="text-center">
-            <Link to="/map" className="text-sm text-slate-400 hover:text-slate-300 transition-colors">
+            <Link to="/map" className="text-sm text-stone-400 hover:text-stone-600 transition-colors">
               Cancel
             </Link>
           </div>

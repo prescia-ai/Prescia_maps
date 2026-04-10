@@ -126,7 +126,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
     (currentPost.author_username ? `@${currentPost.author_username}` : 'Unknown');
 
   return (
-    <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-4 space-y-3">
+    <div className="bg-white border border-stone-200 rounded-2xl p-4 space-y-3 shadow-sm">
       {/* Header */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-center gap-2.5 min-w-0">
@@ -140,27 +140,27 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
             {currentPost.author_username ? (
               <Link
                 to={`/profile/${currentPost.author_username}`}
-                className="text-sm font-semibold text-white hover:text-blue-400 transition-colors truncate block"
+                className="text-sm font-semibold text-stone-900 hover:text-amber-700 transition-colors truncate block"
               >
                 {displayName}
               </Link>
             ) : (
-              <span className="text-sm font-semibold text-white truncate block">{displayName}</span>
+              <span className="text-sm font-semibold text-stone-900 truncate block">{displayName}</span>
             )}
             {currentPost.author_username && (
-              <span className="text-xs text-slate-500 truncate block">
+              <span className="text-xs text-stone-400 truncate block">
                 @{currentPost.author_username}
               </span>
             )}
           </div>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
-          <span className="text-xs text-slate-500">{timeAgo(currentPost.created_at)}</span>
+          <span className="text-xs text-stone-400">{timeAgo(currentPost.created_at)}</span>
           {isOwner && (
             <button
               onClick={handleDeletePost}
               disabled={deleting}
-              className="text-slate-600 hover:text-red-400 transition-colors p-1 rounded"
+              className="text-stone-300 hover:text-red-500 transition-colors p-1 rounded"
               title="Delete post"
             >
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -172,7 +172,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
       </div>
 
       {/* Content */}
-      <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap break-words">
+      <p className="text-stone-700 text-sm leading-relaxed whitespace-pre-wrap break-words">
         {currentPost.content}
       </p>
 
@@ -207,8 +207,8 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
               title={profile ? label : 'Log in to react'}
               className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
                 isActive
-                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
-                  : 'bg-slate-800/60 text-slate-400 hover:bg-slate-700/60 hover:text-slate-200 border border-transparent'
+                  ? 'bg-amber-100 text-amber-700 border border-amber-300'
+                  : 'bg-stone-100 text-stone-500 hover:bg-stone-200 hover:text-stone-700 border border-transparent'
               } ${!profile ? 'cursor-default opacity-70' : ''}`}
             >
               <span className={isLoading ? 'animate-bounce' : ''}>{emoji}</span>
@@ -220,7 +220,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
         {/* Comment toggle */}
         <button
           onClick={handleToggleComments}
-          className="ml-auto flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors px-2 py-1"
+          className="ml-auto flex items-center gap-1 text-xs text-stone-400 hover:text-stone-700 transition-colors px-2 py-1"
         >
           <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -231,13 +231,13 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
 
       {/* Comments section */}
       {showComments && (
-        <div className="border-t border-slate-800 pt-3 space-y-3">
+        <div className="border-t border-stone-100 pt-3 space-y-3">
           {commentsLoading ? (
             <div className="flex justify-center py-2">
-              <div className="w-5 h-5 border-2 border-slate-600 border-t-transparent rounded-full animate-spin" />
+              <div className="w-5 h-5 border-2 border-stone-300 border-t-transparent rounded-full animate-spin" />
             </div>
           ) : comments.length === 0 ? (
-            <p className="text-xs text-slate-500 text-center py-1">No comments yet</p>
+            <p className="text-xs text-stone-400 text-center py-1">No comments yet</p>
           ) : (
             <div className="space-y-2">
               {comments.map((c) => (
@@ -249,18 +249,18 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
                     size="xs"
                   />
                   <div className="flex-1 min-w-0">
-                    <div className="bg-slate-800/60 rounded-xl px-3 py-2">
-                      <span className="text-xs font-semibold text-slate-300 mr-1.5">
+                    <div className="bg-stone-50 rounded-xl px-3 py-2">
+                      <span className="text-xs font-semibold text-stone-700 mr-1.5">
                         {c.author_display_name || (c.author_username ? `@${c.author_username}` : 'User')}
                       </span>
-                      <span className="text-xs text-slate-300 break-words">{c.content}</span>
+                      <span className="text-xs text-stone-600 break-words">{c.content}</span>
                     </div>
-                    <span className="text-[10px] text-slate-600 ml-2">{timeAgo(c.created_at)}</span>
+                    <span className="text-[10px] text-stone-400 ml-2">{timeAgo(c.created_at)}</span>
                   </div>
                   {(profile?.id === c.author_id || isOwner) && (
                     <button
                       onClick={() => handleDeleteComment(c.id)}
-                      className="opacity-0 group-hover:opacity-100 text-slate-600 hover:text-red-400 transition-all p-0.5 flex-shrink-0 mt-1"
+                      className="opacity-0 group-hover:opacity-100 text-stone-300 hover:text-red-500 transition-all p-0.5 flex-shrink-0 mt-1"
                     >
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -282,12 +282,12 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
                 onChange={(e) => setCommentInput(e.target.value)}
                 placeholder="Add a comment…"
                 maxLength={500}
-                className="flex-1 bg-slate-800/60 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-slate-500"
+                className="flex-1 bg-stone-50 border border-stone-200 rounded-xl px-3 py-1.5 text-xs text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400"
               />
               <button
                 type="submit"
                 disabled={!commentInput.trim() || submittingComment}
-                className="text-xs text-blue-400 hover:text-blue-300 disabled:text-slate-600 font-medium transition-colors px-1"
+                className="text-xs text-amber-700 hover:text-amber-600 disabled:text-stone-300 font-medium transition-colors px-1"
               >
                 Post
               </button>

@@ -89,11 +89,11 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 max-w-md w-full mx-4 relative">
+      <div className="bg-white border border-stone-200 rounded-2xl p-6 max-w-md w-full mx-4 relative shadow-lg">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-stone-400 hover:text-stone-700 transition-colors"
           aria-label="Close"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -102,12 +102,12 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
         </button>
 
         {/* Title */}
-        <h2 className="text-white font-semibold text-base mb-5">Add to Collection</h2>
+        <h2 className="text-stone-900 font-semibold text-base mb-5">Add to Collection</h2>
 
         {/* File input area */}
         <div className="mb-4">
           {preview && file ? (
-            <div className="relative rounded-xl overflow-hidden border border-slate-700">
+            <div className="relative rounded-xl overflow-hidden border border-stone-200">
               <img src={preview} alt="Preview" className="w-full h-48 object-cover" />
               <button
                 onClick={handleRemoveFile}
@@ -119,20 +119,20 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
                 </svg>
               </button>
               <div className="absolute bottom-0 left-0 right-0 bg-black/50 px-3 py-1.5">
-                <p className="text-xs text-slate-300 truncate">{file.name}</p>
+                <p className="text-xs text-stone-200 truncate">{file.name}</p>
               </div>
             </div>
           ) : (
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="w-full h-40 border-2 border-dashed border-slate-700 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-slate-500 hover:bg-slate-800/30 transition-colors cursor-pointer"
+              className="w-full h-40 border-2 border-dashed border-stone-200 rounded-xl flex flex-col items-center justify-center gap-2 hover:border-stone-400 hover:bg-stone-50 transition-colors cursor-pointer"
             >
-              <svg className="w-8 h-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
               </svg>
-              <span className="text-slate-400 text-sm">Click to select a photo</span>
-              <span className="text-slate-600 text-xs">JPEG, PNG, WebP · max 2MB</span>
+              <span className="text-stone-500 text-sm">Click to select a photo</span>
+              <span className="text-stone-400 text-xs">JPEG, PNG, WebP · max 2MB</span>
             </button>
           )}
           <input
@@ -152,16 +152,16 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
             maxLength={500}
             rows={2}
             placeholder="Add a description (optional)"
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+            className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors resize-none"
           />
         </div>
         {caption.length > 0 && (
-          <p className="text-xs text-slate-500 text-right mb-3">{caption.length}/500</p>
+          <p className="text-xs text-stone-400 text-right mb-3">{caption.length}/500</p>
         )}
 
         {/* Error */}
         {error && (
-          <div className="mb-4 bg-red-900/30 border border-red-700/50 rounded-lg px-4 py-3 text-sm text-red-300">
+          <div className="mb-4 bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">
             {error}
           </div>
         )}
@@ -170,10 +170,10 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
         <button
           onClick={handleUpload}
           disabled={!file || uploading}
-          className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-medium bg-amber-500 hover:bg-amber-400 text-black rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-medium bg-stone-800 hover:bg-stone-700 text-white rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {uploading && (
-            <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+            <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
           )}
           {uploading ? 'Uploading…' : 'Add to Collection'}
         </button>

@@ -140,7 +140,7 @@ export default function MapPage() {
     locationsQuery.isLoading || featuresQuery.isLoading || heatmapQuery.isLoading;
 
   return (
-    <div className="relative w-screen h-screen bg-slate-950 overflow-hidden">
+    <div className="relative w-screen h-screen bg-stone-50 overflow-hidden">
       {/* Navbar */}
       <Navbar
         locationCount={locations.length}
@@ -200,10 +200,10 @@ export default function MapPage() {
 
       {/* Full-screen loading overlay (first paint only) */}
       {isInitialLoading && !locationsQuery.data && !featuresQuery.data && (
-        <div className="absolute inset-0 z-20 flex items-center justify-center bg-slate-950/70 backdrop-blur-sm">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl px-10 py-8 shadow-2xl">
+        <div className="absolute inset-0 z-20 flex items-center justify-center bg-white/80 backdrop-blur-sm">
+          <div className="bg-white border border-stone-200 rounded-2xl px-10 py-8 shadow-xl">
             <LoadingSpinner message="Loading map data…" />
-            <p className="text-xs text-slate-500 text-center mt-1">Connecting to backend API</p>
+            <p className="text-xs text-stone-400 text-center mt-1">Connecting to backend API</p>
           </div>
         </div>
       )}

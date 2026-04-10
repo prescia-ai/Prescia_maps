@@ -146,23 +146,23 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen bg-stone-50 flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
       </div>
     );
   }
 
   if (notFound || !publicProfile) {
     return (
-      <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center gap-4 text-center px-4">
+      <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center gap-4 text-center px-4">
         <p className="text-4xl">🔍</p>
-        <h1 className="text-xl font-semibold text-white">Profile not found</h1>
-        <p className="text-slate-400 text-sm">
+        <h1 className="text-xl font-semibold text-stone-900">Profile not found</h1>
+        <p className="text-stone-500 text-sm">
           @{username} doesn't exist on Prescia Maps yet.
         </p>
         <button
           onClick={() => navigate('/map')}
-          className="mt-2 text-sm text-blue-400 hover:text-blue-300 transition-colors"
+          className="mt-2 text-sm text-amber-700 hover:text-amber-600 transition-colors"
         >
           ← Back to map
         </button>
@@ -173,27 +173,46 @@ export default function ProfilePage() {
   const isPrivate = publicProfile.privacy === 'private';
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm">
+      <div className="border-b border-stone-200 bg-white shadow-sm">
         <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
           <button
             onClick={() => navigate('/map')}
-            className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Map
           </button>
-          <span className="text-slate-600">·</span>
-          <span className="text-slate-400 text-sm">Profile</span>
+          <span className="text-stone-300">·</span>
+          <span className="text-stone-500 text-sm">Profile</span>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
+        {/* ── Google Drive prompt (own profile, not connected) ─────── */}
+        {isOwnProfile && !myProfile?.google_connected_at && (
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 flex items-center justify-between gap-3 shadow-sm">
+            <div className="flex items-center gap-3 min-w-0">
+              <span className="text-xl flex-shrink-0">☁️</span>
+              <div className="min-w-0">
+                <p className="text-amber-900 text-sm font-medium">Connect Google Drive</p>
+                <p className="text-amber-700 text-xs">Enable photo uploads for hunt logs and your collection.</p>
+              </div>
+            </div>
+            <Link
+              to="/profile/settings#google-drive"
+              className="flex-shrink-0 text-xs bg-amber-600 hover:bg-amber-500 text-white px-3 py-1.5 rounded-lg transition-colors font-medium"
+            >
+              Connect
+            </Link>
+          </div>
+        )}
+
         {/* ── Profile header ───────────────────────────────────────── */}
-        <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 space-y-4">
+        <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4 shadow-sm">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-4">
               <Avatar
@@ -203,16 +222,16 @@ export default function ProfilePage() {
                 size="xl"
               />
               <div className="min-w-0">
-                <h1 className="text-2xl font-bold text-white truncate">
+                <h1 className="text-2xl font-bold text-stone-900 truncate">
                   @{publicProfile.username ?? username}
                 </h1>
                 {publicProfile.display_name && (
-                  <p className="text-slate-300 text-base leading-tight mt-0.5 truncate">
+                  <p className="text-stone-600 text-base leading-tight mt-0.5 truncate">
                     {publicProfile.display_name}
                   </p>
                 )}
                 {!isPrivate && publicProfile.location && (
-                  <p className="flex items-center gap-1 text-slate-400 text-sm mt-1">
+                  <p className="flex items-center gap-1 text-stone-400 text-sm mt-1">
                     <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -227,7 +246,7 @@ export default function ProfilePage() {
             {isOwnProfile && (
               <Link
                 to="/profile/settings"
-                className="flex-shrink-0 text-sm text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white px-4 py-1.5 rounded-xl transition-colors"
+                className="flex-shrink-0 text-sm text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-stone-900 px-4 py-1.5 rounded-xl transition-colors"
               >
                 Edit Profile
               </Link>
@@ -240,8 +259,8 @@ export default function ProfilePage() {
                 disabled={followLoading}
                 className={`flex-shrink-0 text-sm px-4 py-1.5 rounded-xl transition-colors font-medium ${
                   publicProfile?.is_following
-                    ? 'text-slate-300 border border-slate-700 hover:border-slate-500 hover:text-white'
-                    : 'bg-amber-500 hover:bg-amber-400 text-black'
+                    ? 'text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-stone-900'
+                    : 'bg-stone-800 hover:bg-stone-700 text-white'
                 }`}
               >
                 {followLoading
@@ -255,14 +274,14 @@ export default function ProfilePage() {
 
           {/* Bio */}
           {!isPrivate && publicProfile.bio && (
-            <p className="text-slate-300 text-sm leading-relaxed line-clamp-3">
+            <p className="text-stone-600 text-sm leading-relaxed line-clamp-3">
               {publicProfile.bio}
             </p>
           )}
 
           {/* Member since */}
           {publicProfile.created_at && (
-            <p className="text-slate-500 text-xs">
+            <p className="text-stone-400 text-xs">
               Member since {formatMemberSince(publicProfile.created_at)}
             </p>
           )}
@@ -270,26 +289,26 @@ export default function ProfilePage() {
 
         {/* ── Private profile notice ───────────────────────────────── */}
         {isPrivate && !isOwnProfile && (
-          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-8 flex flex-col items-center gap-3 text-center">
-            <svg className="w-8 h-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <div className="bg-white border border-stone-200 rounded-3xl p-8 flex flex-col items-center gap-3 text-center shadow-sm">
+            <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <p className="text-slate-400 text-sm">This profile is private</p>
+            <p className="text-stone-400 text-sm">This profile is private</p>
           </div>
         )}
 
         {/* ── Stats row ────────────────────────────────────────────── */}
         {(!isPrivate || isOwnProfile) && (
-          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl px-6 py-4">
-            <div className="flex items-center divide-x divide-slate-800">
+          <div className="bg-white border border-stone-200 rounded-3xl px-6 py-4 shadow-sm">
+            <div className="flex items-center divide-x divide-stone-200">
               {[
                 { label: 'Hunts', value: pins.length },
                 { label: 'Followers', value: publicProfile?.followers_count ?? 0 },
                 { label: 'Following', value: publicProfile?.following_count ?? 0 },
               ].map((stat) => (
                 <div key={stat.label} className="flex-1 flex flex-col items-center py-2 first:pl-0 last:pr-0 px-4">
-                  <span className="text-2xl font-semibold text-white">{stat.value}</span>
-                  <span className="text-xs text-slate-400 mt-0.5">{stat.label}</span>
+                  <span className="text-2xl font-semibold text-stone-900">{stat.value}</span>
+                  <span className="text-xs text-stone-400 mt-0.5">{stat.label}</span>
                 </div>
               ))}
             </div>
@@ -300,7 +319,7 @@ export default function ProfilePage() {
         {(!isPrivate || isOwnProfile) && (
           <div className="space-y-0">
             {/* Tab bar */}
-            <div role="tablist" className="flex border-b border-slate-800">
+            <div role="tablist" className="flex border-b border-stone-200">
               {(['activity', 'hunts', 'collection', 'followers'] as ActiveTab[]).map((tab) => (
                 <button
                   key={tab}
@@ -309,8 +328,8 @@ export default function ProfilePage() {
                   onClick={() => setActiveTab(tab)}
                   className={`flex-1 py-3 text-sm font-medium capitalize transition-colors ${
                     activeTab === tab
-                      ? 'text-white border-b-2 border-blue-500 -mb-px'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? 'text-amber-700 border-b-2 border-amber-600 -mb-px'
+                      : 'text-stone-500 hover:text-stone-700'
                   }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -319,12 +338,12 @@ export default function ProfilePage() {
             </div>
 
             {/* Tab content */}
-            <div className="bg-slate-900/50 border border-t-0 border-slate-800 rounded-b-3xl p-6 min-h-[160px]">
+            <div className="bg-white border border-t-0 border-stone-200 rounded-b-3xl p-6 min-h-[160px] shadow-sm">
               {activeTab === 'activity' && (
                 <div className="flex flex-col gap-4">
                   {postsLoading ? (
                     <div className="flex justify-center py-8">
-                      <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
                     </div>
                   ) : userPosts.length > 0 ? (
                     <div className="space-y-4">
@@ -338,12 +357,12 @@ export default function ProfilePage() {
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
-                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <p className="text-slate-400 text-sm">No posts yet</p>
+                      <p className="text-stone-400 text-sm">No posts yet</p>
                       {isOwnProfile && (
-                        <Link to="/feed" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                        <Link to="/feed" className="text-amber-700 text-sm hover:text-amber-600 transition-colors">
                           Head to the feed →
                         </Link>
                       )}
@@ -355,17 +374,17 @@ export default function ProfilePage() {
                 <div className="flex flex-col gap-3">
                   {pinsLoading ? (
                     <div className="flex justify-center py-8">
-                      <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
                     </div>
                   ) : pins.length > 0 ? (
                     <div className="w-full space-y-3">
                       {pins.map((pin) => (
-                        <div key={pin.id} className="bg-slate-800/60 border border-slate-700 rounded-2xl p-4 space-y-1.5">
+                        <div key={pin.id} className="bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-1.5">
                           <div className="flex items-start justify-between gap-2">
-                            <h3 className="text-sm font-semibold text-white leading-tight">{pin.name}</h3>
-                            <span className="text-xs text-slate-500 flex-shrink-0">{formatHuntDate(pin.hunt_date)}</span>
+                            <h3 className="text-sm font-semibold text-stone-900 leading-tight">{pin.name}</h3>
+                            <span className="text-xs text-stone-400 flex-shrink-0">{formatHuntDate(pin.hunt_date)}</span>
                           </div>
-                          <div className="flex flex-wrap gap-3 text-xs text-slate-400">
+                          <div className="flex flex-wrap gap-3 text-xs text-stone-500">
                             {pin.time_spent && (
                               <span className="flex items-center gap-1">
                                 <span>⏱</span>
@@ -380,7 +399,7 @@ export default function ProfilePage() {
                             )}
                           </div>
                           {pin.notes && (
-                            <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{pin.notes}</p>
+                            <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed">{pin.notes}</p>
                           )}
                           {pin.images && pin.images.length > 0 && (
                             <div className="pt-1">
@@ -395,13 +414,13 @@ export default function ProfilePage() {
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
-                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <p className="text-slate-400 text-sm">No hunts logged yet</p>
+                      <p className="text-stone-400 text-sm">No hunts logged yet</p>
                       {isOwnProfile && (
-                        <Link to="/map" className="text-blue-400 text-sm hover:text-blue-300 transition-colors">
+                        <Link to="/map" className="text-amber-700 text-sm hover:text-amber-600 transition-colors">
                           Head to the map →
                         </Link>
                       )}
@@ -417,7 +436,7 @@ export default function ProfilePage() {
                       <button
                         onClick={() => setShowUploadModal(true)}
                         disabled={!myProfile?.google_connected_at}
-                        className="flex items-center gap-2 text-sm px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex items-center gap-2 text-sm px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-white font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         title={!myProfile?.google_connected_at ? 'Connect Google Drive in profile settings to upload photos' : 'Add a photo to your collection'}
                       >
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -430,7 +449,7 @@ export default function ProfilePage() {
 
                   {collectionLoading ? (
                     <div className="flex justify-center py-8">
-                      <div className="w-6 h-6 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
                     </div>
                   ) : collectionPhotos.length > 0 ? (
                     <div className="grid grid-cols-3 gap-1">
@@ -451,12 +470,12 @@ export default function ProfilePage() {
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
-                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v14.25a1.5 1.5 0 001.5 1.5z" />
                       </svg>
-                      <p className="text-slate-400 text-sm">No photos in collection yet</p>
+                      <p className="text-stone-400 text-sm">No photos in collection yet</p>
                       {isOwnProfile && (
-                        <p className="text-slate-500 text-xs">
+                        <p className="text-stone-400 text-xs">
                           Add your best finds to showcase them here
                         </p>
                       )}
@@ -472,7 +491,7 @@ export default function ProfilePage() {
                             .then(({ photos }) => setCollectionPhotos((prev) => [...prev, ...photos]))
                             .catch(() => {});
                         }}
-                        className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                        className="text-sm text-amber-700 hover:text-amber-600 transition-colors"
                       >
                         Load more
                       </button>
@@ -490,8 +509,8 @@ export default function ProfilePage() {
                         onClick={() => setFollowSubTab(sub)}
                         className={`px-4 py-1.5 text-sm font-medium rounded-xl transition-colors ${
                           followSubTab === sub
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-slate-800 text-slate-400 hover:text-slate-200 hover:bg-slate-700'
+                            ? 'bg-stone-800 text-white'
+                            : 'bg-stone-100 text-stone-500 hover:text-stone-700 hover:bg-stone-200'
                         }`}
                       >
                         {sub.charAt(0).toUpperCase() + sub.slice(1)}
@@ -501,7 +520,7 @@ export default function ProfilePage() {
 
                   {followersLoading ? (
                     <div className="flex justify-center py-8">
-                      <div className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+                      <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
                     </div>
                   ) : (followSubTab === 'followers' ? followersList : followingList).length > 0 ? (
                     <div className="space-y-2">
@@ -509,13 +528,13 @@ export default function ProfilePage() {
                         <Link
                           key={user.user_id}
                           to={`/profile/${user.username}`}
-                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/60 transition-colors"
+                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 transition-colors"
                         >
                           <Avatar username={user.username!} displayName={user.display_name} avatarUrl={user.avatar_url} size="sm" />
                           <div className="min-w-0">
-                            <p className="text-sm font-medium text-white truncate">@{user.username}</p>
+                            <p className="text-sm font-medium text-stone-900 truncate">@{user.username}</p>
                             {user.display_name && (
-                              <p className="text-xs text-slate-400 truncate">{user.display_name}</p>
+                              <p className="text-xs text-stone-400 truncate">{user.display_name}</p>
                             )}
                           </div>
                         </Link>
@@ -523,10 +542,10 @@ export default function ProfilePage() {
                     </div>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
-                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      <p className="text-slate-400 text-sm">
+                      <p className="text-stone-400 text-sm">
                         {followSubTab === 'followers' ? 'No followers yet' : 'Not following anyone yet'}
                       </p>
                     </div>
