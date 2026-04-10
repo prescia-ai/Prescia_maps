@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import api, { disconnectGoogle, fetchGoogleAuthUrl, uploadAvatar, deleteAvatar } from '../api/client';
+import { resizeImage } from '../utils/imageResize';
 
 const BIO_MAX = 250;
 
@@ -130,38 +131,6 @@ export default function ProfileSettingsPage() {
     } finally {
       setRemovingAvatar(false);
     }
-  }
-
-  function resizeImage(file: File, maxW: number, maxH: number): Promise<File> {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      const url = URL.createObjectURL(file);
-      img.onload = () => {
-        URL.revokeObjectURL(url);
-        let { width, height } = img;
-        if (width > maxW || height > maxH) {
-          const ratio = Math.min(maxW / width, maxH / height);
-          width = Math.round(width * ratio);
-          height = Math.round(height * ratio);
-        }
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) { reject(new Error('Canvas not supported')); return; }
-        ctx.drawImage(img, 0, 0, width, height);
-        canvas.toBlob(
-          (blob) => {
-            if (!blob) { reject(new Error('Canvas toBlob failed')); return; }
-            resolve(new File([blob], 'avatar.jpg', { type: 'image/jpeg' }));
-          },
-          'image/jpeg',
-          0.85,
-        );
-      };
-      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Image load failed')); };
-      img.src = url;
-    });
   }
 
   async function handleSave(e: React.FormEvent) {
