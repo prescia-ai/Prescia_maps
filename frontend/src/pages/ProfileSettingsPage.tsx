@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import api, { fetchGoogleAuthUrl } from '../api/client';
+import api, { disconnectGoogle, fetchGoogleAuthUrl } from '../api/client';
 
 const BIO_MAX = 250;
 
@@ -20,6 +20,7 @@ export default function ProfileSettingsPage() {
   const [googleSuccess, setGoogleSuccess] = useState(false);
   const [googleError, setGoogleError] = useState(false);
   const [connectingGoogle, setConnectingGoogle] = useState(false);
+  const [disconnectingGoogle, setDisconnectingGoogle] = useState(false);
 
   // Redirect if not logged in (only after auth has finished loading)
   useEffect(() => {
@@ -65,6 +66,23 @@ export default function ProfileSettingsPage() {
       setGoogleError(true);
       setTimeout(() => setGoogleError(false), 5000);
       setConnectingGoogle(false);
+    }
+  }
+
+  async function handleDisconnectGoogle() {
+    const confirmed = window.confirm(
+      "Disconnect Google Drive? You won't be able to upload photos until you reconnect.",
+    );
+    if (!confirmed) return;
+    setDisconnectingGoogle(true);
+    try {
+      await disconnectGoogle();
+      await refreshProfile();
+    } catch {
+      setGoogleError(true);
+      setTimeout(() => setGoogleError(false), 5000);
+    } finally {
+      setDisconnectingGoogle(false);
     }
   }
 
@@ -239,16 +257,26 @@ export default function ProfileSettingsPage() {
               Connect your Google Drive to upload profile pictures and find photos.
             </p>
             {profile?.google_email && profile?.google_connected_at ? (
-              <div className="flex items-center gap-2 text-green-400 text-sm">
-                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>
-                  Connected as <span className="font-medium">{profile.google_email}</span>
-                  <span className="text-slate-500 text-xs ml-1">
-                    · {new Date(profile.google_connected_at).toLocaleDateString()}
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 text-green-400 text-sm">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>
+                    Connected as <span className="font-medium">{profile.google_email}</span>
+                    <span className="text-slate-500 text-xs ml-1">
+                      · {new Date(profile.google_connected_at).toLocaleDateString()}
+                    </span>
                   </span>
-                </span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleDisconnectGoogle}
+                  disabled={disconnectingGoogle}
+                  className="text-xs text-red-400 hover:text-red-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  {disconnectingGoogle ? 'Disconnecting…' : 'Disconnect'}
+                </button>
               </div>
             ) : (
               <button
