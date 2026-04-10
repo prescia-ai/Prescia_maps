@@ -125,14 +125,14 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-      <div className="bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-md flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+      <div className="bg-white border border-stone-200 rounded-2xl shadow-xl w-full max-w-md flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-700">
-          <h2 className="text-white font-semibold text-base">Log Hunt</h2>
+        <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
+          <h2 className="text-stone-900 font-semibold text-base">Log Hunt</h2>
           <button
             onClick={onClose}
-            className="text-slate-500 hover:text-white transition-colors"
+            className="text-stone-400 hover:text-stone-700 transition-colors"
             aria-label="Close"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -145,76 +145,76 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
         <form id="log-hunt-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
           {/* Location Name */}
           <div>
-            <label className="block text-xs font-medium text-slate-400 mb-1">Location Name *</label>
+            <label className="block text-xs font-medium text-stone-600 mb-1">Location Name *</label>
             <input
               type="text"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="e.g. Old Miller Farm"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
             />
           </div>
 
           {/* Coordinates */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1">Latitude *</label>
+              <label className="block text-xs font-medium text-stone-600 mb-1">Latitude *</label>
               <input
                 type="number"
                 required
                 step="any"
                 value={latitude}
                 onChange={(e) => setLatitude(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors font-mono"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors font-mono"
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1">Longitude *</label>
+              <label className="block text-xs font-medium text-stone-600 mb-1">Longitude *</label>
               <input
                 type="number"
                 required
                 step="any"
                 value={longitude}
                 onChange={(e) => setLongitude(e.target.value)}
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors font-mono"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors font-mono"
               />
             </div>
           </div>
 
           {/* Date Hunted */}
           <div>
-            <label className="block text-xs font-medium text-slate-400 mb-1">Date Hunted *</label>
+            <label className="block text-xs font-medium text-stone-600 mb-1">Date Hunted *</label>
             <input
               type="date"
               required
               value={huntDate}
               onChange={(e) => setHuntDate(e.target.value)}
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 focus:outline-none focus:border-stone-400 transition-colors"
             />
           </div>
 
           {/* Time Spent & Finds Count */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1">Time Spent</label>
+              <label className="block text-xs font-medium text-stone-600 mb-1">Time Spent</label>
               <input
                 type="text"
                 value={timeSpent}
                 onChange={(e) => setTimeSpent(e.target.value)}
                 placeholder="2 hours"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1">Finds Count</label>
+              <label className="block text-xs font-medium text-stone-600 mb-1">Finds Count</label>
               <input
                 type="number"
                 min={0}
                 value={findsCount}
                 onChange={(e) => setFindsCount(e.target.value)}
                 placeholder="0"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
               />
             </div>
           </div>
@@ -222,8 +222,8 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
           {/* Notes */}
           <div>
             <div className="flex items-center justify-between mb-1">
-              <label className="text-xs font-medium text-slate-400">Notes</label>
-              <span className={`text-xs ${notesLength > 480 ? 'text-amber-400' : 'text-slate-500'}`}>
+              <label className="text-xs font-medium text-stone-600">Notes</label>
+              <span className={`text-xs ${notesLength > 480 ? 'text-amber-600' : 'text-stone-400'}`}>
                 {notesLength}/500
               </span>
             </div>
@@ -233,20 +233,20 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
               maxLength={500}
               rows={3}
               placeholder="What did you find?"
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors resize-none"
             />
           </div>
 
           {/* Photos */}
           {googleConnected && (
             <div>
-              <label className="block text-xs font-medium text-slate-400 mb-1">
-                Photos <span className="text-slate-600">(optional, up to 4)</span>
+              <label className="block text-xs font-medium text-stone-600 mb-1">
+                Photos <span className="text-stone-400">(optional, up to 4)</span>
               </label>
               {imageFiles.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-2">
                   {imageFiles.map((_, i) => (
-                    <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-slate-700">
+                    <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-stone-200">
                       <img
                         src={imagePreviews[i]}
                         alt=""
@@ -266,7 +266,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
                 </div>
               )}
               {imageFiles.length < 4 && (
-                <label className="flex items-center gap-2 text-xs text-slate-400 hover:text-slate-200 cursor-pointer transition-colors">
+                <label className="flex items-center gap-2 text-xs text-stone-500 hover:text-stone-800 cursor-pointer transition-colors">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                   </svg>
@@ -281,7 +281,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
                 </label>
               )}
               {imageError && (
-                <p className="text-xs text-red-400 mt-1">{imageError}</p>
+                <p className="text-xs text-red-600 mt-1">{imageError}</p>
               )}
               {/* Add to collection toggle */}
               {imageFiles.length > 0 && (
@@ -290,9 +290,9 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
                     type="checkbox"
                     checked={addToCollection}
                     onChange={(e) => setAddToCollection(e.target.checked)}
-                    className="w-3.5 h-3.5 accent-amber-500"
+                    className="w-3.5 h-3.5 accent-amber-600"
                   />
-                  <span className="text-slate-400 text-xs">Add to collection?</span>
+                  <span className="text-stone-500 text-xs">Add to collection?</span>
                 </label>
               )}
             </div>
@@ -300,11 +300,11 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
 
           {/* Privacy */}
           <div>
-            <label className="block text-xs font-medium text-slate-400 mb-1">Privacy</label>
+            <label className="block text-xs font-medium text-stone-600 mb-1">Privacy</label>
             <select
               value={privacy}
               onChange={(e) => setPrivacy(e.target.value as 'public' | 'private')}
-              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 focus:outline-none focus:border-stone-400 transition-colors"
             >
               <option value="public">Public</option>
               <option value="private">Private</option>
@@ -313,18 +313,18 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
 
           {/* Error */}
           {error && (
-            <div className="bg-red-900/30 border border-red-700/50 rounded-lg px-4 py-3 text-sm text-red-300">
+            <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">
               {error}
             </div>
           )}
         </form>
 
         {/* Footer */}
-        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-700">
+        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-stone-200">
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors"
+            className="px-4 py-2 text-sm text-stone-500 hover:text-stone-800 transition-colors"
           >
             Cancel
           </button>
@@ -332,7 +332,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
             type="submit"
             form="log-hunt-form"
             disabled={isSubmitting}
-            className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-colors flex items-center gap-2"
+            className="px-5 py-2 text-sm font-medium text-white bg-stone-800 hover:bg-stone-700 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl transition-colors flex items-center gap-2"
           >
             {isSubmitting && (
               <span className="w-3.5 h-3.5 border border-white border-t-transparent rounded-full animate-spin inline-block" />

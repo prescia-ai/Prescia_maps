@@ -20,9 +20,9 @@ function relativeTime(isoString: string): string {
 
 function StatusBadge({ status }: { status: PinSubmission['status'] }) {
   const colors = {
-    pending: 'bg-yellow-900/40 border-yellow-800 text-yellow-300',
-    approved: 'bg-green-900/40 border-green-800 text-green-300',
-    rejected: 'bg-red-900/40 border-red-800 text-red-300',
+    pending: 'bg-yellow-100 border-yellow-200 text-yellow-700',
+    approved: 'bg-green-100 border-green-200 text-green-700',
+    rejected: 'bg-red-100 border-red-200 text-red-700',
   };
   return (
     <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${colors[status]}`}>
@@ -91,33 +91,33 @@ export default function AdminSubmissionsPage() {
 
   if (isAdmin === false) {
     return (
-      <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
-        <p className="text-red-400 text-sm">Access denied. Redirecting…</p>
+      <div className="min-h-screen bg-stone-50 text-stone-900 flex items-center justify-center">
+        <p className="text-red-600 text-sm">Access denied. Redirecting…</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-stone-50 text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10">
+      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-3xl mx-auto flex items-center gap-3 px-4 h-12">
           <Link
             to="/map"
-            className="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1"
+            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Map
           </Link>
-          <span className="text-slate-600">·</span>
-          <span className="text-slate-300 text-sm font-medium">Community Submissions</span>
+          <span className="text-stone-300">·</span>
+          <span className="text-stone-700 text-sm font-medium">Community Submissions</span>
           <div className="flex-1" />
           <button
             onClick={handleExport}
             disabled={exporting}
-            className="text-xs bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
+            className="text-xs bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
           >
             {exporting ? 'Exporting…' : 'Export Approved as JSON'}
           </button>
@@ -126,15 +126,15 @@ export default function AdminSubmissionsPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-6">
         {/* Tab bar */}
-        <div className="flex gap-1 bg-slate-900/50 border border-slate-800 rounded-2xl p-1 mb-6">
+        <div className="flex gap-1 bg-white border border-stone-200 rounded-2xl p-1 mb-6 shadow-sm">
           {(['pending', 'approved', 'rejected'] as StatusFilter[]).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
               className={`flex-1 py-2 text-sm font-medium rounded-xl transition-colors capitalize ${
                 activeTab === tab
-                  ? 'bg-blue-600 text-white'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-stone-800 text-white'
+                  : 'text-stone-500 hover:text-stone-700'
               }`}
             >
               {tab}
@@ -144,10 +144,10 @@ export default function AdminSubmissionsPage() {
 
         {loading ? (
           <div className="flex items-center justify-center py-16">
-            <span className="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+            <span className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
           </div>
         ) : submissions.length === 0 ? (
-          <div className="text-center py-16 text-slate-500 text-sm">
+          <div className="text-center py-16 text-stone-400 text-sm">
             No {activeTab} submissions.
           </div>
         ) : (
@@ -155,12 +155,12 @@ export default function AdminSubmissionsPage() {
             {submissions.map((sub) => (
               <div
                 key={sub.id}
-                className="bg-slate-900/50 border border-slate-800 rounded-2xl p-4 space-y-2"
+                className="bg-white border border-stone-200 rounded-2xl p-4 space-y-2 shadow-sm"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <h3 className="font-semibold text-white text-sm truncate">{sub.name}</h3>
-                    <p className="text-xs text-slate-400 mt-0.5">
+                    <h3 className="font-semibold text-stone-900 text-sm truncate">{sub.name}</h3>
+                    <p className="text-xs text-stone-400 mt-0.5">
                       @{sub.submitter_username ?? 'unknown'} · {relativeTime(sub.submitted_at)}
                     </p>
                   </div>
@@ -170,28 +170,28 @@ export default function AdminSubmissionsPage() {
                 {/* Type badge */}
                 <div>
                   {sub.pin_type ? (
-                    <span className="inline-flex text-xs bg-slate-800 border border-slate-700 text-slate-300 px-2 py-0.5 rounded-full">
+                    <span className="inline-flex text-xs bg-stone-100 border border-stone-200 text-stone-600 px-2 py-0.5 rounded-full">
                       {sub.pin_type.replace(/_/g, ' ')}
                     </span>
                   ) : sub.suggested_type ? (
-                    <span className="inline-flex text-xs bg-slate-800 border border-slate-700 text-slate-400 px-2 py-0.5 rounded-full">
+                    <span className="inline-flex text-xs bg-stone-100 border border-stone-200 text-stone-500 px-2 py-0.5 rounded-full">
                       Suggested: {sub.suggested_type}
                     </span>
                   ) : (
-                    <span className="inline-flex text-xs bg-slate-800 border border-slate-700 text-slate-500 px-2 py-0.5 rounded-full">
+                    <span className="inline-flex text-xs bg-stone-100 border border-stone-200 text-stone-400 px-2 py-0.5 rounded-full">
                       No type
                     </span>
                   )}
                 </div>
 
                 {/* Coordinates */}
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-stone-400">
                   {sub.latitude.toFixed(5)}, {sub.longitude.toFixed(5)}
                 </p>
 
                 {/* Description preview */}
                 {sub.description && (
-                  <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-stone-500 line-clamp-2 leading-relaxed">
                     {sub.description}
                   </p>
                 )}
@@ -199,7 +199,7 @@ export default function AdminSubmissionsPage() {
                 <div className="pt-1">
                   <Link
                     to={`/admin/submissions/${sub.id}`}
-                    className="text-xs text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    className="text-xs text-amber-700 hover:text-amber-600 transition-colors font-medium"
                   >
                     Review →
                   </Link>
@@ -212,7 +212,7 @@ export default function AdminSubmissionsPage() {
                 <button
                   onClick={handleLoadMore}
                   disabled={loadingMore}
-                  className="text-sm text-slate-400 hover:text-white transition-colors disabled:opacity-50"
+                  className="text-sm text-stone-500 hover:text-stone-900 border border-stone-300 hover:border-stone-400 px-5 py-2 rounded-xl transition-colors disabled:opacity-50"
                 >
                   {loadingMore ? 'Loading…' : `Load more (${total - submissions.length} remaining)`}
                 </button>

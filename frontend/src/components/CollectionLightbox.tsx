@@ -151,20 +151,20 @@ export default function CollectionLightbox({
                 maxLength={500}
                 rows={3}
                 placeholder="Add a description (optional)"
-                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors resize-none"
               />
               <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-500">{editCaption.length}/500</span>
+                <span className="text-xs text-stone-400">{editCaption.length}/500</span>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setEditMode(false)}
-                    className="px-3 py-1.5 text-sm text-slate-400 hover:text-white transition-colors"
+                    className="px-3 py-1.5 text-sm text-stone-400 hover:text-white transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleSaveCaption}
-                    className="px-4 py-1.5 text-sm font-medium bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors"
+                    className="px-4 py-1.5 text-sm font-medium bg-stone-800 hover:bg-stone-700 text-white rounded-lg transition-colors"
                   >
                     Save
                   </button>
@@ -175,9 +175,9 @@ export default function CollectionLightbox({
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
                 {photo.caption ? (
-                  <p className="text-slate-300 text-sm leading-relaxed">{photo.caption}</p>
+                  <p className="text-stone-200 text-sm leading-relaxed">{photo.caption}</p>
                 ) : isOwner ? (
-                  <p className="text-slate-600 text-sm italic">No caption</p>
+                  <p className="text-stone-500 text-sm italic">No caption</p>
                 ) : null}
               </div>
 
@@ -185,7 +185,7 @@ export default function CollectionLightbox({
                 <div className="flex items-center gap-2 flex-shrink-0">
                   {confirmDelete ? (
                     <div className="flex items-center gap-2">
-                      <span className="text-xs text-slate-400">Delete this photo?</span>
+                      <span className="text-xs text-stone-400">Delete this photo?</span>
                       <button
                         onClick={handleConfirmDelete}
                         className="px-3 py-1 text-xs font-medium bg-red-700 hover:bg-red-600 text-white rounded-lg transition-colors"
@@ -194,7 +194,7 @@ export default function CollectionLightbox({
                       </button>
                       <button
                         onClick={() => setConfirmDelete(false)}
-                        className="px-3 py-1 text-xs text-slate-400 hover:text-white transition-colors"
+                        className="px-3 py-1 text-xs text-stone-400 hover:text-white transition-colors"
                       >
                         Cancel
                       </button>

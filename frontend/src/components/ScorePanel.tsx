@@ -48,7 +48,7 @@ function GaugeArc({ score }: { score: number }) {
       <path
         d="M 10 65 A 54 54 0 0 1 110 65"
         fill="none"
-        stroke="#334155"
+        stroke="#e7e5e4"
         strokeWidth="10"
         strokeLinecap="round"
       />
@@ -82,18 +82,18 @@ export default function ScorePanel({
   lat, lon, score, isLoading, isError, onClose,
 }: ScorePanelProps) {
   return (
-    <div className="bg-slate-900/95 backdrop-blur-sm border border-slate-700 rounded-xl shadow-2xl w-72 overflow-hidden">
+    <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-xl shadow-lg w-72 overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-700/50">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-stone-100">
         <div>
-          <h3 className="text-sm font-semibold text-white">Location Score</h3>
-          <p className="text-xs text-slate-400 font-mono mt-0.5">
+          <h3 className="text-sm font-semibold text-stone-900">Location Score</h3>
+          <p className="text-xs text-stone-400 font-mono mt-0.5">
             {lat.toFixed(4)}, {lon.toFixed(4)}
           </p>
         </div>
         <button
           onClick={onClose}
-          className="text-slate-500 hover:text-white transition-colors"
+          className="text-stone-400 hover:text-stone-700 transition-colors"
           aria-label="Close score panel"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -107,7 +107,7 @@ export default function ScorePanel({
         {isLoading && <LoadingSpinner message="Calculating score…" />}
 
         {isError && (
-          <p className="text-sm text-red-400 text-center py-4">
+          <p className="text-sm text-red-500 text-center py-4">
             Failed to load score. Is the backend running?
           </p>
         )}
@@ -121,13 +121,13 @@ export default function ScorePanel({
               <span className={`text-lg font-bold ${scoreColor(score.score)}`}>
                 {scoreLabel(score.score)}
               </span>
-              <span className="text-slate-500 text-sm ml-2">detecting potential</span>
+              <span className="text-stone-400 text-sm ml-2">detecting potential</span>
             </div>
 
             {/* Breakdown */}
             {Object.keys(score.breakdown).length > 0 && (
               <div className="space-y-2">
-                <p className="text-xs font-semibold tracking-widest uppercase text-slate-500">
+                <p className="text-xs font-semibold tracking-widest uppercase text-stone-400">
                   Score Breakdown
                 </p>
                 {Object.entries(score.breakdown).map(([key, val]) => {
@@ -135,10 +135,10 @@ export default function ScorePanel({
                   return (
                     <div key={key}>
                       <div className="flex justify-between text-xs mb-1">
-                        <span className="text-slate-300 capitalize">{key.replace(/_/g, ' ')}</span>
-                        <span className="text-slate-400">{pct.toFixed(1)}</span>
+                        <span className="text-stone-600 capitalize">{key.replace(/_/g, ' ')}</span>
+                        <span className="text-stone-400">{pct.toFixed(1)}</span>
                       </div>
-                      <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                      <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
                         <div
                           className={`h-full rounded-full ${scoreBg(pct)}`}
                           style={{ width: `${pct}%`, transition: 'width 0.6s ease' }}
