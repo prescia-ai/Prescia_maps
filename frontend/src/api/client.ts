@@ -342,4 +342,9 @@ export async function fetchPublicProfile(username: string): Promise<PublicProfil
   return data;
 }
 
+export async function fetchGoogleAuthUrl(): Promise<string> {
+  const { data } = await api.get<{ url: string }>('/google/auth-url');
+  return data.url;
+}
+
 export default api;

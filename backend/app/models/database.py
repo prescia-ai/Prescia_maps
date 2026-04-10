@@ -226,6 +226,11 @@ class User(Base):
     is_admin = Column(Boolean, default=False, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
+    # Google OAuth2 integration
+    google_refresh_token = Column(Text, nullable=True)  # Encrypted refresh token
+    google_connected_at = Column(DateTime(timezone=True), nullable=True)
+    google_email = Column(String(255), nullable=True)  # The Google account email they connected
+
 
 class UserPin(Base):
     """
