@@ -16,7 +16,7 @@ from typing import Any, Dict, Optional
 import httpx
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from jose import JWTError, jwk, jwt
+from jose import JWTError, jwt
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -114,7 +114,6 @@ async def _decode_token(token: str) -> dict:
             )
 
         try:
-            public_key = jwk.construct(jwk_data, algorithm="ES256")
             issuer = (
                 f"{settings.SUPABASE_URL.rstrip('/')}/auth/v1"
                 if settings.SUPABASE_URL
@@ -122,7 +121,7 @@ async def _decode_token(token: str) -> dict:
             )
             payload = jwt.decode(
                 token,
-                public_key.to_dict(),
+                jwk_data,
                 algorithms=["ES256"],
                 audience="authenticated",
                 issuer=issuer,
