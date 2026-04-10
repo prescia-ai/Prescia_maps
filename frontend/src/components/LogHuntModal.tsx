@@ -71,7 +71,8 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
   }
 
   function removeImage(index: number) {
-    URL.revokeObjectURL(previewUrlsRef.current[index]);
+    const url = previewUrlsRef.current[index];
+    if (url) URL.revokeObjectURL(url);
     const newPreviews = imagePreviews.filter((_, i) => i !== index);
     previewUrlsRef.current = newPreviews;
     setImagePreviews(newPreviews);

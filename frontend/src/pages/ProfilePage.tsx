@@ -300,10 +300,12 @@ export default function ProfilePage() {
         {(!isPrivate || isOwnProfile) && (
           <div className="space-y-0">
             {/* Tab bar */}
-            <div className="flex border-b border-slate-800">
+            <div role="tablist" className="flex border-b border-slate-800">
               {(['activity', 'hunts', 'collection', 'followers'] as ActiveTab[]).map((tab) => (
                 <button
                   key={tab}
+                  role="tab"
+                  aria-selected={activeTab === tab}
                   onClick={() => setActiveTab(tab)}
                   className={`flex-1 py-3 text-sm font-medium capitalize transition-colors ${
                     activeTab === tab
