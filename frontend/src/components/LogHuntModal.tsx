@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPin, uploadPinImages } from '../api/client';
 import { resizeImage } from '../utils/imageResize';
 import { useAuth } from '../contexts/AuthContext';
@@ -27,11 +27,22 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
 
   // Image upload state
   const [imageFiles, setImageFiles] = useState<File[]>([]);
+  const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [addToCollection, setAddToCollection] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
+  const previewUrlsRef = useRef<string[]>([]);
 
   const notesLength = notes.length;
   const googleConnected = !!myProfile?.google_connected_at;
+
+  // Clean up preview URLs on unmount
+  useEffect(() => {
+    return () => {
+      for (const url of previewUrlsRef.current) {
+        URL.revokeObjectURL(url);
+      }
+    };
+  }, []);
 
   function handleImageSelect(e: React.ChangeEvent<HTMLInputElement>) {
     const selected = Array.from(e.target.files ?? []);
@@ -49,10 +60,21 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
     }
     setImageError(null);
     setImageFiles(combined);
+    // Revoke old preview URLs
+    for (const url of previewUrlsRef.current) {
+      URL.revokeObjectURL(url);
+    }
+    const newPreviews = combined.map((f) => URL.createObjectURL(f));
+    previewUrlsRef.current = newPreviews;
+    setImagePreviews(newPreviews);
     e.target.value = '';
   }
 
   function removeImage(index: number) {
+    URL.revokeObjectURL(previewUrlsRef.current[index]);
+    const newPreviews = imagePreviews.filter((_, i) => i !== index);
+    previewUrlsRef.current = newPreviews;
+    setImagePreviews(newPreviews);
     setImageFiles((prev) => prev.filter((_, i) => i !== index));
   }
 
@@ -119,7 +141,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
         </div>
 
         {/* Body */}
-        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+        <form id="log-hunt-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
           {/* Location Name */}
           <div>
             <label className="block text-xs font-medium text-slate-400 mb-1">Location Name *</label>
@@ -222,10 +244,10 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
               </label>
               {imageFiles.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-2">
-                  {imageFiles.map((f, i) => (
+                  {imageFiles.map((_, i) => (
                     <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-slate-700">
                       <img
-                        src={URL.createObjectURL(f)}
+                        src={imagePreviews[i]}
                         alt=""
                         className="w-full h-full object-cover"
                       />
@@ -309,7 +331,6 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
             type="submit"
             form="log-hunt-form"
             disabled={isSubmitting}
-            onClick={handleSubmit as any}
             className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-colors flex items-center gap-2"
           >
             {isSubmitting && (
