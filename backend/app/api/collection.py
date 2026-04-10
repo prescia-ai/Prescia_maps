@@ -194,7 +194,7 @@ async def delete_collection_photo(
     photo_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Delete a collection photo and its corresponding Drive file."""
     result = await db.execute(
         select(CollectionPhoto).where(CollectionPhoto.id == photo_id)

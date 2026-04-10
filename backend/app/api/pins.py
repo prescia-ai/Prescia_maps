@@ -248,7 +248,7 @@ async def delete_pin(
     pin_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     result = await db.execute(
         select(UserPin).where(UserPin.id == pin_id, UserPin.user_id == current_user.id)
     )

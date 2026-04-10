@@ -335,7 +335,7 @@ async def delete_post(
     post_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Delete a post owned by the current user."""
     result = await db.execute(
         select(Post).where(Post.id == post_id, Post.author_id == current_user.id)
@@ -489,7 +489,7 @@ async def delete_comment(
     comment_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Delete a comment owned by the current user (or post owner can delete any comment)."""
     result = await db.execute(
         select(PostComment).where(

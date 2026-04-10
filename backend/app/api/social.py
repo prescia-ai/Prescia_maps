@@ -45,7 +45,7 @@ async def follow_user(
     username: str,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Follow the user identified by *username*."""
     target = await _get_user_by_username(username, db)
 
@@ -84,7 +84,7 @@ async def unfollow_user(
     username: str,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     """Unfollow the user identified by *username*."""
     target = await _get_user_by_username(username, db)
 
