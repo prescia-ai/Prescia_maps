@@ -20,12 +20,12 @@ export default function ImageLightbox({ images, initialIndex, onClose }: ImageLi
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === 'Escape') onClose();
-      else if (e.key === 'ArrowLeft') prev();
-      else if (e.key === 'ArrowRight') next();
+      else if (e.key === 'ArrowLeft') setIndex((i) => Math.max(0, i - 1));
+      else if (e.key === 'ArrowRight') setIndex((i) => Math.min(sorted.length - 1, i + 1));
     }
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [onClose]);
+  }, [onClose, sorted.length]);
 
   if (sorted.length === 0) return null;
 

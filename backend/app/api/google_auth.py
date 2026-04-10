@@ -15,7 +15,7 @@ import json
 import logging
 import uuid
 from datetime import datetime, timezone
-from typing import List
+from typing import List, Tuple
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, UploadFile
 from fastapi.responses import RedirectResponse
@@ -367,7 +367,7 @@ async def upload_post_images(
         raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
 
     # Validate and read all files first
-    file_data: list[tuple[bytes, str]] = []
+    file_data: List[Tuple[bytes, str]] = []
     for f in files:
         ct = f.content_type or ""
         if ct not in _ALLOWED_IMAGE_TYPES:
@@ -393,7 +393,7 @@ async def upload_post_images(
     access_token = await get_valid_access_token(current_user, db)
     folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
 
-    created_images: list[PostImage] = []
+    created_images: List[PostImage] = []
     for i, (contents, ct) in enumerate(file_data):
         ext = _EXT_MAP.get(ct, "jpg")
         file_name = f"post_{post_id}_{i}.{ext}"
@@ -435,7 +435,7 @@ async def upload_pin_images(
         raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
 
     # Validate and read all files first
-    file_data: list[tuple[bytes, str]] = []
+    file_data: List[Tuple[bytes, str]] = []
     for f in files:
         ct = f.content_type or ""
         if ct not in _ALLOWED_IMAGE_TYPES:
@@ -461,7 +461,7 @@ async def upload_pin_images(
     access_token = await get_valid_access_token(current_user, db)
     folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
 
-    created_images: list[PinImage] = []
+    created_images: List[PinImage] = []
     for i, (contents, ct) in enumerate(file_data):
         ext = _EXT_MAP.get(ct, "jpg")
         file_name = f"pin_{pin_id}_{i}.{ext}"
