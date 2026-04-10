@@ -112,6 +112,7 @@ export interface UserPin {
   finds_count: number | null;
   privacy: 'public' | 'friends' | 'private';
   created_at: string;
+  images?: Array<{ id: string; url: string; position: number }>;
 }
 
 // ── Land Access ──────────────────────────────────────────────────────────────
@@ -199,6 +200,7 @@ export interface Post {
   comment_count: number;
   reactions: PostReactions;
   my_reaction: ReactionType | null;
+  images?: Array<{ id: string; url: string; position: number }>;
 }
 
 export interface Comment {

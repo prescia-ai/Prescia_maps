@@ -15,10 +15,11 @@ import json
 import logging
 import uuid
 from datetime import datetime, timezone
+from typing import List, Tuple
 
-from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
+from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, UploadFile
 from fastapi.responses import RedirectResponse
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 import httpx
@@ -32,9 +33,10 @@ from app.auth.google import (
     exchange_code_for_tokens,
     fetch_google_user_email,
     get_valid_access_token,
+    upload_file_to_drive,
 )
 from app.config import settings
-from app.models.database import User, get_db
+from app.models.database import Post, PinImage, PostImage, User, UserPin, get_db
 
 logger = logging.getLogger(__name__)
 
@@ -344,3 +346,228 @@ async def delete_avatar(
     current_user.avatar_url = None
     await db.flush()
     return {"status": "deleted"}
+
+
+# ---------------------------------------------------------------------------
+# POST /google/upload-post-images — attach images to a feed post
+# ---------------------------------------------------------------------------
+
+_EXT_MAP = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp"}
+
+
+@router.post("/upload-post-images")
+async def upload_post_images(
+    post_id: str = Form(...),
+    files: List[UploadFile] = File(...),
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Upload 1–4 images to attach to a feed post."""
+    if not (1 <= len(files) <= 4):
+        raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
+
+    # Validate and read all files first
+    file_data: List[Tuple[bytes, str]] = []
+    for f in files:
+        ct = f.content_type or ""
+        if ct not in _ALLOWED_IMAGE_TYPES:
+            raise HTTPException(status_code=400, detail="Only JPEG, PNG, and WebP images are allowed")
+        contents = await f.read()
+        if len(contents) > _MAX_IMAGE_SIZE:
+            raise HTTPException(status_code=400, detail="Image must be smaller than 2MB")
+        file_data.append((contents, ct))
+
+    # Verify post ownership
+    post_result = await db.execute(select(Post).where(Post.id == post_id))
+    post = post_result.scalar_one_or_none()
+    if post is None or post.author_id != current_user.id:
+        raise HTTPException(status_code=404, detail="Post not found")
+
+    # Check no existing images
+    count_result = await db.execute(
+        select(func.count()).select_from(PostImage).where(PostImage.post_id == post_id)
+    )
+    if count_result.scalar_one() > 0:
+        raise HTTPException(status_code=400, detail="Post already has images. Delete existing images first.")
+
+    access_token = await get_valid_access_token(current_user, db)
+    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+
+    created_images: List[PostImage] = []
+    for i, (contents, ct) in enumerate(file_data):
+        ext = _EXT_MAP.get(ct, "jpg")
+        file_name = f"post_{post_id}_{i}.{ext}"
+        file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
+        img = PostImage(
+            post_id=uuid.UUID(post_id),
+            drive_file_id=file_id,
+            url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
+            position=i,
+        )
+        db.add(img)
+        created_images.append(img)
+
+    await db.flush()
+    for img in created_images:
+        await db.refresh(img)
+
+    return {
+        "images": [
+            {"id": str(img.id), "url": img.url, "position": img.position}
+            for img in created_images
+        ]
+    }
+
+
+# ---------------------------------------------------------------------------
+# POST /google/upload-pin-images — attach images to a hunt pin
+# ---------------------------------------------------------------------------
+
+@router.post("/upload-pin-images")
+async def upload_pin_images(
+    pin_id: str = Form(...),
+    files: List[UploadFile] = File(...),
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Upload 1–4 images to attach to a hunt pin."""
+    if not (1 <= len(files) <= 4):
+        raise HTTPException(status_code=400, detail="You can attach 1 to 4 images")
+
+    # Validate and read all files first
+    file_data: List[Tuple[bytes, str]] = []
+    for f in files:
+        ct = f.content_type or ""
+        if ct not in _ALLOWED_IMAGE_TYPES:
+            raise HTTPException(status_code=400, detail="Only JPEG, PNG, and WebP images are allowed")
+        contents = await f.read()
+        if len(contents) > _MAX_IMAGE_SIZE:
+            raise HTTPException(status_code=400, detail="Image must be smaller than 2MB")
+        file_data.append((contents, ct))
+
+    # Verify pin ownership
+    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
+    pin = pin_result.scalar_one_or_none()
+    if pin is None or pin.user_id != current_user.id:
+        raise HTTPException(status_code=404, detail="Pin not found")
+
+    # Check no existing images
+    count_result = await db.execute(
+        select(func.count()).select_from(PinImage).where(PinImage.pin_id == pin_id)
+    )
+    if count_result.scalar_one() > 0:
+        raise HTTPException(status_code=400, detail="Pin already has images. Delete existing images first.")
+
+    access_token = await get_valid_access_token(current_user, db)
+    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+
+    created_images: List[PinImage] = []
+    for i, (contents, ct) in enumerate(file_data):
+        ext = _EXT_MAP.get(ct, "jpg")
+        file_name = f"pin_{pin_id}_{i}.{ext}"
+        file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
+        img = PinImage(
+            pin_id=uuid.UUID(pin_id),
+            drive_file_id=file_id,
+            url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
+            position=i,
+        )
+        db.add(img)
+        created_images.append(img)
+
+    await db.flush()
+    for img in created_images:
+        await db.refresh(img)
+
+    return {
+        "images": [
+            {"id": str(img.id), "url": img.url, "position": img.position}
+            for img in created_images
+        ]
+    }
+
+
+# ---------------------------------------------------------------------------
+# DELETE /google/post-images/{post_id} — delete all images for a post
+# ---------------------------------------------------------------------------
+
+@router.delete("/post-images/{post_id}")
+async def delete_post_images(
+    post_id: str,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Delete all images attached to a post (and remove Drive files)."""
+    post_result = await db.execute(select(Post).where(Post.id == post_id))
+    post = post_result.scalar_one_or_none()
+    if post is None or post.author_id != current_user.id:
+        raise HTTPException(status_code=404, detail="Post not found")
+
+    images_result = await db.execute(
+        select(PostImage).where(PostImage.post_id == post_id)
+    )
+    images = list(images_result.scalars().all())
+
+    if images:
+        try:
+            access_token = await get_valid_access_token(current_user, db)
+            for img in images:
+                try:
+                    async with httpx.AsyncClient() as client:
+                        await client.delete(
+                            f"{_DRIVE_FILES_URL}/{img.drive_file_id}",
+                            headers={"Authorization": f"Bearer {access_token}"},
+                            timeout=30.0,
+                        )
+                except Exception as exc:
+                    logger.warning("Failed to delete Drive file %s: %s", img.drive_file_id, exc)
+        except HTTPException as exc:
+            logger.warning("Could not get access token for Drive cleanup: %s", exc.detail)
+
+    for img in images:
+        await db.delete(img)
+
+    return {"status": "deleted", "count": len(images)}
+
+
+# ---------------------------------------------------------------------------
+# DELETE /google/pin-images/{pin_id} — delete all images for a pin
+# ---------------------------------------------------------------------------
+
+@router.delete("/pin-images/{pin_id}")
+async def delete_pin_images(
+    pin_id: str,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Delete all images attached to a hunt pin (and remove Drive files)."""
+    pin_result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
+    pin = pin_result.scalar_one_or_none()
+    if pin is None or pin.user_id != current_user.id:
+        raise HTTPException(status_code=404, detail="Pin not found")
+
+    images_result = await db.execute(
+        select(PinImage).where(PinImage.pin_id == pin_id)
+    )
+    images = list(images_result.scalars().all())
+
+    if images:
+        try:
+            access_token = await get_valid_access_token(current_user, db)
+            for img in images:
+                try:
+                    async with httpx.AsyncClient() as client:
+                        await client.delete(
+                            f"{_DRIVE_FILES_URL}/{img.drive_file_id}",
+                            headers={"Authorization": f"Bearer {access_token}"},
+                            timeout=30.0,
+                        )
+                except Exception as exc:
+                    logger.warning("Failed to delete Drive file %s: %s", img.drive_file_id, exc)
+        except HTTPException as exc:
+            logger.warning("Could not get access token for Drive cleanup: %s", exc.detail)
+
+    for img in images:
+        await db.delete(img)
+
+    return {"status": "deleted", "count": len(images)}

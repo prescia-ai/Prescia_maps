@@ -8,7 +8,9 @@ finds count, and privacy setting (public / friends / private).
 from __future__ import annotations
 
 import uuid
+from collections import defaultdict
 from datetime import datetime
+from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.functions import ST_MakePoint, ST_SetSRID
@@ -16,8 +18,8 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user
-from app.models.database import User, UserPin, get_db
-from app.models.schemas import UserPinCreate, UserPinListResponse, UserPinResponse, UserPinUpdate
+from app.models.database import PinImage, User, UserPin, get_db
+from app.models.schemas import PinImageResponse, UserPinCreate, UserPinListResponse, UserPinResponse, UserPinUpdate
 
 router = APIRouter(prefix="/pins", tags=["pins"])
 
@@ -47,6 +49,29 @@ def _parse_hunt_date(hunt_date_str: str) -> datetime:
     )
 
 
+async def _attach_pin_images(pins: List[UserPin], db) -> List[dict]:
+    """Load PinImage rows for each pin and return pin dicts with images attached."""
+    if not pins:
+        return []
+    pin_ids = [p.id for p in pins]
+    images_result = await db.execute(
+        select(PinImage)
+        .where(PinImage.pin_id.in_(pin_ids))
+        .order_by(PinImage.position)
+    )
+    images_map: dict = defaultdict(list)
+    for img in images_result.scalars().all():
+        images_map[img.pin_id].append(
+            PinImageResponse(id=img.id, url=img.url, position=img.position)
+        )
+    result = []
+    for pin in pins:
+        pin_dict = UserPinResponse.model_validate(pin).model_dump()
+        pin_dict["images"] = images_map.get(pin.id, [])
+        result.append(pin_dict)
+    return result
+
+
 # ---------------------------------------------------------------------------
 # POST /pins  — create a hunt
 # ---------------------------------------------------------------------------
@@ -56,7 +81,7 @@ async def create_pin(
     body: UserPinCreate,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> UserPin:
+) -> dict:
     hunt_date = _parse_hunt_date(body.hunt_date)
     pin = UserPin(
         user_id=current_user.id,
@@ -73,7 +98,8 @@ async def create_pin(
     db.add(pin)
     await db.flush()
     await db.refresh(pin)
-    return pin
+    results = await _attach_pin_images([pin], db)
+    return results[0]
 
 
 # ---------------------------------------------------------------------------
@@ -99,8 +125,9 @@ async def list_my_pins(
         .limit(limit)
         .offset(offset)
     )
-    pins = result.scalars().all()
-    return UserPinListResponse(pins=list(pins), total=total)
+    pins = list(result.scalars().all())
+    pin_dicts = await _attach_pin_images(pins, db)
+    return UserPinListResponse(pins=pin_dicts, total=total)
 
 
 # ---------------------------------------------------------------------------
@@ -138,8 +165,9 @@ async def list_user_pins(
         .limit(limit)
         .offset(offset)
     )
-    pins = result.scalars().all()
-    return UserPinListResponse(pins=list(pins), total=total)
+    pins = list(result.scalars().all())
+    pin_dicts = await _attach_pin_images(pins, db)
+    return UserPinListResponse(pins=pin_dicts, total=total)
 
 
 # ---------------------------------------------------------------------------
@@ -151,19 +179,17 @@ async def get_pin(
     pin_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> UserPin:
+) -> dict:
     result = await db.execute(select(UserPin).where(UserPin.id == pin_id))
     pin = result.scalar_one_or_none()
     if pin is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pin not found")
 
-    if pin.user_id == current_user.id:
-        return pin
+    if pin.user_id != current_user.id and pin.privacy != "public":
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pin not found")
 
-    if pin.privacy == "public":
-        return pin
-
-    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pin not found")
+    results = await _attach_pin_images([pin], db)
+    return results[0]
 
 
 # ---------------------------------------------------------------------------
@@ -176,7 +202,7 @@ async def update_pin(
     body: UserPinUpdate,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> UserPin:
+) -> dict:
     result = await db.execute(
         select(UserPin).where(UserPin.id == pin_id, UserPin.user_id == current_user.id)
     )
@@ -208,7 +234,8 @@ async def update_pin(
 
     await db.flush()
     await db.refresh(pin)
-    return pin
+    results = await _attach_pin_images([pin], db)
+    return results[0]
 
 
 # ---------------------------------------------------------------------------
@@ -227,4 +254,30 @@ async def delete_pin(
     pin = result.scalar_one_or_none()
     if pin is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Pin not found")
+
+    # Delete associated images from Drive and the database
+    images_result = await db.execute(select(PinImage).where(PinImage.pin_id == pin_id))
+    images = list(images_result.scalars().all())
+    if images:
+        try:
+            from app.auth.google import _DRIVE_FILES_URL, get_valid_access_token
+            import httpx as _httpx
+            access_token = await get_valid_access_token(current_user, db)
+            for img in images:
+                try:
+                    async with _httpx.AsyncClient() as client:
+                        await client.delete(
+                            f"{_DRIVE_FILES_URL}/{img.drive_file_id}",
+                            headers={"Authorization": f"Bearer {access_token}"},
+                            timeout=30.0,
+                        )
+                except Exception as exc:
+                    import logging as _logging
+                    _logging.getLogger(__name__).warning("Failed to delete Drive file %s: %s", img.drive_file_id, exc)
+        except Exception as exc:
+            import logging as _logging
+            _logging.getLogger(__name__).warning("Could not clean up Drive files for pin %s: %s", pin_id, exc)
+        for img in images:
+            await db.delete(img)
+
     await db.delete(pin)

@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import PostCard from '../components/PostCard';
+import PhotoGrid from '../components/PhotoGrid';
+import ImageLightbox from '../components/ImageLightbox';
 import api from '../api/client';
 import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts } from '../api/client';
 import type { UserPin, PublicProfile, Post, FollowInfo } from '../types';
@@ -39,6 +41,7 @@ export default function ProfilePage() {
   const [followingList, setFollowingList] = useState<FollowInfo[]>([]);
   const [followersLoading, setFollowersLoading] = useState(false);
   const [followSubTab, setFollowSubTab] = useState<FollowSubTab>('followers');
+  const [huntLightbox, setHuntLightbox] = useState<{ pin: UserPin; index: number } | null>(null);
 
   const isOwnProfile = myProfile?.username === username;
 
@@ -354,6 +357,14 @@ export default function ProfilePage() {
                           {pin.notes && (
                             <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{pin.notes}</p>
                           )}
+                          {pin.images && pin.images.length > 0 && (
+                            <div className="pt-1">
+                              <PhotoGrid
+                                images={pin.images}
+                                onImageClick={(idx) => setHuntLightbox({ pin, index: idx })}
+                              />
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
@@ -430,6 +441,15 @@ export default function ProfilePage() {
           </div>
         )}
       </div>
+
+      {/* Hunt photo lightbox */}
+      {huntLightbox && huntLightbox.pin.images && huntLightbox.pin.images.length > 0 && (
+        <ImageLightbox
+          images={huntLightbox.pin.images}
+          initialIndex={huntLightbox.index}
+          onClose={() => setHuntLightbox(null)}
+        />
+      )}
     </div>
   );
 }

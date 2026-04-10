@@ -28,6 +28,7 @@ from app.auth.deps import get_current_user, optional_user
 from app.models.database import (
     Post,
     PostComment,
+    PostImage,
     PostReaction,
     User,
     UserFollow,
@@ -38,6 +39,7 @@ from app.models.schemas import (
     CommentListResponse,
     CommentResponse,
     PostCreate,
+    PostImageResponse,
     PostListResponse,
     PostResponse,
     ReactRequest,
@@ -104,6 +106,16 @@ async def _build_post_responses(
         for row in my_rows:
             my_reaction_map[row.post_id] = row.reaction_type
 
+    # -- Images -----------------------------------------------------------
+    images_rows = await db.execute(
+        select(PostImage)
+        .where(PostImage.post_id.in_(post_ids))
+        .order_by(PostImage.position)
+    )
+    images_map: Dict[uuid.UUID, list] = defaultdict(list)
+    for img in images_rows.scalars().all():
+        images_map[img.post_id].append(PostImageResponse(id=img.id, url=img.url, position=img.position))
+
     return [
         PostResponse(
             id=post.id,
@@ -117,6 +129,7 @@ async def _build_post_responses(
             comment_count=comment_count_map.get(post.id, 0),
             reactions=reactions_map.get(post.id, dict(_EMPTY_REACTIONS)),
             my_reaction=my_reaction_map.get(post.id),
+            images=images_map.get(post.id, []),
         )
         for post in posts
     ]
@@ -338,6 +351,31 @@ async def delete_post(
     reactions_result = await db.execute(select(PostReaction).where(PostReaction.post_id == post_id))
     for r in reactions_result.scalars().all():
         await db.delete(r)
+
+    # Delete associated images from Drive and the database
+    images_result = await db.execute(select(PostImage).where(PostImage.post_id == post_id))
+    images = list(images_result.scalars().all())
+    if images:
+        try:
+            from app.auth.google import _DRIVE_FILES_URL, get_valid_access_token
+            import httpx as _httpx
+            access_token = await get_valid_access_token(current_user, db)
+            for img in images:
+                try:
+                    async with _httpx.AsyncClient() as client:
+                        await client.delete(
+                            f"{_DRIVE_FILES_URL}/{img.drive_file_id}",
+                            headers={"Authorization": f"Bearer {access_token}"},
+                            timeout=30.0,
+                        )
+                except Exception as exc:
+                    import logging as _logging
+                    _logging.getLogger(__name__).warning("Failed to delete Drive file %s: %s", img.drive_file_id, exc)
+        except Exception as exc:
+            import logging as _logging
+            _logging.getLogger(__name__).warning("Could not clean up Drive files for post %s: %s", post_id, exc)
+        for img in images:
+            await db.delete(img)
 
     await db.delete(post)
 

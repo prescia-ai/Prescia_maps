@@ -376,4 +376,48 @@ export async function deleteAvatar(): Promise<void> {
   await api.delete('/google/avatar');
 }
 
+export async function uploadPostImages(
+  postId: string,
+  files: File[],
+): Promise<{ images: Array<{ id: string; url: string; position: number }> }> {
+  const formData = new FormData();
+  formData.append('post_id', postId);
+  for (const file of files) {
+    formData.append('files', file);
+  }
+  const { data } = await api.post<{ images: Array<{ id: string; url: string; position: number }> }>(
+    '/google/upload-post-images',
+    formData,
+    { headers: { 'Content-Type': 'multipart/form-data' }, timeout: 60_000 },
+  );
+  return data;
+}
+
+export async function deletePostImages(postId: string): Promise<{ status: string; count: number }> {
+  const { data } = await api.delete<{ status: string; count: number }>(`/google/post-images/${postId}`);
+  return data;
+}
+
+export async function uploadPinImages(
+  pinId: string,
+  files: File[],
+): Promise<{ images: Array<{ id: string; url: string; position: number }> }> {
+  const formData = new FormData();
+  formData.append('pin_id', pinId);
+  for (const file of files) {
+    formData.append('files', file);
+  }
+  const { data } = await api.post<{ images: Array<{ id: string; url: string; position: number }> }>(
+    '/google/upload-pin-images',
+    formData,
+    { headers: { 'Content-Type': 'multipart/form-data' }, timeout: 60_000 },
+  );
+  return data;
+}
+
+export async function deletePinImages(pinId: string): Promise<{ status: string; count: number }> {
+  const { data } = await api.delete<{ status: string; count: number }>(`/google/pin-images/${pinId}`);
+  return data;
+}
+
 export default api;

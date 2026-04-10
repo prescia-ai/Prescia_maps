@@ -349,3 +349,68 @@ async def ensure_prescia_folder(
         await db.flush()
 
     return folder_id
+
+
+# ---------------------------------------------------------------------------
+# Shared Drive upload helper
+# ---------------------------------------------------------------------------
+
+_DRIVE_UPLOAD_URL = "https://www.googleapis.com/upload/drive/v3/files"
+_DRIVE_PERMISSIONS_URL = "https://www.googleapis.com/drive/v3/files/{file_id}/permissions"
+
+
+async def upload_file_to_drive(
+    access_token: str,
+    folder_id: str,
+    file_name: str,
+    file_contents: bytes,
+    content_type: str,
+) -> str:
+    """Upload a file to a specific Google Drive folder and make it publicly readable.
+
+    Returns the Google Drive file ID.
+    Raises HTTPException(502) on failure.
+    """
+    import json as _json
+
+    headers = {"Authorization": f"Bearer {access_token}"}
+    metadata = _json.dumps({"name": file_name, "parents": [folder_id]}).encode()
+    boundary = "prescia_upload_boundary"
+    body = (
+        f"--{boundary}\r\n"
+        f"Content-Type: application/json; charset=UTF-8\r\n\r\n"
+    ).encode() + metadata + (
+        f"\r\n--{boundary}\r\n"
+        f"Content-Type: {content_type}\r\n\r\n"
+    ).encode() + file_contents + f"\r\n--{boundary}--".encode()
+
+    async with httpx.AsyncClient() as client:
+        upload_resp = await client.post(
+            f"{_DRIVE_UPLOAD_URL}?uploadType=multipart&fields=id",
+            headers={
+                **headers,
+                "Content-Type": f"multipart/related; boundary={boundary}",
+            },
+            content=body,
+            timeout=60.0,
+        )
+
+    if upload_resp.status_code not in (200, 201):
+        raise HTTPException(status_code=502, detail="Failed to upload file to Google Drive")
+
+    file_id = upload_resp.json().get("id")
+    if not file_id:
+        raise HTTPException(status_code=502, detail="Failed to upload file to Google Drive")
+
+    async with httpx.AsyncClient() as client:
+        perm_resp = await client.post(
+            _DRIVE_PERMISSIONS_URL.format(file_id=file_id),
+            headers={**headers, "Content-Type": "application/json"},
+            json={"role": "reader", "type": "anyone"},
+            timeout=30.0,
+        )
+
+    if perm_resp.status_code not in (200, 201):
+        raise HTTPException(status_code=502, detail="Failed to upload file to Google Drive")
+
+    return file_id
