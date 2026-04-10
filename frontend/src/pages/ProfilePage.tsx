@@ -5,11 +5,13 @@ import Avatar from '../components/Avatar';
 import PostCard from '../components/PostCard';
 import PhotoGrid from '../components/PhotoGrid';
 import ImageLightbox from '../components/ImageLightbox';
+import CollectionLightbox from '../components/CollectionLightbox';
+import CollectionUploadModal from '../components/CollectionUploadModal';
 import api from '../api/client';
-import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts } from '../api/client';
-import type { UserPin, PublicProfile, Post, FollowInfo } from '../types';
+import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto } from '../api/client';
+import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto } from '../types';
 
-type ActiveTab = 'activity' | 'hunts' | 'followers';
+type ActiveTab = 'activity' | 'hunts' | 'collection' | 'followers';
 type FollowSubTab = 'followers' | 'following';
 
 function formatMemberSince(dateStr: string | null): string {
@@ -42,6 +44,11 @@ export default function ProfilePage() {
   const [followersLoading, setFollowersLoading] = useState(false);
   const [followSubTab, setFollowSubTab] = useState<FollowSubTab>('followers');
   const [huntLightbox, setHuntLightbox] = useState<{ pin: UserPin; index: number } | null>(null);
+  const [collectionPhotos, setCollectionPhotos] = useState<CollectionPhoto[]>([]);
+  const [collectionTotal, setCollectionTotal] = useState(0);
+  const [collectionLoading, setCollectionLoading] = useState(false);
+  const [collectionLightboxIndex, setCollectionLightboxIndex] = useState<number | null>(null);
+  const [showUploadModal, setShowUploadModal] = useState(false);
 
   const isOwnProfile = myProfile?.username === username;
 
@@ -98,6 +105,22 @@ export default function ProfilePage() {
         .finally(() => setFollowersLoading(false));
     }
   }, [username, activeTab, followSubTab]);
+
+  // Fetch collection photos when collection tab is active
+  useEffect(() => {
+    if (!username || activeTab !== 'collection') return;
+    setCollectionLoading(true);
+    fetchCollection(username)
+      .then(({ photos, total }) => {
+        setCollectionPhotos(photos);
+        setCollectionTotal(total);
+      })
+      .catch(() => {
+        setCollectionPhotos([]);
+        setCollectionTotal(0);
+      })
+      .finally(() => setCollectionLoading(false));
+  }, [username, activeTab]);
 
   async function handleFollow() {
     if (!publicProfile || !username) return;
@@ -277,10 +300,12 @@ export default function ProfilePage() {
         {(!isPrivate || isOwnProfile) && (
           <div className="space-y-0">
             {/* Tab bar */}
-            <div className="flex border-b border-slate-800">
-              {(['activity', 'hunts', 'followers'] as ActiveTab[]).map((tab) => (
+            <div role="tablist" className="flex border-b border-slate-800">
+              {(['activity', 'hunts', 'collection', 'followers'] as ActiveTab[]).map((tab) => (
                 <button
                   key={tab}
+                  role="tab"
+                  aria-selected={activeTab === tab}
                   onClick={() => setActiveTab(tab)}
                   className={`flex-1 py-3 text-sm font-medium capitalize transition-colors ${
                     activeTab === tab
@@ -384,6 +409,77 @@ export default function ProfilePage() {
                   )}
                 </div>
               )}
+              {activeTab === 'collection' && (
+                <div className="flex flex-col gap-4">
+                  {/* Upload button — only for own profile */}
+                  {isOwnProfile && (
+                    <div className="flex justify-end">
+                      <button
+                        onClick={() => setShowUploadModal(true)}
+                        disabled={!myProfile?.google_connected_at}
+                        className="flex items-center gap-2 text-sm px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        title={!myProfile?.google_connected_at ? 'Connect Google Drive in profile settings to upload photos' : 'Add a photo to your collection'}
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                        </svg>
+                        Add Photo
+                      </button>
+                    </div>
+                  )}
+
+                  {collectionLoading ? (
+                    <div className="flex justify-center py-8">
+                      <div className="w-6 h-6 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
+                    </div>
+                  ) : collectionPhotos.length > 0 ? (
+                    <div className="grid grid-cols-3 gap-1">
+                      {collectionPhotos.map((photo, index) => (
+                        <button
+                          key={photo.id}
+                          onClick={() => setCollectionLightboxIndex(index)}
+                          className="aspect-square overflow-hidden rounded-sm hover:opacity-80 transition-opacity"
+                        >
+                          <img
+                            src={photo.url}
+                            alt={photo.caption || 'Collection photo'}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
+                      <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v14.25a1.5 1.5 0 001.5 1.5z" />
+                      </svg>
+                      <p className="text-slate-400 text-sm">No photos in collection yet</p>
+                      {isOwnProfile && (
+                        <p className="text-slate-500 text-xs">
+                          Add your best finds to showcase them here
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Load more */}
+                  {collectionPhotos.length < collectionTotal && !collectionLoading && (
+                    <div className="flex justify-center">
+                      <button
+                        onClick={() => {
+                          fetchCollection(username!, 30, collectionPhotos.length)
+                            .then(({ photos }) => setCollectionPhotos((prev) => [...prev, ...photos]))
+                            .catch(() => {});
+                        }}
+                        className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                      >
+                        Load more
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
               {activeTab === 'followers' && (
                 <div className="flex flex-col gap-4">
                   {/* Sub-tab toggle */}
@@ -448,6 +544,53 @@ export default function ProfilePage() {
           images={huntLightbox.pin.images}
           initialIndex={huntLightbox.index}
           onClose={() => setHuntLightbox(null)}
+        />
+      )}
+
+      {/* Collection lightbox */}
+      {collectionLightboxIndex !== null && collectionPhotos.length > 0 && (
+        <CollectionLightbox
+          photos={collectionPhotos}
+          initialIndex={collectionLightboxIndex}
+          isOwner={isOwnProfile}
+          onClose={() => setCollectionLightboxIndex(null)}
+          onEdit={async (photoId, newCaption) => {
+            try {
+              const updated = await updateCollectionPhoto(photoId, newCaption);
+              setCollectionPhotos((prev) =>
+                prev.map((p) => (p.id === photoId ? updated : p))
+              );
+            } catch {
+              // ignore
+            }
+          }}
+          onDelete={async (photoId) => {
+            try {
+              await deleteCollectionPhoto(photoId);
+              const remaining = collectionPhotos.filter((p) => p.id !== photoId);
+              setCollectionPhotos(remaining);
+              setCollectionTotal((t) => Math.max(0, t - 1));
+              if (remaining.length === 0) {
+                setCollectionLightboxIndex(null);
+              } else if (collectionLightboxIndex !== null && collectionLightboxIndex >= remaining.length) {
+                setCollectionLightboxIndex(remaining.length - 1);
+              }
+            } catch {
+              // ignore
+            }
+          }}
+        />
+      )}
+
+      {/* Collection upload modal */}
+      {showUploadModal && (
+        <CollectionUploadModal
+          onClose={() => setShowUploadModal(false)}
+          onUploaded={(photo) => {
+            setCollectionPhotos((prev) => [photo, ...prev]);
+            setCollectionTotal((t) => t + 1);
+            setShowUploadModal(false);
+          }}
         />
       )}
     </div>

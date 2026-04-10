@@ -604,3 +604,30 @@ class FollowListResponse(BaseModel):
 
     users: List[FollowInfo]
     total: int
+
+
+# ---------------------------------------------------------------------------
+# Collection schemas
+# ---------------------------------------------------------------------------
+
+class CollectionPhotoResponse(BaseModel):
+    """A single photo in a user's collection."""
+
+    id: UUID
+    user_id: UUID
+    url: str
+    caption: Optional[str] = None
+    created_at: Optional[Any] = None
+
+
+class CollectionPhotoListResponse(BaseModel):
+    """Paginated list of collection photos."""
+
+    photos: List[CollectionPhotoResponse]
+    total: int
+
+
+class CollectionPhotoUpdate(BaseModel):
+    """Request payload for editing a collection photo's caption."""
+
+    caption: Optional[str] = Field(None, max_length=500)
