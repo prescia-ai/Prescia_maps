@@ -110,6 +110,7 @@ async def _build_post_responses(
             author_id=post.author_id,
             author_username=authors[post.author_id].username if post.author_id in authors else None,
             author_display_name=authors[post.author_id].display_name if post.author_id in authors else None,
+            author_avatar_url=authors[post.author_id].avatar_url if post.author_id in authors else None,
             content=post.content,
             privacy=post.privacy,
             created_at=post.created_at,
@@ -386,6 +387,7 @@ async def list_comments(
             author_id=c.author_id,
             author_username=authors[c.author_id].username if c.author_id in authors else None,
             author_display_name=authors[c.author_id].display_name if c.author_id in authors else None,
+            author_avatar_url=authors[c.author_id].avatar_url if c.author_id in authors else None,
             content=c.content,
             created_at=c.created_at,
         )
@@ -428,6 +430,7 @@ async def create_comment(
         author_id=comment.author_id,
         author_username=current_user.username,
         author_display_name=current_user.display_name,
+        author_avatar_url=current_user.avatar_url,
         content=comment.content,
         created_at=comment.created_at,
     )

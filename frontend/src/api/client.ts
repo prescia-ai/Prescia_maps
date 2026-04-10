@@ -361,4 +361,19 @@ export async function disconnectGoogle(): Promise<void> {
   await api.post('/google/disconnect');
 }
 
+export async function uploadAvatar(file: File): Promise<{ avatar_url: string; file_id: string }> {
+  const formData = new FormData();
+  formData.append('file', file);
+  const { data } = await api.post<{ avatar_url: string; file_id: string }>(
+    '/google/upload-avatar',
+    formData,
+    { headers: { 'Content-Type': 'multipart/form-data' }, timeout: 30_000 },
+  );
+  return data;
+}
+
+export async function deleteAvatar(): Promise<void> {
+  await api.delete('/google/avatar');
+}
+
 export default api;

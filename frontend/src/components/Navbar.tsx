@@ -133,6 +133,7 @@ export default function Navbar({
                 <Avatar
                   username={profile?.username ?? user.email ?? 'user'}
                   displayName={profile?.display_name}
+                  avatarUrl={profile?.avatar_url}
                   size="sm"
                 />
                 <span>{profile?.username ?? user.email}</span>

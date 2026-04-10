@@ -1,22 +1,31 @@
 """
 Google OAuth2 API endpoints.
 
-GET /google/auth-url  — Returns the Google consent URL (requires JWT auth).
-GET /google/callback  — OAuth2 callback (browser redirect from Google, no JWT).
+GET    /google/auth-url       — Returns the Google consent URL (requires JWT auth).
+GET    /google/callback       — OAuth2 callback (browser redirect from Google, no JWT).
+GET    /google/status         — Check connection status.
+POST   /google/disconnect     — Disconnect Google Drive.
+POST   /google/upload-avatar  — Upload a profile picture to Google Drive.
+DELETE /google/avatar         — Remove the profile picture.
 """
 
 from __future__ import annotations
 
+import json
+import logging
 import uuid
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, File, HTTPException, Query, UploadFile
 from fastapi.responses import RedirectResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+import httpx
+
 from app.auth.deps import get_current_user
 from app.auth.google import (
+    _DRIVE_FILES_URL,
     build_google_auth_url,
     encrypt_token,
     ensure_prescia_folder,
@@ -26,6 +35,8 @@ from app.auth.google import (
 )
 from app.config import settings
 from app.models.database import User, get_db
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/google", tags=["google"])
 
@@ -184,3 +195,152 @@ async def google_drive_disconnect(
     current_user.google_folder_id = None
     await db.flush()
     return {"status": "disconnected"}
+
+
+# ---------------------------------------------------------------------------
+# POST /google/upload-avatar — upload a profile picture to Google Drive
+# ---------------------------------------------------------------------------
+
+_ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
+_MAX_IMAGE_SIZE = 2 * 1024 * 1024  # 2 MB
+_DRIVE_UPLOAD_URL = "https://www.googleapis.com/upload/drive/v3/files"
+_DRIVE_PERMISSIONS_URL = "https://www.googleapis.com/drive/v3/files/{file_id}/permissions"
+
+
+def _extract_drive_file_id(avatar_url: str) -> str | None:
+    """Extract the Google Drive file ID from a thumbnail URL."""
+    # URL format: https://drive.google.com/thumbnail?id={file_id}&sz=w400-h400
+    if "drive.google.com/thumbnail" in avatar_url:
+        for part in avatar_url.split("&"):
+            if part.startswith("id=") or "?id=" in part:
+                return part.split("id=")[-1]
+    return None
+
+
+@router.post("/upload-avatar")
+async def upload_avatar(
+    file: UploadFile = File(...),
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Upload a profile picture to Google Drive and save the public URL."""
+    # 1. Validate file type
+    content_type = file.content_type or ""
+    if content_type not in _ALLOWED_IMAGE_TYPES:
+        raise HTTPException(status_code=400, detail="Only JPEG, PNG, and WebP images are allowed")
+
+    # Read file contents and validate size
+    contents = await file.read()
+    if len(contents) > _MAX_IMAGE_SIZE:
+        raise HTTPException(status_code=400, detail="Image must be smaller than 2MB")
+
+    # Determine file extension from content type
+    ext_map = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp"}
+    ext = ext_map.get(content_type, "jpg")
+    file_name = f"avatar_{current_user.id}.{ext}"
+
+    # 2. Get a valid access token
+    access_token = await get_valid_access_token(current_user, db)
+
+    # 3. Ensure the Prescia Maps folder exists
+    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+
+    # 4. Delete old avatar if one exists
+    if current_user.avatar_url:
+        old_file_id = _extract_drive_file_id(current_user.avatar_url)
+        if old_file_id:
+            try:
+                async with httpx.AsyncClient() as client:
+                    await client.delete(
+                        f"{_DRIVE_FILES_URL}/{old_file_id}",
+                        headers={"Authorization": f"Bearer {access_token}"},
+                    )
+            except Exception as exc:
+                logger.warning("Failed to delete old avatar file %s: %s", old_file_id, exc)
+
+    # 5. Upload the file to Google Drive using multipart upload
+    metadata = json.dumps({"name": file_name, "parents": [folder_id]}).encode()
+    boundary = "prescia_avatar_boundary"
+    body = (
+        f"--{boundary}\r\n"
+        f"Content-Type: application/json; charset=UTF-8\r\n\r\n"
+    ).encode() + metadata + (
+        f"\r\n--{boundary}\r\n"
+        f"Content-Type: {content_type}\r\n\r\n"
+    ).encode() + contents + f"\r\n--{boundary}--".encode()
+
+    async with httpx.AsyncClient() as client:
+        upload_resp = await client.post(
+            f"{_DRIVE_UPLOAD_URL}?uploadType=multipart&fields=id",
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Content-Type": f"multipart/related; boundary={boundary}",
+            },
+            content=body,
+            timeout=60.0,
+        )
+
+    if upload_resp.status_code not in (200, 201):
+        logger.error("Drive upload failed: %s %s", upload_resp.status_code, upload_resp.text)
+        raise HTTPException(status_code=502, detail="Failed to upload image to Google Drive")
+
+    file_id = upload_resp.json().get("id")
+    if not file_id:
+        raise HTTPException(status_code=502, detail="Google Drive did not return a file ID")
+
+    # 6. Make the file publicly readable
+    async with httpx.AsyncClient() as client:
+        perm_resp = await client.post(
+            _DRIVE_PERMISSIONS_URL.format(file_id=file_id),
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Content-Type": "application/json",
+            },
+            json={"role": "reader", "type": "anyone"},
+            timeout=30.0,
+        )
+    if perm_resp.status_code not in (200, 201):
+        logger.warning("Failed to set public permission on file %s: %s", file_id, perm_resp.text)
+
+    # 7. Build the public thumbnail URL
+    thumbnail_url = f"https://drive.google.com/thumbnail?id={file_id}&sz=w400-h400"
+
+    # 8. Save the URL on the User row
+    current_user.avatar_url = thumbnail_url
+    await db.flush()
+
+    # 9. Return the response
+    return {"avatar_url": thumbnail_url, "file_id": file_id}
+
+
+# ---------------------------------------------------------------------------
+# DELETE /google/avatar — remove the profile picture
+# ---------------------------------------------------------------------------
+
+@router.delete("/avatar")
+async def delete_avatar(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    """Remove the user's profile picture from Google Drive and clear the stored URL."""
+    if not current_user.avatar_url:
+        return {"status": "no_avatar"}
+
+    # Try to delete the file from Drive
+    file_id = _extract_drive_file_id(current_user.avatar_url)
+    if file_id:
+        try:
+            access_token = await get_valid_access_token(current_user, db)
+            async with httpx.AsyncClient() as client:
+                await client.delete(
+                    f"{_DRIVE_FILES_URL}/{file_id}",
+                    headers={"Authorization": f"Bearer {access_token}"},
+                    timeout=30.0,
+                )
+        except Exception as exc:
+            logger.warning("Failed to delete avatar file %s from Drive: %s", file_id, exc)
+
+    # Clear the URL on the User row
+    current_user.avatar_url = None
+    await db.flush()
+    return {"status": "deleted"}

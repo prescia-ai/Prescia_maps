@@ -139,6 +139,7 @@ async def list_followers(
             user_id=uid,
             username=users_map[uid].username if uid in users_map else None,
             display_name=users_map[uid].display_name if uid in users_map else None,
+            avatar_url=users_map[uid].avatar_url if uid in users_map else None,
         )
         for uid in follower_ids
     ]
@@ -185,6 +186,7 @@ async def list_following(
             user_id=uid,
             username=users_map[uid].username if uid in users_map else None,
             display_name=users_map[uid].display_name if uid in users_map else None,
+            avatar_url=users_map[uid].avatar_url if uid in users_map else None,
         )
         for uid in following_ids
     ]

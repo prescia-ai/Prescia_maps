@@ -173,6 +173,7 @@ export default function ProfilePage() {
               <Avatar
                 username={publicProfile.username ?? username!}
                 displayName={publicProfile.display_name}
+                avatarUrl={publicProfile.avatar_url}
                 size="xl"
               />
               <div className="min-w-0">
@@ -403,7 +404,7 @@ export default function ProfilePage() {
                           to={`/profile/${user.username}`}
                           className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-800/60 transition-colors"
                         >
-                          <Avatar username={user.username!} displayName={user.display_name} size="sm" />
+                          <Avatar username={user.username!} displayName={user.display_name} avatarUrl={user.avatar_url} size="sm" />
                           <div className="min-w-0">
                             <p className="text-sm font-medium text-white truncate">@{user.username}</p>
                             {user.display_name && (

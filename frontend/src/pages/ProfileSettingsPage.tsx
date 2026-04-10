@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import api, { disconnectGoogle, fetchGoogleAuthUrl } from '../api/client';
+import Avatar from '../components/Avatar';
+import api, { disconnectGoogle, fetchGoogleAuthUrl, uploadAvatar, deleteAvatar } from '../api/client';
 
 const BIO_MAX = 250;
 
@@ -21,6 +22,13 @@ export default function ProfileSettingsPage() {
   const [googleError, setGoogleError] = useState(false);
   const [connectingGoogle, setConnectingGoogle] = useState(false);
   const [disconnectingGoogle, setDisconnectingGoogle] = useState(false);
+
+  // Avatar upload state
+  const [avatarUploading, setAvatarUploading] = useState(false);
+  const [avatarSuccess, setAvatarSuccess] = useState(false);
+  const [avatarError, setAvatarError] = useState<string | null>(null);
+  const [removingAvatar, setRemovingAvatar] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Redirect if not logged in (only after auth has finished loading)
   useEffect(() => {
@@ -84,6 +92,76 @@ export default function ProfileSettingsPage() {
     } finally {
       setDisconnectingGoogle(false);
     }
+  }
+
+  async function handleAvatarFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setAvatarUploading(true);
+    setAvatarError(null);
+    setAvatarSuccess(false);
+
+    try {
+      // Client-side resize to max 400x400
+      const resizedFile = await resizeImage(file, 400, 400);
+      await uploadAvatar(resizedFile);
+      await refreshProfile();
+      setAvatarSuccess(true);
+      setTimeout(() => setAvatarSuccess(false), 3000);
+    } catch {
+      setAvatarError('Failed to upload photo. Please try again.');
+      setTimeout(() => setAvatarError(null), 5000);
+    } finally {
+      setAvatarUploading(false);
+      // Reset file input so same file can be re-selected
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    }
+  }
+
+  async function handleRemoveAvatar() {
+    setRemovingAvatar(true);
+    try {
+      await deleteAvatar();
+      await refreshProfile();
+    } catch {
+      setAvatarError('Failed to remove photo. Please try again.');
+      setTimeout(() => setAvatarError(null), 5000);
+    } finally {
+      setRemovingAvatar(false);
+    }
+  }
+
+  function resizeImage(file: File, maxW: number, maxH: number): Promise<File> {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        let { width, height } = img;
+        if (width > maxW || height > maxH) {
+          const ratio = Math.min(maxW / width, maxH / height);
+          width = Math.round(width * ratio);
+          height = Math.round(height * ratio);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) { reject(new Error('Canvas not supported')); return; }
+        ctx.drawImage(img, 0, 0, width, height);
+        canvas.toBlob(
+          (blob) => {
+            if (!blob) { reject(new Error('Canvas toBlob failed')); return; }
+            resolve(new File([blob], 'avatar.jpg', { type: 'image/jpeg' }));
+          },
+          'image/jpeg',
+          0.85,
+        );
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Image load failed')); };
+      img.src = url;
+    });
   }
 
   async function handleSave(e: React.FormEvent) {
@@ -169,6 +247,93 @@ export default function ProfileSettingsPage() {
         )}
 
         <form onSubmit={handleSave} className="space-y-4">
+          {/* Avatar upload card */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6">
+            <h2 className="text-sm font-semibold text-slate-200 mb-4">Profile Photo</h2>
+
+            {/* Avatar success toast */}
+            {avatarSuccess && (
+              <div className="mb-4 px-4 py-3 rounded-2xl bg-green-900/40 border border-green-800 text-green-300 text-sm flex items-center gap-2">
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                Profile photo updated!
+              </div>
+            )}
+
+            {/* Avatar error toast */}
+            {avatarError && (
+              <div className="mb-4 px-4 py-3 rounded-2xl bg-red-900/40 border border-red-800 text-red-300 text-sm">
+                {avatarError}
+              </div>
+            )}
+
+            <div className="flex items-center gap-5">
+              {/* Current avatar with loading overlay */}
+              <div className="relative flex-shrink-0">
+                <Avatar
+                  username={profile?.username ?? ''}
+                  displayName={profile?.display_name}
+                  avatarUrl={profile?.avatar_url}
+                  size="xl"
+                />
+                {avatarUploading && (
+                  <div className="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-2">
+                {/* Hidden file input */}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  className="hidden"
+                  onChange={handleAvatarFileChange}
+                />
+
+                {/* Upload button */}
+                <button
+                  type="button"
+                  disabled={!profile?.google_connected_at || avatarUploading}
+                  onClick={() => fileInputRef.current?.click()}
+                  title={!profile?.google_connected_at ? 'Connect Google Drive first' : undefined}
+                  className="bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-2 px-4 rounded-xl transition-colors flex items-center gap-2 text-sm"
+                >
+                  {avatarUploading ? (
+                    <>
+                      <span className="w-4 h-4 border-2 border-slate-400 border-t-transparent rounded-full animate-spin" />
+                      Uploading…
+                    </>
+                  ) : (
+                    profile?.avatar_url ? 'Change Photo' : 'Upload Photo'
+                  )}
+                </button>
+
+                {/* Connect Drive hint when not connected */}
+                {!profile?.google_connected_at && (
+                  <p className="text-xs text-slate-500">
+                    <a href="#google-drive" className="text-blue-400 hover:text-blue-300 underline">Connect Google Drive</a> to upload a photo.
+                  </p>
+                )}
+
+                {/* Remove button */}
+                {profile?.avatar_url && (
+                  <button
+                    type="button"
+                    disabled={removingAvatar || avatarUploading}
+                    onClick={handleRemoveAvatar}
+                    className="text-xs text-red-400 hover:text-red-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    {removingAvatar ? 'Removing…' : 'Remove'}
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
           {/* Profile info card */}
           <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6 space-y-5">
             {/* Display Name */}
@@ -251,7 +416,7 @@ export default function ProfileSettingsPage() {
           </div>
 
           {/* Google Drive section */}
-          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6">
+          <div id="google-drive" className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6">
             <h2 className="text-sm font-semibold text-slate-200 mb-1">Google Drive</h2>
             <p className="text-xs text-slate-500 mb-4">
               Connect your Google Drive to upload profile pictures and find photos.
