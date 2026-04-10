@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
+import PhotoGrid from './PhotoGrid';
+import ImageLightbox from './ImageLightbox';
 import {
   reactToPost,
   fetchComments,
@@ -47,6 +49,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
   const [commentInput, setCommentInput] = useState('');
   const [submittingComment, setSubmittingComment] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const isOwner = profile?.id === currentPost.author_id;
 
@@ -172,6 +175,23 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
       <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap break-words">
         {currentPost.content}
       </p>
+
+      {/* Photo grid */}
+      {currentPost.images && currentPost.images.length > 0 && (
+        <PhotoGrid
+          images={currentPost.images}
+          onImageClick={(idx) => setLightboxIndex(idx)}
+        />
+      )}
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && currentPost.images && currentPost.images.length > 0 && (
+        <ImageLightbox
+          images={currentPost.images}
+          initialIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+        />
+      )}
 
       {/* Reaction bar */}
       <div className="flex items-center gap-1 pt-1">

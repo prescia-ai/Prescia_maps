@@ -424,6 +424,7 @@ class UserPinResponse(BaseModel):
     finds_count: Optional[int] = None
     privacy: str = "public"
     created_at: Optional[Any] = None
+    images: List["PinImageResponse"] = Field(default_factory=list)
 
 
 class UserPinListResponse(BaseModel):
@@ -506,6 +507,22 @@ class PinSubmissionListResponse(BaseModel):
 REACTION_TYPES = {"gold", "bullseye", "shovel", "fire"}
 
 
+class PostImageResponse(BaseModel):
+    """Image attached to a post."""
+
+    id: UUID
+    url: str
+    position: int
+
+
+class PinImageResponse(BaseModel):
+    """Image attached to a hunt pin."""
+
+    id: UUID
+    url: str
+    position: int
+
+
 class PostCreate(BaseModel):
     """Request payload for creating a new feed post."""
 
@@ -527,6 +544,7 @@ class PostResponse(BaseModel):
     comment_count: int = 0
     reactions: Dict[str, int] = Field(default_factory=lambda: {"gold": 0, "bullseye": 0, "shovel": 0, "fire": 0})
     my_reaction: Optional[str] = None
+    images: List["PostImageResponse"] = Field(default_factory=list)
 
 
 class PostListResponse(BaseModel):

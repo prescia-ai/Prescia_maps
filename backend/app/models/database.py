@@ -352,6 +352,32 @@ class UserFollow(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
+class PostImage(Base):
+    """An image attached to a feed post, stored in the author's Google Drive."""
+
+    __tablename__ = "post_images"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    post_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    drive_file_id = Column(String(255), nullable=False)
+    url = Column(String(500), nullable=False)  # Public thumbnail URL
+    position = Column(Integer, nullable=False, default=0)  # Ordering: 0, 1, 2, 3
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class PinImage(Base):
+    """An image attached to a hunt pin, stored in the user's Google Drive."""
+
+    __tablename__ = "pin_images"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    pin_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    drive_file_id = Column(String(255), nullable=False)
+    url = Column(String(500), nullable=False)  # Public thumbnail URL
+    position = Column(Integer, nullable=False, default=0)  # Ordering: 0, 1, 2, 3
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------
