@@ -231,6 +231,7 @@ class User(Base):
     google_connected_at = Column(DateTime(timezone=True), nullable=True)
     google_email = Column(String(255), nullable=True)  # The Google account email they connected
     google_folder_id = Column(String(255), nullable=True)  # Google Drive "Prescia Maps" folder ID
+    avatar_url = Column(String(500), nullable=True)  # Public Google Drive thumbnail URL
 
 
 class UserPin(Base):

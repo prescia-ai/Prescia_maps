@@ -130,6 +130,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
           <Avatar
             username={currentPost.author_username ?? 'user'}
             displayName={currentPost.author_display_name}
+            avatarUrl={currentPost.author_avatar_url}
             size="sm"
           />
           <div className="min-w-0">
@@ -224,6 +225,7 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
                   <Avatar
                     username={c.author_username ?? 'user'}
                     displayName={c.author_display_name}
+                    avatarUrl={c.author_avatar_url}
                     size="xs"
                   />
                   <div className="flex-1 min-w-0">

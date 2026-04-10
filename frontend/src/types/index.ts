@@ -192,6 +192,7 @@ export interface Post {
   author_id: string;
   author_username: string | null;
   author_display_name: string | null;
+  author_avatar_url?: string | null;
   content: string;
   privacy: 'public' | 'followers' | 'private';
   created_at: string;
@@ -206,6 +207,7 @@ export interface Comment {
   author_id: string;
   author_username: string | null;
   author_display_name: string | null;
+  author_avatar_url?: string | null;
   content: string;
   created_at: string;
 }
@@ -214,6 +216,7 @@ export interface FollowInfo {
   user_id: string;
   username: string | null;
   display_name: string | null;
+  avatar_url?: string | null;
 }
 
 export interface PublicProfile {
@@ -227,4 +230,5 @@ export interface PublicProfile {
   followers_count: number;
   following_count: number;
   is_following: boolean;
+  avatar_url?: string | null;
 }

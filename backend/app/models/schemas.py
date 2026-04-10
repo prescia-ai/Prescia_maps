@@ -328,6 +328,7 @@ class UserProfile(BaseModel):
     google_email: Optional[str] = None
     google_connected_at: Optional[Any] = None
     google_folder_id: Optional[str] = None
+    avatar_url: Optional[str] = None
 
 
 class UserProfileSetup(BaseModel):
@@ -363,6 +364,7 @@ class UserProfilePublic(BaseModel):
     followers_count: int = 0
     following_count: int = 0
     is_following: bool = False
+    avatar_url: Optional[str] = None
 
 
 class UserProfileLimited(BaseModel):
@@ -518,6 +520,7 @@ class PostResponse(BaseModel):
     author_id: UUID
     author_username: Optional[str] = None
     author_display_name: Optional[str] = None
+    author_avatar_url: Optional[str] = None
     content: str
     privacy: str
     created_at: Optional[Any] = None
@@ -547,6 +550,7 @@ class CommentResponse(BaseModel):
     author_id: UUID
     author_username: Optional[str] = None
     author_display_name: Optional[str] = None
+    author_avatar_url: Optional[str] = None
     content: str
     created_at: Optional[Any] = None
 
@@ -574,6 +578,7 @@ class FollowInfo(BaseModel):
     user_id: UUID
     username: Optional[str] = None
     display_name: Optional[str] = None
+    avatar_url: Optional[str] = None
 
 
 class FollowListResponse(BaseModel):

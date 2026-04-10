@@ -16,6 +16,7 @@ interface UserProfile {
   google_email: string | null;
   google_connected_at: string | null;
   google_folder_id: string | null;
+  avatar_url: string | null;
 }
 
 interface AuthContextValue {
