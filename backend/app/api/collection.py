@@ -13,6 +13,7 @@ import logging
 import uuid
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, UploadFile, status
+from fastapi.responses import Response
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 from typing import Optional
@@ -188,7 +189,7 @@ async def update_collection_photo(
 # DELETE /collection/{photo_id} — delete a collection photo
 # ---------------------------------------------------------------------------
 
-@router.delete("/{photo_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{photo_id}", status_code=status.HTTP_204_NO_CONTENT, response_class=Response)
 async def delete_collection_photo(
     photo_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
