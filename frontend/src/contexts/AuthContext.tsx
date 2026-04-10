@@ -13,6 +13,8 @@ interface UserProfile {
   location: string | null;
   privacy: string;
   created_at: string | null;
+  google_email: string | null;
+  google_connected_at: string | null;
 }
 
 interface AuthContextValue {

@@ -46,5 +46,14 @@ class Settings(BaseSettings):
     SUPABASE_JWT_SECRET: str = ""
     SUPABASE_URL: str = ""
 
+    # Google OAuth2 (for Google Drive integration)
+    GOOGLE_CLIENT_ID: str = ""
+    GOOGLE_CLIENT_SECRET: str = ""
+    GOOGLE_REDIRECT_URI: str = "http://localhost:8000/api/v1/google/callback"
+    GOOGLE_TOKEN_ENCRYPTION_KEY: str = ""  # Fernet key for encrypting stored tokens
+
+    # Frontend URL (used for OAuth redirects)
+    FRONTEND_URL: str = "http://localhost:5173"
+
 
 settings = Settings()

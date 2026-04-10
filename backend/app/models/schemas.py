@@ -325,6 +325,8 @@ class UserProfile(BaseModel):
     location: Optional[str] = None
     privacy: str = "public"
     created_at: Optional[Any] = None
+    google_email: Optional[str] = None
+    google_connected_at: Optional[Any] = None
 
 
 class UserProfileSetup(BaseModel):

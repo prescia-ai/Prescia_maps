@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import api from '../api/client';
+import api, { fetchGoogleAuthUrl } from '../api/client';
 
 const BIO_MAX = 250;
 
@@ -17,6 +17,9 @@ export default function ProfileSettingsPage() {
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [googleSuccess, setGoogleSuccess] = useState(false);
+  const [googleError, setGoogleError] = useState(false);
+  const [connectingGoogle, setConnectingGoogle] = useState(false);
 
   // Redirect if not logged in (only after auth has finished loading)
   useEffect(() => {
@@ -34,6 +37,36 @@ export default function ProfileSettingsPage() {
       setPrivacy((profile.privacy as 'public' | 'friends' | 'private') ?? 'public');
     }
   }, [profile]);
+
+  // Handle Google OAuth callback query params
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const googleParam = params.get('google');
+    if (googleParam === 'connected') {
+      setGoogleSuccess(true);
+      refreshProfile();
+      setTimeout(() => setGoogleSuccess(false), 5000);
+    } else if (googleParam === 'error') {
+      setGoogleError(true);
+      setTimeout(() => setGoogleError(false), 5000);
+    }
+    if (googleParam) {
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function handleConnectGoogle() {
+    setConnectingGoogle(true);
+    try {
+      const url = await fetchGoogleAuthUrl();
+      window.location.href = url;
+    } catch {
+      setGoogleError(true);
+      setTimeout(() => setGoogleError(false), 5000);
+      setConnectingGoogle(false);
+    }
+  }
 
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
@@ -97,6 +130,23 @@ export default function ProfileSettingsPage() {
         {error && (
           <div className="mb-4 px-4 py-3 rounded-2xl bg-red-900/40 border border-red-800 text-red-300 text-sm">
             {error}
+          </div>
+        )}
+
+        {/* Google Drive success toast */}
+        {googleSuccess && (
+          <div className="mb-4 px-4 py-3 rounded-2xl bg-green-900/40 border border-green-800 text-green-300 text-sm flex items-center gap-2">
+            <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            Google Drive connected!
+          </div>
+        )}
+
+        {/* Google Drive error toast */}
+        {googleError && (
+          <div className="mb-4 px-4 py-3 rounded-2xl bg-red-900/40 border border-red-800 text-red-300 text-sm">
+            Failed to connect Google Drive. Please try again.
           </div>
         )}
 
@@ -180,6 +230,43 @@ export default function ProfileSettingsPage() {
                 {privacy === 'private' && 'Only your name and join date are visible to others.'}
               </p>
             </div>
+          </div>
+
+          {/* Google Drive section */}
+          <div className="bg-slate-900/50 border border-slate-800 rounded-3xl p-6">
+            <h2 className="text-sm font-semibold text-slate-200 mb-1">Google Drive</h2>
+            <p className="text-xs text-slate-500 mb-4">
+              Connect your Google Drive to upload profile pictures and find photos.
+            </p>
+            {profile?.google_email && profile?.google_connected_at ? (
+              <div className="flex items-center gap-2 text-green-400 text-sm">
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>
+                  Connected as <span className="font-medium">{profile.google_email}</span>
+                  <span className="text-slate-500 text-xs ml-1">
+                    · {new Date(profile.google_connected_at).toLocaleDateString()}
+                  </span>
+                </span>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={handleConnectGoogle}
+                disabled={connectingGoogle}
+                className="bg-slate-800 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-2 px-4 rounded-xl transition-colors flex items-center gap-2 text-sm"
+              >
+                {connectingGoogle ? (
+                  <>
+                    <span className="w-4 h-4 border-2 border-slate-400 border-t-transparent rounded-full animate-spin" />
+                    Redirecting…
+                  </>
+                ) : (
+                  'Connect Google Drive'
+                )}
+              </button>
+            )}
           </div>
 
           {/* Actions */}
