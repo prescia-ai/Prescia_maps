@@ -30,7 +30,7 @@ export default function ProfileSetupPage() {
     try {
       await api.put('/auth/profile-setup', {
         username,
-        display_name: displayName,
+        display_name: displayName.trim() || undefined,
         bio: bio || undefined,
         location: location || undefined,
       });

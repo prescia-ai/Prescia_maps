@@ -197,25 +197,18 @@ async def delete_account(
     uid = current_user.id
 
     # Delete pin images for this user's pins
-    user_pin_ids_result = await db.execute(
-        select(UserPin.id).where(UserPin.user_id == uid)
+    await db.execute(
+        delete(PinImage).where(PinImage.pin_id.in_(select(UserPin.id).where(UserPin.user_id == uid)))
     )
-    user_pin_ids = [row[0] for row in user_pin_ids_result.fetchall()]
-    if user_pin_ids:
-        await db.execute(delete(PinImage).where(PinImage.pin_id.in_(user_pin_ids)))
 
     # Delete user's pins
     await db.execute(delete(UserPin).where(UserPin.user_id == uid))
 
-    # Delete post images for this user's posts
-    user_post_ids_result = await db.execute(
-        select(Post.id).where(Post.author_id == uid)
-    )
-    user_post_ids = [row[0] for row in user_post_ids_result.fetchall()]
-    if user_post_ids:
-        await db.execute(delete(PostImage).where(PostImage.post_id.in_(user_post_ids)))
-        await db.execute(delete(PostComment).where(PostComment.post_id.in_(user_post_ids)))
-        await db.execute(delete(PostReaction).where(PostReaction.post_id.in_(user_post_ids)))
+    # Delete post images, comments, and reactions for this user's posts
+    user_posts_subq = select(Post.id).where(Post.author_id == uid)
+    await db.execute(delete(PostImage).where(PostImage.post_id.in_(user_posts_subq)))
+    await db.execute(delete(PostComment).where(PostComment.post_id.in_(user_posts_subq)))
+    await db.execute(delete(PostReaction).where(PostReaction.post_id.in_(user_posts_subq)))
 
     # Also delete comments and reactions this user made on other posts
     await db.execute(delete(PostComment).where(PostComment.author_id == uid))

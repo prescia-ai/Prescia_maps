@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import { deleteAccount } from '../api/client';
 
 export default function SecuritySettingsPage() {
-  const { user, signOut } = useAuth();
+  const { user, loading: authLoading, signOut } = useAuth();
   const navigate = useNavigate();
 
   // Change email
@@ -25,10 +25,14 @@ export default function SecuritySettingsPage() {
   const [deleteLoading, setDeleteLoading] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
 
-  if (!user) {
-    navigate('/login', { replace: true });
-    return null;
-  }
+  // Redirect if not logged in
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate('/login', { replace: true });
+    }
+  }, [authLoading, user, navigate]);
+
+  if (authLoading || !user) return null;
 
   async function handleUpdateEmail(e: React.FormEvent) {
     e.preventDefault();
