@@ -234,3 +234,11 @@ export interface PublicProfile {
   is_following: boolean;
   avatar_url?: string | null;
 }
+
+export interface CollectionPhoto {
+  id: string;
+  user_id: string;
+  url: string;
+  caption: string | null;
+  created_at: string;
+}

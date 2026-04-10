@@ -378,6 +378,19 @@ class PinImage(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
+class CollectionPhoto(Base):
+    """A curated photo in a user's personal collection, stored in Google Drive."""
+
+    __tablename__ = "collection_photos"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    drive_file_id = Column(String(255), nullable=False)
+    url = Column(String(500), nullable=False)           # Public thumbnail URL
+    caption = Column(Text, nullable=True)                # Optional description/caption
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------

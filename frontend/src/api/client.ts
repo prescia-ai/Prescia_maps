@@ -16,6 +16,7 @@ import type {
   ReactionType,
   FollowInfo,
   PublicProfile,
+  CollectionPhoto,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -401,9 +402,13 @@ export async function deletePostImages(postId: string): Promise<{ status: string
 export async function uploadPinImages(
   pinId: string,
   files: File[],
+  addToCollection: boolean = false,
 ): Promise<{ images: Array<{ id: string; url: string; position: number }> }> {
   const formData = new FormData();
   formData.append('pin_id', pinId);
+  if (addToCollection) {
+    formData.append('add_to_collection', 'true');
+  }
   for (const file of files) {
     formData.append('files', file);
   }
@@ -418,6 +423,52 @@ export async function uploadPinImages(
 export async function deletePinImages(pinId: string): Promise<{ status: string; count: number }> {
   const { data } = await api.delete<{ status: string; count: number }>(`/google/pin-images/${pinId}`);
   return data;
+}
+
+// ── Collection ─────────────────────────────────────────────────────────────────
+
+export async function fetchCollection(
+  username: string,
+  limit = 30,
+  offset = 0,
+): Promise<{ photos: CollectionPhoto[]; total: number }> {
+  const { data } = await api.get<{ photos: CollectionPhoto[]; total: number }>(
+    `/collection/${encodeURIComponent(username)}`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
+export async function uploadCollectionPhoto(
+  file: File,
+  caption?: string,
+): Promise<CollectionPhoto> {
+  const formData = new FormData();
+  formData.append('file', file);
+  if (caption) {
+    formData.append('caption', caption);
+  }
+  const { data } = await api.post<CollectionPhoto>(
+    '/collection',
+    formData,
+    { headers: { 'Content-Type': 'multipart/form-data' }, timeout: 60_000 },
+  );
+  return data;
+}
+
+export async function updateCollectionPhoto(
+  photoId: string,
+  caption: string | null,
+): Promise<CollectionPhoto> {
+  const { data } = await api.put<CollectionPhoto>(
+    `/collection/${photoId}`,
+    { caption },
+  );
+  return data;
+}
+
+export async function deleteCollectionPhoto(photoId: string): Promise<void> {
+  await api.delete(`/collection/${photoId}`);
 }
 
 export default api;

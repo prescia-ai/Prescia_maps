@@ -36,7 +36,7 @@ from app.auth.google import (
     upload_file_to_drive,
 )
 from app.config import settings
-from app.models.database import Post, PinImage, PostImage, User, UserPin, get_db
+from app.models.database import Post, PinImage, PostImage, User, UserPin, CollectionPhoto, get_db
 
 logger = logging.getLogger(__name__)
 
@@ -427,6 +427,7 @@ async def upload_post_images(
 async def upload_pin_images(
     pin_id: str = Form(...),
     files: List[UploadFile] = File(...),
+    add_to_collection: str = Form("false"),
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> dict:
@@ -478,6 +479,18 @@ async def upload_pin_images(
     await db.flush()
     for img in created_images:
         await db.refresh(img)
+
+    # Optionally copy photos to collection
+    if add_to_collection.lower() in ("true", "1", "yes"):
+        for img in created_images:
+            collection_photo = CollectionPhoto(
+                user_id=current_user.id,
+                drive_file_id=img.drive_file_id,
+                url=img.url,
+                caption=None,
+            )
+            db.add(collection_photo)
+        await db.flush()
 
     return {
         "images": [

@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { createPin } from '../api/client';
+import { createPin, uploadPinImages } from '../api/client';
+import { resizeImage } from '../utils/imageResize';
+import { useAuth } from '../contexts/AuthContext';
 
 interface LogHuntModalProps {
   lat: number;
@@ -9,6 +11,7 @@ interface LogHuntModalProps {
 }
 
 export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntModalProps) {
+  const { profile: myProfile } = useAuth();
   const today = new Date().toISOString().split('T')[0];
 
   const [name, setName] = useState('');
@@ -22,7 +25,36 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Image upload state
+  const [imageFiles, setImageFiles] = useState<File[]>([]);
+  const [addToCollection, setAddToCollection] = useState(false);
+  const [imageError, setImageError] = useState<string | null>(null);
+
   const notesLength = notes.length;
+  const googleConnected = !!myProfile?.google_connected_at;
+
+  function handleImageSelect(e: React.ChangeEvent<HTMLInputElement>) {
+    const selected = Array.from(e.target.files ?? []);
+    if (selected.length === 0) return;
+    const combined = [...imageFiles, ...selected].slice(0, 4);
+    const invalid = combined.find((f) => !['image/jpeg', 'image/png', 'image/webp'].includes(f.type));
+    if (invalid) {
+      setImageError('Only JPEG, PNG, and WebP images are allowed.');
+      return;
+    }
+    const oversized = combined.find((f) => f.size > 2 * 1024 * 1024);
+    if (oversized) {
+      setImageError('Each image must be smaller than 2MB.');
+      return;
+    }
+    setImageError(null);
+    setImageFiles(combined);
+    e.target.value = '';
+  }
+
+  function removeImage(index: number) {
+    setImageFiles((prev) => prev.filter((_, i) => i !== index));
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +69,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
 
     setIsSubmitting(true);
     try {
-      await createPin({
+      const pin = await createPin({
         name: name.trim(),
         latitude: parsedLat,
         longitude: parsedLon,
@@ -47,6 +79,19 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
         finds_count: findsCount !== '' ? parseInt(findsCount, 10) : null,
         privacy,
       });
+
+      // Upload images if any
+      if (imageFiles.length > 0 && googleConnected) {
+        try {
+          const resized = await Promise.all(
+            imageFiles.map((f) => resizeImage(f, 1200, 1200, 0.85))
+          );
+          await uploadPinImages(pin.id, resized, addToCollection);
+        } catch {
+          // Image upload failure is non-fatal; pin was already created
+        }
+      }
+
       onSuccess();
       onClose();
     } catch (err: any) {
@@ -169,6 +214,67 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
             />
           </div>
 
+          {/* Photos */}
+          {googleConnected && (
+            <div>
+              <label className="block text-xs font-medium text-slate-400 mb-1">
+                Photos <span className="text-slate-600">(optional, up to 4)</span>
+              </label>
+              {imageFiles.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {imageFiles.map((f, i) => (
+                    <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-slate-700">
+                      <img
+                        src={URL.createObjectURL(f)}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeImage(i)}
+                        className="absolute top-0.5 right-0.5 bg-black/60 text-white rounded-full p-0.5 hover:bg-black/80 transition-colors"
+                      >
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {imageFiles.length < 4 && (
+                <label className="flex items-center gap-2 text-xs text-slate-400 hover:text-slate-200 cursor-pointer transition-colors">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                  </svg>
+                  Add photo
+                  <input
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    multiple
+                    className="hidden"
+                    onChange={handleImageSelect}
+                  />
+                </label>
+              )}
+              {imageError && (
+                <p className="text-xs text-red-400 mt-1">{imageError}</p>
+              )}
+              {/* Add to collection toggle */}
+              {imageFiles.length > 0 && (
+                <label className="flex items-center gap-2 mt-2 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={addToCollection}
+                    onChange={(e) => setAddToCollection(e.target.checked)}
+                    className="w-3.5 h-3.5 accent-amber-500"
+                  />
+                  <span className="text-slate-400 text-xs">Add to collection?</span>
+                </label>
+              )}
+            </div>
+          )}
+
           {/* Privacy */}
           <div>
             <label className="block text-xs font-medium text-slate-400 mb-1">Privacy</label>
@@ -201,7 +307,9 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
           </button>
           <button
             type="submit"
+            form="log-hunt-form"
             disabled={isSubmitting}
+            onClick={handleSubmit as any}
             className="px-5 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed rounded-lg transition-colors flex items-center gap-2"
           >
             {isSubmitting && (
