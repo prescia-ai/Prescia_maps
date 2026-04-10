@@ -11,6 +11,7 @@ DELETE /google/avatar         — Remove the profile picture.
 
 from __future__ import annotations
 
+import json
 import logging
 import uuid
 from datetime import datetime, timezone
@@ -258,8 +259,6 @@ async def upload_avatar(
                 logger.warning("Failed to delete old avatar file %s: %s", old_file_id, exc)
 
     # 5. Upload the file to Google Drive using multipart upload
-    import json
-
     metadata = json.dumps({"name": file_name, "parents": [folder_id]}).encode()
     boundary = "prescia_avatar_boundary"
     body = (

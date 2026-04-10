@@ -86,7 +86,7 @@ export default function Avatar({
         src={avatarUrl}
         alt={`Avatar for ${username}`}
         aria-label={`Avatar for ${username}`}
-        className={`${imgSizeClass} ${color} rounded-full object-cover flex-shrink-0 ${className}`}
+        className={`${imgSizeClass} rounded-full object-cover flex-shrink-0 ${className}`}
         loading="lazy"
         onError={() => setImgFailed(true)}
       />
