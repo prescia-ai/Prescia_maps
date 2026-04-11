@@ -84,6 +84,34 @@ async def _decode_token(token: str) -> dict:
 
     Handles both HS256 (shared-secret) and ES256 (JWKS public-key) tokens.
     """
+    # ---- Temporary debug logging (remove once auth is verified working) ----
+    try:
+        _dbg_header = jwt.get_unverified_header(token)
+        _dbg_claims = jwt.get_unverified_claims(token)
+        logger.warning(
+            "JWT DEBUG: alg=%s kid=%s iss=%s aud=%s sub=%s",
+            _dbg_header.get("alg"),
+            _dbg_header.get("kid"),
+            _dbg_claims.get("iss"),
+            _dbg_claims.get("aud"),
+            _dbg_claims.get("sub"),
+        )
+        logger.warning(
+            "JWT DEBUG CONFIG: SUPABASE_URL=%r JWT_SECRET_set=%s",
+            settings.SUPABASE_URL,
+            "<configured>" if settings.SUPABASE_JWT_SECRET else "<not set>",
+        )
+        _expected_issuer = f"{settings.SUPABASE_URL}/auth/v1" if settings.SUPABASE_URL else None
+        logger.warning(
+            "JWT DEBUG: expected_issuer=%r token_issuer=%r match=%s",
+            _expected_issuer,
+            _dbg_claims.get("iss"),
+            _expected_issuer == _dbg_claims.get("iss"),
+        )
+    except Exception as _dbg_exc:
+        logger.warning("JWT DEBUG: could not parse token for debugging: %s", _dbg_exc)
+    # ---- End temporary debug logging ----
+
     try:
         header = jwt.get_unverified_header(token)
     except JWTError as exc:
