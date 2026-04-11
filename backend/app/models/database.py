@@ -517,13 +517,8 @@ async def create_tables() -> None:
             )
         # Add group_id column to posts table if it was created before groups feature
         await conn.execute(
-            text(
-                "ALTER TABLE posts ADD COLUMN IF NOT EXISTS"
-                " group_id UUID DEFAULT NULL"
-            )
+            text("ALTER TABLE posts ADD COLUMN IF NOT EXISTS group_id UUID DEFAULT NULL")
         )
         await conn.execute(
-            text(
-                "CREATE INDEX IF NOT EXISTS ix_posts_group_id ON posts (group_id)"
-            )
+            text("CREATE INDEX IF NOT EXISTS ix_posts_group_id ON posts (group_id)")
         )
