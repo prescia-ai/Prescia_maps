@@ -768,5 +768,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.73,
     "detecting_weight": 72
+  },
+  {
+    "name": "Wonderland Park, MA (Revere Beach)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.4087,
+    "longitude": -70.9931,
+    "description": "Wonderland Park at Revere Beach, Massachusetts operated from 1906 to 1911, built by the Boston, Revere Beach and Lynn Railroad at America's first public beach, featuring a large carousel, roller coasters, a casino, and a scenic railway that drew massive crowds from Boston via the rapid transit line. One of the most opulent amusement attractions in New England during its brief five-year existence, it burned down in 1911. The MBTA Blue Line station named 'Wonderland' commemorates the former park, and the Revere Beach area is publicly accessible. The beach and parkway area holds deposits from the park era and over a century of beach use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Luna Park, PA (Pittsburgh)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.4487,
+    "longitude": -79.9888,
+    "description": "Luna Park in Pittsburgh's Schenley Park area operated from 1905 to 1909 as an elaborate Pittsburgh Railways Company trolley park, featuring the distinctive twin towers and electric light displays modeled after the famous Coney Island Luna Park, along with roller coasters, a carousel, and a large midway attempting to bring world-class amusement to the Steel City. The Pittsburgh Luna Park was short-lived but ambitious, forced out by economic difficulties and competition from nearby Kennywood Park after just four years. The site near Schenley Park was subsequently redeveloped into the Oakland university district. The brief but intense operation left early twentieth-century coin deposits beneath the current Oakland development.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Carlin's Park, MD",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 39.3372,
+    "longitude": -76.7087,
+    "description": "Carlin's Park in Baltimore, Maryland operated from 1918 to 1955 along Reisterstown Road, featuring a roller coaster, a large ballroom, a carousel, and a swimming pool that made it Baltimore's premier indoor-outdoor entertainment complex during the 1920s, 30s, and 40s. The ballroom hosted nationally known big band acts and was a major social venue for Baltimore's Jewish community and broader middle class. After its 1955 closure the land was redeveloped into a shopping center. The former park site along Reisterstown Road represents thirty-seven years of intense Baltimore social activity, with coin and token losses from the big band era and early postwar years.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Electric Park, MD (Baltimore)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.321,
+    "longitude": -76.6415,
+    "description": "Electric Park in Baltimore, Maryland was built by the United Railways and Electric Company at Gwynn Oak Junction and operated from 1896 to 1916, featuring elaborate electrical illumination, a large dance hall, roller coasters, and a carousel that drew Baltimore crowds via the Pimlico streetcar line. It served as the city's premier outdoor entertainment destination during the height of the Baltimore streetcar era. The park competed with other Baltimore area trolley parks before closing during World War I disruptions. The former park grounds near Gwynn Oak in northwest Baltimore have been developed into the residential neighborhood, but pre-WWI Baltimore transit tokens and late Victorian silver coins would be primary finds in any surviving undisturbed areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Chestnut Hill Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.0874,
+    "longitude": -75.2098,
+    "description": "Chestnut Hill Park in northwest Philadelphia operated from 1898 to 1911 at the end of the Philadelphia, Germantown and Chestnut Hill Railway line, featuring roller coasters, a carousel, a large restaurant and dance hall, and scenic woodland picnic grounds that drew upper-middle-class Philadelphia families to the Wissahickon highlands. The park served an affluent patronage base compared to most trolley parks and occupied prime Chestnut Hill real estate. The site was developed into the Chestnut Hill residential district after its 1911 closure. Any green spaces on the former Chestnut Hill Park footprint could contain well-preserved pre-WWI silver coins from prosperous Philadelphia families who frequented this refined trolley park.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Creve Coeur Lake Resort, MO",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 38.724,
+    "longitude": -90.472,
+    "description": "Creve Coeur Lake in St. Louis County, Missouri hosted a series of resort hotels, excursion operations, and amusement attractions from the 1880s through the early twentieth century, accessible by the St. Louis street railway and drawing St. Louis families to the oxbow lake's picnic grounds, boating, and outdoor entertainment. Various entrepreneurs operated dance halls, roller coasters, and carousels on the lakeshore over several decades before the area was incorporated into Creve Coeur Lake Memorial Park. Today the park is a major St. Louis County recreational area with the former resort footprint now publicly accessible parkland. The lakeshore areas hold deposits from the late Victorian through Depression-era resort operations.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Muskegon Lake Resort Area, MI",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 43.2342,
+    "longitude": -86.2484,
+    "description": "Muskegon, Michigan hosted several lakeside resort operations on Muskegon Lake during the late nineteenth and early twentieth centuries, with the Muskegon Traction and Lighting Company operating pleasure grounds on the lake's south shore that drew the city's large lumber industry workforce to dance pavilions, boating, and summer entertainment. Muskegon was one of Michigan's most important lumber ports and the resort parks reflected the wealth of the lumbering era. After the lumber industry declined and the traction companies folded, the resort grounds were sold for development. Former resort areas along Muskegon Lake, some now part of the Muskegon State Park system, retain deposits from the lumber boom era resort activity.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Wildwood Park, MN (White Bear Lake)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 45.0836,
+    "longitude": -92.9978,
+    "description": "Wildwood Park at White Bear Lake, Minnesota operated from 1896 to 1929 as a Twin City Rapid Transit Company lakeside resort, featuring a large carousel, roller coaster, dance pavilion, and boating on White Bear Lake that drew Minneapolis and St. Paul families on summer excursions. The park was one of the most elegant TCRT resort properties, serving upper-middle-class Twin Cities families during the Gilded Age and Progressive Era. After closing in 1929 the park land was sold for residential development and White Bear Lake became an exclusive residential community. The former lakeshore park areas in the White Bear Lake neighborhood retain potential for late Victorian and Edwardian-era coin finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Gray's Lake Park, IA",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 41.5637,
+    "longitude": -93.6469,
+    "description": "Gray's Lake in Des Moines, Iowa hosted resort and amusement activities from the 1890s through the early twentieth century as a Des Moines streetcar destination, featuring boating, a large dance pavilion, and outdoor entertainment serving the growing Iowa capital city. The lake was originally a natural oxbow developed as a recreation area by the City of Des Moines and private entrepreneurs. Today Gray's Lake Park is a prominent Des Moines city park with a recreational trail around the lake, making the former resort areas entirely accessible public land. The public lake park retains deposits from over a century of recreational use, with the oldest layers dating from the streetcar resort era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Lakewood Fairgrounds, GA (Atlanta)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 33.7042,
+    "longitude": -84.4055,
+    "description": "The Lakewood Fairgrounds in Atlanta operated from 1916 to 2011 as the home of the annual Southeastern Fair, one of the South's premier regional fairs drawing hundreds of thousands of visitors each fall to livestock shows, carnival midways, concerts, and exhibitions across the sprawling south Atlanta grounds. The fair featured a famous lake, speedway, and extensive midway that made it a beloved Atlanta institution for nearly a century. After the Southeastern Fair association ended operations in 2011 the grounds fell into disrepair, with vintage speedway and fairground buildings deteriorating on city-owned land. The former Lakewood Fairgrounds in south Atlanta represent an extraordinary metal detecting opportunity with nearly a century of annual fair activity on now-accessible public land.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 92
   }
 ]
