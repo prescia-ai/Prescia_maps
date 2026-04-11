@@ -308,6 +308,7 @@ export default function ProfilePage() {
             <div className="flex items-center divide-x divide-stone-200">
               {[
                 { label: 'Hunts', value: pins.length },
+                { label: 'Contributed', value: publicProfile?.contributed_pins_count ?? 0 },
                 { label: 'Followers', value: publicProfile?.followers_count ?? 0 },
                 { label: 'Following', value: publicProfile?.following_count ?? 0 },
               ].map((stat) => (

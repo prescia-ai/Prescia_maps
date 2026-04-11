@@ -2,6 +2,107 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
+import { searchUsers } from '../api/client';
+
+function UserSearch() {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<Array<{ username: string; display_name: string | null; avatar_url: string | null }>>([]);
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
+
+  // Close when clicking outside
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  // Close on Escape key
+  useEffect(() => {
+    function handleKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setOpen(false);
+    }
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, []);
+
+  // Debounced search
+  useEffect(() => {
+    if (!query.trim()) {
+      setResults([]);
+      setOpen(false);
+      return;
+    }
+    const timer = setTimeout(async () => {
+      try {
+        const data = await searchUsers(query.trim());
+        setResults(data);
+        setOpen(true);
+      } catch {
+        setResults([]);
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  function handleSelect(username: string) {
+    setOpen(false);
+    setQuery('');
+    navigate(`/profile/${username}`);
+  }
+
+  return (
+    <div ref={ref} className="relative hidden sm:block">
+      <div className="relative">
+        <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none">
+          <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </span>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search users…"
+          className="w-48 bg-stone-100 border border-stone-200 rounded-lg pl-7 pr-3 py-1.5 text-xs text-stone-700 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
+        />
+      </div>
+      {open && (
+        <div className="absolute top-full mt-1 w-64 bg-white border border-stone-200 rounded-xl shadow-lg z-50 py-1 max-h-64 overflow-y-auto">
+          {results.length === 0 ? (
+            <div className="px-3 py-2 text-sm text-stone-400">No users found</div>
+          ) : (
+            results.map((user) => (
+              <button
+                key={user.username}
+                onClick={() => handleSelect(user.username)}
+                className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-stone-50 cursor-pointer transition-colors text-left"
+              >
+                <Avatar
+                  username={user.username}
+                  displayName={user.display_name ?? undefined}
+                  avatarUrl={user.avatar_url ?? undefined}
+                  size="sm"
+                />
+                <div className="flex flex-col min-w-0">
+                  <span className="text-stone-800 font-medium text-xs truncate">{user.username}</span>
+                  {user.display_name && (
+                    <span className="text-stone-400 text-xs truncate">{user.display_name}</span>
+                  )}
+                </div>
+              </button>
+            ))
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface NavbarProps {
   locationCount: number;
@@ -216,6 +317,9 @@ export default function Navbar({
             </button>
           )}
         </div>
+
+        {/* User Search */}
+        <UserSearch />
 
         {/* Status badges */}
         <div className="ml-auto flex items-center gap-2">
