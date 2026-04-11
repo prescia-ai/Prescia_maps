@@ -31,11 +31,11 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'battle',       label: 'Battle',         color: '#ef4444' },
       { key: 'structure',    label: 'Fort / Structure', color: '#f97316' },
-      { key: 'church',       label: 'Church',          color: '#ec4899' },
       { key: 'cemetery',     label: 'Cemetery',        color: '#6366f1' },
       { key: 'mission',      label: 'Mission',         color: '#d97706' },
       { key: 'school',       label: 'School',          color: '#8b5cf6' },
       { key: 'fairground',   label: 'Fairground',      color: '#eab308' },
+      { key: 'abandoned_fairground', label: 'Abandoned Fairground', color: '#d97706' },
       { key: 'trading_post',    label: 'Trading Post',     color: '#b45309' },
       { key: 'abandoned_church', label: 'Abandoned Church', color: '#ec4899' },
       { key: 'historic_brothel', label: 'Historic Brothel', color: '#f43f5e' },
