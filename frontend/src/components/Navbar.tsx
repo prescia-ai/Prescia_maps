@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
-import { searchUsers } from '../api/client';
+import { searchUsers, searchGroups } from '../api/client';
+import type { GroupSearchResult } from '../types';
 
 function UserSearch() {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<Array<{ username: string; display_name: string | null; avatar_url: string | null }>>([]);
+  const [userResults, setUserResults] = useState<Array<{ username: string; display_name: string | null; avatar_url: string | null }>>([]);
+  const [groupResults, setGroupResults] = useState<GroupSearchResult[]>([]);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
@@ -34,27 +36,41 @@ function UserSearch() {
   // Debounced search
   useEffect(() => {
     if (!query.trim()) {
-      setResults([]);
+      setUserResults([]);
+      setGroupResults([]);
       setOpen(false);
       return;
     }
     const timer = setTimeout(async () => {
       try {
-        const data = await searchUsers(query.trim());
-        setResults(data);
+        const [users, groups] = await Promise.all([
+          searchUsers(query.trim()),
+          searchGroups(query.trim()).catch(() => [] as GroupSearchResult[]),
+        ]);
+        setUserResults(users);
+        setGroupResults(groups as GroupSearchResult[]);
         setOpen(true);
       } catch {
-        setResults([]);
+        setUserResults([]);
+        setGroupResults([]);
       }
     }, 300);
     return () => clearTimeout(timer);
   }, [query]);
 
-  function handleSelect(username: string) {
+  function handleSelectUser(username: string) {
     setOpen(false);
     setQuery('');
     navigate(`/profile/${username}`);
   }
+
+  function handleSelectGroup(slug: string) {
+    setOpen(false);
+    setQuery('');
+    navigate(`/group/${slug}`);
+  }
+
+  const hasResults = userResults.length > 0 || groupResults.length > 0;
 
   return (
     <div ref={ref} className="relative hidden sm:block">
@@ -68,35 +84,70 @@ function UserSearch() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search users…"
+          placeholder="Search users or groups…"
           className="w-96 bg-stone-100 border border-stone-200 rounded-lg pl-7 pr-3 py-1.5 text-xs text-stone-700 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
         />
       </div>
       {open && (
-        <div className="absolute top-full mt-1 w-64 bg-white border border-stone-200 rounded-xl shadow-lg z-50 py-1 max-h-64 overflow-y-auto">
-          {results.length === 0 ? (
-            <div className="px-3 py-2 text-sm text-stone-400">No users found</div>
+        <div className="absolute top-full mt-1 w-72 bg-white border border-stone-200 rounded-xl shadow-lg z-50 py-1 max-h-80 overflow-y-auto">
+          {!hasResults ? (
+            <div className="px-3 py-2 text-sm text-stone-400">No results found</div>
           ) : (
-            results.map((user) => (
-              <button
-                key={user.username}
-                onClick={() => handleSelect(user.username)}
-                className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-stone-50 cursor-pointer transition-colors text-left"
-              >
-                <Avatar
-                  username={user.username}
-                  displayName={user.display_name ?? undefined}
-                  avatarUrl={user.avatar_url ?? undefined}
-                  size="sm"
-                />
-                <div className="flex flex-col min-w-0">
-                  <span className="text-stone-800 font-medium text-xs truncate">{user.username}</span>
-                  {user.display_name && (
-                    <span className="text-stone-400 text-xs truncate">{user.display_name}</span>
-                  )}
-                </div>
-              </button>
-            ))
+            <>
+              {userResults.length > 0 && (
+                <>
+                  <div className="px-3 py-1.5 text-xs font-medium text-stone-400 uppercase tracking-wide">Users</div>
+                  {userResults.map((user) => (
+                    <button
+                      key={user.username}
+                      onClick={() => handleSelectUser(user.username)}
+                      className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-stone-50 cursor-pointer transition-colors text-left"
+                    >
+                      <Avatar
+                        username={user.username}
+                        displayName={user.display_name ?? undefined}
+                        avatarUrl={user.avatar_url ?? undefined}
+                        size="sm"
+                      />
+                      <div className="flex flex-col min-w-0">
+                        <span className="text-stone-800 font-medium text-xs truncate">{user.username}</span>
+                        {user.display_name && (
+                          <span className="text-stone-400 text-xs truncate">{user.display_name}</span>
+                        )}
+                      </div>
+                    </button>
+                  ))}
+                </>
+              )}
+              {groupResults.length > 0 && (
+                <>
+                  {userResults.length > 0 && <div className="border-t border-stone-100 my-1" />}
+                  <div className="px-3 py-1.5 text-xs font-medium text-stone-400 uppercase tracking-wide">Groups</div>
+                  {groupResults.map((group) => (
+                    <button
+                      key={group.id}
+                      onClick={() => handleSelectGroup(group.slug)}
+                      className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-stone-50 cursor-pointer transition-colors text-left"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col min-w-0 flex-1">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-stone-800 font-medium text-xs truncate">{group.name}</span>
+                          <span className={`inline-flex items-center px-1.5 py-0 rounded-full text-[10px] font-medium ${group.privacy === 'public' ? 'bg-green-100 text-green-600' : 'bg-stone-100 text-stone-500'}`}>
+                            {group.privacy === 'public' ? 'Public' : 'Private'}
+                          </span>
+                        </div>
+                        <span className="text-stone-400 text-xs">{group.member_count} members</span>
+                      </div>
+                    </button>
+                  ))}
+                </>
+              )}
+            </>
           )}
         </div>
       )}
@@ -287,6 +338,28 @@ export default function Navbar({
                 />
               </svg>
               Feed
+            </Link>
+          )}
+
+          {user && (
+            <Link
+              to="/groups"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
+            >
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              Groups
             </Link>
           )}
 

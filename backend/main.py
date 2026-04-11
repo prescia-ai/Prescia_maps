@@ -22,6 +22,7 @@ from app.api.feed import router as feed_router
 from app.api.social import router as social_router
 from app.api.google_auth import router as google_auth_router
 from app.api.collection import router as collection_router
+from app.api.groups import router as groups_router
 from app.auth.routes import router as auth_router
 from app.models.database import create_tables
 
@@ -105,6 +106,7 @@ def create_app() -> FastAPI:
     app.include_router(auth_router, prefix="/api/v1")
     app.include_router(google_auth_router, prefix="/api/v1")
     app.include_router(collection_router, prefix="/api/v1")
+    app.include_router(groups_router, prefix="/api/v1")
 
     return app
 

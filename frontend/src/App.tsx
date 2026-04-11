@@ -11,6 +11,9 @@ import SubmitPinPage from './pages/SubmitPinPage';
 import AdminSubmissionsPage from './pages/AdminSubmissionsPage';
 import AdminSubmissionReviewPage from './pages/AdminSubmissionReviewPage';
 import FeedPage from './pages/FeedPage';
+import GroupPage from './pages/GroupPage';
+import CreateGroupPage from './pages/CreateGroupPage';
+import MyGroupsPage from './pages/MyGroupsPage';
 
 /**
  * Wraps protected routes so that authenticated users who haven't yet
@@ -43,6 +46,9 @@ export default function App() {
         <Route path="/settings/security" element={<RequireProfile><SecuritySettingsPage /></RequireProfile>} />
         <Route path="/admin/submissions/:id" element={<RequireProfile><AdminSubmissionReviewPage /></RequireProfile>} />
         <Route path="/admin/submissions" element={<RequireProfile><AdminSubmissionsPage /></RequireProfile>} />
+        <Route path="/groups/create" element={<RequireProfile><CreateGroupPage /></RequireProfile>} />
+        <Route path="/groups" element={<RequireProfile><MyGroupsPage /></RequireProfile>} />
+        <Route path="/group/:slug" element={<RequireProfile><GroupPage /></RequireProfile>} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>

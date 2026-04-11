@@ -482,4 +482,77 @@ export async function searchUsers(
   return data;
 }
 
+// ── Groups ─────────────────────────────────────────────────────────────────────
+
+export async function createGroup(data: { name: string; description?: string; privacy?: string }) {
+  const { data: result } = await api.post('/groups', data);
+  return result;
+}
+
+export async function searchGroups(query: string) {
+  const { data } = await api.get('/groups/search', { params: { q: query } });
+  return data;
+}
+
+export async function fetchMyGroups() {
+  const { data } = await api.get('/groups/my');
+  return data;
+}
+
+export async function fetchGroup(slug: string) {
+  const { data } = await api.get(`/groups/${encodeURIComponent(slug)}`);
+  return data;
+}
+
+export async function updateGroup(slug: string, data: { name?: string; description?: string; privacy?: string }) {
+  const { data: result } = await api.put(`/groups/${encodeURIComponent(slug)}`, data);
+  return result;
+}
+
+export async function deleteGroup(slug: string) {
+  await api.delete(`/groups/${encodeURIComponent(slug)}`);
+}
+
+export async function joinGroup(slug: string) {
+  const { data } = await api.post(`/groups/${encodeURIComponent(slug)}/join`);
+  return data;
+}
+
+export async function leaveGroup(slug: string) {
+  await api.post(`/groups/${encodeURIComponent(slug)}/leave`);
+}
+
+export async function fetchGroupMembers(slug: string) {
+  const { data } = await api.get(`/groups/${encodeURIComponent(slug)}/members`);
+  return data;
+}
+
+export async function fetchGroupRequests(slug: string) {
+  const { data } = await api.get(`/groups/${encodeURIComponent(slug)}/requests`);
+  return data;
+}
+
+export async function approveGroupRequest(slug: string, username: string) {
+  const { data } = await api.post(`/groups/${encodeURIComponent(slug)}/members/${encodeURIComponent(username)}/approve`);
+  return data;
+}
+
+export async function denyGroupRequest(slug: string, username: string) {
+  await api.post(`/groups/${encodeURIComponent(slug)}/members/${encodeURIComponent(username)}/deny`);
+}
+
+export async function kickGroupMember(slug: string, username: string) {
+  await api.post(`/groups/${encodeURIComponent(slug)}/members/${encodeURIComponent(username)}/kick`);
+}
+
+export async function changeGroupMemberRole(slug: string, username: string, role: string) {
+  const { data } = await api.put(`/groups/${encodeURIComponent(slug)}/members/${encodeURIComponent(username)}/role`, { role });
+  return data;
+}
+
+export async function inviteToGroup(slug: string, username: string) {
+  const { data } = await api.post(`/groups/${encodeURIComponent(slug)}/invite`, { username });
+  return data;
+}
+
 export default api;

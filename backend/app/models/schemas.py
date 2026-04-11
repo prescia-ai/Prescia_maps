@@ -644,3 +644,83 @@ class CollectionPhotoUpdate(BaseModel):
     """Request payload for editing a collection photo's caption."""
 
     caption: Optional[str] = Field(None, max_length=500)
+
+
+# ---------------------------------------------------------------------------
+# Group schemas
+# ---------------------------------------------------------------------------
+
+class GroupCreate(BaseModel):
+    """Request payload for creating a new group."""
+
+    name: str = Field(..., min_length=1, max_length=100)
+    description: Optional[str] = Field(None, max_length=1000)
+    privacy: str = Field(default="public", pattern=r"^(public|private)$")
+
+
+class GroupUpdate(BaseModel):
+    """Request payload for updating group fields (all optional)."""
+
+    name: Optional[str] = Field(None, min_length=1, max_length=100)
+    description: Optional[str] = Field(None, max_length=1000)
+    privacy: Optional[str] = Field(None, pattern=r"^(public|private)$")
+
+
+class GroupResponse(BaseModel):
+    """Full group record returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    name: str
+    slug: str
+    description: Optional[str]
+    privacy: str
+    created_by: UUID
+    created_at: Any
+    updated_at: Optional[Any] = None
+    member_count: int = 0
+    is_member: bool = False
+    user_role: Optional[str] = None  # "owner", "moderator", "member", or None
+
+
+class GroupListResponse(BaseModel):
+    """Paginated list of groups."""
+
+    groups: List[GroupResponse]
+    total: int
+
+
+class GroupMemberResponse(BaseModel):
+    """Member info returned in a group member list."""
+
+    user_id: UUID
+    username: Optional[str] = None
+    display_name: Optional[str] = None
+    avatar_url: Optional[str] = None
+    role: str
+    joined_at: Any
+
+
+class GroupMemberListResponse(BaseModel):
+    """Paginated list of group members."""
+
+    members: List[GroupMemberResponse]
+    total: int
+
+
+class GroupSearchResult(BaseModel):
+    """Minimal group info returned by the search endpoint."""
+
+    id: UUID
+    name: str
+    slug: str
+    description: Optional[str] = None
+    privacy: str
+    member_count: int = 0
+
+
+class GroupInvite(BaseModel):
+    """Request payload for inviting a user to a group."""
+
+    username: str
