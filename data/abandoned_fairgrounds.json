@@ -11,39 +11,6 @@
     "detecting_weight": 90
   },
   {
-    "name": "Riverview Park, IL",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 41.9397,
-    "longitude": -87.7263,
-    "description": "Riverview Park operated from 1904 to 1967 in Chicago's North Side, covering 140 acres and featuring over 100 rides including the Bobs roller coaster, making it one of the largest amusement parks in America. Accessible by streetcar from downtown Chicago, it drew enormous crowds on weekends and holidays for over six decades. The park closed abruptly in October 1967 and the land was sold for a shopping mall and police training facility, but portions of the old park footprint remain as open ground. Decades of dropped coins, midway game prizes, and picnic-area losses make surviving undeveloped sections highly attractive for metal detecting.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.88,
-    "detecting_weight": 85
-  },
-  {
-    "name": "White City Amusement Park, IL",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 41.7797,
-    "longitude": -87.5972,
-    "description": "White City opened in 1905 at 63rd Street and South Park Avenue on Chicago's South Side, named for its elaborate white-painted electric lighting, and featured a casino, roller coasters, a dance hall, and a large midway serving Chicago's working-class neighborhoods. The park survived a massive fire in 1927 and continued operating until 1939, when a second fire destroyed the remaining structures. The site was subsequently redeveloped into mixed commercial and residential land. Pre-WWI silver coins and transit tokens would be the primary targets in any surviving undeveloped sections.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 78
-  },
-  {
-    "name": "Palisades Amusement Park, NJ",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 40.8501,
-    "longitude": -73.9688,
-    "description": "Palisades Amusement Park operated from 1898 to 1971 on the Palisades cliffs overlooking the Hudson River in Fort Lee, New Jersey, drawing over a million visitors annually during its peak years with rides, a saltwater pool, and a famous midway. The park was immortalized in songs by Chuck Berry and others, and served as a day-trip destination for millions of New York City residents who crossed the Hudson by ferry and trolley. After its 1971 closure the rides were demolished and high-rise apartment buildings constructed on most of the site. Any remaining undeveloped margins or green spaces on the former grounds would retain coins and tokens from seven decades of massive crowds.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.88,
-    "detecting_weight": 75
-  },
-  {
     "name": "Savin Rock Park, CT",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -75,17 +42,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.88,
     "detecting_weight": 85
-  },
-  {
-    "name": "Willow Grove Park, PA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 40.1428,
-    "longitude": -75.1186,
-    "description": "Willow Grove Park in Montgomery County, Pennsylvania operated from 1896 to 1975, renowned for its summer concerts by John Philip Sousa and Victor Herbert, along with major roller coasters and a classic carousel drawing Philadelphia-area crowds via the Reading Railway and Willow Grove Branch streetcar. The park hosted nearly eighty years of high-traffic use before closing in 1975 when the land was converted to a shopping mall. Peripheral park areas and former picnic grounds may retain metal detecting potential. Silver coins and brass tokens from the early twentieth century would be primary finds in any surviving open sections.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.9,
-    "detecting_weight": 72
   },
   {
     "name": "Rocky Glen Park, PA",
@@ -130,17 +86,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.85,
     "detecting_weight": 83
-  },
-  {
-    "name": "Chester Park, OH",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 39.1534,
-    "longitude": -84.4813,
-    "description": "Chester Park in Norwood near Cincinnati, Ohio operated from 1895 to 1932 as a Cincinnati traction company trolley park, featuring a large swimming pool, roller coaster, dance pavilion, and extensive picnic grounds that made it a beloved destination for Queen City families. The park survived World War I but fell victim to the Depression and automobile competition, closing permanently in 1932 with its structures subsequently demolished. The site was eventually redeveloped into residential and commercial uses, though peripheral green spaces may retain detecting potential. The park's pre-Depression operation makes it a target for early twentieth-century coins, including silver quarters and dimes from the 1890s through 1920s.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.82,
-    "detecting_weight": 76
   },
   {
     "name": "Fontaine Ferry Park, KY",
@@ -264,17 +209,6 @@
     "detecting_weight": 78
   },
   {
-    "name": "Bob-Lo Island, MI",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 42.0821,
-    "longitude": -83.1845,
-    "description": "Bob-Lo Island (Bois Blanc Island) in the Detroit River operated as an amusement park from 1898 to 1993, accessible only by steamboat ferry from Detroit and Amherstburg, Ontario, and featuring a classic wooden roller coaster, ballroom, carousel, and midway that drew hundreds of thousands annually at its peak. The island was a beloved summer tradition for multiple generations of Detroit families, and the steamboat excursion to reach it made the experience uniquely special. After the park closed in 1993 the island was subdivided for residential development. Undeveloped sections of the former park grounds on the island may retain detecting potential, though access requires watercraft.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 75
-  },
-  {
     "name": "Excelsior Amusement Park, MN",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -330,17 +264,6 @@
     "detecting_weight": 76
   },
   {
-    "name": "Idora Park, CA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 37.7982,
-    "longitude": -122.2146,
-    "description": "Idora Park in Oakland, California operated from 1906 to 1929 in the Temescal neighborhood, developed by the Key Route railway as a streetcar destination featuring roller coasters, a carousel, a dance pavilion, and picnic grounds that made it the primary outdoor amusement destination for East Bay families in the early twentieth century. The park was devastated by the 1929 stock market crash and closed permanently, with its land subsequently subdivided for the residential Temescal neighborhood. A small public park bearing the Idora name was preserved on a portion of the original site and remains accessible today. The surviving park greenery represents the remaining footprint of this early San Francisco Bay Area amusement destination.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.83,
-    "detecting_weight": 74
-  },
-  {
     "name": "Luna Park, WA",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -350,17 +273,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.82,
     "detecting_weight": 77
-  },
-  {
-    "name": "Jantzen Beach Amusement Park, OR",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 45.6244,
-    "longitude": -122.7054,
-    "description": "Jantzen Beach Amusement Park on Hayden Island in Portland, Oregon operated from 1928 to 1970, featuring four roller coasters, the largest carousel on the West Coast, a large swimming pool, and a ballroom that hosted big bands during the swing era. Accessible by the Interstate Avenue streetcar and later by automobile, it drew Portland-area families for forty-two years. After its 1970 closure the rides were removed and the island redeveloped into a large shopping mall and residential community. The former park's magnificent carousel was preserved and moved to Oaks Park in Portland, while the grounds contained extraordinary fair activity spanning four decades.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 72
   },
   {
     "name": "Saltair Resort, UT",
@@ -383,17 +295,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.78,
     "detecting_weight": 75
-  },
-  {
-    "name": "Chutes Park, CA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 34.0489,
-    "longitude": -118.2529,
-    "description": "Chutes Park in Los Angeles, California operated from 1887 to 1912 in the Westlake district near downtown, featuring the original Shoot the Chutes water ride, a carousel, and the first roller coaster in Southern California, drawing Victorian-era Los Angeles residents on the newly constructed streetcar network. The park was the city's earliest major amusement attraction, predating the Southern California boom by nearly two decades and introducing Los Angeles to the trolley park concept. The Westlake neighborhood has since been densely developed and the park site is now urban Los Angeles. The pre-World War I era of operation makes this a historically significant site for early silver coins and Victorian-era personal effects.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.77,
-    "detecting_weight": 72
   },
   {
     "name": "Venice Amusement Pier, CA",
@@ -495,17 +396,6 @@
     "detecting_weight": 84
   },
   {
-    "name": "Olympic Park, NJ",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 40.7282,
-    "longitude": -74.2668,
-    "description": "Olympic Park in Maplewood, New Jersey operated from 1887 to 1965 as one of New Jersey's oldest continuous amusement parks, built at the end of the Maplewood streetcar line and featuring the famous Dips roller coaster, a carousel, and a large swimming pool that drew Essex County families for nearly eighty years. The park served as a weekend destination for Newark's immigrant and working-class communities, with German, Italian, and Jewish families making up a large portion of the patronage. After its 1965 closure the land was redeveloped into a residential subdivision. The former park grounds beneath current Maplewood housing represent nearly eight decades of dropped coins, transit tokens, and personal effects from New Jersey's immigrant communities.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.82,
-    "detecting_weight": 74
-  },
-  {
     "name": "Bertrand Island Park, NJ",
     "type": "abandoned_fairground",
     "category": "resort_park",
@@ -602,7 +492,7 @@
     "description": "The Cotton States and International Exposition was held in Atlanta, Georgia in 1895 in what is now Piedmont Park, drawing nearly 800,000 visitors to exhibits celebrating Southern industrial recovery after the Civil War and serving as the backdrop for Booker T. Washington's famous Atlanta Compromise speech. The exposition occupied the entire area of the current Piedmont Park in Midtown Atlanta, with lavish temporary buildings housing industrial, agricultural, and cultural exhibits from across the South. After the exposition closed the grounds were developed into Piedmont Park, Atlanta's premier urban park. The park's soil has been accumulating coins and artifacts since 1895, with the deepest deposits dating from the exposition year itself.",
     "source": "historic_fairgrounds",
     "confidence": 0.83,
-    "detecting_weight": 82
+    "detecting_weight": 70
   },
   {
     "name": "Tennessee Centennial Exposition Site, TN",
@@ -613,7 +503,7 @@
     "description": "The Tennessee Centennial Exposition was held in Nashville in 1897 on a 200-acre site in West Nashville, drawing nearly 1.8 million visitors to its elaborate exhibits including a full-scale replica of the Parthenon that became the exposition's most famous feature. The exposition celebrated Tennessee's 100th anniversary of statehood and included exhibits from across the South and nation. After the exposition closed, the grounds became Centennial Park, and the Parthenon replica was rebuilt in permanent materials in 1931. Nashville's Centennial Park is now a public urban park where the 1897 exposition grounds remain accessible, with the Parthenon standing on its original site creating a publicly accessible metal detecting location with exposition-era deposits.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 83
+    "detecting_weight": 72
   },
   {
     "name": "Lewis and Clark Centennial Exposition, OR",
@@ -635,7 +525,7 @@
     "description": "The Alaska-Yukon-Pacific Exposition was held on the University of Washington campus in Seattle in 1909, drawing 3.7 million visitors to a 250-acre fairground designed by the Olmsted Brothers that was deliberately planned to become the permanent UW campus after the fair closed. The exposition celebrated Alaska and Pacific commerce and featured a famous Pay Streak midway, international exhibits, and elaborate grounds that were converted into the modern UW campus layout. The current University of Washington campus directly preserves the 1909 exposition footprint, with Rainier Vista and the Liberal Arts Quadrangle occupying original fair territory. The campus grounds carry deposits from both the 1909 exposition and over a century of university use.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 79
+    "detecting_weight": 67
   },
   {
     "name": "California Midwinter Exposition Site, CA",
@@ -646,7 +536,7 @@
     "description": "The California Midwinter International Exposition was held in San Francisco's Golden Gate Park from January through July 1894, drawing over two million visitors to elaborate Egyptian, Moorish, and Mission Revival exhibit buildings promoting California's mild winter climate to the world. The fair was organized by San Francisco Chronicle publisher M.H. de Young and resulted in the permanent de Young Museum, originally the Fine Arts Building of the exposition. Golden Gate Park's Music Concourse area directly preserves the center of the 1894 exposition grounds, with the de Young Museum and Academy of Sciences standing on original fair territory. The publicly accessible Music Concourse holds deposits from the 1894 exposition and 130 years of subsequent park use.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 80
+    "detecting_weight": 68
   },
   {
     "name": "Jamestown Exposition Site, VA",
@@ -943,7 +833,7 @@
     "description": "The 1904 Louisiana Purchase Exposition (St. Louis World's Fair) occupied 1,272 acres of Forest Park and adjacent Washington University campus, drawing nearly 20 million visitors during its seven-month run and leaving behind permanent structures including the Palace of Fine Arts (now the Saint Louis Art Museum) and extensive grounds that became the modern Forest Park. The Fair featured over 1,500 buildings, a massive Pike midway, international pavilions, and the debut of new American foods. The entire 1,300-acre Forest Park and surrounding campus carry deposits from the 20 million visitors who attended, with the deepest and richest deposits in the former Pike midway area near the Grand Basin. Forest Park is among the greatest metal detecting sites in America.",
     "source": "historic_fairgrounds",
     "confidence": 0.92,
-    "detecting_weight": 95
+    "detecting_weight": 82
   },
   {
     "name": "Bay View Assembly, MI",
@@ -976,7 +866,7 @@
     "description": "The Interstate Industrial Exposition Building on the Chicago lakefront in Grant Park hosted annual industrial expositions from 1873 to 1891, drawing hundreds of thousands of Chicago business leaders, workers, and visitors to exhibits of machinery, manufactured goods, and industrial products in one of the largest exhibition halls in America at the time. The building stood on the site now occupied by the Art Institute of Chicago and served as Chicago's primary exhibition venue before the 1893 World's Columbian Exposition. The Art Institute and surrounding Grant Park grounds occupy the former exposition site, with the museum's Congress Plaza and Millennium Park in the vicinity holding deposits from the industrial exposition era and the Columbian Exposition period.",
     "source": "historic_fairgrounds",
     "confidence": 0.8,
-    "detecting_weight": 76
+    "detecting_weight": 64
   },
   {
     "name": "Old Dominion Speedway Park, VA",
