@@ -9,6 +9,7 @@ well-known endpoint on first use and caching it for one hour.
 
 from __future__ import annotations
 
+import base64
 import logging
 import time
 from typing import Any, Dict, Optional
@@ -162,20 +163,48 @@ async def _decode_token(token: str) -> dict:
                 headers={"WWW-Authenticate": "Bearer"},
             ) from exc
     else:
-        # HS256 fallback for backwards compatibility
+        # HS256 — legacy shared-secret verification
         try:
             issuer = (
                 f"{settings.SUPABASE_URL.rstrip('/')}/auth/v1"
                 if settings.SUPABASE_URL
                 else None
             )
-            payload = jwt.decode(
-                token,
-                settings.SUPABASE_JWT_SECRET,
-                algorithms=["HS256"],
-                audience="authenticated",
-                issuer=issuer,
-            )
+
+            # Supabase legacy JWT secrets are base64-encoded.
+            # Try base64-decoded secret first, then fall back to raw string.
+            secret = settings.SUPABASE_JWT_SECRET
+            decoded_secret = None
+            try:
+                decoded_secret = base64.b64decode(secret)
+            except base64.binascii.Error:
+                pass  # Not valid base64 — use raw string
+
+            # Try base64-decoded first (Supabase standard)
+            payload = None
+            if decoded_secret is not None:
+                try:
+                    payload = jwt.decode(
+                        token,
+                        decoded_secret,
+                        algorithms=["HS256"],
+                        audience="authenticated",
+                        issuer=issuer,
+                    )
+                except JWTError as b64_exc:
+                    logger.debug("HS256 JWT validation failed with base64-decoded secret: %s", b64_exc)
+                    # Fall through to try raw secret
+
+            # Fall back to raw string secret
+            if payload is None:
+                payload = jwt.decode(
+                    token,
+                    secret,
+                    algorithms=["HS256"],
+                    audience="authenticated",
+                    issuer=issuer,
+                )
+
         except JWTError as exc:
             logger.debug("HS256 JWT validation failed: %s", exc)
             raise HTTPException(
