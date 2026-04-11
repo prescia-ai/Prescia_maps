@@ -1208,5 +1208,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.75,
     "detecting_weight": 68
+  },
+  {
+    "name": "Maple Beach Grove, NH (Lake Winnipesaukee)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 43.5978,
+    "longitude": -71.4561,
+    "description": "Maple Beach Grove on the western shore of Lake Winnipesaukee in Meredith, New Hampshire operated as a lakeside resort and picnic ground from the 1870s through the 1920s, serving summer visitors who arrived by Lake Winnipesaukee steamboat to spend days in the shaded maple grove with its dancing pavilion, refreshment stands, and swimming beach. The grove was a destination for Boston mill workers and New Hampshire farmers alike during the Gilded Age when the steamboat Meredith served a circuit of lake resorts. After the steamboat era ended the grove fell into private hands and eventually became a small open shoreline park area. The former grove and beach area hold deposits from five decades of Victorian and Edwardian summer recreation including coins, jewelry, and personal effects from Boston-area vacationers.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Crystal Springs Chautauqua, GA (Powder Springs)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 33.8618,
+    "longitude": -84.6857,
+    "description": "The Crystal Springs Chautauqua Assembly in Powder Springs, Georgia operated from 1886 to 1910 in the mineral spring-rich hills of Cobb County, drawing thousands of Atlantans and North Georgia residents by rail to summer assemblies featuring lectures, concerts, and religious programs around the therapeutic springs that gave the town its name. The Chautauqua occupied a wooded hillside with an open-air tabernacle, tent grounds, and hotel facilities that made it a major summer cultural destination for the New South elite. After the Chautauqua movement declined the grounds reverted to open land and the springs area is now part of the Powder Springs city park system. The combination of pre-Civil War mineral spring history and Chautauqua-era crowds makes this an unusually deep site for detecting in the Georgia Piedmont.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Nantasket Beach Resort Grounds, MA",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 42.2268,
+    "longitude": -70.8917,
+    "description": "Nantasket Beach in Hull, Massachusetts developed as a major resort and amusement area from the 1870s through the 1980s, served by the Old Colony Railroad and later steamboats from Boston, featuring multiple competing amusement parks including Paragon Park, the Carousel Under the Clock, and dozens of smaller attractions along the Atlantic shore that made it the premier summer destination for Boston's working class. The resort district contracted dramatically after Paragon Park's 1984 closure, and Hurricane Bob (1991) destroyed much of the remaining commercial infrastructure. The surviving state-owned beach reservation (Nantasket Beach Reservation) preserves open sand and grassy areas behind the seawall where the dense resort infrastructure once stood. Over a century of massive summer crowds on this beach makes it one of the highest-density lost-artifact locations in New England.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Lake Matoaka Assembly Grounds, VA (Williamsburg area)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 37.2704,
+    "longitude": -76.7078,
+    "description": "The Lake Matoaka area near Williamsburg, Virginia hosted Chautauqua assemblies and summer resort gatherings from the 1890s through the 1920s, drawing Tidewater Virginia families to the shaded shores of the historic lake that was named for the daughter of Chief Powhatan. The assembly grounds featured a wooden tabernacle, tent sites, and bathing facilities in a wooded peninsula setting that was part of the broader Colonial-era landscape of the James-York Peninsula. The lake and surrounding College of William and Mary land now preserve the former assembly area as part of the campus natural area. The combination of Colonial-era Native American history and late nineteenth-century resort use makes this location unusually rich for multiple periods of artifact deposition.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Sunny Side Trolley Park, SC (Columbia)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 33.997,
+    "longitude": -81.0623,
+    "description": "Sunny Side Park in Columbia, South Carolina operated from 1892 to 1919 as a trolley park at the end of the Columbia Street Railway Company's Heyward Street line, offering Columbia residents a shaded grove on the northern edge of the city with a dance pavilion, picnic grounds, and seasonal carnival attractions that served as the primary outdoor recreation for the capital city's workers and government employees during the New South era. The park was developed as a loss-leader by the street railway to generate off-peak ridership and was especially popular during political rally seasons when legislators and lobbyists from across South Carolina descended on the capital. The site was developed into a residential neighborhood in the 1920s, with some open green space remaining along the original streetcar right-of-way. Reconstruction-era and Gilded Age coins alongside South Carolina political tokens would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Thousand Island Park Chautauqua, NY",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 44.3028,
+    "longitude": -76.0247,
+    "description": "Thousand Island Park on Wellesley Island in the St. Lawrence River has operated as a Methodist Chautauqua community since 1875, and the assembly grounds and Victorian cottage community it established represents one of the best-preserved original Chautauqua landscapes in America. The park's open assembly grounds, tabernacle lawn, and public waterfront areas have accumulated deposits from 150 years of summer religious retreats, lectures, and family gatherings from across the Northeast and Canada. The publicly accessible portions of the island and the outer beach areas are legally open for recreational use. The longevity of this site \u2014 longer continuous operation than almost any other Chautauqua in the country \u2014 makes it exceptional for detecting Victorian through mid-twentieth century personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.86,
+    "detecting_weight": 84
+  },
+  {
+    "name": "Hermitage Springs Resort, TN (Hermitage)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 36.1819,
+    "longitude": -86.5856,
+    "description": "Hermitage Springs was a popular mineral spring resort near the Hermitage (Andrew Jackson's plantation home) in Davidson County, Tennessee, operating from the 1840s through the 1890s as a fashionable destination for Nashville society seeking therapeutic waters and summer escape from the city. The springs resort included a hotel, bathing facilities, picnic grounds, and a dancing pavilion that hosted some of Middle Tennessee's most prominent families during the antebellum and post-Civil War recovery periods. The springs and adjacent grounds are now open rural land within the Hermitage area outside Nashville, with portions accessible through the neighboring historic district and rural road access. The antebellum and Civil War-era deposits here \u2014 from before and after the Union Army occupation of Nashville \u2014 make this potentially one of the most historically significant detecting sites in Middle Tennessee.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Riverside Park, NE (Scottsbluff)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 41.8664,
+    "longitude": -103.6695,
+    "description": "The original Scotts Bluff County Fairground in Scottsbluff, Nebraska hosted agricultural exhibitions and county fairs from 1900 through the 1940s along the North Platte River, drawing homesteaders, sugar beet farmers, and Oregon Trail descendants from across the Nebraska Panhandle to annual fall celebrations of the High Plains agricultural year. The fairground featured livestock judging, grain exhibitions, carnival midways, and horse racing that served as the primary social event for panhandle communities that were often isolated during harsh winters. When the county built a permanent modern exhibition facility, the original riverside grounds transitioned to Riverside Park, which the city of Scottsbluff still maintains as an open green space along the North Platte. The park's long dual history as fair and public park makes it a rich site for detecting along the Oregon Trail corridor.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Elsinore Chautauqua, UT (Sevier County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 38.6774,
+    "longitude": -112.1532,
+    "description": "The Elsinore Chautauqua in Sevier County, Utah operated from the 1890s through the 1920s as a summer cultural assembly in this small LDS farming community in the Sevier River Valley, hosting lectures, music programs, and educational events that represented the region's primary cultural enrichment outside the Church during the Progressive Era. The assembly drew settlers from across Sevier County's farming villages including Monroe, Richfield, and Salina to the grove on the edge of Elsinore, making it the cultural center of this rural Utah valley. The former assembly grounds are now open agricultural land and an undeveloped town park area on the quiet streets of Elsinore, a town of fewer than 1,000 residents. Pre-automobile era coins and personal items from Sevier Valley's polygamous settlement period would be the primary finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Dells Mill Picnic Grove, WI (Augusta)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 44.6761,
+    "longitude": -91.127,
+    "description": "The Dells Mill picnic grove near Augusta in Eau Claire County, Wisconsin operated as a community gathering site from the 1860s through the early 1900s, centered on the historic 1864 grist mill on Bridge Creek that served as the social anchor for the Chippewa Valley's German and Norwegian immigrant farming communities. Annual picnics, political rallies, and Fourth of July celebrations drew farming families from across the county to the shaded mill pond area and surrounding grove that was accessible by wagon road from Augusta and smaller townships. The 1864 Dells Mill itself survives as a preserved historic site, and the surrounding open grounds along the mill creek remain largely undeveloped. The mill's 1864 construction date means artifact deposits potentially span the Civil War era through the early twentieth century.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 79
   }
 ]
