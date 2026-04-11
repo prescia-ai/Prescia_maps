@@ -369,6 +369,15 @@ class UserProfilePublic(BaseModel):
     is_following: bool = False
     avatar_url: Optional[str] = None
     is_admin: bool = False
+    contributed_pins_count: int = 0
+
+
+class UserSearchResult(BaseModel):
+    """Minimal user info returned by the search endpoint."""
+
+    username: str
+    display_name: Optional[str] = None
+    avatar_url: Optional[str] = None
 
 
 class UserProfileLimited(BaseModel):

@@ -234,6 +234,7 @@ export interface PublicProfile {
   is_following: boolean;
   avatar_url?: string | null;
   is_admin?: boolean;
+  contributed_pins_count?: number;
 }
 
 export interface CollectionPhoto {

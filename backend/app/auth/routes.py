@@ -12,9 +12,9 @@ Endpoints:
 from __future__ import annotations
 
 import re
-from typing import Union
+from typing import List, Union
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from fastapi.responses import Response
 from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -39,6 +39,7 @@ from app.models.schemas import (
     UserProfilePublic,
     UserProfileSetup,
     UserProfileUpdate,
+    UserSearchResult,
 )
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -50,6 +51,41 @@ _USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,30}$")
 async def get_me(current_user: User = Depends(get_current_user)) -> User:
     """Return the authenticated user's profile."""
     return current_user
+
+
+@router.get(
+    "/search",
+    response_model=List[UserSearchResult],
+    summary="Search users by username or display name",
+)
+async def search_users(
+    q: str = Query(..., min_length=1),
+    db: AsyncSession = Depends(get_db),
+) -> List[UserSearchResult]:
+    """
+    Search for users by username or display_name using case-insensitive matching.
+
+    Returns up to 10 results. Only users who have a username set are returned.
+    """
+    pattern = f"%{q}%"
+    result = await db.execute(
+        select(User)
+        .where(
+            User.username.isnot(None),
+            (User.username.ilike(pattern) | User.display_name.ilike(pattern)),
+        )
+        .limit(10)
+    )
+    users = result.scalars().all()
+    return [
+        UserSearchResult(
+            username=u.username,
+            display_name=u.display_name,
+            avatar_url=u.avatar_url,
+        )
+        for u in users
+        if u.username is not None
+    ]
 
 
 @router.get(
@@ -98,6 +134,15 @@ async def get_public_profile(
         )
         is_following = follow_result.scalar_one_or_none() is not None
 
+    # Compute contributed pins count (approved submissions)
+    contributed_result = await db.execute(
+        select(func.count()).select_from(PinSubmission).where(
+            PinSubmission.submitter_id == user.id,
+            PinSubmission.status == "approved",
+        )
+    )
+    contributed_pins_count = contributed_result.scalar_one()
+
     return UserProfilePublic(
         id=user.id,
         username=user.username,
@@ -111,6 +156,7 @@ async def get_public_profile(
         is_following=is_following,
         avatar_url=user.avatar_url,
         is_admin=user.is_admin,
+        contributed_pins_count=contributed_pins_count,
     )
 
 

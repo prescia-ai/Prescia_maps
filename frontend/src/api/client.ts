@@ -475,4 +475,11 @@ export async function deleteAccount(): Promise<void> {
   await api.delete('/auth/account');
 }
 
+export async function searchUsers(
+  query: string,
+): Promise<Array<{ username: string; display_name: string | null; avatar_url: string | null }>> {
+  const { data } = await api.get('/auth/search', { params: { q: query } });
+  return data;
+}
+
 export default api;
