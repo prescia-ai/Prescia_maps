@@ -218,5 +218,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.85,
     "detecting_weight": 82
+  },
+  {
+    "name": "Paragon Park, MA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.3038,
+    "longitude": -70.8669,
+    "description": "Paragon Park in Hull, Massachusetts operated from 1905 to 1985 along Nantasket Beach, accessible by the Nantasket Beach Railroad and steamboat service from Boston, featuring the Giant Coaster roller coaster, a vintage carousel, and a sprawling beachfront midway. For eighty years it was one of New England's premier summer destinations, drawing Boston-area families to the South Shore. After its 1985 closure most rides were removed, with the carousel preserved at Heritage Museums and Gardens in Sandwich. The former Nantasket Beach park area is now largely public beach, making it one of the more accessible former trolley park sites in New England for metal detecting.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 84
+  },
+  {
+    "name": "Norumbega Park, MA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.3449,
+    "longitude": -71.2589,
+    "description": "Norumbega Park in Newton, Massachusetts operated from 1897 to 1964 on the banks of the Charles River, developed by the Newton Street Railway and featuring the Great Majestic Theatre, a canoe landing, dance pavilions, and a carousel that drew enormous crowds from Boston. The park hosted generations of Boston-area families and was a major social venue through both World Wars and the postwar era. After its 1964 closure the site was developed into a commercial complex, but the Charles River Reservation land adjacent to the former grounds remains publicly accessible parkland. The riverside location and long operation suggest significant coin and jewelry losses in the parkland margin areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Woodside Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.0155,
+    "longitude": -75.2001,
+    "description": "Woodside Park in Philadelphia operated from 1897 to 1955 on Chamounix Drive in Fairmount Park, developed by the Philadelphia Rapid Transit Company to boost weekend streetcar ridership and featuring roller coasters, a carousel, and an extensive midway along the Wissahickon Creek tributary. The park was unusual in being situated within one of the nation's largest urban parks, drawing enormous Philadelphia crowds for nearly sixty years. After its 1955 closure the land was returned to Fairmount Park and is today fully accessible public parkland. The former Woodside footprint within Fairmount Park is an ideal metal detecting target with nearly six decades of amusement park coin losses layered over earlier Victorian-era park use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 87
+  },
+  {
+    "name": "Sans Souci Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.2519,
+    "longitude": -75.8977,
+    "description": "Sans Souci Park in Wilkes-Barre, Pennsylvania operated from 1900 to 1938 as a popular trolley park on the Wyoming Valley electric railway, serving the densely populated Pennsylvania coal region with roller coasters, a carousel, a large dance hall, and extensive picnic grounds that made it a community gathering place for immigrant mining families. The park's operation coincided with the peak of Anthracite coal production in northeastern Pennsylvania, when miners and their families flocked to trolley parks on their rare days off. The grounds were redeveloped after closure but picnic grove areas may retain detecting deposits. Early twentieth-century nickels, dimes, and immigrant community tokens would be typical finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Bob-Lo Island, MI",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 42.0821,
+    "longitude": -83.1845,
+    "description": "Bob-Lo Island (Bois Blanc Island) in the Detroit River operated as an amusement park from 1898 to 1993, accessible only by steamboat ferry from Detroit and Amherstburg, Ontario, and featuring a classic wooden roller coaster, ballroom, carousel, and midway that drew hundreds of thousands annually at its peak. The island was a beloved summer tradition for multiple generations of Detroit families, and the steamboat excursion to reach it made the experience uniquely special. After the park closed in 1993 the island was subdivided for residential development. Undeveloped sections of the former park grounds on the island may retain detecting potential, though access requires watercraft.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Excelsior Amusement Park, MN",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 44.9042,
+    "longitude": -93.5617,
+    "description": "Excelsior Amusement Park on the south shore of Lake Minnetonka in Excelsior, Minnesota operated from 1925 to 1973, built by the Twin City Rapid Transit Company at its lake terminus and featuring the famous Cyclone roller coaster, a carousel, and midway attractions that drew Minneapolis-St. Paul families on summer weekends. The park was the last trolley park in the Twin Cities metropolitan area and closed when the streetcar lines were abandoned. After its 1973 closure the rides were removed and the land became a public park and marina area along the Lake Minnetonka shoreline. The former park grounds and surrounding lakeshore are publicly accessible and offer decades of accumulated coin and token losses from summer crowds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Lake Lansing Amusement Park, MI",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 42.7454,
+    "longitude": -84.4649,
+    "description": "Lake Lansing Amusement Park at the north end of Lake Lansing outside East Lansing, Michigan operated from the 1880s to 1976, beginning as a Victorian resort and evolving into a full amusement park with roller coasters, a carousel, boating, and midway attractions that served the Lansing area for nearly a century. The park was accessible by the Lansing interurban electric railway and later by automobile, maintaining popularity through multiple eras of American leisure history. After its 1976 closure the land was incorporated into Ingham County's Lake Lansing Park North, making it fully accessible public parkland. The former resort and amusement areas along the lakeshore represent an excellent detecting opportunity with nearly a century of visitor losses.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 86
+  },
+  {
+    "name": "Buckroe Beach Amusement Park, VA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 37.0412,
+    "longitude": -76.2769,
+    "description": "Buckroe Beach Park in Hampton, Virginia operated from 1897 to 1985 as a major Chesapeake Bay shoreline resort and amusement park, accessed by the Hampton Roads trolley system and featuring a pier, a large ballroom, roller coasters, and a classic carousel that drew Tidewater Virginia crowds for nearly ninety years. The park operated on a segregated basis for much of its history before integration in the 1960s. After its 1985 closure the land was converted to Buckroe Beach Park, a public beach and recreational area managed by the City of Hampton. The former amusement and resort areas are now public land, offering exceptional metal detecting potential from nearly a century of seaside crowd activity.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 89
+  },
+  {
+    "name": "Neptune Beach, CA",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 37.7752,
+    "longitude": -122.2416,
+    "description": "Neptune Beach in Alameda, California operated from 1917 to 1939 as the 'Coney Island of the West,' featuring a giant roller coaster called the Whirlwind Dipper, a large plunge pool, a Ferris wheel, carousel, and extensive midway modeled after the great Eastern seaside parks. Located on the San Francisco Bay waterfront and accessible by Key System ferry from San Francisco, it drew enormous Bay Area crowds before the Depression and the opening of the Bay Bridge cut off its ferry traffic. The park closed in 1939 and the land was converted to Alameda housing and industrial uses during World War II. Some portions of the former shoreline park area remain as public beach and park, potentially containing coins and tokens from the interwar era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Playland at the Beach, CA",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 37.7703,
+    "longitude": -122.5101,
+    "description": "Playland at the Beach in San Francisco's Outer Sunset district operated from 1921 to 1972 along the Great Highway at Ocean Beach, featuring the Shoot the Chutes water ride, the Big Dipper roller coaster, and the famous mechanical laughing fat lady 'Laughing Sal' in its Fun House, entertaining Bay Area families for over fifty years. The park occupied the western oceanfront near Golden Gate Park and was a quintessential San Francisco institution beloved by generations. After its 1972 closure the land was redeveloped into condominiums. The nearby Ocean Beach public lands and Great Highway park strip may retain scattered detecting deposits from the park's half-century of operation.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 76
   }
 ]
