@@ -108,5 +108,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.9,
     "detecting_weight": 87
+  },
+  {
+    "name": "Summit Beach Park, OH",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.1023,
+    "longitude": -81.5163,
+    "description": "Summit Beach Park on the west shore of Portage Lake in Akron, Ohio operated from 1917 to 1958, featuring a large wooden roller coaster, dance hall, and a full complement of midway rides that made it a popular destination for Rubber City factory workers. Accessed by the Akron streetcar system, it drew large working-class crowds during Akron's industrial peak. After closing in 1958 the park structures were demolished and the property was eventually absorbed into Summit County parklands. The lakeshore and former midway areas offer metal detecting potential for mid-century coins and tokens from four decades of industrial-city crowds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Buckeye Lake Park, OH",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 39.9372,
+    "longitude": -82.4832,
+    "description": "Buckeye Lake Park operated from the 1890s to 1970 on the shore of Buckeye Lake east of Columbus, Ohio, serving as a major summer resort and amusement destination with steamboat excursions, roller coasters, dance pavilions, and midway attractions accessible by the Columbus, Buckeye Lake and Newark electric railway. The park drew enormous crowds and became one of the largest inland resort parks in the Midwest at its peak. After closing in 1970 the lake area was incorporated into Buckeye Lake State Park, preserving much of the former grounds as accessible public land. The former resort and amusement areas around the lake represent nearly eighty years of summertime coin and jewelry losses in a now-public setting.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 83
+  },
+  {
+    "name": "Chester Park, OH",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.1534,
+    "longitude": -84.4813,
+    "description": "Chester Park in Norwood near Cincinnati, Ohio operated from 1895 to 1932 as a Cincinnati traction company trolley park, featuring a large swimming pool, roller coaster, dance pavilion, and extensive picnic grounds that made it a beloved destination for Queen City families. The park survived World War I but fell victim to the Depression and automobile competition, closing permanently in 1932 with its structures subsequently demolished. The site was eventually redeveloped into residential and commercial uses, though peripheral green spaces may retain detecting potential. The park's pre-Depression operation makes it a target for early twentieth-century coins, including silver quarters and dimes from the 1890s through 1920s.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Fontaine Ferry Park, KY",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 38.2519,
+    "longitude": -85.8029,
+    "description": "Fontaine Ferry Park along the Ohio River in Louisville, Kentucky operated from 1905 to 1969 as a major amusement park served by the Louisville Railway Company streetcar, featuring the Comet roller coaster, a large swimming pool, and extensive midway attractions that drew hundreds of thousands of visitors annually. The park closed in 1969 after civil rights demonstrations forced its segregationist policies into the spotlight, and the grounds were converted to Chickasaw Park, now a Louisville Metro park. The riverfront parkland and former midway areas are publicly accessible and represent sixty-five years of dropped coins, tokens, and personal effects from Louisville's working class.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 85
+  },
+  {
+    "name": "Forest Park Highlands, MO",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 38.6355,
+    "longitude": -90.2878,
+    "description": "Forest Park Highlands in St. Louis operated from 1896 to 1963 adjacent to Forest Park, built by the United Railways Company to generate streetcar ridership and featuring classic rides, a large carousel, and a midway with roots in the 1904 World's Fair legacy. The park drew St. Louis families for sixty-seven years before a devastating 1963 fire destroyed the main structures. The land was absorbed into Forest Park, one of the largest urban parks in the United States, making the former Highlands footprint entirely publicly accessible. The Forest Park grounds represent an exceptional metal detecting opportunity with deposits from the 1904 Louisiana Purchase Exposition, the Highlands amusement era, and a century of subsequent park use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 88
+  },
+  {
+    "name": "Electric Park, MO",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.0732,
+    "longitude": -94.5887,
+    "description": "Electric Park in Kansas City, Missouri operated from 1899 to 1925 at the end of the Metropolitan Street Railway Company lines, featuring illuminated fountains that gave it its name, a large ballroom, roller coasters, and midway attractions serving Kansas City's growing urban population. The park was rebuilt after a major fire in 1907 and operated for another eighteen years before economic pressures and automobile competition forced its closure. The site was subsequently redeveloped into an industrial area and residential neighborhood. The long operation spanning both sides of the turn of the century makes this a potential source for late nineteenth-century silver coins, transit tokens, and Victorian-era personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Dreamland, NY",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 40.5763,
+    "longitude": -74.0038,
+    "description": "Dreamland was Coney Island's most elaborate amusement park, operating from 1904 to 1911 with over a million electric lights, a replica of the canals of Venice, a fire demonstration attraction, and rides that drew massive crowds via the Brooklyn subway. A catastrophic fire on May 27, 1911 destroyed the entire park overnight, ending one of the most spectacular amusement attractions in American history. The site was subsequently reused for other Coney Island attractions and is now part of the boardwalk entertainment district. The ground beneath the current Coney Island development holds layers of early twentieth-century coins and tokens from millions of pre-WWI visitors.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Steeplechase Park, NY",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 40.5745,
+    "longitude": -73.9847,
+    "description": "Steeplechase Park on Coney Island operated from 1897 to 1964, founded by George Tilyou and famous for its mechanical horse race ride, along with the Pavilion of Fun, a massive enclosed amusement hall that drew families for sixty-seven years. The park survived multiple fires and the Great Depression before finally closing in 1964 when the Tilyou heirs sold the property. After a controversial demolition party in 1966 the land sat vacant for decades before becoming MCU Park, home of the Brooklyn Cyclones. The former midway and pavilion areas beneath current development hold coins, tokens, and jewelry spanning nearly seven decades of massive visitor traffic.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Luna Park (original), NY",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 40.5748,
+    "longitude": -73.9985,
+    "description": "The original Luna Park on Coney Island opened in 1903 and quickly became the most famous amusement park in America, illuminated by over a million electric lights and featuring exotic rides, elephant shows, and the Trip to the Moon attraction that drew over a million visitors in its first season. Designed by Frederic Thompson and Elmer Dundy, the park was a fantasy architecture spectacle that defined the American amusement park industry for a generation. After years of decline, fire damage, and the Depression, Luna Park closed permanently in 1946 and the site was redeveloped. The current Luna Park opened in 2010 nearby, but the original park's footprint holds layers of early twentieth-century coins and tokens from decades of massive crowd activity.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Rockaways Playland, NY",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 40.5885,
+    "longitude": -73.7882,
+    "description": "Rockaways Playland in Far Rockaway, Queens operated from 1901 to 1987 as a major beachfront amusement park accessible by the Long Island Rail Road, featuring the legendary Atom Smasher wooden roller coaster, a large carousel, and a boardwalk midway that drew New York City families for eighty-six years. The park served as a major outdoor entertainment venue through both World Wars, the Depression, and the postwar boom before economic pressures and declining maintenance led to its 1987 closure. The site was redeveloped as a shopping center, but the former beach frontage and park periphery may retain detecting potential. The eight-decade operation of this high-traffic New York attraction represents significant accumulation of coins, tokens, and beach jewelry.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 82
   }
 ]
