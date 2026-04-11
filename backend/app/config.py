@@ -2,6 +2,7 @@
 Application configuration loaded from environment variables / .env file.
 """
 
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -54,6 +55,11 @@ class Settings(BaseSettings):
 
     # Frontend URL (used for OAuth redirects)
     FRONTEND_URL: str = "http://localhost:5173"
+
+    @field_validator("SUPABASE_URL", "FRONTEND_URL")
+    @classmethod
+    def strip_trailing_slash(cls, v: str) -> str:
+        return v.rstrip("/") if v else v
 
 
 settings = Settings()
