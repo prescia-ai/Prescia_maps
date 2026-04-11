@@ -11,39 +11,6 @@
     "detecting_weight": 90
   },
   {
-    "name": "Riverview Park, IL",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 41.9397,
-    "longitude": -87.7263,
-    "description": "Riverview Park operated from 1904 to 1967 in Chicago's North Side, covering 140 acres and featuring over 100 rides including the Bobs roller coaster, making it one of the largest amusement parks in America. Accessible by streetcar from downtown Chicago, it drew enormous crowds on weekends and holidays for over six decades. The park closed abruptly in October 1967 and the land was sold for a shopping mall and police training facility, but portions of the old park footprint remain as open ground. Decades of dropped coins, midway game prizes, and picnic-area losses make surviving undeveloped sections highly attractive for metal detecting.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.88,
-    "detecting_weight": 85
-  },
-  {
-    "name": "White City Amusement Park, IL",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 41.7797,
-    "longitude": -87.5972,
-    "description": "White City opened in 1905 at 63rd Street and South Park Avenue on Chicago's South Side, named for its elaborate white-painted electric lighting, and featured a casino, roller coasters, a dance hall, and a large midway serving Chicago's working-class neighborhoods. The park survived a massive fire in 1927 and continued operating until 1939, when a second fire destroyed the remaining structures. The site was subsequently redeveloped into mixed commercial and residential land. Pre-WWI silver coins and transit tokens would be the primary targets in any surviving undeveloped sections.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 78
-  },
-  {
-    "name": "Palisades Amusement Park, NJ",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 40.8501,
-    "longitude": -73.9688,
-    "description": "Palisades Amusement Park operated from 1898 to 1971 on the Palisades cliffs overlooking the Hudson River in Fort Lee, New Jersey, drawing over a million visitors annually during its peak years with rides, a saltwater pool, and a famous midway. The park was immortalized in songs by Chuck Berry and others, and served as a day-trip destination for millions of New York City residents who crossed the Hudson by ferry and trolley. After its 1971 closure the rides were demolished and high-rise apartment buildings constructed on most of the site. Any remaining undeveloped margins or green spaces on the former grounds would retain coins and tokens from seven decades of massive crowds.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.88,
-    "detecting_weight": 75
-  },
-  {
     "name": "Savin Rock Park, CT",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -75,17 +42,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.88,
     "detecting_weight": 85
-  },
-  {
-    "name": "Willow Grove Park, PA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 40.1428,
-    "longitude": -75.1186,
-    "description": "Willow Grove Park in Montgomery County, Pennsylvania operated from 1896 to 1975, renowned for its summer concerts by John Philip Sousa and Victor Herbert, along with major roller coasters and a classic carousel drawing Philadelphia-area crowds via the Reading Railway and Willow Grove Branch streetcar. The park hosted nearly eighty years of high-traffic use before closing in 1975 when the land was converted to a shopping mall. Peripheral park areas and former picnic grounds may retain metal detecting potential. Silver coins and brass tokens from the early twentieth century would be primary finds in any surviving open sections.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.9,
-    "detecting_weight": 72
   },
   {
     "name": "Rocky Glen Park, PA",
@@ -130,17 +86,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.85,
     "detecting_weight": 83
-  },
-  {
-    "name": "Chester Park, OH",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 39.1534,
-    "longitude": -84.4813,
-    "description": "Chester Park in Norwood near Cincinnati, Ohio operated from 1895 to 1932 as a Cincinnati traction company trolley park, featuring a large swimming pool, roller coaster, dance pavilion, and extensive picnic grounds that made it a beloved destination for Queen City families. The park survived World War I but fell victim to the Depression and automobile competition, closing permanently in 1932 with its structures subsequently demolished. The site was eventually redeveloped into residential and commercial uses, though peripheral green spaces may retain detecting potential. The park's pre-Depression operation makes it a target for early twentieth-century coins, including silver quarters and dimes from the 1890s through 1920s.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.82,
-    "detecting_weight": 76
   },
   {
     "name": "Fontaine Ferry Park, KY",
@@ -264,17 +209,6 @@
     "detecting_weight": 78
   },
   {
-    "name": "Bob-Lo Island, MI",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 42.0821,
-    "longitude": -83.1845,
-    "description": "Bob-Lo Island (Bois Blanc Island) in the Detroit River operated as an amusement park from 1898 to 1993, accessible only by steamboat ferry from Detroit and Amherstburg, Ontario, and featuring a classic wooden roller coaster, ballroom, carousel, and midway that drew hundreds of thousands annually at its peak. The island was a beloved summer tradition for multiple generations of Detroit families, and the steamboat excursion to reach it made the experience uniquely special. After the park closed in 1993 the island was subdivided for residential development. Undeveloped sections of the former park grounds on the island may retain detecting potential, though access requires watercraft.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 75
-  },
-  {
     "name": "Excelsior Amusement Park, MN",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -330,17 +264,6 @@
     "detecting_weight": 76
   },
   {
-    "name": "Idora Park, CA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 37.7982,
-    "longitude": -122.2146,
-    "description": "Idora Park in Oakland, California operated from 1906 to 1929 in the Temescal neighborhood, developed by the Key Route railway as a streetcar destination featuring roller coasters, a carousel, a dance pavilion, and picnic grounds that made it the primary outdoor amusement destination for East Bay families in the early twentieth century. The park was devastated by the 1929 stock market crash and closed permanently, with its land subsequently subdivided for the residential Temescal neighborhood. A small public park bearing the Idora name was preserved on a portion of the original site and remains accessible today. The surviving park greenery represents the remaining footprint of this early San Francisco Bay Area amusement destination.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.83,
-    "detecting_weight": 74
-  },
-  {
     "name": "Luna Park, WA",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -350,17 +273,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.82,
     "detecting_weight": 77
-  },
-  {
-    "name": "Jantzen Beach Amusement Park, OR",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 45.6244,
-    "longitude": -122.7054,
-    "description": "Jantzen Beach Amusement Park on Hayden Island in Portland, Oregon operated from 1928 to 1970, featuring four roller coasters, the largest carousel on the West Coast, a large swimming pool, and a ballroom that hosted big bands during the swing era. Accessible by the Interstate Avenue streetcar and later by automobile, it drew Portland-area families for forty-two years. After its 1970 closure the rides were removed and the island redeveloped into a large shopping mall and residential community. The former park's magnificent carousel was preserved and moved to Oaks Park in Portland, while the grounds contained extraordinary fair activity spanning four decades.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 72
   },
   {
     "name": "Saltair Resort, UT",
@@ -383,17 +295,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.78,
     "detecting_weight": 75
-  },
-  {
-    "name": "Chutes Park, CA",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 34.0489,
-    "longitude": -118.2529,
-    "description": "Chutes Park in Los Angeles, California operated from 1887 to 1912 in the Westlake district near downtown, featuring the original Shoot the Chutes water ride, a carousel, and the first roller coaster in Southern California, drawing Victorian-era Los Angeles residents on the newly constructed streetcar network. The park was the city's earliest major amusement attraction, predating the Southern California boom by nearly two decades and introducing Los Angeles to the trolley park concept. The Westlake neighborhood has since been densely developed and the park site is now urban Los Angeles. The pre-World War I era of operation makes this a historically significant site for early silver coins and Victorian-era personal effects.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.77,
-    "detecting_weight": 72
   },
   {
     "name": "Venice Amusement Pier, CA",
@@ -495,17 +396,6 @@
     "detecting_weight": 84
   },
   {
-    "name": "Olympic Park, NJ",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 40.7282,
-    "longitude": -74.2668,
-    "description": "Olympic Park in Maplewood, New Jersey operated from 1887 to 1965 as one of New Jersey's oldest continuous amusement parks, built at the end of the Maplewood streetcar line and featuring the famous Dips roller coaster, a carousel, and a large swimming pool that drew Essex County families for nearly eighty years. The park served as a weekend destination for Newark's immigrant and working-class communities, with German, Italian, and Jewish families making up a large portion of the patronage. After its 1965 closure the land was redeveloped into a residential subdivision. The former park grounds beneath current Maplewood housing represent nearly eight decades of dropped coins, transit tokens, and personal effects from New Jersey's immigrant communities.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.82,
-    "detecting_weight": 74
-  },
-  {
     "name": "Bertrand Island Park, NJ",
     "type": "abandoned_fairground",
     "category": "resort_park",
@@ -602,7 +492,7 @@
     "description": "The Cotton States and International Exposition was held in Atlanta, Georgia in 1895 in what is now Piedmont Park, drawing nearly 800,000 visitors to exhibits celebrating Southern industrial recovery after the Civil War and serving as the backdrop for Booker T. Washington's famous Atlanta Compromise speech. The exposition occupied the entire area of the current Piedmont Park in Midtown Atlanta, with lavish temporary buildings housing industrial, agricultural, and cultural exhibits from across the South. After the exposition closed the grounds were developed into Piedmont Park, Atlanta's premier urban park. The park's soil has been accumulating coins and artifacts since 1895, with the deepest deposits dating from the exposition year itself.",
     "source": "historic_fairgrounds",
     "confidence": 0.83,
-    "detecting_weight": 82
+    "detecting_weight": 70
   },
   {
     "name": "Tennessee Centennial Exposition Site, TN",
@@ -613,7 +503,7 @@
     "description": "The Tennessee Centennial Exposition was held in Nashville in 1897 on a 200-acre site in West Nashville, drawing nearly 1.8 million visitors to its elaborate exhibits including a full-scale replica of the Parthenon that became the exposition's most famous feature. The exposition celebrated Tennessee's 100th anniversary of statehood and included exhibits from across the South and nation. After the exposition closed, the grounds became Centennial Park, and the Parthenon replica was rebuilt in permanent materials in 1931. Nashville's Centennial Park is now a public urban park where the 1897 exposition grounds remain accessible, with the Parthenon standing on its original site creating a publicly accessible metal detecting location with exposition-era deposits.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 83
+    "detecting_weight": 72
   },
   {
     "name": "Lewis and Clark Centennial Exposition, OR",
@@ -635,7 +525,7 @@
     "description": "The Alaska-Yukon-Pacific Exposition was held on the University of Washington campus in Seattle in 1909, drawing 3.7 million visitors to a 250-acre fairground designed by the Olmsted Brothers that was deliberately planned to become the permanent UW campus after the fair closed. The exposition celebrated Alaska and Pacific commerce and featured a famous Pay Streak midway, international exhibits, and elaborate grounds that were converted into the modern UW campus layout. The current University of Washington campus directly preserves the 1909 exposition footprint, with Rainier Vista and the Liberal Arts Quadrangle occupying original fair territory. The campus grounds carry deposits from both the 1909 exposition and over a century of university use.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 79
+    "detecting_weight": 67
   },
   {
     "name": "California Midwinter Exposition Site, CA",
@@ -646,7 +536,7 @@
     "description": "The California Midwinter International Exposition was held in San Francisco's Golden Gate Park from January through July 1894, drawing over two million visitors to elaborate Egyptian, Moorish, and Mission Revival exhibit buildings promoting California's mild winter climate to the world. The fair was organized by San Francisco Chronicle publisher M.H. de Young and resulted in the permanent de Young Museum, originally the Fine Arts Building of the exposition. Golden Gate Park's Music Concourse area directly preserves the center of the 1894 exposition grounds, with the de Young Museum and Academy of Sciences standing on original fair territory. The publicly accessible Music Concourse holds deposits from the 1894 exposition and 130 years of subsequent park use.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 80
+    "detecting_weight": 68
   },
   {
     "name": "Jamestown Exposition Site, VA",
@@ -943,7 +833,7 @@
     "description": "The 1904 Louisiana Purchase Exposition (St. Louis World's Fair) occupied 1,272 acres of Forest Park and adjacent Washington University campus, drawing nearly 20 million visitors during its seven-month run and leaving behind permanent structures including the Palace of Fine Arts (now the Saint Louis Art Museum) and extensive grounds that became the modern Forest Park. The Fair featured over 1,500 buildings, a massive Pike midway, international pavilions, and the debut of new American foods. The entire 1,300-acre Forest Park and surrounding campus carry deposits from the 20 million visitors who attended, with the deepest and richest deposits in the former Pike midway area near the Grand Basin. Forest Park is among the greatest metal detecting sites in America.",
     "source": "historic_fairgrounds",
     "confidence": 0.92,
-    "detecting_weight": 95
+    "detecting_weight": 82
   },
   {
     "name": "Bay View Assembly, MI",
@@ -976,7 +866,7 @@
     "description": "The Interstate Industrial Exposition Building on the Chicago lakefront in Grant Park hosted annual industrial expositions from 1873 to 1891, drawing hundreds of thousands of Chicago business leaders, workers, and visitors to exhibits of machinery, manufactured goods, and industrial products in one of the largest exhibition halls in America at the time. The building stood on the site now occupied by the Art Institute of Chicago and served as Chicago's primary exhibition venue before the 1893 World's Columbian Exposition. The Art Institute and surrounding Grant Park grounds occupy the former exposition site, with the museum's Congress Plaza and Millennium Park in the vicinity holding deposits from the industrial exposition era and the Columbian Exposition period.",
     "source": "historic_fairgrounds",
     "confidence": 0.8,
-    "detecting_weight": 76
+    "detecting_weight": 64
   },
   {
     "name": "Old Dominion Speedway Park, VA",
@@ -1098,5 +988,555 @@
     "source": "historic_fairgrounds",
     "confidence": 0.88,
     "detecting_weight": 86
+  },
+  {
+    "name": "Lakeside Park, AL (Birmingham)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 33.5129,
+    "longitude": -86.8023,
+    "description": "Lakeside Park operated from 1886 to 1930 at the western end of the Birmingham streetcar network along Lakeview Lake in Jefferson County, Alabama, serving as the primary summer resort for working-class Birmingham families during the city's rapid industrial expansion. The park featured a pavilion, picnic groves, rowboat rentals, a dance hall, and midway attractions that drew immense crowds on summer weekends. After the streetcar line was abandoned and the park closed in 1930, the land reverted to a wooded lakeside area that was eventually absorbed into a residential neighborhood with open green space along the shoreline. Pre-Depression-era coins, tokens, and personal items from Birmingham's steel-era workforce remain in the soil near the former picnic groves.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Wonderland Park, AL (Mobile)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 30.7058,
+    "longitude": -88.0703,
+    "description": "Wonderland Park in Mobile, Alabama operated from 1906 to 1928 as a trolley park at the end of the Monroe Street streetcar line, offering Mobile residents a cool respite from Gulf Coast heat with a swimming pool, dance pavilion, roller rink, and midway games on a wooded site near the Mobile Bay shore. The park was a fixture of Mobile's Gilded Age social life, drawing crowds from across Mobile County for two decades before the automobile era ended dependence on streetcar-based recreation. The site is now open green space with remnant woodland, accessible to the public through an adjacent neighborhood park. The former midway and picnic grove areas offer strong potential for early twentieth century silver coins and Gulf Coast tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Riverside Park, MS (Natchez)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 31.5534,
+    "longitude": -91.3897,
+    "description": "Riverside Park in Natchez, Mississippi operated from the 1880s through the 1920s as a popular resort along the Mississippi River bluffs, drawing plantation-era society and river traffic workers to its picnic grounds, bandstand, and scenic overlooks during Natchez's post-Reconstruction era. The site was used for annual county fairs, political rallies, and seasonal carnivals throughout the late nineteenth century and was one of the few open gathering places for the African American community during the early Jim Crow era. The land along the Natchez bluffs has since been largely reclaimed by open parkland managed by the city, making it accessible to visitors. The deep history of this site, going back to the steamboat era, makes it one of the more promising detecting locations in Mississippi.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Agricultural Fairgrounds, AR (Fayetteville, original site)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 36.069,
+    "longitude": -94.1758,
+    "description": "Washington County's original agricultural fairground in Fayetteville, Arkansas operated from the 1870s through the early 1900s on the western edge of town, hosting annual fall fairs that brought farmers, merchants, and exhibitors from across the Ozarks for competitions in livestock, produce, and crafts. The fair was a cornerstone of Fayetteville's social calendar during the railroad expansion era when the town served as a trade hub for the Boston Mountain farming communities. When the county built a new modern fairground early in the twentieth century, the original site was vacated and eventually became open residential-adjacent land. The former exhibition fields retain deposits from decades of annual fairs including coins, buttons, harness hardware, and trade tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.67,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Mineral Springs Park, LA (Shreveport)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 32.5207,
+    "longitude": -93.7521,
+    "description": "Mineral Springs Park in Shreveport, Louisiana operated from the 1890s through the 1920s as a health resort and amusement destination built around natural mineral springs on Shreveport's western outskirts, served by a streetcar line that brought city dwellers to the therapeutic waters, a dancing pavilion, and shaded picnic grounds. The park's springs attracted visitors seeking cures for various ailments as well as families seeking weekend recreation from Shreveport and the Red River Valley communities. After the streetcar line was discontinued in the 1920s the park fell into disuse and the springs were eventually capped, leaving the wooded grounds as undeveloped land that was later absorbed into the expanding city. The mineral springs area and former picnic grounds remain open and accessible, with strong potential for pre-Prohibition era coins and resort tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Chautauqua Assembly Grounds, KS (Ottawa)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 38.6055,
+    "longitude": -95.2691,
+    "description": "The Ottawa Chautauqua Assembly Grounds in Franklin County, Kansas operated from 1886 to 1930 in a wooded grove along the Marais des Cygnes River, hosting annual summer assemblies that drew thousands of Kansas farmers and small-town residents to educational lectures, concerts, religious revivals, and cultural programs from prominent speakers of the era. The Ottawa Chautauqua was one of the most active in the Plains states, drawing speakers including William Jennings Bryan and nationally known evangelists to its open-air auditorium and tent grounds. The riverside grove is now open park and agricultural land with limited development, accessible along the creek corridor. The former assembly grounds hold deposits from four decades of summer gatherings including coins, religious items, watch fobs, and personal effects.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Grand Island Exposition Grounds, NE",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.925,
+    "longitude": -98.342,
+    "description": "The original Hall County Fairground in Grand Island, Nebraska hosted agricultural exhibitions and county fairs from 1875 through the early twentieth century, serving as the commercial and social hub for Hall County's German-immigrant farming communities during Nebraska's homesteading era. The fairground featured livestock judging rings, agricultural machinery exhibitions, and a midway that brought traveling carnivals and shows to the Platte River Valley each fall. When the county eventually consolidated fair operations at a modern facility, the original grounds were converted to other uses and portions remain as open grassland near the city's older residential district. Pre-World War I coins, German immigrant trade tokens, and farm hardware remnants are likely finds in the former exhibition areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Natatorium Park, WA (Spokane, picnic grove)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 47.6639,
+    "longitude": -117.4842,
+    "description": "Natatorium Park in Spokane, Washington operated from 1893 to 1967 as one of the Pacific Northwest's premier trolley parks, featuring a famous outdoor natatorium (swimming pool), a Looff carousel, roller coasters, a dance hall, and extensive picnic grounds at the end of the Spokane streetcar network. The park drew enormous crowds from Spokane and surrounding Inland Empire farm communities for seventy-four years, establishing it as one of the longest continuously operating trolley parks in the West. After closure in 1967 the rides were removed and the land redeveloped; portions of the original park grounds now survive as open land in the Downriver neighborhood. The former picnic groves and midway areas along the river are particularly promising for pre-WWII coins and trolley tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Caledonia County Fairgrounds, VT (Lyndonville, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 44.5334,
+    "longitude": -72.0126,
+    "description": "The original Caledonia County Fairground in Lyndonville, Vermont hosted annual agricultural fairs from 1850 to the early 1900s before the fair moved to a larger permanent facility, making it one of the longest-running county fair sites in the Northeast Kingdom of Vermont. The fairground served the hill-farming communities of northern Vermont's dairy and maple sugar country, with exhibitions of livestock, homemade goods, and farm machinery that drew thousands each August from across Caledonia County. The original site is now open farmland and a small neighborhood park on the edge of Lyndonville. Pre-Civil War coins, agricultural tokens, and Yankee trade goods from the 1850s-1900s period make this a historically deep detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Trimble Springs Park, TN (Knoxville)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 35.992,
+    "longitude": -83.921,
+    "description": "Trimble Springs Park in Knoxville, Tennessee operated from the 1880s through the 1910s as a mineral springs resort and streetcar park at the end of the North Knoxville streetcar line, featuring therapeutic springs, a hotel, dancing pavilion, picnic grounds, and summer amusements that drew working-class Knox County residents seeking relief from the Tennessee Valley heat. The park was a fixture of Knoxville's Gilded Age recreational life and was frequented by University of Tennessee students and East Tennessee railroad workers. After the springs declined in popularity and the streetcar line was extended, the park closed and the land was absorbed into the expanding North Knoxville residential district. Former springs and picnic areas now have residential proximity but portions of the original grove remain as open land along the creek.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Manhattan Beach Park, MN (Minneapolis, Bde Maka Ska)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 44.9481,
+    "longitude": -93.3226,
+    "description": "Manhattan Beach Park on the eastern shore of Lake Calhoun (now Bde Maka Ska) in Minneapolis operated from the 1880s through the 1910s as a fashionable lakeside resort and amusement park served by the Minneapolis streetcar system, featuring a large pavilion, boat rentals, bathing beach, midway amusements, and picnic grounds that attracted Twin Cities residents across the social spectrum. The park was part of the chain of Minneapolis chain-of-lakes resort parks that defined summer recreation for generations of Minnesotans during the city's rapid growth period. After the streetcar era ended the park was absorbed into the Minneapolis Park and Recreation Board's lakeside greenways that now ring the lake. The lake's shoreline park remains publicly accessible and holds deposits from over a century of recreational use, with the deepest deposits dating to the streetcar-era resort period.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.76,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Riverton Park, ID (Boise)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.5829,
+    "longitude": -116.2635,
+    "description": "Riverton Park in Boise, Idaho operated from 1903 to 1934 as a trolley park developed by the Boise street railway company at the end of its Garden City line, offering Boise residents a shaded riverside grove along the Boise River with a dance pavilion, picnic areas, carousel, and summer amusements during Idaho's territorial-era growth. The park served as the primary outdoor recreation destination for Boise workers during the Progressive Era and drew large crowds of irrigated-farm settlers and mining families from across the Treasure Valley. After automobile travel made the streetcar-based resort obsolete, the riverside land was absorbed into what became Barber Park and surrounding green areas along the Boise River. The former picnic grounds and midway areas are now part of the Boise River Greenbelt, making this a legally accessible public detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Albuquerque Old Town Exposition Grounds, NM",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 35.1046,
+    "longitude": -106.6793,
+    "description": "The original Bernalillo County Fairground adjacent to Old Town Albuquerque hosted annual territorial-era fairs from the 1880s through the early 1900s, attracting Pueblo Indian craftspeople, Hispanic ranchers, Anglo settlers, and Santa Fe Railway workers to exhibitions of livestock, agricultural products, and Native American crafts during New Mexico's territorial growth period. These fairs were some of the most culturally diverse in the Southwest, blending three distinct civilizations in annual celebration of the Rio Grande Valley's agricultural bounty. The original fairground site is now part of Old Town's green spaces and the Albuquerque BioPark area along the Rio Grande. The multicultural nature of the fair and its location near centuries of Spanish Colonial settlement makes this an exceptionally rich site for mixed-era artifacts.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Rocky Mountain Chautauqua, CO (Boulder)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 40.0062,
+    "longitude": -105.2813,
+    "description": "The Colorado Chautauqua in Boulder, founded in 1898 by Texas educators and Colorado boosters, established a permanent summer assembly ground at the base of the Flatirons that drew thousands of visitors annually for lectures, concerts, and cultural programs during the height of the Chautauqua movement. Unlike many Chautauqua grounds that were later abandoned, the Boulder Chautauqua Association has continuously operated the grounds, preserving the original 1898 auditorium, dining hall, and scores of Victorian cottages on the National Register of Historic Places. The surrounding meadows and historic cottage areas hold deposits from 125+ years of summer gatherings. The grounds are publicly accessible as a city park, with open meadow areas outside the active facilities offering the best detecting potential for Victorian and Edwardian-era personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Lake Manawa Amusement Park, IA (Council Bluffs)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.1892,
+    "longitude": -95.8622,
+    "description": "Lake Manawa Amusement Park near Council Bluffs, Iowa operated from 1888 to the 1930s as a major trolley park at the end of the Omaha-Council Bluffs streetcar network, featuring a large pavilion, roller coaster, carousel, shooting gallery, and boat rentals on the oxbow lake that served as the summer escape for Omaha and Council Bluffs workers and Midland Pacific Railroad employees. The park drew enormous crowds from both sides of the Missouri River during its forty-year operation, with thousands arriving daily by streetcar during summer weekends. The lake and surrounding land are now managed as Lake Manawa State Park by the Iowa Department of Natural Resources, preserving the shoreline as publicly accessible open land. Former midway and picnic areas within the state park hold strong detecting potential for pre-Depression silver coins and resort tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 81
+  },
+  {
+    "name": "Sunnyside Amusement Park, WY (Cheyenne)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.1395,
+    "longitude": -104.7845,
+    "description": "Sunnyside Park in Cheyenne, Wyoming operated from 1903 to 1928 as a trolley park developed at the end of Cheyenne's electric streetcar line, serving as the primary summer recreation destination for Wyoming territorial capital residents, Union Pacific Railroad workers, and Fort D.A. Russell military personnel. The park featured a large dance pavilion, midway games, and open picnic grounds in a prairie setting that was the social center of Cheyenne's working-class community during the first three decades of the twentieth century. After the streetcar shutdown the park closed and the land was eventually absorbed into expanding residential development, with open green spaces remaining along the original site margins. Military tokens, railroad company scrip, and early Wyoming territorial coins would be particularly notable finds in the former grounds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Circle Park, ND (Fargo)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 46.8766,
+    "longitude": -96.8012,
+    "description": "The original Cass County Fairground in Fargo, North Dakota operated from the 1880s through the early 1900s on the western edge of the city, hosting annual Red River Valley agricultural exhibitions that drew wheat farmers, Norwegian and German immigrants, and Northern Pacific Railroad workers to livestock shows, machinery demonstrations, and carnival midways. The fairground was the social epicenter of Cass County's early settlement era and featured horse racing tracks and a grandstand that drew spectators from the eastern North Dakota prairie. When the county built a permanent modern fairground, the original site was abandoned and later developed into a residential neighborhood with open park areas. The former racetrack oval and exhibition grounds retain deep deposits from the homesteading era of the northern Great Plains.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Calumet County Fairgrounds, WI (Chilton, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 44.0328,
+    "longitude": -88.1656,
+    "description": "The original Calumet County Agricultural Society fairground in Chilton, Wisconsin operated from the 1860s through the 1910s, hosting annual fall fairs that served the German Catholic farming communities of the Lake Winnebago country in east-central Wisconsin. The county fair featured the full complement of mid-nineteenth century agricultural exhibiton: livestock, grains, produce, dairy products, and domestic crafts, along with the inevitable traveling carnival and midway that accompanied county fairs of the era. When the county built a new permanent fairground facility in the early twentieth century, the original site was gradually converted to residential and parkland use. Civil War-era and Gilded Age coins, agricultural tokens, and German immigrant personal effects would be likely finds in the former exhibition grounds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Meridian Park, SD (Sioux Falls)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.5573,
+    "longitude": -96.7621,
+    "description": "Meridian Park in Sioux Falls, South Dakota operated from 1908 to 1929 as a streetcar park developed by the Sioux Falls Traction Company at the end of its western line, offering Big Sioux River Valley residents a shaded grove with a dance pavilion, picnic facilities, and carnival amusements that served as the primary public recreation spot for Sioux Falls workers during the Prohibition-era Dakota boom. The park drew large summer crowds from the Sioux Falls packing industry workforce and surrounding farm communities, with special holiday programs and annual events that were fixtures of South Dakota social life. After the traction company failed the park was abandoned and the land eventually became open riverside parkland. The Sioux River corridor where the park stood is now accessible public land with deposits from the brief but intense streetcar-era resort period.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Blue Hole Park, NM (Santa Rosa)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 34.9441,
+    "longitude": -104.6728,
+    "description": "Blue Hole Park in Santa Rosa, New Mexico operated as a Route 66-era carnival and amusement ground from the 1930s through the 1950s, capitalizing on the natural artesian spring known as Blue Hole that attracted highway travelers to its crystal-clear 80-foot circular pool on the original alignment of U.S. Route 66. The site hosted seasonal carnivals, fish fries, summer dances, and community gatherings that served both the Santa Rosa trading community and the constant stream of Dust Bowl migrants and Route 66 travelers heading west. The Blue Hole is now a city park in Santa Rosa with the spring still flowing, and the surrounding open grassland preserves the former carnival grounds and picnic areas. Route 66-era coins, carnival tokens, and Depression-era personal items from Dust Bowl travelers make this a unique detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 68
+  },
+  {
+    "name": "Maple Beach Grove, NH (Lake Winnipesaukee)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 43.5978,
+    "longitude": -71.4561,
+    "description": "Maple Beach Grove on the western shore of Lake Winnipesaukee in Meredith, New Hampshire operated as a lakeside resort and picnic ground from the 1870s through the 1920s, serving summer visitors who arrived by Lake Winnipesaukee steamboat to spend days in the shaded maple grove with its dancing pavilion, refreshment stands, and swimming beach. The grove was a destination for Boston mill workers and New Hampshire farmers alike during the Gilded Age when the steamboat Meredith served a circuit of lake resorts. After the steamboat era ended the grove fell into private hands and eventually became a small open shoreline park area. The former grove and beach area hold deposits from five decades of Victorian and Edwardian summer recreation including coins, jewelry, and personal effects from Boston-area vacationers.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Crystal Springs Chautauqua, GA (Powder Springs)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 33.8618,
+    "longitude": -84.6857,
+    "description": "The Crystal Springs Chautauqua Assembly in Powder Springs, Georgia operated from 1886 to 1910 in the mineral spring-rich hills of Cobb County, drawing thousands of Atlantans and North Georgia residents by rail to summer assemblies featuring lectures, concerts, and religious programs around the therapeutic springs that gave the town its name. The Chautauqua occupied a wooded hillside with an open-air tabernacle, tent grounds, and hotel facilities that made it a major summer cultural destination for the New South elite. After the Chautauqua movement declined the grounds reverted to open land and the springs area is now part of the Powder Springs city park system. The combination of pre-Civil War mineral spring history and Chautauqua-era crowds makes this an unusually deep site for detecting in the Georgia Piedmont.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Nantasket Beach Resort Grounds, MA",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 42.2268,
+    "longitude": -70.8917,
+    "description": "Nantasket Beach in Hull, Massachusetts developed as a major resort and amusement area from the 1870s through the 1980s, served by the Old Colony Railroad and later steamboats from Boston, featuring multiple competing amusement parks including Paragon Park, the Carousel Under the Clock, and dozens of smaller attractions along the Atlantic shore that made it the premier summer destination for Boston's working class. The resort district contracted dramatically after Paragon Park's 1984 closure, and Hurricane Bob (1991) destroyed much of the remaining commercial infrastructure. The surviving state-owned beach reservation (Nantasket Beach Reservation) preserves open sand and grassy areas behind the seawall where the dense resort infrastructure once stood. Over a century of massive summer crowds on this beach makes it one of the highest-density lost-artifact locations in New England.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Lake Matoaka Assembly Grounds, VA (Williamsburg area)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 37.2704,
+    "longitude": -76.7078,
+    "description": "The Lake Matoaka area near Williamsburg, Virginia hosted Chautauqua assemblies and summer resort gatherings from the 1890s through the 1920s, drawing Tidewater Virginia families to the shaded shores of the historic lake that was named for the daughter of Chief Powhatan. The assembly grounds featured a wooden tabernacle, tent sites, and bathing facilities in a wooded peninsula setting that was part of the broader Colonial-era landscape of the James-York Peninsula. The lake and surrounding College of William and Mary land now preserve the former assembly area as part of the campus natural area. The combination of Colonial-era Native American history and late nineteenth-century resort use makes this location unusually rich for multiple periods of artifact deposition.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Sunny Side Trolley Park, SC (Columbia)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 33.997,
+    "longitude": -81.0623,
+    "description": "Sunny Side Park in Columbia, South Carolina operated from 1892 to 1919 as a trolley park at the end of the Columbia Street Railway Company's Heyward Street line, offering Columbia residents a shaded grove on the northern edge of the city with a dance pavilion, picnic grounds, and seasonal carnival attractions that served as the primary outdoor recreation for the capital city's workers and government employees during the New South era. The park was developed as a loss-leader by the street railway to generate off-peak ridership and was especially popular during political rally seasons when legislators and lobbyists from across South Carolina descended on the capital. The site was developed into a residential neighborhood in the 1920s, with some open green space remaining along the original streetcar right-of-way. Reconstruction-era and Gilded Age coins alongside South Carolina political tokens would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Thousand Island Park Chautauqua, NY",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 44.3028,
+    "longitude": -76.0247,
+    "description": "Thousand Island Park on Wellesley Island in the St. Lawrence River has operated as a Methodist Chautauqua community since 1875, and the assembly grounds and Victorian cottage community it established represents one of the best-preserved original Chautauqua landscapes in America. The park's open assembly grounds, tabernacle lawn, and public waterfront areas have accumulated deposits from 150 years of summer religious retreats, lectures, and family gatherings from across the Northeast and Canada. The publicly accessible portions of the island and the outer beach areas are legally open for recreational use. The longevity of this site \u2014 longer continuous operation than almost any other Chautauqua in the country \u2014 makes it exceptional for detecting Victorian through mid-twentieth century personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.86,
+    "detecting_weight": 84
+  },
+  {
+    "name": "Hermitage Springs Resort, TN (Hermitage)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 36.1819,
+    "longitude": -86.5856,
+    "description": "Hermitage Springs was a popular mineral spring resort near the Hermitage (Andrew Jackson's plantation home) in Davidson County, Tennessee, operating from the 1840s through the 1890s as a fashionable destination for Nashville society seeking therapeutic waters and summer escape from the city. The springs resort included a hotel, bathing facilities, picnic grounds, and a dancing pavilion that hosted some of Middle Tennessee's most prominent families during the antebellum and post-Civil War recovery periods. The springs and adjacent grounds are now open rural land within the Hermitage area outside Nashville, with portions accessible through the neighboring historic district and rural road access. The antebellum and Civil War-era deposits here \u2014 from before and after the Union Army occupation of Nashville \u2014 make this potentially one of the most historically significant detecting sites in Middle Tennessee.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Riverside Park, NE (Scottsbluff)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 41.8664,
+    "longitude": -103.6695,
+    "description": "The original Scotts Bluff County Fairground in Scottsbluff, Nebraska hosted agricultural exhibitions and county fairs from 1900 through the 1940s along the North Platte River, drawing homesteaders, sugar beet farmers, and Oregon Trail descendants from across the Nebraska Panhandle to annual fall celebrations of the High Plains agricultural year. The fairground featured livestock judging, grain exhibitions, carnival midways, and horse racing that served as the primary social event for panhandle communities that were often isolated during harsh winters. When the county built a permanent modern exhibition facility, the original riverside grounds transitioned to Riverside Park, which the city of Scottsbluff still maintains as an open green space along the North Platte. The park's long dual history as fair and public park makes it a rich site for detecting along the Oregon Trail corridor.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Elsinore Chautauqua, UT (Sevier County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 38.6774,
+    "longitude": -112.1532,
+    "description": "The Elsinore Chautauqua in Sevier County, Utah operated from the 1890s through the 1920s as a summer cultural assembly in this small LDS farming community in the Sevier River Valley, hosting lectures, music programs, and educational events that represented the region's primary cultural enrichment outside the Church during the Progressive Era. The assembly drew settlers from across Sevier County's farming villages including Monroe, Richfield, and Salina to the grove on the edge of Elsinore, making it the cultural center of this rural Utah valley. The former assembly grounds are now open agricultural land and an undeveloped town park area on the quiet streets of Elsinore, a town of fewer than 1,000 residents. Pre-automobile era coins and personal items from Sevier Valley's polygamous settlement period would be the primary finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Dells Mill Picnic Grove, WI (Augusta)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 44.6761,
+    "longitude": -91.127,
+    "description": "The Dells Mill picnic grove near Augusta in Eau Claire County, Wisconsin operated as a community gathering site from the 1860s through the early 1900s, centered on the historic 1864 grist mill on Bridge Creek that served as the social anchor for the Chippewa Valley's German and Norwegian immigrant farming communities. Annual picnics, political rallies, and Fourth of July celebrations drew farming families from across the county to the shaded mill pond area and surrounding grove that was accessible by wagon road from Augusta and smaller townships. The 1864 Dells Mill itself survives as a preserved historic site, and the surrounding open grounds along the mill creek remain largely undeveloped. The mill's 1864 construction date means artifact deposits potentially span the Civil War era through the early twentieth century.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Tempe Beach Park, AZ (Salt River)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 33.4242,
+    "longitude": -111.94,
+    "description": "Tempe Beach Park along the Salt River in Tempe, Arizona operated as a resort and community gathering place from the 1890s through the 1940s, featuring a public bathing beach on the Salt River, a dance pavilion, and seasonal carnival midways that served the agricultural communities of the Salt River Valley during Arizona's territorial and early statehood period. The park drew farmworkers, Mormon settlers, and Maricopa County residents to the riverfront for swimming, dances, and Fourth of July celebrations before air conditioning made desert heat tolerable. The modern Tempe Town Lake area and Tempe Beach Park now occupy this same riverfront location, making it a publicly accessible city park where the former resort grounds can be legally detected. The shallow river crossing was also used by the historic Hayden Ferry, adding colonial-era and territorial-era artifact potential to the site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Willamette Valley Chautauqua, OR (Gladstone)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 45.3806,
+    "longitude": -122.595,
+    "description": "The Willamette Valley Chautauqua at Gladstone, Oregon operated from 1893 to 1936 on a wooded bluff above the Clackamas River's confluence with the Willamette, drawing thousands of Willamette Valley settlers, Portland workers, and Oregon missionaries to summer cultural assemblies via the Oregon City Electric interurban line. The Gladstone Chautauqua was one of the most prominent in the Pacific Northwest and featured an open-air tabernacle seating 5,000 people, dozens of cottages, and extensive grounds that were the social and intellectual center of progressive western Oregon. The land is now Gladstone City Park and the adjacent athletic complex, with the original Chautauqua bluff and riverside meadows preserved as open public parkland. The park's grounds hold forty years of Chautauqua deposits alongside subsequent decades of public park use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Eagle Rock Pleasure Ground, CA (Los Angeles area)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 34.1305,
+    "longitude": -118.2097,
+    "description": "Eagle Rock Pleasure Ground in the Eagle Rock area of Los Angeles operated from the 1890s through the 1910s as an early trolley park and picnic grove at the end of the Los Angeles street railway's Eagle Rock line, offering Southern California residents a shaded Arroyo Seco canyon grove with picnic facilities, dancing, and outdoor amusements in the period before the rise of the great Los Angeles amusement parks. The grove served the orange grove farming communities of the Eagle Rock and Glendale foothills during the great Southern California land boom when thousands of Midwestern settlers were arriving by Santa Fe Railway each week. The Eagle Rock neighborhood is now urbanized, but portions of the original arroyo grove area survive as open parkland within the Arroyo Seco Regional Park system accessible to the public. The site holds deposits from the boom-era of 1880s-1910s Southern California settlement.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Shoshone County Fairgrounds, ID (Wallace, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 47.4741,
+    "longitude": -115.9236,
+    "description": "The original Shoshone County Fairground in Wallace, Idaho hosted silver mining community fairs and exhibitions from the 1890s through the 1920s, drawing miners, mill workers, and merchants from the Coeur d'Alene Mining District's famous silver camps to annual celebrations of mining community life during the peak years of North Idaho's silver bonanza. The fairs featured mining equipment exhibitions, hard rock mining competitions, and carnival midways that served as the primary social event for communities like Burke, Mullan, and Kellogg whose populations were drawn from Cornish, Irish, and Scandinavian immigrant miners. The original fairground site in the valley below Wallace is now a mix of open land and light development, with portions accessible along the South Fork Coeur d'Alene River. Silver-era mining tokens, union cards, and immigrant personal effects from the Coeur d'Alene labor wars period make this a uniquely significant site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Ponce de Leon Springs Park, GA (Atlanta, original)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 33.7711,
+    "longitude": -84.3632,
+    "description": "The original Ponce de Leon Springs Park in Atlanta operated from the 1870s through 1907 as a mineral springs resort and amusement park along Ponce de Leon Avenue, serving as Atlanta's most fashionable outdoor resort during Reconstruction and the New South era before a major amusement park (also called Ponce de Leon) was developed on an adjacent site. The springs drew thousands of Atlantans seeking therapeutic waters and outdoor relaxation in a shaded grove along the creek, with a hotel, dance pavilion, and picnic grounds. The springs area and original resort grounds are now part of the Ponce City Market and Historic Fourth Ward Park area, with the creek corridor preserved as the Beltline park greenway. The combination of Reconstruction-era Atlanta coins and New South resort artifacts makes this a historically significant site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Weirs Beach Amusement Grounds, NH (Lake Winnipesaukee)",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 43.6263,
+    "longitude": -71.4704,
+    "description": "Weirs Beach on the southwestern shore of Lake Winnipesaukee in Laconia, New Hampshire developed as a Victorian amusement resort from the 1890s through the 1940s, served by the Boston and Maine Railroad and Lake Winnipesaukee steamboats that brought Boston workers and New Hampshire families to its arcades, dance halls, shooting galleries, and lakeside midway. The resort was a fixture of northern New England summer recreation for generations, and while the beach remains active as a seasonal resort, many of the original amusement structures were cleared after WWII and the land between the railroad tracks and the lake has been extensively redeveloped. The grassy areas and former carnival grounds behind the commercial strip retain deposits from the Victorian and Edwardian peak resort era. Pre-Depression-era coins and resort tokens from the Boston day-tripper trade are the primary targets.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Swannanoa Assembly Grounds, NC (Black Mountain)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 35.6178,
+    "longitude": -82.3152,
+    "description": "The Swannanoa Valley Assembly Grounds near Black Mountain, North Carolina operated from 1906 to 1934 as a Southern Highland Chautauqua and church conference center at the end of the Southern Railway's Black Mountain branch in the Blue Ridge Mountains, drawing thousands of Piedmont and Tidewater Southern residents who escaped summer heat in the cool Swannanoa Valley for cultural and religious programs. The assembly featured cottages, a large tabernacle, and extensive grounds that became the model for the Southern Appalachian resort conference center model that the region would later perfect. The former assembly grounds are now part of the Lake Eden Arts Festival site and surrounding open land in the Black Mountain area. The cool mountain setting attracted some of the most prosperous families of the New South, suggesting excellent detecting potential for quality personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Mesilla Valley Fairgrounds, NM (Las Cruces, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 32.3199,
+    "longitude": -106.7637,
+    "description": "The original Do\u00f1a Ana County Fairground in Las Cruces, New Mexico hosted territorial-era agricultural exhibitions from the 1880s through the 1910s, serving the Mesilla Valley's mix of Hispanic ranching families, Anglo settlers, and Pueblo Indian communities in annual celebrations of the Rio Grande agricultural season near the recently-completed Atchison, Topeka & Santa Fe Railroad. The fairs celebrated the region's cotton, chile, pecans, and livestock with a cultural flavor unique to the Southwest borderlands, drawing exhibitors from both sides of the US-Mexico border during the era of open border relations. The original fairground site on the edge of Las Cruces is now part of the city's older residential district and adjacent park areas. Spanish Colonial-era heritage artifacts, silver Mexican coins, and frontier-era trade goods from the Mesilla Valley's bicultural community would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Druid Hill Park Trolley Stop, MD (Baltimore)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 39.3261,
+    "longitude": -76.6557,
+    "description": "The Druid Hill Park area in Baltimore served as a major trolley park destination from the 1860s through the 1940s, with Baltimore's streetcar lines converging at the park's main entrance to deliver masses of working-class Baltimoreans to its picnic groves, bandstands, casino, and outdoor gathering spaces. Before and after the formal amusement section of the park was closed in the 1930s, the grounds hosted massive holiday crowds including the annual Fourth of July celebrations that drew hundreds of thousands of Baltimoreans. The older sections of Druid Hill Park preserve wooded hillsides and open meadows where the Victorian picnic grounds were concentrated. The park's continuous use since 1860 and enormous holiday crowds make it one of the deepest artifact deposits in the mid-Atlantic region.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.84,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Lakeview Park, OH (Lorain)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.4613,
+    "longitude": -82.182,
+    "description": "Lakeview Park in Lorain, Ohio operated from 1898 to the 1920s as a trolley park at the Lake Erie shoreline developed by the Lorain & Cleveland Railway, serving the steel mill and shipyard workers of Lorain and surrounding Lake County communities who arrived by streetcar for summer recreation on Lake Erie's shores. The park featured a large dance pavilion, beach, picnic facilities, and midway amusements that made it the social center of Lorain County's immigrant steelworker communities \u2014 many of whom were recent arrivals from Poland, Hungary, and Slovakia. The shoreline is now managed as Lakeview Park by the city of Lorain, a public green space with open lawn areas and mature trees where the former trolley park stood. Eastern European immigrant coins, union tokens, and steel-era personal items from the Lake Erie industrial community are the primary targets.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.81,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Ravinia Park (Original Grounds), IL",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.1636,
+    "longitude": -87.7921,
+    "description": "Ravinia Park in Highland Park, Illinois began in 1904 as a full-scale amusement park with a roller coaster, carousel, shooting gallery, and midway developed by the Chicago & Milwaukee Electric Railroad to boost summer ridership on the North Shore line, evolving by 1911 into a musical pavilion and festival ground after the amusement attractions failed to sustain business. The original amusement park infrastructure occupied the wooded ravine and surrounding open grounds that are now the outer areas of the famous Ravinia Music Festival venue, which continues operating as the oldest outdoor music venue in North America. The outer lawn areas of Ravinia Park that are now used for picnic seating during concerts preserve the original trolley-park grounds from the 1904-1910 amusement era. Over 120 years of continuous use make the outer lawn areas among the deepest artifact deposits on the North Shore.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.86,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Mirror Lake Chautauqua, WI (Wisconsin Dells area)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 43.6238,
+    "longitude": -89.812,
+    "description": "The Mirror Lake Chautauqua near Wisconsin Dells, Wisconsin operated from 1891 to 1917 in the scenic sandstone canyon country of the upper Wisconsin River, drawing thousands of Chicago and Milwaukee working-class vacationers who arrived by the Chicago, Milwaukee & St. Paul Railway to attend summer assemblies in one of Wisconsin's most scenic natural settings. The assembly featured tent grounds, a wooden tabernacle, and resort cottages surrounding the mirror-smooth lake, attracting speakers and performers who traveled the Midwest Chautauqua circuit during the height of the movement. The former assembly grounds are now part of Mirror Lake State Park, operated by the Wisconsin DNR as a camping and recreation area with large sections of open sandy shoreline and wooded grounds. The state park's open areas along the original Chautauqua shoreline hold deposits from twenty-six years of summer assemblies.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.77,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Hot Springs Chautauqua, AR (Garland County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 34.5037,
+    "longitude": -93.0552,
+    "description": "The Hot Springs Chautauqua in Garland County, Arkansas operated from 1891 to 1912 in the wooded Ouachita Mountains above Hot Springs National Park, serving as both a Chautauqua assembly and a therapeutic resort that capitalized on Hot Springs' reputation as a national health destination drawing railroad travelers, political figures, and tuberculosis patients from across the nation. The assembly grounds were reached by a spur line from the Missouri Pacific Railroad and featured a large tabernacle, hotel, and cottage colony in a pine-forested hill setting above the famous bathhouse district. The former Chautauqua grounds are now part of the greater Hot Springs National Park area and surrounding Ouachita National Forest, with wooded open land accessible along the hillside. The combination of health-seeker tourism and Chautauqua deposits makes this site particularly interesting for early twentieth-century personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Fern Cliff Chautauqua, IN (Putnam County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 39.6508,
+    "longitude": -86.8947,
+    "description": "The Fern Cliff Chautauqua in Putnam County, Indiana operated from 1884 to 1938 in a dramatic limestone gorge carved by Milligan Creek, serving as one of Indiana's most scenic and beloved Chautauqua assembly grounds where participants camped in the fern-draped cliffs of a state nature preserve setting. The assembly drew Methodist and Christian Church families from across central Indiana for fifty-four years of continuous summer programming, making it one of the longest-running Chautauquas in the Midwest. The site is now preserved as Lieber State Recreation Area and Cataract Falls State Recreation Area, with the gorge and surrounding open land publicly accessible. The fifty-four year continuous operation of this Chautauqua and its picturesque setting that attracted Indiana's most prosperous farming families makes it one of the richest Chautauqua detecting sites in the Midwest.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Paw Paw Lake Resort, MI",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 42.2109,
+    "longitude": -86.2712,
+    "description": "Paw Paw Lake in Berrien County, Michigan developed as a major southwestern Michigan resort area from the 1880s through the 1940s, featuring multiple competing hotels, dance halls, amusement concessions, and picnic grounds that drew Chicago and Benton Harbor summer visitors via the Michigan Central Railroad to the lake's cool waters in the fruit belt of southwest Michigan. The resort area included a large pavilion, carousel, and midway on the public beach that served as the social center of Berrien County's summer tourism. After automobile-era highway travel shifted vacation patterns, the lakeside resort declined and the former commercial amusement areas reverted to public beach and open shoreline managed by the state. The lake's public beach and former resort grounds are accessible and hold deposits from sixty years of intensive summer resort use by Chicago middle-class families.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.79,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Lake Quinsigamond Amusement Area, MA (Worcester)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.2543,
+    "longitude": -71.7676,
+    "description": "Lake Quinsigamond on the eastern edge of Worcester, Massachusetts hosted multiple competing amusement parks and resort areas from the 1870s through the 1940s, including Mechanics Grove, White City, and Norwood Park, all served by the Worcester Consolidated Street Railway and drawing immense crowds of Worcester mill workers and Massachusetts Central Railroad excursionists to the lake's beaches, dance halls, and carnival midways. The lake-shore resorts were the primary outdoor recreation for Worcester's immigrant workforce of Irish, Swedish, and French-Canadian mill operatives, serving as the social equalizer of central Massachusetts's industrial community. Portions of the former amusement areas on the western and northern shores are now public parkland managed by Worcester and Shrewsbury, with accessible shoreline and open areas. The industrial worker immigrant culture makes this a rich site for late nineteenth and early twentieth century European immigrant coins and personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Garfield Beach Resort, UT (Great Salt Lake)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 40.7294,
+    "longitude": -112.2107,
+    "description": "Garfield Beach on the southern shore of the Great Salt Lake in Salt Lake County, Utah operated from 1887 to 1904 as a major bathing resort developed by the Garfield Beach and Hot Springs Railway, drawing thousands of Salt Lake City and Utah Territory residents to a famous saltwater bathing pavilion, hotel, dance hall, and midway on the lake's shore before the resort was closed by declining lake levels and then destroyed by a 1904 hurricane. The resort was one of the most popular in the Intermountain West during the 1890s when LDS church members and gentle mining families alike rode the spur railway to float effortlessly in the Great Salt Lake's hypersaline waters. The former resort site is now open Great Salt Lake State Park land that is accessible along the southern shoreline. Late Victorian-era coins, resort tokens, and personal items from Utah Territory's diverse mining and farming population make this a unique Great Basin detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 81
+  },
+  {
+    "name": "Wheeler Park Chautauqua, TX (Sherman)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 33.6399,
+    "longitude": -96.6203,
+    "description": "The Wheeler Park Chautauqua in Sherman, Texas operated from 1885 to 1915 as one of Texas's largest Chautauqua assemblies in a wooded park on the Red River Divide above the Denison & Sherman Railroad junction, drawing thousands of North Texas and Indian Territory residents to summer programs that featured national Chautauqua circuit speakers and performers including William Jennings Bryan and Carry Nation. Sherman's Chautauqua was the intellectual and cultural heart of North Texas during the Gilded Age and drew visitors from as far as Dallas and Fort Worth when no other comparable cultural programming existed in the region. The former assembly grounds in Sherman are now a city park with mature trees and open lawn areas where the original tabernacle and tent grounds were located. Texas plantation-era coins and Indian Territory trade tokens from cross-border visitors would be among the most historically significant finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Camp Sylvan Picnic Grove, MI (Kent County)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 42.9634,
+    "longitude": -85.6712,
+    "description": "Camp Sylvan in Kent County, Michigan operated from the 1880s through the 1920s as a major interurban-accessible picnic grove on the Grand River above Grand Rapids, serving as the primary outdoor gathering place for Grand Rapids' Dutch Reformed and Scandinavian furniture factory worker communities who arrived by the West Michigan Railway's interurban line for church picnics, labor union outings, and Fourth of July celebrations. The grove featured a large dance pavilion, picnic shelters, and boat rentals on the Grand River that made it the social center of western Michigan's industrial working class during the furniture manufacturing boom. After the interurban era ended the grove was absorbed into the Kent County park system and surrounding residential development, with portions of the original wooded grove surviving as open parkland along the river. Dutch immigrant coins and furniture industry trade tokens from Grand Rapids' ethnic neighborhoods would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Red Cloud Fairgrounds, NE (Webster County, ghost town area)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.0872,
+    "longitude": -98.5217,
+    "description": "The Webster County Fairground in Red Cloud, Nebraska has hosted agricultural fairs since the 1870s in a town made famous by Willa Cather's novels about the Nebraska prairie, serving the homesteading communities of the Republican River Valley's wheat and cattle country during the most dramatic era of Great Plains settlement. The fairground was the annual gathering point for Nebraska's dryland farming communities during the years Cather was growing up in Red Cloud, and the exhibits, midways, and horse races she witnessed informed her literary depictions of prairie life. The original fairground site on the edge of the small town (population under 1,000) is now open grassland and light-use agricultural land near the Willa Cather historic sites. The deep history of this locale \u2014 including Civil War-era settlement and the period Cather immortalized in literature \u2014 makes this one of Nebraska's most historically significant detecting sites.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 80
   }
 ]
