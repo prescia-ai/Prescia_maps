@@ -686,6 +686,7 @@ class GroupResponse(BaseModel):
     member_count: int = 0
     is_member: bool = False
     user_role: Optional[str] = None  # "owner", "moderator", "member", or None
+    pending_request: bool = False
 
 
 class GroupListResponse(BaseModel):

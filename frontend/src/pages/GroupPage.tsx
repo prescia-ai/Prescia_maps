@@ -221,8 +221,16 @@ export default function GroupPage() {
       await joinGroup(group.slug);
       const updated = await fetchGroup(group.slug);
       setGroup(updated);
-    } catch {
-      // silent
+    } catch (err: any) {
+      // If 409, a pending request already exists — re-fetch to show pending state
+      if (err?.response?.status === 409) {
+        try {
+          const updated = await fetchGroup(group.slug);
+          setGroup(updated);
+        } catch {
+          // silent
+        }
+      }
     } finally {
       setActionLoading(false);
     }
@@ -394,7 +402,7 @@ export default function GroupPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 flex items-center justify-center">
+      <div className="flex items-center justify-center py-20">
         <div className="w-6 h-6 border-2 border-stone-300 border-t-stone-700 rounded-full animate-spin" />
       </div>
     );
@@ -402,7 +410,7 @@ export default function GroupPage() {
 
   if (notFound || !group) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center px-4">
+      <div className="flex flex-col items-center justify-center px-4 py-20">
         <div className="text-4xl mb-3">🔍</div>
         <h1 className="text-stone-900 font-bold text-xl mb-1">Group not found</h1>
         <p className="text-stone-500 text-sm">This group doesn't exist or has been deleted.</p>
@@ -411,7 +419,7 @@ export default function GroupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 px-4 py-10">
+    <div className="px-4 py-10">
       <div className="max-w-2xl mx-auto space-y-4">
         {/* Header Card */}
         <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6">
@@ -444,13 +452,22 @@ export default function GroupPage() {
                 </button>
               )}
 
-              {!group.is_member && !isModOrOwner && (
+              {!group.is_member && !isModOrOwner && !group.pending_request && (
                 <button
                   onClick={handleJoin}
                   disabled={actionLoading}
                   className="px-4 py-1.5 text-sm font-medium text-white bg-stone-800 hover:bg-stone-700 disabled:opacity-50 rounded-xl transition-colors"
                 >
                   {actionLoading ? '…' : group.privacy === 'public' ? 'Join Group' : 'Request to Join'}
+                </button>
+              )}
+
+              {!group.is_member && !isModOrOwner && group.pending_request && (
+                <button
+                  disabled
+                  className="px-4 py-1.5 text-sm font-medium bg-stone-200 text-stone-400 cursor-not-allowed rounded-xl"
+                >
+                  Request Pending
                 </button>
               )}
 

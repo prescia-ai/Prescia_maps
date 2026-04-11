@@ -263,6 +263,7 @@ export interface Group {
   member_count: number;
   is_member: boolean;
   user_role: 'owner' | 'moderator' | 'member' | null;
+  pending_request: boolean;
 }
 
 export interface GroupMember {

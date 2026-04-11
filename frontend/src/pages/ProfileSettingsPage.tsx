@@ -160,26 +160,8 @@ export default function ProfileSettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
-      {/* Top nav bar */}
-      <div className="border-b border-stone-200 bg-white shadow-sm">
-        <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
-          <Link
-            to={profile?.username ? `/profile/${profile.username}` : '/map'}
-            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Profile
-          </Link>
-          <span className="text-stone-300">·</span>
-          <span className="text-stone-500 text-sm">Edit Profile</span>
-        </div>
-      </div>
-
-      <div className="max-w-2xl mx-auto px-4 py-8">
-        <h1 className="text-xl font-semibold text-stone-900 mb-6">Edit Profile</h1>
+    <div className="max-w-2xl mx-auto px-4 py-8">
+      <h1 className="text-xl font-semibold text-stone-900 mb-6">Edit Profile</h1>
 
         {/* Success toast */}
         {success && (
@@ -456,7 +438,6 @@ export default function ProfileSettingsPage() {
             </Link>
           </div>
         </form>
-      </div>
     </div>
   );
 }

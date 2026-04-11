@@ -156,15 +156,15 @@ function UserSearch() {
 }
 
 interface NavbarProps {
-  locationCount: number;
-  isLoading: boolean;
-  isLocationsError: boolean;
-  isFeaturesError: boolean;
-  onImportClick: () => void;
+  locationCount?: number;
+  isLoading?: boolean;
+  isLocationsError?: boolean;
+  isFeaturesError?: boolean;
+  onImportClick?: () => void;
   onLogHuntClick?: () => void;
 }
 
-function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void; onImportClick: () => void }) {
+function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void; onImportClick?: () => void }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const { profile } = useAuth();
@@ -229,18 +229,20 @@ function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void;
           {profile?.is_admin && (
             <>
               <div className="border-t border-stone-100 my-1" />
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  onImportClick();
-                }}
-                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors text-left"
-              >
-                <svg className="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
-                </svg>
-                Import Data
-              </button>
+              {onImportClick && (
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    onImportClick();
+                  }}
+                  className="w-full flex items-center gap-2 px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors text-left"
+                >
+                  <svg className="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                  </svg>
+                  Import Data
+                </button>
+              )}
               <Link
                 to="/admin/submissions"
                 onClick={() => setOpen(false)}
@@ -273,10 +275,10 @@ function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void;
 }
 
 export default function Navbar({
-  locationCount,
-  isLoading,
-  isLocationsError,
-  isFeaturesError,
+  locationCount = 0,
+  isLoading = false,
+  isLocationsError = false,
+  isFeaturesError = false,
   onImportClick,
   onLogHuntClick,
 }: NavbarProps) {
@@ -284,7 +286,7 @@ export default function Navbar({
   const navigate = useNavigate();
 
   return (
-    <div className="absolute top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
       <div className="flex items-center gap-3 px-4 h-12">
         {/* Branding */}
         <span className="text-xl">🗺️</span>
@@ -363,7 +365,7 @@ export default function Navbar({
             </Link>
           )}
 
-          {user && (
+          {user && onLogHuntClick && (
             <button
               onClick={onLogHuntClick}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
@@ -412,7 +414,7 @@ export default function Navbar({
               Loading data…
             </span>
           )}
-          {!isLoading && !isLocationsError && (
+          {!isLoading && !isLocationsError && onImportClick && (
             <span className="text-xs text-green-700 bg-green-50 border border-green-200 px-2 py-1 rounded-full">
               ✓ {locationCount} locations
             </span>

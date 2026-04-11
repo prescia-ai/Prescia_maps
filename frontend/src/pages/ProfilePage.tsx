@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import PostCard from '../components/PostCard';
@@ -28,7 +28,6 @@ function formatHuntDate(dateStr: string): string {
 export default function ProfilePage() {
   const { username } = useParams<{ username: string }>();
   const { profile: myProfile } = useAuth();
-  const navigate = useNavigate();
 
   const [publicProfile, setPublicProfile] = useState<PublicProfile | null>(null);
   const [loading, setLoading] = useState(true);
@@ -146,7 +145,7 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 flex items-center justify-center">
+      <div className="flex items-center justify-center py-20">
         <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
       </div>
     );
@@ -154,18 +153,12 @@ export default function ProfilePage() {
 
   if (notFound || !publicProfile) {
     return (
-      <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center gap-4 text-center px-4">
+      <div className="flex flex-col items-center justify-center gap-4 text-center px-4 py-20">
         <p className="text-4xl">🔍</p>
         <h1 className="text-xl font-semibold text-stone-900">Profile not found</h1>
         <p className="text-stone-500 text-sm">
           @{username} doesn't exist on Prescia Maps yet.
         </p>
-        <button
-          onClick={() => navigate('/map')}
-          className="mt-2 text-sm text-amber-700 hover:text-amber-600 transition-colors"
-        >
-          ← Back to map
-        </button>
       </div>
     );
   }
@@ -173,24 +166,7 @@ export default function ProfilePage() {
   const isPrivate = publicProfile.privacy === 'private';
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
-      {/* Top nav bar */}
-      <div className="border-b border-stone-200 bg-white shadow-sm">
-        <div className="max-w-2xl mx-auto flex items-center gap-3 px-4 h-12">
-          <button
-            onClick={() => navigate('/map')}
-            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Map
-          </button>
-          <span className="text-stone-300">·</span>
-          <span className="text-stone-500 text-sm">Profile</span>
-        </div>
-      </div>
-
+    <div className="text-stone-900">
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
         {/* ── Google Drive prompt (own profile, not connected) ─────── */}
         {isOwnProfile && !myProfile?.google_connected_at && (

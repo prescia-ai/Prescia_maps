@@ -97,11 +97,15 @@ async def _build_group_response(
     count = await _member_count(group.id, db)
     is_member = False
     user_role = None
+    pending_request = False
     if current_user is not None:
         membership = await _get_membership(group.id, current_user.id, db)
-        if membership is not None and membership.status == "active":
-            is_member = True
-            user_role = membership.role
+        if membership is not None:
+            if membership.status == "active":
+                is_member = True
+                user_role = membership.role
+            elif membership.status == "pending":
+                pending_request = True
     return GroupResponse(
         id=group.id,
         name=group.name,
@@ -114,6 +118,7 @@ async def _build_group_response(
         member_count=count,
         is_member=is_member,
         user_role=user_role,
+        pending_request=pending_request,
     ).model_dump()
 
 
