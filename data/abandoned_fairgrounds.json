@@ -658,5 +658,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.8,
     "detecting_weight": 65
+  },
+  {
+    "name": "Van Buren County Fairgrounds, IA",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.7155,
+    "longitude": -91.9653,
+    "description": "The Van Buren County Fairgrounds in Keosauqua, Iowa hosted annual county fairs from the mid-nineteenth century through the early twentieth century, drawing farming families from this southeastern Iowa county to livestock shows, agricultural exhibits, horse racing, and carnival midways. Keosauqua is one of the oldest towns in Iowa and the county seat, situated on a dramatic bend in the Des Moines River, and the fairgrounds served the surrounding farming community during Iowa's agricultural peak. The small town's population has declined significantly and the former fairgrounds may now be open or agricultural land. The mid-nineteenth-century through early twentieth-century operation makes this a target for early American silver coins and agricultural fair tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Electric Park, IA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.5983,
+    "longitude": -93.6093,
+    "description": "Electric Park in Des Moines, Iowa operated from 1900 to the early 1920s as a Des Moines City Railway Company trolley park at the end of the Ingersoll Avenue line, featuring roller coasters, a carousel, dance pavilions, and illuminated fountains that drew Des Moines crowds during Iowa's agricultural boom years. The park served Iowa's capital city during the Progressive Era and World War I years when Des Moines was experiencing rapid growth as an agricultural processing and insurance center. After the park closed in the early 1920s the land was redeveloped into the Des Moines residential grid. The former park footprint along the Ingersoll Avenue corridor holds early twentieth-century coins and Des Moines transit tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Chesapeake Beach Resort, MD",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 38.6882,
+    "longitude": -76.5349,
+    "description": "Chesapeake Beach, Maryland was developed beginning in 1898 as a seaside resort on the western shore of the Chesapeake Bay, served by the Chesapeake Beach Railway from Washington D.C. and featuring a large boardwalk, roller coaster, carousel, bathhouses, a pier, and midway attractions that drew enormous summer crowds from the capital. Conceived as a rival to Atlantic City, it drew hundreds of thousands at its peak in the 1910s. The railway ceased passenger service in 1935 and the resort declined, with most amusement structures removed by mid-century. The former resort boardwalk area is now Chesapeake Beach public park, where the former amusement zone between the rail terminus and the bay holds deposits from four decades of resort crowds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Joyland Amusement Park, KS",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 37.69,
+    "longitude": -97.335,
+    "description": "Joyland Amusement Park in Wichita, Kansas operated from 1949 to 2004, featuring the beloved wooden Roller Coaster, a 1949 Spillman carousel, a log flume, and family midway attractions that made it the primary outdoor amusement destination for generations of Wichita families. A classic mid-century American family amusement park, it survived urban sprawl and competition before finally closing in 2004 due to insurance and maintenance costs. The former park sits abandoned in Wichita with the historic carousel still on site, deteriorating in place among the vacant midway structures. The intact but decaying former midway areas offer accessible metal detecting potential for mid-twentieth-century coins and amusement tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 83
+  },
+  {
+    "name": "Riverview Park, IN",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.788,
+    "longitude": -86.1645,
+    "description": "Riverview Park in Indianapolis operated from the early 1900s to 1970 as an Indianapolis Traction and Terminal Company trolley park on the White River east bank in the Riverside neighborhood, featuring roller coasters, a carousel, a large swimming pool, and midway attractions that served Indianapolis through two World Wars and the postwar prosperity era. The park was a staple of Indianapolis summer life for most of the twentieth century. The former park site along the White River is now part of the Indianapolis parks system, with portions of the riverfront greenway accessible to the public. The White River parkway area near the former Riverview site holds deposits from decades of urban park and amusement use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Mineral Palace Park, CO",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 38.2481,
+    "longitude": -104.6197,
+    "description": "Mineral Palace Park in Pueblo, Colorado was developed in the 1890s as a resort and amusement ground centered on the Mineral Palace, a glass and steel exhibition building celebrating the mineral wealth of southern Colorado that hosted expositions and cultural events. The park featured gardens, a lake, a bandstand, and later amusement rides serving Pueblo's steel industry workforce through the early twentieth century. The Mineral Palace was demolished in 1942 and the park gradually declined, though Mineral Palace Park survives today as a public Pueblo city park. The current city park on the former resort and exposition grounds represents a legally accessible detecting site with Victorian-era Colorado coin potential.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Chippewa Lake Park, OH",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 41.0612,
+    "longitude": -81.8934,
+    "description": "Chippewa Lake Park in Medina County, Ohio operated from 1878 to 1978, featuring classic wooden roller coasters, a vintage carousel, a large ballroom, and extensive lakeside picnic facilities that served northeastern Ohio for an entire century. After closing in 1978 the park sat completely abandoned in place, with rides, carousel animals, and ballroom furnishings left to decay in the encroaching forest, making it one of the most famous abandoned amusement park sites in the country. The heavily wooded former grounds surround a private lake but the historical significance and century of use create extraordinary detecting potential in any accessible areas. One hundred years of summertime crowds concentrated at the midway, picnic areas, and dance hall represent exceptional accumulation.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 88
+  },
+  {
+    "name": "Wonderland Park, TX",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 35.197,
+    "longitude": -101.861,
+    "description": "Wonderland Park in Amarillo, Texas operated from 1951 to 1989 as the only major permanent amusement park in the Texas Panhandle, featuring the Texas Tornado roller coaster, a ferris wheel, a carousel, and family midway attractions serving a vast rural and small-city population across eastern New Mexico, western Oklahoma, and the Texas Panhandle. The park was the primary entertainment destination for an enormous geographic area with no other major amusement parks within hundreds of miles. After its 1989 closure the site sat vacant for years before partial redevelopment. The former grounds represent nearly forty years of concentrated Panhandle family visits with significant coin and token accumulation from a very large regional draw area.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 79
+  },
+  {
+    "name": "White City (Spokane Area), WA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 47.6588,
+    "longitude": -117.426,
+    "description": "White City Amusement Park near Spokane, Washington operated from 1905 to 1923 as a lakeside resort near Liberty Lake east of the city, developed by Washington Water Power Company and Spokane street railway interests and featuring a large dance hall, roller coaster, and boat launches on Liberty Lake. The park drew eastern Washington crowds during the Inland Empire's timber and mining boom years and was one of the few major amusement destinations in the Inland Northwest. After its early 1920s closure the land reverted to private use and the Liberty Lake area was gradually developed. The lakeshore areas near the former park site retain potential for early twentieth-century Washington State coin deposits.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Electric Park, WI",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.0318,
+    "longitude": -87.9219,
+    "description": "Electric Park in Milwaukee, Wisconsin operated from 1906 through the early 1920s at the end of a Milwaukee Electric Railway and Light Company streetcar line, featuring illuminated grounds, a large dance pavilion, roller coaster, and concession midway serving Milwaukee's large German and Central European immigrant workforce. Milwaukee's industrial workforce created enormous demand for affordable summer entertainment, and Electric Park competed with other trolley parks for weekend crowds. After the park's closure the land was absorbed into Milwaukee's expanding residential grid. The dense immigrant community patronage of this pre-Prohibition Milwaukee park creates potential for finding German-American community tokens and early twentieth-century coins.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 72
   }
 ]
