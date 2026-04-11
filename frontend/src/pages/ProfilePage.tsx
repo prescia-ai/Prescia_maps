@@ -226,8 +226,13 @@ export default function ProfilePage() {
                   @{publicProfile.username ?? username}
                 </h1>
                 {publicProfile.display_name && (
-                  <p className="text-stone-600 text-base leading-tight mt-0.5 truncate">
-                    {publicProfile.display_name}
+                  <p className="flex items-center gap-1.5 text-stone-600 text-base leading-tight mt-0.5">
+                    <span className="truncate">{publicProfile.display_name}</span>
+                    {publicProfile.is_admin && (
+                      <span className="flex-shrink-0 inline-flex items-center px-1.5 py-0.5 rounded-md bg-blue-100 text-blue-600 text-[10px] font-semibold tracking-wide">
+                        ADMIN
+                      </span>
+                    )}
                   </p>
                 )}
                 {!isPrivate && publicProfile.location && (

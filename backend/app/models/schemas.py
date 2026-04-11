@@ -367,6 +367,7 @@ class UserProfilePublic(BaseModel):
     following_count: int = 0
     is_following: bool = False
     avatar_url: Optional[str] = None
+    is_admin: bool = False
 
 
 class UserProfileLimited(BaseModel):
