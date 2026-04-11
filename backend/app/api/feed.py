@@ -4,7 +4,8 @@ Feed endpoints — posts, comments, and reactions.
 Routes (all mounted under /api/v1 in main.py):
   POST   /posts                              — create a post
   GET    /feed                               — global feed (public posts)
-  GET    /feed/home                          — home feed (followed users, auth required)
+  GET    /feed/home                          — home feed (followed users + group posts, auth required)
+  GET    /posts/group/{group_id}             — group feed
   GET    /posts/user/{username}              — list posts by a specific user
   GET    /posts/{post_id}                    — single post
   DELETE /posts/{post_id}                    — delete own post
@@ -22,11 +23,13 @@ from typing import Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from fastapi.responses import Response
-from sqlalchemy import func, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user, optional_user
 from app.models.database import (
+    Group,
+    GroupMember,
     Post,
     PostComment,
     PostImage,
@@ -59,12 +62,16 @@ async def _build_post_responses(
     posts: List[Post],
     db: AsyncSession,
     current_user_id: Optional[uuid.UUID] = None,
+    group_map: Optional[Dict[uuid.UUID, Group]] = None,
 ) -> List[PostResponse]:
     """
     Enrich a list of Post ORM objects with author info, reaction counts,
     comment counts, and the current user's own reaction.
 
     Uses 4 additional queries (O(1) regardless of page size).
+
+    ``group_map`` is an optional pre-fetched mapping of group_id → Group for
+    populating group_name/group_slug without extra queries.
     """
     if not posts:
         return []
@@ -117,6 +124,18 @@ async def _build_post_responses(
     for img in images_rows.scalars().all():
         images_map[img.post_id].append(PostImageResponse(id=img.id, url=img.url, position=img.position))
 
+    # -- Groups (fetch any referenced groups not yet in group_map) ---------
+    resolved_group_map: Dict[uuid.UUID, Group] = dict(group_map) if group_map else {}
+    missing_group_ids = {
+        p.group_id
+        for p in posts
+        if p.group_id is not None and p.group_id not in resolved_group_map
+    }
+    if missing_group_ids:
+        group_rows = await db.execute(select(Group).where(Group.id.in_(missing_group_ids)))
+        for g in group_rows.scalars().all():
+            resolved_group_map[g.id] = g
+
     return [
         PostResponse(
             id=post.id,
@@ -131,6 +150,9 @@ async def _build_post_responses(
             reactions=reactions_map.get(post.id, dict(_EMPTY_REACTIONS)),
             my_reaction=my_reaction_map.get(post.id),
             images=images_map.get(post.id, []),
+            group_id=post.group_id,
+            group_name=resolved_group_map[post.group_id].name if post.group_id and post.group_id in resolved_group_map else None,
+            group_slug=resolved_group_map[post.group_id].slug if post.group_id and post.group_id in resolved_group_map else None,
         )
         for post in posts
     ]
@@ -147,15 +169,38 @@ async def create_post(
     db: AsyncSession = Depends(get_db),
 ) -> PostResponse:
     """Create a new feed post for the authenticated user."""
+    group: Optional[Group] = None
+    if body.group_id is not None:
+        # Verify the group exists
+        group_result = await db.execute(select(Group).where(Group.id == body.group_id))
+        group = group_result.scalar_one_or_none()
+        if group is None:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Group not found")
+        # Verify the user is an active member
+        member_result = await db.execute(
+            select(GroupMember).where(
+                GroupMember.group_id == body.group_id,
+                GroupMember.user_id == current_user.id,
+                GroupMember.status == "active",
+            )
+        )
+        if member_result.scalar_one_or_none() is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="You must be an active member of the group to post in it",
+            )
+
     post = Post(
         author_id=current_user.id,
         content=body.content,
         privacy=body.privacy or "public",
+        group_id=body.group_id,
     )
     db.add(post)
     await db.flush()
     await db.refresh(post)
-    responses = await _build_post_responses([post], db, current_user.id)
+    group_map = {group.id: group} if group is not None else {}
+    responses = await _build_post_responses([post], db, current_user.id, group_map=group_map)
     return responses[0]
 
 
@@ -201,10 +246,12 @@ async def home_feed(
     db: AsyncSession = Depends(get_db),
 ) -> PostListResponse:
     """
-    Return posts from users the current user follows (plus their own posts).
+    Return posts from users the current user follows (plus their own posts)
+    AND posts from any group the current user is an active member of.
 
     Includes "public" and "followers" privacy posts from followed users,
     and all non-private posts from the user themselves.
+    Group posts are included regardless of whether the user follows the author.
     """
     # IDs of users we follow
     following_result = await db.execute(
@@ -214,19 +261,42 @@ async def home_feed(
     # Include own posts
     visible_author_ids = following_ids + [current_user.id]
 
-    base_filter = (
-        Post.author_id.in_(visible_author_ids),
-        Post.privacy.in_(["public", "followers"]),
+    # IDs of groups the current user is an active member of
+    group_ids_result = await db.execute(
+        select(GroupMember.group_id).where(
+            GroupMember.user_id == current_user.id,
+            GroupMember.status == "active",
+        )
     )
+    my_group_ids = [row for row in group_ids_result.scalars().all()]
+
+    # Build filter:
+    # - Regular posts (group_id IS NULL) from followed users / self with public/followers privacy
+    # - Group posts from any of the user's groups (regardless of author or privacy)
+    if my_group_ids:
+        base_filter = or_(
+            (
+                Post.author_id.in_(visible_author_ids)
+                & Post.privacy.in_(["public", "followers"])
+                & (Post.group_id == None)  # noqa: E711
+            ),
+            Post.group_id.in_(my_group_ids),
+        )
+    else:
+        base_filter = (
+            Post.author_id.in_(visible_author_ids)
+            & Post.privacy.in_(["public", "followers"])
+            & (Post.group_id == None)  # noqa: E711
+        )
 
     total_result = await db.execute(
-        select(func.count()).select_from(Post).where(*base_filter)
+        select(func.count()).select_from(Post).where(base_filter)
     )
     total = total_result.scalar_one()
 
     result = await db.execute(
         select(Post)
-        .where(*base_filter)
+        .where(base_filter)
         .order_by(Post.created_at.desc())
         .limit(limit)
         .offset(offset)
@@ -251,9 +321,11 @@ async def user_posts(
     """
     Return posts authored by *username*, filtered by privacy rules:
 
-    - Viewer is the author → all posts (public, followers, private).
-    - Viewer is authenticated and follows the author → public + followers posts.
-    - Otherwise (anonymous or not following) → public posts only.
+    - Viewer is the author → all posts (public, followers, private), including group posts.
+    - Viewer is authenticated and follows the author → public + followers posts, group_id IS NULL only.
+    - Otherwise (anonymous or not following) → public posts, group_id IS NULL only.
+
+    Group posts from private groups are not exposed to other users for privacy.
     """
     # Resolve the target user
     author_result = await db.execute(select(User).where(User.username == username))
@@ -263,7 +335,7 @@ async def user_posts(
 
     # Determine which privacy levels the viewer may see
     if current_user is not None and current_user.id == author.id:
-        # Own profile — see everything
+        # Own profile — see everything including group posts
         privacy_filter = Post.author_id == author.id
     elif current_user is not None:
         # Check if viewer follows the author
@@ -275,12 +347,24 @@ async def user_posts(
         )
         is_following = follow_result.scalar_one_or_none() is not None
         if is_following:
-            privacy_filter = (Post.author_id == author.id) & Post.privacy.in_(["public", "followers"])
+            privacy_filter = (
+                (Post.author_id == author.id)
+                & Post.privacy.in_(["public", "followers"])
+                & (Post.group_id == None)  # noqa: E711
+            )
         else:
-            privacy_filter = (Post.author_id == author.id) & (Post.privacy == "public")
+            privacy_filter = (
+                (Post.author_id == author.id)
+                & (Post.privacy == "public")
+                & (Post.group_id == None)  # noqa: E711
+            )
     else:
         # Anonymous viewer
-        privacy_filter = (Post.author_id == author.id) & (Post.privacy == "public")
+        privacy_filter = (
+            (Post.author_id == author.id)
+            & (Post.privacy == "public")
+            & (Post.group_id == None)  # noqa: E711
+        )
 
     total_result = await db.execute(
         select(func.count()).select_from(Post).where(privacy_filter)
@@ -297,6 +381,66 @@ async def user_posts(
     posts = list(result.scalars().all())
     current_user_id = current_user.id if current_user else None
     post_responses = await _build_post_responses(posts, db, current_user_id)
+    return PostListResponse(posts=post_responses, total=total)
+
+
+# ---------------------------------------------------------------------------
+# GET /posts/group/{group_id} — group feed
+# ---------------------------------------------------------------------------
+
+@router.get("/posts/group/{group_id}", response_model=PostListResponse)
+async def group_feed(
+    group_id: uuid.UUID,
+    limit: int = Query(20, ge=1, le=100),
+    offset: int = Query(0, ge=0),
+    current_user: Optional[User] = Depends(optional_user),
+    db: AsyncSession = Depends(get_db),
+) -> PostListResponse:
+    """
+    Return all posts for a specific group, ordered by most recent.
+
+    - Public groups: anyone can view.
+    - Private groups: only active members can view (403 otherwise).
+    """
+    # Verify group exists
+    group_result = await db.execute(select(Group).where(Group.id == group_id))
+    group = group_result.scalar_one_or_none()
+    if group is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Group not found")
+
+    # Enforce private group access
+    if group.privacy == "private":
+        if current_user is None:
+            raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Authentication required")
+        member_result = await db.execute(
+            select(GroupMember).where(
+                GroupMember.group_id == group_id,
+                GroupMember.user_id == current_user.id,
+                GroupMember.status == "active",
+            )
+        )
+        if member_result.scalar_one_or_none() is None:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="You must be a member of this group to view its feed",
+            )
+
+    total_result = await db.execute(
+        select(func.count()).select_from(Post).where(Post.group_id == group_id)
+    )
+    total = total_result.scalar_one()
+
+    result = await db.execute(
+        select(Post)
+        .where(Post.group_id == group_id)
+        .order_by(Post.created_at.desc())
+        .limit(limit)
+        .offset(offset)
+    )
+    posts = list(result.scalars().all())
+    current_user_id = current_user.id if current_user else None
+    group_map = {group.id: group}
+    post_responses = await _build_post_responses(posts, db, current_user_id, group_map=group_map)
     return PostListResponse(posts=post_responses, total=total)
 
 

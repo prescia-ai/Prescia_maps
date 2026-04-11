@@ -305,6 +305,7 @@ class Post(Base):
     author_id = Column(UUID(as_uuid=True), nullable=False, index=True)
     content = Column(Text, nullable=False)
     privacy = Column(String(20), default="public", nullable=False)
+    group_id = Column(UUID(as_uuid=True), nullable=True, index=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 

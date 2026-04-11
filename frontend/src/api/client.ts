@@ -235,8 +235,9 @@ export async function exportApprovedSubmissions(): Promise<void> {
 export async function createPost(
   content: string,
   privacy: 'public' | 'followers' | 'private' = 'public',
+  group_id?: string | null,
 ): Promise<Post> {
-  const { data } = await api.post<Post>('/posts', { content, privacy });
+  const { data } = await api.post<Post>('/posts', { content, privacy, group_id: group_id ?? null });
   return data;
 }
 
@@ -333,6 +334,18 @@ export async function fetchUserPosts(
 ): Promise<{ posts: Post[]; total: number }> {
   const { data } = await api.get<{ posts: Post[]; total: number }>(
     `/posts/user/${encodeURIComponent(username)}`,
+    { params: { limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchGroupPosts(
+  groupId: string,
+  limit = 20,
+  offset = 0,
+): Promise<{ posts: Post[]; total: number }> {
+  const { data } = await api.get<{ posts: Post[]; total: number }>(
+    `/posts/group/${groupId}`,
     { params: { limit, offset } },
   );
   return data;

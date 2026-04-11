@@ -541,6 +541,7 @@ class PostCreate(BaseModel):
 
     content: str = Field(..., min_length=1, max_length=1000)
     privacy: Optional[Literal["public", "followers", "private"]] = "public"
+    group_id: Optional[UUID] = None
 
 
 class PostResponse(BaseModel):
@@ -558,6 +559,9 @@ class PostResponse(BaseModel):
     reactions: Dict[str, int] = Field(default_factory=lambda: {"gold": 0, "bullseye": 0, "shovel": 0, "fire": 0})
     my_reaction: Optional[str] = None
     images: List["PostImageResponse"] = Field(default_factory=list)
+    group_id: Optional[UUID] = None
+    group_name: Optional[str] = None
+    group_slug: Optional[str] = None
 
 
 class PostListResponse(BaseModel):

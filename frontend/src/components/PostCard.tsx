@@ -152,6 +152,17 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
                 @{currentPost.author_username}
               </span>
             )}
+            {currentPost.group_name && currentPost.group_slug && (
+              <span className="text-xs text-stone-400 truncate block">
+                in{' '}
+                <Link
+                  to={`/group/${currentPost.group_slug}`}
+                  className="text-stone-500 hover:text-stone-700 font-medium"
+                >
+                  {currentPost.group_name}
+                </Link>
+              </span>
+            )}
           </div>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">

@@ -201,6 +201,9 @@ export interface Post {
   reactions: PostReactions;
   my_reaction: ReactionType | null;
   images?: Array<{ id: string; url: string; position: number }>;
+  group_id?: string | null;
+  group_name?: string | null;
+  group_slug?: string | null;
 }
 
 export interface Comment {
