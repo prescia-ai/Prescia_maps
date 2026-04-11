@@ -1098,5 +1098,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.68,
     "detecting_weight": 72
+  },
+  {
+    "name": "Manhattan Beach Park, MN (Minneapolis, Bde Maka Ska)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 44.9481,
+    "longitude": -93.3226,
+    "description": "Manhattan Beach Park on the eastern shore of Lake Calhoun (now Bde Maka Ska) in Minneapolis operated from the 1880s through the 1910s as a fashionable lakeside resort and amusement park served by the Minneapolis streetcar system, featuring a large pavilion, boat rentals, bathing beach, midway amusements, and picnic grounds that attracted Twin Cities residents across the social spectrum. The park was part of the chain of Minneapolis chain-of-lakes resort parks that defined summer recreation for generations of Minnesotans during the city's rapid growth period. After the streetcar era ended the park was absorbed into the Minneapolis Park and Recreation Board's lakeside greenways that now ring the lake. The lake's shoreline park remains publicly accessible and holds deposits from over a century of recreational use, with the deepest deposits dating to the streetcar-era resort period.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.76,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Riverton Park, ID (Boise)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.5829,
+    "longitude": -116.2635,
+    "description": "Riverton Park in Boise, Idaho operated from 1903 to 1934 as a trolley park developed by the Boise street railway company at the end of its Garden City line, offering Boise residents a shaded riverside grove along the Boise River with a dance pavilion, picnic areas, carousel, and summer amusements during Idaho's territorial-era growth. The park served as the primary outdoor recreation destination for Boise workers during the Progressive Era and drew large crowds of irrigated-farm settlers and mining families from across the Treasure Valley. After automobile travel made the streetcar-based resort obsolete, the riverside land was absorbed into what became Barber Park and surrounding green areas along the Boise River. The former picnic grounds and midway areas are now part of the Boise River Greenbelt, making this a legally accessible public detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Albuquerque Old Town Exposition Grounds, NM",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 35.1046,
+    "longitude": -106.6793,
+    "description": "The original Bernalillo County Fairground adjacent to Old Town Albuquerque hosted annual territorial-era fairs from the 1880s through the early 1900s, attracting Pueblo Indian craftspeople, Hispanic ranchers, Anglo settlers, and Santa Fe Railway workers to exhibitions of livestock, agricultural products, and Native American crafts during New Mexico's territorial growth period. These fairs were some of the most culturally diverse in the Southwest, blending three distinct civilizations in annual celebration of the Rio Grande Valley's agricultural bounty. The original fairground site is now part of Old Town's green spaces and the Albuquerque BioPark area along the Rio Grande. The multicultural nature of the fair and its location near centuries of Spanish Colonial settlement makes this an exceptionally rich site for mixed-era artifacts.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Rocky Mountain Chautauqua, CO (Boulder)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 40.0062,
+    "longitude": -105.2813,
+    "description": "The Colorado Chautauqua in Boulder, founded in 1898 by Texas educators and Colorado boosters, established a permanent summer assembly ground at the base of the Flatirons that drew thousands of visitors annually for lectures, concerts, and cultural programs during the height of the Chautauqua movement. Unlike many Chautauqua grounds that were later abandoned, the Boulder Chautauqua Association has continuously operated the grounds, preserving the original 1898 auditorium, dining hall, and scores of Victorian cottages on the National Register of Historic Places. The surrounding meadows and historic cottage areas hold deposits from 125+ years of summer gatherings. The grounds are publicly accessible as a city park, with open meadow areas outside the active facilities offering the best detecting potential for Victorian and Edwardian-era personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Lake Manawa Amusement Park, IA (Council Bluffs)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.1892,
+    "longitude": -95.8622,
+    "description": "Lake Manawa Amusement Park near Council Bluffs, Iowa operated from 1888 to the 1930s as a major trolley park at the end of the Omaha-Council Bluffs streetcar network, featuring a large pavilion, roller coaster, carousel, shooting gallery, and boat rentals on the oxbow lake that served as the summer escape for Omaha and Council Bluffs workers and Midland Pacific Railroad employees. The park drew enormous crowds from both sides of the Missouri River during its forty-year operation, with thousands arriving daily by streetcar during summer weekends. The lake and surrounding land are now managed as Lake Manawa State Park by the Iowa Department of Natural Resources, preserving the shoreline as publicly accessible open land. Former midway and picnic areas within the state park hold strong detecting potential for pre-Depression silver coins and resort tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 81
+  },
+  {
+    "name": "Sunnyside Amusement Park, WY (Cheyenne)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.1395,
+    "longitude": -104.7845,
+    "description": "Sunnyside Park in Cheyenne, Wyoming operated from 1903 to 1928 as a trolley park developed at the end of Cheyenne's electric streetcar line, serving as the primary summer recreation destination for Wyoming territorial capital residents, Union Pacific Railroad workers, and Fort D.A. Russell military personnel. The park featured a large dance pavilion, midway games, and open picnic grounds in a prairie setting that was the social center of Cheyenne's working-class community during the first three decades of the twentieth century. After the streetcar shutdown the park closed and the land was eventually absorbed into expanding residential development, with open green spaces remaining along the original site margins. Military tokens, railroad company scrip, and early Wyoming territorial coins would be particularly notable finds in the former grounds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Circle Park, ND (Fargo)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 46.8766,
+    "longitude": -96.8012,
+    "description": "The original Cass County Fairground in Fargo, North Dakota operated from the 1880s through the early 1900s on the western edge of the city, hosting annual Red River Valley agricultural exhibitions that drew wheat farmers, Norwegian and German immigrants, and Northern Pacific Railroad workers to livestock shows, machinery demonstrations, and carnival midways. The fairground was the social epicenter of Cass County's early settlement era and featured horse racing tracks and a grandstand that drew spectators from the eastern North Dakota prairie. When the county built a permanent modern fairground, the original site was abandoned and later developed into a residential neighborhood with open park areas. The former racetrack oval and exhibition grounds retain deep deposits from the homesteading era of the northern Great Plains.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Calumet County Fairgrounds, WI (Chilton, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 44.0328,
+    "longitude": -88.1656,
+    "description": "The original Calumet County Agricultural Society fairground in Chilton, Wisconsin operated from the 1860s through the 1910s, hosting annual fall fairs that served the German Catholic farming communities of the Lake Winnebago country in east-central Wisconsin. The county fair featured the full complement of mid-nineteenth century agricultural exhibiton: livestock, grains, produce, dairy products, and domestic crafts, along with the inevitable traveling carnival and midway that accompanied county fairs of the era. When the county built a new permanent fairground facility in the early twentieth century, the original site was gradually converted to residential and parkland use. Civil War-era and Gilded Age coins, agricultural tokens, and German immigrant personal effects would be likely finds in the former exhibition grounds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Meridian Park, SD (Sioux Falls)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.5573,
+    "longitude": -96.7621,
+    "description": "Meridian Park in Sioux Falls, South Dakota operated from 1908 to 1929 as a streetcar park developed by the Sioux Falls Traction Company at the end of its western line, offering Big Sioux River Valley residents a shaded grove with a dance pavilion, picnic facilities, and carnival amusements that served as the primary public recreation spot for Sioux Falls workers during the Prohibition-era Dakota boom. The park drew large summer crowds from the Sioux Falls packing industry workforce and surrounding farm communities, with special holiday programs and annual events that were fixtures of South Dakota social life. After the traction company failed the park was abandoned and the land eventually became open riverside parkland. The Sioux River corridor where the park stood is now accessible public land with deposits from the brief but intense streetcar-era resort period.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Blue Hole Park, NM (Santa Rosa)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 34.9441,
+    "longitude": -104.6728,
+    "description": "Blue Hole Park in Santa Rosa, New Mexico operated as a Route 66-era carnival and amusement ground from the 1930s through the 1950s, capitalizing on the natural artesian spring known as Blue Hole that attracted highway travelers to its crystal-clear 80-foot circular pool on the original alignment of U.S. Route 66. The site hosted seasonal carnivals, fish fries, summer dances, and community gatherings that served both the Santa Rosa trading community and the constant stream of Dust Bowl migrants and Route 66 travelers heading west. The Blue Hole is now a city park in Santa Rosa with the spring still flowing, and the surrounding open grassland preserves the former carnival grounds and picnic areas. Route 66-era coins, carnival tokens, and Depression-era personal items from Dust Bowl travelers make this a unique detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 68
   }
 ]
