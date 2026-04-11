@@ -75,10 +75,10 @@ export interface LayerState {
   stagecoach_stop: boolean;
   trail: boolean;
   structure: boolean;
-  church: boolean;
   cemetery: boolean;
   ferry: boolean;
   fairground: boolean;
+  abandoned_fairground: boolean;
   school: boolean;
   spring: boolean;
   locale: boolean;

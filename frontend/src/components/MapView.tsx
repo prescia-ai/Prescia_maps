@@ -30,7 +30,6 @@ const TYPE_COLORS: Record<string, string> = {
   railroad_stop:   '#a855f7', // purple
   trail:           '#14b8a6', // teal
   structure:       '#f97316', // orange
-  church:          '#ec4899', // pink
   cemetery:        '#6366f1', // indigo
   ferry:           '#06b6d4', // cyan
   stagecoach_stop: '#84cc16', // lime
@@ -44,6 +43,7 @@ const TYPE_COLORS: Record<string, string> = {
   shipwreck:       '#0369a1', // dark blue
   pony_express:    '#dc2626', // dark red
   abandoned_church: '#ec4899', // pink (same family as church)
+  abandoned_fairground: '#d97706', // amber/brown
   historic_brothel: '#f43f5e', // rose
 };
 
