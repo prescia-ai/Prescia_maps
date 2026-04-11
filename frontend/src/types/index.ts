@@ -233,6 +233,7 @@ export interface PublicProfile {
   following_count: number;
   is_following: boolean;
   avatar_url?: string | null;
+  is_admin?: boolean;
 }
 
 export interface CollectionPhoto {

@@ -110,6 +110,7 @@ async def get_public_profile(
         following_count=following_count,
         is_following=is_following,
         avatar_url=user.avatar_url,
+        is_admin=user.is_admin,
     )
 
 

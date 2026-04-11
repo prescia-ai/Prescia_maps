@@ -331,6 +331,7 @@ class UserProfile(BaseModel):
     google_connected_at: Optional[Any] = None
     google_folder_id: Optional[str] = None
     avatar_url: Optional[str] = None
+    is_admin: bool = False
 
 
 class UserProfileSetup(BaseModel):
@@ -367,6 +368,7 @@ class UserProfilePublic(BaseModel):
     following_count: int = 0
     is_following: bool = False
     avatar_url: Optional[str] = None
+    is_admin: bool = False
 
 
 class UserProfileLimited(BaseModel):

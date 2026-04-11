@@ -18,6 +18,9 @@ import { useAuth } from '../contexts/AuthContext';
 import { fetchLandAccess, putLandAccessOverride } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
+const US_CENTER_LAT = 39.5;
+const US_CENTER_LON = -98.35;
+
 const DEFAULT_LAYERS: LayerState = {
   battle:          true,
   town:            true,
@@ -131,6 +134,11 @@ export default function MapPage() {
     queryClient.invalidateQueries({ queryKey: ['my-pins'] });
   }, [queryClient]);
 
+  const handleNavbarLogHunt = useCallback(() => {
+    setLogHuntCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
+    setShowLogHuntModal(true);
+  }, []);
+
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
@@ -148,6 +156,7 @@ export default function MapPage() {
         isLocationsError={locationsQuery.isError}
         isFeaturesError={featuresQuery.isError}
         onImportClick={() => setShowImportModal(true)}
+        onLogHuntClick={handleNavbarLogHunt}
       />
 
       {/* Full-screen map — offset below navbar */}
