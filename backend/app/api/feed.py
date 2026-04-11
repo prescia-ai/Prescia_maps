@@ -17,13 +17,14 @@ Routes (all mounted under /api/v1 in main.py):
 
 from __future__ import annotations
 
+import logging
 import uuid
 from collections import defaultdict
 from typing import Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from fastapi.responses import Response
-from sqlalchemy import func, or_, select
+from sqlalchemy import and_, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user, optional_user
@@ -48,6 +49,8 @@ from app.models.schemas import (
     PostResponse,
     ReactRequest,
 )
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(tags=["feed"])
 
@@ -215,15 +218,18 @@ async def global_feed(
     current_user: Optional[User] = Depends(optional_user),
     db: AsyncSession = Depends(get_db),
 ) -> PostListResponse:
-    """Return the most recent public posts from all users."""
+    """Return the most recent public posts from all users (excluding group posts)."""
+    feed_filter = and_(Post.privacy == "public", Post.group_id.is_(None))
+
     total_result = await db.execute(
-        select(func.count()).select_from(Post).where(Post.privacy == "public")
+        select(func.count()).select_from(Post).where(feed_filter)
     )
     total = total_result.scalar_one()
+    logger.info("global_feed: total=%d", total)
 
     result = await db.execute(
         select(Post)
-        .where(Post.privacy == "public")
+        .where(feed_filter)
         .order_by(Post.created_at.desc())
         .limit(limit)
         .offset(offset)
@@ -273,26 +279,24 @@ async def home_feed(
     # Build filter:
     # - Regular posts (group_id IS NULL) from followed users / self with public/followers privacy
     # - Group posts from any of the user's groups (regardless of author or privacy)
+    regular_posts_filter = and_(
+        Post.author_id.in_(visible_author_ids),
+        Post.privacy.in_(["public", "followers"]),
+        Post.group_id.is_(None),
+    )
     if my_group_ids:
         base_filter = or_(
-            (
-                Post.author_id.in_(visible_author_ids)
-                & Post.privacy.in_(["public", "followers"])
-                & Post.group_id.is_(None)
-            ),
+            regular_posts_filter,
             Post.group_id.in_(my_group_ids),
         )
     else:
-        base_filter = (
-            Post.author_id.in_(visible_author_ids)
-            & Post.privacy.in_(["public", "followers"])
-            & Post.group_id.is_(None)
-        )
+        base_filter = regular_posts_filter
 
     total_result = await db.execute(
         select(func.count()).select_from(Post).where(base_filter)
     )
     total = total_result.scalar_one()
+    logger.info("home_feed user=%s: total=%d", current_user.id, total)
 
     result = await db.execute(
         select(Post)
@@ -347,29 +351,30 @@ async def user_posts(
         )
         is_following = follow_result.scalar_one_or_none() is not None
         if is_following:
-            privacy_filter = (
-                (Post.author_id == author.id)
-                & Post.privacy.in_(["public", "followers"])
-                & Post.group_id.is_(None)
+            privacy_filter = and_(
+                Post.author_id == author.id,
+                Post.privacy.in_(["public", "followers"]),
+                Post.group_id.is_(None),
             )
         else:
-            privacy_filter = (
-                (Post.author_id == author.id)
-                & (Post.privacy == "public")
-                & Post.group_id.is_(None)
+            privacy_filter = and_(
+                Post.author_id == author.id,
+                Post.privacy == "public",
+                Post.group_id.is_(None),
             )
     else:
         # Anonymous viewer
-        privacy_filter = (
-            (Post.author_id == author.id)
-            & (Post.privacy == "public")
-            & Post.group_id.is_(None)
+        privacy_filter = and_(
+            Post.author_id == author.id,
+            Post.privacy == "public",
+            Post.group_id.is_(None),
         )
 
     total_result = await db.execute(
         select(func.count()).select_from(Post).where(privacy_filter)
     )
     total = total_result.scalar_one()
+    logger.info("user_posts username=%s: total=%d", username, total)
 
     result = await db.execute(
         select(Post)
@@ -429,6 +434,7 @@ async def group_feed(
         select(func.count()).select_from(Post).where(Post.group_id == group_id)
     )
     total = total_result.scalar_one()
+    logger.info("group_feed group_id=%s: total=%d", group_id, total)
 
     result = await db.execute(
         select(Post)
