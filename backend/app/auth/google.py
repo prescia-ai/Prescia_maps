@@ -69,8 +69,9 @@ _GOOGLE_AUTH_BASE_URL = "https://accounts.google.com/o/oauth2/v2/auth"
 _GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
 _GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v2/userinfo"
 
-# Only request access to files created by our app — not the user's entire Drive.
-_DRIVE_SCOPE = "https://www.googleapis.com/auth/drive.file"
+# Request Drive access plus OpenID Connect scopes so the userinfo endpoint
+# returns the user's email after the OAuth callback.
+_DRIVE_SCOPE = "openid email https://www.googleapis.com/auth/drive.file"
 
 
 def build_google_auth_url(state: str) -> str:

@@ -262,6 +262,15 @@ async def get_current_user(
     result = await db.execute(select(User).where(User.supabase_id == supabase_id))
     user = result.scalar_one_or_none()
 
+    if user is None and email:
+        # Fallback: look up by email to handle supabase_id changes caused by
+        # JWT key rotation or account migration, avoiding duplicate row errors.
+        result = await db.execute(select(User).where(User.email == email))
+        user = result.scalar_one_or_none()
+        if user is not None:
+            user.supabase_id = supabase_id
+            await db.flush()
+
     if user is None:
         user = User(supabase_id=supabase_id, email=email)
         db.add(user)
