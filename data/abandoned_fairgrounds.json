@@ -548,5 +548,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.82,
     "detecting_weight": 73
+  },
+  {
+    "name": "Asheville Chautauqua, NC",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 35.6173,
+    "longitude": -82.305,
+    "description": "The Asheville Chautauqua Assembly at Black Mountain, North Carolina operated from the 1890s through the early 1920s in the scenic Blue Ridge Mountains west of Asheville, attracting cultural and religious visitors to a planned resort community featuring a hotel, lecture pavilion, and outdoor programming that benefited from the mountain climate. The Southern Appalachian Chautauqua was part of a network of regional assemblies serving communities too far from the main Chautauqua Institution in New York. The grounds transitioned through various uses after the Chautauqua era and now partially comprise the community of Black Mountain, North Carolina. The former assembly area grounds retain Victorian-era coin potential from turn-of-the-century mountain resort visitors.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 68
+  },
+  {
+    "name": "Lakewood Chautauqua, ME",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 44.7951,
+    "longitude": -69.8793,
+    "description": "Lakewood Chautauqua on the shores of Lake Wesserunsett in Madison, Maine operated from 1898 through the 1940s as a major New England summer assembly and theatrical venue, featuring a large auditorium, a theater that became Lakewood Theater (the oldest summer stock theater in America), a hotel, and cottages that drew cultural and religious visitors from Maine and Massachusetts. The Chautauqua programming gave way to the theater's growing cultural prestige through the mid-twentieth century. Lakewood Theater continues to operate in a reduced capacity today, but the former Chautauqua assembly grounds beyond the theater campus have largely returned to natural state. The historic lakeside grounds represent over a century of summer resort and assembly activity with Victorian-era coin potential.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 68
+  },
+  {
+    "name": "Trans-Mississippi Exposition Site, NE",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 41.2739,
+    "longitude": -96.0066,
+    "description": "The Trans-Mississippi and International Exposition was held in Omaha, Nebraska in 1898, drawing over 2.6 million visitors to an elaborate 184-acre fairground in Kountz Park featuring forty major buildings, a midway, and exhibits celebrating the development of the American West. The fair ran for four months and was one of the largest expositions in American history at the time. The site was subsequently occupied by Kountz Park and later Creighton University facilities. The former exposition grounds in north Omaha carry deposits from the massive 1898 crowds who dropped coins and exposition tokens across 184 acres, with the campus grounds representing an accessible portion of the former fair site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Pan-American Exposition Site, NY",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 42.8838,
+    "longitude": -78.8628,
+    "description": "The Pan-American Exposition was held in Buffalo, New York from May to November 1901, drawing eight million visitors to a 350-acre fairground on the northeast side of the city featuring lavish buildings illuminated by Niagara power and the famous Electric Tower, and serving as the site of President William McKinley's assassination. The exposition grounds were located on what is now Delaware Park and the surrounding neighborhood north of downtown Buffalo. After the fair closed most structures were demolished and the land was incorporated into Frederick Law Olmsted's Delaware Park system. The former exposition site is now a public park where coins, exposition medals, and souvenir tokens from the 1901 fair remain in the soil across 350 acres of accessible parkland.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 85
+  },
+  {
+    "name": "Cotton States Exposition Site, GA",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 33.7773,
+    "longitude": -84.3763,
+    "description": "The Cotton States and International Exposition was held in Atlanta, Georgia in 1895 in what is now Piedmont Park, drawing nearly 800,000 visitors to exhibits celebrating Southern industrial recovery after the Civil War and serving as the backdrop for Booker T. Washington's famous Atlanta Compromise speech. The exposition occupied the entire area of the current Piedmont Park in Midtown Atlanta, with lavish temporary buildings housing industrial, agricultural, and cultural exhibits from across the South. After the exposition closed the grounds were developed into Piedmont Park, Atlanta's premier urban park. The park's soil has been accumulating coins and artifacts since 1895, with the deepest deposits dating from the exposition year itself.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Tennessee Centennial Exposition Site, TN",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 36.1524,
+    "longitude": -86.8154,
+    "description": "The Tennessee Centennial Exposition was held in Nashville in 1897 on a 200-acre site in West Nashville, drawing nearly 1.8 million visitors to its elaborate exhibits including a full-scale replica of the Parthenon that became the exposition's most famous feature. The exposition celebrated Tennessee's 100th anniversary of statehood and included exhibits from across the South and nation. After the exposition closed, the grounds became Centennial Park, and the Parthenon replica was rebuilt in permanent materials in 1931. Nashville's Centennial Park is now a public urban park where the 1897 exposition grounds remain accessible, with the Parthenon standing on its original site creating a publicly accessible metal detecting location with exposition-era deposits.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 83
+  },
+  {
+    "name": "Lewis and Clark Centennial Exposition, OR",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 45.5833,
+    "longitude": -122.734,
+    "description": "The Lewis and Clark Centennial Exposition was held in Portland, Oregon in 1905 on a 406-acre site in Northwest Portland near Guild's Lake, drawing 2.5 million visitors to a world-class fair celebrating the centennial of the Lewis and Clark Expedition. The Guild's Lake site was a former lake and wetland filled for the exposition and later developed into the Northwest Industrial District. While the main site is now heavily industrialized, the exposition's midway and pleasure grounds have been documented and portions of the former fairground area along the Willamette River retain potential. Exposition medals, tokens, and early twentieth-century coins would be expected finds in any surviving open areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Alaska-Yukon-Pacific Exposition Site, WA",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 47.6556,
+    "longitude": -122.3097,
+    "description": "The Alaska-Yukon-Pacific Exposition was held on the University of Washington campus in Seattle in 1909, drawing 3.7 million visitors to a 250-acre fairground designed by the Olmsted Brothers that was deliberately planned to become the permanent UW campus after the fair closed. The exposition celebrated Alaska and Pacific commerce and featured a famous Pay Streak midway, international exhibits, and elaborate grounds that were converted into the modern UW campus layout. The current University of Washington campus directly preserves the 1909 exposition footprint, with Rainier Vista and the Liberal Arts Quadrangle occupying original fair territory. The campus grounds carry deposits from both the 1909 exposition and over a century of university use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 79
+  },
+  {
+    "name": "California Midwinter Exposition Site, CA",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 37.77,
+    "longitude": -122.4688,
+    "description": "The California Midwinter International Exposition was held in San Francisco's Golden Gate Park from January through July 1894, drawing over two million visitors to elaborate Egyptian, Moorish, and Mission Revival exhibit buildings promoting California's mild winter climate to the world. The fair was organized by San Francisco Chronicle publisher M.H. de Young and resulted in the permanent de Young Museum, originally the Fine Arts Building of the exposition. Golden Gate Park's Music Concourse area directly preserves the center of the 1894 exposition grounds, with the de Young Museum and Academy of Sciences standing on original fair territory. The publicly accessible Music Concourse holds deposits from the 1894 exposition and 130 years of subsequent park use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Jamestown Exposition Site, VA",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 36.9579,
+    "longitude": -76.308,
+    "description": "The Jamestown Exposition was held at Sewell's Point on Hampton Roads in Norfolk, Virginia from April to November 1907, drawing over 2.8 million visitors to a 340-acre site commemorating the 300th anniversary of the founding of Jamestown with exhibits from all states and many foreign nations. The exposition featured warship displays, foreign pavilions, an amusement midway called the War Path, and elaborate permanent buildings. After the fair the grounds were acquired by the U.S. Navy and became Naval Station Norfolk, the largest naval base in the world. The former exposition midway and pleasure grounds now lie within restricted federal military property, limiting public access, but the site's historical significance is exceptional.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 65
   }
 ]
