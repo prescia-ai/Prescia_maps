@@ -14,6 +14,7 @@ import FeedPage from './pages/FeedPage';
 import GroupPage from './pages/GroupPage';
 import CreateGroupPage from './pages/CreateGroupPage';
 import MyGroupsPage from './pages/MyGroupsPage';
+import AppLayout from './components/AppLayout';
 
 /**
  * Wraps protected routes so that authenticated users who haven't yet
@@ -36,19 +37,19 @@ export default function App() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/setup" element={<ProfileSetupPage />} />
+        <Route path="/setup" element={<AppLayout><ProfileSetupPage /></AppLayout>} />
         <Route path="/map" element={<RequireProfile><MapPage /></RequireProfile>} />
-        <Route path="/feed" element={<RequireProfile><FeedPage /></RequireProfile>} />
+        <Route path="/feed" element={<AppLayout><RequireProfile><FeedPage /></RequireProfile></AppLayout>} />
         {/* /profile/settings must come before /profile/:username so "settings" isn't treated as a username */}
-        <Route path="/profile/settings" element={<RequireProfile><ProfileSettingsPage /></RequireProfile>} />
-        <Route path="/profile/:username" element={<RequireProfile><ProfilePage /></RequireProfile>} />
-        <Route path="/submit" element={<RequireProfile><SubmitPinPage /></RequireProfile>} />
-        <Route path="/settings/security" element={<RequireProfile><SecuritySettingsPage /></RequireProfile>} />
-        <Route path="/admin/submissions/:id" element={<RequireProfile><AdminSubmissionReviewPage /></RequireProfile>} />
-        <Route path="/admin/submissions" element={<RequireProfile><AdminSubmissionsPage /></RequireProfile>} />
-        <Route path="/groups/create" element={<RequireProfile><CreateGroupPage /></RequireProfile>} />
-        <Route path="/groups" element={<RequireProfile><MyGroupsPage /></RequireProfile>} />
-        <Route path="/group/:slug" element={<RequireProfile><GroupPage /></RequireProfile>} />
+        <Route path="/profile/settings" element={<AppLayout><RequireProfile><ProfileSettingsPage /></RequireProfile></AppLayout>} />
+        <Route path="/profile/:username" element={<AppLayout><RequireProfile><ProfilePage /></RequireProfile></AppLayout>} />
+        <Route path="/submit" element={<AppLayout><RequireProfile><SubmitPinPage /></RequireProfile></AppLayout>} />
+        <Route path="/settings/security" element={<AppLayout><RequireProfile><SecuritySettingsPage /></RequireProfile></AppLayout>} />
+        <Route path="/admin/submissions/:id" element={<AppLayout><RequireProfile><AdminSubmissionReviewPage /></RequireProfile></AppLayout>} />
+        <Route path="/admin/submissions" element={<AppLayout><RequireProfile><AdminSubmissionsPage /></RequireProfile></AppLayout>} />
+        <Route path="/groups/create" element={<AppLayout><RequireProfile><CreateGroupPage /></RequireProfile></AppLayout>} />
+        <Route path="/groups" element={<AppLayout><RequireProfile><MyGroupsPage /></RequireProfile></AppLayout>} />
+        <Route path="/group/:slug" element={<AppLayout><RequireProfile><GroupPage /></RequireProfile></AppLayout>} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>

@@ -56,7 +56,7 @@ export default function ProfileSetupPage() {
 
   if (step === 2) {
     return (
-      <div className="min-h-screen bg-amber-50/30 flex items-center justify-center px-4">
+      <div className="bg-amber-50/30 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
           <div className="flex items-center gap-2 mb-6">
             <span className="text-2xl">🗺️</span>
@@ -95,7 +95,7 @@ export default function ProfileSetupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-amber-50/30 flex items-center justify-center px-4">
+    <div className="bg-amber-50/30 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-2 mb-6">
           <span className="text-2xl">🗺️</span>

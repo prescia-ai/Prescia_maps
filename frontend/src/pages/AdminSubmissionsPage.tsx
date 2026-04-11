@@ -98,20 +98,10 @@ export default function AdminSubmissionsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
+    <div className="text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-0 z-10">
+      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-12 z-10">
         <div className="max-w-3xl mx-auto flex items-center gap-3 px-4 h-12">
-          <Link
-            to="/map"
-            className="text-stone-500 hover:text-stone-900 transition-colors text-sm flex items-center gap-1"
-          >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Map
-          </Link>
-          <span className="text-stone-300">·</span>
           <span className="text-stone-700 text-sm font-medium">Community Submissions</span>
           <div className="flex-1" />
           <button

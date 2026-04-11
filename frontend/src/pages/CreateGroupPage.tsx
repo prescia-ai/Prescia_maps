@@ -33,7 +33,7 @@ export default function CreateGroupPage() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 flex flex-col items-center justify-center px-4 py-12">
+    <div className="flex flex-col items-center justify-center px-4 py-12">
       <div className="w-full max-w-lg">
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-stone-900">Create a Group</h1>

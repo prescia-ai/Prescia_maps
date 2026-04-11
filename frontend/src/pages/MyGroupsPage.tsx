@@ -51,7 +51,7 @@ export default function MyGroupsPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-stone-50 px-4 py-10">
+    <div className="px-4 py-10">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
