@@ -278,7 +278,7 @@ async def home_feed(
             (
                 Post.author_id.in_(visible_author_ids)
                 & Post.privacy.in_(["public", "followers"])
-                & (Post.group_id == None)  # noqa: E711
+                & Post.group_id.is_(None)
             ),
             Post.group_id.in_(my_group_ids),
         )
@@ -286,7 +286,7 @@ async def home_feed(
         base_filter = (
             Post.author_id.in_(visible_author_ids)
             & Post.privacy.in_(["public", "followers"])
-            & (Post.group_id == None)  # noqa: E711
+            & Post.group_id.is_(None)
         )
 
     total_result = await db.execute(
@@ -350,20 +350,20 @@ async def user_posts(
             privacy_filter = (
                 (Post.author_id == author.id)
                 & Post.privacy.in_(["public", "followers"])
-                & (Post.group_id == None)  # noqa: E711
+                & Post.group_id.is_(None)
             )
         else:
             privacy_filter = (
                 (Post.author_id == author.id)
                 & (Post.privacy == "public")
-                & (Post.group_id == None)  # noqa: E711
+                & Post.group_id.is_(None)
             )
     else:
         # Anonymous viewer
         privacy_filter = (
             (Post.author_id == author.id)
             & (Post.privacy == "public")
-            & (Post.group_id == None)  # noqa: E711
+            & Post.group_id.is_(None)
         )
 
     total_result = await db.execute(
