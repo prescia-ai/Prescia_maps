@@ -157,6 +157,7 @@ async def get_locations(
                            ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
                     FROM locations
                     WHERE (source NOT LIKE 'community:%' OR source IS NULL)
+                    -- NULL source must be kept: NULL NOT LIKE '...' evaluates to NULL (falsy)
                 ) ranked
                 WHERE rn <= :per_type_limit
                 UNION ALL
