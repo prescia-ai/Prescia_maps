@@ -878,5 +878,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.88,
     "detecting_weight": 92
+  },
+  {
+    "name": "Rockaway Beach Resort, NY (Queens)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 40.5785,
+    "longitude": -73.8403,
+    "description": "The Rockaway Beach boardwalk and resort strip in Queens, New York hosted multiple amusement parks, dance halls, and resort hotels from the 1880s through the mid-twentieth century, drawing millions of New York City working-class families on the Long Island Rail Road and later the A subway line to the Atlantic Ocean beach. Beyond Playland, the strip contained smaller competing amusement operations, bathhouses, food concessions, and penny arcades along the beachfront for decades. The 2012 Hurricane Sandy devastated much of the surviving boardwalk infrastructure. The Rockaway Beach shoreline is a public NYC park where centuries of beachgoer activity and decades of amusement strip operations create exceptional metal detecting potential throughout the accessible beach areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 85
+  },
+  {
+    "name": "Old Orchard Beach Amusement Area, ME",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 43.5218,
+    "longitude": -70.3757,
+    "description": "Old Orchard Beach, Maine hosted an extensive resort and amusement strip along its famous pier from the 1870s through the present, though earlier amusement infrastructure including several large hotels, a large carousel building, and historic amusement pavilions have been lost to fire and storm. The pier was originally much longer and supported extensive amusement attractions that were destroyed in storms. The beach drew enormous crowds from Boston and Quebec via the Boston and Maine Railroad, making it a prime summer destination for French-Canadian and New England visitors for over 150 years. The public beach and former hotel grounds represent a century and a half of visitor activity, with the deepest deposits dating from the Victorian resort era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 84
+  },
+  {
+    "name": "Big Four Fairgrounds, IN (Shelby County)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 39.5239,
+    "longitude": -85.7769,
+    "description": "The Shelby County Fairgrounds in Shelbyville, Indiana hosted annual county fairs from the 1850s through the mid-twentieth century on grounds served by the Cleveland, Cincinnati, Chicago and St. Louis Railway, known as the Big Four Route, making this central Indiana county fair accessible for major regional exhibitions and carnival midways. Indiana county fairs of the nineteenth century were major community events drawing farming families from across the county to livestock competitions, horse racing, agricultural exhibits, and carnival attractions. The original fairgrounds served the community through the agricultural peak of the Corn Belt. The former grounds near downtown Shelbyville represent layers of mid-nineteenth through early twentieth-century fair deposits.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Sans Souci Park, IL (Calumet City)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 41.6083,
+    "longitude": -87.5487,
+    "description": "Sans Souci Park in Calumet City, Illinois on the Illinois-Indiana border operated in the 1920s and 1930s as a resort and roadhouse complex serving the Chicago metropolitan area, featuring a large ballroom, outdoor attractions, and amusement activities that drew Prohibition-era Chicago crowds to this Cook County border community where oversight was reputedly lax. The park was part of the resort strip along the Calumet River and served the enormous South Side Chicago industrial workforce. The site has been developed into industrial and commercial uses reflecting the area's heavy manufacturing character. The pre-Depression era operation along the Chicago Calumet corridor makes this an unusual urban edge resort with coin potential from the Prohibition era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Exposition Park, CA (Original Site)",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 34.0141,
+    "longitude": -118.2878,
+    "description": "Exposition Park in Los Angeles began as the California Agricultural District Fairgrounds in 1872, serving as the site of the Los Angeles County Fair until 1913 when the fair relocated to Pomona. The original fairgrounds at Figueroa Street hosted decades of California agricultural exhibitions, livestock shows, and carnival midways that drew Southern California's growing population during the Victorian and Progressive eras. After the fair relocated, the grounds were redeveloped into the current Exposition Park with the Natural History Museum and Los Angeles Memorial Coliseum. The museum grounds and Exposition Park rose gardens occupy the former fairground site, and the public park areas hold deposits from over forty years of California fair activity.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Forest Park World's Fair Site, MO",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 38.6382,
+    "longitude": -90.2874,
+    "description": "The 1904 Louisiana Purchase Exposition (St. Louis World's Fair) occupied 1,272 acres of Forest Park and adjacent Washington University campus, drawing nearly 20 million visitors during its seven-month run and leaving behind permanent structures including the Palace of Fine Arts (now the Saint Louis Art Museum) and extensive grounds that became the modern Forest Park. The Fair featured over 1,500 buildings, a massive Pike midway, international pavilions, and the debut of new American foods. The entire 1,300-acre Forest Park and surrounding campus carry deposits from the 20 million visitors who attended, with the deepest and richest deposits in the former Pike midway area near the Grand Basin. Forest Park is among the greatest metal detecting sites in America.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.92,
+    "detecting_weight": 95
+  },
+  {
+    "name": "Bay View Assembly, MI",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 45.4113,
+    "longitude": -84.9477,
+    "description": "Bay View Assembly near Petoskey, Michigan was established in 1875 by the Methodist Episcopal Church as one of America's oldest continuously operating Chautauqua-style assemblies, featuring a Victorian cottage community, a large auditorium, and summer programming that has attracted visitors to Little Traverse Bay for nearly 150 years. The assembly was one of the premier cultural institutions of Victorian Michigan, drawing intellectual and religious visitors from across the Great Lakes region. While Bay View continues limited operations today, much of its Victorian-era resort character survives in the historic cottage district. The assembly grounds, now a National Historic Landmark, contain deposits from 150 years of summer visitor activity in the northern Michigan resort community.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Greater America Exposition Site, NE",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 41.2601,
+    "longitude": -95.9945,
+    "description": "The Greater America Exposition was held in Omaha, Nebraska in 1899, following the Trans-Mississippi Exposition of the previous year on an adjacent site, drawing nearly a million visitors to exhibits celebrating American expansion in Cuba, Puerto Rico, and the Philippines following the Spanish-American War. The exposition featured Filipino and other Pacific colonial exhibits reflecting the new American empire and occupied a large fairground in north Omaha. Like its predecessor, the Greater America Exposition grounds were subsequently developed into the Kountz Park neighborhood. The former exposition site carries deposits from two consecutive major Omaha fairs in 1898 and 1899.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.77,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Interstate Industrial Exposition, IL",
+    "type": "abandoned_fairground",
+    "category": "exposition",
+    "latitude": 41.8872,
+    "longitude": -87.6241,
+    "description": "The Interstate Industrial Exposition Building on the Chicago lakefront in Grant Park hosted annual industrial expositions from 1873 to 1891, drawing hundreds of thousands of Chicago business leaders, workers, and visitors to exhibits of machinery, manufactured goods, and industrial products in one of the largest exhibition halls in America at the time. The building stood on the site now occupied by the Art Institute of Chicago and served as Chicago's primary exhibition venue before the 1893 World's Columbian Exposition. The Art Institute and surrounding Grant Park grounds occupy the former exposition site, with the museum's Congress Plaza and Millennium Park in the vicinity holding deposits from the industrial exposition era and the Columbian Exposition period.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Old Dominion Speedway Park, VA",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 38.7482,
+    "longitude": -77.4774,
+    "description": "Old Dominion Speedway near Manassas, Virginia operated from 1947 to 2012 as a stock car racing venue with adjacent carnival and fairground-style activities, drawing Northern Virginia families to weekly racing events, seasonal carnival midways, and outdoor entertainment across a sprawling rural property in Prince William County. The venue hosted flea markets, swap meets, carnival attractions, and racing for over sixty years. After its 2012 closure the property was slated for development but retained its rural character for years. The former speedway infield, pit areas, carnival grounds, and parking areas represent over sixty years of accumulated coin losses from massive weekly crowd events in the Washington D.C. metro area.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 80
   }
 ]
