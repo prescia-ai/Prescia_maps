@@ -988,5 +988,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.88,
     "detecting_weight": 86
+  },
+  {
+    "name": "Lakeside Park, AL (Birmingham)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 33.5129,
+    "longitude": -86.8023,
+    "description": "Lakeside Park operated from 1886 to 1930 at the western end of the Birmingham streetcar network along Lakeview Lake in Jefferson County, Alabama, serving as the primary summer resort for working-class Birmingham families during the city's rapid industrial expansion. The park featured a pavilion, picnic groves, rowboat rentals, a dance hall, and midway attractions that drew immense crowds on summer weekends. After the streetcar line was abandoned and the park closed in 1930, the land reverted to a wooded lakeside area that was eventually absorbed into a residential neighborhood with open green space along the shoreline. Pre-Depression-era coins, tokens, and personal items from Birmingham's steel-era workforce remain in the soil near the former picnic groves.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Wonderland Park, AL (Mobile)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 30.7058,
+    "longitude": -88.0703,
+    "description": "Wonderland Park in Mobile, Alabama operated from 1906 to 1928 as a trolley park at the end of the Monroe Street streetcar line, offering Mobile residents a cool respite from Gulf Coast heat with a swimming pool, dance pavilion, roller rink, and midway games on a wooded site near the Mobile Bay shore. The park was a fixture of Mobile's Gilded Age social life, drawing crowds from across Mobile County for two decades before the automobile era ended dependence on streetcar-based recreation. The site is now open green space with remnant woodland, accessible to the public through an adjacent neighborhood park. The former midway and picnic grove areas offer strong potential for early twentieth century silver coins and Gulf Coast tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Riverside Park, MS (Natchez)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 31.5534,
+    "longitude": -91.3897,
+    "description": "Riverside Park in Natchez, Mississippi operated from the 1880s through the 1920s as a popular resort along the Mississippi River bluffs, drawing plantation-era society and river traffic workers to its picnic grounds, bandstand, and scenic overlooks during Natchez's post-Reconstruction era. The site was used for annual county fairs, political rallies, and seasonal carnivals throughout the late nineteenth century and was one of the few open gathering places for the African American community during the early Jim Crow era. The land along the Natchez bluffs has since been largely reclaimed by open parkland managed by the city, making it accessible to visitors. The deep history of this site, going back to the steamboat era, makes it one of the more promising detecting locations in Mississippi.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Agricultural Fairgrounds, AR (Fayetteville, original site)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 36.069,
+    "longitude": -94.1758,
+    "description": "Washington County's original agricultural fairground in Fayetteville, Arkansas operated from the 1870s through the early 1900s on the western edge of town, hosting annual fall fairs that brought farmers, merchants, and exhibitors from across the Ozarks for competitions in livestock, produce, and crafts. The fair was a cornerstone of Fayetteville's social calendar during the railroad expansion era when the town served as a trade hub for the Boston Mountain farming communities. When the county built a new modern fairground early in the twentieth century, the original site was vacated and eventually became open residential-adjacent land. The former exhibition fields retain deposits from decades of annual fairs including coins, buttons, harness hardware, and trade tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.67,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Mineral Springs Park, LA (Shreveport)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 32.5207,
+    "longitude": -93.7521,
+    "description": "Mineral Springs Park in Shreveport, Louisiana operated from the 1890s through the 1920s as a health resort and amusement destination built around natural mineral springs on Shreveport's western outskirts, served by a streetcar line that brought city dwellers to the therapeutic waters, a dancing pavilion, and shaded picnic grounds. The park's springs attracted visitors seeking cures for various ailments as well as families seeking weekend recreation from Shreveport and the Red River Valley communities. After the streetcar line was discontinued in the 1920s the park fell into disuse and the springs were eventually capped, leaving the wooded grounds as undeveloped land that was later absorbed into the expanding city. The mineral springs area and former picnic grounds remain open and accessible, with strong potential for pre-Prohibition era coins and resort tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.69,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Chautauqua Assembly Grounds, KS (Ottawa)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 38.6055,
+    "longitude": -95.2691,
+    "description": "The Ottawa Chautauqua Assembly Grounds in Franklin County, Kansas operated from 1886 to 1930 in a wooded grove along the Marais des Cygnes River, hosting annual summer assemblies that drew thousands of Kansas farmers and small-town residents to educational lectures, concerts, religious revivals, and cultural programs from prominent speakers of the era. The Ottawa Chautauqua was one of the most active in the Plains states, drawing speakers including William Jennings Bryan and nationally known evangelists to its open-air auditorium and tent grounds. The riverside grove is now open park and agricultural land with limited development, accessible along the creek corridor. The former assembly grounds hold deposits from four decades of summer gatherings including coins, religious items, watch fobs, and personal effects.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Grand Island Exposition Grounds, NE",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.925,
+    "longitude": -98.342,
+    "description": "The original Hall County Fairground in Grand Island, Nebraska hosted agricultural exhibitions and county fairs from 1875 through the early twentieth century, serving as the commercial and social hub for Hall County's German-immigrant farming communities during Nebraska's homesteading era. The fairground featured livestock judging rings, agricultural machinery exhibitions, and a midway that brought traveling carnivals and shows to the Platte River Valley each fall. When the county eventually consolidated fair operations at a modern facility, the original grounds were converted to other uses and portions remain as open grassland near the city's older residential district. Pre-World War I coins, German immigrant trade tokens, and farm hardware remnants are likely finds in the former exhibition areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Natatorium Park, WA (Spokane, picnic grove)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 47.6639,
+    "longitude": -117.4842,
+    "description": "Natatorium Park in Spokane, Washington operated from 1893 to 1967 as one of the Pacific Northwest's premier trolley parks, featuring a famous outdoor natatorium (swimming pool), a Looff carousel, roller coasters, a dance hall, and extensive picnic grounds at the end of the Spokane streetcar network. The park drew enormous crowds from Spokane and surrounding Inland Empire farm communities for seventy-four years, establishing it as one of the longest continuously operating trolley parks in the West. After closure in 1967 the rides were removed and the land redeveloped; portions of the original park grounds now survive as open land in the Downriver neighborhood. The former picnic groves and midway areas along the river are particularly promising for pre-WWII coins and trolley tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Caledonia County Fairgrounds, VT (Lyndonville, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 44.5334,
+    "longitude": -72.0126,
+    "description": "The original Caledonia County Fairground in Lyndonville, Vermont hosted annual agricultural fairs from 1850 to the early 1900s before the fair moved to a larger permanent facility, making it one of the longest-running county fair sites in the Northeast Kingdom of Vermont. The fairground served the hill-farming communities of northern Vermont's dairy and maple sugar country, with exhibitions of livestock, homemade goods, and farm machinery that drew thousands each August from across Caledonia County. The original site is now open farmland and a small neighborhood park on the edge of Lyndonville. Pre-Civil War coins, agricultural tokens, and Yankee trade goods from the 1850s-1900s period make this a historically deep detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Trimble Springs Park, TN (Knoxville)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 35.992,
+    "longitude": -83.921,
+    "description": "Trimble Springs Park in Knoxville, Tennessee operated from the 1880s through the 1910s as a mineral springs resort and streetcar park at the end of the North Knoxville streetcar line, featuring therapeutic springs, a hotel, dancing pavilion, picnic grounds, and summer amusements that drew working-class Knox County residents seeking relief from the Tennessee Valley heat. The park was a fixture of Knoxville's Gilded Age recreational life and was frequented by University of Tennessee students and East Tennessee railroad workers. After the springs declined in popularity and the streetcar line was extended, the park closed and the land was absorbed into the expanding North Knoxville residential district. Former springs and picnic areas now have residential proximity but portions of the original grove remain as open land along the creek.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 72
   }
 ]
