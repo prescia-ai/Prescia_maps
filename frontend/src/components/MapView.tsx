@@ -240,7 +240,9 @@ function EventPinMarkers({ pins }: { pins: EventPin[] }) {
             })
           : null;
         const endDateLabel = pin.event_end_date
-          ? new Date(pin.event_end_date).toLocaleTimeString('en-US', {
+          ? new Date(pin.event_end_date).toLocaleString('en-US', {
+              month: 'short',
+              day: 'numeric',
               hour: 'numeric',
               minute: '2-digit',
             })
