@@ -392,6 +392,33 @@ class CollectionPhoto(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
+class Group(Base):
+    """A user-created group for collaborative metal detecting."""
+
+    __tablename__ = "groups"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name = Column(String(100), nullable=False)
+    slug = Column(String(100), nullable=False, unique=True, index=True)
+    description = Column(Text, nullable=True)
+    privacy = Column(String(10), nullable=False, default="public")  # "public" or "private"
+    created_by = Column(UUID(as_uuid=True), nullable=False, index=True)
+    created_at = Column(DateTime, nullable=False, server_default=func.now())
+    updated_at = Column(DateTime, nullable=True, onupdate=func.now())
+
+
+class GroupMember(Base):
+    """Membership record linking a user to a group."""
+
+    __tablename__ = "group_members"
+
+    group_id = Column(UUID(as_uuid=True), primary_key=True)
+    user_id = Column(UUID(as_uuid=True), primary_key=True)
+    role = Column(String(15), nullable=False, default="member")    # "owner", "moderator", "member"
+    status = Column(String(15), nullable=False, default="active")  # "active", "pending"
+    joined_at = Column(DateTime, nullable=False, server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------

@@ -244,3 +244,37 @@ export interface CollectionPhoto {
   caption: string | null;
   created_at: string;
 }
+
+// ── Groups ────────────────────────────────────────────────────────────────────
+
+export interface Group {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  privacy: 'public' | 'private';
+  created_by: string;
+  created_at: string;
+  updated_at: string | null;
+  member_count: number;
+  is_member: boolean;
+  user_role: 'owner' | 'moderator' | 'member' | null;
+}
+
+export interface GroupMember {
+  user_id: string;
+  username: string | null;
+  display_name: string | null;
+  avatar_url: string | null;
+  role: 'owner' | 'moderator' | 'member';
+  joined_at: string;
+}
+
+export interface GroupSearchResult {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  privacy: 'public' | 'private';
+  member_count: number;
+}
