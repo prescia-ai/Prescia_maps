@@ -144,6 +144,9 @@ async def get_locations(
                 source_filter=source,
             )
         else:
+            # Community-approved pins (source LIKE 'community:%') are always
+            # included in full so a newly approved pin is never cut off by the
+            # per-type cap.  Non-community pins are still balanced.
             balanced_sql = text(
                 """
                 SELECT id, name, type, latitude, longitude, year, description,
@@ -153,8 +156,15 @@ async def get_locations(
                            source, confidence,
                            ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
                     FROM locations
+                    WHERE (source NOT LIKE 'community:%' OR source IS NULL)
+                    -- NULL source must be kept: NULL NOT LIKE '...' evaluates to NULL (falsy)
                 ) ranked
                 WHERE rn <= :per_type_limit
+                UNION ALL
+                SELECT id, name, type, latitude, longitude, year, description,
+                       source, confidence
+                FROM locations
+                WHERE source LIKE 'community:%'
                 ORDER BY type, id
                 """
             ).bindparams(
