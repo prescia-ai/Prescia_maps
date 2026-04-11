@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Euclid Beach Park, OH",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.5966,
+    "longitude": -81.5619,
+    "description": "Euclid Beach Park operated from 1895 to 1969 on the shores of Lake Erie in Cleveland, drawing millions of visitors with roller coasters, midway games, and famous popcorn balls. The park was developed by the Humphrey family as a temperance resort at the end of the streetcar line, boasting no alcohol and a wholesome family atmosphere that lasted over seven decades. After closing in 1969 the rides were demolished and the land transferred to the Cleveland Metroparks, leaving open shoreline accessible to the public. The former midway, picnic grove, and parking areas offer excellent metal detecting potential for silver coins, tokens, and vintage jewelry from the park's long history.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.92,
+    "detecting_weight": 90
+  },
+  {
+    "name": "Riverview Park, IL",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.9397,
+    "longitude": -87.7263,
+    "description": "Riverview Park operated from 1904 to 1967 in Chicago's North Side, covering 140 acres and featuring over 100 rides including the Bobs roller coaster, making it one of the largest amusement parks in America. Accessible by streetcar from downtown Chicago, it drew enormous crowds on weekends and holidays for over six decades. The park closed abruptly in October 1967 and the land was sold for a shopping mall and police training facility, but portions of the old park footprint remain as open ground. Decades of dropped coins, midway game prizes, and picnic-area losses make surviving undeveloped sections highly attractive for metal detecting.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 85
+  },
+  {
+    "name": "White City Amusement Park, IL",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.7797,
+    "longitude": -87.5972,
+    "description": "White City opened in 1905 at 63rd Street and South Park Avenue on Chicago's South Side, named for its elaborate white-painted electric lighting, and featured a casino, roller coasters, a dance hall, and a large midway serving Chicago's working-class neighborhoods. The park survived a massive fire in 1927 and continued operating until 1939, when a second fire destroyed the remaining structures. The site was subsequently redeveloped into mixed commercial and residential land. Pre-WWI silver coins and transit tokens would be the primary targets in any surviving undeveloped sections.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Palisades Amusement Park, NJ",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 40.8501,
+    "longitude": -73.9688,
+    "description": "Palisades Amusement Park operated from 1898 to 1971 on the Palisades cliffs overlooking the Hudson River in Fort Lee, New Jersey, drawing over a million visitors annually during its peak years with rides, a saltwater pool, and a famous midway. The park was immortalized in songs by Chuck Berry and others, and served as a day-trip destination for millions of New York City residents who crossed the Hudson by ferry and trolley. After its 1971 closure the rides were demolished and high-rise apartment buildings constructed on most of the site. Any remaining undeveloped margins or green spaces on the former grounds would retain coins and tokens from seven decades of massive crowds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Savin Rock Park, CT",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.2624,
+    "longitude": -72.9631,
+    "description": "Savin Rock Park in West Haven, Connecticut operated from the 1870s through 1966, evolving from a simple picnic grove into a full amusement park with roller coasters, a carousel, and a sprawling midway along Long Island Sound. Served by the New Haven streetcar system, it attracted enormous summer crowds from New Haven and surrounding towns for nearly a century. The park was demolished in the late 1960s and the shoreline redeveloped as Savin Rock Beach Park, a public beach and green space managed by West Haven. The surviving public parkland is legally accessible for metal detecting and contains deep deposits of coins, tokens, and jewelry from ninety years of beachgoers and midway visitors.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 88
+  },
+  {
+    "name": "Glen Echo Park, MD",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 38.9679,
+    "longitude": -77.1469,
+    "description": "Glen Echo Park outside Washington D.C. opened as a Chautauqua assembly ground in 1891 and quickly transformed into an amusement park served by the Capital Traction Company streetcar, featuring a famous Dentzel carousel, a crystal pool, and a large dance hall that drew crowds for most of its history. The park closed in 1968 following civil rights protests over its segregationist admission policies and was transferred to the National Park Service. Today the NPS manages the grounds as a cultural arts center with the original carousel still operating, and the surrounding lawns and wooded areas preserve decades of dropped coins from millions of mid-century park visitors. The publicly accessible NPS grounds make this an excellent legal detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.92,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Brandywine Springs Park, DE",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.7758,
+    "longitude": -75.6285,
+    "description": "Brandywine Springs Park near Wilmington, Delaware was one of the oldest trolley parks in America, operating from 1886 to 1923 when the Wilmington and Brandywine Springs streetcar line was replaced by buses and the park lost transit access. At its peak the park featured a large hotel, dance pavilion, roller coaster, and picnic grounds in a wooded valley that had been a popular resort since the colonial era. After closure the land reverted to open woodland and was later incorporated into Brandywine Creek State Park. The park's long history and the survival of wooded open land makes this an excellent metal detecting site for Victorian-era coins, transit tokens, and personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 85
+  },
+  {
+    "name": "Willow Grove Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.1428,
+    "longitude": -75.1186,
+    "description": "Willow Grove Park in Montgomery County, Pennsylvania operated from 1896 to 1975, renowned for its summer concerts by John Philip Sousa and Victor Herbert, along with major roller coasters and a classic carousel drawing Philadelphia-area crowds via the Reading Railway and Willow Grove Branch streetcar. The park hosted nearly eighty years of high-traffic use before closing in 1975 when the land was converted to a shopping mall. Peripheral park areas and former picnic grounds may retain metal detecting potential. Silver coins and brass tokens from the early twentieth century would be primary finds in any surviving open sections.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Rocky Glen Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.4053,
+    "longitude": -75.6389,
+    "description": "Rocky Glen Park in Moosic, Pennsylvania operated from 1902 to 1987 in a scenic wooded glen along a creek outside Scranton, accessible by trolley from the Wyoming Valley coal towns and serving as a beloved retreat for generations of mining families. The park featured a classic roller coaster, a carousel, a large swimming pool, and extensive picnic pavilions that drew massive holiday crowds for eighty-five years. After closing in 1987 the park sat abandoned for years before partial redevelopment, leaving much of the former grounds in a deteriorated but potentially detectable state. The former midway, picnic grove, and ride areas represent decades of lost coins and tokens from the industrial Pennsylvania workforce.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Idora Park, OH",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.0765,
+    "longitude": -80.7025,
+    "description": "Idora Park in Youngstown, Ohio operated from 1899 to 1984, built by the Mahoning and Shenango Railway at the end of its streetcar line and featuring beloved wooden roller coasters including the Wildcat and Jack Rabbit. The park survived the steel industry decline through sheer local loyalty before a devastating 1984 fire destroyed the midway and forced permanent closure. The grounds sat abandoned for decades, with roller coaster structures slowly collapsing amid overgrown vegetation. The original midway, picnic areas, and ride footprints preserve eighty-five years of dropped coins, tokens, and jewelry from generations of Youngstown steelworkers and their families.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.9,
+    "detecting_weight": 87
+  }
+]
