@@ -328,5 +328,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.85,
     "detecting_weight": 76
+  },
+  {
+    "name": "Idora Park, CA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 37.7982,
+    "longitude": -122.2146,
+    "description": "Idora Park in Oakland, California operated from 1906 to 1929 in the Temescal neighborhood, developed by the Key Route railway as a streetcar destination featuring roller coasters, a carousel, a dance pavilion, and picnic grounds that made it the primary outdoor amusement destination for East Bay families in the early twentieth century. The park was devastated by the 1929 stock market crash and closed permanently, with its land subsequently subdivided for the residential Temescal neighborhood. A small public park bearing the Idora name was preserved on a portion of the original site and remains accessible today. The surviving park greenery represents the remaining footprint of this early San Francisco Bay Area amusement destination.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Luna Park, WA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 47.5743,
+    "longitude": -122.3889,
+    "description": "Luna Park in Seattle, Washington operated from 1907 to 1913 on the west shore of Elliott Bay near West Seattle, featuring a large natatorium, carousel, roller coaster, and dance pavilion accessible by ferry from downtown Seattle and by the West Seattle streetcar. Modeled after the famous Coney Island Luna Park, it was Seattle's premier entertainment destination for six years. A combination of fire damage, competition, and loss of streetcar access led to its rapid decline and 1913 closure. The former park site along the West Seattle waterfront has been partially developed but the shoreline area retains potential for detecting coins and tokens from the park's early-century operation.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Jantzen Beach Amusement Park, OR",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 45.6244,
+    "longitude": -122.7054,
+    "description": "Jantzen Beach Amusement Park on Hayden Island in Portland, Oregon operated from 1928 to 1970, featuring four roller coasters, the largest carousel on the West Coast, a large swimming pool, and a ballroom that hosted big bands during the swing era. Accessible by the Interstate Avenue streetcar and later by automobile, it drew Portland-area families for forty-two years. After its 1970 closure the rides were removed and the island redeveloped into a large shopping mall and residential community. The former park's magnificent carousel was preserved and moved to Oaks Park in Portland, while the grounds contained extraordinary fair activity spanning four decades.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Saltair Resort, UT",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 40.739,
+    "longitude": -112.1018,
+    "description": "Saltair Resort on the south shore of the Great Salt Lake operated from 1893 to 1958, built by the LDS Church as a family resort featuring a massive Moorish-style pavilion on pilings over the lake, a roller coaster, carousel, and midway that drew Salt Lake City families by excursion train for over six decades. Two fires (1925 and 1931) and the receding lake eventually led to the resort's abandonment. The current Saltair site is a state recreation area where a 1981 structure replaced the original, and the broad flat former grounds near the original pavilion footprint hold decades of coin and souvenir losses from millions of Utah visitors.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 85
+  },
+  {
+    "name": "Manhattan Beach Park, CO",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 39.7215,
+    "longitude": -104.9498,
+    "description": "Manhattan Beach Park on the shores of Berkeley Lake in Denver, Colorado operated from 1891 to 1914 as Denver's premier lakeside resort, featuring a large dance pavilion, roller coaster, carousel, and boating on the lake, accessible by the Denver Tramway Company. The resort was the predecessor to other Denver-area amusement parks and served the growing Rocky Mountain city during its formative decades. After the park closed around 1914 the Berkeley Lake area was developed into a Denver City Park and is publicly accessible. The former resort grounds in Denver's Berkeley neighborhood potentially contain late Victorian-era coins and tokens from the city's earliest resort era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Chutes Park, CA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 34.0489,
+    "longitude": -118.2529,
+    "description": "Chutes Park in Los Angeles, California operated from 1887 to 1912 in the Westlake district near downtown, featuring the original Shoot the Chutes water ride, a carousel, and the first roller coaster in Southern California, drawing Victorian-era Los Angeles residents on the newly constructed streetcar network. The park was the city's earliest major amusement attraction, predating the Southern California boom by nearly two decades and introducing Los Angeles to the trolley park concept. The Westlake neighborhood has since been densely developed and the park site is now urban Los Angeles. The pre-World War I era of operation makes this a historically significant site for early silver coins and Victorian-era personal effects.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.77,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Venice Amusement Pier, CA",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 33.9857,
+    "longitude": -118.4732,
+    "description": "The Venice Amusement Pier and midway along the Venice, California canals operated from 1905 to 1946 as part of Abbott Kinney's vision of an American Venice, featuring a pier-based roller coaster, miniature railway through the canals, gondola rides, a ballroom, and an extensive boardwalk midway that attracted enormous crowds on the Pacific Electric Red Car lines. The 'Venice of America' concept created one of the most unique amusement environments in the country. Much of the canal system was paved over for roads in the 1920s and the amusement area declined. Venice Beach is now public land with the former pier and canal sites accessible, holding over forty years of midway and beach activity coin deposits.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Suburban Gardens, DC",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 38.9014,
+    "longitude": -76.9985,
+    "description": "Suburban Gardens in Deanwood on the eastern edge of Washington D.C. operated from 1921 to 1935 as the only major amusement park in the nation's capital that admitted Black visitors during the segregation era, featuring a roller coaster, carousel, dance hall, and midway accessible by the Capital Transit streetcar on the Benning Road line. It was a vital community institution during the Harlem Renaissance era, serving Washington's African American community. The park closed in 1935 during the Depression and the land was redeveloped. The site represents a historically significant community gathering place whose coin losses reflect early twentieth-century African American community tokens and personal effects.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Springlake Park, OK",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 35.4918,
+    "longitude": -97.4733,
+    "description": "Springlake Park in Oklahoma City operated from 1911 to 1988 on the shore of Lake Overholser, featuring roller coasters, a carousel, a swimming pool, and one of the state's premier outdoor dance venues that drew Oklahoma City residents for over seventy years. The park was a major Oklahoma City social institution through the oil boom years and postwar prosperity before declining attendance and rising costs forced its 1988 closure. The grounds were subsequently redeveloped, but surrounding public parklands retain some of the former resort atmosphere. The park's long operation through Oklahoma's formative decades created significant accumulations of coins, midway tokens, and personal losses.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Whalom Park, MA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.5783,
+    "longitude": -71.7066,
+    "description": "Whalom Park in Lunenburg, Massachusetts operated from 1893 to 2000 as one of the longest-running trolley parks in New England, originally built at the end of the Fitchburg and Leominster Street Railway on the shores of Whalom Lake and featuring the classic wooden Flyer Comet roller coaster, a carousel, and midway attractions that served north-central Massachusetts for over a century. Despite losing its streetcar access decades earlier, the park maintained loyal regional patronage through the automobile era. After its 2000 closure the rides were auctioned off and the lakeside land sold for residential development. A century of operation creates exceptional metal detecting potential throughout the former grounds and lakeshore areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 85
   }
 ]
