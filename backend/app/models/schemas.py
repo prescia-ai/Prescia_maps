@@ -330,6 +330,7 @@ class UserProfile(BaseModel):
     google_connected_at: Optional[Any] = None
     google_folder_id: Optional[str] = None
     avatar_url: Optional[str] = None
+    is_admin: bool = False
 
 
 class UserProfileSetup(BaseModel):

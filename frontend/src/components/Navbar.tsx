@@ -9,11 +9,13 @@ interface NavbarProps {
   isLocationsError: boolean;
   isFeaturesError: boolean;
   onImportClick: () => void;
+  onLogHuntClick?: () => void;
 }
 
-function SettingsDropdown({ onSignOut }: { onSignOut: () => void }) {
+function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void; onImportClick: () => void }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const { profile } = useAuth();
 
   // Close when clicking outside
   useEffect(() => {
@@ -41,7 +43,7 @@ function SettingsDropdown({ onSignOut }: { onSignOut: () => void }) {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-44 bg-white border border-stone-200 rounded-xl shadow-lg z-50 py-1 overflow-hidden">
+        <div className="absolute right-0 top-full mt-1 w-48 bg-white border border-stone-200 rounded-xl shadow-lg z-50 py-1 overflow-hidden">
           <Link
             to="/profile/settings"
             onClick={() => setOpen(false)}
@@ -62,6 +64,43 @@ function SettingsDropdown({ onSignOut }: { onSignOut: () => void }) {
             </svg>
             Security
           </Link>
+          <Link
+            to="/submit"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2 px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors"
+          >
+            <svg className="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            Submit a Pin
+          </Link>
+          {profile?.is_admin && (
+            <>
+              <div className="border-t border-stone-100 my-1" />
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  onImportClick();
+                }}
+                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors text-left"
+              >
+                <svg className="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                </svg>
+                Import Data
+              </button>
+              <Link
+                to="/admin/submissions"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors"
+              >
+                <svg className="w-3.5 h-3.5 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Review Submissions
+              </Link>
+            </>
+          )}
           <div className="border-t border-stone-100 my-1" />
           <button
             onClick={() => {
@@ -87,6 +126,7 @@ export default function Navbar({
   isLocationsError,
   isFeaturesError,
   onImportClick,
+  onLogHuntClick,
 }: NavbarProps) {
   const { user, profile, signOut } = useAuth();
   const navigate = useNavigate();
@@ -149,29 +189,9 @@ export default function Navbar({
             </Link>
           )}
 
-          <button
-            onClick={onImportClick}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
-          >
-            <svg
-              className="w-3.5 h-3.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12"
-              />
-            </svg>
-            Import Data
-          </button>
-
           {user && (
-            <Link
-              to="/submit"
+            <button
+              onClick={onLogHuntClick}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
             >
               <svg
@@ -184,11 +204,16 @@ export default function Navbar({
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M12 4v16m8-8H4"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              Submit a Pin
-            </Link>
+              Log a Hunt
+            </button>
           )}
         </div>
 
@@ -231,7 +256,7 @@ export default function Navbar({
                 />
                 <span>Profile</span>
               </Link>
-              <SettingsDropdown onSignOut={signOut} />
+              <SettingsDropdown onSignOut={signOut} onImportClick={onImportClick} />
             </div>
           ) : (
             <div className="border-l border-stone-200 pl-2 ml-1">

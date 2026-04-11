@@ -131,6 +131,11 @@ export default function MapPage() {
     queryClient.invalidateQueries({ queryKey: ['my-pins'] });
   }, [queryClient]);
 
+  const handleNavbarLogHunt = useCallback(() => {
+    setLogHuntCoords({ lat: 39.5, lon: -98.35 });
+    setShowLogHuntModal(true);
+  }, []);
+
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
@@ -148,6 +153,7 @@ export default function MapPage() {
         isLocationsError={locationsQuery.isError}
         isFeaturesError={featuresQuery.isError}
         onImportClick={() => setShowImportModal(true)}
+        onLogHuntClick={handleNavbarLogHunt}
       />
 
       {/* Full-screen map — offset below navbar */}

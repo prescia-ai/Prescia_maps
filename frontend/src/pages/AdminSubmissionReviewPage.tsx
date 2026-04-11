@@ -26,6 +26,7 @@ const LOCATION_TYPES = [
   'shipwreck',
   'pony_express',
   'abandoned_church',
+  'abandoned_fairground',
   'historic_brothel',
 ];
 
