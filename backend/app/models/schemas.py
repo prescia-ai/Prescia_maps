@@ -728,3 +728,75 @@ class GroupInvite(BaseModel):
     """Request payload for inviting a user to a group."""
 
     username: str
+
+
+# ---------------------------------------------------------------------------
+# Group Event schemas
+# ---------------------------------------------------------------------------
+
+class GroupEventCreate(BaseModel):
+    """Request payload for creating a group event."""
+
+    name: str = Field(..., min_length=1, max_length=200)
+    description: Optional[str] = Field(None, max_length=2000)
+    latitude: float
+    longitude: float
+    event_date: str  # ISO 8601 datetime string
+    event_end_date: Optional[str] = None  # ISO 8601 datetime string
+
+
+class GroupEventUpdate(BaseModel):
+    """Request payload for updating a group event (all fields optional)."""
+
+    name: Optional[str] = Field(None, min_length=1, max_length=200)
+    description: Optional[str] = Field(None, max_length=2000)
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    event_date: Optional[str] = None
+    event_end_date: Optional[str] = None
+
+
+class GroupEventResponse(BaseModel):
+    """Full group event record returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    group_id: UUID
+    group_name: Optional[str] = None
+    group_slug: Optional[str] = None
+    created_by: UUID
+    created_by_username: Optional[str] = None
+    name: str
+    description: Optional[str] = None
+    latitude: float
+    longitude: float
+    event_date: Any
+    event_end_date: Optional[Any] = None
+    created_at: Any
+    updated_at: Optional[Any] = None
+    rsvp_count: int = 0
+    user_has_rsvpd: bool = False
+
+
+class GroupEventListResponse(BaseModel):
+    """Paginated list of group events."""
+
+    events: List[GroupEventResponse]
+    total: int
+
+
+class EventPinResponse(BaseModel):
+    """Minimal event record for map pin display."""
+
+    id: UUID
+    group_id: UUID
+    group_name: str
+    group_slug: str
+    name: str
+    latitude: float
+    longitude: float
+    event_date: Any
+    event_end_date: Optional[Any] = None
+    rsvp_count: int = 0
+    user_has_rsvpd: bool = False

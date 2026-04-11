@@ -15,6 +15,7 @@ import type {
   LayerState,
   HeatmapPoint,
   UserPin,
+  EventPin,
 } from '../types';
 import type { Feature, Geometry, LineString, MultiLineString } from 'geojson';
 import type { LinearProperties } from '../types';
@@ -223,6 +224,62 @@ function LinearFeatures({
 
 // ── Main component ────────────────────────────────────────────────────────────
 
+function EventPinMarkers({ pins }: { pins: EventPin[] }) {
+  if (!pins.length) return null;
+  return (
+    <>
+      {pins.map((pin) => {
+        const dateLabel = pin.event_date
+          ? new Date(pin.event_date).toLocaleDateString('en-US', {
+              weekday: 'short',
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: '2-digit',
+            })
+          : null;
+        const endDateLabel = pin.event_end_date
+          ? new Date(pin.event_end_date).toLocaleTimeString('en-US', {
+              hour: 'numeric',
+              minute: '2-digit',
+            })
+          : null;
+        return (
+          <CircleMarker
+            key={pin.id}
+            center={[pin.latitude, pin.longitude]}
+            radius={10}
+            pathOptions={{
+              color: '#ffffff',
+              fillColor: '#8b5cf6',
+              fillOpacity: 0.9,
+              weight: 2,
+            }}
+          >
+            <Popup>
+              <div className="min-w-[180px]">
+                <strong className="block text-sm font-semibold">{pin.name}</strong>
+                <span className="text-xs text-gray-500">in {pin.group_name}</span>
+                {dateLabel && (
+                  <p className="text-xs text-gray-600 mt-1">{dateLabel}</p>
+                )}
+                {endDateLabel && (
+                  <p className="text-xs text-gray-600">until {endDateLabel}</p>
+                )}
+                <p className="text-xs text-gray-600 mt-0.5">{pin.rsvp_count} going</p>
+                {pin.user_has_rsvpd && (
+                  <p className="text-xs text-green-600 mt-0.5">✓ You're going</p>
+                )}
+              </div>
+            </Popup>
+          </CircleMarker>
+        );
+      })}
+    </>
+  );
+}
+
 interface MapViewProps {
   locations: LocationFeature[];
   linearFeatures: Feature<Geometry, LinearProperties>[];
@@ -233,6 +290,7 @@ interface MapViewProps {
   onLandAccessClick?: (lat: number, lon: number) => void;
   onContextMenu?: (lat: number, lon: number) => void;
   userPins?: UserPin[];
+  eventPins?: EventPin[];
 }
 
 export default function MapView({
@@ -245,6 +303,7 @@ export default function MapView({
   onLandAccessClick,
   onContextMenu,
   userPins,
+  eventPins,
 }: MapViewProps) {
   const handleClick = useCallback(
     (lat: number, lon: number) => {
@@ -298,6 +357,10 @@ export default function MapView({
 
       {userPins && userPins.length > 0 && (
         <UserPinMarkers pins={userPins} />
+      )}
+
+      {eventPins && eventPins.length > 0 && (
+        <EventPinMarkers pins={eventPins} />
       )}
     </MapContainer>
   );
