@@ -704,6 +704,7 @@ export default function GroupPage() {
                         <Avatar
                           username={profile?.username ?? 'user'}
                           displayName={profile?.display_name}
+                          avatarUrl={profile?.avatar_url}
                           size="sm"
                         />
                         <textarea
