@@ -69,7 +69,7 @@ function UserSearch() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search users…"
-          className="w-48 bg-stone-100 border border-stone-200 rounded-lg pl-7 pr-3 py-1.5 text-xs text-stone-700 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
+          className="w-96 bg-stone-100 border border-stone-200 rounded-lg pl-7 pr-3 py-1.5 text-xs text-stone-700 placeholder-stone-400 focus:outline-none focus:border-stone-400 transition-colors"
         />
       </div>
       {open && (

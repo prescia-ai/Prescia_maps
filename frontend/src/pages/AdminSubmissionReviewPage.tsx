@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { fetchAdminSubmission, updateAdminSubmission } from '../api/client';
@@ -46,6 +47,7 @@ export default function AdminSubmissionReviewPage() {
   const { id } = useParams<{ id: string }>();
   const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const [submission, setSubmission] = useState<PinSubmission | null>(null);
   const [loading, setLoading] = useState(true);
@@ -173,6 +175,8 @@ export default function AdminSubmissionReviewPage() {
       const updated = await updateAdminSubmission(id!, buildPayload('approved'));
       setSubmission(updated);
       setSuccessMsg('Submission approved and added to the map!');
+      // Invalidate the locations cache so the map shows the new pin immediately.
+      queryClient.invalidateQueries({ queryKey: ['locations'] });
     } catch (err: unknown) {
       const msg =
         (err as { response?: { data?: { detail?: string } } })?.response?.data?.detail ??
