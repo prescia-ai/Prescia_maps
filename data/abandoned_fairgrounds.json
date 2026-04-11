@@ -96,29 +96,7 @@
     "description": "Fontaine Ferry Park along the Ohio River in Louisville, Kentucky operated from 1905 to 1969 as a major amusement park served by the Louisville Railway Company streetcar, featuring the Comet roller coaster, a large swimming pool, and extensive midway attractions that drew hundreds of thousands of visitors annually. The park closed in 1969 after civil rights demonstrations forced its segregationist policies into the spotlight, and the grounds were converted to Chickasaw Park, now a Louisville Metro park. The riverfront parkland and former midway areas are publicly accessible and represent sixty-five years of dropped coins, tokens, and personal effects from Louisville's working class.",
     "source": "historic_fairgrounds",
     "confidence": 0.88,
-    "detecting_weight": 85
-  },
-  {
-    "name": "Forest Park Highlands, MO",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 38.6355,
-    "longitude": -90.2878,
-    "description": "Forest Park Highlands in St. Louis operated from 1896 to 1963 adjacent to Forest Park, built by the United Railways Company to generate streetcar ridership and featuring classic rides, a large carousel, and a midway with roots in the 1904 World's Fair legacy. The park drew St. Louis families for sixty-seven years before a devastating 1963 fire destroyed the main structures. The land was absorbed into Forest Park, one of the largest urban parks in the United States, making the former Highlands footprint entirely publicly accessible. The Forest Park grounds represent an exceptional metal detecting opportunity with deposits from the 1904 Louisiana Purchase Exposition, the Highlands amusement era, and a century of subsequent park use.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.87,
-    "detecting_weight": 88
-  },
-  {
-    "name": "Electric Park, MO",
-    "type": "abandoned_fairground",
-    "category": "trolley_park",
-    "latitude": 39.0732,
-    "longitude": -94.5887,
-    "description": "Electric Park in Kansas City, Missouri operated from 1899 to 1925 at the end of the Metropolitan Street Railway Company lines, featuring illuminated fountains that gave it its name, a large ballroom, roller coasters, and midway attractions serving Kansas City's growing urban population. The park was rebuilt after a major fire in 1907 and operated for another eighteen years before economic pressures and automobile competition forced its closure. The site was subsequently redeveloped into an industrial area and residential neighborhood. The long operation spanning both sides of the turn of the century makes this a potential source for late nineteenth-century silver coins, transit tokens, and Victorian-era personal items.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.8,
-    "detecting_weight": 74
+    "detecting_weight": 65
   },
   {
     "name": "Dreamland, NY",
@@ -250,7 +228,7 @@
     "description": "Neptune Beach in Alameda, California operated from 1917 to 1939 as the 'Coney Island of the West,' featuring a giant roller coaster called the Whirlwind Dipper, a large plunge pool, a Ferris wheel, carousel, and extensive midway modeled after the great Eastern seaside parks. Located on the San Francisco Bay waterfront and accessible by Key System ferry from San Francisco, it drew enormous Bay Area crowds before the Depression and the opening of the Bay Bridge cut off its ferry traffic. The park closed in 1939 and the land was converted to Alameda housing and industrial uses during World War II. Some portions of the former shoreline park area remain as public beach and park, potentially containing coins and tokens from the interwar era.",
     "source": "historic_fairgrounds",
     "confidence": 0.83,
-    "detecting_weight": 79
+    "detecting_weight": 65
   },
   {
     "name": "Playland at the Beach, CA",
@@ -372,17 +350,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.83,
     "detecting_weight": 76
-  },
-  {
-    "name": "Elitch Gardens (Original Site), CO",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 39.7616,
-    "longitude": -105.0323,
-    "description": "The original Elitch Gardens in Denver's Sunnyside neighborhood operated from 1890 to 1994 at West 38th Avenue and Tennyson Street, featuring the Mister Twister roller coaster, famous floral gardens, a historic theater, and midway attractions that made it Colorado's most beloved amusement destination for over a century. The park relocated to a new downtown site near the South Platte River in 1995 and the original land was redeveloped into a residential neighborhood. The Sunnyside neighborhood development obliterated most of the original park footprint, but residential streets and green spaces near 38th and Tennyson carry deep coin deposits from a century of park operations dating back to Denver's earliest years.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.85,
-    "detecting_weight": 75
   },
   {
     "name": "Riverview Beach Park, NJ",
@@ -627,17 +594,6 @@
     "detecting_weight": 88
   },
   {
-    "name": "Wonderland Park, TX",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 35.197,
-    "longitude": -101.861,
-    "description": "Wonderland Park in Amarillo, Texas operated from 1951 to 1989 as the only major permanent amusement park in the Texas Panhandle, featuring the Texas Tornado roller coaster, a ferris wheel, a carousel, and family midway attractions serving a vast rural and small-city population across eastern New Mexico, western Oklahoma, and the Texas Panhandle. The park was the primary entertainment destination for an enormous geographic area with no other major amusement parks within hundreds of miles. After its 1989 closure the site sat vacant for years before partial redevelopment. The former grounds represent nearly forty years of concentrated Panhandle family visits with significant coin and token accumulation from a very large regional draw area.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.83,
-    "detecting_weight": 79
-  },
-  {
     "name": "White City (Spokane Area), WA",
     "type": "abandoned_fairground",
     "category": "trolley_park",
@@ -680,17 +636,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.78,
     "detecting_weight": 74
-  },
-  {
-    "name": "Carlin's Park, MD",
-    "type": "abandoned_fairground",
-    "category": "amusement_park",
-    "latitude": 39.3372,
-    "longitude": -76.7087,
-    "description": "Carlin's Park in Baltimore, Maryland operated from 1918 to 1955 along Reisterstown Road, featuring a roller coaster, a large ballroom, a carousel, and a swimming pool that made it Baltimore's premier indoor-outdoor entertainment complex during the 1920s, 30s, and 40s. The ballroom hosted nationally known big band acts and was a major social venue for Baltimore's Jewish community and broader middle class. After its 1955 closure the land was redeveloped into a shopping center. The former park site along Reisterstown Road represents thirty-seven years of intense Baltimore social activity, with coin and token losses from the big band era and early postwar years.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.83,
-    "detecting_weight": 77
   },
   {
     "name": "Electric Park, MD (Baltimore)",
@@ -812,17 +757,6 @@
     "source": "historic_fairgrounds",
     "confidence": 0.7,
     "detecting_weight": 74
-  },
-  {
-    "name": "Exposition Park, CA (Original Site)",
-    "type": "abandoned_fairground",
-    "category": "exposition",
-    "latitude": 34.0141,
-    "longitude": -118.2878,
-    "description": "Exposition Park in Los Angeles began as the California Agricultural District Fairgrounds in 1872, serving as the site of the Los Angeles County Fair until 1913 when the fair relocated to Pomona. The original fairgrounds at Figueroa Street hosted decades of California agricultural exhibitions, livestock shows, and carnival midways that drew Southern California's growing population during the Victorian and Progressive eras. After the fair relocated, the grounds were redeveloped into the current Exposition Park with the Natural History Museum and Los Angeles Memorial Coliseum. The museum grounds and Exposition Park rose gardens occupy the former fairground site, and the public park areas hold deposits from over forty years of California fair activity.",
-    "source": "historic_fairgrounds",
-    "confidence": 0.83,
-    "detecting_weight": 79
   },
   {
     "name": "Forest Park World's Fair Site, MO",
