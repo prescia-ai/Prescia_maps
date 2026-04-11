@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import MapView from '../components/MapView';
 import LayerControls from '../components/LayerControls';
 import InfoPanel from '../components/InfoPanel';
@@ -15,7 +15,7 @@ import { useHeatmap } from '../hooks/useHeatmap';
 import { useScore } from '../hooks/useScore';
 import { useMyPins } from '../hooks/useMyPins';
 import { useAuth } from '../contexts/AuthContext';
-import { fetchLandAccess, putLandAccessOverride } from '../api/client';
+import { fetchLandAccess, putLandAccessOverride, fetchEventMapPins } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
 const US_CENTER_LAT = 39.5;
@@ -48,6 +48,7 @@ const DEFAULT_LAYERS: LayerState = {
   heatmap:         false,
   blm:             false,
   my_hunts:        false,
+  group_events:    true,
 };
 
 export default function MapPage() {
@@ -71,6 +72,11 @@ export default function MapPage() {
   const heatmapQuery   = useHeatmap();
   const scoreQuery     = useScore(clickedCoords?.lat ?? null, clickedCoords?.lon ?? null);
   const myPinsQuery    = useMyPins();
+  const eventPinsQuery = useQuery({
+    queryKey: ['event-map-pins'],
+    queryFn: fetchEventMapPins,
+    enabled: !!user,
+  });
 
   const handleMapClick = useCallback((lat: number, lon: number) => {
     setSelectedFeature(null);
@@ -143,6 +149,7 @@ export default function MapPage() {
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
   const userPins       = (user && layers.my_hunts) ? (myPinsQuery.data?.pins ?? []) : [];
+  const eventPins      = (user && layers.group_events) ? (eventPinsQuery.data ?? []) : [];
 
   const isInitialLoading =
     locationsQuery.isLoading || featuresQuery.isLoading || heatmapQuery.isLoading;
@@ -171,6 +178,7 @@ export default function MapPage() {
           onLandAccessClick={handleLandAccessClick}
           onContextMenu={handleContextMenu}
           userPins={userPins}
+          eventPins={eventPins}
         />
       </div>
 

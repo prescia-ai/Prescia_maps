@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
 import PostCard from '../components/PostCard';
+import CreateEventModal from '../components/CreateEventModal';
 import {
   fetchGroup,
   fetchGroupMembers,
@@ -17,8 +18,11 @@ import {
   changeGroupMemberRole,
   inviteToGroup,
   createPost,
+  fetchGroupEvents,
+  deleteGroupEvent,
+  toggleEventRsvp,
 } from '../api/client';
-import type { Group, GroupMember, Post } from '../types';
+import type { Group, GroupMember, Post, GroupEvent } from '../types';
 
 type ActiveTab = 'feed' | 'members' | 'events';
 
@@ -83,6 +87,14 @@ export default function GroupPage() {
 
   const [actionLoading, setActionLoading] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+
+  // Events tab state
+  const [eventFilter, setEventFilter] = useState<'upcoming' | 'past'>('upcoming');
+  const [events, setEvents] = useState<GroupEvent[]>([]);
+  const [eventsTotal, setEventsTotal] = useState(0);
+  const [eventsLoading, setEventsLoading] = useState(false);
+  const [showCreateEventModal, setShowCreateEventModal] = useState(false);
+  const [editingEvent, setEditingEvent] = useState<GroupEvent | null>(null);
 
   // Edit form state
   const [editName, setEditName] = useState('');
@@ -153,6 +165,22 @@ export default function GroupPage() {
       .catch(() => setRequests([]))
       .finally(() => setRequestsLoading(false));
   }, [group, showSettings, isModOrOwner]);
+
+  // Load events when events tab is active
+  useEffect(() => {
+    if (!group || activeTab !== 'events') return;
+    setEventsLoading(true);
+    fetchGroupEvents(group.slug, eventFilter, 50, 0)
+      .then(({ events: evts, total }) => {
+        setEvents(evts);
+        setEventsTotal(total);
+      })
+      .catch(() => {
+        setEvents([]);
+        setEventsTotal(0);
+      })
+      .finally(() => setEventsLoading(false));
+  }, [group, activeTab, eventFilter]);
 
   async function handleLoadMoreFeedPosts() {
     if (!group || feedLoadingMore) return;
@@ -306,6 +334,63 @@ export default function GroupPage() {
   const canSeeTabs =
     group &&
     (group.privacy === 'public' || group.is_member);
+
+  async function handleLoadMoreEvents() {
+    if (!group || eventsLoading) return;
+    setEventsLoading(true);
+    try {
+      const { events: more, total } = await fetchGroupEvents(group.slug, eventFilter, 50, events.length);
+      setEvents((prev) => [...prev, ...more]);
+      setEventsTotal(total);
+    } catch {
+      // silent
+    } finally {
+      setEventsLoading(false);
+    }
+  }
+
+  async function handleDeleteEvent(eventId: string) {
+    if (!group) return;
+    if (!window.confirm('Delete this event?')) return;
+    try {
+      await deleteGroupEvent(group.slug, eventId);
+      setEvents((prev) => prev.filter((e) => e.id !== eventId));
+      setEventsTotal((t) => Math.max(0, t - 1));
+    } catch {
+      // silent
+    }
+  }
+
+  async function handleToggleRsvp(eventId: string) {
+    if (!group) return;
+    try {
+      const { rsvpd, rsvp_count } = await toggleEventRsvp(group.slug, eventId);
+      setEvents((prev) =>
+        prev.map((e) =>
+          e.id === eventId
+            ? { ...e, user_has_rsvpd: rsvpd, rsvp_count }
+            : e,
+        ),
+      );
+    } catch {
+      // silent
+    }
+  }
+
+  function handleEventSuccess() {
+    if (!group) return;
+    setEventsLoading(true);
+    fetchGroupEvents(group.slug, eventFilter, 50, 0)
+      .then(({ events: evts, total }) => {
+        setEvents(evts);
+        setEventsTotal(total);
+      })
+      .catch(() => {
+        setEvents([]);
+        setEventsTotal(0);
+      })
+      .finally(() => setEventsLoading(false));
+  }
 
   if (loading) {
     return (
@@ -712,15 +797,161 @@ export default function GroupPage() {
 
             {/* Events tab */}
             {activeTab === 'events' && (
-              <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-8 text-center">
-                <div className="text-3xl mb-2">📅</div>
-                <h2 className="text-stone-900 font-semibold mb-1">Group events coming soon</h2>
-                <p className="text-stone-500 text-sm">Hunt events organized by this group will appear here in a future update.</p>
+              <div className="space-y-3">
+                {/* Header row: sub-tabs + create button */}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setEventFilter('upcoming')}
+                      className={`px-4 py-1.5 text-sm font-medium rounded-xl transition-colors ${
+                        eventFilter === 'upcoming'
+                          ? 'bg-stone-800 text-white'
+                          : 'bg-stone-100 text-stone-500 hover:text-stone-700 hover:bg-stone-200'
+                      }`}
+                    >
+                      Upcoming
+                    </button>
+                    <button
+                      onClick={() => setEventFilter('past')}
+                      className={`px-4 py-1.5 text-sm font-medium rounded-xl transition-colors ${
+                        eventFilter === 'past'
+                          ? 'bg-stone-800 text-white'
+                          : 'bg-stone-100 text-stone-500 hover:text-stone-700 hover:bg-stone-200'
+                      }`}
+                    >
+                      Past
+                    </button>
+                  </div>
+                  {isModOrOwner && (
+                    <button
+                      onClick={() => { setEditingEvent(null); setShowCreateEventModal(true); }}
+                      className="bg-stone-800 hover:bg-stone-700 text-white text-sm px-4 py-2 rounded-xl font-medium transition-colors"
+                    >
+                      Create Event
+                    </button>
+                  )}
+                </div>
+
+                {/* Event list */}
+                {eventsLoading ? (
+                  <div className="flex justify-center py-12">
+                    <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
+                  </div>
+                ) : events.length === 0 ? (
+                  <div className="bg-white border border-stone-200 rounded-2xl p-10 flex flex-col items-center gap-3 text-center shadow-sm">
+                    <span className="text-3xl">📅</span>
+                    <p className="text-stone-500 text-sm">
+                      {eventFilter === 'past'
+                        ? 'No past events'
+                        : isModOrOwner
+                        ? 'No upcoming events. Create one to get the group together!'
+                        : 'No upcoming events'}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {events.map((event) => {
+                      const formattedDate = new Date(event.event_date).toLocaleDateString('en-US', {
+                        weekday: 'short',
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: '2-digit',
+                      });
+                      const formattedEndDate = event.event_end_date
+                        ? new Date(event.event_end_date).toLocaleString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            hour: 'numeric',
+                            minute: '2-digit',
+                          })
+                        : null;
+                      return (
+                        <div
+                          key={event.id}
+                          className="bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-2"
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <h3 className="text-sm font-semibold text-stone-900">{event.name}</h3>
+                            {isModOrOwner && (
+                              <div className="flex gap-1 flex-shrink-0">
+                                <button
+                                  onClick={() => { setEditingEvent(event); setShowCreateEventModal(true); }}
+                                  className="p-1 text-stone-400 hover:text-stone-700 transition-colors"
+                                  title="Edit event"
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                  </svg>
+                                </button>
+                                <button
+                                  onClick={() => handleDeleteEvent(event.id)}
+                                  className="p-1 text-stone-400 hover:text-red-600 transition-colors"
+                                  title="Delete event"
+                                >
+                                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                  </svg>
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                          {event.description && (
+                            <p className="text-xs text-stone-500 line-clamp-2">{event.description}</p>
+                          )}
+                          <div className="flex flex-wrap gap-3 text-xs text-stone-500">
+                            <span>📅 {formattedDate}</span>
+                            {formattedEndDate && <span>→ {formattedEndDate}</span>}
+                            <span>📍 {event.latitude.toFixed(4)}, {event.longitude.toFixed(4)}</span>
+                          </div>
+                          <div className="flex items-center justify-between pt-1">
+                            <span className="text-xs text-stone-400">{event.rsvp_count} going</span>
+                            {group.is_member && (
+                              <button
+                                onClick={() => handleToggleRsvp(event.id)}
+                                className={
+                                  event.user_has_rsvpd
+                                    ? 'bg-green-50 text-green-700 border border-green-200 text-xs px-3 py-1 rounded-lg font-medium'
+                                    : 'border border-stone-300 text-stone-600 hover:border-stone-400 text-xs px-3 py-1 rounded-lg font-medium'
+                                }
+                              >
+                                {event.user_has_rsvpd ? '✓ Going' : "I'm going"}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Load more */}
+                {events.length < eventsTotal && !eventsLoading && (
+                  <div className="flex justify-center pt-2">
+                    <button
+                      onClick={handleLoadMoreEvents}
+                      className="text-sm text-stone-600 hover:text-stone-900 border border-stone-300 hover:border-stone-400 px-5 py-2 rounded-xl transition-colors"
+                    >
+                      Load more
+                    </button>
+                  </div>
+                )}
               </div>
             )}
           </>
         )}
       </div>
+
+      {/* Create/Edit Event Modal */}
+      {showCreateEventModal && group && (
+        <CreateEventModal
+          groupSlug={group.slug}
+          event={editingEvent ?? undefined}
+          onClose={() => { setShowCreateEventModal(false); setEditingEvent(null); }}
+          onSuccess={handleEventSuccess}
+        />
+      )}
     </div>
   );
 }

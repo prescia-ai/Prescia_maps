@@ -420,6 +420,34 @@ class GroupMember(Base):
     joined_at = Column(DateTime, nullable=False, server_default=func.now())
 
 
+class GroupEvent(Base):
+    """An event created by a group moderator or owner."""
+
+    __tablename__ = "group_events"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    group_id = Column(UUID(as_uuid=True), nullable=False, index=True)
+    created_by = Column(UUID(as_uuid=True), nullable=False)
+    name = Column(String(200), nullable=False)
+    description = Column(Text, nullable=True)
+    latitude = Column(Float, nullable=False)
+    longitude = Column(Float, nullable=False)
+    event_date = Column(DateTime, nullable=False)
+    event_end_date = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, nullable=False, server_default=func.now())
+    updated_at = Column(DateTime, nullable=True, onupdate=func.now())
+
+
+class GroupEventRsvp(Base):
+    """RSVP record linking a user to a group event."""
+
+    __tablename__ = "group_event_rsvps"
+
+    event_id = Column(UUID(as_uuid=True), primary_key=True)
+    user_id = Column(UUID(as_uuid=True), primary_key=True)
+    created_at = Column(DateTime, nullable=False, server_default=func.now())
+
+
 # ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------

@@ -263,6 +263,31 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                   </span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => toggle('group_events')}
+                  className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
+                    ${layers.group_events
+                      ? 'bg-stone-100 text-stone-900'
+                      : 'bg-transparent text-stone-500 hover:bg-stone-50 hover:text-stone-700'
+                    }`}
+                >
+                  <span
+                    className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0"
+                    style={{ backgroundColor: layers.group_events ? '#8b5cf6' : '#d1d5db' }}
+                  />
+                  <span className="text-xs font-medium leading-tight flex-1">Group Events</span>
+                  <span
+                    className={`relative inline-flex h-4 w-7 flex-shrink-0 rounded-full transition-colors duration-200
+                      ${layers.group_events ? 'bg-violet-500' : 'bg-stone-200'}`}
+                  >
+                    <span
+                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                        ${layers.group_events ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                    />
+                  </span>
+                </button>
+              </li>
             </ul>
           </div>
         </>

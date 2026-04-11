@@ -96,6 +96,7 @@ export interface LayerState {
   blm: boolean;
   // Personal layers
   my_hunts: boolean;
+  group_events: boolean;
 }
 
 // ── User Hunt Pins ────────────────────────────────────────────────────────────
@@ -280,4 +281,39 @@ export interface GroupSearchResult {
   description: string | null;
   privacy: 'public' | 'private';
   member_count: number;
+}
+
+// ── Group Events ──────────────────────────────────────────────────────────────
+
+export interface GroupEvent {
+  id: string;
+  group_id: string;
+  group_name: string | null;
+  group_slug: string | null;
+  created_by: string;
+  created_by_username: string | null;
+  name: string;
+  description: string | null;
+  latitude: number;
+  longitude: number;
+  event_date: string;
+  event_end_date: string | null;
+  created_at: string;
+  updated_at: string | null;
+  rsvp_count: number;
+  user_has_rsvpd: boolean;
+}
+
+export interface EventPin {
+  id: string;
+  group_id: string;
+  group_name: string;
+  group_slug: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  event_date: string;
+  event_end_date: string | null;
+  rsvp_count: number;
+  user_has_rsvpd: boolean;
 }

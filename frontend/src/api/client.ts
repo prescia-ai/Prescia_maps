@@ -568,4 +568,66 @@ export async function inviteToGroup(slug: string, username: string) {
   return data;
 }
 
+// ── Group Events ───────────────────────────────────────────────────────────────
+
+import type { GroupEvent, EventPin } from '../types';
+
+export async function createGroupEvent(slug: string, data: {
+  name: string;
+  description?: string;
+  latitude: number;
+  longitude: number;
+  event_date: string;
+  event_end_date?: string;
+}): Promise<GroupEvent> {
+  const { data: result } = await api.post<GroupEvent>(`/groups/${encodeURIComponent(slug)}/events`, data);
+  return result;
+}
+
+export async function fetchGroupEvents(
+  slug: string,
+  filter: 'upcoming' | 'past' | 'all' = 'upcoming',
+  limit = 50,
+  offset = 0,
+): Promise<{ events: GroupEvent[]; total: number }> {
+  const { data } = await api.get<{ events: GroupEvent[]; total: number }>(
+    `/groups/${encodeURIComponent(slug)}/events`,
+    { params: { filter, limit, offset } },
+  );
+  return data;
+}
+
+export async function fetchGroupEvent(slug: string, eventId: string): Promise<GroupEvent> {
+  const { data } = await api.get<GroupEvent>(`/groups/${encodeURIComponent(slug)}/events/${eventId}`);
+  return data;
+}
+
+export async function updateGroupEvent(slug: string, eventId: string, data: {
+  name?: string;
+  description?: string;
+  latitude?: number;
+  longitude?: number;
+  event_date?: string;
+  event_end_date?: string;
+}): Promise<GroupEvent> {
+  const { data: result } = await api.put<GroupEvent>(`/groups/${encodeURIComponent(slug)}/events/${eventId}`, data);
+  return result;
+}
+
+export async function deleteGroupEvent(slug: string, eventId: string): Promise<void> {
+  await api.delete(`/groups/${encodeURIComponent(slug)}/events/${eventId}`);
+}
+
+export async function toggleEventRsvp(slug: string, eventId: string): Promise<{ rsvpd: boolean; rsvp_count: number }> {
+  const { data } = await api.post<{ rsvpd: boolean; rsvp_count: number }>(
+    `/groups/${encodeURIComponent(slug)}/events/${eventId}/rsvp`,
+  );
+  return data;
+}
+
+export async function fetchEventMapPins(): Promise<EventPin[]> {
+  const { data } = await api.get<EventPin[]>('/events/map-pins');
+  return data;
+}
+
 export default api;
