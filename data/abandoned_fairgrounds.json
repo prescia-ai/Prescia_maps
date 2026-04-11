@@ -1318,5 +1318,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.8,
     "detecting_weight": 79
+  },
+  {
+    "name": "Tempe Beach Park, AZ (Salt River)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 33.4242,
+    "longitude": -111.94,
+    "description": "Tempe Beach Park along the Salt River in Tempe, Arizona operated as a resort and community gathering place from the 1890s through the 1940s, featuring a public bathing beach on the Salt River, a dance pavilion, and seasonal carnival midways that served the agricultural communities of the Salt River Valley during Arizona's territorial and early statehood period. The park drew farmworkers, Mormon settlers, and Maricopa County residents to the riverfront for swimming, dances, and Fourth of July celebrations before air conditioning made desert heat tolerable. The modern Tempe Town Lake area and Tempe Beach Park now occupy this same riverfront location, making it a publicly accessible city park where the former resort grounds can be legally detected. The shallow river crossing was also used by the historic Hayden Ferry, adding colonial-era and territorial-era artifact potential to the site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Willamette Valley Chautauqua, OR (Gladstone)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 45.3806,
+    "longitude": -122.595,
+    "description": "The Willamette Valley Chautauqua at Gladstone, Oregon operated from 1893 to 1936 on a wooded bluff above the Clackamas River's confluence with the Willamette, drawing thousands of Willamette Valley settlers, Portland workers, and Oregon missionaries to summer cultural assemblies via the Oregon City Electric interurban line. The Gladstone Chautauqua was one of the most prominent in the Pacific Northwest and featured an open-air tabernacle seating 5,000 people, dozens of cottages, and extensive grounds that were the social and intellectual center of progressive western Oregon. The land is now Gladstone City Park and the adjacent athletic complex, with the original Chautauqua bluff and riverside meadows preserved as open public parkland. The park's grounds hold forty years of Chautauqua deposits alongside subsequent decades of public park use.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Eagle Rock Pleasure Ground, CA (Los Angeles area)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 34.1305,
+    "longitude": -118.2097,
+    "description": "Eagle Rock Pleasure Ground in the Eagle Rock area of Los Angeles operated from the 1890s through the 1910s as an early trolley park and picnic grove at the end of the Los Angeles street railway's Eagle Rock line, offering Southern California residents a shaded Arroyo Seco canyon grove with picnic facilities, dancing, and outdoor amusements in the period before the rise of the great Los Angeles amusement parks. The grove served the orange grove farming communities of the Eagle Rock and Glendale foothills during the great Southern California land boom when thousands of Midwestern settlers were arriving by Santa Fe Railway each week. The Eagle Rock neighborhood is now urbanized, but portions of the original arroyo grove area survive as open parkland within the Arroyo Seco Regional Park system accessible to the public. The site holds deposits from the boom-era of 1880s-1910s Southern California settlement.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Shoshone County Fairgrounds, ID (Wallace, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 47.4741,
+    "longitude": -115.9236,
+    "description": "The original Shoshone County Fairground in Wallace, Idaho hosted silver mining community fairs and exhibitions from the 1890s through the 1920s, drawing miners, mill workers, and merchants from the Coeur d'Alene Mining District's famous silver camps to annual celebrations of mining community life during the peak years of North Idaho's silver bonanza. The fairs featured mining equipment exhibitions, hard rock mining competitions, and carnival midways that served as the primary social event for communities like Burke, Mullan, and Kellogg whose populations were drawn from Cornish, Irish, and Scandinavian immigrant miners. The original fairground site in the valley below Wallace is now a mix of open land and light development, with portions accessible along the South Fork Coeur d'Alene River. Silver-era mining tokens, union cards, and immigrant personal effects from the Coeur d'Alene labor wars period make this a uniquely significant site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.72,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Ponce de Leon Springs Park, GA (Atlanta, original)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 33.7711,
+    "longitude": -84.3632,
+    "description": "The original Ponce de Leon Springs Park in Atlanta operated from the 1870s through 1907 as a mineral springs resort and amusement park along Ponce de Leon Avenue, serving as Atlanta's most fashionable outdoor resort during Reconstruction and the New South era before a major amusement park (also called Ponce de Leon) was developed on an adjacent site. The springs drew thousands of Atlantans seeking therapeutic waters and outdoor relaxation in a shaded grove along the creek, with a hotel, dance pavilion, and picnic grounds. The springs area and original resort grounds are now part of the Ponce City Market and Historic Fourth Ward Park area, with the creek corridor preserved as the Beltline park greenway. The combination of Reconstruction-era Atlanta coins and New South resort artifacts makes this a historically significant site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Weirs Beach Amusement Grounds, NH (Lake Winnipesaukee)",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 43.6263,
+    "longitude": -71.4704,
+    "description": "Weirs Beach on the southwestern shore of Lake Winnipesaukee in Laconia, New Hampshire developed as a Victorian amusement resort from the 1890s through the 1940s, served by the Boston and Maine Railroad and Lake Winnipesaukee steamboats that brought Boston workers and New Hampshire families to its arcades, dance halls, shooting galleries, and lakeside midway. The resort was a fixture of northern New England summer recreation for generations, and while the beach remains active as a seasonal resort, many of the original amusement structures were cleared after WWII and the land between the railroad tracks and the lake has been extensively redeveloped. The grassy areas and former carnival grounds behind the commercial strip retain deposits from the Victorian and Edwardian peak resort era. Pre-Depression-era coins and resort tokens from the Boston day-tripper trade are the primary targets.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Swannanoa Assembly Grounds, NC (Black Mountain)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 35.6178,
+    "longitude": -82.3152,
+    "description": "The Swannanoa Valley Assembly Grounds near Black Mountain, North Carolina operated from 1906 to 1934 as a Southern Highland Chautauqua and church conference center at the end of the Southern Railway's Black Mountain branch in the Blue Ridge Mountains, drawing thousands of Piedmont and Tidewater Southern residents who escaped summer heat in the cool Swannanoa Valley for cultural and religious programs. The assembly featured cottages, a large tabernacle, and extensive grounds that became the model for the Southern Appalachian resort conference center model that the region would later perfect. The former assembly grounds are now part of the Lake Eden Arts Festival site and surrounding open land in the Black Mountain area. The cool mountain setting attracted some of the most prosperous families of the New South, suggesting excellent detecting potential for quality personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Mesilla Valley Fairgrounds, NM (Las Cruces, original)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 32.3199,
+    "longitude": -106.7637,
+    "description": "The original Do\u00f1a Ana County Fairground in Las Cruces, New Mexico hosted territorial-era agricultural exhibitions from the 1880s through the 1910s, serving the Mesilla Valley's mix of Hispanic ranching families, Anglo settlers, and Pueblo Indian communities in annual celebrations of the Rio Grande agricultural season near the recently-completed Atchison, Topeka & Santa Fe Railroad. The fairs celebrated the region's cotton, chile, pecans, and livestock with a cultural flavor unique to the Southwest borderlands, drawing exhibitors from both sides of the US-Mexico border during the era of open border relations. The original fairground site on the edge of Las Cruces is now part of the city's older residential district and adjacent park areas. Spanish Colonial-era heritage artifacts, silver Mexican coins, and frontier-era trade goods from the Mesilla Valley's bicultural community would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Druid Hill Park Trolley Stop, MD (Baltimore)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 39.3261,
+    "longitude": -76.6557,
+    "description": "The Druid Hill Park area in Baltimore served as a major trolley park destination from the 1860s through the 1940s, with Baltimore's streetcar lines converging at the park's main entrance to deliver masses of working-class Baltimoreans to its picnic groves, bandstands, casino, and outdoor gathering spaces. Before and after the formal amusement section of the park was closed in the 1930s, the grounds hosted massive holiday crowds including the annual Fourth of July celebrations that drew hundreds of thousands of Baltimoreans. The older sections of Druid Hill Park preserve wooded hillsides and open meadows where the Victorian picnic grounds were concentrated. The park's continuous use since 1860 and enormous holiday crowds make it one of the deepest artifact deposits in the mid-Atlantic region.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.84,
+    "detecting_weight": 79
+  },
+  {
+    "name": "Lakeview Park, OH (Lorain)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.4613,
+    "longitude": -82.182,
+    "description": "Lakeview Park in Lorain, Ohio operated from 1898 to the 1920s as a trolley park at the Lake Erie shoreline developed by the Lorain & Cleveland Railway, serving the steel mill and shipyard workers of Lorain and surrounding Lake County communities who arrived by streetcar for summer recreation on Lake Erie's shores. The park featured a large dance pavilion, beach, picnic facilities, and midway amusements that made it the social center of Lorain County's immigrant steelworker communities \u2014 many of whom were recent arrivals from Poland, Hungary, and Slovakia. The shoreline is now managed as Lakeview Park by the city of Lorain, a public green space with open lawn areas and mature trees where the former trolley park stood. Eastern European immigrant coins, union tokens, and steel-era personal items from the Lake Erie industrial community are the primary targets.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.81,
+    "detecting_weight": 78
   }
 ]
