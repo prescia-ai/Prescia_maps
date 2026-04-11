@@ -1428,5 +1428,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.81,
     "detecting_weight": 78
+  },
+  {
+    "name": "Ravinia Park (Original Grounds), IL",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.1636,
+    "longitude": -87.7921,
+    "description": "Ravinia Park in Highland Park, Illinois began in 1904 as a full-scale amusement park with a roller coaster, carousel, shooting gallery, and midway developed by the Chicago & Milwaukee Electric Railroad to boost summer ridership on the North Shore line, evolving by 1911 into a musical pavilion and festival ground after the amusement attractions failed to sustain business. The original amusement park infrastructure occupied the wooded ravine and surrounding open grounds that are now the outer areas of the famous Ravinia Music Festival venue, which continues operating as the oldest outdoor music venue in North America. The outer lawn areas of Ravinia Park that are now used for picnic seating during concerts preserve the original trolley-park grounds from the 1904-1910 amusement era. Over 120 years of continuous use make the outer lawn areas among the deepest artifact deposits on the North Shore.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.86,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Mirror Lake Chautauqua, WI (Wisconsin Dells area)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 43.6238,
+    "longitude": -89.812,
+    "description": "The Mirror Lake Chautauqua near Wisconsin Dells, Wisconsin operated from 1891 to 1917 in the scenic sandstone canyon country of the upper Wisconsin River, drawing thousands of Chicago and Milwaukee working-class vacationers who arrived by the Chicago, Milwaukee & St. Paul Railway to attend summer assemblies in one of Wisconsin's most scenic natural settings. The assembly featured tent grounds, a wooden tabernacle, and resort cottages surrounding the mirror-smooth lake, attracting speakers and performers who traveled the Midwest Chautauqua circuit during the height of the movement. The former assembly grounds are now part of Mirror Lake State Park, operated by the Wisconsin DNR as a camping and recreation area with large sections of open sandy shoreline and wooded grounds. The state park's open areas along the original Chautauqua shoreline hold deposits from twenty-six years of summer assemblies.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.77,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Hot Springs Chautauqua, AR (Garland County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 34.5037,
+    "longitude": -93.0552,
+    "description": "The Hot Springs Chautauqua in Garland County, Arkansas operated from 1891 to 1912 in the wooded Ouachita Mountains above Hot Springs National Park, serving as both a Chautauqua assembly and a therapeutic resort that capitalized on Hot Springs' reputation as a national health destination drawing railroad travelers, political figures, and tuberculosis patients from across the nation. The assembly grounds were reached by a spur line from the Missouri Pacific Railroad and featured a large tabernacle, hotel, and cottage colony in a pine-forested hill setting above the famous bathhouse district. The former Chautauqua grounds are now part of the greater Hot Springs National Park area and surrounding Ouachita National Forest, with wooded open land accessible along the hillside. The combination of health-seeker tourism and Chautauqua deposits makes this site particularly interesting for early twentieth-century personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.71,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Fern Cliff Chautauqua, IN (Putnam County)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 39.6508,
+    "longitude": -86.8947,
+    "description": "The Fern Cliff Chautauqua in Putnam County, Indiana operated from 1884 to 1938 in a dramatic limestone gorge carved by Milligan Creek, serving as one of Indiana's most scenic and beloved Chautauqua assembly grounds where participants camped in the fern-draped cliffs of a state nature preserve setting. The assembly drew Methodist and Christian Church families from across central Indiana for fifty-four years of continuous summer programming, making it one of the longest-running Chautauquas in the Midwest. The site is now preserved as Lieber State Recreation Area and Cataract Falls State Recreation Area, with the gorge and surrounding open land publicly accessible. The fifty-four year continuous operation of this Chautauqua and its picturesque setting that attracted Indiana's most prosperous farming families makes it one of the richest Chautauqua detecting sites in the Midwest.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Paw Paw Lake Resort, MI",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 42.2109,
+    "longitude": -86.2712,
+    "description": "Paw Paw Lake in Berrien County, Michigan developed as a major southwestern Michigan resort area from the 1880s through the 1940s, featuring multiple competing hotels, dance halls, amusement concessions, and picnic grounds that drew Chicago and Benton Harbor summer visitors via the Michigan Central Railroad to the lake's cool waters in the fruit belt of southwest Michigan. The resort area included a large pavilion, carousel, and midway on the public beach that served as the social center of Berrien County's summer tourism. After automobile-era highway travel shifted vacation patterns, the lakeside resort declined and the former commercial amusement areas reverted to public beach and open shoreline managed by the state. The lake's public beach and former resort grounds are accessible and hold deposits from sixty years of intensive summer resort use by Chicago middle-class families.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.79,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Lake Quinsigamond Amusement Area, MA (Worcester)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 42.2543,
+    "longitude": -71.7676,
+    "description": "Lake Quinsigamond on the eastern edge of Worcester, Massachusetts hosted multiple competing amusement parks and resort areas from the 1870s through the 1940s, including Mechanics Grove, White City, and Norwood Park, all served by the Worcester Consolidated Street Railway and drawing immense crowds of Worcester mill workers and Massachusetts Central Railroad excursionists to the lake's beaches, dance halls, and carnival midways. The lake-shore resorts were the primary outdoor recreation for Worcester's immigrant workforce of Irish, Swedish, and French-Canadian mill operatives, serving as the social equalizer of central Massachusetts's industrial community. Portions of the former amusement areas on the western and northern shores are now public parkland managed by Worcester and Shrewsbury, with accessible shoreline and open areas. The industrial worker immigrant culture makes this a rich site for late nineteenth and early twentieth century European immigrant coins and personal items.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 80
+  },
+  {
+    "name": "Garfield Beach Resort, UT (Great Salt Lake)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 40.7294,
+    "longitude": -112.2107,
+    "description": "Garfield Beach on the southern shore of the Great Salt Lake in Salt Lake County, Utah operated from 1887 to 1904 as a major bathing resort developed by the Garfield Beach and Hot Springs Railway, drawing thousands of Salt Lake City and Utah Territory residents to a famous saltwater bathing pavilion, hotel, dance hall, and midway on the lake's shore before the resort was closed by declining lake levels and then destroyed by a 1904 hurricane. The resort was one of the most popular in the Intermountain West during the 1890s when LDS church members and gentle mining families alike rode the spur railway to float effortlessly in the Great Salt Lake's hypersaline waters. The former resort site is now open Great Salt Lake State Park land that is accessible along the southern shoreline. Late Victorian-era coins, resort tokens, and personal items from Utah Territory's diverse mining and farming population make this a unique Great Basin detecting site.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.78,
+    "detecting_weight": 81
+  },
+  {
+    "name": "Wheeler Park Chautauqua, TX (Sherman)",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 33.6399,
+    "longitude": -96.6203,
+    "description": "The Wheeler Park Chautauqua in Sherman, Texas operated from 1885 to 1915 as one of Texas's largest Chautauqua assemblies in a wooded park on the Red River Divide above the Denison & Sherman Railroad junction, drawing thousands of North Texas and Indian Territory residents to summer programs that featured national Chautauqua circuit speakers and performers including William Jennings Bryan and Carry Nation. Sherman's Chautauqua was the intellectual and cultural heart of North Texas during the Gilded Age and drew visitors from as far as Dallas and Fort Worth when no other comparable cultural programming existed in the region. The former assembly grounds in Sherman are now a city park with mature trees and open lawn areas where the original tabernacle and tent grounds were located. Texas plantation-era coins and Indian Territory trade tokens from cross-border visitors would be among the most historically significant finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.74,
+    "detecting_weight": 77
+  },
+  {
+    "name": "Camp Sylvan Picnic Grove, MI (Kent County)",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 42.9634,
+    "longitude": -85.6712,
+    "description": "Camp Sylvan in Kent County, Michigan operated from the 1880s through the 1920s as a major interurban-accessible picnic grove on the Grand River above Grand Rapids, serving as the primary outdoor gathering place for Grand Rapids' Dutch Reformed and Scandinavian furniture factory worker communities who arrived by the West Michigan Railway's interurban line for church picnics, labor union outings, and Fourth of July celebrations. The grove featured a large dance pavilion, picnic shelters, and boat rentals on the Grand River that made it the social center of western Michigan's industrial working class during the furniture manufacturing boom. After the interurban era ended the grove was absorbed into the Kent County park system and surrounding residential development, with portions of the original wooded grove surviving as open parkland along the river. Dutch immigrant coins and furniture industry trade tokens from Grand Rapids' ethnic neighborhoods would be notable finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.73,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Red Cloud Fairgrounds, NE (Webster County, ghost town area)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.0872,
+    "longitude": -98.5217,
+    "description": "The Webster County Fairground in Red Cloud, Nebraska has hosted agricultural fairs since the 1870s in a town made famous by Willa Cather's novels about the Nebraska prairie, serving the homesteading communities of the Republican River Valley's wheat and cattle country during the most dramatic era of Great Plains settlement. The fairground was the annual gathering point for Nebraska's dryland farming communities during the years Cather was growing up in Red Cloud, and the exhibits, midways, and horse races she witnessed informed her literary depictions of prairie life. The original fairground site on the edge of the small town (population under 1,000) is now open grassland and light-use agricultural land near the Willa Cather historic sites. The deep history of this locale \u2014 including Civil War-era settlement and the period Cather immortalized in literature \u2014 makes this one of Nebraska's most historically significant detecting sites.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.8,
+    "detecting_weight": 80
   }
 ]
