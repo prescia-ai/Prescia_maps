@@ -988,5 +988,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.82,
     "detecting_weight": 80
+  },
+  {
+    "name": "Casino Park, TX (San Antonio)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 29.4389,
+    "longitude": -98.4928,
+    "description": "Casino Park (later known as Joske's Park and Mission Drive-In area) near San Antonio, Texas hosted picnic grounds, a casino building, outdoor concerts, and festive Mexican and Anglo cultural celebrations from the 1870s through the early twentieth century along the San Antonio River south of downtown, serving San Antonio's large German, Mexican-American, and frontier community. The Mission Road area south of downtown San Antonio was a prime Sunday excursion destination in a city that celebrated outdoor leisure heavily. The riverine park areas on the south side of San Antonio along the San Antonio River missions trail hold deposits from a diverse Victorian-era population that included soldiers, ranchers, merchants, and immigrants.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Epworth Heights Assembly, MI",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 43.9745,
+    "longitude": -85.6612,
+    "description": "Epworth Heights near Ludington, Michigan was established in 1894 as a Methodist camp meeting and Chautauqua assembly on a bluff overlooking Lake Michigan, drawing summer visitors to a planned community of Victorian cottages, a large tabernacle, and cultural programming that thrived during the Chautauqua movement's peak years. The assembly attracted Midwestern Methodist families to the Lake Michigan shoreline via the Pere Marquette Railroad. While some structures and the cottage community survive, the assembly's active programming largely ceased by the 1930s and the grounds have transitioned to private cottage use. The historic assembly grounds on the Lake Michigan bluff retain Victorian and Edwardian-era coin potential in the community areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.77,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Electric Park, MN (Minneapolis)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 44.978,
+    "longitude": -93.2875,
+    "description": "Electric Park in north Minneapolis was operated by the Twin City Rapid Transit Company in the early 1900s as an illuminated streetcar pleasure ground near Lake Johanna, serving Minneapolis's rapidly growing Scandinavian and working-class communities during Minnesota's progressive era of urban expansion. The TCRT operated multiple trolley park destinations across the Twin Cities to maximize weekend ridership, and Electric Park was the company's north Minneapolis terminus attraction. The former park area in north Minneapolis has been absorbed into the city's residential grid. Early twentieth-century Minneapolis transit tokens and pre-WWI Minnesota coins would be the primary finds in any surviving open areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 71
+  },
+  {
+    "name": "Suburban Park, IL (Hinsdale)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.8045,
+    "longitude": -87.9335,
+    "description": "Suburban Park in Hinsdale, Illinois operated in the 1890s and early 1900s as a Chicago, Burlington and Quincy Railroad excursion destination, featuring a resort grove, picnic facilities, and outdoor amusements that drew wealthy Chicago families on weekend rail excursions to this prosperous western suburb. The park served Chicago's upper-middle-class commuter community during the height of the Victorian suburban park movement. After closing in the early 1900s the land was absorbed into Hinsdale's residential development. The affluent patronage base of this Chicago suburban park suggests well-preserved, high-value early American coin deposits in any surviving undeveloped areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 72
+  },
+  {
+    "name": "Lake Shore Park, OH (Ashtabula)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 41.9125,
+    "longitude": -80.7993,
+    "description": "Lake Shore Park in Ashtabula, Ohio on the Lake Erie shore operated from the 1890s to the 1950s as a resort and amusement destination served by the Northern Ohio Traction and Light Company interurban railway, featuring picnic pavilions, a dance hall, and lake-view amusement attractions serving the iron ore port city's large immigrant workforce of Finns, Swedes, and Eastern Europeans. Ashtabula County's industrial labor force represented a diverse immigrant community whose coin and token losses would reflect late nineteenth and early twentieth-century industrial America. The former Lake Shore Park site on Lake Erie is now partly incorporated into Lake Shore Park Reserve, an Ashtabula County public park with publicly accessible lakeshore areas.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Cass County Fairgrounds, NE (Ghost Town)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.9004,
+    "longitude": -96.1425,
+    "description": "The Cass County Fair in Plattsmouth, Nebraska operated from the 1870s through the mid-twentieth century as a major Nebraska agricultural fair serving one of the state's oldest and most prosperous farming counties, drawing farming families from across the Platte River valley to livestock shows, horse racing, and carnival midways on grounds near the county seat. Plattsmouth's position on the Missouri River made it an important early Nebraska community, and the county fair drew participants from throughout eastern Nebraska and western Iowa. The original fairground location near Plattsmouth may have been redeveloped, but the area retains significant historical character as one of Nebraska's earliest agricultural communities. The pre-automobile era fair deposits would include early American silver coins and agricultural tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Pawnee County Fairgrounds, NE (Ghost Town)",
+    "type": "abandoned_fairground",
+    "category": "county_fair",
+    "latitude": 40.1104,
+    "longitude": -96.1567,
+    "description": "Pawnee County's fairgrounds in Pawnee City, Nebraska hosted annual agricultural fairs from the late nineteenth century through much of the twentieth century, serving one of southeastern Nebraska's agricultural communities with livestock exhibitions, horse racing, and carnival attractions. Pawnee City is a small, declining community in the Nebraska Great Plains that has seen significant population loss since its peak in the early twentieth century, leaving the former fairground area in a state that may be open or semi-abandoned. The combination of a declining rural community and century-old fairground creates ideal metal detecting conditions for finding pre-WWII agricultural fair coins and tokens from Nebraska's farming heritage.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.68,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Lakeview Driving Park, MO (Springfield)",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 37.2286,
+    "longitude": -93.2919,
+    "description": "Lakeview Driving Park and resort grounds near Springfield, Missouri operated from the 1890s through the early twentieth century as a horse racing, picnicking, and outdoor entertainment venue at the end of Springfield's electric streetcar system, drawing Ozarks region families to harness racing, carnival attractions, and lakeside recreation. Springfield was the main commercial center of the Missouri Ozarks, and the driving park served a large rural population from across southwestern Missouri. After the streetcar era ended the resort declined and the land was redeveloped into Springfield's suburban grid. The former resort and racing ground area near Republic Road in Springfield holds early twentieth-century Missouri coin deposits from the Ozarks resort era.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.7,
+    "detecting_weight": 73
+  },
+  {
+    "name": "Kennywood Trolley Park (Adjacent Grounds), PA",
+    "type": "abandoned_fairground",
+    "category": "picnic_grove",
+    "latitude": 40.3885,
+    "longitude": -79.8636,
+    "description": "The original Kennywood picnic grove area adjacent to the still-operating Kennywood Park in West Mifflin, Pennsylvania includes historic sections of the original 1898 Monongahela Street Railways trolley park that have been cleared, regraded, or closed off over the park's long history. Kennywood itself still operates as a beloved classic park, but its early grounds extended into areas that are now peripherally accessible along the Monongahela River bluff. The historic Kennywood grounds date to 1898, and the Pittsburgh steel community's intense patronage over 125 years has created exceptional deposits throughout the original park footprint. The areas adjacent to the active park along the river bluff represent the oldest accessible portions of one of America's greatest surviving trolley parks.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 82
+  },
+  {
+    "name": "Hanlan's Point Amusement Park, ON (Toronto)",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 43.6228,
+    "longitude": -79.3923,
+    "description": "Hanlan's Point Amusement Park on Toronto Island at the western tip of the Toronto Island chain operated from 1878 to 1937, accessible by steam ferry from Toronto and later by Toronto Island ferries, featuring a large roller coaster, carousel, dance pavilion, midway games, and the famous baseball stadium where Babe Ruth hit his first professional home run in 1914. The park drew enormous Toronto crowds during the Canadian Exhibition season and served as the city's premier summer outdoor resort for nearly sixty years. After the park closed in 1937 the amusement structures were demolished and the land returned to parkland as part of Toronto Island Park. The current Toronto Island park grounds preserve the former amusement area as fully accessible public greenspace with exceptional detecting potential from decades of ferry-crowd activity.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 86
   }
 ]
