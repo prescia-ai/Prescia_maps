@@ -438,5 +438,115 @@
     "source": "historic_fairgrounds",
     "confidence": 0.87,
     "detecting_weight": 85
+  },
+  {
+    "name": "Cascade Park, PA",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.9903,
+    "longitude": -80.3553,
+    "description": "Cascade Park in New Castle, Pennsylvania operated from 1897 to 1975 as one of western Pennsylvania's most beloved trolley parks, built in a scenic wooded valley carved by Cascade Creek and featuring classic roller coasters, a swimming pool, a carousel, and extensive picnic pavilions serving Lawrence County's industrial workers for nearly eighty years. The park was served by the Pittsburgh, Harmony, Butler and New Castle Railway electric line and remained popular long after the trolley era ended. After its 1975 closure the park was transferred to Lawrence County, becoming Cascade Park County Park, making the entire former amusement area publicly accessible. The public park preserves the former picnic groves and ride areas, creating excellent legal access for metal detecting.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.88,
+    "detecting_weight": 87
+  },
+  {
+    "name": "Conneaut Lake Park, PA",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 41.6321,
+    "longitude": -80.311,
+    "description": "Conneaut Lake Park on the shores of Conneaut Lake in northwestern Pennsylvania operated from 1892 to the mid-2000s, featuring the Blue Streak wooden roller coaster (built 1937), a classic carousel, Hotel Conneaut, a large beach and midway, and extensive picnic facilities that made it northwestern Pennsylvania's premiere resort destination for over a century. The park underwent multiple ownership changes and periods of financial distress before finally closing through bankruptcy. The grounds are now largely abandoned and deteriorating, with the Blue Streak standing as a ghostly ruin. The combination of over a century of operation and current abandonment makes Conneaut Lake one of the most historically rich metal detecting sites in Pennsylvania.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.87,
+    "detecting_weight": 90
+  },
+  {
+    "name": "Olentangy Park, OH",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.0698,
+    "longitude": -83.0573,
+    "description": "Olentangy Park in Columbus, Ohio operated from 1896 to 1938 along the Olentangy River, developed by the Columbus Street Railway as a classic electric railway resort featuring a dance casino, roller coasters, a funhouse, and elaborate gardens that drew Columbus residents for over four decades. The park was known for beautiful grounds and high-quality attractions that distinguished it among Midwestern trolley parks. After its 1938 closure the land was sold and later became the site of Ohio State University research facilities. The former park grounds along the Olentangy River corridor represent a pre-Depression-era Columbus institution with significant potential for early twentieth-century coin finds.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Elitch Gardens (Original Site), CO",
+    "type": "abandoned_fairground",
+    "category": "amusement_park",
+    "latitude": 39.7616,
+    "longitude": -105.0323,
+    "description": "The original Elitch Gardens in Denver's Sunnyside neighborhood operated from 1890 to 1994 at West 38th Avenue and Tennyson Street, featuring the Mister Twister roller coaster, famous floral gardens, a historic theater, and midway attractions that made it Colorado's most beloved amusement destination for over a century. The park relocated to a new downtown site near the South Platte River in 1995 and the original land was redeveloped into a residential neighborhood. The Sunnyside neighborhood development obliterated most of the original park footprint, but residential streets and green spaces near 38th and Tennyson carry deep coin deposits from a century of park operations dating back to Denver's earliest years.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 75
+  },
+  {
+    "name": "Riverview Beach Park, NJ",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 39.6463,
+    "longitude": -75.5199,
+    "description": "Riverview Beach Park in Pennsville, New Jersey on the Delaware River operated from 1905 to 1973, accessible by ferry from Wilmington, Delaware and by excursion steamboat from Philadelphia, featuring roller coasters, a carousel, a large swimming pool, and a dance pavilion serving both New Jersey and Delaware residents for nearly seventy years. The park was particularly popular with Wilmington's DuPont company workforce who crossed the river for summer outings. After its 1973 closure Salem County purchased the land, eventually making it a public recreation area. The public park setting makes this an accessible and legally available site with nearly seven decades of riverside crowd deposits.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.85,
+    "detecting_weight": 84
+  },
+  {
+    "name": "Olympic Park, NJ",
+    "type": "abandoned_fairground",
+    "category": "trolley_park",
+    "latitude": 40.7282,
+    "longitude": -74.2668,
+    "description": "Olympic Park in Maplewood, New Jersey operated from 1887 to 1965 as one of New Jersey's oldest continuous amusement parks, built at the end of the Maplewood streetcar line and featuring the famous Dips roller coaster, a carousel, and a large swimming pool that drew Essex County families for nearly eighty years. The park served as a weekend destination for Newark's immigrant and working-class communities, with German, Italian, and Jewish families making up a large portion of the patronage. After its 1965 closure the land was redeveloped into a residential subdivision. The former park grounds beneath current Maplewood housing represent nearly eight decades of dropped coins, transit tokens, and personal effects from New Jersey's immigrant communities.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 74
+  },
+  {
+    "name": "Bertrand Island Park, NJ",
+    "type": "abandoned_fairground",
+    "category": "resort_park",
+    "latitude": 40.9534,
+    "longitude": -74.6189,
+    "description": "Bertrand Island Park on Lake Hopatcong in Mount Arlington, New Jersey operated from 1910 to 1983 as a lakeside resort and amusement park, featuring a roller coaster, carousel, a large ballroom, and water attractions that made it a premier destination for Morris County families across three-quarters of a century. The park was accessible by the Lackawanna Railroad's Lake Hopatcong branch and drew large crowds from Newark, New York City, and surrounding areas. After its 1983 closure the rides were removed and the lakeside property sold for residential development. The former park's lakeshore areas and any undeveloped land along Lake Hopatcong retain potential for detecting mid-twentieth-century coins and amusement tokens.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 78
+  },
+  {
+    "name": "Round Lake Assembly Grounds, NY",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 42.9338,
+    "longitude": -73.7967,
+    "description": "Round Lake Assembly near Saratoga County, New York was established in 1868 as one of the oldest Methodist camp meeting grounds in America, evolving into a full Chautauqua-style assembly with a large auditorium, cottages, and cultural programming that drew thousands of Victorian-era visitors each summer from Albany and upstate New York. The assembly featured lectures, music, religious programs, and social activities in a planned Victorian village setting that hosted prominent speakers including President Grover Cleveland. While some Victorian cottages survive, the assembly's active programming largely ended by the 1930s. The historic grounds retain their nineteenth-century layout and the former assembly areas represent nearly a century of Victorian and Edwardian-era coin losses.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.83,
+    "detecting_weight": 76
+  },
+  {
+    "name": "Mountain Lake Assembly, NJ",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 41.1963,
+    "longitude": -74.5052,
+    "description": "The Mountain Lake Assembly near Highland Lakes in Sussex County, New Jersey was established in the 1870s as a Methodist camp meeting ground that evolved into a Chautauqua-style summer retreat, drawing religious and cultural visitors from New York and New Jersey to lecture programs, concerts, and revival meetings in a wooded lakeside setting. The assembly was active during the height of the Chautauqua movement from the 1880s through the 1920s, hosting large gatherings that created significant commercial activity in the surrounding rural community. The grounds fell into disuse by the 1930s and most structures have long since disappeared into the surrounding woodland. The former assembly grounds near Mountain Lake represent a classic abandoned Chautauqua site with Victorian-era coin potential.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.75,
+    "detecting_weight": 70
+  },
+  {
+    "name": "Winona Assembly Grounds, IN",
+    "type": "abandoned_fairground",
+    "category": "chautauqua",
+    "latitude": 41.2284,
+    "longitude": -85.8347,
+    "description": "The Winona Assembly and Summer School Grounds at Winona Lake, Indiana operated from 1894 to the 1930s as one of the largest Chautauqua-style assemblies in the Midwest, attracting tens of thousands of visitors annually to lectures, musical performances, and religious programming in a beautifully developed lakeside campus featuring a large auditorium, hotel, and extensive grounds. The assembly hosted Billy Sunday's early career and was nationally renowned during the height of the Chautauqua movement. After the Chautauqua era ended in the 1930s the campus transitioned to religious and educational use. The historic assembly grounds near Winona Lake have potential for Victorian and Edwardian-era coins and religious movement keepsakes from the peak Chautauqua years.",
+    "source": "historic_fairgrounds",
+    "confidence": 0.82,
+    "detecting_weight": 73
   }
 ]
