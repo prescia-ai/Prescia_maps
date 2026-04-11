@@ -59,6 +59,7 @@ class LocationType(str, enum.Enum):
     pony_express = "pony_express"
     abandoned_church = "abandoned_church"
     historic_brothel = "historic_brothel"
+    abandoned_fairground = "abandoned_fairground"
 
 
 class LinearFeatureType(str, enum.Enum):
@@ -436,7 +437,7 @@ async def create_tables() -> None:
     Also runs idempotent ALTER TYPE statements to add any new enum values
     that may have been introduced after the initial schema was created.
     """
-    _new_location_types = ["mission", "trading_post", "shipwreck", "pony_express", "abandoned_church", "historic_brothel"]
+    _new_location_types = ["mission", "trading_post", "shipwreck", "pony_express", "abandoned_church", "historic_brothel", "abandoned_fairground"]
     _new_map_layer_types = ["blm"]
 
     async with engine.begin() as conn:
