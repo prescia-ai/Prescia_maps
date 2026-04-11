@@ -85,7 +85,7 @@ async def _decode_token(token: str) -> dict:
 
     Handles both HS256 (shared-secret) and ES256 (JWKS public-key) tokens.
     """
-    # ---- Temporary debug logging (remove once auth is verified working) ----
+    # ---- Debug logging ----
     try:
         _dbg_header = jwt.get_unverified_header(token)
         _dbg_claims = jwt.get_unverified_claims(token)
@@ -98,20 +98,13 @@ async def _decode_token(token: str) -> dict:
             _dbg_claims.get("sub"),
         )
         logger.warning(
-            "JWT DEBUG CONFIG: SUPABASE_URL=%r JWT_SECRET_set=%s",
+            "JWT DEBUG CONFIG: SUPABASE_URL=%r JWT_SECRET_first10=%r JWT_SECRET_len=%d",
             settings.SUPABASE_URL,
-            "<configured>" if settings.SUPABASE_JWT_SECRET else "<not set>",
-        )
-        _expected_issuer = f"{settings.SUPABASE_URL}/auth/v1" if settings.SUPABASE_URL else None
-        logger.warning(
-            "JWT DEBUG: expected_issuer=%r token_issuer=%r match=%s",
-            _expected_issuer,
-            _dbg_claims.get("iss"),
-            _expected_issuer == _dbg_claims.get("iss"),
+            settings.SUPABASE_JWT_SECRET[:10] if settings.SUPABASE_JWT_SECRET else "<empty>",
+            len(settings.SUPABASE_JWT_SECRET),
         )
     except Exception as _dbg_exc:
-        logger.warning("JWT DEBUG: could not parse token for debugging: %s", _dbg_exc)
-    # ---- End temporary debug logging ----
+        logger.warning("JWT DEBUG parse error: %s", _dbg_exc)
 
     try:
         header = jwt.get_unverified_header(token)
@@ -130,7 +123,6 @@ async def _decode_token(token: str) -> dict:
         jwk_data = _find_jwk(jwks, kid)
 
         if jwk_data is None:
-            # Key might have been rotated — try a forced refresh
             jwks = await _fetch_jwks(force=True)
             jwk_data = _find_jwk(jwks, kid)
 
@@ -156,62 +148,82 @@ async def _decode_token(token: str) -> dict:
                 issuer=issuer,
             )
         except JWTError as exc:
-            logger.debug("ES256 JWT validation failed: %s", exc)
+            logger.warning("ES256 JWT decode FAILED: %s", exc)
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid or expired token",
                 headers={"WWW-Authenticate": "Bearer"},
             ) from exc
     else:
-        # HS256 — legacy shared-secret verification
+        # HS256
+        issuer = (
+            f"{settings.SUPABASE_URL.rstrip('/')}/auth/v1"
+            if settings.SUPABASE_URL
+            else None
+        )
+        secret_raw = settings.SUPABASE_JWT_SECRET
+
+        # Attempt 1: base64-decoded secret
+        payload = None
         try:
-            issuer = (
-                f"{settings.SUPABASE_URL.rstrip('/')}/auth/v1"
-                if settings.SUPABASE_URL
-                else None
+            decoded_secret = base64.b64decode(secret_raw)
+            payload = jwt.decode(
+                token,
+                decoded_secret,
+                algorithms=["HS256"],
+                audience="authenticated",
+                issuer=issuer,
             )
+            logger.warning("HS256 SUCCEEDED with base64-decoded secret")
+        except Exception as exc1:
+            logger.warning("HS256 attempt 1 (base64-decoded) FAILED: %s", exc1)
 
-            # Supabase legacy JWT secrets are base64-encoded.
-            # Try base64-decoded secret first, then fall back to raw string.
-            secret = settings.SUPABASE_JWT_SECRET
-            decoded_secret = None
+        # Attempt 2: raw string secret
+        if payload is None:
             try:
-                decoded_secret = base64.b64decode(secret)
-            except base64.binascii.Error:
-                pass  # Not valid base64 — use raw string
-
-            # Try base64-decoded first (Supabase standard)
-            payload = None
-            if decoded_secret is not None:
-                try:
-                    payload = jwt.decode(
-                        token,
-                        decoded_secret,
-                        algorithms=["HS256"],
-                        audience="authenticated",
-                        issuer=issuer,
-                    )
-                except JWTError as b64_exc:
-                    logger.debug("HS256 JWT validation failed with base64-decoded secret: %s", b64_exc)
-                    # Fall through to try raw secret
-
-            # Fall back to raw string secret
-            if payload is None:
                 payload = jwt.decode(
                     token,
-                    secret,
+                    secret_raw,
                     algorithms=["HS256"],
                     audience="authenticated",
                     issuer=issuer,
                 )
+                logger.warning("HS256 SUCCEEDED with raw string secret")
+            except Exception as exc2:
+                logger.warning("HS256 attempt 2 (raw string) FAILED: %s", exc2)
 
-        except JWTError as exc:
-            logger.debug("HS256 JWT validation failed: %s", exc)
+        # Attempt 3: no audience/issuer verification at all (diagnostic only)
+        if payload is None:
+            try:
+                payload = jwt.decode(
+                    token,
+                    secret_raw,
+                    algorithms=["HS256"],
+                    options={"verify_aud": False, "verify_iss": False},
+                )
+                logger.warning("HS256 attempt 3 (no aud/iss check, raw) SUCCEEDED — audience or issuer was the problem!")
+            except Exception as exc3:
+                logger.warning("HS256 attempt 3 (no aud/iss, raw) FAILED: %s", exc3)
+
+            # Also try decoded + no aud/iss
+            try:
+                decoded_secret = base64.b64decode(secret_raw)
+                payload = jwt.decode(
+                    token,
+                    decoded_secret,
+                    algorithms=["HS256"],
+                    options={"verify_aud": False, "verify_iss": False},
+                )
+                logger.warning("HS256 attempt 4 (no aud/iss, base64) SUCCEEDED — audience or issuer was the problem!")
+            except Exception as exc4:
+                logger.warning("HS256 attempt 4 (no aud/iss, base64) FAILED: %s", exc4)
+
+        if payload is None:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
                 detail="Invalid or expired token",
                 headers={"WWW-Authenticate": "Bearer"},
-            ) from exc
+            )
 
     return payload
 
