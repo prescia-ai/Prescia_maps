@@ -18,6 +18,9 @@ import { useAuth } from '../contexts/AuthContext';
 import { fetchLandAccess, putLandAccessOverride } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
+const US_CENTER_LAT = 39.5;
+const US_CENTER_LON = -98.35;
+
 const DEFAULT_LAYERS: LayerState = {
   battle:          true,
   town:            true,
@@ -132,7 +135,7 @@ export default function MapPage() {
   }, [queryClient]);
 
   const handleNavbarLogHunt = useCallback(() => {
-    setLogHuntCoords({ lat: 39.5, lon: -98.35 });
+    setLogHuntCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
     setShowLogHuntModal(true);
   }, []);
 
