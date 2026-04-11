@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from '../components/Avatar';
+import PostCard from '../components/PostCard';
 import {
   fetchGroup,
   fetchGroupMembers,
   fetchGroupRequests,
+  fetchGroupPosts,
   joinGroup,
   leaveGroup,
   updateGroup,
@@ -14,8 +16,9 @@ import {
   kickGroupMember,
   changeGroupMemberRole,
   inviteToGroup,
+  createPost,
 } from '../api/client';
-import type { Group, GroupMember } from '../types';
+import type { Group, GroupMember, Post } from '../types';
 
 type ActiveTab = 'feed' | 'members' | 'events';
 
@@ -68,6 +71,16 @@ export default function GroupPage() {
   const [requests, setRequests] = useState<GroupMember[]>([]);
   const [requestsLoading, setRequestsLoading] = useState(false);
 
+  // Group feed state
+  const [feedPosts, setFeedPosts] = useState<Post[]>([]);
+  const [feedTotal, setFeedTotal] = useState(0);
+  const [feedLoading, setFeedLoading] = useState(false);
+  const [feedLoadingMore, setFeedLoadingMore] = useState(false);
+  const feedOffsetRef = useRef(0);
+  const [feedPostContent, setFeedPostContent] = useState('');
+  const [feedCreating, setFeedCreating] = useState(false);
+  const [feedCreateError, setFeedCreateError] = useState<string | null>(null);
+
   const [actionLoading, setActionLoading] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
 
@@ -113,6 +126,24 @@ export default function GroupPage() {
       .finally(() => setMembersLoading(false));
   }, [group, activeTab]);
 
+  // Load group feed when feed tab active
+  useEffect(() => {
+    if (!group || activeTab !== 'feed') return;
+    setFeedLoading(true);
+    feedOffsetRef.current = 0;
+    fetchGroupPosts(group.id, 20, 0)
+      .then(({ posts, total }) => {
+        setFeedPosts(posts);
+        setFeedTotal(total);
+        feedOffsetRef.current = posts.length;
+      })
+      .catch(() => {
+        setFeedPosts([]);
+        setFeedTotal(0);
+      })
+      .finally(() => setFeedLoading(false));
+  }, [group, activeTab]);
+
   // Load requests when settings open and group is private + mod/owner
   useEffect(() => {
     if (!group || !showSettings || !isModOrOwner || group.privacy !== 'private') return;
@@ -122,6 +153,38 @@ export default function GroupPage() {
       .catch(() => setRequests([]))
       .finally(() => setRequestsLoading(false));
   }, [group, showSettings, isModOrOwner]);
+
+  async function handleLoadMoreFeedPosts() {
+    if (!group || feedLoadingMore) return;
+    setFeedLoadingMore(true);
+    try {
+      const { posts, total } = await fetchGroupPosts(group.id, 20, feedOffsetRef.current);
+      setFeedPosts((prev) => [...prev, ...posts]);
+      setFeedTotal(total);
+      feedOffsetRef.current += posts.length;
+    } catch {
+      // silent
+    } finally {
+      setFeedLoadingMore(false);
+    }
+  }
+
+  async function handleCreateGroupPost(e: React.FormEvent) {
+    e.preventDefault();
+    if (!group || !feedPostContent.trim() || feedCreating) return;
+    setFeedCreating(true);
+    setFeedCreateError(null);
+    try {
+      const post = await createPost(feedPostContent.trim(), 'public', group.id);
+      setFeedPosts((prev) => [post, ...prev]);
+      setFeedTotal((t) => t + 1);
+      setFeedPostContent('');
+    } catch (err: any) {
+      setFeedCreateError(err?.response?.data?.detail ?? 'Failed to create post.');
+    } finally {
+      setFeedCreating(false);
+    }
+  }
 
   async function handleJoin() {
     if (!group) return;
@@ -525,10 +588,90 @@ export default function GroupPage() {
 
             {/* Feed tab */}
             {activeTab === 'feed' && (
-              <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-8 text-center">
-                <div className="text-3xl mb-2">📰</div>
-                <h2 className="text-stone-900 font-semibold mb-1">Group feed coming soon</h2>
-                <p className="text-stone-500 text-sm">Posts shared within this group will appear here in a future update.</p>
+              <div className="space-y-3">
+                {/* Composer — only for active members */}
+                {group.is_member && (
+                  <div className="bg-white border border-stone-200 rounded-2xl p-4 shadow-sm">
+                    <form onSubmit={handleCreateGroupPost} className="space-y-3">
+                      {feedCreateError && (
+                        <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-red-700 text-sm">
+                          {feedCreateError}
+                        </div>
+                      )}
+                      <div className="flex items-start gap-3">
+                        <Avatar
+                          username={profile?.username ?? 'user'}
+                          displayName={profile?.display_name}
+                          size="sm"
+                        />
+                        <textarea
+                          value={feedPostContent}
+                          onChange={(e) => setFeedPostContent(e.target.value)}
+                          placeholder="Write something to the group…"
+                          maxLength={1000}
+                          rows={3}
+                          className="flex-1 bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 placeholder-stone-400 focus:outline-none focus:border-stone-400 resize-none"
+                        />
+                      </div>
+                      <div className="flex justify-end gap-2">
+                        <span className="text-xs text-stone-400 self-center">{feedPostContent.length}/1000</span>
+                        <button
+                          type="submit"
+                          disabled={!feedPostContent.trim() || feedCreating}
+                          className="text-xs bg-stone-800 hover:bg-stone-700 disabled:bg-stone-200 disabled:text-stone-400 text-white font-semibold px-4 py-1.5 rounded-xl transition-colors"
+                        >
+                          {feedCreating ? 'Posting…' : 'Post'}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                )}
+
+                {/* Feed content */}
+                {feedLoading ? (
+                  <div className="flex justify-center py-12">
+                    <div className="w-8 h-8 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
+                  </div>
+                ) : feedPosts.length === 0 ? (
+                  <div className="bg-white border border-stone-200 rounded-2xl p-10 flex flex-col items-center gap-3 text-center shadow-sm">
+                    <span className="text-4xl">📰</span>
+                    <p className="text-stone-900 font-medium">No posts yet</p>
+                    <p className="text-stone-500 text-sm">
+                      {group.is_member
+                        ? 'Be the first to post something to the group!'
+                        : 'No posts in this group yet.'}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {feedPosts.map((post) => (
+                      <PostCard
+                        key={post.id}
+                        post={post}
+                        onPostDeleted={(postId) => {
+                          setFeedPosts((prev) => prev.filter((p) => p.id !== postId));
+                          setFeedTotal((t) => Math.max(0, t - 1));
+                        }}
+                        onPostUpdated={(updatedPost) => {
+                          setFeedPosts((prev) => prev.map((p) => (p.id === updatedPost.id ? updatedPost : p)));
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                {/* Load more */}
+                {feedPosts.length < feedTotal && !feedLoading && (
+                  <div className="flex justify-center pt-2">
+                    <button
+                      onClick={handleLoadMoreFeedPosts}
+                      disabled={feedLoadingMore}
+                      className="text-sm text-stone-600 hover:text-stone-900 border border-stone-300 hover:border-stone-400 px-5 py-2 rounded-xl transition-colors"
+                    >
+                      {feedLoadingMore ? 'Loading…' : 'Load more'}
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 
