@@ -265,5 +265,13 @@ async def update_admin_submission(
         submission.status = body.status
 
     await db.flush()
+    # Commit here, before sending the response, so any newly-created Location
+    # row is durable and visible to follow-up queries fired by the client
+    # immediately after receiving the 200.  Without this explicit commit the
+    # session is committed by get_db's generator cleanup, which runs *after*
+    # the HTTP response has already been sent (standard ASGI teardown order).
+    # That timing gap causes the client's cache-invalidation refetch to see no
+    # new pin, and a silent commit error would permanently lose the row.
+    await db.commit()
     await db.refresh(submission)
     return submission

@@ -515,3 +515,10 @@ async def create_tables() -> None:
                     f"ALTER TYPE map_layer_type_enum ADD VALUE IF NOT EXISTS '{val}'"
                 )
             )
+        # Add group_id column to posts table if it was created before groups feature
+        await conn.execute(
+            text("ALTER TABLE posts ADD COLUMN IF NOT EXISTS group_id UUID DEFAULT NULL")
+        )
+        await conn.execute(
+            text("CREATE INDEX IF NOT EXISTS ix_posts_group_id ON posts (group_id)")
+        )
