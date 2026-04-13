@@ -457,7 +457,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 16. OFF THE BEATEN PATH ]---
-
+--[ file:FC0C795B-E848-48D2-88A1-D69F7B3E3432.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -610,7 +610,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 21. GREAT FIND! ]---
-
+---[file:8773F5EF-1AE8-4212-8191-479E2E78ABA8.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -667,7 +667,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 23. COMMUNITY PILLAR ]---
-
+---[ file:36FF0A6C-A14B-49C1-9183-C66A02581A26.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -700,7 +700,7 @@ GEOGRAPHIC / STREAK BADGES
 ========================================================
 
 ---[ 24. MULTI-STATE HUNTER ]---
-
+---[file:B4ED4716-472A-423E-804D-143690D66C30.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
