@@ -14,6 +14,7 @@ import FeedPage from './pages/FeedPage';
 import GroupPage from './pages/GroupPage';
 import CreateGroupPage from './pages/CreateGroupPage';
 import MyGroupsPage from './pages/MyGroupsPage';
+import BadgesPage from './pages/BadgesPage';
 import AppLayout from './components/AppLayout';
 
 /**
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/groups/create" element={<AppLayout><RequireProfile><CreateGroupPage /></RequireProfile></AppLayout>} />
         <Route path="/groups" element={<AppLayout><RequireProfile><MyGroupsPage /></RequireProfile></AppLayout>} />
         <Route path="/group/:slug" element={<AppLayout><RequireProfile><GroupPage /></RequireProfile></AppLayout>} />
+        <Route path="/badges" element={<AppLayout><BadgesPage /></AppLayout>} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>

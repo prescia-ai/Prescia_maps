@@ -318,3 +318,31 @@ export interface EventPin {
   rsvp_count: number;
   user_has_rsvpd: boolean;
 }
+
+// ── Badges ───────────────────────────────────────────────────────────────────
+
+export interface Badge {
+  id: string;
+  badge_id: string;
+  name: string;
+  description: string | null;
+  category: string;
+  criteria: Record<string, unknown> | null;
+  points: number;
+  rarity: 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+  image_url: string;
+  created_at: string | null;
+}
+
+export interface BadgeProgress {
+  badge: Badge;
+  earned: boolean;
+  earned_at: string | null;
+  current_value: number | null;
+  threshold: number | null;
+}
+
+export interface BadgeCheckResult {
+  newly_earned: Badge[];
+  total_earned: number;
+}

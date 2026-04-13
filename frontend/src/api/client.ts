@@ -631,3 +631,25 @@ export async function fetchEventMapPins(): Promise<EventPin[]> {
 }
 
 export default api;
+
+// ── Badges ─────────────────────────────────────────────────────────────────
+
+export async function fetchBadges(): Promise<import('../types').Badge[]> {
+  const { data } = await api.get<import('../types').Badge[]>('/badges');
+  return data;
+}
+
+export async function fetchUserBadges(username: string): Promise<import('../types').Badge[]> {
+  const { data } = await api.get<import('../types').Badge[]>(`/badges/users/${encodeURIComponent(username)}`);
+  return data;
+}
+
+export async function fetchMyBadgeProgress(): Promise<import('../types').BadgeProgress[]> {
+  const { data } = await api.get<import('../types').BadgeProgress[]>('/badges/me/progress');
+  return data;
+}
+
+export async function checkBadges(): Promise<import('../types').BadgeCheckResult> {
+  const { data } = await api.post<import('../types').BadgeCheckResult>('/badges/check');
+  return data;
+}

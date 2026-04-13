@@ -17,9 +17,11 @@ from sqlalchemy import (
     DateTime,
     Enum,
     Float,
+    ForeignKey,
     Integer,
     String,
     Text,
+    UniqueConstraint,
     func,
     text,
 )
@@ -446,6 +448,49 @@ class GroupEventRsvp(Base):
     event_id = Column(UUID(as_uuid=True), primary_key=True)
     user_id = Column(UUID(as_uuid=True), primary_key=True)
     created_at = Column(DateTime, nullable=False, server_default=func.now())
+
+
+class Badge(Base):
+    """
+    An achievement badge definition.
+
+    ``badge_id`` matches the PNG filename (UUID string) stored in the
+    frontend public/badges/ directory so the frontend can derive the
+    image URL without an extra lookup.
+    """
+
+    __tablename__ = "badges"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    badge_id = Column(String(255), unique=True, nullable=False, index=True)
+    name = Column(String(200), nullable=False)
+    description = Column(Text, nullable=True)
+    category = Column(String(50), nullable=False, index=True)  # hunt_milestone, finds, sites, score
+    criteria = Column(JSON, nullable=True)  # e.g. {"type": "hunt_count", "threshold": 10}
+    points = Column(Integer, nullable=False, default=0)
+    rarity = Column(String(20), nullable=False, default="common")  # common, uncommon, rare, epic, legendary
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+
+class UserBadge(Base):
+    """
+    A badge awarded to a user.
+
+    The composite unique constraint on (user_id, badge_id) ensures a
+    badge can only be awarded once per user.
+    """
+
+    __tablename__ = "user_badges"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    badge_id = Column(UUID(as_uuid=True), ForeignKey("badges.id", ondelete="CASCADE"), nullable=False, index=True)
+    earned_at = Column(DateTime(timezone=True), server_default=func.now())
+    progress = Column(JSON, nullable=True)  # optional progress snapshot
+
+    __table_args__ = (
+        UniqueConstraint("user_id", "badge_id", name="uq_user_badge"),
+    )
 
 
 # ---------------------------------------------------------------------------

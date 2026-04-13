@@ -801,3 +801,58 @@ class EventPinResponse(BaseModel):
     event_end_date: Optional[Any] = None
     rsvp_count: int = 0
     user_has_rsvpd: bool = False
+
+
+# ---------------------------------------------------------------------------
+# Badge schemas
+# ---------------------------------------------------------------------------
+
+class BadgeResponse(BaseModel):
+    """Full badge definition returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    badge_id: str
+    name: str
+    description: Optional[str] = None
+    category: str
+    criteria: Optional[Dict[str, Any]] = None
+    points: int
+    rarity: str
+    image_url: str = ""
+    created_at: Optional[Any] = None
+
+    @classmethod
+    def from_orm_with_url(cls, badge: Any) -> "BadgeResponse":
+        obj = cls.model_validate(badge)
+        obj.image_url = f"/badges/{badge.badge_id}.png"
+        return obj
+
+
+class UserBadgeResponse(BaseModel):
+    """A badge earned by a user."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    badge_id: UUID
+    earned_at: Optional[Any] = None
+    badge: Optional[BadgeResponse] = None
+
+
+class BadgeProgressResponse(BaseModel):
+    """Progress toward a single badge (earned or unearned)."""
+
+    badge: BadgeResponse
+    earned: bool
+    earned_at: Optional[Any] = None
+    current_value: Optional[int] = None
+    threshold: Optional[int] = None
+
+
+class BadgeCheckResponse(BaseModel):
+    """Result of the /badges/check endpoint."""
+
+    newly_earned: List[BadgeResponse]
+    total_earned: int
