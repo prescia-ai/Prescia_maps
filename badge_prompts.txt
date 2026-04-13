@@ -639,7 +639,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 22. CROWD FAVORITE ]---
-
+---[file:D9A62F2B-C821-4D87-AB96-1448AD741E13.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
