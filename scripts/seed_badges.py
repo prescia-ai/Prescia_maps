@@ -156,6 +156,44 @@ BADGES = [
         "points": 75,
         "rarity": "epic",
     },
+    # ── Community Contribution ────────────────────────────────────────────────
+    {
+        "badge_id": "D764C958-9847-45D8-BEB6-3611D2545D47",
+        "name": "Map Maker",
+        "description": "Submit your first location to the Prescia Maps database.",
+        "category": "community",
+        "criteria": {"type": "submission_count", "threshold": 1},
+        "points": 20,
+        "rarity": "uncommon",
+    },
+    {
+        "badge_id": "DA31CC83-B2E7-4A1C-9705-658B35DE1C98",
+        "name": "History Keeper",
+        "description": "Contribute historical notes or documentation to a location.",
+        "category": "community",
+        "criteria": {"type": "contribution_count", "threshold": 5},
+        "points": 30,
+        "rarity": "rare",
+    },
+    {
+        "badge_id": "AF7AEB2C-6F9C-4734-A537-12C0610CF212",
+        "name": "Community Historian",
+        "description": "Become a trusted contributor with 25+ submissions.",
+        "category": "community",
+        "criteria": {"type": "submission_count", "threshold": 25},
+        "points": 100,
+        "rarity": "epic",
+    },
+    # ── Social ────────────────────────────────────────────────────────────────
+    {
+        "badge_id": "94297D70-0BF8-4913-ADB8-073E6672EB85",
+        "name": "First Shout",
+        "description": "Post your first comment or share a find with the community.",
+        "category": "social",
+        "criteria": {"type": "comment_count", "threshold": 1},
+        "points": 10,
+        "rarity": "common",
+    },
 ]
 
 
