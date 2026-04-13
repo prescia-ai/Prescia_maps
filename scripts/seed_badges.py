@@ -1,7 +1,7 @@
 """
 Seed script for achievement badges.
 
-Seeds all 16 badge definitions into the ``badges`` table.
+Seeds all 15 badge definitions into the ``badges`` table.
 Run with:
     python scripts/seed_badges.py
 """

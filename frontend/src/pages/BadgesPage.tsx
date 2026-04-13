@@ -106,12 +106,16 @@ export default function BadgesPage() {
                           </p>
                           {item.earned ? (
                             <p className="text-green-600 text-[10px]">Earned</p>
-                          ) : item.badge.criteria?.type === 'hunt_count' || item.badge.criteria?.type === 'finds_count' ? (
-                            <p className="text-stone-400 text-[10px]">
-                              {item.current_value} / {item.threshold}
-                            </p>
                           ) : (
-                            <p className="text-stone-300 text-[10px]">Locked</p>
+                            <>
+                              {(item.badge.criteria?.type === 'hunt_count' || item.badge.criteria?.type === 'finds_count') ? (
+                                <p className="text-stone-400 text-[10px]">
+                                  {item.current_value} / {item.threshold}
+                                </p>
+                              ) : (
+                                <p className="text-stone-300 text-[10px]">Locked</p>
+                              )}
+                            </>
                           )}
                         </div>
                       </div>

@@ -120,8 +120,7 @@ export default function BadgeDisplay({
             <p className="text-[10px] text-stone-400 italic">Not yet unlocked</p>
           )}
           {/* Tooltip arrow */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
-          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-stone-200 mt-px" />
+          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-white" />
         </div>
       )}
     </div>
