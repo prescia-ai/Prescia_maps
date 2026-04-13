@@ -1,7 +1,7 @@
 """
 Seed script for achievement badges.
 
-Seeds all 15 badge definitions into the ``badges`` table.
+Seeds all badge definitions into the ``badges`` table.
 Run with:
     python scripts/seed_badges.py
 """
@@ -193,6 +193,53 @@ BADGES = [
         "criteria": {"type": "comment_count", "threshold": 1},
         "points": 10,
         "rarity": "common",
+    },
+    {
+        "badge_id": "8773F5EF-1AE8-4212-8191-479E2E78ABA8",
+        "name": "Great Find!",
+        "description": "Receive 10 likes or positive reactions on a shared find.",
+        "category": "social",
+        "criteria": {"type": "likes_count", "threshold": 10},
+        "points": 25,
+        "rarity": "uncommon",
+    },
+    {
+        "badge_id": "D9A62F2B-C821-4D87-AB96-1448AD741E13",
+        "name": "Crowd Favorite",
+        "description": "Have one of your finds receive 50+ likes from the community.",
+        "category": "social",
+        "criteria": {"type": "single_post_likes", "threshold": 50},
+        "points": 50,
+        "rarity": "rare",
+    },
+    {
+        "badge_id": "36FF0A6C-A14B-49C1-9183-C66A02581A26",
+        "name": "Community Pillar",
+        "description": "Reach 100+ total likes across all your shared content.",
+        "category": "social",
+        "criteria": {"type": "total_likes", "threshold": 100},
+        "points": 75,
+        "rarity": "epic",
+    },
+    # ── Score ─────────────────────────────────────────────────────────────────
+    {
+        "badge_id": "FC0C795B-E848-48D2-88A1-D69F7B3E3432",
+        "name": "Off The Beaten Path",
+        "description": "Hunt at a location with a Prescia score below 50 (high difficulty).",
+        "category": "score",
+        "criteria": {"type": "low_score_hunt", "threshold": 50},
+        "points": 40,
+        "rarity": "rare",
+    },
+    # ── Geographic ────────────────────────────────────────────────────────────
+    {
+        "badge_id": "B4ED4716-472A-423E-804D-143690D66C30",
+        "name": "Multi-State Hunter",
+        "description": "Log hunts in 3 or more different states.",
+        "category": "geographic",
+        "criteria": {"type": "states_visited", "threshold": 3},
+        "points": 60,
+        "rarity": "rare",
     },
 ]
 
