@@ -9,9 +9,11 @@ const CATEGORY_LABELS: Record<BadgeCategory, string> = {
   finds: 'Finds',
   sites: 'Historic Sites',
   score: 'Scoring',
+  community: 'Community Contribution',
+  social: 'Social',
 };
 
-const CATEGORY_ORDER: BadgeCategory[] = ['hunt_milestone', 'finds', 'sites', 'score'];
+const CATEGORY_ORDER: BadgeCategory[] = ['hunt_milestone', 'finds', 'sites', 'score', 'community', 'social'];
 
 export default function BadgesPage() {
   const { user } = useAuth();

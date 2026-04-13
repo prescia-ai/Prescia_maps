@@ -251,7 +251,7 @@ export interface CollectionPhoto {
 
 // ── Badges ───────────────────────────────────────────────────────────────────
 
-export type BadgeCategory = 'hunt_milestone' | 'finds' | 'sites' | 'score';
+export type BadgeCategory = 'hunt_milestone' | 'finds' | 'sites' | 'score' | 'community' | 'social';
 export type BadgeRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
 
 export interface Badge {
