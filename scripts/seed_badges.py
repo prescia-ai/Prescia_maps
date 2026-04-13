@@ -2,7 +2,7 @@
 """
 Prescia Maps — Badge Seed Script
 
-Populates the ``badges`` table with the 16 achievement badge definitions
+Populates the ``badges`` table with the 15 achievement badge definitions
 that correspond to the PNG files in /Badges/.
 
 Usage::
