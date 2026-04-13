@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { createPin, uploadPinImages } from '../api/client';
+import { createPin, uploadPinImages, checkBadges } from '../api/client';
 import { resizeImage } from '../utils/imageResize';
 import { useAuth } from '../contexts/AuthContext';
+import type { Badge } from '../types';
+import BadgeDisplay from './BadgeDisplay';
 
 interface LogHuntModalProps {
   lat: number;
@@ -24,6 +26,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
   const [privacy, setPrivacy] = useState<'public' | 'private'>('public');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [newBadges, setNewBadges] = useState<Badge[]>([]);
 
   // Image upload state
   const [imageFiles, setImageFiles] = useState<File[]>([]);
@@ -115,6 +118,17 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
         }
       }
 
+      // Check for newly earned badges (non-fatal)
+      try {
+        const badgeResult = await checkBadges();
+        if (badgeResult.newly_earned.length > 0) {
+          setNewBadges(badgeResult.newly_earned);
+          return; // Stay open to show badge notification
+        }
+      } catch {
+        // Badge check failure is non-fatal
+      }
+
       onSuccess();
       onClose();
     } catch (err: any) {
@@ -126,6 +140,33 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+      {/* Badge earned notification */}
+      {newBadges.length > 0 && (
+        <div className="bg-white border border-stone-200 rounded-2xl shadow-xl w-full max-w-sm flex flex-col items-center px-6 py-8 gap-4">
+          <div className="text-3xl">🎉</div>
+          <h2 className="text-stone-900 font-bold text-lg text-center">
+            {newBadges.length === 1 ? 'New Badge Earned!' : `${newBadges.length} New Badges Earned!`}
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 my-2">
+            {newBadges.map((b) => (
+              <div key={b.id} className="flex flex-col items-center gap-1">
+                <BadgeDisplay badge={b} earned size="lg" />
+                <span className="text-stone-700 text-xs font-medium">{b.name}</span>
+                <span className="text-amber-600 text-xs">+{b.points} pts</span>
+              </div>
+            ))}
+          </div>
+          <button
+            onClick={() => { onSuccess(); onClose(); }}
+            className="w-full px-5 py-2.5 text-sm font-medium text-white bg-stone-800 hover:bg-stone-700 rounded-xl transition-colors"
+          >
+            Awesome!
+          </button>
+        </div>
+      )}
+
+      {/* Main modal */}
+      {newBadges.length === 0 && (
       <div className="bg-white border border-stone-200 rounded-2xl shadow-xl w-full max-w-md flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
@@ -341,6 +382,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
           </button>
         </div>
       </div>
+      )}
     </div>
   );
 }

@@ -24,9 +24,13 @@ from app.models.database import (
     LinearFeature,
     Location,
     MapLayer,
+    Badge,
+    UserBadge,
     get_db,
 )
 from app.models.schemas import (
+    BadgeProgressResponse,
+    BadgeResponse,
     FeatureResponse,
     GeoJSONFeatureCollection,
     HealthResponse,
@@ -45,11 +49,14 @@ from app.models.schemas import (
     LocationResponse,
     MapLayerCreate,
     MapLayerResponse,
+    NewlyEarnedBadgesResponse,
     PointGeometry,
     ScoreResponse,
 )
 from app.scoring.engine import WEIGHTS, _age_bonus, compute_heatmap_data, score_location
 from app.services.land_access import lookup_land_access
+from app.services.badge_service import check_all_badges, get_badge_progress
+from app.auth.deps import get_current_user as _get_current_user
 
 logger = logging.getLogger(__name__)
 
@@ -962,4 +969,118 @@ async def import_features(
         skipped_duplicate=skipped_duplicate,
         skipped_invalid=skipped_invalid,
         errors=errors,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Badges
+# ---------------------------------------------------------------------------
+
+
+@router.get(
+    "/badges",
+    response_model=List[BadgeResponse],
+    summary="List all achievement badges",
+    tags=["badges"],
+)
+async def list_badges(
+    db: AsyncSession = Depends(get_db),
+) -> List[BadgeResponse]:
+    """Return all available achievement badges."""
+    result = await db.execute(select(Badge).order_by(Badge.category, Badge.points))
+    badges = result.scalars().all()
+    return [BadgeResponse.from_orm_with_url(b) for b in badges]
+
+
+@router.get(
+    "/users/{username}/badges",
+    response_model=List[BadgeResponse],
+    summary="Get badges earned by a user",
+    tags=["badges"],
+)
+async def get_user_badges(
+    username: str,
+    db: AsyncSession = Depends(get_db),
+) -> List[BadgeResponse]:
+    """Return all badges earned by the specified user."""
+    from app.models.database import User
+
+    user_result = await db.execute(
+        select(User).where(User.username == username)
+    )
+    user = user_result.scalar_one_or_none()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    result = await db.execute(
+        select(Badge)
+        .join(UserBadge, UserBadge.badge_id == Badge.id)
+        .where(UserBadge.user_id == user.id)
+        .order_by(UserBadge.earned_at)
+    )
+    badges = result.scalars().all()
+    return [BadgeResponse.from_orm_with_url(b) for b in badges]
+
+
+@router.get(
+    "/users/me/badge-progress",
+    response_model=List[BadgeProgressResponse],
+    summary="Get current user's progress on all badges",
+    tags=["badges"],
+)
+async def get_my_badge_progress(
+    current_user=Depends(_get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> List[BadgeProgressResponse]:
+    """Return earned status and progress toward unearned badges for the current user."""
+    progress_list = await get_badge_progress(current_user.id, db)
+    responses = []
+    for item in progress_list:
+        badge = item["badge"]
+        threshold = item["threshold"]
+        current_value = item["current_value"]
+
+        if threshold and threshold > 0:
+            progress_pct = min(100.0, round(current_value / threshold * 100, 1))
+        else:
+            progress_pct = 100.0 if item["earned"] else 0.0
+
+        badge_resp = BadgeResponse.from_orm_with_url(badge)
+        responses.append(
+            BadgeProgressResponse(
+                badge=badge_resp,
+                earned=item["earned"],
+                earned_at=item["earned_at"],
+                current_value=current_value,
+                threshold=threshold,
+                progress_pct=progress_pct,
+            )
+        )
+    return responses
+
+
+@router.post(
+    "/badges/check",
+    response_model=NewlyEarnedBadgesResponse,
+    summary="Check and award newly earned badges for current user",
+    tags=["badges"],
+)
+async def check_badges(
+    current_user=Depends(_get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> NewlyEarnedBadgesResponse:
+    """Check all badge criteria and award any newly earned badges to the current user."""
+    newly_earned = await check_all_badges(current_user.id, db)
+
+    # Count total earned badges
+    total_result = await db.execute(
+        select(Badge)
+        .join(UserBadge, UserBadge.badge_id == Badge.id)
+        .where(UserBadge.user_id == current_user.id)
+    )
+    total_earned = len(total_result.scalars().all())
+
+    return NewlyEarnedBadgesResponse(
+        newly_earned=[BadgeResponse.from_orm_with_url(b) for b in newly_earned],
+        total_earned=total_earned,
     )

@@ -249,6 +249,38 @@ export interface CollectionPhoto {
   created_at: string;
 }
 
+// ── Badges ───────────────────────────────────────────────────────────────────
+
+export type BadgeCategory = 'hunt_milestone' | 'finds' | 'sites' | 'score';
+export type BadgeRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+
+export interface Badge {
+  id: string;
+  badge_id: string;
+  name: string;
+  description: string;
+  category: BadgeCategory;
+  criteria: Record<string, unknown>;
+  points: number;
+  rarity: BadgeRarity;
+  image_url: string;
+  created_at: string | null;
+}
+
+export interface BadgeProgress {
+  badge: Badge;
+  earned: boolean;
+  earned_at: string | null;
+  current_value: number;
+  threshold: number | null;
+  progress_pct: number;
+}
+
+export interface NewlyEarnedBadgesResponse {
+  newly_earned: Badge[];
+  total_earned: number;
+}
+
 // ── Groups ────────────────────────────────────────────────────────────────────
 
 export interface Group {
