@@ -19,7 +19,7 @@ HUNT MILESTONE BADGES
 ========================================================
 
 ---[ 1. FIRST STRIKE ]---
-
+---[file: badges/B2FEDF50-DAE4-48D5-847D-966F94552CDA.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -48,7 +48,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 2. TRAILBLAZER ]---
-
+---[ file: badges/E4701C4C-8126-4BE7-BAA2-91B76ACE0022.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -77,7 +77,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 3. FIELD VETERAN ]---
-
+---[ file: badges/DB6EAF3C-374D-4F89-8844-8DEDFDD824E0.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -105,7 +105,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 4. CENTURY DETECTORIST ]---
-
+---[ file: badges/E6F0E042-9E9B-4BE5-972C-FBAB71BE989D.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -133,7 +133,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 5. MASTER DETECTORIST ]---
-
+---[ file: badges/9994C625-AD5D-43C8-A1A4-7F044B7228AB.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -166,7 +166,7 @@ FINDS-BASED BADGES
 ========================================================
 
 ---[ 6. FIRST DIG ]---
-
+---[ file: badges/0F708ADA-DB26-4ABB-9328-7A732ADEBA04.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -194,7 +194,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 7. LUCKY STRIKE ]---
-
+---[ file: badges/0202D7C9-D71B-4159-AA06-5E8909AB1579.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -222,7 +222,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 8. GOLD RUSH ]---
-
+---[ file: badges/A0160651-5B6F-40C8-A72D-C8C49796ED63.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -250,7 +250,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 9. TREASURE VAULT ]---
-
+---[ file: badges/54BC557C-A1C3-44FE-9956-B192EE1E9DF6.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -282,7 +282,7 @@ HIGH-VALUE SITE BADGES
 ========================================================
 
 ---[ 10. BATTLEFIELD RELIC HUNTER ]---
-
+---[ file: badges/E883C4AC-C15B-4E59-97D3-598D42EC9719.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -310,7 +310,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 11. BOOMTOWN PROSPECTOR ]---
-
+---[ file: badges/8B8C83CF-AA55-4E8F-BC58-F9F8E08B4FBA.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -338,7 +338,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 12. STAGECOACH CHASER ]---
-
+---[ file: badges/29EC28F1-A34A-41E3-B0D6-FFF06FBC6394.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -367,7 +367,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 13. PONY EXPRESS RIDER ]---
-
+---[ file: badges/346E9135-22D6-4197-9281-D939E8F2DC51.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -396,7 +396,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 14. MISSION SEEKER ]---
-
+---[ file: badges/FF2299B5-FAD9-4EED-9352-DD8F9D607174.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -428,7 +428,7 @@ SCORE BADGES
 ========================================================
 
 ---[ 15. PRIME TERRITORY ]---
-
+---[ file: badges/853EAE0F-736C-4CAA-B20A-3EC222CE482F.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
