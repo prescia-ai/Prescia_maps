@@ -17,6 +17,9 @@ import type {
   FollowInfo,
   PublicProfile,
   CollectionPhoto,
+  Badge,
+  BadgeProgress,
+  NewlyEarnedBadgesResponse,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -486,6 +489,28 @@ export async function deleteCollectionPhoto(photoId: string): Promise<void> {
 
 export async function deleteAccount(): Promise<void> {
   await api.delete('/auth/account');
+}
+
+// ── Badges ────────────────────────────────────────────────────────────────────
+
+export async function fetchBadges(): Promise<Badge[]> {
+  const { data } = await api.get<Badge[]>('/badges');
+  return data;
+}
+
+export async function fetchUserBadges(username: string): Promise<Badge[]> {
+  const { data } = await api.get<Badge[]>(`/users/${encodeURIComponent(username)}/badges`);
+  return data;
+}
+
+export async function fetchMyBadgeProgress(): Promise<BadgeProgress[]> {
+  const { data } = await api.get<BadgeProgress[]>('/users/me/badge-progress');
+  return data;
+}
+
+export async function checkBadges(): Promise<NewlyEarnedBadgesResponse> {
+  const { data } = await api.post<NewlyEarnedBadgesResponse>('/badges/check');
+  return data;
 }
 
 export async function searchUsers(

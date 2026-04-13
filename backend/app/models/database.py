@@ -17,15 +17,17 @@ from sqlalchemy import (
     DateTime,
     Enum,
     Float,
+    ForeignKey,
     Integer,
     String,
     Text,
+    UniqueConstraint,
     func,
     text,
 )
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, relationship
 
 from app.config import settings
 
@@ -233,6 +235,8 @@ class User(Base):
     google_email = Column(String(255), nullable=True)  # The Google account email they connected
     google_folder_id = Column(String(255), nullable=True)  # Google Drive "Prescia Maps" folder ID
     avatar_url = Column(String(500), nullable=True)  # Public Google Drive thumbnail URL
+
+    badges = relationship("UserBadge", back_populates="user", lazy="select")
 
 
 class UserPin(Base):
@@ -446,6 +450,50 @@ class GroupEventRsvp(Base):
     event_id = Column(UUID(as_uuid=True), primary_key=True)
     user_id = Column(UUID(as_uuid=True), primary_key=True)
     created_at = Column(DateTime, nullable=False, server_default=func.now())
+
+
+class Badge(Base):
+    """
+    Achievement badge definition.
+
+    Each badge has a unique badge_id that matches the PNG filename in
+    /frontend/public/badges/{badge_id}.png.
+    """
+
+    __tablename__ = "badges"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    badge_id = Column(String(100), unique=True, nullable=False, index=True)
+    name = Column(String(100), nullable=False)
+    description = Column(Text, nullable=False)
+    category = Column(String(30), nullable=False, index=True)  # hunt_milestone, finds, sites, score
+    criteria = Column(JSONB, nullable=False)  # e.g. {"type": "hunt_count", "threshold": 10}
+    points = Column(Integer, nullable=False, default=0)
+    rarity = Column(String(20), nullable=False, default="common")  # common, uncommon, rare, epic, legendary
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+
+    user_badges = relationship("UserBadge", back_populates="badge", lazy="select")
+
+
+class UserBadge(Base):
+    """
+    A badge earned by a user.
+
+    The unique constraint on (user_id, badge_id) ensures each user can
+    earn each badge only once.
+    """
+
+    __tablename__ = "user_badges"
+    __table_args__ = (UniqueConstraint("user_id", "badge_id", name="uq_user_badge"),)
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    badge_id = Column(UUID(as_uuid=True), ForeignKey("badges.id", ondelete="CASCADE"), nullable=False, index=True)
+    earned_at = Column(DateTime(timezone=True), server_default=func.now())
+    progress = Column(JSONB, nullable=True)
+
+    user = relationship("User", back_populates="badges", lazy="select")
+    badge = relationship("Badge", back_populates="user_badges", lazy="select")
 
 
 # ---------------------------------------------------------------------------
