@@ -822,7 +822,7 @@ SPECIAL EVENT BADGES
 ========================================================
 
 ---[ 28. NIGHT HUNTER ]---
----[ file: A3F1C2D4-7E89-4B56-9F12-3D8E7A1B4C90.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -851,7 +851,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 29. DAWN PATROL ]---
----[ file: B5D2E1F3-8A90-4C67-A023-4E9F8B2C5D01.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -880,7 +880,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 30. STORM CHASER ]---
----[ file: C6E3F2A4-9B01-4D78-B134-5FA0C3D6E112.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -909,7 +909,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 31. FIRST SNOW ]---
----[ file: D7F4A3B5-0C12-4E89-C245-6AB1D4E7F223.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -942,7 +942,7 @@ RARITY / VALUE BADGES
 ========================================================
 
 ---[ 32. SILVER STREAK ]---
----[ file: E8A5B4C6-1D23-4F90-D356-7BC2E5F8A334.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -971,7 +971,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 33. COPPER KING ]---
----[ file: F9B6C5D7-2E34-4A01-E467-8CD3F6A9B445.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1000,7 +1000,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 34. RARE FIND ]---
----[ file: A0C7D6E8-3F45-4B12-F578-9DE4A7B0C556.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1029,7 +1029,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 35. JACKPOT ]---
----[ file: B1D8E7F9-4A56-4C23-A689-0EF5B8C1D667.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1062,7 +1062,7 @@ LOCATION DIVERSITY BADGES
 ========================================================
 
 ---[ 36. BEACH COMBER ]---
----[ file: C2E9F8A0-5B67-4D34-B790-1FA6C9D2E778.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1091,7 +1091,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 37. FOREST WANDERER ]---
----[ file: D3FA09B1-6C78-4E45-C801-2AB7D0E3F889.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1120,7 +1120,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 38. URBAN EXPLORER ]---
----[ file: E4AB10C2-7D89-4F56-D912-3BC8E1F4A990.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1153,7 +1153,7 @@ EQUIPMENT / TECHNIQUE BADGES
 ========================================================
 
 ---[ 39. PINPOINTER PRO ]---
----[ file: F5BC21D3-8E90-4067-E023-4CD9F2A5BA01.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1182,7 +1182,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 40. GRID MASTER ]---
----[ file: A6CD32E4-9F01-4178-F134-5DE0A3B6CB12.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1211,7 +1211,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 41. DEEP DIG ]---
----[ file: B7DE43F5-0A12-4289-A245-6EF1B4C7DC23.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1244,7 +1244,7 @@ COLLABORATION BADGES
 ========================================================
 
 ---[ 42. TEAM PLAYER ]---
----[ file: C8EF54A6-1B23-4390-B356-7FA2C5D8ED34.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1273,7 +1273,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 43. GROUP LEADER ]---
----[ file: D9F065B7-2C34-4401-C467-8AB3D6E9FE45.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1302,7 +1302,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 44. MENTOR ]---
----[ file: EA0176C8-3D45-4512-D578-9BC4E7FA0F56.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1335,7 +1335,7 @@ TIME / DEDICATION BADGES
 ========================================================
 
 ---[ 45. MARATHON DETECTORIST ]---
----[ file: FB1287D9-4E56-4623-E689-0CD5F8AB1067.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1364,7 +1364,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 46. EARLY BIRD ]---
----[ file: AC2398EA-5F67-4734-F790-1DE6A9BC2178.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1393,7 +1393,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 47. MOONLIGHTER ]---
----[ file: BD34A9FB-6A78-4845-A801-2EF7B0CD3289.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1426,7 +1426,7 @@ CONSERVATION BADGES
 ========================================================
 
 ---[ 48. TRASH COLLECTOR ]---
----[ file: CE45BAC0-7B89-4956-B912-3FA8C1DE4390.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1455,7 +1455,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 49. LEAVE NO TRACE ]---
----[ file: DF56CBD1-8C90-4067-CA23-4AB9D2EF5401.png]---
+---[ file: ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
