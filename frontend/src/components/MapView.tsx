@@ -341,6 +341,18 @@ export default function MapView({
         />
       )}
 
+      {/* 1955 USGS historical aerial overlay */}
+      {layers.aerials_1955 && (
+        <TileLayer
+          url="/tiles/1955/{z}/{x}/{y}.webp"
+          attribution='USGS Historical Aerials (1955)'
+          minZoom={8}
+          maxZoom={12}
+          opacity={0.7}
+          zIndex={6}
+        />
+      )}
+
       <ClickHandler onClick={handleClick} />
 
       {onContextMenu && <ContextMenuHandler onContextMenu={onContextMenu} />}

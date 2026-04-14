@@ -47,6 +47,7 @@ const DEFAULT_LAYERS: LayerState = {
   road:            true,
   heatmap:         false,
   blm:             false,
+  aerials_1955:    false,
   my_hunts:        false,
   group_events:    true,
 };
