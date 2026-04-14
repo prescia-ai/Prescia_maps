@@ -94,6 +94,7 @@ export interface LayerState {
   // Special layers
   heatmap: boolean;
   blm: boolean;
+  aerials_1955: boolean;
   // Personal layers
   my_hunts: boolean;
   group_events: boolean;
