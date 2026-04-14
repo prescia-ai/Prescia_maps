@@ -1,5 +1,5 @@
 """
-Prescia Maps – FastAPI application entry point.
+Aurik – FastAPI application entry point.
 
 Starts the async SQLAlchemy engine, registers all API routers, configures
 CORS, and exposes the ASGI app for uvicorn.
@@ -73,7 +73,7 @@ def create_app() -> FastAPI:
         Configured ``FastAPI`` instance.
     """
     app = FastAPI(
-        title="Prescia Maps – Historical Activity Mapping & Metal Detecting Intelligence",
+        title="Aurik – Historical Activity Mapping & Metal Detecting Intelligence",
         description=(
             "REST API that aggregates historical location data (Civil War battles, "
             "ghost towns, historic trails, mines, camps) and computes scoring data "

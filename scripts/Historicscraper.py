@@ -193,7 +193,7 @@ _OHM_QUERIES = {
 
 _HEADERS = {
     "User-Agent": (
-        "prescia_maps/1.0 (historical research; "
+        "aurik/1.0 (historical research; "
         "https://github.com/prescia-ai/Prescia_maps)"
     )
 }
@@ -972,7 +972,7 @@ async def run(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Import historic places, routes & features into Prescia Maps."
+        description="Import historic places, routes & features into Aurik."
     )
     parser.add_argument(
         "--state", metavar="XX", default=None,

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-run_all.py — Prescia Maps master pipeline runner with resume support.
+run_all.py — Aurik master pipeline runner with resume support.
 
 Runs the full data pipeline in sequence:
   1. scripts/USminesscraper.py           — US mines (USGS MRDS)
@@ -250,7 +250,7 @@ class ProgressDisplay:
 
         # Banner
         lines.append(f"{_ansi(_BOLD)}{'═' * 67}{_ansi(_RESET)}")
-        lines.append(f"{_ansi(_BOLD)}  Prescia Maps — Full Data Pipeline{_ansi(_RESET)}")
+        lines.append(f"{_ansi(_BOLD)}  Aurik — Full Data Pipeline{_ansi(_RESET)}")
         lines.append(f"{_ansi(_BOLD)}{'═' * 67}{_ansi(_RESET)}")
         lines.append("")
 
@@ -441,7 +441,7 @@ def run_step(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Prescia Maps — master pipeline runner with resume support.",
+        description="Aurik — master pipeline runner with resume support.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )

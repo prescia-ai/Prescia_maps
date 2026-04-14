@@ -150,7 +150,7 @@ BADGES = [
     {
         "badge_id": "853EAE0F-736C-4CAA-B20A-3EC222CE482F",
         "name": "Prime Territory",
-        "description": "Hunt a location with a Prescia score of 90 or higher.",
+        "description": "Hunt a location with an Aurik score of 90 or higher.",
         "category": "score",
         "criteria": {"type": "score_threshold", "threshold": 90},
         "points": 75,
@@ -160,7 +160,7 @@ BADGES = [
     {
         "badge_id": "D764C958-9847-45D8-BEB6-3611D2545D47",
         "name": "Map Maker",
-        "description": "Submit your first location to the Prescia Maps database.",
+        "description": "Submit your first location to the Aurik database.",
         "category": "community",
         "criteria": {"type": "submission_count", "threshold": 1},
         "points": 20,
@@ -225,7 +225,7 @@ BADGES = [
     {
         "badge_id": "FC0C795B-E848-48D2-88A1-D69F7B3E3432",
         "name": "Off The Beaten Path",
-        "description": "Hunt at a location with a Prescia score below 50 (high difficulty).",
+        "description": "Hunt at a location with an Aurik score below 50 (high difficulty).",
         "category": "score",
         "criteria": {"type": "low_score_hunt", "threshold": 50},
         "points": 40,

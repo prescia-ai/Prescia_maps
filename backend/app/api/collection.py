@@ -23,7 +23,7 @@ import httpx
 from app.auth.deps import get_current_user, optional_user
 from app.auth.google import (
     _DRIVE_FILES_URL,
-    ensure_prescia_folder,
+    ensure_aurik_folder,
     get_valid_access_token,
     upload_file_to_drive,
 )
@@ -124,7 +124,7 @@ async def upload_collection_photo(
 
     # 2. Get access token and folder
     access_token = await get_valid_access_token(current_user, db)
-    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+    folder_id = await ensure_aurik_folder(access_token, user=current_user, db=db)
 
     # 3. Upload to Drive
     ext = _EXT_MAP.get(content_type, "jpg")

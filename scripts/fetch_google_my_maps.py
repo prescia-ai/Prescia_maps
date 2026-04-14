@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Google My Maps extractor — fetches pin data from any public Google My Maps
-map and saves it as a JSON file ready for import into Prescia Maps.
+map and saves it as a JSON file ready for import into Aurik.
 
 Two extraction modes:
 
@@ -306,7 +306,7 @@ def normalise(
     source: str,
     confidence: float,
 ) -> List[Dict[str, Any]]:
-    """Convert raw extracted records to the Prescia Maps import format."""
+    """Convert raw extracted records to the Aurik import format."""
     out: List[Dict[str, Any]] = []
     for entry in raw:
         record: Dict[str, Any] = {
@@ -332,7 +332,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
             "Extract pin data from a public Google My Maps map and save as "
-            "JSON ready for import into Prescia Maps."
+            "JSON ready for import into Aurik."
         )
     )
     source_group = parser.add_mutually_exclusive_group(required=True)

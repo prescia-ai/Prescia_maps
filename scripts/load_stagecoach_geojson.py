@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Stagecoach route GeoJSON loader — imports stagecoach route LineString features
-from ``data/stagecoach_routes.geojson`` into the Prescia Maps
+from ``data/stagecoach_routes.geojson`` into the Aurik
 ``linear_features`` table.
 
 Usage::

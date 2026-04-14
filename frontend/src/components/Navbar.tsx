@@ -292,7 +292,7 @@ export default function Navbar({
         <span className="text-xl">🗺️</span>
         <div className="hidden sm:block">
           <h1 className="text-stone-900 font-bold text-sm leading-tight tracking-wide">
-            Prescia Maps
+            Aurik
           </h1>
           <p className="text-stone-400 text-[10px] leading-tight">
             Historical Activity &amp; Metal Detecting Intelligence

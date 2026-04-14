@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Prescia Maps — Database Reset Script
+Aurik — Database Reset Script
 
 Clears all data from the database so scrapers can be run fresh.
 
@@ -142,7 +142,7 @@ async def run(confirmed: bool, selected_tables: list[str]) -> None:
         # 2. Print the summary box
         # ------------------------------------------------------------------
         print(_top())
-        title = "Prescia Maps — Database Reset"
+        title = "Aurik — Database Reset"
         print(_box_line(title))
         print(_separator())
 
@@ -198,7 +198,7 @@ async def run(confirmed: bool, selected_tables: list[str]) -> None:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Reset the Prescia Maps database by truncating all data tables.",
+        description="Reset the Aurik database by truncating all data tables.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 examples:

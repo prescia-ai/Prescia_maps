@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 FRRandP Ghost Towns scraper — extracts truly abandoned ghost towns and saves
-them as a JSON file ready for import into Prescia Maps.
+them as a JSON file ready for import into Aurik.
 
 Extraction order (tries each until one succeeds):
 
@@ -867,7 +867,7 @@ def normalise(
     source: str,
     confidence: float,
 ) -> List[Dict[str, Any]]:
-    """Convert raw extracted records to the Prescia Maps import format."""
+    """Convert raw extracted records to the Aurik import format."""
     out: List[Dict[str, Any]] = []
     for entry in raw:
         name = entry.get("name", "").strip()
@@ -898,7 +898,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         description=(
             "Scrape FRRandP ghost towns from Google My Maps or the FRRandP blog, "
             "filter for truly abandoned zero-population towns, and save as "
-            "JSON ready for import into Prescia Maps."
+            "JSON ready for import into Aurik."
         )
     )
     parser.add_argument(

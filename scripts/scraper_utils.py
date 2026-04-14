@@ -1,5 +1,5 @@
 """
-Shared utilities for Prescia Maps scraper scripts.
+Shared utilities for Aurik scraper scripts.
 
 Provides common patterns used by all three scrapers:
 - Checkpoint save/load/resume
@@ -358,7 +358,7 @@ class RateLimiter:
 _WIKI_API_URL = "https://en.wikipedia.org/w/api.php"
 _WIKI_HEADERS = {
     "User-Agent": (
-        "prescia_maps/1.0 (historical research; "
+        "aurik/1.0 (historical research; "
         "https://github.com/prescia-ai/Prescia_maps)"
     )
 }

@@ -1,5 +1,5 @@
 """
-Prescia Maps – FastAPI route definitions.
+Aurik – FastAPI route definitions.
 
 All routes are mounted under the ``/api/v1`` prefix defined in
 ``main.py``.  Each endpoint relies on an injected async SQLAlchemy

@@ -35,7 +35,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-2 mb-6">
           <span className="text-2xl">🗺️</span>
-          <h1 className="text-stone-900 text-xl font-bold">Prescia Maps</h1>
+          <h1 className="text-stone-900 text-xl font-bold">Aurik</h1>
         </div>
         <h2 className="text-stone-800 text-lg font-semibold mb-6">Sign in to your account</h2>
 

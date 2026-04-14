@@ -8,7 +8,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     """
-    Runtime settings for the Prescia Maps backend.
+    Runtime settings for the Aurik backend.
 
     Values are read from environment variables first, then from a ``.env``
     file in the working directory (if present).
@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     )
 
     DATABASE_URL: str = (
-        "postgresql+asyncpg://postgres:password@localhost:5432/prescia_maps"
+        "postgresql+asyncpg://postgres:password@localhost:5432/aurik"
     )
     MAPBOX_TOKEN: str = ""
 
@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     NPS_API_KEY: str = ""
 
     # Geocoding
-    GEOCODING_USER_AGENT: str = "prescia_maps/1.0"
+    GEOCODING_USER_AGENT: str = "aurik/1.0"
     GEOCODING_RATE_LIMIT: float = 1.0  # seconds between requests
 
     # Scraper

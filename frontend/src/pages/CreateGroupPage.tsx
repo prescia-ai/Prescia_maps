@@ -11,7 +11,7 @@ export default function CreateGroupPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = 'Create Group – Prescia Maps';
+    document.title = 'Create Group – Aurik';
   }, []);
 
   async function handleSubmit(e: React.FormEvent) {

@@ -3,7 +3,7 @@
 US Mines scraper — single source of truth for all mine data.
 
 Downloads the USGS Mineral Resources Data System (MRDS) bulk CSV and
-imports mine site records into the Prescia Maps database.
+imports mine site records into the Aurik database.
 
 Replaces mine data previously scattered across:
 - ``load_datasets.py`` (MINING_CAMPS, HISTORIC_TOWNS where type=mine)
@@ -351,7 +351,7 @@ async def run(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Import USGS MRDS mine records into Prescia Maps."
+        description="Import USGS MRDS mine records into Aurik."
     )
     parser.add_argument(
         "--state", metavar="XX", default=None,

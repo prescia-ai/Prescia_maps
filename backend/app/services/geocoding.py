@@ -27,7 +27,7 @@ _cache: dict[str, Optional[Tuple[float, float]]] = {}
 _CACHE_PATH = Path(
     os.environ.get(
         "GEOCODE_CACHE_PATH",
-        str(Path.home() / ".prescia_maps" / "geocode_cache.json"),
+        str(Path.home() / ".aurik" / "geocode_cache.json"),
     )
 )
 

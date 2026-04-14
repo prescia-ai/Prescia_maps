@@ -1,4 +1,4 @@
-# Prescia Maps — Historical Activity Mapping & Metal Detecting Intelligence
+# Aurik — Historical Activity Mapping & Metal Detecting Intelligence
 
 An interactive mapping system that aggregates historical location data (Civil War battles, ghost towns, historic trails, mines, forts) and computes interest scores to assist metal-detecting research.
 
@@ -244,7 +244,7 @@ Copy `backend/.env.example` to `backend/.env` and adjust as needed.
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `DATABASE_URL` | `postgresql+asyncpg://postgres:password@localhost:5432/prescia_maps` | Async SQLAlchemy connection string |
+| `DATABASE_URL` | `postgresql+asyncpg://postgres:password@localhost:5432/aurik` | Async SQLAlchemy connection string |
 | `MAPBOX_TOKEN` | *(empty)* | Optional Mapbox token for tile layers |
 | `NPS_API_KEY` | *(empty)* | API key for the NPS developer API ([get one free](https://www.nps.gov/subjects/developer/get-started.htm)) |
 | `SCORE_SEARCH_RADIUS_KM` | `10.0` | Default radius for scoring queries |

@@ -2,7 +2,7 @@
 SQLAlchemy async engine with PostGIS support.
 
 Sets up the database connection, ORM models, and table creation
-for the Prescia Maps historical intelligence system.
+for the Aurik historical intelligence system.
 """
 
 import enum
@@ -233,7 +233,7 @@ class User(Base):
     google_refresh_token = Column(Text, nullable=True)  # Encrypted refresh token
     google_connected_at = Column(DateTime(timezone=True), nullable=True)
     google_email = Column(String(255), nullable=True)  # The Google account email they connected
-    google_folder_id = Column(String(255), nullable=True)  # Google Drive "Prescia Maps" folder ID
+    google_folder_id = Column(String(255), nullable=True)  # Google Drive "Aurik" folder ID
     avatar_url = Column(String(500), nullable=True)  # Public Google Drive thumbnail URL
 
     badges = relationship("UserBadge", back_populates="user", lazy="select")

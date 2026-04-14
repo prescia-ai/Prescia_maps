@@ -29,7 +29,7 @@ from app.auth.google import (
     _DRIVE_FILES_URL,
     build_google_auth_url,
     encrypt_token,
-    ensure_prescia_folder,
+    ensure_aurik_folder,
     exchange_code_for_tokens,
     fetch_google_user_email,
     get_valid_access_token,
@@ -142,7 +142,7 @@ async def google_drive_status(
     """Return the Google Drive connection status for the current user.
 
     If connected, also verifies the token is still valid and ensures the
-    Prescia Maps folder exists.
+    Aurik folder exists.
     """
     if not current_user.google_refresh_token:
         return {
@@ -156,7 +156,7 @@ async def google_drive_status(
     has_folder = False
     try:
         access_token = await get_valid_access_token(current_user, db)
-        await ensure_prescia_folder(access_token, user=current_user, db=db)
+        await ensure_aurik_folder(access_token, user=current_user, db=db)
         has_folder = True
     except HTTPException:
         # Token revoked or Drive unavailable — has_folder stays False.
@@ -244,8 +244,8 @@ async def upload_avatar(
     # 2. Get a valid access token
     access_token = await get_valid_access_token(current_user, db)
 
-    # 3. Ensure the Prescia Maps folder exists
-    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+    # 3. Ensure the Aurik folder exists
+    folder_id = await ensure_aurik_folder(access_token, user=current_user, db=db)
 
     # 4. Delete old avatar if one exists
     if current_user.avatar_url:
@@ -262,7 +262,7 @@ async def upload_avatar(
 
     # 5. Upload the file to Google Drive using multipart upload
     metadata = json.dumps({"name": file_name, "parents": [folder_id]}).encode()
-    boundary = "prescia_avatar_boundary"
+    boundary = "aurik_avatar_boundary"
     body = (
         f"--{boundary}\r\n"
         f"Content-Type: application/json; charset=UTF-8\r\n\r\n"
@@ -397,7 +397,7 @@ async def upload_post_images(
         raise HTTPException(status_code=400, detail="Post already has images. Delete existing images first.")
 
     access_token = await get_valid_access_token(current_user, db)
-    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+    folder_id = await ensure_aurik_folder(access_token, user=current_user, db=db)
 
     created_images: List[PostImage] = []
     for i, (contents, ct) in enumerate(file_data):
@@ -472,7 +472,7 @@ async def upload_pin_images(
         raise HTTPException(status_code=400, detail="Pin already has images. Delete existing images first.")
 
     access_token = await get_valid_access_token(current_user, db)
-    folder_id = await ensure_prescia_folder(access_token, user=current_user, db=db)
+    folder_id = await ensure_aurik_folder(access_token, user=current_user, db=db)
 
     created_images: List[PinImage] = []
     for i, (contents, ct) in enumerate(file_data):

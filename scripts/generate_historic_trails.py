@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate historic trails GeoJSON and landmarks JSON for the Prescia Maps project.
+"""Generate historic trails GeoJSON and landmarks JSON for the Aurik project.
 
 Writes two files to the output directory:
   - historic_trails.geojson

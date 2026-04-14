@@ -1,1 +1,1 @@
-"""Authentication package for Prescia Maps."""
+"""Authentication package for Aurik."""
