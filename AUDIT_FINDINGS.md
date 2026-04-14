@@ -1,4 +1,4 @@
-# Prescia Maps — PRs #61–#71 End-to-End Audit
+# Aurik — PRs #61–#71 End-to-End Audit
 
 **Audit Date:** 2026-04-10
 **Commit:** `362eb74670053d15b66591bf46b89537f5559eff`
@@ -57,7 +57,7 @@ A comprehensive file-by-file inspection of 17 backend source files and 14 fronte
 - ✅ **`fetch_google_user_email`**: Fetches userinfo from Google. Raises 400 on failure.
 - ✅ **`refresh_access_token`**: Exchanges refresh token for new access token. Raises 502 on failure.
 - ✅ **`get_valid_access_token`**: Decrypts refresh token, calls `refresh_access_token`. On revocation (HTTPException), clears all google fields on the User and raises 401. Raises 400 if no token stored.
-- ✅ **`ensure_prescia_folder`**: Checks cached folder ID first (verifies not trashed), then searches Drive, then creates. Caches result on User row if `user` and `db` provided.
+- ✅ **`ensure_aurik_folder`**: Checks cached folder ID first (verifies not trashed), then searches Drive, then creates. Caches result on User row if `user` and `db` provided.
 - ✅ **`upload_file_to_drive`**: Multipart upload to Drive with `uploadType=multipart`. Sets file public via permissions API. Returns file ID.
 - ✅ **`GET /google/auth-url`**: Returns consent URL with user ID as `state`. Auth required.
 - ✅ **`GET /google/callback`**: Browser redirect endpoint (no JWT). Exchanges code, fetches email, persists encrypted refresh token. Redirects to `{FRONTEND_URL}/profile/settings?google=connected` on success or `?google=error` on failure.

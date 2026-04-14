@@ -91,7 +91,7 @@ NPS_TRAILS_PAGE_SIZE = 200
 
 _HEADERS = {
     "User-Agent": (
-        "prescia_maps/1.0 (historical research; "
+        "aurik/1.0 (historical research; "
         "https://github.com/prescia-ai/Prescia_maps)"
     )
 }

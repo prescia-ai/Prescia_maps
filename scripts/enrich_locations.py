@@ -52,7 +52,7 @@ except ImportError:
 _WIKI_API_URL = "https://en.wikipedia.org/w/api.php"
 _WIKI_HEADERS = {
     "User-Agent": (
-        "prescia_maps/1.0 (historical enrichment; "
+        "aurik/1.0 (historical enrichment; "
         "https://github.com/prescia-ai/Prescia_maps)"
     )
 }

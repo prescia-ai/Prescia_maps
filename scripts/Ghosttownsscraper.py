@@ -118,7 +118,7 @@ BATCH_SIZE = 500
 _LOA_BASE = "https://www.legendsofamerica.com"
 _LOA_STATES_PATH = "/ghost-towns/"
 _LOA_USER_AGENT = (
-    "prescia_maps/1.0 (historical research; "
+    "aurik/1.0 (historical research; "
     "https://github.com/prescia-ai/Prescia_maps)"
 )
 
@@ -840,7 +840,7 @@ async def run(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Import ghost towns & abandoned places into Prescia Maps."
+        description="Import ghost towns & abandoned places into Aurik."
     )
     parser.add_argument(
         "--state", metavar="XX", default=None,

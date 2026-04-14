@@ -2410,7 +2410,7 @@ def _setup_logging() -> None:
 
 def _build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Fetch or generate an abandoned churches dataset for Prescia Maps."
+        description="Fetch or generate an abandoned churches dataset for Aurik."
     )
     parser.add_argument(
         "--output-dir",

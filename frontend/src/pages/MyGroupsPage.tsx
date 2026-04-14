@@ -43,7 +43,7 @@ export default function MyGroupsPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = 'My Groups – Prescia Maps';
+    document.title = 'My Groups – Aurik';
     fetchMyGroups()
       .then((data: { groups: Group[]; total: number }) => setGroups(data.groups))
       .catch(() => setError('Failed to load groups.'))

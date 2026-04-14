@@ -60,7 +60,7 @@ export default function ProfileSetupPage() {
         <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
           <div className="flex items-center gap-2 mb-6">
             <span className="text-2xl">🗺️</span>
-            <h1 className="text-stone-900 text-xl font-bold">Prescia Maps</h1>
+            <h1 className="text-stone-900 text-xl font-bold">Aurik</h1>
           </div>
           <h2 className="text-stone-800 text-lg font-semibold mb-2">Connect Google Drive</h2>
           <p className="text-stone-500 text-sm mb-6">
@@ -99,7 +99,7 @@ export default function ProfileSetupPage() {
       <div className="w-full max-w-md bg-white border border-stone-200 rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-2 mb-6">
           <span className="text-2xl">🗺️</span>
-          <h1 className="text-stone-900 text-xl font-bold">Prescia Maps</h1>
+          <h1 className="text-stone-900 text-xl font-bold">Aurik</h1>
         </div>
         <h2 className="text-stone-800 text-lg font-semibold mb-2">Set up your profile</h2>
         <p className="text-stone-500 text-sm mb-6">Choose a username to get started.</p>

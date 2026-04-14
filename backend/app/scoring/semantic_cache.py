@@ -4,7 +4,7 @@ Disk-based cache for pre-computed semantic multipliers.
 Stores {location_id: {multiplier, text_hash}} so restarting the server
 does not re-run the HuggingFace model for unchanged locations.
 
-Cache file: ~/.prescia_maps/semantic_scores.json
+Cache file: ~/.aurik/semantic_scores.json
 """
 
 from __future__ import annotations
@@ -28,7 +28,7 @@ def _cache_path() -> Path:
     env_path = os.environ.get("SEMANTIC_CACHE_PATH")
     if env_path:
         return Path(env_path)
-    return Path.home() / ".prescia_maps" / "semantic_scores.json"
+    return Path.home() / ".aurik" / "semantic_scores.json"
 
 
 # ---------------------------------------------------------------------------

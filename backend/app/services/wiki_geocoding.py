@@ -28,14 +28,14 @@ _cache: Dict[str, Optional[Tuple[float, float]]] = {}
 _sem = asyncio.Semaphore(10)  # Wikipedia allows much higher concurrency than Nominatim
 
 _HEADERS = {
-    "User-Agent": "prescia_maps/1.0 (historical research; https://github.com/prescia-ai/Prescia_maps)"
+    "User-Agent": "aurik/1.0 (historical research; https://github.com/prescia-ai/Prescia_maps)"
 }
 
 # Persistent disk cache path (override via WIKI_GEOCODE_CACHE_PATH env var)
 _CACHE_PATH = Path(
     os.environ.get(
         "WIKI_GEOCODE_CACHE_PATH",
-        str(Path.home() / ".prescia_maps" / "wiki_geocode_cache.json"),
+        str(Path.home() / ".aurik" / "wiki_geocode_cache.json"),
     )
 )
 

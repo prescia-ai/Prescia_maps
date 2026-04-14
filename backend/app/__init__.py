@@ -1,1 +1,1 @@
-"""Backend package for Prescia Maps Historical Intelligence System."""
+"""Backend package for Aurik Historical Intelligence System."""

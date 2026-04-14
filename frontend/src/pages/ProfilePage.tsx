@@ -157,7 +157,7 @@ export default function ProfilePage() {
         <p className="text-4xl">🔍</p>
         <h1 className="text-xl font-semibold text-stone-900">Profile not found</h1>
         <p className="text-stone-500 text-sm">
-          @{username} doesn't exist on Prescia Maps yet.
+          @{username} doesn't exist on Aurik yet.
         </p>
       </div>
     );

@@ -252,12 +252,12 @@ async def get_valid_access_token(user: User, db: AsyncSession) -> str:
 _DRIVE_FILES_URL = "https://www.googleapis.com/drive/v3/files"
 
 
-async def ensure_prescia_folder(
+async def ensure_aurik_folder(
     access_token: str,
     user: Optional[User] = None,
     db: Optional[AsyncSession] = None,
 ) -> str:
-    """Find or create the ``Prescia Maps`` folder in the user's Google Drive.
+    """Find or create the ``Aurik`` folder in the user's Google Drive.
 
     If ``user`` and ``db`` are provided, the folder ID is cached on the User
     row so future calls skip the Drive search.  If the cached folder is
@@ -270,7 +270,7 @@ async def ensure_prescia_folder(
         db:           Optional async session required when ``user`` is given.
 
     Returns:
-        The Google Drive folder ID for the ``Prescia Maps`` folder.
+        The Google Drive folder ID for the ``Aurik`` folder.
 
     Raises:
         HTTPException(502): If any Google Drive API request fails.
@@ -295,10 +295,10 @@ async def ensure_prescia_folder(
         user.google_folder_id = None
 
     # ------------------------------------------------------------------
-    # 2. Search for an existing "Prescia Maps" folder in Drive root.
+    # 2. Search for an existing "Aurik" folder in Drive root.
     # ------------------------------------------------------------------
     query = (
-        "name='Prescia Maps' "
+        "name='Aurik' "
         "and mimeType='application/vnd.google-apps.folder' "
         "and 'root' in parents "
         "and trashed=false"
@@ -329,7 +329,7 @@ async def ensure_prescia_folder(
                 params={"fields": "id"},
                 headers={**headers, "Content-Type": "application/json"},
                 json={
-                    "name": "Prescia Maps",
+                    "name": "Aurik",
                     "mimeType": "application/vnd.google-apps.folder",
                 },
             )
@@ -376,7 +376,7 @@ async def upload_file_to_drive(
 
     headers = {"Authorization": f"Bearer {access_token}"}
     metadata = _json.dumps({"name": file_name, "parents": [folder_id]}).encode()
-    boundary = "prescia_upload_boundary"
+    boundary = "aurik_upload_boundary"
     body = (
         f"--{boundary}\r\n"
         f"Content-Type: application/json; charset=UTF-8\r\n\r\n"

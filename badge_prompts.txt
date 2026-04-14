@@ -1,5 +1,5 @@
 ========================================================
-PRESCIA MAPS — AI IMAGE PROMPTS FOR ALL ACHIEVEMENT BADGES
+AURIK — AI IMAGE PROMPTS FOR ALL ACHIEVEMENT BADGES
 ========================================================
 
 All badges follow the same base specification:

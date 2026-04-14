@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Battle seed loader — imports pre-verified US battle locations from
-``data/battles_seed.json`` into the Prescia Maps ``locations`` table.
+``data/battles_seed.json`` into the Aurik ``locations`` table.
 
 Usage::
 
