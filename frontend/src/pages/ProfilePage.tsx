@@ -8,10 +8,11 @@ import ImageLightbox from '../components/ImageLightbox';
 import CollectionLightbox from '../components/CollectionLightbox';
 import CollectionUploadModal from '../components/CollectionUploadModal';
 import api from '../api/client';
-import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto } from '../api/client';
-import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto } from '../types';
+import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto, fetchUserBadges } from '../api/client';
+import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto, Badge, BadgeCategory } from '../types';
+import BadgeDisplay from '../components/BadgeDisplay';
 
-type ActiveTab = 'activity' | 'hunts' | 'collection' | 'followers';
+type ActiveTab = 'activity' | 'hunts' | 'collection' | 'followers' | 'badges';
 type FollowSubTab = 'followers' | 'following';
 
 function formatMemberSince(dateStr: string | null): string {
@@ -24,6 +25,18 @@ function formatHuntDate(dateStr: string): string {
   const d = new Date(dateStr);
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
+
+const CATEGORY_LABELS: Record<BadgeCategory, string> = {
+  hunt_milestone: 'Hunt Milestones',
+  finds: 'Finds',
+  sites: 'Historic Sites',
+  score: 'Scoring',
+  community: 'Community Contribution',
+  social: 'Social',
+  geographic: 'Geographic',
+};
+
+const CATEGORY_ORDER: BadgeCategory[] = ['hunt_milestone', 'finds', 'sites', 'score', 'community', 'social', 'geographic'];
 
 export default function ProfilePage() {
   const { username } = useParams<{ username: string }>();
@@ -48,6 +61,8 @@ export default function ProfilePage() {
   const [collectionLoading, setCollectionLoading] = useState(false);
   const [collectionLightboxIndex, setCollectionLightboxIndex] = useState<number | null>(null);
   const [showUploadModal, setShowUploadModal] = useState(false);
+  const [userBadges, setUserBadges] = useState<Badge[]>([]);
+  const [badgesLoading, setBadgesLoading] = useState(false);
 
   const isOwnProfile = myProfile?.username === username;
 
@@ -119,6 +134,16 @@ export default function ProfilePage() {
         setCollectionTotal(0);
       })
       .finally(() => setCollectionLoading(false));
+  }, [username, activeTab]);
+
+  // Fetch user badges when badges tab is active
+  useEffect(() => {
+    if (!username || activeTab !== 'badges') return;
+    setBadgesLoading(true);
+    fetchUserBadges(username)
+      .then((badges) => setUserBadges(badges))
+      .catch(() => setUserBadges([]))
+      .finally(() => setBadgesLoading(false));
   }, [username, activeTab]);
 
   async function handleFollow() {
@@ -302,7 +327,7 @@ export default function ProfilePage() {
           <div className="space-y-0">
             {/* Tab bar */}
             <div role="tablist" className="flex border-b border-stone-200">
-              {(['activity', 'hunts', 'collection', 'followers'] as ActiveTab[]).map((tab) => (
+              {(['activity', 'hunts', 'collection', 'badges', 'followers'] as ActiveTab[]).map((tab) => (
                 <button
                   key={tab}
                   role="tab"
@@ -530,6 +555,52 @@ export default function ProfilePage() {
                       <p className="text-stone-400 text-sm">
                         {followSubTab === 'followers' ? 'No followers yet' : 'Not following anyone yet'}
                       </p>
+                    </div>
+                  )}
+                </div>
+              )}
+              {activeTab === 'badges' && (
+                <div className="flex flex-col gap-6">
+                  {badgesLoading ? (
+                    <div className="flex justify-center py-8">
+                      <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
+                    </div>
+                  ) : userBadges.length > 0 ? (
+                    <div className="space-y-6">
+                      {CATEGORY_ORDER.map((category) => {
+                        const categoryBadges = userBadges.filter((b) => b.category === category);
+                        if (categoryBadges.length === 0) return null;
+
+                        return (
+                          <div key={category}>
+                            <h3 className="text-stone-700 font-semibold text-sm mb-3">
+                              {CATEGORY_LABELS[category]}
+                            </h3>
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+                              {categoryBadges.map((badge) => (
+                                <div key={badge.id} className="flex flex-col items-center gap-2">
+                                  <BadgeDisplay badge={badge} earned={true} size="lg" />
+                                  <p className="text-stone-700 text-xs font-medium text-center leading-tight truncate max-w-full">
+                                    {badge.name}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-3 py-8 text-center">
+                      <svg className="w-8 h-8 text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                      <p className="text-stone-400 text-sm">No badges earned yet</p>
+                      {isOwnProfile && (
+                        <Link to="/badges" className="text-amber-700 text-sm hover:text-amber-600 transition-colors">
+                          View all badges →
+                        </Link>
+                      )}
                     </div>
                   )}
                 </div>
