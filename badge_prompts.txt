@@ -789,7 +789,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 27. YEAR-LONG DETECTORIST ]---
-
+---[ file:54F64423-B215-479E-897B-28C78EE4FC2E.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -822,7 +822,7 @@ SPECIAL EVENT BADGES
 ========================================================
 
 ---[ 28. NIGHT HUNTER ]---
----[ file: ]---
+---[ file:8EDC9DC3-02FE-4E5F-9B75-DBD39ECB2527.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -851,7 +851,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 29. DAWN PATROL ]---
----[ file: ]---
+---[ file: 3FB6A091-CD5D-4455-8463-C2C21FDCA7D8.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
