@@ -728,7 +728,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 25. WEEKEND WARRIOR ]---
-
+---[ file:BD2EEC79-E66D-4B67-B558-7AE288CFD347.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -757,7 +757,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 26. SEASONAL HUNTER ]---
-
+--[ file:EFEECA8E-48D2-47A5-BB32-5055E480C14D.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
