@@ -880,7 +880,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 30. STORM CHASER ]---
----[ file: ]---
+---[ file:86923B0E-13EA-4171-B779-9464C2B67CA2.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -909,7 +909,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 31. FIRST SNOW ]---
----[ file: ]---
+---[ file:D3DE9936-C1D5-48AD-BF33-1C0E40C314C3.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -942,7 +942,7 @@ RARITY / VALUE BADGES
 ========================================================
 
 ---[ 32. SILVER STREAK ]---
----[ file: ]---
+---[ file:061302AA-D444-4F8F-ADDC-983777155D9E.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
