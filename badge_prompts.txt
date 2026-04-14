@@ -1364,7 +1364,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 46. EARLY BIRD ]---
----[ file: ]---
+---[ file:C636E674-F8EB-48B6-913A-8ADDC228455D.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1393,7 +1393,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 47. MOONLIGHTER ]---
----[ file: ]---
+---[ file:45234C5B-7974-4861-B3DA-895C7ACB8E92.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1426,7 +1426,7 @@ CONSERVATION BADGES
 ========================================================
 
 ---[ 48. TRASH COLLECTOR ]---
----[ file: ]---
+---[ file:133A322B-ECBA-4BCA-9A2C-1BBF64BE34D9.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1455,7 +1455,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 49. LEAVE NO TRACE ]---
----[ file: ]---
+---[ file:1FA4510C-7ECF-44F1-9783-C646414662DF.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
