@@ -818,5 +818,671 @@ TECHNICAL:
 - No text on badge
 
 ========================================================
+SPECIAL EVENT BADGES
+========================================================
+
+---[ 28. NIGHT HUNTER ]---
+---[ file: A3F1C2D4-7E89-4B56-9F12-3D8E7A1B4C90.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the crescent moon to extend beyond the top point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Deep midnight blue diamond base with silver/white accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A metal detector coil with a glowing beam of light pointing downward
+- A crescent moon positioned above the detector, extending past the top diamond point
+- Small stars scattered in the background within the diamond
+- Silhouette of grass or ground line at the bottom of the diamond
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 29. DAWN PATROL ]---
+---[ file: B5D2E1F3-8A90-4C67-A023-4E9F8B2C5D01.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the rising sun rays to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Warm amber/orange diamond base with bright yellow accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A half-circle sunrise with bold rays shooting upward, the topmost ray extending past the diamond point
+- A metal detector silhouette standing against the sunrise in the lower half of the diamond
+- Flat horizon line dividing the badge, ground below and sky above
+- Optional: Small bird silhouette in the upper corner
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 30. STORM CHASER ]---
+---[ file: C6E3F2A4-9B01-4D78-B134-5FA0C3D6E112.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the lightning bolt to extend beyond the top and bottom points of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Dark charcoal/storm grey diamond base with electric yellow accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold jagged lightning bolt cutting diagonally through the diamond, extending beyond the top and bottom points
+- Heavy rain lines in the background rendered as short parallel diagonal strokes
+- A cloud shape at the top of the diamond partially overlapping the upper edge
+- Metal detector coil silhouette at the bottom, partially hidden by the storm
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 31. FIRST SNOW ]---
+---[ file: D7F4A3B5-0C12-4E89-C245-6AB1D4E7F223.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the snowflake tips to extend beyond the top and side points of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Icy white/pale blue diamond base with deep teal accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A large geometric snowflake with six arms, tips extending beyond the diamond boundary
+- A small metal detector coil at the bottom center, partially dusted with snow
+- Small dot snowflakes scattered in the background
+- Optional: Flat snow-covered ground line at the bottom of the diamond
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+RARITY / VALUE BADGES
+========================================================
+
+---[ 32. SILVER STREAK ]---
+---[ file: E8A5B4C6-1D23-4F90-D356-7BC2E5F8A334.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the coin stack to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Cool silver/light grey diamond base with white highlight accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A stack of silver coins, the topmost coin extending past the diamond's top point
+- A metallic sheen stripe across the coins rendered as a single bold white stripe
+- Ten small coin silhouettes arranged in an arc in the background indicating the "10 silver items" milestone
+- Optional: Small metal detector coil at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 33. COPPER KING ]---
+---[ file: F9B6C5D7-2E34-4A01-E467-8CD3F6A9B445.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the crown to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Rich copper/burnt orange diamond base with dark brown accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold king's crown rendered in copper tone, extending above the top diamond point
+- A large copper coin centered beneath the crown inside the diamond
+- Small coin silhouettes in the background arranged as a pattern of fifty
+- The crown tips pierce through the upper diamond edge
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 34. RARE FIND ]---
+---[ file: A0C7D6E8-3F45-4B12-F578-9DE4A7B0C556.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the magnifying glass handle to extend beyond the bottom edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Deep burgundy/wine red diamond base with antique gold accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A magnifying glass centered on the diamond, its handle extending beyond the bottom point
+- Inside the magnifying glass: a small ancient coin or relic icon
+- Subtle age marks or cracks pattern on the coin suggesting 100+ years
+- Decorative antique border lines framing the interior of the diamond
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 35. JACKPOT ]---
+---[ file: B1D8E7F9-4A56-4C23-A689-0EF5B8C1D667.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the dollar sign or coins to burst beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Vivid emerald green diamond base with gold/yellow accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold oversized dollar sign in gold, bursting upward through the top diamond point
+- Several coin shapes radiating outward from the center like an explosion
+- Small star burst or sparkle shapes scattered around the coins
+- Optional: A small treasure chest silhouette at the base of the diamond
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+LOCATION DIVERSITY BADGES
+========================================================
+
+---[ 36. BEACH COMBER ]---
+---[ file: C2E9F8A0-5B67-4D34-B790-1FA6C9D2E778.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the wave crest to extend beyond the left and right edges of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Ocean blue diamond base with sandy beige/tan accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold stylized wave shape cutting across the middle of the diamond, wave tips extending past the side points
+- A metal detector coil partially submerged in the wave
+- Small shell and sea star silhouettes in the background
+- Sandy ground texture at the bottom rendered as a flat tan stripe
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 37. FOREST WANDERER ]---
+---[ file: D3FA09B1-6C78-4E45-C801-2AB7D0E3F889.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the tallest tree tip to extend beyond the top point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Forest green diamond base with earthy brown accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: Three geometric pine trees in the center, the tallest one extending above the top diamond point
+- A metal detector partially hidden behind the base of the trees
+- Simple ground line with small dots representing forest floor debris
+- Optional: Small mushroom or leaf silhouette at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 38. URBAN EXPLORER ]---
+---[ file: E4AB10C2-7D89-4F56-D912-3BC8E1F4A990.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the tallest building to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Steel grey/dark slate diamond base with neon cyan accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold city skyline made of geometric rectangular buildings, the tallest skyscraper extending past the top diamond point
+- A metal detector coil positioned in front of the buildings at street level
+- Small square windows dotting the buildings as simple geometric shapes
+- Optional: A manhole cover or sidewalk pattern at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+EQUIPMENT / TECHNIQUE BADGES
+========================================================
+
+---[ 39. PINPOINTER PRO ]---
+---[ file: F5BC21D3-8E90-4067-E023-4CD9F2A5BA01.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the pinpointer device tip to extend beyond the bottom point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Vivid orange diamond base with white and black accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold pinpointer probe device angled diagonally, its tip extending past the bottom diamond point
+- A small ping/signal wave emanating from the probe tip
+- Three small coin or relic silhouettes arranged near the tip indicating successful finds
+- Optional: Simple ground cross-section lines showing the probe going underground
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 40. GRID MASTER ]---
+---[ file: A6CD32E4-9F01-4178-F134-5DE0A3B6CB12.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the grid lines to extend slightly past all four edges of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Deep navy blue diamond base with bright white accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold grid pattern filling the diamond interior, the grid lines extending slightly past the diamond edges
+- A small metal detector top-view icon in the center of the grid
+- A check mark or done indicator on one grid cell showing completion
+- Optional: Small compass rose in a corner of the grid
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 41. DEEP DIG ]---
+---[ file: B7DE43F5-0A12-4289-A245-6EF1B4C7DC23.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the shovel handle to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Rich earth brown diamond base with bright yellow accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A shovel plunged deep into the ground, its handle extending above the top diamond point
+- A cross-section of earth layers shown in the lower half of the diamond (topsoil stripe, subsoil stripe)
+- A small glowing find or coin at the very bottom, below the deepest layer
+- Ruler or depth marker lines beside the cross-section indicating 12+ inches
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+COLLABORATION BADGES
+========================================================
+
+---[ 42. TEAM PLAYER ]---
+---[ file: C8EF54A6-1B23-4390-B356-7FA2C5D8ED34.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the two figures to extend slightly beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Warm coral/red diamond base with cream/off-white accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: Two simplified human silhouettes side by side, both holding metal detectors, their heads extending past the top diamond point
+- The figures are mirrored or facing the same direction to show partnership
+- A small high-five or handshake icon between the two figures
+- Simple ground line at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 43. GROUP LEADER ]---
+---[ file: D9F065B7-2C34-4401-C467-8AB3D6E9FE45.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the leader figure to extend beyond the top point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Royal purple diamond base with gold accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: One taller leader figure in the center front holding a metal detector high, extending past the top diamond point, with four smaller figures arranged behind them
+- A small star or badge icon on the leader figure to denote authority
+- The five figures are arranged in a V-formation pointing forward
+- Simple ground line at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 44. MENTOR ]---
+---[ file: EA0176C8-3D45-4512-D578-9BC4E7FA0F56.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the guiding hand or light beam to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Warm golden yellow diamond base with deep teal accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A large hand guiding a smaller hand holding a metal detector, the guiding arm extending above the top diamond point
+- Three small star shapes emanating from the scene representing the three people mentored
+- Simple ground line at the base of the diamond
+- Optional: A small lightbulb or spark icon near the mentee figure
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+TIME / DEDICATION BADGES
+========================================================
+
+---[ 45. MARATHON DETECTORIST ]---
+---[ file: FB1287D9-4E56-4623-E689-0CD5F8AB1067.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the clock hands or arc to extend beyond the top point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Deep crimson red diamond base with white and black accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold circular clock face showing 8 o'clock, the clock frame's top arc extending past the top diamond point
+- A metal detector silhouette overlapping the clock face at the center
+- Small sweat drop or energy zap symbol to indicate exhaustion and endurance
+- Optional: A finish-line ribbon or banner at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 46. EARLY BIRD ]---
+---[ file: AC2398EA-5F67-4734-F790-1DE6A9BC2178.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the bird silhouette to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Soft sky blue diamond base with bright sunrise yellow accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold bird silhouette in flight, wings extended, the bird body or wingtip extending past the top diamond point
+- A small clock face in the lower left showing before 8am
+- A thin horizon line with a half-circle sunrise below the bird
+- A metal detector coil near the bottom of the diamond on the ground
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 47. MOONLIGHTER ]---
+---[ file: BD34A9FB-6A78-4845-A801-2EF7B0CD3289.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the full moon to extend beyond the top point of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Dark navy/indigo diamond base with pale yellow moon accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A bold full moon circle at the top, extending past the diamond's top point
+- A metal detector silhouette below the moon, scanning the ground
+- Small five-pointed stars scattered in the background within the diamond
+- A small clock icon in the lower corner showing after 8pm
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
+CONSERVATION BADGES
+========================================================
+
+---[ 48. TRASH COLLECTOR ]---
+---[ file: CE45BAC0-7B89-4956-B912-3FA8C1DE4390.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the trash bag or recycling symbol to extend beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Vivid lime green diamond base with dark charcoal accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A large trash bag tied at the top, the bag knot or handle extending past the top diamond point
+- A metal detector coil beside the bag, indicating finds were sorted
+- Small geometric trash shapes (can, bolt, wire piece) scattered in the background
+- A recycling arrow symbol or Earth icon at the base
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+---[ 49. LEAVE NO TRACE ]---
+---[ file: DF56CBD1-8C90-4067-CA23-4AB9D2EF5401.png]---
+Create a vector-style achievement badge with the following specifications:
+
+SHAPE & STRUCTURE:
+- Diamond shape (square rotated 45 degrees)
+- Clean, bold color block design
+- Transparent background (PNG format)
+- Allow the shovel or patch of grass to extend slightly beyond the top edge of the diamond
+
+STYLE:
+- Flat vector illustration style
+- Color palette: Rich forest green diamond base with bright white accent
+- Simple geometric shapes with clean edges
+- No gradients - solid color blocks only
+- Modern, game-like aesthetic
+
+IMAGERY:
+- Central icon: A small green turf patch being placed back over a filled hole, the patch of grass extending slightly past the top diamond point
+- A shovel beside the patch, angled as if just used to fill the hole
+- A bold checkmark or thumbs-up overlaid to signal proper practice
+- Simple dirt ground texture at the base rendered as a flat brown stripe
+
+TECHNICAL:
+- High resolution (at least 1024x1024px)
+- PNG format with transparent background
+- Vector-friendly design (clean shapes, no complex textures)
+- No text on badge
+
+========================================================
 END OF BADGE PROMPTS
 ========================================================
