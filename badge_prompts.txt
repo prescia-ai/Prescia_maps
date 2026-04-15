@@ -971,7 +971,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 33. COPPER KING ]---
----[ file: ]---
+---[ file:489167A5-79C2-4ABA-AA94-34D6B6654977.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1000,7 +1000,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 34. RARE FIND ]---
----[ file: ]---
+---[ file:2BF09FED-D947-48DD-988D-7ACEBB55EB69.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1029,7 +1029,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 35. JACKPOT ]---
----[ file: ]---
+---[ file:5EEF6215-08A5-4936-A58F-B8C48689FA6A.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1062,7 +1062,7 @@ LOCATION DIVERSITY BADGES
 ========================================================
 
 ---[ 36. BEACH COMBER ]---
----[ file: ]---
+---[ file:ED63E475-083A-4FA3-9760-32DBCF698142.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1091,7 +1091,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 37. FOREST WANDERER ]---
----[ file: ]---
+---[ file:3C261864-F1F1-4260-AFE1-B20143B6BFD5.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1120,7 +1120,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 38. URBAN EXPLORER ]---
----[ file: ]---
+---[ file:2D9B7BC9-64F3-4F23-B18C-35869DB60E1E.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
