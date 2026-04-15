@@ -163,6 +163,7 @@ export default function FeedPage() {
                 <Avatar
                   username={profile?.username ?? user.email ?? 'user'}
                   displayName={profile?.display_name}
+                  avatarUrl={profile?.avatar_url}
                   size="sm"
                 />
                 <textarea
