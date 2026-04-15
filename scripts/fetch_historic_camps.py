@@ -48,7 +48,7 @@ HISTORIC_CAMPS: list[dict] = [
             "urban development now covers most of the original town, but the surrounding river bluffs have "
             "yielded coins, wagon hardware, and personal effects from the emigration era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -69,7 +69,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Private lands near the original townsite have produced trade goods, wagon hardware, and coins "
             "from the emigrant era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -91,7 +91,7 @@ HISTORIC_CAMPS: list[dict] = [
             "layer. BLM and private lands surrounding the old fort area have produced military buttons, "
             "coins, and trade goods from this period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -112,7 +112,7 @@ HISTORIC_CAMPS: list[dict] = [
             "farmland has occasionally yielded wagon hardware, coins, and emigrant personal effects through "
             "agricultural activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -133,7 +133,7 @@ HISTORIC_CAMPS: list[dict] = [
             "personal effects, and period material culture in the immediate area. Private farmland "
             "surrounding the historical site has produced scattered emigrant-era artifacts over the years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -154,7 +154,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the riverbanks held a concentration of dropped, discarded, and buried emigrant material. BLM "
             "and private lands at the crossing area have produced coins, wagon parts, and trail hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -176,7 +176,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Springs site is on BLM-administered land and is considered an excellent candidate for metal "
             "detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -197,7 +197,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the 1850s and 1860s. Private farmland in the area has produced emigrant-era coins, hardware, "
             "and personal items through decades of agricultural activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -219,7 +219,7 @@ HISTORIC_CAMPS: list[dict] = [
             "campsite given its water and grass resources. BLM land at the confluence has produced trade "
             "goods, beads, and annuity items from the treaty era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -240,7 +240,7 @@ HISTORIC_CAMPS: list[dict] = [
             "BLM-administered land along Deer Creek has produced trade goods, coins, and emigrant hardware "
             "from this prolific camp area."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -262,7 +262,7 @@ HISTORIC_CAMPS: list[dict] = [
             "buried camp material well, and detectorists have found coins and trail hardware in adjacent "
             "areas."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -283,7 +283,7 @@ HISTORIC_CAMPS: list[dict] = [
             "company suffered catastrophic losses in an early October snowstorm near this site. BLM land at "
             "the ridge has preserved a concentration of abandoned trail hardware and personal effects."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -305,7 +305,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding flats have produced coins, wagon hardware, and personal effects dropped during the "
             "fording operations."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -327,7 +327,7 @@ HISTORIC_CAMPS: list[dict] = [
             "grass. BLM land at the confluence has produced trade goods, coins, and mixed emigrant and fur "
             "trade material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -349,7 +349,7 @@ HISTORIC_CAMPS: list[dict] = [
             "ford and camp areas have recovered coins, wagon hardware, and personal items from the emigrant "
             "period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -370,7 +370,7 @@ HISTORIC_CAMPS: list[dict] = [
             "and Mormon routes. BLM and private lands in the area preserve a rich material record from "
             "decades of emigrant use."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -392,7 +392,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding the spring area has produced trail hardware, coins, and camp material from the "
             "extensive emigrant occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -413,7 +413,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Falls Reservoir, created in the 1920s, though the surrounding uplands on private and BLM land "
             "preserve material from the camp era above the inundation line."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -435,7 +435,7 @@ HISTORIC_CAMPS: list[dict] = [
             "excellent camping potential, and the area has produced mixed Oregon and California Trail "
             "material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -456,7 +456,7 @@ HISTORIC_CAMPS: list[dict] = [
             "multi-day camps at the falls. BLM and private lands near the falls area have produced trade "
             "goods, fishing hardware, and emigrant camp material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -477,7 +477,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Detectorists working the ford banks and adjacent camp flats have found wagon hardware, personal "
             "effects, and coins from the emigrant period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -498,7 +498,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the Birch Creek drainage has produced trail hardware and emigrant material from the active camp "
             "years of the 1840s-1860s."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -519,7 +519,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the area. BLM-administered land throughout the valley preserves excellent camp material "
             "potential from the emigrant era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -539,7 +539,7 @@ HISTORIC_CAMPS: list[dict] = [
             "desert. The junction saw peak traffic from 1849-1855. BLM land surrounding the historic camp "
             "area has produced trail hardware, coins, and Gold Rush-era material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -560,7 +560,7 @@ HISTORIC_CAMPS: list[dict] = [
             "around the springs. The surrounding BLM desert preserves a remarkable concentration of "
             "abandoned trail material including wagon parts, personal effects, and the bones of livestock."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -580,7 +580,7 @@ HISTORIC_CAMPS: list[dict] = [
             "area simultaneously at peak season. BLM-administered land in the Humboldt River valley near the "
             "historic meadow preserves good camp material potential from the intensive emigrant period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -601,7 +601,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Humboldt Sink area preserves an exceptional concentration of abandoned trail material from the "
             "Gold Rush emigration period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -622,7 +622,7 @@ HISTORIC_CAMPS: list[dict] = [
             "intensive use over multiple years. Private farmland in the Garden Grove area has preserved "
             "material from the Mormon emigrant occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -643,7 +643,7 @@ HISTORIC_CAMPS: list[dict] = [
             "partially preserved by the LDS Church, but surrounding private farmland retains material from "
             "the extensive camp use."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -663,7 +663,7 @@ HISTORIC_CAMPS: list[dict] = [
             "of 1846-1852. Private farmland in the area surrounding the historic creek crossing has produced "
             "emigrant-era material through agricultural activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -684,7 +684,7 @@ HISTORIC_CAMPS: list[dict] = [
             "critical refugee period of 1846. The surrounding area has produced period material through "
             "construction activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -704,7 +704,7 @@ HISTORIC_CAMPS: list[dict] = [
             "camped for multiple days. Private farmland in the Loup Fork area has preserved emigrant and "
             "Native American trade material from the camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -725,7 +725,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Springs. Private farmland surrounding the historic spring site has produced Santa Fe Trail "
             "trade goods, Mexican coins, and hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -745,7 +745,7 @@ HISTORIC_CAMPS: list[dict] = [
             "through the end of the trail era in the 1870s. Private farmland in the Lost Spring area has "
             "produced Santa Fe Trail-era trade goods, military equipment, and Mexican silver coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -765,7 +765,7 @@ HISTORIC_CAMPS: list[dict] = [
             "farmland on both banks of the historic ford has produced Santa Fe Trail trade goods, military "
             "buttons, and Mexican and American coins from the decades of camp use."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -785,7 +785,7 @@ HISTORIC_CAMPS: list[dict] = [
             "reorganized for whichever route they chose. The crossing area sits on private farmland that has "
             "produced trail-era artifacts including military buttons, trade goods, and coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -805,7 +805,7 @@ HISTORIC_CAMPS: list[dict] = [
             "on top of the civilian trail camp record. Private and BLM land in the area has produced Santa "
             "Fe Trail trade goods, military equipment, and coins from the active trail years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -825,7 +825,7 @@ HISTORIC_CAMPS: list[dict] = [
             "mid-19th century. BLM and private land at the historic crossing has produced Santa Fe Trail-era "
             "trade goods, fur trade material, and military equipment."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -846,7 +846,7 @@ HISTORIC_CAMPS: list[dict] = [
             "has produced Santa Fe Trail trade goods, Mexican silver, and military equipment from the "
             "dangerous Cimarron crossing."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -866,7 +866,7 @@ HISTORIC_CAMPS: list[dict] = [
             "continuous traffic through the Civil War era. Private and BLM land in the Flag Spring area has "
             "produced Santa Fe Trail-era trade goods and coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -886,7 +886,7 @@ HISTORIC_CAMPS: list[dict] = [
             "from the 1820s through the trail's active years. Private and BLM land at the base of the Rabbit "
             "Ears formation has produced Santa Fe Trail trade goods and camp material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -906,7 +906,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Rayado site is now within the Philmont Scout Ranch property, which restricts detecting access, "
             "but the historical significance of the camp is well documented."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -925,7 +925,7 @@ HISTORIC_CAMPS: list[dict] = [
             "use from the 1820s through the trail's active period. Private farmland in the Ocate Creek "
             "drainage has produced Santa Fe Trail-era trade goods and camp material from the decades of use."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -947,7 +947,7 @@ HISTORIC_CAMPS: list[dict] = [
             "working the area with landowner permission have found military buttons, coins, and camp "
             "hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -968,7 +968,7 @@ HISTORIC_CAMPS: list[dict] = [
             "landowner permission have found military insignia, coins, and accoutrements from the Lee-era "
             "occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -989,7 +989,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Detectorists have found camel bells, military hardware, and period coins at sites near the "
             "original post area."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -1010,7 +1010,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Military buttons, cartridge casings, and coins from both the antebellum and Reconstruction "
             "occupation periods have been found nearby."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -1030,7 +1030,7 @@ HISTORIC_CAMPS: list[dict] = [
             "The site preserves stone wall ruins on private ranch land. Archaeological survey has documented "
             "a rich material record including military equipment, coins, and camp hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -1050,7 +1050,7 @@ HISTORIC_CAMPS: list[dict] = [
             "evidence. Private ranch land in the Uvalde County area surrounding the historic camp site has "
             "produced military equipment and coins from the early frontier period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1070,7 +1070,7 @@ HISTORIC_CAMPS: list[dict] = [
             "is intermixed with the modern small town on private land. Period military hardware, coins, and "
             "camp material have been found in the surrounding ranch country."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -1090,7 +1090,7 @@ HISTORIC_CAMPS: list[dict] = [
             "preserves military camp material in the San Saba River valley. Private ranch land in the area "
             "has produced military buttons and coins from the early frontier occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1110,7 +1110,7 @@ HISTORIC_CAMPS: list[dict] = [
             "region. BLM and private land surrounding the remote camp site has preserved military equipment "
             "and late-frontier material from the 14-year occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1130,7 +1130,7 @@ HISTORIC_CAMPS: list[dict] = [
             "military material in the Sterling County ranch country. Private land in the area has produced "
             "late frontier-era military equipment and coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -1149,7 +1149,7 @@ HISTORIC_CAMPS: list[dict] = [
             "crossing and supply route through the Trans-Pecos. The remote private ranch land location has "
             "preserved military camp material from the post-Civil War frontier occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1169,7 +1169,7 @@ HISTORIC_CAMPS: list[dict] = [
             "farmland in the Gonzales County area has produced military hardware from the early Texas "
             "frontier period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -1189,7 +1189,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Verde County location on private ranch land has preserved military camp material from the "
             "frontier period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -1210,7 +1210,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Otter Creek area has preserved military material from this brief but historically significant "
             "camp."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1230,7 +1230,7 @@ HISTORIC_CAMPS: list[dict] = [
             "spring site preserves excellent camp material potential from the early Arizona territorial "
             "military period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1250,7 +1250,7 @@ HISTORIC_CAMPS: list[dict] = [
             "activity during General Crook's operations in the region. BLM and private land in the Date "
             "Creek drainage has preserved military material from the camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1270,7 +1270,7 @@ HISTORIC_CAMPS: list[dict] = [
             "campaign. Tonto National Forest land surrounds the historic camp area, and detecting is "
             "permitted on National Forest lands with appropriate permissions."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1289,7 +1289,7 @@ HISTORIC_CAMPS: list[dict] = [
             "location on BLM and private land has preserved military camp material from the Arizona Indian "
             "Wars period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -1309,7 +1309,7 @@ HISTORIC_CAMPS: list[dict] = [
             "site. The camp area has produced military equipment and coins from the Arizona Indian Wars "
             "period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1329,7 +1329,7 @@ HISTORIC_CAMPS: list[dict] = [
             "fort. BLM and private land in the Prescott area preserves material from the early territorial "
             "military period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -1349,7 +1349,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Army's first attempt to pacify the Tucson basin. The surrounding desert areas have produced "
             "military material from the territorial period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1369,7 +1369,7 @@ HISTORIC_CAMPS: list[dict] = [
             "years of 1881-1886. Private and BLM land in the Gila River valley near the camp site has "
             "produced military equipment and coins from the active years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1389,7 +1389,7 @@ HISTORIC_CAMPS: list[dict] = [
             "country. Private land in the area has preserved camp material from the territorial military "
             "period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -1408,7 +1408,7 @@ HISTORIC_CAMPS: list[dict] = [
             "highlands. BLM-administered desert land surrounding the historic depot site preserves military "
             "supply camp material from the Arizona territorial period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.72,
     },
     # ------------------------------------------------------------------ #
@@ -1428,7 +1428,7 @@ HISTORIC_CAMPS: list[dict] = [
             "land permits metal detecting with appropriate authorization, making this an accessible historic "
             "military site."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1448,7 +1448,7 @@ HISTORIC_CAMPS: list[dict] = [
             "decade-long Apache War. Private ranch land in the Canadian River valley has preserved military "
             "material from the camp's active years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1467,7 +1467,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Burgwin, killed in the 1847 Taos Pueblo revolt. The site is now an archaeological research "
             "station on private land associated with Southern Methodist University."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -1486,7 +1486,7 @@ HISTORIC_CAMPS: list[dict] = [
             "final Victorio War. The camp was a critical node in the final Apache Wars. BLM-administered "
             "land near the historic Warm Springs site preserves military material from the camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1506,7 +1506,7 @@ HISTORIC_CAMPS: list[dict] = [
             "country. BLM and private land in the area has preserved camp equipment from the territorial "
             "military period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -1525,7 +1525,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Walk to Bosque Redondo. BLM-administered land in the area preserves military material from the "
             "critical Civil War-era New Mexico campaign."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1545,7 +1545,7 @@ HISTORIC_CAMPS: list[dict] = [
             "footprint on private land. The earliest camp material is the most historically interesting "
             "element of the Stanton site."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1566,7 +1566,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding the Fort Harker site has produced military equipment and coins from both the camp "
             "and fort periods."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1586,7 +1586,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Washita. Private and BLM land in the Ellsworth County area has preserved military material from "
             "this brief but historically significant camp."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -1606,7 +1606,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding the historic camp area near present-day Fort Supply has produced military "
             "equipment, coins, and campaign material from the 27-year occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -1626,7 +1626,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Plains Indian War raids that followed the Sand Creek Massacre. Private and urban land at the "
             "historic site has produced military material from the camp and early fort periods."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1646,7 +1646,7 @@ HISTORIC_CAMPS: list[dict] = [
             "foothills surrounding the historic camp area has produced military material from California's "
             "early statehood military period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -1666,7 +1666,7 @@ HISTORIC_CAMPS: list[dict] = [
             "land adjacent to the Hoopa Valley Reservation has produced military buttons, coins, and "
             "equipment from the extended camp occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1686,7 +1686,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Visalia's western outskirts. Private and urban land in the Tulare County area has produced "
             "Civil War-era military material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -1705,7 +1705,7 @@ HISTORIC_CAMPS: list[dict] = [
             "critical mountain pass in southern California. Private land in the Riverside County area "
             "surrounding the historic camp site has produced Civil War military material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -1725,7 +1725,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Territory. BLM-administered land along the Missouri River near the camp site has preserved "
             "military material from the short but active occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1745,7 +1745,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Piegan Blackfeet village on the Marias River. BLM and private land in the Smith River valley "
             "has preserved military material from the camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1765,7 +1765,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding BLM-administered high desert land is open for metal detecting and has produced "
             "military equipment, coins, and campaign material from the extensive occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -1785,7 +1785,7 @@ HISTORIC_CAMPS: list[dict] = [
             "John Day country is open for metal detecting and preserves military material from the camp "
             "occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1805,7 +1805,7 @@ HISTORIC_CAMPS: list[dict] = [
             "accessible for metal detecting, and the remote site has produced military material from the "
             "early Oregon Indian Wars period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1824,7 +1824,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the Snake War. National Forest land in the Warner Valley area permits metal detecting with "
             "appropriate authorizations, making this an accessible historic military site."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1843,7 +1843,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Civil War. BLM-administered grassland in Cochise County near the historic Babocomari Creek site "
             "has preserved military material from the early Arizona Indian Wars period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -1863,7 +1863,7 @@ HISTORIC_CAMPS: list[dict] = [
             "NPS Fort Bowie National Historic Site. Private land in the Graham County area has produced "
             "early Civil War-era military material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.72,
     },
     # ------------------------------------------------------------------ #
@@ -1882,7 +1882,7 @@ HISTORIC_CAMPS: list[dict] = [
             "skirmish with Arapahos near the camp in 1870. BLM-administered land near the South Pass gold "
             "field area surrounds the historic camp site and is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1904,7 +1904,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding St. Louis suburban area has produced Civil War material through construction "
             "activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -1925,7 +1925,7 @@ HISTORIC_CAMPS: list[dict] = [
             "and urban land at the historic Cairo waterfront area has produced Civil War material from the "
             "Union camp occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1945,7 +1945,7 @@ HISTORIC_CAMPS: list[dict] = [
             "left an extensive material record. Private farmland surrounding the historic camp site has "
             "produced Civil War military equipment and coins from the wartime occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1965,7 +1965,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Urban development has covered the historic camp site, but the surrounding Indianapolis area has "
             "produced Civil War material through construction."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -1986,7 +1986,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Henry's Fork confluence is accessible for metal detecting and has produced trade goods, pipe "
             "tomahawks, and fur trade material from the rendezvous era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2006,7 +2006,7 @@ HISTORIC_CAMPS: list[dict] = [
             "and private land in the Cache Valley area has produced fur trade material including trade "
             "beads, iron trade goods, and Hudson's Bay Company items from the rendezvous period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -2026,7 +2026,7 @@ HISTORIC_CAMPS: list[dict] = [
             "BLM-administered land at the south end of Bear Lake is accessible for metal detecting and has "
             "produced outstanding fur trade material from the two-year rendezvous occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2047,7 +2047,7 @@ HISTORIC_CAMPS: list[dict] = [
             "detecting and has produced trade goods, beads, and fur trade hardware from both rendezvous "
             "years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2067,7 +2067,7 @@ HISTORIC_CAMPS: list[dict] = [
             "in the Wind River valley near the historic rendezvous site has produced fur trade material from "
             "the 1830 gathering."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -2087,7 +2087,7 @@ HISTORIC_CAMPS: list[dict] = [
             "resources made it a preferred recurring rendezvous location. BLM and private land in the Cache "
             "Valley area has produced fur trade material from multiple rendezvous occupations."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -2108,7 +2108,7 @@ HISTORIC_CAMPS: list[dict] = [
             "appropriate authorization and has produced fur trade and battle material from this landmark "
             "event."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.92,
     },
     # ------------------------------------------------------------------ #
@@ -2129,7 +2129,7 @@ HISTORIC_CAMPS: list[dict] = [
             "fur trade material including trade beads, pipe tomahawks, Hudson's Bay Company trade blanket "
             "remnants, and coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2149,7 +2149,7 @@ HISTORIC_CAMPS: list[dict] = [
             "confluence is accessible for metal detecting and has produced mixed American and British fur "
             "trade material from the competitive 1834 gathering."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -2169,7 +2169,7 @@ HISTORIC_CAMPS: list[dict] = [
             "area of Sublette County is accessible and has produced fur trade material from the 1835 "
             "rendezvous."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -2189,7 +2189,7 @@ HISTORIC_CAMPS: list[dict] = [
             "assembled mountain men and Native traders. BLM land at Horse Creek has produced outstanding "
             "rendezvous-era fur trade material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2209,7 +2209,7 @@ HISTORIC_CAMPS: list[dict] = [
             "near Daniel, Wyoming is accessible for metal detecting and preserves material from this "
             "historically documented gathering."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2228,7 +2228,7 @@ HISTORIC_CAMPS: list[dict] = [
             "was beginning its collapse. BLM land in the Popo Agie area near Lander is accessible and has "
             "produced rendezvous-era trade material from the 1829 and 1838 gatherings at this location."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -2248,7 +2248,7 @@ HISTORIC_CAMPS: list[dict] = [
             "rendezvous site has produced fur trade material from multiple rendezvous years at this "
             "recurring location."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -2268,7 +2268,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the 1840 rendezvous site is accessible for metal detecting and preserves material from this "
             "historic final gathering."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2288,7 +2288,7 @@ HISTORIC_CAMPS: list[dict] = [
             "BLM-administered land at the Big Horn-Yellowstone confluence is accessible for metal detecting "
             "and has produced trade goods, Hudson's Bay Company items, and fur trade material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -2308,7 +2308,7 @@ HISTORIC_CAMPS: list[dict] = [
             "historic post site is accessible for metal detecting and has produced AFC trade goods and fur "
             "trade material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -2328,7 +2328,7 @@ HISTORIC_CAMPS: list[dict] = [
             "effects on the trade goods distributed to Native trading partners. Private farmland near the "
             "historic Fort Union area has preserved material from the competing post occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2348,7 +2348,7 @@ HISTORIC_CAMPS: list[dict] = [
             "watched, killing 90% of the nation. Private farmland at the Fort Clark State Historic Site area "
             "preserves material from this pivotal trading post."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -2368,7 +2368,7 @@ HISTORIC_CAMPS: list[dict] = [
             "and lies partially under the modern town of Fort Benton on private and urban land. The "
             "surrounding Chouteau County area has produced AFC trade goods from the early camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -2388,7 +2388,7 @@ HISTORIC_CAMPS: list[dict] = [
             "permits metal detecting with appropriate authorization, making this an accessible and "
             "historically rich fur trade site."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.9,
     },
     # ------------------------------------------------------------------ #
@@ -2408,7 +2408,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Northwest fur trade and later the emigrant trail era. Private farmland near the historic "
             "Wallula site has produced HBC trade goods and North West Company material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -2428,7 +2428,7 @@ HISTORIC_CAMPS: list[dict] = [
             "the Hope, Idaho area on Lake Pend Oreille has produced early 19th-century trade material from "
             "the North West Company period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     # ------------------------------------------------------------------ #
@@ -2448,7 +2448,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Northwest geography. Flathead National Forest land near the historic post area permits "
             "detecting with appropriate authorization."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.87,
     },
     # ------------------------------------------------------------------ #
@@ -2468,7 +2468,7 @@ HISTORIC_CAMPS: list[dict] = [
             "farmland near the historic confluence site has produced Pacific Fur Company, North West "
             "Company, and HBC trade material spanning the full trading post era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.88,
     },
     # ------------------------------------------------------------------ #
@@ -2489,7 +2489,7 @@ HISTORIC_CAMPS: list[dict] = [
             "material record. Huron National Forest land in the Au Sable watershed is accessible for metal "
             "detecting and has produced logging camp hardware, coins, and personal effects."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -2509,7 +2509,7 @@ HISTORIC_CAMPS: list[dict] = [
             "reaches employed thousands of men. Manistee National Forest land in the upper river watershed "
             "is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2529,7 +2529,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Huron-Manistee National Forest land in the Muskegon headwaters area is accessible for metal "
             "detecting and has produced logging camp material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2549,7 +2549,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Midland County private land with landowner permission has produced logging era camp hardware "
             "and coins."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2568,7 +2568,7 @@ HISTORIC_CAMPS: list[dict] = [
             "land in the Rifle River watershed is accessible for metal detecting and has produced logging "
             "camp hardware and coins from the 1870s-1890s peak era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2588,7 +2588,7 @@ HISTORIC_CAMPS: list[dict] = [
             "of lumberjacks. Chequamegon National Forest land in the upper Chippewa watershed is accessible "
             "for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -2608,7 +2608,7 @@ HISTORIC_CAMPS: list[dict] = [
             "river corridor has produced logging era camp hardware and personal effects from the active camp "
             "years."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2628,7 +2628,7 @@ HISTORIC_CAMPS: list[dict] = [
             "land in the upper Wolf watershed is accessible for metal detecting and has produced mixed "
             "Native American trade material and logging era camp hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2647,7 +2647,7 @@ HISTORIC_CAMPS: list[dict] = [
             "The upper Namekagon watershed is also part of the National Scenic Riverway. Chequamegon "
             "National Forest land in the Namekagon watershed is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2666,7 +2666,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Leech Lake. Chippewa National Forest land in the Pine River watershed is accessible for metal "
             "detecting and has produced logging camp hardware and coins from the extensive camp occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2686,7 +2686,7 @@ HISTORIC_CAMPS: list[dict] = [
             "attention to land status. Superior National Forest land in the Rainy Lake area is accessible "
             "for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -2706,7 +2706,7 @@ HISTORIC_CAMPS: list[dict] = [
             "watershed is accessible for metal detecting and has produced logging and mining era camp "
             "hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2726,7 +2726,7 @@ HISTORIC_CAMPS: list[dict] = [
             "on the extensive Great Northern/Weyerhaeuser legacy lands is required but the camps produced "
             "rich material including coins, tools, and camp hardware."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2746,7 +2746,7 @@ HISTORIC_CAMPS: list[dict] = [
             "1870s-1910s. Private timber land in Somerset County has preserved camp material from the "
             "river-drive era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2766,7 +2766,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Moosehead watershed. Private timber land surrounding the historic lake logging area has "
             "produced camp material from the late 19th-century peak."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2785,7 +2785,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Aroostook interior for pulpwood and sawlogs. Private farmland and timber land in Aroostook "
             "County has produced logging camp hardware and personal effects from the active camp period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -2804,7 +2804,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Lancaster and St. Johnsbury. White Mountain National Forest land in the upper Connecticut "
             "valley near Colebrook is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2823,7 +2823,7 @@ HISTORIC_CAMPS: list[dict] = [
             "National Forest purchase ended private logging operations in the early 20th century. White "
             "Mountain National Forest land along the Swift River is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2843,7 +2843,7 @@ HISTORIC_CAMPS: list[dict] = [
             "distinctive material record in the river valleys. Private farmland in the Lamoille County river "
             "corridor has produced camp hardware and coins from the logging era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.72,
     },
     # ------------------------------------------------------------------ #
@@ -2863,7 +2863,7 @@ HISTORIC_CAMPS: list[dict] = [
             "logging trade. Private land in the Lewis County river valley has produced camp material from "
             "the tanning and logging era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -2883,7 +2883,7 @@ HISTORIC_CAMPS: list[dict] = [
             "surrounding the historic camp areas have produced logging camp hardware and personal effects "
             "from the peak era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2902,7 +2902,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Washington coastal logging boom. Private timber company land in the Pacific County hills has "
             "preserved logging camp material from the intensive harvest period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -2921,7 +2921,7 @@ HISTORIC_CAMPS: list[dict] = [
             "National Forest land in the Republic area is accessible for metal detecting and has produced "
             "logging camp and mining support material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.72,
     },
     # ------------------------------------------------------------------ #
@@ -2940,7 +2940,7 @@ HISTORIC_CAMPS: list[dict] = [
             "1890s-1930s. Private timber company land surrounding the historic camp areas has preserved "
             "logging camp hardware and personal effects from the peak harvest era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -2959,7 +2959,7 @@ HISTORIC_CAMPS: list[dict] = [
             "National Forest land in the Mapleton area is accessible for metal detecting and has produced "
             "logging camp hardware from the extensive camp occupation."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -2978,7 +2978,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Oregon State Forest property. Metal detecting regulations on Oregon State Forest land should be "
             "verified with the Oregon Department of Forestry before any detecting activity."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.72,
     },
     # ------------------------------------------------------------------ #
@@ -2998,7 +2998,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Greenbrier watershed is accessible for metal detecting and has produced logging camp hardware, "
             "coins, and personal effects from the intensive harvest period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.83,
     },
     # ------------------------------------------------------------------ #
@@ -3018,7 +3018,7 @@ HISTORIC_CAMPS: list[dict] = [
             "watershed is accessible for metal detecting and has produced logging and tanning era camp "
             "material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -3037,7 +3037,7 @@ HISTORIC_CAMPS: list[dict] = [
             "railroad logging center where standard gauge rails penetrated the highland wilderness. "
             "Monongahela National Forest land in the Black Fork watershed is accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -3057,7 +3057,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Wilderness Areas. Monongahela National Forest land outside the Cranberry Wilderness boundary is "
             "accessible for metal detecting."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     },
     # ------------------------------------------------------------------ #
@@ -3076,7 +3076,7 @@ HISTORIC_CAMPS: list[dict] = [
             "BLM land in the Nicholas County Gauley watershed not within the NRA boundary preserves logging "
             "camp material from the pre-impoundment period."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     # ------------------------------------------------------------------ #
@@ -3096,7 +3096,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Forest land in the Pigeon watershed is accessible for metal detecting and has produced logging "
             "camp hardware and company scrip from the Champion era."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.82,
     },
     # ------------------------------------------------------------------ #
@@ -3115,7 +3115,7 @@ HISTORIC_CAMPS: list[dict] = [
             "Andrews and Murphy. Nantahala National Forest land in the river gorge area is accessible for "
             "metal detecting and has produced logging camp hardware and personal effects."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.8,
     },
     # ------------------------------------------------------------------ #
@@ -3134,7 +3134,7 @@ HISTORIC_CAMPS: list[dict] = [
             "coalfields. Jefferson National Forest land in the Clinch River watershed near St. Paul is "
             "accessible for metal detecting and has produced mixed logging and coal camp era material."
         ),
-        "source": "historic_camps",
+        "source": "AURIK",
         "confidence": 0.78,
     }
 ]

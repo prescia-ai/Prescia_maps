@@ -126,7 +126,7 @@ function LocationMarkers({
     <>
       {features.map((f) => {
         const [lng, lat] = f.geometry.coordinates;
-        const { type, name, year, description, confidence } = f.properties;
+        const { type } = f.properties;
 
         // Filter by layer — check if this specific type has a per-type toggle.
         // If the type isn't in LayerState (unknown type), show it by default.
@@ -148,20 +148,7 @@ function LocationMarkers({
             eventHandlers={{
               click: () => onSelect(f),
             }}
-          >
-            <Popup>
-              <div className="min-w-[180px]">
-                <strong className="block text-sm">{name}</strong>
-                {year != null && <span className="text-xs text-gray-500">c. {year}</span>}
-                {description && <p className="text-xs mt-1">{description}</p>}
-                {confidence != null && (
-                  <p className="text-xs text-gray-400 mt-1">
-                    Confidence: {Math.round(confidence * 100)}%
-                  </p>
-                )}
-              </div>
-            </Popup>
-          </CircleMarker>
+          />
         );
       })}
     </>

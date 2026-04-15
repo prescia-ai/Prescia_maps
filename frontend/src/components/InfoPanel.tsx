@@ -42,7 +42,7 @@ function ConfidenceBar({ value }: { value: number }) {
 }
 
 export default function InfoPanel({ feature, onClose }: InfoPanelProps) {
-  const { name, type, year, description, source, confidence } = feature.properties;
+  const { name, type, year, description, source, confidence, detecting_weight } = feature.properties;
   const cfg = getTypeConfig(type);
 
   return (
@@ -89,6 +89,22 @@ export default function InfoPanel({ feature, onClose }: InfoPanelProps) {
 
         {/* Confidence */}
         {confidence != null && <ConfidenceBar value={confidence} />}
+
+        {/* Detecting Weight */}
+        {detecting_weight != null && (
+          <div className="mt-3">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-xs font-medium text-stone-700">⛏️ Metal Detecting Potential</span>
+              <span className="text-xs font-bold text-amber-600">{detecting_weight}/100</span>
+            </div>
+            <div className="w-full bg-stone-200 rounded-full h-2">
+              <div
+                className="bg-amber-500 h-2 rounded-full transition-all"
+                style={{ width: `${detecting_weight}%` }}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

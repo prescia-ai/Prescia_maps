@@ -439,7 +439,7 @@ def build_geojson(trails):
             "properties": {
                 "name": trail["name"],
                 "type": "trail",
-                "source": "seed:historic_trails",
+                "source": "AURIK",
                 "years": trail["years"],
                 "description": trail["description"],
             },
@@ -479,7 +479,7 @@ def main():
             "latitude": lm["latitude"],
             "longitude": lm["longitude"],
             "description": lm["description"],
-            "source": "seed:historic_trail_landmarks",
+            "source": "AURIK",
             "confidence": lm["confidence"],
             "trails": lm["trails"],
         }

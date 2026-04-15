@@ -19,6 +19,7 @@ export interface LocationProperties {
   description?: string | null;
   source?: string | null;
   confidence?: number | null; // 0–1
+  detecting_weight?: number | null; // 0–100
 }
 
 export type LocationFeature = Feature<Point, LocationProperties>;
