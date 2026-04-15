@@ -321,7 +321,7 @@ export default function MapView({
       {/* PAD-US land access overlay */}
       {layers.blm && (
         <TileLayer
-          url="https://gis.usgs.gov/arcgis/rest/services/PADUS3_0GAP_Status_Code/MapServer/tile/{z}/{y}/{x}"
+          url="https://gis1.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
           attribution="USGS PAD-US 3.0"
           opacity={0.4}
           zIndex={5}
