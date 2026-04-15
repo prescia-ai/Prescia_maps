@@ -88,7 +88,7 @@ def _geojson_feature_to_linear_feature(
         return None
 
     feat_type = props.get("type", "road")
-    source = props.get("source", "seed:stagecoach_routes")
+    source = props.get("source", "AURIK")
 
     return {
         "id": uuid.uuid4(),

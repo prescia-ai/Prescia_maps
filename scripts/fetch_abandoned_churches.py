@@ -85,7 +85,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "striking interior retains its dramatic color scheme despite decades of neglect, making "
             "it one of the most-photographed abandoned religious sites in the Rust Belt."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -103,7 +103,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "nearly 19,000-square-foot facility. Urban explorers documented its interior during "
             "its transitional period of abandonment before redevelopment plans emerged."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -122,7 +122,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "to vandalism. Despite landmark protection and its association with Saints John Neumann "
             "and Katharine Drexel, the church remains abandoned and hauntingly photogenic."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -142,7 +142,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "structurally extant, drawing film buffs and urban explorers to its dramatically "
             "decayed interior."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -162,7 +162,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "glimpse of mid-century Catholic institutional architecture, including original "
             "classroom fixtures, chapel furnishings, and gymnasium equipment."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -185,7 +185,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "the convent, rectory, and school buildings become residential apartments, preserving "
             "the complex's historic facades."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -205,7 +205,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stood for over twenty years before demolition crews began dismantling it in March "
             "2019, attracting urban explorers until its final days."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -225,7 +225,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Its prominent position on Detroit's main corridor makes it one of the most visible "
             "symbols of the city's abandoned ecclesiastical heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -245,7 +245,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "and well-preserved exterior masonry attract preservationists and urban explorers "
             "despite ongoing interior deterioration from roof leaks."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -265,7 +265,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "urban explorers documenting the loss of Philadelphia's dense network of neighborhood "
             "Catholic parishes."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -286,7 +286,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "its interior still exhibiting its remarkable original artistic program despite "
             "severe deterioration."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -308,7 +308,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "roofless shell remains standing along the Monongahela River valley, a somber monument "
             "to the Slovak-American industrial community that built it."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -329,7 +329,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "gilded altars and painted ceilings, attracts urban explorers and preservationists "
             "documenting the loss of Detroit's Polish ecclesiastical heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -349,7 +349,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "fire-damaged shell remains one of the most architecturally significant abandoned "
             "religious structures in St. Louis, noted for its outstanding Gothic Revival stonework."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -370,7 +370,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "additional notoriety as the site of alleged paranormal activity, while the church "
             "itself remains a well-documented abandoned structure overlooking the river valley."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -391,7 +391,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stonework and the roofline remains largely intact, making it a notable subject for "
             "architectural documentation and urban exploration."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -412,7 +412,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "is listed on the National Register of Historic Places and has attracted urban "
             "explorers and architectural historians to its monumental but deteriorating interior."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -432,7 +432,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "well-preserved exterior faces Lincoln Park and remains an iconic silhouette in one "
             "of Cleveland's most historically significant ethnic neighborhoods."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -453,7 +453,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "partially stabilized shell has attracted urban explorers and photographers documenting "
             "the broader story of New Orleans' uneven post-Katrina recovery."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -473,7 +473,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "landscape. The abandoned church stands as one of several dozen shuttered Catholic "
             "buildings that mark the north side of St. Louis as a landscape of ecclesiastical loss."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -494,7 +494,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "surviving murals to the open sky, has been extensively documented by urban "
             "exploration photographers as one of Buffalo's most dramatic abandoned religious sites."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -515,7 +515,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "vacant building has experienced progressive deterioration over three decades, "
             "documented as part of the broader story of Detroit's lost Polish Catholic heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -537,7 +537,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stand empty in a neighborhood undergoing significant gentrification, creating an "
             "incongruous historical remnant amid new residential development."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -558,7 +558,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "vacant for decades, documented by urban explorers as part of Detroit's extensive "
             "inventory of abandoned mid-century Catholic churches."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -580,7 +580,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "from deferred maintenance and vandalism, though substantial portions of the "
             "decorative interior remain for urban explorers to document."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -601,7 +601,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "The roofless ruin, designated a Chicago Landmark, remains standing with preservation "
             "efforts debating whether the walls can anchor a restored structure."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -624,7 +624,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "demolition, making it a historically charged remnant of a controversial urban "
             "renewal project."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -647,7 +647,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "documented by urban explorers as emblematic of the city's antebellum religious "
             "heritage loss."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -669,7 +669,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "interior have attracted architectural photographers and urban explorers interested "
             "in Newark's immigrant religious heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -691,7 +691,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "documented the interior, which retains fragments of original plasterwork, painted "
             "decorations, and ironwork despite years of neglect and vandalism."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -713,7 +713,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "an advanced state of deterioration, have drawn urban explorers documenting the "
             "extraordinary loss of Cleveland's Eastern European ethnic church heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -736,7 +736,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "of the dome interior remain partially intact, offering a rare surviving example of "
             "Moorish Revival religious architecture in the upper Midwest."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -759,7 +759,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "remaining visible from adjacent highways as reminders of the once-dense Polish "
             "neighborhood."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -781,7 +781,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "including original pews, confessionals, and stained-glass windows depicting the "
             "life of Christ."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -803,7 +803,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "explorers and appears in the Pittsburgh Post-Gazette's Silent Sanctuaries series on "
             "the city's abandoned religious buildings."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -826,7 +826,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "has attracted urban explorers interested in the rare Eastern Rite ecclesiastical "
             "architecture encountered in American cities."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -850,7 +850,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "the intact nave with its original pews, altar, and painted plaster ceiling, much "
             "of which remains undisturbed despite two decades of abandonment."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -873,7 +873,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "documented significant interior decay including collapsed plaster, failed roof "
             "sections, and extensive water damage to the remaining decorative elements."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -895,7 +895,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "outdoor masses and even weddings are held amid the ruins, with wildflowers growing "
             "along the former nave aisles."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -918,7 +918,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "as an emblem of failed homesteading on the Colorado plains, with its story contributing "
             "inspiration for James Michener's fictional settlement in the novel Centennial."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -942,7 +942,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "its Endangered Places list, and the local community has organized ongoing restoration "
             "efforts to stabilize and eventually rehabilitate the structure as a community center."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -966,7 +966,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "intact but deteriorating exterior, which has been documented by several Great Plains "
             "photography projects."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -989,7 +989,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Casa de Cura, set against the backdrop of the San Juan Mountains, draw photographers "
             "and religious pilgrims exploring the Sangre de Cristo National Heritage Area."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1012,7 +1012,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "heritage photography collections focusing on the San Luis Valley's distinctive "
             "network of abandoned Hispano mission architecture."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1036,7 +1036,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Luis Valley, photographed for its dramatic mountain backdrop and preserved vernacular "
             "architecture."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1062,7 +1062,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "attracting urban explorers and preservation advocates who document its continuing "
             "decay while campaigning for stabilization and adaptive reuse."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1085,7 +1085,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "as one of the few physical traces of the relocated Modoc community in northeastern "
             "Oklahoma."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1107,7 +1107,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "still-standing form in a changing section of Tulsa. Architectural and community "
             "documentation is maintained by the Abandoned Atlas Foundation and Abandoned Oklahoma."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1131,7 +1131,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "featured on Only In Your State as one of Oklahoma's most evocative abandoned religious "
             "sites."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1154,7 +1154,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Abandoned Oklahoma and the Abandoned Atlas Foundation have documented the site "
             "extensively in photography and video."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1177,7 +1177,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "represents the complex religious history of the southern Plains missions and their role "
             "in the cultural transitions of the late nineteenth and early twentieth centuries."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1201,7 +1201,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "as a recognized symbol of Black entrepreneurship and resilience, with the Oklahoma "
             "African American Educators Hall of Fame located there."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1224,7 +1224,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Oklahoma has documented Sparks's surviving and abandoned structures as a case study of "
             "the vanishing Oklahoma railroad town."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1247,7 +1247,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "construction in rural Oklahoma. The Abandoned Oklahoma and Abandoned Atlas Foundation "
             "websites have documented its ongoing decay."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1270,7 +1270,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "and destroyed the steeple, leaving the brick shell standing in the prairie as a "
             "poignant monument to the rise and fall of the Oklahoma farming frontier."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1295,7 +1295,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Oklahoma's Most Endangered Places and is recognized as a significant site in the "
             "history of Native American Christianity."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1317,7 +1317,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "with congregation splits and economic pressures. Abandoned Oklahoma documented the "
             "building's deteriorated state before its eventual demolition."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1339,7 +1339,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "church itself. The abandoned shell has been documented by Abandoned Oklahoma as an "
             "iconic rural relic in the rolling hills of Osage County."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1354,7 +1354,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "dissolved and the church was quietly abandoned. Original furnishings reportedly remain "
             "inside the weathered frame structure."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1370,7 +1370,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "left the church standing out of reverence. Only brick ruins and a museum chimney mark "
             "the site today."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1386,7 +1386,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "dormant. The historic building is periodically preserved by the Texas Swedish "
             "descendants organization."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1402,7 +1402,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "churches in neighboring towns. The roof has since caved in and the interior bears "
             "graffiti, but the exterior walls still stand on the wind-swept prairie."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1418,7 +1418,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "1971. The empty building subsequently served as a farm outbuilding before being "
             "abandoned."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1434,7 +1434,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "families remained. The original church building is preserved within the Nicodemus "
             "National Historic Site."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1450,7 +1450,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "adjacent Bloodland Cemetery survives inside the military reservation as a monument to "
             "the lost community."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1465,7 +1465,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "closed as its congregation dispersed to larger towns. The abandoned building is "
             "periodically featured in Missouri ghost-town photography projects."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1482,7 +1482,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "members by 1923. It is now a preserved ghost-town landmark maintained by the Rodney "
             "History and Preservation Society."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1498,7 +1498,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "is rarely used and stands as a testament to the antebellum religious landscape of the "
             "Natchez Trace corridor."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1514,7 +1514,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "last formal services in 1998 as membership dwindled. A 2020 tornado caused severe "
             "structural damage, and the building now stands in fragile ruin."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1530,7 +1530,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "in the 1940s. The preserved white-frame building and adjacent cemetery are among the "
             "most visited historic structures in Great Smoky Mountains National Park."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1546,7 +1546,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stands today as a restored historic structure with no active congregation, open to park "
             "visitors year-round."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1562,7 +1562,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "leaving the church unused for decades. A powerful windstorm in 2019 collapsed the "
             "structure, leaving only foundation remnants and the adjacent cemetery."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1578,7 +1578,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "The church is now a preserved structure in Bannack State Park, a Montana ghost town on "
             "the National Register of Historic Places."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1594,7 +1594,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "30 other structures are maintained by the Bureau of Land Management as an open-air "
             "heritage site."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1611,7 +1611,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "1994, the church and cemetery remain important genealogical sites for "
             "Norwegian-American descendants."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1627,7 +1627,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "alone on open rangeland and has been documented by regional photography projects "
             "focused on vanishing prairie religious architecture."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1644,7 +1644,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stands today as an icon of the Great Plains landscape, often photographed by travelers "
             "near Badlands National Park."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1660,7 +1660,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "stands largely abandoned on the open prairie, occasionally featured in studies of Great "
             "Plains ghost towns."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1676,7 +1676,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "which eventually dissolved. Listed on the National Register of Historic Places in 1999, "
             "the church is maintained as a local heritage landmark."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1693,7 +1693,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "preservation society. The structure is maintained as a cultural landmark and is "
             "occasionally open for heritage events."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1708,7 +1708,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "the congregation unable to sustain itself, and the church was closed and abandoned. The "
             "adjacent Rock Valle Cemetery contains graves dating to the 1890s settlement period."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1725,7 +1725,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "been partially incorporated into a United Ministries campus while the original nave "
             "remains largely vacant."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1741,7 +1741,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "infrequent and eventually ceased. The white-frame church and nearby cemetery are "
             "maintained by Norwegian-American descendants as a heritage site."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1758,7 +1758,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "National Register as part of the Central Mine Historic District, the building retains "
             "its original handmade pews."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1774,7 +1774,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "The white frame building, situated alongside an abandoned one-room schoolhouse, "
             "deteriorates amid farmland."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1790,7 +1790,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "last services in the mid-20th century. The simple frame building has been abandoned "
             "amid the Hoosier National Forest."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1806,7 +1806,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "subsequently abandoned. The structure stands today in weathered condition on private "
             "farmland."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1822,7 +1822,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "the Norsk Museum dedicated to Norwegian-American heritage. Listed on the National "
             "Register of Historic Places in 2016, it no longer functions as a house of worship."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1839,7 +1839,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Avenue. A tiny membership of around 80 occasionally gathers there, making it a living "
             "relic of a vanished prairie town."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1855,7 +1855,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "the town was effectively erased. The white-frame church with its red metal roof still "
             "stands beside the old cemetery as the last visible trace of Buckhorn."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1872,7 +1872,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "threshold. Preserved on the National Register of Historic Places since 1979, it is now "
             "maintained as a museum by the Arthur County Historical Society."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1888,7 +1888,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "abandoned and the building left to the elements. The ghost town retains a few "
             "structures including the silent church."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -1904,7 +1904,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "closed shortly thereafter. Now a Wyoming State Historic Site, the building is preserved "
             "and interpreted for visitors as part of one of the state's best-documented ghost towns."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1920,7 +1920,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "left standing, visible from Interstate 25. Its Spanish colonial–influenced bell tower "
             "still rises above the ruins."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1936,7 +1936,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "1920s. The structure is now in ruins alongside several other preserved buildings "
             "maintained by the Bureau of Land Management."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -1953,7 +1953,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "towns in the American West. The meetinghouse, pioneer homes, and cemetery are now "
             "preserved by the Grafton Heritage Partnership."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1969,7 +1969,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "connected communities, the town emptied by the late 1930s. It is now considered one of "
             "Idaho's best-preserved Mormon ghost towns and is listed on the National Register."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -1986,7 +1986,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "accessible by unpaved mountain road, with only a handful of seasonal residents; the "
             "church holds special masses occasionally."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2003,7 +2003,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "ruins are still visible in the canyon alongside Mark Twain's former cabin, now a "
             "bed-and-breakfast."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2019,7 +2019,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "buildings that collapsed or were dismantled for salvage. Ruins stand openly on Bureau "
             "of Land Management land alongside the iconic Bottle House."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2035,7 +2035,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "town was slowly abandoned through the 1970s. The church ruins are visible along the San "
             "Pedro Riparian National Conservation Area trail system."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2052,7 +2052,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "and gifted it to the Monticello Canyon Association for community use. Structural "
             "deterioration required demolition of the tower in 2025."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2068,7 +2068,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "a near-ghost town relic. The building still stands along the old highway as a landmark "
             "of New Mexico's Route 66 heritage."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2085,7 +2085,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "on the National Register of Historic Places, the substantial adobe walls remain a "
             "striking reminder of Spain's northern frontier."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2101,7 +2101,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "maintained by California State Parks in a policy of 'arrested decay,' the building "
             "retains original furnishings including its piano."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2117,7 +2117,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "months and the church was abandoned. Brick ruins of St. Charles Borromeo are preserved "
             "within the Shasta State Historic Park managed by California State Parks."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2133,7 +2133,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "thousand to under 100 by the late 19th century, and the church fell out of regular use. "
             "The historic stone building is now preserved in the Volcano ghost town district."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -2149,7 +2149,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "accelerated the collapse. The chapel is part of the Shaniko Historic District listed on "
             "the National Register and is occasionally used for special ceremonies."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2165,7 +2165,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "congregation dissolved and the community it served became a ghost town. The building is "
             "documented in Oregon historical archives and the Sherman County ghost town records."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
     {
@@ -2182,7 +2182,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "photographers and ghost-town explorers and is documented on Atlas Obscura and Spokane "
             "Historical."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2198,7 +2198,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "scattered foundations. A maintenance group of local descendants gathers annually for a "
             "Memorial Day service, one of the few remaining gatherings at the site."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.75,
     },
     {
@@ -2215,7 +2215,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "National Register of Historic Places in 1986, it is one of the least-altered antebellum "
             "rural churches in Alabama."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2232,7 +2232,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "National Register since 1982, it stands as a central artifact of one of the South's "
             "most evocative ghost towns."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2249,7 +2249,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "Register of Historic Places in 1979, the congregation now has very limited or no active "
             "membership."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.85,
     },
     {
@@ -2266,7 +2266,7 @@ SEED_CHURCHES: List[Dict[str, Any]] = [
             "now stands abandoned in the rural bayou landscape as a testament to the African "
             "American religious community of Reconstruction-era Louisiana."
         ),
-        "source": "obsidian_urbex_churches",
+        "source": "AURIK",
         "confidence": 0.65,
     },
 ]
@@ -2327,7 +2327,7 @@ def _parse_obsidian_html(html: str) -> List[Dict[str, Any]]:
                     "latitude": None,
                     "longitude": None,
                     "description": f"Abandoned religious building documented by Obsidian Urbex Photography. Source URL: {href}",
-                    "source": "obsidian_urbex_churches",
+                    "source": "AURIK",
                     "confidence": 0.65,
                 }
             )

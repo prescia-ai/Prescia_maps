@@ -6,7 +6,7 @@
       "properties": {
         "name": "Butterfield Overland Mail",
         "type": "road",
-        "source": "seed:stagecoach_routes"
+        "source": "AURIK"
       },
       "geometry": {
         "type": "LineString",
@@ -41,7 +41,7 @@
       "properties": {
         "name": "San Antonio and San Diego Mail Line",
         "type": "road",
-        "source": "seed:stagecoach_routes"
+        "source": "AURIK"
       },
       "geometry": {
         "type": "LineString",
@@ -65,7 +65,7 @@
       "properties": {
         "name": "Central Overland California and Pike's Peak Express",
         "type": "road",
-        "source": "seed:stagecoach_routes"
+        "source": "AURIK"
       },
       "geometry": {
         "type": "LineString",
@@ -91,7 +91,7 @@
       "properties": {
         "name": "Holladay Overland Mail and Express",
         "type": "road",
-        "source": "seed:stagecoach_routes"
+        "source": "AURIK"
       },
       "geometry": {
         "type": "LineString",
@@ -114,7 +114,7 @@
       "properties": {
         "name": "Overland Stage to Denver",
         "type": "road",
-        "source": "seed:stagecoach_routes"
+        "source": "AURIK"
       },
       "geometry": {
         "type": "LineString",
