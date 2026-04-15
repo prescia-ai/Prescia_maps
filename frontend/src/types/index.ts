@@ -247,12 +247,14 @@ export interface CollectionPhoto {
   user_id: string;
   url: string;
   caption: string | null;
+  find_type: string | null;
+  material: string | null;
   created_at: string;
 }
 
 // ── Badges ───────────────────────────────────────────────────────────────────
 
-export type BadgeCategory = 'hunt_milestone' | 'finds' | 'sites' | 'score' | 'community' | 'social' | 'geographic';
+export type BadgeCategory = 'hunt_milestone' | 'finds' | 'sites' | 'score' | 'community' | 'social' | 'geographic' | 'treasure_trove';
 export type BadgeRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
 
 export interface Badge {

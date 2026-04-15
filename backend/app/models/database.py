@@ -394,6 +394,8 @@ class CollectionPhoto(Base):
     drive_file_id = Column(String(255), nullable=False)
     url = Column(String(500), nullable=False)           # Public thumbnail URL
     caption = Column(Text, nullable=True)                # Optional description/caption
+    find_type = Column(String(50), nullable=True, index=True)   # coin, button, bullet, jewelry, buckle, tool, token, relic, other
+    material = Column(String(50), nullable=True, index=True)    # silver, gold, copper, brass, bronze, lead, iron, aluminum, nickel
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 

@@ -458,11 +458,19 @@ export async function fetchCollection(
 export async function uploadCollectionPhoto(
   file: File,
   caption?: string,
+  findType?: string,
+  material?: string,
 ): Promise<CollectionPhoto> {
   const formData = new FormData();
   formData.append('file', file);
   if (caption) {
     formData.append('caption', caption);
+  }
+  if (findType) {
+    formData.append('find_type', findType);
+  }
+  if (material) {
+    formData.append('material', material);
   }
   const { data } = await api.post<CollectionPhoto>(
     '/collection',
@@ -475,10 +483,12 @@ export async function uploadCollectionPhoto(
 export async function updateCollectionPhoto(
   photoId: string,
   caption: string | null,
+  findType?: string | null,
+  material?: string | null,
 ): Promise<CollectionPhoto> {
   const { data } = await api.put<CollectionPhoto>(
     `/collection/${photoId}`,
-    { caption },
+    { caption, find_type: findType, material },
   );
   return data;
 }

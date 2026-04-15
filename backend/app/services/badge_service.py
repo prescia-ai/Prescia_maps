@@ -81,6 +81,42 @@ async def check_all_badges(user_id: UUID, db: AsyncSession) -> List[Badge]:
             count = await _get_finds_count()
             earned = count >= threshold
 
+        elif criteria_type == "collection_type_count" and threshold is not None:
+            from app.models.database import CollectionPhoto
+            find_type = criteria.get("find_type")
+            r = await db.execute(
+                select(func.count()).select_from(CollectionPhoto).where(
+                    CollectionPhoto.user_id == user_id,
+                    CollectionPhoto.find_type == find_type,
+                )
+            )
+            earned = (r.scalar() or 0) >= threshold
+
+        elif criteria_type == "collection_material_count" and threshold is not None:
+            from app.models.database import CollectionPhoto
+            material = criteria.get("material")
+            r = await db.execute(
+                select(func.count()).select_from(CollectionPhoto).where(
+                    CollectionPhoto.user_id == user_id,
+                    CollectionPhoto.material == material,
+                )
+            )
+            earned = (r.scalar() or 0) >= threshold
+
+        elif criteria_type == "approved_submissions" and threshold is not None:
+            from app.models.database import PinSubmission
+            r = await db.execute(
+                select(func.count()).select_from(PinSubmission).where(
+                    PinSubmission.submitter_id == user_id,
+                    PinSubmission.status == "approved",
+                )
+            )
+            earned = (r.scalar() or 0) >= threshold
+
+        elif criteria_type in ("max_distance_traveled", "linear_feature_proximity"):
+            # TODO: PostGIS implementation
+            earned = False
+
         elif criteria_type in ("site_type", "score_threshold"):
             # Future implementation — skip for now
             earned = False
@@ -130,6 +166,17 @@ async def get_badge_progress(user_id: UUID, db: AsyncSession) -> list[dict]:
     )
     finds_count = finds_count_result.scalar() or 0
 
+    # Pre-compute approved submissions count
+    from app.models.database import PinSubmission
+    approved_submissions_result = await db.execute(
+        select(func.count()).select_from(PinSubmission).where(
+            PinSubmission.submitter_id == user_id,
+            PinSubmission.status == "approved",
+        )
+    )
+    approved_submissions = approved_submissions_result.scalar() or 0
+
+    from app.models.database import CollectionPhoto
     progress_list = []
     for badge in all_badges:
         criteria = badge.criteria or {}
@@ -140,6 +187,26 @@ async def get_badge_progress(user_id: UUID, db: AsyncSession) -> list[dict]:
             current_value = hunt_count
         elif criteria_type == "finds_count":
             current_value = finds_count
+        elif criteria_type == "approved_submissions":
+            current_value = approved_submissions
+        elif criteria_type == "collection_type_count":
+            find_type = criteria.get("find_type")
+            r = await db.execute(
+                select(func.count()).select_from(CollectionPhoto).where(
+                    CollectionPhoto.user_id == user_id,
+                    CollectionPhoto.find_type == find_type,
+                )
+            )
+            current_value = r.scalar() or 0
+        elif criteria_type == "collection_material_count":
+            material = criteria.get("material")
+            r = await db.execute(
+                select(func.count()).select_from(CollectionPhoto).where(
+                    CollectionPhoto.user_id == user_id,
+                    CollectionPhoto.material == material,
+                )
+            )
+            current_value = r.scalar() or 0
         else:
             current_value = 0
 
