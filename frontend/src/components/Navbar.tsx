@@ -288,16 +288,12 @@ export default function Navbar({
   return (
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
       <div className="flex items-center gap-3 px-4 h-12">
-        {/* Branding */}
-        <span className="text-xl">🗺️</span>
-        <div className="hidden sm:block">
-          <h1 className="text-stone-900 font-bold text-sm leading-tight tracking-wide">
+        {/* Branding - Just Logo */}
+        <Link to="/map" className="flex items-center">
+          <h1 className="text-stone-900 font-bold text-base tracking-wide">
             Aurik
           </h1>
-          <p className="text-stone-400 text-[10px] leading-tight">
-            Historical Activity &amp; Metal Detecting Intelligence
-          </p>
-        </div>
+        </Link>
 
         {/* Nav items */}
         <div className="flex items-center gap-1 ml-4">

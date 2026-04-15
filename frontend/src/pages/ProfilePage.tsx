@@ -8,7 +8,7 @@ import ImageLightbox from '../components/ImageLightbox';
 import CollectionLightbox from '../components/CollectionLightbox';
 import CollectionUploadModal from '../components/CollectionUploadModal';
 import api from '../api/client';
-import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto, fetchUserBadges } from '../api/client';
+import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto, fetchUserBadges, checkBadges } from '../api/client';
 import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto, Badge, BadgeCategory } from '../types';
 import BadgeDisplay from '../components/BadgeDisplay';
 
@@ -92,6 +92,15 @@ export default function ProfilePage() {
       .catch(() => setPins([]))
       .finally(() => setPinsLoading(false));
   }, [username, isOwnProfile]);
+
+  // Silently check badges when viewing own profile
+  useEffect(() => {
+    if (!isOwnProfile || !username) return;
+
+    checkBadges().catch(() => {
+      // Badge check failed, non-fatal - suppress error
+    });
+  }, [isOwnProfile, username]);
 
   // Fetch user posts when activity tab is active
   useEffect(() => {

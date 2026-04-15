@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { fetchMyBadgeProgress } from '../api/client';
-import type { BadgeProgress, BadgeCategory } from '../types';
+import { fetchMyBadgeProgress, checkBadges } from '../api/client';
+import type { Badge, BadgeProgress, BadgeCategory } from '../types';
 import BadgeDisplay from '../components/BadgeDisplay';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -21,15 +21,29 @@ export default function BadgesPage() {
   const [progress, setProgress] = useState<BadgeProgress[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [newlyEarned, setNewlyEarned] = useState<Badge[]>([]);
 
   useEffect(() => {
     if (!user) return;
     setLoading(true);
     setError(null);
-    fetchMyBadgeProgress()
-      .then(setProgress)
-      .catch(() => setError('Failed to load badge progress.'))
-      .finally(() => setLoading(false));
+
+    // First check for newly earned badges, then fetch progress
+    checkBadges()
+      .then((result) => {
+        if (result.newly_earned.length > 0) {
+          setNewlyEarned(result.newly_earned);
+        }
+      })
+      .catch(() => {
+        // Badge check failed, non-fatal
+      })
+      .finally(() => {
+        fetchMyBadgeProgress()
+          .then(setProgress)
+          .catch(() => setError('Failed to load badge progress.'))
+          .finally(() => setLoading(false));
+      });
   }, [user]);
 
   const byCategory = CATEGORY_ORDER.reduce<Record<string, BadgeProgress[]>>((acc, cat) => {
@@ -62,6 +76,40 @@ export default function BadgesPage() {
             </div>
           )}
         </div>
+
+        {/* Newly earned badges notification */}
+        {newlyEarned.length > 0 && (
+          <div className="mb-6 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-4">
+            <div className="flex items-start gap-3">
+              <span className="text-2xl">🎉</span>
+              <div className="flex-1">
+                <h3 className="text-amber-900 font-semibold text-sm mb-1">
+                  {newlyEarned.length === 1 ? 'New Badge Unlocked!' : `${newlyEarned.length} New Badges Unlocked!`}
+                </h3>
+                <p className="text-amber-700 text-xs mb-3">
+                  Keep up the great work!
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {newlyEarned.map((badge) => (
+                    <div key={badge.id} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-amber-200">
+                      <img src={badge.image_url} alt={badge.name} className="w-8 h-8" />
+                      <div>
+                        <p className="text-stone-900 font-medium text-xs">{badge.name}</p>
+                        <p className="text-amber-600 text-xs">+{badge.points} pts</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => setNewlyEarned([])}
+                className="text-amber-600 hover:text-amber-700 text-xs"
+              >
+                Dismiss
+              </button>
+            </div>
+          </div>
+        )}
 
         {loading && (
           <div className="flex items-center justify-center py-20">
