@@ -167,7 +167,7 @@ async def get_badge_progress(user_id: UUID, db: AsyncSession) -> list[dict]:
     finds_count = finds_count_result.scalar() or 0
 
     # Pre-compute approved submissions count
-    from app.models.database import CollectionPhoto, PinSubmission
+    from app.models.database import PinSubmission
     approved_submissions_result = await db.execute(
         select(func.count()).select_from(PinSubmission).where(
             PinSubmission.submitter_id == user_id,
@@ -176,6 +176,7 @@ async def get_badge_progress(user_id: UUID, db: AsyncSession) -> list[dict]:
     )
     approved_submissions = approved_submissions_result.scalar() or 0
 
+    from app.models.database import CollectionPhoto
     progress_list = []
     for badge in all_badges:
         criteria = badge.criteria or {}

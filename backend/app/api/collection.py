@@ -181,10 +181,8 @@ async def update_collection_photo(
         raise HTTPException(status_code=403, detail="Not the owner of this photo")
 
     photo.caption = body.caption
-    if body.find_type is not None:
-        photo.find_type = body.find_type
-    if body.material is not None:
-        photo.material = body.material
+    photo.find_type = body.find_type
+    photo.material = body.material
     await db.flush()
     await db.refresh(photo)
 
