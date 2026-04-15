@@ -1153,7 +1153,7 @@ EQUIPMENT / TECHNIQUE BADGES
 ========================================================
 
 ---[ 39. PINPOINTER PRO ]---
----[ file: ]---
+---[ file:0C9C9A13-D6C8-4E6F-B149-835DCD88FBF8.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1182,7 +1182,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 40. GRID MASTER ]---
----[ file: ]---
+---[ file:AB6DF9CC-A90C-4CF2-9A99-2614AFA7AD6D.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1211,7 +1211,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 41. DEEP DIG ]---
----[ file: ]---
+---[ file:8498503B-1A85-41E2-B35E-5CB00B15447D.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1244,7 +1244,7 @@ COLLABORATION BADGES
 ========================================================
 
 ---[ 42. TEAM PLAYER ]---
----[ file: ]---
+---[ file:2BABCDAE-285C-4380-9187-08F46CAC6465.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1273,7 +1273,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 43. GROUP LEADER ]---
----[ file: ]---
+---[ file:85461A82-856A-406A-8549-E61F8F03293B.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1302,7 +1302,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 44. MENTOR ]---
----[ file: ]---
+---[ file:DD0DA858-8A6A-4167-B50D-801A3BBBB35A.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
