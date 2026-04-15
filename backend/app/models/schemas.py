@@ -634,6 +634,8 @@ class CollectionPhotoResponse(BaseModel):
     user_id: UUID
     url: str
     caption: Optional[str] = None
+    find_type: Optional[str] = None
+    material: Optional[str] = None
     created_at: Optional[Any] = None
 
 
@@ -645,9 +647,11 @@ class CollectionPhotoListResponse(BaseModel):
 
 
 class CollectionPhotoUpdate(BaseModel):
-    """Request payload for editing a collection photo's caption."""
+    """Request payload for editing a collection photo's metadata."""
 
     caption: Optional[str] = Field(None, max_length=500)
+    find_type: Optional[str] = Field(None, max_length=50)
+    material: Optional[str] = Field(None, max_length=50)
 
 
 # ---------------------------------------------------------------------------

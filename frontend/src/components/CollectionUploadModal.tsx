@@ -12,6 +12,8 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [caption, setCaption] = useState('');
+  const [findType, setFindType] = useState('');
+  const [material, setMaterial] = useState('');
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -73,7 +75,7 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
     setError(null);
     try {
       const resized = await resizeImage(file, 1200, 1200, 0.85);
-      const photo = await uploadCollectionPhoto(resized, caption.trim() || undefined);
+      const photo = await uploadCollectionPhoto(resized, caption.trim() || undefined, findType || undefined, material || undefined);
       onUploaded(photo);
     } catch (err: any) {
       setError(err?.response?.data?.detail ?? err?.message ?? 'Upload failed. Please try again.');
@@ -158,6 +160,48 @@ export default function CollectionUploadModal({ onClose, onUploaded }: Collectio
         {caption.length > 0 && (
           <p className="text-xs text-stone-400 text-right mb-3">{caption.length}/500</p>
         )}
+
+        {/* Find Type & Material */}
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          <div>
+            <label className="block text-xs text-stone-500 mb-1">Find Type</label>
+            <select
+              value={findType}
+              onChange={(e) => setFindType(e.target.value)}
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 focus:outline-none focus:border-stone-400 transition-colors"
+            >
+              <option value="">-- Select Type --</option>
+              <option value="coin">Coin</option>
+              <option value="button">Button</option>
+              <option value="bullet">Bullet</option>
+              <option value="jewelry">Jewelry</option>
+              <option value="buckle">Buckle</option>
+              <option value="tool">Tool</option>
+              <option value="token">Token</option>
+              <option value="relic">Relic</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-xs text-stone-500 mb-1">Material</label>
+            <select
+              value={material}
+              onChange={(e) => setMaterial(e.target.value)}
+              className="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-sm text-stone-900 focus:outline-none focus:border-stone-400 transition-colors"
+            >
+              <option value="">-- Select Material --</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+              <option value="copper">Copper</option>
+              <option value="brass">Brass</option>
+              <option value="bronze">Bronze</option>
+              <option value="lead">Lead</option>
+              <option value="iron">Iron</option>
+              <option value="aluminum">Aluminum</option>
+              <option value="nickel">Nickel</option>
+            </select>
+          </div>
+        </div>
 
         {/* Error */}
         {error && (

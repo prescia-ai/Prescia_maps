@@ -149,10 +149,10 @@ BADGES = [
     # ── Score ─────────────────────────────────────────────────────────────────
     {
         "badge_id": "853EAE0F-736C-4CAA-B20A-3EC222CE482F",
-        "name": "Prime Territory",
-        "description": "Hunt a location with an Aurik score of 90 or higher.",
-        "category": "score",
-        "criteria": {"type": "score_threshold", "threshold": 90},
+        "name": "Distance Hunter",
+        "description": "Travel 500 km or more to metal detecting sites.",
+        "category": "geographic",
+        "criteria": {"type": "max_distance_traveled", "threshold": 500},
         "points": 75,
         "rarity": "epic",
     },
@@ -169,19 +169,19 @@ BADGES = [
     {
         "badge_id": "DA31CC83-B2E7-4A1C-9705-658B35DE1C98",
         "name": "History Keeper",
-        "description": "Contribute historical notes or documentation to a location.",
+        "description": "Have 25 submissions approved by the community.",
         "category": "community",
-        "criteria": {"type": "contribution_count", "threshold": 5},
-        "points": 30,
+        "criteria": {"type": "approved_submissions", "threshold": 25},
+        "points": 75,
         "rarity": "rare",
     },
     {
         "badge_id": "AF7AEB2C-6F9C-4734-A537-12C0610CF212",
         "name": "Community Historian",
-        "description": "Become a trusted contributor with 25+ submissions.",
+        "description": "Have 100 submissions approved by the community.",
         "category": "community",
-        "criteria": {"type": "submission_count", "threshold": 25},
-        "points": 100,
+        "criteria": {"type": "approved_submissions", "threshold": 100},
+        "points": 200,
         "rarity": "epic",
     },
     # ── Social ────────────────────────────────────────────────────────────────
@@ -224,10 +224,10 @@ BADGES = [
     # ── Score ─────────────────────────────────────────────────────────────────
     {
         "badge_id": "FC0C795B-E848-48D2-88A1-D69F7B3E3432",
-        "name": "Off The Beaten Path",
-        "description": "Hunt at a location with an Aurik score below 50 (high difficulty).",
-        "category": "score",
-        "criteria": {"type": "low_score_hunt", "threshold": 50},
+        "name": "Route Seeker",
+        "description": "Hunt within 100 meters of a historic trail.",
+        "category": "sites",
+        "criteria": {"type": "linear_feature_proximity", "feature_type": "trail", "distance_meters": 100},
         "points": 40,
         "rarity": "rare",
     },
@@ -310,9 +310,9 @@ BADGES = [
     {
         "badge_id": "061302AA-D444-4F8F-ADDC-983777155D9E",
         "name": "Silver Streak",
-        "description": "Find 10 silver items.",
-        "category": "finds",
-        "criteria": {"type": "material_finds", "material": "silver", "threshold": 10},
+        "description": "Add 10 silver items to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_material_count", "material": "silver", "threshold": 10},
         "points": 50,
         "rarity": "rare",
     },
@@ -354,40 +354,106 @@ BADGES = [
         "points": 60,
         "rarity": "rare",
     },
+    # ── Treasure Trove ────────────────────────────────────────────────────────────
+    {
+        "badge_id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890",
+        "name": "Coin Collector",
+        "description": "Add 50 coins to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_type_count", "find_type": "coin", "threshold": 50},
+        "points": 60,
+        "rarity": "rare",
+    },
+    {
+        "badge_id": "B2C3D4E5-F6A7-8901-BCDE-F12345678901",
+        "name": "Button Box",
+        "description": "Add 25 buttons to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_type_count", "find_type": "button", "threshold": 25},
+        "points": 50,
+        "rarity": "rare",
+    },
+    {
+        "badge_id": "C3D4E5F6-A7B8-9012-CDEF-123456789012",
+        "name": "Lead Farmer",
+        "description": "Add 50 bullets to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_type_count", "find_type": "bullet", "threshold": 50},
+        "points": 50,
+        "rarity": "rare",
+    },
+    {
+        "badge_id": "D4E5F6A7-B8C9-0123-DEF0-234567890123",
+        "name": "Jewelry Box",
+        "description": "Add 10 jewelry items to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_type_count", "find_type": "jewelry", "threshold": 10},
+        "points": 70,
+        "rarity": "epic",
+    },
+    {
+        "badge_id": "E5F6A7B8-C9D0-1234-EF01-345678901234",
+        "name": "Buckle Up",
+        "description": "Add 15 buckles to your collection.",
+        "category": "treasure_trove",
+        "criteria": {"type": "collection_type_count", "find_type": "buckle", "threshold": 15},
+        "points": 50,
+        "rarity": "rare",
+    },
 ]
 
 
 async def seed() -> None:
-    """Ensure the schema is up-to-date and insert any missing badge rows."""
+    """Ensure the schema is up-to-date and upsert all badge rows."""
     await create_tables()
 
     async with AsyncSessionLocal() as session:
         from sqlalchemy import select
 
-        existing_result = await session.execute(select(Badge.badge_id))
-        existing_ids = {row[0].upper() for row in existing_result.all()}
+        existing_result = await session.execute(select(Badge))
+        existing_map = {row.badge_id.upper(): row for row in existing_result.scalars().all()}
 
         inserted = 0
+        updated = 0
         for data in BADGES:
-            if data["badge_id"].upper() in existing_ids:
-                print(f"  skip  {data['name']} (already exists)")
-                continue
-
-            badge = Badge(
-                badge_id=data["badge_id"],
-                name=data["name"],
-                description=data["description"],
-                category=data["category"],
-                criteria=data["criteria"],
-                points=data["points"],
-                rarity=data["rarity"],
-            )
-            session.add(badge)
-            inserted += 1
-            print(f"  insert {data['name']}")
+            badge_id_upper = data["badge_id"].upper()
+            if badge_id_upper in existing_map:
+                badge = existing_map[badge_id_upper]
+                changed = (
+                    badge.name != data["name"]
+                    or badge.description != data["description"]
+                    or badge.category != data["category"]
+                    or badge.criteria != data["criteria"]
+                    or badge.points != data["points"]
+                    or badge.rarity != data["rarity"]
+                )
+                if changed:
+                    badge.name = data["name"]
+                    badge.description = data["description"]
+                    badge.category = data["category"]
+                    badge.criteria = data["criteria"]
+                    badge.points = data["points"]
+                    badge.rarity = data["rarity"]
+                    updated += 1
+                    print(f"  update {data['name']}")
+                else:
+                    print(f"  skip  {data['name']} (no changes)")
+            else:
+                badge = Badge(
+                    badge_id=data["badge_id"],
+                    name=data["name"],
+                    description=data["description"],
+                    category=data["category"],
+                    criteria=data["criteria"],
+                    points=data["points"],
+                    rarity=data["rarity"],
+                )
+                session.add(badge)
+                inserted += 1
+                print(f"  insert {data['name']}")
 
         await session.commit()
-        print(f"\nDone. {inserted} badge(s) inserted, {len(BADGES) - inserted} skipped.")
+        print(f"\nDone. {inserted} badge(s) inserted, {updated} updated, {len(BADGES) - inserted - updated} skipped.")
 
 
 if __name__ == "__main__":

@@ -34,9 +34,10 @@ const CATEGORY_LABELS: Record<BadgeCategory, string> = {
   community: 'Community Contribution',
   social: 'Social',
   geographic: 'Geographic',
+  treasure_trove: 'Treasure Trove',
 };
 
-const CATEGORY_ORDER: BadgeCategory[] = ['hunt_milestone', 'finds', 'sites', 'score', 'community', 'social', 'geographic'];
+const CATEGORY_ORDER: BadgeCategory[] = ['hunt_milestone', 'finds', 'treasure_trove', 'sites', 'score', 'community', 'social', 'geographic'];
 
 export default function ProfilePage() {
   const { username } = useParams<{ username: string }>();

@@ -93,6 +93,8 @@ async def list_collection(
                 user_id=photo.user_id,
                 url=photo.url,
                 caption=photo.caption,
+                find_type=photo.find_type,
+                material=photo.material,
                 created_at=photo.created_at,
             )
             for photo in photos
@@ -109,6 +111,8 @@ async def list_collection(
 async def upload_collection_photo(
     file: UploadFile = File(...),
     caption: Optional[str] = Form(None),
+    find_type: Optional[str] = Form(None),
+    material: Optional[str] = Form(None),
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> CollectionPhotoResponse:
@@ -137,6 +141,8 @@ async def upload_collection_photo(
         drive_file_id=file_id,
         url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
         caption=caption,
+        find_type=find_type,
+        material=material,
     )
     db.add(photo)
     await db.flush()
@@ -147,6 +153,8 @@ async def upload_collection_photo(
         user_id=photo.user_id,
         url=photo.url,
         caption=photo.caption,
+        find_type=photo.find_type,
+        material=photo.material,
         created_at=photo.created_at,
     )
 
@@ -173,6 +181,10 @@ async def update_collection_photo(
         raise HTTPException(status_code=403, detail="Not the owner of this photo")
 
     photo.caption = body.caption
+    if body.find_type is not None:
+        photo.find_type = body.find_type
+    if body.material is not None:
+        photo.material = body.material
     await db.flush()
     await db.refresh(photo)
 
@@ -181,6 +193,8 @@ async def update_collection_photo(
         user_id=photo.user_id,
         url=photo.url,
         caption=photo.caption,
+        find_type=photo.find_type,
+        material=photo.material,
         created_at=photo.created_at,
     )
 
