@@ -15,7 +15,7 @@ import { useHeatmap } from '../hooks/useHeatmap';
 import { useScore } from '../hooks/useScore';
 import { useMyPins } from '../hooks/useMyPins';
 import { useAuth } from '../contexts/AuthContext';
-import { fetchLandAccess as _fetchLandAccess, putLandAccessOverride, fetchEventMapPins } from '../api/client';
+import { putLandAccessOverride, fetchEventMapPins } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
 const US_CENTER_LAT = 39.5;
@@ -64,8 +64,8 @@ export default function MapPage() {
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
-  const [landAccessLoading] = useState(false);
-  const [landAccessError] = useState(false);
+  const landAccessLoading = false;
+  const landAccessError = false;
   const [showLandAccess, setShowLandAccess] = useState(false);
 
   const locationsQuery = useLocations();
