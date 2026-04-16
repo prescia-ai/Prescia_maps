@@ -255,7 +255,7 @@ async def _fetch_lh3_url(access_token: str, file_id: str, size_suffix: str = "=s
             )
         if resp.status_code == 200:
             thumbnail_link = resp.json().get("thumbnailLink", "")
-            if thumbnail_link and "lh3.googleusercontent.com" in thumbnail_link:
+            if thumbnail_link and thumbnail_link.startswith("https://lh3.googleusercontent.com/"):
                 # Strip any existing size suffix (e.g. "=s220") and apply desired one
                 base = thumbnail_link.split("=")[0]
                 return f"{base}{size_suffix}"
@@ -263,6 +263,7 @@ async def _fetch_lh3_url(access_token: str, file_id: str, size_suffix: str = "=s
         logger.warning("Failed to fetch thumbnailLink for file %s: %s", file_id, exc)
 
     # Fallback: construct the lh3 URL directly from the file ID
+    logger.debug("Using constructed lh3 URL for file %s (thumbnailLink unavailable)", file_id)
     return _build_lh3_url(file_id, size_suffix)
 
 
