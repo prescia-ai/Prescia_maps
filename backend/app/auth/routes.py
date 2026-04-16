@@ -20,6 +20,7 @@ from sqlalchemy import delete, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user, optional_user
+from app.api.google_auth import _migrate_drive_url_to_lh3
 from app.models.database import (
     CollectionPhoto,
     PinImage,
@@ -48,8 +49,20 @@ _USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,30}$")
 
 
 @router.get("/me", response_model=UserProfile, summary="Get current user profile")
-async def get_me(current_user: User = Depends(get_current_user)) -> User:
-    """Return the authenticated user's profile."""
+async def get_me(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> User:
+    """Return the authenticated user's profile.
+
+    Lazily migrates avatar URLs from the old drive.google.com/thumbnail format
+    to the more stable lh3.googleusercontent.com CDN format.
+    """
+    if current_user.avatar_url:
+        new_url = _migrate_drive_url_to_lh3(current_user.avatar_url, size_suffix="=s400")
+        if new_url:
+            current_user.avatar_url = new_url
+            await db.flush()
     return current_user
 
 
@@ -108,6 +121,13 @@ async def get_public_profile(
     user = result.scalar_one_or_none()
     if user is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    # Lazily migrate avatar URL from old drive.google.com/thumbnail format
+    if user.avatar_url:
+        new_url = _migrate_drive_url_to_lh3(user.avatar_url, size_suffix="=s400")
+        if new_url:
+            user.avatar_url = new_url
+            await db.flush()
 
     if user.privacy == "private":
         return UserProfileLimited.model_validate(user)
