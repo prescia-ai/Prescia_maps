@@ -1335,7 +1335,7 @@ TIME / DEDICATION BADGES
 ========================================================
 
 ---[ 45. MARATHON DETECTORIST ]---
----[ file: ]---
+---[ file:4D4DA825-21C5-44B2-A09E-C9163BEA30AA.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
