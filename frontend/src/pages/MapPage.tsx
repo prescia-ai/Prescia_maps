@@ -62,6 +62,8 @@ export default function MapPage() {
   const [showImportModal, setShowImportModal] = useState(false);
   const [showLogHuntModal, setShowLogHuntModal] = useState(false);
   const [logHuntCoords, setLogHuntCoords] = useState<{ lat: number; lon: number } | null>(null);
+  // Track map zoom level for zoom-adaptive heatmap fetching
+  const [mapZoom, setMapZoom] = useState(5); // matches MapContainer initial zoom
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
@@ -71,7 +73,7 @@ export default function MapPage() {
 
   const locationsQuery = useLocations();
   const featuresQuery  = useFeatures();
-  const heatmapQuery   = useHeatmap();
+  const heatmapQuery   = useHeatmap(mapZoom);
   const scoreQuery     = useScore(clickedCoords?.lat ?? null, clickedCoords?.lon ?? null);
   const myPinsQuery    = useMyPins();
   const eventPinsQuery = useQuery({
@@ -132,6 +134,10 @@ export default function MapPage() {
     queryClient.invalidateQueries({ queryKey: ['my-pins'] });
   }, [queryClient]);
 
+  const handleZoomChange = useCallback((zoom: number) => {
+    setMapZoom(zoom);
+  }, []);
+
   const handleNavbarLogHunt = useCallback(() => {
     setLogHuntCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
     setShowLogHuntModal(true);
@@ -168,6 +174,7 @@ export default function MapPage() {
           onMapClick={handleMapClick}
           onLocationSelect={handleLocationSelect}
           onContextMenu={handleContextMenu}
+          onZoomChange={handleZoomChange}
           userPins={userPins}
           eventPins={eventPins}
         />

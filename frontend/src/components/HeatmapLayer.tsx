@@ -8,6 +8,7 @@ import type { HeatmapPoint } from '../types';
 interface HeatmapLayerProps {
   points: HeatmapPoint[];
   visible: boolean;
+  onZoomChange?: (zoom: number) => void;
 }
 
 // leaflet.heat attaches heatLayer to L after the side-effect import
@@ -16,18 +17,37 @@ type HeatLayerFn = (
   options?: object,
 ) => L.Layer & { addTo(map: L.Map): L.Layer; remove(): void };
 
+/**
+ * Radius in pixels per zoom level.
+ *
+ * At mid zoom (8–12) we use a much larger radius so that two nearby
+ * historical sites "bleed" into each other — the area between an old
+ * town and a military camp should glow warm, not be cold.
+ */
 function getRadiusForZoom(zoom: number): number {
-  // At z=4 (national): small radius so hotspots are distinct dots
-  // At z=10+ (city level): large radius so the heat bleeds around sites
-  if (zoom <= 4) return 8;
-  if (zoom <= 6) return 15;
-  if (zoom <= 8) return 22;
-  if (zoom <= 10) return 30;
-  if (zoom <= 12) return 40;
-  return 50;
+  if (zoom <= 5)  return 18;   // national: small tight dots
+  if (zoom <= 7)  return 30;   // state: moderate dots
+  if (zoom <= 9)  return 70;   // county: large blending radius
+  if (zoom <= 11) return 90;   // town level: big overlap glow
+  if (zoom <= 13) return 55;   // neighbourhood: medium precision
+  return 30;                    // street: precise individual sites
 }
 
-export default function HeatmapLayer({ points, visible }: HeatmapLayerProps) {
+function getBlurForZoom(zoom: number): number {
+  if (zoom <= 7)  return 20;
+  if (zoom <= 11) return 55;
+  if (zoom <= 13) return 35;
+  return 18;
+}
+
+function getOpacityForZoom(zoom: number): number {
+  // More opaque at high zoom so precise hotspots pop
+  if (zoom <= 7)  return 0.55;
+  if (zoom <= 11) return 0.70;
+  return 0.85;
+}
+
+export default function HeatmapLayer({ points, visible, onZoomChange }: HeatmapLayerProps) {
   const map = useMap();
   const heatRef = useRef<(L.Layer & { remove(): void }) | null>(null);
 
@@ -40,21 +60,26 @@ export default function HeatmapLayer({ points, visible }: HeatmapLayerProps) {
     );
 
     const zoom = map.getZoom();
-    const radius = getRadiusForZoom(zoom);
+    const radius  = getRadiusForZoom(zoom);
+    const blur    = getBlurForZoom(zoom);
+    const opacity = getOpacityForZoom(zoom);
 
     return heatLayer(latlngs, {
       radius,
-      blur: Math.round(radius * 0.7),
+      blur,
       maxZoom: 18,
       max: 1.0,
-      // Green = highest value, yellow = medium, red = low (detecting potential)
+      minOpacity: opacity * 0.3,
+      // Treasure-density gradient: cold (deep blue) → warm (gold) → hot (red)
+      // Designed to pop on both satellite and street map tiles.
       gradient: {
-        0.0: '#1e3a5f',
-        0.2: '#2563eb',
-        0.4: '#16a34a',
-        0.6: '#ca8a04',
-        0.8: '#ea580c',
-        1.0: '#dc2626',
+        0.00: 'rgba(0,0,80,0)',       // transparent — nothing interesting
+        0.15: '#1e40af',              // dark blue — minimal activity
+        0.35: '#0ea5e9',              // light blue — some activity
+        0.55: '#fbbf24',              // amber/gold — good detecting area
+        0.75: '#f97316',              // orange — strong historical area
+        0.90: '#ef4444',              // red — exceptional hotspot
+        1.00: '#dc2626',              // deep red — multiple converging sites
       },
     });
   }
@@ -79,9 +104,14 @@ export default function HeatmapLayer({ points, visible }: HeatmapLayerProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [map, points, visible]);
 
-  // Rebuild on zoom to get adaptive radius
+  // Rebuild on zoom to get adaptive radius/blur/opacity
   useMapEvents({
     zoomend() {
+      const zoom = map.getZoom();
+
+      // Notify parent so it can refetch data for the new zoom bucket
+      onZoomChange?.(zoom);
+
       if (!visible || !points.length) return;
       if (heatRef.current) {
         heatRef.current.remove();

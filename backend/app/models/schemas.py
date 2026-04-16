@@ -167,15 +167,21 @@ class ScoreResponse(BaseModel):
     Scoring result for a queried coordinate.
 
     ``score`` is a 0–100 float representing metal-detecting interest.
+    ``raw_score`` is the pre-compression score before the soft cap is applied.
     ``breakdown`` maps contributing factor names to their numeric contribution.
     ``nearby_count`` is the number of historical sites within the search radius.
+    ``accessible`` is the land-access classification at the queried point
+      (``'allowed'``, ``'off_limits'``, ``'private_permit'``, ``'unsure'``,
+      or ``'unknown'`` when the lookup timed out or failed).
     """
 
     lat: float
     lon: float
     score: float = Field(..., ge=0.0, le=100.0)
+    raw_score: Optional[float] = Field(None, ge=0.0)
     breakdown: Dict[str, float]
     nearby_count: int
+    accessible: Optional[str] = None
 
 
 # ---------------------------------------------------------------------------
