@@ -18,6 +18,7 @@ from sqlalchemy import (
     Enum,
     Float,
     ForeignKey,
+    Index as sa_Index,
     Integer,
     String,
     Text,
@@ -496,6 +497,47 @@ class UserBadge(Base):
 
     user = relationship("User", back_populates="badges", lazy="select")
     badge = relationship("Badge", back_populates="user_badges", lazy="select")
+
+
+class Notification(Base):
+    """
+    An in-app notification delivered to a user.
+
+    ``type`` describes the event (e.g. "like", "comment", "badge_earned",
+    "submission_approved", "group_invite").  ``actor_id`` is the user who
+    triggered the event; it is nullable for system-generated notifications
+    such as badge awards.  ``ref_id`` is a generic string that points at
+    the relevant entity (post UUID, badge UUID, group UUID, etc.).
+    """
+
+    __tablename__ = "notifications"
+    __table_args__ = (
+        # Primary query path: fetch a user's unread notifications sorted by time.
+        sa_Index(
+            "ix_notifications_user_read_created",
+            "user_id",
+            "read",
+            "created_at",
+        ),
+    )
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    type = Column(String(50), nullable=False)
+    user_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("users.id", ondelete="CASCADE"),
+        nullable=False,
+        index=True,
+    )
+    actor_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("users.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+    )
+    ref_id = Column(String(255), nullable=True)
+    read = Column(Boolean, nullable=False, default=False)
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
 
 # ---------------------------------------------------------------------------
