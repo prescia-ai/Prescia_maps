@@ -27,6 +27,7 @@ from app.models.schemas import (
     PinSubmissionListResponse,
     PinSubmissionResponse,
 )
+from app.services.notification_service import create_notification
 
 router = APIRouter(tags=["submissions"])
 
@@ -258,6 +259,14 @@ async def update_admin_submission(
             )
             db.add(location)
             submission.reviewed_at = datetime.now(timezone.utc)
+            # Notify the submitter that their submission was approved
+            await create_notification(
+                db,
+                type="submission_approved",
+                user_id=submission.submitter_id,
+                actor_id=admin.id,
+                ref_id=str(submission_id),
+            )
 
         elif body.status == "rejected":
             submission.reviewed_at = datetime.now(timezone.utc)

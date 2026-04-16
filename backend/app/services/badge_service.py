@@ -19,6 +19,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.database import Badge, UserBadge, UserPin
+from app.services.notification_service import create_notification
 
 
 async def check_all_badges(user_id: UUID, db: AsyncSession) -> List[Badge]:
@@ -128,6 +129,15 @@ async def check_all_badges(user_id: UUID, db: AsyncSession) -> List[Badge]:
 
     if newly_earned:
         await db.flush()
+        # Notify the user for each newly earned badge
+        for badge in newly_earned:
+            await create_notification(
+                db,
+                type="badge_earned",
+                user_id=user_id,
+                actor_id=None,
+                ref_id=str(badge.id),
+            )
 
     return newly_earned
 
