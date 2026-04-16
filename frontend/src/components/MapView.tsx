@@ -146,7 +146,10 @@ function LocationMarkers({
               weight: 1.5,
             }}
             eventHandlers={{
-              click: () => onSelect(f),
+              click: (e) => {
+                e.originalEvent.stopPropagation();
+                onSelect(f);
+              },
             }}
           />
         );
@@ -276,7 +279,6 @@ interface MapViewProps {
   layers: LayerState;
   onMapClick: (lat: number, lon: number) => void;
   onLocationSelect: (f: LocationFeature) => void;
-  onLandAccessClick?: (lat: number, lon: number) => void;
   onContextMenu?: (lat: number, lon: number) => void;
   userPins?: UserPin[];
   eventPins?: EventPin[];
@@ -289,19 +291,15 @@ export default function MapView({
   layers,
   onMapClick,
   onLocationSelect,
-  onLandAccessClick,
   onContextMenu,
   userPins,
   eventPins,
 }: MapViewProps) {
   const handleClick = useCallback(
     (lat: number, lon: number) => {
-      if (layers.blm && onLandAccessClick) {
-        onLandAccessClick(lat, lon);
-      }
       onMapClick(lat, lon);
     },
-    [onMapClick, layers.blm, onLandAccessClick],
+    [onMapClick],
   );
 
   return (
@@ -323,7 +321,7 @@ export default function MapView({
         <TileLayer
           url="https://gis1.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
           attribution="USGS PAD-US 3.0"
-          opacity={0.4}
+          opacity={0.2}
           zIndex={5}
         />
       )}
