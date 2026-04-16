@@ -27,7 +27,7 @@ from app.auth.google import (
     get_valid_access_token,
     upload_file_to_drive,
 )
-from app.api.google_auth import _ALLOWED_IMAGE_TYPES, _EXT_MAP, _MAX_IMAGE_SIZE
+from app.api.google_auth import _ALLOWED_IMAGE_TYPES, _EXT_MAP, _MAX_IMAGE_SIZE, _fetch_lh3_url
 from app.models.database import CollectionPhoto, User, get_db
 from app.models.schemas import (
     CollectionPhotoListResponse,
@@ -134,12 +134,13 @@ async def upload_collection_photo(
     ext = _EXT_MAP.get(content_type, "jpg")
     file_name = f"collection_{current_user.id}_{uuid.uuid4().hex}.{ext}"
     file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, content_type)
+    img_url = await _fetch_lh3_url(access_token, file_id, size_suffix="=s800")
 
     # 4. Create DB row
     photo = CollectionPhoto(
         user_id=current_user.id,
         drive_file_id=file_id,
-        url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
+        url=img_url,
         caption=caption,
         find_type=find_type,
         material=material,

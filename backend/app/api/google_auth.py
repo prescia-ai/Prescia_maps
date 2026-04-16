@@ -207,16 +207,77 @@ _ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
 _MAX_IMAGE_SIZE = 2 * 1024 * 1024  # 2 MB
 _DRIVE_UPLOAD_URL = "https://www.googleapis.com/upload/drive/v3/files"
 _DRIVE_PERMISSIONS_URL = "https://www.googleapis.com/drive/v3/files/{file_id}/permissions"
+_DRIVE_FILES_METADATA_URL = "https://www.googleapis.com/drive/v3/files/{file_id}"
 
 
-def _extract_drive_file_id(avatar_url: str) -> str | None:
-    """Extract the Google Drive file ID from a thumbnail URL."""
-    # URL format: https://drive.google.com/thumbnail?id={file_id}&sz=w400-h400
-    if "drive.google.com/thumbnail" in avatar_url:
-        for part in avatar_url.split("&"):
+def _extract_drive_file_id(image_url: str) -> str | None:
+    """Extract the Google Drive file ID from a Drive image URL.
+
+    Handles both formats:
+    - https://drive.google.com/thumbnail?id={file_id}&sz=w400-h400
+    - https://lh3.googleusercontent.com/d/{file_id}=s400
+    """
+    if "drive.google.com/thumbnail" in image_url:
+        for part in image_url.split("&"):
             if part.startswith("id=") or "?id=" in part:
                 return part.split("id=")[-1]
+    if "lh3.googleusercontent.com/d/" in image_url:
+        # Format: https://lh3.googleusercontent.com/d/{file_id}=s400
+        path = image_url.split("/d/")[-1]
+        # Strip size suffix (everything from "=" onward)
+        return path.split("=")[0]
     return None
+
+
+def _build_lh3_url(file_id: str, size_suffix: str = "=s800") -> str:
+    """Construct a lh3.googleusercontent.com CDN URL for a Drive file."""
+    return f"https://lh3.googleusercontent.com/d/{file_id}{size_suffix}"
+
+
+async def _fetch_lh3_url(access_token: str, file_id: str, size_suffix: str = "=s800") -> str:
+    """Fetch the stable lh3 CDN URL for a Drive file via the thumbnailLink field.
+
+    Makes a lightweight metadata request to the Drive API to obtain the
+    ``thumbnailLink`` (which is an ``lh3.googleusercontent.com`` URL), strips
+    its size suffix, and appends the requested ``size_suffix``.
+
+    Falls back to constructing the URL directly from the file ID if the API
+    call fails or the field is missing — the constructed URL is equivalent and
+    works as long as the file is publicly readable.
+    """
+    try:
+        async with httpx.AsyncClient() as client:
+            resp = await client.get(
+                _DRIVE_FILES_METADATA_URL.format(file_id=file_id),
+                params={"fields": "thumbnailLink"},
+                headers={"Authorization": f"Bearer {access_token}"},
+                timeout=15.0,
+            )
+        if resp.status_code == 200:
+            thumbnail_link = resp.json().get("thumbnailLink", "")
+            if thumbnail_link and "lh3.googleusercontent.com" in thumbnail_link:
+                # Strip any existing size suffix (e.g. "=s220") and apply desired one
+                base = thumbnail_link.split("=")[0]
+                return f"{base}{size_suffix}"
+    except Exception as exc:
+        logger.warning("Failed to fetch thumbnailLink for file %s: %s", file_id, exc)
+
+    # Fallback: construct the lh3 URL directly from the file ID
+    return _build_lh3_url(file_id, size_suffix)
+
+
+def _migrate_drive_url_to_lh3(url: str, size_suffix: str = "=s400") -> str | None:
+    """Convert an old drive.google.com/thumbnail URL to lh3 format.
+
+    Returns the converted URL if conversion was possible, or ``None`` if the
+    URL is already in the new format or doesn't match the old pattern.
+    """
+    if not url or "drive.google.com/thumbnail" not in url:
+        return None
+    file_id = _extract_drive_file_id(url)
+    if not file_id:
+        return None
+    return _build_lh3_url(file_id, size_suffix)
 
 
 @router.post("/upload-avatar")
@@ -304,15 +365,15 @@ async def upload_avatar(
     if perm_resp.status_code not in (200, 201):
         logger.warning("Failed to set public permission on file %s: %s", file_id, perm_resp.text)
 
-    # 7. Build the public thumbnail URL
-    thumbnail_url = f"https://drive.google.com/thumbnail?id={file_id}&sz=w400-h400"
+    # 7. Fetch the stable lh3 CDN URL for the uploaded file
+    avatar_url = await _fetch_lh3_url(access_token, file_id, size_suffix="=s400")
 
     # 8. Save the URL on the User row
-    current_user.avatar_url = thumbnail_url
+    current_user.avatar_url = avatar_url
     await db.flush()
 
     # 9. Return the response
-    return {"avatar_url": thumbnail_url, "file_id": file_id}
+    return {"avatar_url": avatar_url, "file_id": file_id}
 
 
 # ---------------------------------------------------------------------------
@@ -404,10 +465,11 @@ async def upload_post_images(
         ext = _EXT_MAP.get(ct, "jpg")
         file_name = f"post_{post_id}_{i}.{ext}"
         file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
+        img_url = await _fetch_lh3_url(access_token, file_id, size_suffix="=s800")
         img = PostImage(
             post_id=post_uuid,
             drive_file_id=file_id,
-            url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
+            url=img_url,
             position=i,
         )
         db.add(img)
@@ -479,10 +541,11 @@ async def upload_pin_images(
         ext = _EXT_MAP.get(ct, "jpg")
         file_name = f"pin_{pin_id}_{i}.{ext}"
         file_id = await upload_file_to_drive(access_token, folder_id, file_name, contents, ct)
+        img_url = await _fetch_lh3_url(access_token, file_id, size_suffix="=s800")
         img = PinImage(
             pin_id=pin_uuid,
             drive_file_id=file_id,
-            url=f"https://drive.google.com/thumbnail?id={file_id}&sz=w800-h800",
+            url=img_url,
             position=i,
         )
         db.add(img)
