@@ -226,7 +226,10 @@ def score_location(
         # Build human-readable breakdown key
         type_label = _TYPE_LABELS.get(loc_type, loc_type.replace("_", " ").title())
         year = loc.get("year")
-        year_suffix = f", est. {year}s" if year and int(year) < 2000 else ""
+        try:
+            year_suffix = f", est. {int(year)}s" if year is not None and int(year) < 2000 else ""
+        except (ValueError, TypeError):
+            year_suffix = ""
         if name:
             breakdown_key = f"{name} ({type_label}{year_suffix}) — {dist_km:.1f}km"
         else:

@@ -495,7 +495,11 @@ async def get_score(
             timeout=4.0,
         )
         accessible = land_info.get("status", "unknown")
+    except asyncio.TimeoutError:
+        logger.warning("Land access lookup timed out for (%s, %s)", lat, lon)
+        accessible = "unknown"
     except Exception:
+        logger.exception("Land access lookup failed for (%s, %s)", lat, lon)
         accessible = "unknown"
 
     return ScoreResponse(
