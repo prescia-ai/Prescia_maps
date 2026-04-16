@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
 import { searchUsers, searchGroups } from '../api/client';
 import type { GroupSearchResult } from '../types';
+import NotificationBell from './NotificationBell';
 
 function UserSearch() {
   const [query, setQuery] = useState('');
@@ -439,6 +440,7 @@ export default function Navbar({
           {/* Auth section */}
           {user ? (
             <div className="flex items-center gap-2 border-l border-stone-200 pl-2 ml-1">
+              <NotificationBell />
               <Link
                 to={profile?.username ? `/profile/${profile.username}` : '/setup'}
                 className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded-xl transition-colors font-medium"
