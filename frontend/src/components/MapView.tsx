@@ -316,13 +316,14 @@ export default function MapView({
         maxZoom={19}
       />
 
-      {/* PAD-US land access overlay */}
+      {/* BLM Surface Management Agency overlay */}
       {layers.blm && (
         <TileLayer
-          url="https://gis1.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
-          attribution="USGS PAD-US 3.0"
-          opacity={0.2}
+          url="https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
+          attribution='BLM Surface Management Agency – <a href="https://gis.blm.gov">BLM NSDI</a>'
+          opacity={0.25}
           zIndex={5}
+          maxZoom={19}
         />
       )}
 

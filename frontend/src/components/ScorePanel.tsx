@@ -117,38 +117,70 @@ export default function ScorePanel({
             {/* Gauge */}
             <GaugeArc score={score.score} />
 
-            <div className="text-center -mt-1 mb-4">
+            <div className="text-center -mt-1 mb-3">
               <span className={`text-lg font-bold ${scoreColor(score.score)}`}>
                 {scoreLabel(score.score)}
               </span>
               <span className="text-stone-400 text-sm ml-2">detecting potential</span>
             </div>
 
-            {/* Breakdown */}
-            {Object.keys(score.breakdown).length > 0 && (
-              <div className="space-y-2">
-                <p className="text-xs font-semibold tracking-widest uppercase text-stone-400">
-                  Score Breakdown
-                </p>
-                {Object.entries(score.breakdown).map(([key, val]) => {
-                  const pct = Math.min(100, Math.max(0, val));
-                  return (
-                    <div key={key}>
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className="text-stone-600 capitalize">{key.replace(/_/g, ' ')}</span>
-                        <span className="text-stone-400">{pct.toFixed(1)}</span>
+            <div className="text-center mb-4">
+              <span className="text-xs text-stone-500 bg-stone-50 px-2 py-1 rounded-full">
+                {score.nearby_count} historical site{score.nearby_count !== 1 ? 's' : ''} within 10 km
+              </span>
+            </div>
+
+            {/* Breakdown — only show meaningful entries */}
+            {(() => {
+              const SKIP_KEYS = new Set(['final_score', 'overlap_multiplier']);
+              const entries = Object.entries(score.breakdown).filter(
+                ([k, v]) => !SKIP_KEYS.has(k) && !k.startsWith('semantic:') && !k.startsWith('loc:') && v > 0
+              );
+              if (!entries.length) return null;
+
+              // Separate bonuses from type score contributions
+              const BONUS_KEYS = new Set(['near_water', 'near_route', 'near_intersection']);
+              const bars = entries.filter(([k]) => !BONUS_KEYS.has(k));
+              const bonuses = entries.filter(([k]) => BONUS_KEYS.has(k));
+              const maxVal = Math.max(...bars.map(([, v]) => v), 1);
+
+              return (
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold tracking-widest uppercase text-stone-400">
+                    Score Breakdown
+                  </p>
+                  {bars.map(([key, val]) => {
+                    const barPct = Math.min(100, (val / maxVal) * 100);
+                    return (
+                      <div key={key}>
+                        <div className="flex justify-between text-xs mb-1">
+                          <span className="text-stone-600">{key}</span>
+                          <span className="text-stone-400">{val.toFixed(1)}</span>
+                        </div>
+                        <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
+                          <div
+                            className={`h-full rounded-full ${scoreBg(score.score)}`}
+                            style={{ width: `${barPct}%`, transition: 'width 0.6s ease' }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
-                        <div
-                          className={`h-full rounded-full ${scoreBg(pct)}`}
-                          style={{ width: `${pct}%`, transition: 'width 0.6s ease' }}
-                        />
-                      </div>
+                    );
+                  })}
+
+                  {/* Bonuses */}
+                  {bonuses.map(([key, val]) => (
+                    <div key={key} className="flex items-center justify-between text-xs text-stone-500">
+                      <span>
+                        {key === 'near_water' && '💧 Near water'}
+                        {key === 'near_route' && '🛤 Near historic route'}
+                        {key === 'near_intersection' && '✕ Route intersection'}
+                      </span>
+                      <span className="text-green-600 font-medium">+{val.toFixed(0)}</span>
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                  ))}
+                </div>
+              );
+            })()}
           </>
         )}
       </div>

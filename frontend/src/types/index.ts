@@ -60,6 +60,7 @@ export interface ScoreBreakdown {
 export interface ScoreResponse {
   score: number;
   breakdown: ScoreBreakdown;
+  nearby_count: number;
   lat: number;
   lon: number;
 }

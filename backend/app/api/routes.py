@@ -629,10 +629,8 @@ async def get_blm_tile_url() -> Dict[str, str]:
     PAD-US 3.0 layer that covers all protected and public lands.
     """
     return {
-        "url": (
-            "https://gis1.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/tile/{z}/{y}/{x}"
-        ),
-        "attribution": "USGS PAD-US 3.0 – Protected Areas Database of the United States",
+        "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "BLM Surface Management Agency – Public Land Survey",
     }
 
 
