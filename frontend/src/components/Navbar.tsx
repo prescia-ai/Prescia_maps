@@ -13,7 +13,6 @@ function UserSearch() {
   const ref = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
-  // Close when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -24,7 +23,6 @@ function UserSearch() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  // Close on Escape key
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === 'Escape') setOpen(false);
@@ -33,7 +31,6 @@ function UserSearch() {
     return () => document.removeEventListener('keydown', handleKey);
   }, []);
 
-  // Debounced search
   useEffect(() => {
     if (!query.trim()) {
       setUserResults([]);
@@ -131,13 +128,13 @@ function UserSearch() {
                     >
                       <div className="w-6 h-6 rounded-full bg-stone-100 flex items-center justify-center flex-shrink-0">
                         <svg className="w-3 h-3 text-stone-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                       </div>
                       <div className="flex flex-col min-w-0 flex-1">
                         <div className="flex items-center gap-1.5">
                           <span className="text-stone-800 font-medium text-xs truncate">{group.name}</span>
-                          <span className={`inline-flex items-center px-1.5 py-0 rounded-full text-[10px] font-medium ${group.privacy === 'public' ? 'bg-green-100 text-green-600' : 'bg-stone-100 text-stone-500'}`}>
+                          <span className={`inline-flex items-center px-1.5 py-0 rounded-full text-[10px] font-medium ${group.privacy === 'public' ? 'bg-green-100 text-green-600' : 'bg-stone-100 text-stone-500'}`}> 
                             {group.privacy === 'public' ? 'Public' : 'Private'}
                           </span>
                         </div>
@@ -169,7 +166,6 @@ function SettingsDropdown({ onSignOut, onImportClick }: { onSignOut: () => void;
   const ref = useRef<HTMLDivElement>(null);
   const { profile } = useAuth();
 
-  // Close when clicking outside
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -287,13 +283,13 @@ export default function Navbar({
 
   return (
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
-      <div className="flex items-center gap-3 px-4 h-16">
+      <div className="flex items-center gap-3 px-4 h-12">
         {/* Branding - Just Logo */}
         <Link to="/map" className="flex items-center">
           <img
             src="/brand/logo.png"
             alt="Aurik logo"
-            className="h-20 w-auto"
+            className="h-8 w-auto"
           />
         </Link>
 
@@ -356,7 +352,7 @@ export default function Navbar({
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
               Groups
@@ -378,7 +374,7 @@ export default function Navbar({
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 01-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 01-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 01-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                 />
               </svg>
               Badges
