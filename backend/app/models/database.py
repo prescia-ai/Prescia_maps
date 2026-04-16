@@ -572,3 +572,17 @@ async def create_tables() -> None:
         await conn.execute(
             text("CREATE INDEX IF NOT EXISTS ix_posts_group_id ON posts (group_id)")
         )
+        # Add find_type column to collection_photos if it was created before this feature
+        await conn.execute(
+            text("ALTER TABLE collection_photos ADD COLUMN IF NOT EXISTS find_type VARCHAR(50) DEFAULT NULL")
+        )
+        await conn.execute(
+            text("CREATE INDEX IF NOT EXISTS ix_collection_photos_find_type ON collection_photos (find_type)")
+        )
+        # Add material column to collection_photos if it was created before this feature
+        await conn.execute(
+            text("ALTER TABLE collection_photos ADD COLUMN IF NOT EXISTS material VARCHAR(50) DEFAULT NULL")
+        )
+        await conn.execute(
+            text("CREATE INDEX IF NOT EXISTS ix_collection_photos_material ON collection_photos (material)")
+        )
