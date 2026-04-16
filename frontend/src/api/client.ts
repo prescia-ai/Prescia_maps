@@ -20,6 +20,7 @@ import type {
   Badge,
   BadgeProgress,
   NewlyEarnedBadgesResponse,
+  NotificationsResponse,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -663,6 +664,22 @@ export async function toggleEventRsvp(slug: string, eventId: string): Promise<{ 
 export async function fetchEventMapPins(): Promise<EventPin[]> {
   const { data } = await api.get<EventPin[]>('/events/map-pins');
   return data;
+}
+
+// ── Notifications ─────────────────────────────────────────────────────────────
+
+export async function fetchNotifications(
+  limit = 20,
+  offset = 0,
+): Promise<NotificationsResponse> {
+  const { data } = await api.get<NotificationsResponse>('/notifications', {
+    params: { limit, offset },
+  });
+  return data;
+}
+
+export async function markNotificationsRead(notificationIds: string[]): Promise<void> {
+  await api.post('/notifications/read', { notification_ids: notificationIds });
 }
 
 export default api;

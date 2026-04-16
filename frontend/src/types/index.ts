@@ -355,3 +355,33 @@ export interface EventPin {
   rsvp_count: number;
   user_has_rsvpd: boolean;
 }
+
+// ── Notifications ─────────────────────────────────────────────────────────────
+
+export type NotificationType =
+  | 'post_like'
+  | 'post_comment'
+  | 'submission_approved'
+  | 'badge_earned'
+  | 'group_invite'
+  | 'group_join'
+  | string;
+
+export interface Notification {
+  id: string;
+  type: NotificationType;
+  user_id: string;
+  actor_id: string | null;
+  actor_username: string | null;
+  actor_display_name: string | null;
+  actor_avatar_url: string | null;
+  ref_id: string | null;
+  message: string | null;
+  read: boolean;
+  created_at: string;
+}
+
+export interface NotificationsResponse {
+  unread_count: number;
+  notifications: Notification[];
+}
