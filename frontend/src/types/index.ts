@@ -59,10 +59,12 @@ export interface ScoreBreakdown {
 
 export interface ScoreResponse {
   score: number;
+  raw_score?: number;
   breakdown: ScoreBreakdown;
   nearby_count: number;
   lat: number;
   lon: number;
+  accessible?: string | null;
 }
 
 // ── Layer visibility state ───────────────────────────────────────────────────

@@ -73,8 +73,10 @@ export async function fetchFeatures(): Promise<LinearFeatureCollection> {
   return data;
 }
 
-export async function fetchHeatmap(): Promise<HeatmapPoint[]> {
-  const { data } = await api.get<HeatmapPoint[]>('/heatmap');
+export async function fetchHeatmap(zoom: number = 10): Promise<HeatmapPoint[]> {
+  const { data } = await api.get<HeatmapPoint[]>('/heatmap', {
+    params: { zoom },
+  });
   return data;
 }
 

@@ -25,10 +25,28 @@ function scoreBg(score: number): string {
 }
 
 function scoreLabel(score: number): string {
-  if (score >= 75) return 'Excellent';
-  if (score >= 50) return 'Good';
-  if (score >= 25) return 'Fair';
+  if (score >= 80) return 'Exceptional';
+  if (score >= 60) return 'Excellent';
+  if (score >= 40) return 'Good';
+  if (score >= 20) return 'Fair';
   return 'Poor';
+}
+
+/** Land access badge colours and labels */
+function accessibleBadge(accessible: string | null | undefined): { label: string; cls: string } | null {
+  if (!accessible || accessible === 'unknown') return null;
+  switch (accessible) {
+    case 'allowed':
+      return { label: '✓ Public land — detecting allowed', cls: 'bg-green-100 text-green-800 border-green-200' };
+    case 'off_limits':
+      return { label: '✗ Off-limits — detecting prohibited', cls: 'bg-red-100 text-red-800 border-red-200' };
+    case 'private_permit':
+      return { label: '⚠ Private land — permit required', cls: 'bg-amber-100 text-amber-800 border-amber-200' };
+    case 'unsure':
+      return { label: '? Verify access before detecting', cls: 'bg-stone-100 text-stone-700 border-stone-200' };
+    default:
+      return null;
+  }
 }
 
 function GaugeArc({ score }: { score: number }) {
@@ -124,11 +142,22 @@ export default function ScorePanel({
               <span className="text-stone-400 text-sm ml-2">detecting potential</span>
             </div>
 
-            <div className="text-center mb-4">
+            <div className="text-center mb-3">
               <span className="text-xs text-stone-500 bg-stone-50 px-2 py-1 rounded-full">
                 {score.nearby_count} historical site{score.nearby_count !== 1 ? 's' : ''} within 10 km
               </span>
             </div>
+
+            {/* Land access badge */}
+            {(() => {
+              const badge = accessibleBadge(score.accessible);
+              if (!badge) return null;
+              return (
+                <div className={`mb-3 px-2 py-1.5 rounded-lg border text-xs font-medium text-center ${badge.cls}`}>
+                  {badge.label}
+                </div>
+              );
+            })()}
 
             {/* Breakdown — only show meaningful entries */}
             {(() => {
@@ -138,8 +167,8 @@ export default function ScorePanel({
               );
               if (!entries.length) return null;
 
-              // Separate bonuses from type score contributions
-              const BONUS_KEYS = new Set(['near_water', 'near_route', 'near_intersection']);
+              // Separate bonuses from type/site score contributions
+              const BONUS_KEYS = new Set(['near_water', 'near_route', 'near_intersection', 'near_cluster']);
               const bars = entries.filter(([k]) => !BONUS_KEYS.has(k));
               const bonuses = entries.filter(([k]) => BONUS_KEYS.has(k));
               const maxVal = Math.max(...bars.map(([, v]) => v), 1);
@@ -147,15 +176,15 @@ export default function ScorePanel({
               return (
                 <div className="space-y-2">
                   <p className="text-xs font-semibold tracking-widest uppercase text-stone-400">
-                    Score Breakdown
+                    Why this spot?
                   </p>
                   {bars.map(([key, val]) => {
                     const barPct = Math.min(100, (val / maxVal) * 100);
                     return (
                       <div key={key}>
                         <div className="flex justify-between text-xs mb-1">
-                          <span className="text-stone-600">{key}</span>
-                          <span className="text-stone-400">{val.toFixed(1)}</span>
+                          <span className="text-stone-600 truncate max-w-[180px]" title={key}>{key}</span>
+                          <span className="text-stone-400 ml-1 shrink-0">{val.toFixed(1)}</span>
                         </div>
                         <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
                           <div
@@ -171,9 +200,10 @@ export default function ScorePanel({
                   {bonuses.map(([key, val]) => (
                     <div key={key} className="flex items-center justify-between text-xs text-stone-500">
                       <span>
-                        {key === 'near_water' && '💧 Near water'}
+                        {key === 'near_water' && '💧 Near water source'}
                         {key === 'near_route' && '🛤 Near historic route'}
                         {key === 'near_intersection' && '✕ Route intersection'}
+                        {key === 'near_cluster' && '📍 Multiple overlapping sites'}
                       </span>
                       <span className="text-green-600 font-medium">+{val.toFixed(0)}</span>
                     </div>

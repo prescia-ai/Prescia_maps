@@ -280,6 +280,7 @@ interface MapViewProps {
   onMapClick: (lat: number, lon: number) => void;
   onLocationSelect: (f: LocationFeature) => void;
   onContextMenu?: (lat: number, lon: number) => void;
+  onZoomChange?: (zoom: number) => void;
   userPins?: UserPin[];
   eventPins?: EventPin[];
 }
@@ -292,6 +293,7 @@ export default function MapView({
   onMapClick,
   onLocationSelect,
   onContextMenu,
+  onZoomChange,
   userPins,
   eventPins,
 }: MapViewProps) {
@@ -352,7 +354,7 @@ export default function MapView({
       <LinearFeatures features={linearFeatures} layers={layers} />
 
       {heatmapPoints.length > 0 && (
-        <HeatmapLayer points={heatmapPoints} visible={layers.heatmap} />
+        <HeatmapLayer points={heatmapPoints} visible={layers.heatmap} onZoomChange={onZoomChange} />
       )}
 
       {userPins && userPins.length > 0 && (

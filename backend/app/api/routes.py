@@ -6,6 +6,7 @@ All routes are mounted under the ``/api/v1`` prefix defined in
 session (``db``) and, where appropriate, calls the scoring engine.
 """
 
+import asyncio
 import logging
 from collections import defaultdict
 from typing import Any, Dict, List, Optional
@@ -364,13 +365,19 @@ async def get_features(
     tags=["scoring"],
 )
 async def get_heatmap(
+    zoom: int = Query(10, ge=1, le=20, description="Current map zoom level"),
     db: AsyncSession = Depends(get_db),
 ) -> List[HeatmapPoint]:
     """
     Return weighted heatmap points for all historical locations.
 
-    Each point's weight is normalised to [0, 1] and based on the
-    location's type interest value and age.
+    The zoom level controls how points are processed:
+    - Low zoom (≤7): grid-clustered regional hotspots (fewer, broader points)
+    - Mid zoom (8–12): spatially interpolated grid so the area between
+      two historical sites glows warm, not cold
+    - High zoom (≥13): raw location points with tight precision
+
+    Each point's weight is normalised to [0, 1].
     """
     result = await db.execute(
         select(
@@ -400,7 +407,7 @@ async def get_heatmap(
         for r in rows
     ]
 
-    raw_points = compute_heatmap_data(all_locs)
+    raw_points = compute_heatmap_data(all_locs, zoom=zoom)
     return [HeatmapPoint(**p) for p in raw_points]
 
 
@@ -478,12 +485,27 @@ async def get_score(
     ]
 
     result = score_location(lat, lon, nearby_locs, nearby_feats)
+
+    # Land access lookup — best-effort with a 4-second timeout so the score
+    # endpoint doesn't hang if PAD-US is unavailable.
+    accessible: Optional[str] = None
+    try:
+        land_info = await asyncio.wait_for(
+            lookup_land_access(lat, lon, db),
+            timeout=4.0,
+        )
+        accessible = land_info.get("status", "unknown")
+    except Exception:
+        accessible = "unknown"
+
     return ScoreResponse(
         lat=lat,
         lon=lon,
         score=result["score"],
+        raw_score=result.get("raw_score"),
         breakdown=result["breakdown"],
         nearby_count=result["nearby_count"],
+        accessible=accessible,
     )
 
 

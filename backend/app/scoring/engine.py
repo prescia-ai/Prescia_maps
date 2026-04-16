@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import logging
 import math
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 from app.scoring.semantic import batch_compute_semantic_scores
 
@@ -47,25 +47,59 @@ WEIGHTS: Dict[str, float] = {
     "historic_brothel": 65.0, # High commerce area, likely coin loss
 }
 
+# Human-readable labels for each location type (used in breakdown text)
+_TYPE_LABELS: Dict[str, str] = {
+    "town": "Old town site",
+    "battle": "Battle site",
+    "camp": "Historic camp",
+    "mine": "Historic mine",
+    "railroad_stop": "Railroad stop",
+    "stagecoach_stop": "Stagecoach stop",
+    "trading_post": "Trading post",
+    "mission": "Historic mission",
+    "cemetery": "Cemetery",
+    "ferry": "Ferry crossing",
+    "fairground": "Historic fairground",
+    "church": "Historic church",
+    "school": "Historic school",
+    "spring": "Historic spring",
+    "locale": "Historic locale",
+    "structure": "Historic structure",
+    "event": "Historic event",
+    "pony_express": "Pony Express station",
+    "shipwreck": "Shipwreck site",
+    "abandoned_church": "Abandoned church",
+    "historic_brothel": "Historic establishment",
+}
+
 # Modifiers (additive, applied before clamping)
 NEAR_WATER_BONUS = 20.0
 NEAR_INTERSECTION_BONUS = 30.0
-OVERLAP_MULTIPLIER_PER_EXTRA = 0.15   # 15 % bonus per additional site beyond the first
+OVERLAP_MULTIPLIER_PER_EXTRA = 0.15   # base bonus per additional site beyond the first
 
 # Age decay / boost constants
 # Sites older than this threshold get an age bonus proportional to age
 _AGE_REFERENCE_YEAR = 1900
 _MAX_AGE_BONUS = 20.0
 
-# Distance decay: score contribution falls off as 1/d² (softened)
-_DECAY_SIGMA_KM = 2.0   # effective "radius" of influence
+# Distance decay: score contribution falls off as a Gaussian
+# Tightened from 2.0 to 1.5 km — sites 6+ km away contribute very little
+_DECAY_SIGMA_KM = 1.5
+
+# Default confidence when the DB field is NULL
+# Raised from 0.5 to 0.8 — most locations are reasonably well-documented
+_DEFAULT_CONFIDENCE = 0.8
 
 # Minimum semantic multiplier deviation to include in the score breakdown dict
 _SEMANTIC_BREAKDOWN_THRESHOLD = 0.05
 
 # Score compression threshold: raw scores above this value are soft-compressed
-# to prevent the gauge from pinning at 100 in dense location clusters
-_COMPRESSION_THRESHOLD = 60.0
+# Raised from 60 to 85 — lets the full 0-100 range be meaningful
+# A Civil War battlefield + creek + railroad crossing SHOULD score 90+
+_COMPRESSION_THRESHOLD = 85.0
+
+# Maximum number of individual location entries shown in the score breakdown
+_MAX_BREAKDOWN_ENTRIES = 8
 
 
 # ---------------------------------------------------------------------------
@@ -137,10 +171,10 @@ def score_location(
     Algorithm:
     1. For each nearby historical location, compute a distance-decayed
        contribution based on its type weight and age bonus.
-    2. Apply an overlap multiplier when multiple sites overlap.
+    2. Apply an overlap multiplier (polynomial) when multiple sites overlap.
     3. Add bonuses for proximity to water (rivers/streams encoded as
        features with ``"water"`` in the name) and trail/railroad intersections.
-    4. Clamp the final score to [0, 100].
+    4. Soft-compress scores above 85 and clamp to [0, 100].
 
     Args:
         lat:               Query latitude.
@@ -151,8 +185,8 @@ def score_location(
                            nearby linear features.
 
     Returns:
-        Dict with ``score`` (float), ``breakdown`` (dict), and
-        ``nearby_count`` (int).
+        Dict with ``score`` (float), ``raw_score`` (float),
+        ``breakdown`` (dict), and ``nearby_count`` (int).
     """
     breakdown: Dict[str, float] = {}
     raw_score = 0.0
@@ -164,13 +198,16 @@ def score_location(
          for loc in nearby_locations],
         location_ids=[str(loc.get("id", "")) for loc in nearby_locations],
     )
-    type_contributions: Dict[str, float] = {}
+
+    # Track per-location entries for human-readable breakdown
+    per_loc_entries: List[Tuple[str, float]] = []
+
     for i, loc in enumerate(nearby_locations):
         loc_type = loc.get("type", "event")
         base_weight = WEIGHTS.get(loc_type, WEIGHTS["event"])
 
         # Apply semantic relevance multiplier if name/description available
-        name = loc.get("name", "")
+        name = loc.get("name", "").strip()
         semantic_mult = semantic_mults[i]
         if name:
             base_weight = base_weight * semantic_mult
@@ -181,22 +218,38 @@ def score_location(
         dist_factor = _distance_weight(dist_km)
 
         age_b = _age_bonus(loc.get("year"))
-        confidence = float(loc.get("confidence", 0.5))
+        confidence = float(loc.get("confidence") or _DEFAULT_CONFIDENCE)
         contribution = (base_weight + age_b) * dist_factor * confidence
 
         location_contributions.append(contribution)
-        type_contributions[loc_type] = type_contributions.get(loc_type, 0.0) + contribution
 
-    # Group contributions by site type (cleaner breakdown than per-location entries)
-    for loc_type, total_contrib in type_contributions.items():
-        breakdown[loc_type.replace("_", " ").title()] = round(total_contrib, 1)
+        # Build human-readable breakdown key
+        type_label = _TYPE_LABELS.get(loc_type, loc_type.replace("_", " ").title())
+        year = loc.get("year")
+        year_suffix = f", est. {year}s" if year and int(year) < 2000 else ""
+        if name:
+            breakdown_key = f"{name} ({type_label}{year_suffix}) — {dist_km:.1f}km"
+        else:
+            breakdown_key = f"{type_label}{year_suffix} — {dist_km:.1f}km"
+        per_loc_entries.append((breakdown_key, contribution))
+
+    # Add top-N location contributions to breakdown (sorted by contribution)
+    per_loc_entries.sort(key=lambda x: -x[1])
+    for key, val in per_loc_entries[:_MAX_BREAKDOWN_ENTRIES]:
+        breakdown[key] = round(val, 1)
 
     if location_contributions:
-        # Sum contributions with overlap multiplier
+        # Sum contributions with polynomial overlap multiplier
+        # More aggressive compounding: 3+ sites compound stronger than linear
         base_sum = sum(location_contributions)
         n_extra = max(0, len(location_contributions) - 1)
-        overlap_boost = 1.0 + n_extra * OVERLAP_MULTIPLIER_PER_EXTRA
+        # Polynomial: each extra site adds base 15% + accelerating bonus
+        overlap_boost = min(3.0, 1.0 + OVERLAP_MULTIPLIER_PER_EXTRA * n_extra + 0.03 * n_extra ** 2)
         raw_score += base_sum * overlap_boost
+
+        # Add cluster bonus note to breakdown if 3+ sites
+        if n_extra >= 2:
+            breakdown["near_cluster"] = round((overlap_boost - 1.0) * base_sum, 1)
 
     # --- Linear feature bonuses ---
     feature_types = {f.get("type", "") for f in nearby_features}
@@ -224,7 +277,9 @@ def score_location(
 
     # Soft-compress scores above threshold to prevent artificial ceiling
     if raw_score > _COMPRESSION_THRESHOLD:
-        compressed = _COMPRESSION_THRESHOLD + (raw_score - _COMPRESSION_THRESHOLD) / (1 + (raw_score - _COMPRESSION_THRESHOLD) / _COMPRESSION_THRESHOLD)
+        compressed = _COMPRESSION_THRESHOLD + (raw_score - _COMPRESSION_THRESHOLD) / (
+            1 + (raw_score - _COMPRESSION_THRESHOLD) / _COMPRESSION_THRESHOLD
+        )
     else:
         compressed = raw_score
     final_score = round(min(max(compressed, 0.0), 100.0), 2)
@@ -232,36 +287,125 @@ def score_location(
 
     return {
         "score": final_score,
+        "raw_score": round(raw_score, 2),
         "breakdown": breakdown,
         "nearby_count": len(nearby_locations),
     }
 
 
-def compute_heatmap_data(
-    all_locations: List[Dict[str, Any]],
+def _cluster_points(raw_points: List[Dict[str, float]], cell_size_deg: float) -> List[Dict[str, float]]:
+    """
+    Grid-based clustering for low zoom levels.
+
+    Aggregates nearby location weights into coarse grid cells to reveal
+    broad regional hotspots without overwhelming detail.
+    """
+    cells: Dict[Tuple[int, int], float] = {}
+    for p in raw_points:
+        ci = math.floor(p["lat"] / cell_size_deg)
+        cj = math.floor(p["lon"] / cell_size_deg)
+        key = (ci, cj)
+        cells[key] = cells.get(key, 0.0) + p["weight"]
+
+    if not cells:
+        return []
+
+    max_w = max(cells.values())
+    result: List[Dict[str, float]] = []
+    for (ci, cj), w in cells.items():
+        result.append({
+            "lat": round((ci + 0.5) * cell_size_deg, 4),
+            "lon": round((cj + 0.5) * cell_size_deg, 4),
+            "weight": round(w / max_w, 4),
+        })
+    return result
+
+
+def _interpolate_points(
+    raw_points: List[Dict[str, float]],
+    grid_spacing_deg: float,
+    influence_deg: float,
 ) -> List[Dict[str, float]]:
     """
-    Generate heatmap weight data from all known historical locations.
+    Grid interpolation for mid zoom levels.
 
-    Each location contributes a point at its own coordinates weighted by
-    its type base weight and age bonus, scaled to [0, 1].
+    Each location "bleeds" its weight into surrounding grid cells using
+    Gaussian decay.  The area between two nearby historical sites will
+    accumulate heat from both, creating a warm glow between them.
+    """
+    if not raw_points:
+        return []
+
+    cells: Dict[Tuple[int, int], float] = {}
+    r_cells = math.ceil(influence_deg / grid_spacing_deg)
+    sigma = influence_deg / 2.0
+
+    for p in raw_points:
+        gi = round(p["lat"] / grid_spacing_deg)
+        gj = round(p["lon"] / grid_spacing_deg)
+
+        for di in range(-r_cells, r_cells + 1):
+            for dj in range(-r_cells, r_cells + 1):
+                cell_lat = (gi + di) * grid_spacing_deg
+                cell_lon = (gj + dj) * grid_spacing_deg
+                dist_deg = math.sqrt(
+                    (p["lat"] - cell_lat) ** 2 + (p["lon"] - cell_lon) ** 2
+                )
+                if dist_deg > influence_deg:
+                    continue
+                decay = math.exp(-0.5 * (dist_deg / sigma) ** 2)
+                key = (gi + di, gj + dj)
+                cells[key] = cells.get(key, 0.0) + p["weight"] * decay
+
+    if not cells:
+        return []
+
+    max_w = max(cells.values())
+    threshold = max_w * 0.04  # drop cells with less than 4% of the max weight
+
+    result: List[Dict[str, float]] = []
+    for (gi, gj), w in cells.items():
+        if w < threshold:
+            continue
+        result.append({
+            "lat": round(gi * grid_spacing_deg, 4),
+            "lon": round(gj * grid_spacing_deg, 4),
+            "weight": round(w / max_w, 4),
+        })
+    return result
+
+
+def compute_heatmap_data(
+    all_locations: List[Dict[str, Any]],
+    zoom: int = 10,
+) -> List[Dict[str, float]]:
+    """
+    Generate zoom-adaptive heatmap weight data from all known historical locations.
+
+    Zoom behaviour:
+    - **Low zoom (≤ 7, state level):** Grid clustering with coarse cells.
+      Returns regional hotspot centers — fewer points, broad patterns.
+    - **Mid zoom (8–12, county level):** Grid interpolation with Gaussian
+      influence radius.  Each site "bleeds" heat into surrounding cells so
+      the area between two old towns glows warm.
+    - **High zoom (≥ 13, street level):** Raw location points — individual
+      sites are precise, frontend handles tight radius rendering.
 
     Args:
         all_locations: List of dicts with at least ``type``, ``latitude``,
                        ``longitude``, and optionally ``year``.
+        zoom:          Current map zoom level from the frontend.
 
     Returns:
         List of ``{lat, lon, weight}`` dicts suitable for a heatmap overlay.
     """
-    points: List[Dict[str, float]] = []
-    max_weight = 0.0
-
     raw_points: List[Dict[str, float]] = []
     semantic_mults = batch_compute_semantic_scores(
         [{"name": loc.get("name", ""), "description": loc.get("description", ""), "type": loc.get("type", "event")}
          for loc in all_locations],
         location_ids=[str(loc.get("id", "")) for loc in all_locations],
     )
+    max_weight = 0.0
     for i, loc in enumerate(all_locations):
         lat = loc.get("latitude")
         lon = loc.get("longitude")
@@ -271,10 +415,9 @@ def compute_heatmap_data(
         loc_type = loc.get("type", "event")
         base = WEIGHTS.get(loc_type, WEIGHTS["event"])
         age_b = _age_bonus(loc.get("year"))
-        confidence = float(loc.get("confidence", 0.5))
+        confidence = float(loc.get("confidence") or _DEFAULT_CONFIDENCE)
         weight = (base + age_b) * confidence
 
-        # Semantic multiplier for heatmap weighting (only when name is available)
         if loc.get("name", ""):
             weight = weight * semantic_mults[i]
 
@@ -282,9 +425,19 @@ def compute_heatmap_data(
         if weight > max_weight:
             max_weight = weight
 
-    # Normalise weights to [0, 1]
-    for pt in raw_points:
-        normalised = round(pt["weight"] / max_weight, 4) if max_weight > 0 else 0.0
-        points.append({"lat": pt["lat"], "lon": pt["lon"], "weight": normalised})
+    if not raw_points:
+        return []
 
-    return points
+    # Normalise raw weights to [0, 1] before zoom-adaptive processing
+    for p in raw_points:
+        p["weight"] = round(p["weight"] / max_weight, 4) if max_weight > 0 else 0.0
+
+    if zoom <= 7:
+        # State / national level — cluster into 0.5° cells (~55 km)
+        return _cluster_points(raw_points, cell_size_deg=0.5)
+    elif zoom <= 12:
+        # County level — blend with 0.5° influence radius, 0.2° grid spacing
+        return _interpolate_points(raw_points, grid_spacing_deg=0.2, influence_deg=0.5)
+    else:
+        # Street level — return raw points; frontend uses tight radius
+        return raw_points
