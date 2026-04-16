@@ -15,7 +15,7 @@ import { useHeatmap } from '../hooks/useHeatmap';
 import { useScore } from '../hooks/useScore';
 import { useMyPins } from '../hooks/useMyPins';
 import { useAuth } from '../contexts/AuthContext';
-import { fetchLandAccess, putLandAccessOverride, fetchEventMapPins } from '../api/client';
+import { putLandAccessOverride, fetchEventMapPins } from '../api/client';
 import type { LocationFeature, LayerState, LandAccessResponse } from '../types';
 
 const US_CENTER_LAT = 39.5;
@@ -64,8 +64,8 @@ export default function MapPage() {
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
-  const [landAccessLoading, setLandAccessLoading] = useState(false);
-  const [landAccessError, setLandAccessError] = useState(false);
+  const landAccessLoading = false;
+  const landAccessError = false;
   const [showLandAccess, setShowLandAccess] = useState(false);
 
   const locationsQuery = useLocations();
@@ -82,21 +82,6 @@ export default function MapPage() {
   const handleMapClick = useCallback((lat: number, lon: number) => {
     setSelectedFeature(null);
     setClickedCoords({ lat, lon });
-  }, []);
-
-  const handleLandAccessClick = useCallback(async (lat: number, lon: number) => {
-    setShowLandAccess(true);
-    setLandAccessLoading(true);
-    setLandAccessError(false);
-    setLandAccessData(null);
-    try {
-      const data = await fetchLandAccess(lat, lon);
-      setLandAccessData(data);
-    } catch {
-      setLandAccessError(true);
-    } finally {
-      setLandAccessLoading(false);
-    }
   }, []);
 
   const handleLandAccessOverride = useCallback(async (
@@ -176,7 +161,6 @@ export default function MapPage() {
           layers={layers}
           onMapClick={handleMapClick}
           onLocationSelect={handleLocationSelect}
-          onLandAccessClick={handleLandAccessClick}
           onContextMenu={handleContextMenu}
           userPins={userPins}
           eventPins={eventPins}
