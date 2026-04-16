@@ -94,6 +94,7 @@ async def list_notifications(
 @router.post(
     "/read",
     status_code=204,
+    response_model=None,
     summary="Mark notifications as read",
 )
 async def mark_read(
