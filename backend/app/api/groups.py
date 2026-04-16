@@ -32,6 +32,7 @@ from app.models.schemas import (
     GroupSearchResult,
     GroupUpdate,
 )
+from app.services.notification_service import create_notification
 
 router = APIRouter(prefix="/groups", tags=["groups"])
 
@@ -354,6 +355,16 @@ async def join_group(
     db.add(member)
     await db.flush()
 
+    # Notify the group owner when a user successfully joins (not for pending requests)
+    if new_status == "active" and group.created_by != current_user.id:
+        await create_notification(
+            db,
+            type="group_join",
+            user_id=group.created_by,
+            actor_id=current_user.id,
+            ref_id=str(group.id),
+        )
+
     message = "Joined group" if new_status == "active" else "Join request sent"
     return {"message": message}
 
@@ -673,5 +684,14 @@ async def invite_user(
     )
     db.add(member)
     await db.flush()
+
+    # Notify the invited user about the group invitation
+    await create_notification(
+        db,
+        type="group_invite",
+        user_id=target_user.id,
+        actor_id=current_user.id,
+        ref_id=str(group.id),
+    )
 
     return {"message": f"Invited {body.username} to the group"}

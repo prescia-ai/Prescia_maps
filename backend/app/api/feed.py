@@ -28,6 +28,7 @@ from sqlalchemy import and_, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user, optional_user
+from app.services.notification_service import create_notification
 from app.models.database import (
     Group,
     GroupMember,
@@ -602,7 +603,8 @@ async def create_comment(
 ) -> CommentResponse:
     """Add a comment to a post."""
     post_result = await db.execute(select(Post).where(Post.id == post_id))
-    if post_result.scalar_one_or_none() is None:
+    post = post_result.scalar_one_or_none()
+    if post is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Post not found")
 
     comment = PostComment(
@@ -613,6 +615,17 @@ async def create_comment(
     db.add(comment)
     await db.flush()
     await db.refresh(comment)
+
+    # Notify the post author about the new comment (skip if commenting on own post)
+    if post.author_id != current_user.id:
+        await create_notification(
+            db,
+            type="comment",
+            user_id=post.author_id,
+            actor_id=current_user.id,
+            ref_id=str(post_id),
+        )
+
     return CommentResponse(
         id=comment.id,
         post_id=comment.post_id,
@@ -704,6 +717,15 @@ async def react_to_post(
             reaction_type=body.reaction_type,
         )
         db.add(reaction)
+        # Notify the post author about the new reaction (skip if reacting to own post)
+        if post.author_id != current_user.id:
+            await create_notification(
+                db,
+                type="like",
+                user_id=post.author_id,
+                actor_id=current_user.id,
+                ref_id=str(post_id),
+            )
     elif existing.reaction_type == body.reaction_type:
         # Same reaction — toggle off
         await db.delete(existing)
