@@ -287,13 +287,13 @@ export default function Navbar({
 
   return (
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
-      <div className="flex items-center gap-3 px-4 h-12">
+      <div className="flex items-center gap-3 px-4 h-16">
         {/* Branding - Just Logo */}
         <Link to="/map" className="flex items-center">
           <img
             src="/brand/logo.png"
             alt="Aurik logo"
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 

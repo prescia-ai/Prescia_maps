@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import MapView from '../components/MapView';
 import LayerControls from '../components/LayerControls';
@@ -46,7 +46,7 @@ const DEFAULT_LAYERS: LayerState = {
   railroad:         true,
   road:            true,
   heatmap:         false,
-  blm:             false,
+  blm:             true,
   aerials_1955:    false,
   my_hunts:        false,
   group_events:    true,
@@ -55,6 +55,7 @@ const DEFAULT_LAYERS: LayerState = {
 export default function MapPage() {
   const queryClient = useQueryClient();
   const { user } = useAuth();
+  const justSelectedFeatureRef = useRef(false);
   const [layers, setLayers] = useState<LayerState>(DEFAULT_LAYERS);
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
@@ -80,6 +81,10 @@ export default function MapPage() {
   });
 
   const handleMapClick = useCallback((lat: number, lon: number) => {
+    if (justSelectedFeatureRef.current) {
+      justSelectedFeatureRef.current = false;
+      return;
+    }
     setSelectedFeature(null);
     setClickedCoords({ lat, lon });
   }, []);
@@ -103,6 +108,7 @@ export default function MapPage() {
   }, []);
 
   const handleLocationSelect = useCallback((f: LocationFeature) => {
+    justSelectedFeatureRef.current = true;
     setSelectedFeature(f);
     setClickedCoords(null);
   }, []);
@@ -153,7 +159,7 @@ export default function MapPage() {
       />
 
       {/* Full-screen map — offset below navbar */}
-      <div className="absolute inset-0 top-12">
+      <div className="absolute inset-0 top-16">
         <MapView
           locations={locations}
           linearFeatures={linearFeatures}
@@ -168,7 +174,7 @@ export default function MapPage() {
       </div>
 
       {/* Left panel: layer controls — offset below navbar */}
-      <div className="absolute top-16 left-4 z-10">
+      <div className="absolute top-20 left-4 z-10">
         <LayerControls layers={layers} onChange={setLayers} />
       </div>
 
