@@ -160,6 +160,7 @@ def score_location(
          for loc in nearby_locations],
         location_ids=[str(loc.get("id", "")) for loc in nearby_locations],
     )
+    type_contributions: Dict[str, float] = {}
     for i, loc in enumerate(nearby_locations):
         loc_type = loc.get("type", "event")
         base_weight = WEIGHTS.get(loc_type, WEIGHTS["event"])
@@ -180,9 +181,15 @@ def score_location(
         contribution = (base_weight + age_b) * dist_factor * confidence
 
         location_contributions.append(contribution)
-        breakdown[f"loc:{loc.get('name', loc_type)[:30]}"] = round(contribution, 2)
-        if name and abs(semantic_mult - 1.0) > _SEMANTIC_BREAKDOWN_THRESHOLD:
-            breakdown[f"semantic:{name[:20]}"] = round(semantic_mult, 3)
+        type_contributions[loc_type] = type_contributions.get(loc_type, 0.0) + contribution
+
+    # Group contributions by site type (cleaner breakdown than per-location entries)
+    for loc_type, total_contrib in type_contributions.items():
+        breakdown[loc_type.replace("_", " ").title()] = round(total_contrib, 1)
+
+    # Show total number of nearby sites for transparency
+    if nearby_locations:
+        breakdown["Nearby Sites"] = len(nearby_locations)
 
     if location_contributions:
         # Sum contributions with overlap multiplier
@@ -190,7 +197,6 @@ def score_location(
         n_extra = max(0, len(location_contributions) - 1)
         overlap_boost = 1.0 + n_extra * OVERLAP_MULTIPLIER_PER_EXTRA
         raw_score += base_sum * overlap_boost
-        breakdown["overlap_multiplier"] = round(overlap_boost, 3)
 
     # --- Linear feature bonuses ---
     feature_types = {f.get("type", "") for f in nearby_features}
@@ -216,7 +222,12 @@ def score_location(
         raw_score += bonus
         breakdown["near_route"] = bonus
 
-    final_score = round(min(max(raw_score, 0.0), 100.0), 2)
+    # Soft-compress scores above 60 to prevent artificial ceiling
+    if raw_score > 60:
+        compressed = 60 + (raw_score - 60) / (1 + (raw_score - 60) / 60)
+    else:
+        compressed = raw_score
+    final_score = round(min(max(compressed, 0.0), 100.0), 2)
     breakdown["final_score"] = final_score
 
     return {
