@@ -63,6 +63,10 @@ _DECAY_SIGMA_KM = 2.0   # effective "radius" of influence
 # Minimum semantic multiplier deviation to include in the score breakdown dict
 _SEMANTIC_BREAKDOWN_THRESHOLD = 0.05
 
+# Score compression threshold: raw scores above this value are soft-compressed
+# to prevent the gauge from pinning at 100 in dense location clusters
+_COMPRESSION_THRESHOLD = 60.0
+
 
 # ---------------------------------------------------------------------------
 # Internal helpers
@@ -187,10 +191,6 @@ def score_location(
     for loc_type, total_contrib in type_contributions.items():
         breakdown[loc_type.replace("_", " ").title()] = round(total_contrib, 1)
 
-    # Show total number of nearby sites for transparency
-    if nearby_locations:
-        breakdown["Nearby Sites"] = len(nearby_locations)
-
     if location_contributions:
         # Sum contributions with overlap multiplier
         base_sum = sum(location_contributions)
@@ -222,9 +222,9 @@ def score_location(
         raw_score += bonus
         breakdown["near_route"] = bonus
 
-    # Soft-compress scores above 60 to prevent artificial ceiling
-    if raw_score > 60:
-        compressed = 60 + (raw_score - 60) / (1 + (raw_score - 60) / 60)
+    # Soft-compress scores above threshold to prevent artificial ceiling
+    if raw_score > _COMPRESSION_THRESHOLD:
+        compressed = _COMPRESSION_THRESHOLD + (raw_score - _COMPRESSION_THRESHOLD) / (1 + (raw_score - _COMPRESSION_THRESHOLD) / _COMPRESSION_THRESHOLD)
     else:
         compressed = raw_score
     final_score = round(min(max(compressed, 0.0), 100.0), 2)

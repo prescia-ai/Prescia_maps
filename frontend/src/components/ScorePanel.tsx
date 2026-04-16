@@ -132,7 +132,7 @@ export default function ScorePanel({
 
             {/* Breakdown — only show meaningful entries */}
             {(() => {
-              const SKIP_KEYS = new Set(['final_score', 'overlap_multiplier', 'Nearby Sites']);
+              const SKIP_KEYS = new Set(['final_score', 'overlap_multiplier']);
               const entries = Object.entries(score.breakdown).filter(
                 ([k, v]) => !SKIP_KEYS.has(k) && !k.startsWith('semantic:') && !k.startsWith('loc:') && v > 0
               );
