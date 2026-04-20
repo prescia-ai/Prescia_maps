@@ -284,7 +284,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 10. GRAND MASTER FINDER ]---
----[ file: badges/438FACB1-AC25-42F9-AA78-09B9BA4102B7.png ]---
+---[ file: C0E12EBB-E225-4194-87AF-DE9764FF83B4.png ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -313,7 +313,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 11. PINNACLE COLLECTOR ]---
----[ file: 
+---[ file: 9D083A6D-2164-4CF9-B9DE-FD7807A75A6A.png
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
