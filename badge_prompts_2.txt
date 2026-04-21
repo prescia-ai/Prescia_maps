@@ -346,7 +346,7 @@ ADVANCED COLLECTION TYPE BADGES
 ========================================================
 
 ---[ 12. COIN HOARDER ]---
----[ file: badges/0BA8218E-72C1-46EE-B7E7-C6FAA8793A31.png ]---
+---[ file: E46CD796-E5BB-48DE-A3F6-9F9819ADC019.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -375,7 +375,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 13. BUTTON BARON ]---
----[ file: badges/7891A7AA-5A40-4DAC-9A4D-112E7D2E8086.png ]---
+---[ file: D1840574-3B84-4621-9602-5CC0A095E381.png ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -404,7 +404,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 14. BULLET CACHE ]---
----[ file: badges/16DCF0A6-87E2-4359-95A9-20633FACA5A8.png ]---
+---[ file: 0F5AE77F-8165-45F5-977B-2B12C29D6C75.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -433,7 +433,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 15. JEWEL HUNTER ]---
----[ file: badges/5F052C0F-E58B-4EC5-B2FF-0D341C143EC8.png ]---
+---[ file: FB3E90DF-3C93-4AF2-99BE-C8EF7F443600.png ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -462,7 +462,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 16. BUCKLE BONANZA ]---
----[ file: badges/97315749-9932-4AA7-90A6-720706E337C5.png ]---
+---[ file: 79F9EB4B-7278-4905-B46F-3FD4696778D5.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -491,7 +491,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 17. TOKEN HOARDER ]---
----[ file: badges/96AEF6FD-C430-44A1-98A2-F8F5C961B95A.png ]---
+---[ file: 7490BFDE-231E-4A1B-9602-F8EC2F971B43.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
