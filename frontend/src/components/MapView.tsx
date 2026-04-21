@@ -318,12 +318,12 @@ export default function MapView({
         maxZoom={19}
       />
 
-      {/* BLM Surface Management Agency overlay */}
+      {/* Land Access overlay — color-coded by metal-detecting access rules */}
       {layers.blm && (
         <TileLayer
           url="https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
-          attribution='BLM Surface Management Agency – <a href="https://gis.blm.gov">BLM NSDI</a>'
-          opacity={0.25}
+          attribution='Land Access Status – <a href="https://gis.blm.gov">BLM NSDI</a>'
+          opacity={0.65}
           zIndex={5}
           maxZoom={19}
         />
