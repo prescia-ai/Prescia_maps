@@ -520,7 +520,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 18. RELIC KEEPER ]---
----[ file: badges/B89D5811-68B1-41FB-B239-459869B59B3F.png ]---
+---[ file: 8B75E001-50FD-467E-ABF0-1FF29ADA2430.png ]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -549,7 +549,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 19. TOOL COLLECTOR ]---
----[ file: badges/FD080D23-F5D0-4BF9-A5DA-227900654036.png ]---
+---[ file: 700576FC-02A1-48DC-A733-3719166CB73F.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -578,7 +578,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 20. KEY KEEPER ]---
----[ file: badges/C1C709F3-54AF-4D15-97C9-214E5C8E7E0F.png ]---
+---[ file: FB00E77D-B31E-42C7-B418-8362A8D958B5.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -607,7 +607,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 21. RING ROYALTY ]---
----[ file: badges/4EA13678-E4E8-4F8C-B0C6-A804784752A2.png ]---
+---[ file: 1E3C2B5A-4205-4576-AD11-DB9360E79BA7.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -640,7 +640,7 @@ MATERIAL COLLECTOR BADGES
 ========================================================
 
 ---[ 22. GOLD SEEKER ]---
----[ file: badges/589E1527-9E68-4177-99D9-053F239B5317.png ]---
+---[ file: 0EC0559F-5F7C-4E01-A5A2-E616D85EE9F9.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -669,7 +669,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 23. LEAD HOARDER ]---
----[ file: badges/A826407D-CB3E-4345-9027-C831CCDFFB32.png ]---
+---[ file: FFBFBBD5-330C-4526-B124-C227959DD0D1.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
