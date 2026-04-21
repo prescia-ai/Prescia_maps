@@ -36,7 +36,7 @@ const RARITY_LABEL: Record<string, string> = {
 const SIZE_CLASS: Record<string, string> = {
   sm: 'w-12 h-12',
   md: 'w-16 h-16',
-  lg: 'w-24 h-24',
+  lg: 'w-32 h-32',
 };
 
 function formatDate(dateStr: string): string {
