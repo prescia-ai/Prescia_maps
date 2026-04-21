@@ -12,6 +12,7 @@ from collections import defaultdict
 from typing import Any, Dict, List, Optional
 from uuid import UUID
 
+import httpx
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.shape import from_shape
 from shapely.geometry import LineString as ShapelyLineString
@@ -658,6 +659,83 @@ async def get_blm_tile_url() -> Dict[str, str]:
         "url": "https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}",
         "attribution": "BLM Surface Management Agency – Public Land Survey",
     }
+
+
+@router.get(
+    "/land-access/pad-us-proxy",
+    response_model=None,
+    summary="Proxy PAD-US protected areas data for map overlay",
+    tags=["land-access"],
+)
+async def pad_us_proxy(
+    bbox: str = Query(..., description="Bounding box: west,south,east,north"),
+) -> Dict[str, Any]:
+    """
+    Proxy PAD-US (Protected Areas Database) requests to avoid CORS issues.
+
+    Fetches protected area polygons from USGS ArcGIS REST API for the given
+    bounding box and returns as GeoJSON.
+    """
+    # Validate bbox format: must be four comma-separated floats
+    parts = bbox.split(",")
+    if len(parts) != 4:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="bbox must be four comma-separated numbers: west,south,east,north",
+        )
+    try:
+        west, south, east, north = (float(p) for p in parts)
+    except ValueError:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="bbox values must be numeric",
+        )
+    if not (-180 <= west <= 180 and -180 <= east <= 180):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Longitude values must be between -180 and 180",
+        )
+    if not (-90 <= south <= 90 and -90 <= north <= 90):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="Latitude values must be between -90 and 90",
+        )
+
+    url = "https://gis1.usgs.gov/arcgis/rest/services/padus/MapServer/1/query"
+
+    params = {
+        "geometry": bbox,
+        "geometryType": "esriGeometryEnvelope",
+        "spatialRel": "esriSpatialRelIntersects",
+        "returnGeometry": "true",
+        "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
+        "f": "geojson",
+        "outSR": "4326",
+    }
+
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.get(url, params=params)
+            response.raise_for_status()
+            content_type = response.headers.get("content-type", "")
+            if "json" not in content_type:
+                raise HTTPException(
+                    status_code=status.HTTP_502_BAD_GATEWAY,
+                    detail="PAD-US service returned an unexpected response format",
+                )
+            return response.json()
+    except HTTPException:
+        raise
+    except httpx.HTTPError as e:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"Failed to fetch PAD-US data: {str(e)}",
+        )
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"Failed to parse PAD-US response: {str(e)}",
+        )
 
 
 @router.get(
