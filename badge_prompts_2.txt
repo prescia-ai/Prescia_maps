@@ -698,7 +698,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 24. BRONZE AGE ]---
----[ file: badges/3F406757-72FA-4A5C-89BE-7A66A41592AE.png ]---
+---[ file: CE9FF587-86CF-41F6-BD04-6EB50EEB1916.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -727,7 +727,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 25. ALUMINUM HUNTER ]---
----[ file: badges/87AC28D0-3BB4-45AC-8224-A9340C16227E.png ]---
+---[ file: 20794163-42DD-47AE-9037-F85AB11DE52B.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -756,7 +756,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 26. MATERIAL MASTER ]---
----[ file: badges/A2824A0D-BAAA-44BC-ABF9-98C2BDE97A4E.png ]---
+---[ file: E467EA86-6364-41C0-920E-8407151EF265.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -789,7 +789,7 @@ GEOGRAPHIC EXCELLENCE BADGES
 ========================================================
 
 ---[ 27. FIVE STATE EXPLORER ]---
----[ file: badges/001AE7D4-6AF7-4A4A-AF4D-07E5F6C0FBAD.png ]---
+---[ file: CC4BFB0F-CD70-4204-ADFA-3FFF6BF5F2E0.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -818,7 +818,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 28. TEN STATE ADVENTURER ]---
----[ file: badges/7DB63F40-2FEE-4716-8258-77849E78E336.png ]---
+---[ file: 043AAF14-75DB-4335-A7B0-AD5B6D063181.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -847,7 +847,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 29. COAST TO COAST ]---
----[ file: badges/CFE441D5-910A-4E15-AA6B-DFB66DD69A82.png ]---
+---[ file: 334144B5-4393-4FCA-96F8-169C4E571ADF.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -876,7 +876,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 30. NATION WIDE ]---
----[ file: badges/47235386-142B-4E43-B13F-B3B1FCD8316B.png ]---
+---[ file: 69785B32-BA05-4611-9F67-C8B427FF327A.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -905,7 +905,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 31. LONG HAUL HUNTER ]---
----[ file: badges/DA005AE9-DC73-45FB-A438-E9D900CB91B6.png ]---
+---[ file: 638383BA-B794-41CE-BEC9-F8B6D4EB96AE.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -938,7 +938,7 @@ TIME & DEDICATION BADGES
 ========================================================
 
 ---[ 32. STREAK STARTER ]---
----[ file: badges/20521AD4-B4D3-4986-BFAB-1BC201C37E0D.png ]---
+---[ file: CE0834BB-A6BD-427E-8AAC-BFAE5E544D60.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -967,7 +967,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 33. IRON WILL ]---
----[ file: badges/1DBDC04F-9F51-4151-876D-3CE86AD06EDA.png ]---
+---[ file: 69EF7BB4-3106-458A-9510-3CA6BCCC4D09.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -996,7 +996,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 34. DAILY GRIND ]---
----[ file: badges/4F456B9F-AFBE-4DE2-A2D5-8729D74ABA58.png ]---
+---[ file: 2A8F0503-DF7F-410D-9570-9977A29500F1.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1025,7 +1025,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 35. HOLIDAY HUNTER ]---
----[ file: badges/41D6C3EC-0872-488A-B038-6DD455151063.png ]---
+---[ file: CD78884E-28E4-4AF5-B3B6-D4B2169D20ED.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1054,7 +1054,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 36. MIDNIGHT DETECTORIST ]---
----[ file: badges/90073C88-0BF5-43C0-8085-4DA80A294D4C.png ]---
+---[ file: A3736528-B4E0-4A43-ACBD-89D53E082CEF.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1087,7 +1087,7 @@ SITE DIVERSITY BADGES
 ========================================================
 
 ---[ 37. SITE CONNOISSEUR ]---
----[ file: badges/FCCED205-7F76-4528-97D2-EC8F1E63258C.png ]---
+---[ file: 4F84DD14-3200-4DA0-96C1-2FA51A591DEE.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1116,7 +1116,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 38. BATTLEFIELD EXPERT ]---
----[ file: badges/320A11DD-4F79-415E-9302-E64FDBA7756C.png ]---
+---[ file: D3F56B4F-AA82-44F3-9671-093EFDDCBC2C.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1145,7 +1145,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 39. MINE EXPLORER ]---
----[ file: badges/C7A25869-937B-49E5-9B67-12717753DD09.png ]---
+---[ file: EA59EC34-632C-4502-9553-39CAE437D14B.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
@@ -1174,7 +1174,7 @@ TECHNICAL:
 - No text on badge
 
 ---[ 40. MISSION PILGRIM ]---
----[ file: badges/B67566A2-7A62-446F-B5EE-BEDF093D29A9.png ]---
+---[ file: 91A5D2A4-1EFD-4FF0-AA7D-9C53E5DA54AD.png]---
 Create a vector-style achievement badge with the following specifications:
 
 SHAPE & STRUCTURE:
