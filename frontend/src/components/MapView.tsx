@@ -20,6 +20,7 @@ import type {
 import type { Feature, Geometry, LineString, MultiLineString } from 'geojson';
 import type { LinearProperties } from '../types';
 import HeatmapLayer from './HeatmapLayer';
+import LandAccessOverlay from './LandAccessOverlay';
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
 
@@ -319,15 +320,7 @@ export default function MapView({
       />
 
       {/* Land Access overlay — color-coded by metal-detecting access rules */}
-      {layers.blm && (
-        <TileLayer
-          url="https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer/tile/{z}/{y}/{x}"
-          attribution='Land Access Status – <a href="https://gis.blm.gov">BLM NSDI</a>'
-          opacity={0.65}
-          zIndex={5}
-          maxZoom={19}
-        />
-      )}
+      <LandAccessOverlay visible={layers.blm} />
 
       {/* 1955 USGS historical aerial overlay */}
       {layers.aerials_1955 && (
