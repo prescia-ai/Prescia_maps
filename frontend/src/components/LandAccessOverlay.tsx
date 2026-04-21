@@ -61,15 +61,9 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
         bounds.getNorth(),
       ].join(',');
 
-      // Query PAD-US layer 1 (Fee lands)
-      const url = new URL('https://gis1.usgs.gov/arcgis/rest/services/padus/MapServer/1/query');
-      url.searchParams.set('geometry', bbox);
-      url.searchParams.set('geometryType', 'esriGeometryEnvelope');
-      url.searchParams.set('spatialRel', 'esriSpatialRelIntersects');
-      url.searchParams.set('returnGeometry', 'true');
-      url.searchParams.set('outFields', 'Mang_Name,GAP_Sts,Des_Tp,Unit_Nm');
-      url.searchParams.set('f', 'geojson');
-      url.searchParams.set('outSR', '4326');
+      // Use backend proxy to avoid CORS issues
+      const url = new URL('/api/v1/land-access/pad-us-proxy', window.location.origin);
+      url.searchParams.set('bbox', bbox);
 
       const response = await fetch(url.toString());
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
