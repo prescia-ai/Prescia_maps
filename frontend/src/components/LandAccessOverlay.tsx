@@ -66,12 +66,15 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
       url.searchParams.set('bbox', bbox);
 
       const response = await fetch(url.toString());
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      if (!response.ok) {
+        const bodySnippet = await response.text().then((t) => t.slice(0, 500)).catch(() => '');
+        throw new Error(`HTTP ${response.status}: ${bodySnippet}`);
+      }
 
       const geojson = await response.json();
       setData(geojson);
     } catch (error) {
-      console.error('Failed to fetch PAD-US data:', error);
+      console.error('Failed to fetch PAD-US data:', error instanceof Error ? error.message : error);
       setData(null);
     } finally {
       fetchingRef.current = false;
