@@ -701,7 +701,7 @@ async def pad_us_proxy(
             detail="Latitude values must be between -90 and 90",
         )
 
-    url = "https://gis1.usgs.gov/arcgis/rest/services/padus/MapServer/1/query"
+    url = "https://gis1.usgs.gov/arcgis/rest/services/padus3_0/MapServer/0/query"
 
     params = {
         "geometry": bbox,
