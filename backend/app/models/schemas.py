@@ -412,6 +412,8 @@ class UserPinCreate(BaseModel):
     notes: Optional[str] = Field(None, max_length=500)
     finds_count: Optional[int] = Field(None, ge=0)
     privacy: Optional[Literal["public", "friends", "private"]] = "public"
+    search_pattern: Optional[str] = Field(None, max_length=50)
+    depth_inches: Optional[int] = Field(None, ge=0)
 
 
 class UserPinUpdate(BaseModel):
@@ -425,6 +427,8 @@ class UserPinUpdate(BaseModel):
     notes: Optional[str] = Field(None, max_length=500)
     finds_count: Optional[int] = Field(None, ge=0)
     privacy: Optional[Literal["public", "friends", "private"]] = None
+    search_pattern: Optional[str] = Field(None, max_length=50)
+    depth_inches: Optional[int] = Field(None, ge=0)
 
 
 class UserPinResponse(BaseModel):
@@ -442,6 +446,8 @@ class UserPinResponse(BaseModel):
     notes: Optional[str] = None
     finds_count: Optional[int] = None
     privacy: str = "public"
+    search_pattern: Optional[str] = None
+    depth_inches: Optional[int] = None
     created_at: Optional[Any] = None
     images: List["PinImageResponse"] = Field(default_factory=list)
 

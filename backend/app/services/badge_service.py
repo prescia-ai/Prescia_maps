@@ -1,13 +1,20 @@
 """
 Badge service — checks badge criteria and awards new badges to users.
 
-Supports two criteria types that can be evaluated from existing data:
-  - hunt_count:   number of UserPin records for the user
-  - finds_count:  sum of UserPin.finds_count for the user
+Supports the following criteria types:
+  - hunt_count:           number of UserPin records for the user
+  - finds_count:          sum of UserPin.finds_count for the user
+  - single_hunt_finds:    max UserPin.finds_count in a single hunt
+  - grid_search_count:    number of hunts where search_pattern == 'grid'
+  - deep_find:            max UserPin.depth_inches across all hunts
+  - site_type:            hunts near a Location of the given type (PostGIS)
+  - collection_type_count / collection_material_count: collection items
+  - approved_submissions: community pin submissions approved by admins
 
-Site-type and score-threshold criteria are stored in the database but
-require additional data sources; their check logic is a no-op stub that
-can be filled in when the data is available.
+The following criteria types require further implementation:
+  - max_distance_traveled / linear_feature_proximity: PostGIS (TODO)
+  - score_threshold: future implementation
+  - group_hunt_count / group_hunt_led: requires group system (deferred)
 """
 
 from __future__ import annotations
@@ -104,6 +111,33 @@ async def check_all_badges(user_id: UUID, db: AsyncSession) -> List[Badge]:
             )
             earned = (r.scalar() or 0) >= threshold
 
+        elif criteria_type == "single_hunt_finds" and threshold is not None:
+            # Check max finds in a single hunt
+            r = await db.execute(
+                select(func.max(UserPin.finds_count)).where(UserPin.user_id == user_id)
+            )
+            max_finds = r.scalar() or 0
+            earned = max_finds >= threshold
+
+        elif criteria_type == "grid_search_count" and threshold is not None:
+            # Count hunts where search_pattern is 'grid'
+            r = await db.execute(
+                select(func.count()).select_from(UserPin).where(
+                    UserPin.user_id == user_id,
+                    UserPin.search_pattern == "grid",
+                )
+            )
+            earned = (r.scalar() or 0) >= threshold
+
+        elif criteria_type == "deep_find":
+            # Check if any find was recovered from threshold depth or deeper
+            threshold_inches = criteria.get("threshold_inches", 12)
+            r = await db.execute(
+                select(func.max(UserPin.depth_inches)).where(UserPin.user_id == user_id)
+            )
+            max_depth = r.scalar() or 0
+            earned = max_depth >= threshold_inches
+
         elif criteria_type == "approved_submissions" and threshold is not None:
             from app.models.database import PinSubmission
             r = await db.execute(
@@ -118,7 +152,29 @@ async def check_all_badges(user_id: UUID, db: AsyncSession) -> List[Badge]:
             # TODO: PostGIS implementation
             earned = False
 
-        elif criteria_type in ("site_type", "score_threshold"):
+        elif criteria_type == "site_type":
+            # Check if user has a hunt near a location of the given site type
+            site_type_value = criteria.get("site_type")
+            if site_type_value is not None:
+                from app.models.database import Location
+                min_count = threshold if threshold is not None else 1
+                r = await db.execute(
+                    select(func.count()).select_from(UserPin).where(
+                        UserPin.user_id == user_id,
+                        UserPin.geom.isnot(None),
+                        select(Location.id).where(
+                            Location.type == site_type_value,
+                            Location.geom.isnot(None),
+                            # 0.01 degrees ≈ ~1 km proximity check (WGS-84 degrees)
+                            func.ST_DWithin(UserPin.geom, Location.geom, 0.01),
+                        ).correlate(UserPin).exists(),
+                    )
+                )
+                earned = (r.scalar() or 0) >= min_count
+            else:
+                earned = False
+
+        elif criteria_type == "score_threshold":
             # Future implementation — skip for now
             earned = False
 
@@ -215,6 +271,24 @@ async def get_badge_progress(user_id: UUID, db: AsyncSession) -> list[dict]:
                     CollectionPhoto.user_id == user_id,
                     CollectionPhoto.material == material,
                 )
+            )
+            current_value = r.scalar() or 0
+        elif criteria_type == "single_hunt_finds":
+            r = await db.execute(
+                select(func.max(UserPin.finds_count)).where(UserPin.user_id == user_id)
+            )
+            current_value = r.scalar() or 0
+        elif criteria_type == "grid_search_count":
+            r = await db.execute(
+                select(func.count()).select_from(UserPin).where(
+                    UserPin.user_id == user_id,
+                    UserPin.search_pattern == "grid",
+                )
+            )
+            current_value = r.scalar() or 0
+        elif criteria_type == "deep_find":
+            r = await db.execute(
+                select(func.max(UserPin.depth_inches)).where(UserPin.user_id == user_id)
             )
             current_value = r.scalar() or 0
         else:
