@@ -78,7 +78,7 @@ SAMPLE_ESRI: Dict[str, Any] = {
 # Default upstream URL (mirrors routes.py so the tests are self-contained)
 _PADUS_URL = (
     "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services"
-    "/PADUS_Combined_4_0/FeatureServer/0/query"
+    "/PADUS4_1Combined/FeatureServer/0/query"
 )
 
 
@@ -170,6 +170,7 @@ def _build_test_app(mock_transport: httpx.MockTransport):
         params = {
             "geometry": bbox,
             "geometryType": "esriGeometryEnvelope",
+            "inSR": "4326",
             "spatialRel": "esriSpatialRelIntersects",
             "returnGeometry": "true",
             "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
