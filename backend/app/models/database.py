@@ -63,6 +63,7 @@ class LocationType(str, enum.Enum):
     abandoned_church = "abandoned_church"
     historic_brothel = "historic_brothel"
     abandoned_fairground = "abandoned_fairground"
+    beach = "beach"
 
 
 class LinearFeatureType(str, enum.Enum):
@@ -261,6 +262,8 @@ class UserPin(Base):
     notes = Column(Text, nullable=True)
     finds_count = Column(Integer, nullable=True)
     privacy = Column(String(20), default="public")
+    search_pattern = Column(String(50), nullable=True)
+    depth_inches = Column(Integer, nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
 
