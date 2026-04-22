@@ -63,11 +63,11 @@ from app.auth.deps import get_current_user as _get_current_user
 
 logger = logging.getLogger(__name__)
 
-# PAD-US 4.0 Combined FeatureServer (USGS GAP Analysis Project on ArcGIS Online).
+# PAD-US 4.1 Combined FeatureServer (USGS GAP Analysis Project on ArcGIS Online).
 # Override via the PADUS_FEATURE_SERVICE_URL environment variable.
 _PADUS_DEFAULT_URL = (
     "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services"
-    "/PADUS_Combined_4_0/FeatureServer/0/query"
+    "/PADUS4_1Combined/FeatureServer/0/query"
 )
 PADUS_FEATURE_SERVICE_URL: str = os.environ.get(
     "PADUS_FEATURE_SERVICE_URL", _PADUS_DEFAULT_URL
@@ -743,6 +743,7 @@ async def pad_us_proxy(
     params = {
         "geometry": bbox,
         "geometryType": "esriGeometryEnvelope",
+        "inSR": "4326",
         "spatialRel": "esriSpatialRelIntersects",
         "returnGeometry": "true",
         "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
