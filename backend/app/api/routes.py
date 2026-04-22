@@ -8,6 +8,7 @@ session (``db``) and, where appropriate, calls the scoring engine.
 
 import asyncio
 import logging
+import os
 from collections import defaultdict
 from typing import Any, Dict, List, Optional
 from uuid import UUID
@@ -62,12 +63,48 @@ from app.auth.deps import get_current_user as _get_current_user
 
 logger = logging.getLogger(__name__)
 
+# PAD-US 4.0 Combined FeatureServer (USGS GAP Analysis Project on ArcGIS Online).
+# Override via the PADUS_FEATURE_SERVICE_URL environment variable.
+_PADUS_DEFAULT_URL = (
+    "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services"
+    "/PADUS_Combined_4_0/FeatureServer/0/query"
+)
+PADUS_FEATURE_SERVICE_URL: str = os.environ.get(
+    "PADUS_FEATURE_SERVICE_URL", _PADUS_DEFAULT_URL
+)
+
 router = APIRouter()
 
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+
+def _esri_to_geojson(esri_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Convert an esriJSON FeatureSet to a GeoJSON FeatureCollection.
+
+    Handles Polygon and MultiPolygon ring structures.  Used as a fallback
+    when the upstream service does not support ``f=geojson``.
+    """
+
+    def _rings_to_geom(rings: list) -> Dict[str, Any]:
+        if len(rings) == 1:
+            return {"type": "Polygon", "coordinates": rings}
+        return {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}
+
+    features = []
+    for feat in esri_data.get("features", []):
+        geom = feat.get("geometry")
+        attrs = feat.get("attributes", {})
+        if geom and "rings" in geom:
+            geo = _rings_to_geom(geom["rings"])
+        elif geom and "x" in geom and "y" in geom:
+            geo = {"type": "Point", "coordinates": [geom["x"], geom["y"]]}
+        else:
+            geo = None
+        features.append({"type": "Feature", "geometry": geo, "properties": attrs})
+    return {"type": "FeatureCollection", "features": features}
 
 
 def _type_str(value: Any) -> str:
@@ -701,7 +738,7 @@ async def pad_us_proxy(
             detail="Latitude values must be between -90 and 90",
         )
 
-    url = "https://gis1.usgs.gov/arcgis/rest/services/padus3_0/MapServer/0/query"
+    url = PADUS_FEATURE_SERVICE_URL
 
     params = {
         "geometry": bbox,
@@ -716,14 +753,35 @@ async def pad_us_proxy(
     try:
         async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.get(url, params=params)
-            response.raise_for_status()
+            if not response.is_success:
+                content_type = response.headers.get("content-type", "")
+                body_snippet = response.text[:500]
+                logger.warning(
+                    "PAD-US upstream returned %s (content-type: %s): %s",
+                    response.status_code,
+                    content_type,
+                    body_snippet,
+                )
+                raise HTTPException(
+                    status_code=status.HTTP_502_BAD_GATEWAY,
+                    detail=f"PAD-US upstream returned {response.status_code}",
+                )
             content_type = response.headers.get("content-type", "")
             if "json" not in content_type:
+                logger.warning(
+                    "PAD-US upstream returned unexpected content-type %s: %s",
+                    content_type,
+                    response.text[:500],
+                )
                 raise HTTPException(
                     status_code=status.HTTP_502_BAD_GATEWAY,
                     detail="PAD-US service returned an unexpected response format",
                 )
-            return response.json()
+            data = response.json()
+            # If the service returned esriJSON (no "type" key), convert to GeoJSON.
+            if "type" not in data:
+                data = _esri_to_geojson(data)
+            return data
     except HTTPException:
         raise
     except httpx.HTTPError as e:
