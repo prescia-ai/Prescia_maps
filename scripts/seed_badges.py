@@ -316,12 +316,12 @@ BADGES = [
     # ── Treasure Trove — Relics ────────────────────────────────────────────────
     {
         "badge_id": "2D9B7BC9-64F3-4F23-B18C-35869DB60E1E",
-        "name": "Relic Hunter",
-        "description": "Add 30 relics to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "relic", "threshold": 30},
-        "points": 60,
-        "rarity": "rare",
+        "name": "Urban Explorer",
+        "description": "Log a hunt in an urban location (town, city park, or historic downtown).",
+        "category": "geographic",
+        "criteria": {"type": "site_type", "site_type": "town"},
+        "points": 40,
+        "rarity": "uncommon",
     },
     {
         "badge_id": "8B75E001-50FD-467E-ABF0-1FF29ADA2430",
@@ -335,12 +335,12 @@ BADGES = [
     # ── Treasure Trove — Tools ─────────────────────────────────────────────────
     {
         "badge_id": "5EEF6215-08A5-4936-A58F-B8C48689FA6A",
-        "name": "Tool Time",
-        "description": "Add 15 tools to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "tool", "threshold": 15},
-        "points": 40,
-        "rarity": "uncommon",
+        "name": "Jackpot",
+        "description": "Discover a single hunt containing 10 or more finds.",
+        "category": "finds",
+        "criteria": {"type": "single_hunt_finds", "threshold": 10},  # TODO(badge-evaluator): implement single_hunt_finds
+        "points": 75,
+        "rarity": "rare",
     },
     {
         "badge_id": "700576FC-02A1-48DC-A733-3719166CB73F",
@@ -354,12 +354,12 @@ BADGES = [
     # ── Treasure Trove — Keys ──────────────────────────────────────────────────
     {
         "badge_id": "AB6DF9CC-A90C-4CF2-9A99-2614AFA7AD6D",
-        "name": "Key Master",
-        "description": "Add 25 keys to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "key", "threshold": 25},
-        "points": 45,
-        "rarity": "uncommon",
+        "name": "Grid Master",
+        "description": "Complete 10 hunts using a full grid-pattern search.",
+        "category": "dedication",
+        "criteria": {"type": "grid_search_count", "threshold": 10},  # TODO(badge-evaluator): implement grid_search_count
+        "points": 55,
+        "rarity": "rare",
     },
     {
         "badge_id": "FB00E77D-B31E-42C7-B418-8362A8D958B5",
@@ -373,12 +373,12 @@ BADGES = [
     # ── Treasure Trove — Rings ─────────────────────────────────────────────────
     {
         "badge_id": "DD0DA858-8A6A-4167-B50D-801A3BBBB35A",
-        "name": "Ring Finder",
-        "description": "Add 15 rings to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "ring", "threshold": 15},
-        "points": 65,
-        "rarity": "epic",
+        "name": "Mentor",
+        "description": "Help a new detectorist log their first hunt.",
+        "category": "social",
+        "criteria": {"type": "mentor_new_user", "threshold": 1},  # TODO(badge-evaluator): implement mentor_new_user
+        "points": 50,
+        "rarity": "rare",
     },
     {
         "badge_id": "1E3C2B5A-4205-4576-AD11-DB9360E79BA7",
@@ -389,33 +389,33 @@ BADGES = [
         "points": 85,
         "rarity": "epic",
     },
-    # ── Treasure Trove — Other Collection Types ────────────────────────────────
+    # ── Geographic / Social / Dedication ──────────────────────────────────────
     {
         "badge_id": "3C261864-F1F1-4260-AFE1-B20143B6BFD5",
-        "name": "Military Collector",
-        "description": "Add 40 military items to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "military", "threshold": 40},
-        "points": 55,
-        "rarity": "rare",
+        "name": "Forest Wanderer",
+        "description": "Log a hunt in a forested or wooded location.",
+        "category": "geographic",
+        "criteria": {"type": "site_type", "site_type": "locale"},
+        "points": 40,
+        "rarity": "uncommon",
     },
     {
         "badge_id": "8498503B-1A85-41E2-B35E-5CB00B15447D",
-        "name": "Religious Finds",
-        "description": "Add 10 religious items to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "religious", "threshold": 10},
+        "name": "Deep Dig",
+        "description": "Log a find recovered from 12 inches or deeper.",
+        "category": "dedication",
+        "criteria": {"type": "deep_find", "threshold_inches": 12},  # TODO(badge-evaluator): implement deep_find
         "points": 50,
         "rarity": "rare",
     },
     {
         "badge_id": "85461A82-856A-406A-8549-E61F8F03293B",
-        "name": "Toy Box",
-        "description": "Add 20 toys to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "toy", "threshold": 20},
-        "points": 35,
-        "rarity": "uncommon",
+        "name": "Group Leader",
+        "description": "Lead a group hunt with 5 or more participants.",
+        "category": "social",
+        "criteria": {"type": "group_hunt_led", "threshold": 5},  # TODO(badge-evaluator): implement group_hunt_led
+        "points": 60,
+        "rarity": "rare",
     },
     # ── Treasure Trove — Materials ─────────────────────────────────────────────
     {
@@ -438,21 +438,21 @@ BADGES = [
     },
     {
         "badge_id": "2BABCDAE-285C-4380-9187-08F46CAC6465",
-        "name": "Iron Collection",
-        "description": "Add 100 iron items to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_material_count", "material": "iron", "threshold": 100},
+        "name": "Team Player",
+        "description": "Log a hunt as part of a group event with other detectorists.",
+        "category": "social",
+        "criteria": {"type": "group_hunt_count", "threshold": 1},  # TODO(badge-evaluator): implement group_hunt_count
         "points": 30,
-        "rarity": "common",
+        "rarity": "uncommon",
     },
     {
         "badge_id": "0C9C9A13-D6C8-4E6F-B149-835DCD88FBF8",
-        "name": "Brass Brigade",
-        "description": "Add 25 brass items to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_material_count", "material": "brass", "threshold": 25},
-        "points": 35,
-        "rarity": "uncommon",
+        "name": "Pinpointer Pro",
+        "description": "Log 25 finds with exact pinpoint coordinates recorded.",
+        "category": "dedication",
+        "criteria": {"type": "pinpoint_accuracy", "threshold": 25},
+        "points": 50,
+        "rarity": "rare",
     },
     {
         "badge_id": "0EC0559F-5F7C-4E01-A5A2-E616D85EE9F9",
@@ -499,15 +499,15 @@ BADGES = [
         "points": 100,
         "rarity": "epic",
     },
-    # ── Treasure Trove — Cache ─────────────────────────────────────────────────
+    # ── Geographic — Beach / Coastal ──────────────────────────────────────────
     {
         "badge_id": "ED63E475-083A-4FA3-9760-32DBCF698142",
-        "name": "Cache Discovery",
-        "description": "Discover a cache with 5 or more items.",
-        "category": "treasure_trove",
-        "criteria": {"type": "cache_discovery", "threshold": 5},
-        "points": 80,
-        "rarity": "epic",
+        "name": "Beach Comber",
+        "description": "Log a hunt at a beach or coastal location.",
+        "category": "geographic",
+        "criteria": {"type": "site_type", "site_type": "beach"},  # TODO(badge-evaluator): "beach" is not yet a LocationType enum value — add to LocationType before this fires
+        "points": 40,
+        "rarity": "uncommon",
     },
     # ── Historic Sites ────────────────────────────────────────────────────────
     {
