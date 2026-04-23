@@ -43,6 +43,8 @@ function getAccessLabel(props: PADUSProperties): string {
   return 'Unsure — Verify First';
 }
 
+const MIN_ZOOM = 9;
+
 export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
   const map = useMap();
   const [data, setData] = useState<FeatureCollection<Polygon | MultiPolygon, PADUSProperties> | null>(null);
@@ -50,6 +52,10 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const fetchData = useCallback(async () => {
+    if (map.getZoom() < MIN_ZOOM) {
+      setData(null);
+      return;
+    }
     if (fetchingRef.current) return;
     fetchingRef.current = true;
     try {
@@ -83,8 +89,14 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
 
   const debouncedFetch = useCallback(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(fetchData, 400);
-  }, [fetchData]);
+    debounceRef.current = setTimeout(() => {
+      if (map.getZoom() < MIN_ZOOM) {
+        setData(null);
+      } else {
+        fetchData();
+      }
+    }, 400);
+  }, [fetchData, map]);
 
   useEffect(() => {
     if (!visible) {
@@ -92,7 +104,9 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
       return;
     }
 
-    fetchData();
+    if (map.getZoom() >= MIN_ZOOM) {
+      fetchData();
+    }
 
     map.on('moveend', debouncedFetch);
     return () => {
@@ -105,7 +119,7 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
 
   return (
     <GeoJSON
-      key={data.features?.length}
+      key="land-access"
       data={data}
       style={(feature) => {
         if (!feature) return {};

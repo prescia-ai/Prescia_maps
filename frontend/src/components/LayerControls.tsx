@@ -216,6 +216,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                                 <span className="text-xs text-stone-500">{l}</span>
                               </div>
                             ))}
+                            <p className="text-xs text-stone-400 italic pt-0.5">Zoom in to level 9+ to load</p>
                           </div>
                         )}
                       </li>
