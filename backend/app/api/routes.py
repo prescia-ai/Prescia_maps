@@ -9,16 +9,17 @@ session (``db``) and, where appropriate, calls the scoring engine.
 import asyncio
 import logging
 import os
+import re
 from collections import defaultdict
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from uuid import UUID
-
-import httpx
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.shape import from_shape
 from shapely.geometry import LineString as ShapelyLineString
 from sqlalchemy import select, text
 from sqlalchemy.ext.asyncio import AsyncSession
+from starlette.requests import Request as StarletteRequest
 from starlette.responses import Response
 
 from app.models.database import (
@@ -63,48 +64,11 @@ from app.auth.deps import get_current_user as _get_current_user
 
 logger = logging.getLogger(__name__)
 
-# PAD-US 4.1 Combined FeatureServer (USGS GAP Analysis Project on ArcGIS Online).
-# Override via the PADUS_FEATURE_SERVICE_URL environment variable.
-_PADUS_DEFAULT_URL = (
-    "https://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services"
-    "/PADUS4_1Combined/FeatureServer/0/query"
-)
-PADUS_FEATURE_SERVICE_URL: str = os.environ.get(
-    "PADUS_FEATURE_SERVICE_URL", _PADUS_DEFAULT_URL
-)
-
 router = APIRouter()
 
-
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
-
-
-def _esri_to_geojson(esri_data: Dict[str, Any]) -> Dict[str, Any]:
-    """Convert an esriJSON FeatureSet to a GeoJSON FeatureCollection.
-
-    Handles Polygon and MultiPolygon ring structures.  Used as a fallback
-    when the upstream service does not support ``f=geojson``.
-    """
-
-    def _rings_to_geom(rings: list) -> Dict[str, Any]:
-        if len(rings) == 1:
-            return {"type": "Polygon", "coordinates": rings}
-        return {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}
-
-    features = []
-    for feat in esri_data.get("features", []):
-        geom = feat.get("geometry")
-        attrs = feat.get("attributes", {})
-        if geom and "rings" in geom:
-            geo = _rings_to_geom(geom["rings"])
-        elif geom and "x" in geom and "y" in geom:
-            geo = {"type": "Point", "coordinates": [geom["x"], geom["y"]]}
-        else:
-            geo = None
-        features.append({"type": "Feature", "geometry": geo, "properties": attrs})
-    return {"type": "FeatureCollection", "features": features}
+# Absolute path to the pre-baked PAD-US PMTiles archive.
+_PADUS_DATA_DIR: Path = Path(__file__).parent.parent.parent / "data"
+_PADUS_PMTILES_PATH: Path = _PADUS_DATA_DIR / "padus.pmtiles"
 
 
 def _type_str(value: Any) -> str:
@@ -699,115 +663,88 @@ async def get_blm_tile_url() -> Dict[str, str]:
 
 
 @router.get(
-    "/land-access/pad-us-proxy",
+    "/land-access/padus.pmtiles",
     response_model=None,
-    summary="Proxy PAD-US protected areas data for map overlay",
+    summary="Serve the pre-baked PAD-US PMTiles vector tile archive",
     tags=["land-access"],
 )
-async def pad_us_proxy(
-    bbox: str = Query(..., description="Bounding box: west,south,east,north"),
-) -> Dict[str, Any]:
+async def serve_padus_pmtiles(request: StarletteRequest) -> Response:
     """
-    Proxy PAD-US (Protected Areas Database) requests to avoid CORS issues.
+    Serve the local padus.pmtiles file with HTTP Range support.
 
-    Fetches protected area polygons from USGS ArcGIS REST API for the given
-    bounding box and returns as GeoJSON.
+    PMTiles requires Range requests so the browser only downloads the
+    tiles visible in the current viewport.  Returns HTTP 206 for Range
+    requests, 200 for full-file requests, and 404 if the file hasn't
+    been baked yet.
     """
-    # Validate bbox format: must be four comma-separated floats
-    parts = bbox.split(",")
-    if len(parts) != 4:
-        raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="bbox must be four comma-separated numbers: west,south,east,north",
-        )
+    path = _PADUS_PMTILES_PATH.resolve()
+    # Ensure the resolved path stays within the expected data directory.
     try:
-        west, south, east, north = (float(p) for p in parts)
+        path.relative_to(_PADUS_DATA_DIR.resolve())
     except ValueError:
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="bbox values must be numeric",
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Access denied",
         )
-    if not (-180 <= west <= 180 and -180 <= east <= 180):
+    if not path.is_file():
         raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Longitude values must be between -180 and 180",
-        )
-    if not (-90 <= south <= 90 and -90 <= north <= 90):
-        raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail="Latitude values must be between -90 and 90",
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="padus.pmtiles not found — run scripts/bake_padus_pmtiles.sh",
         )
 
-    url = PADUS_FEATURE_SERVICE_URL
+    file_size = path.stat().st_size
+    range_header = request.headers.get("range")
 
-    params = {
-        "geometry": bbox,
-        "geometryType": "esriGeometryEnvelope",
-        "inSR": "4326",
-        "spatialRel": "esriSpatialRelIntersects",
-        "where": "1=1",
-        "returnGeometry": "true",
-        "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
-        "resultRecordCount": "1000",
-        "f": "json",
-        "outSR": "4326",
+    base_headers: Dict[str, str] = {
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=86400",
     }
 
-    try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.get(url, params=params)
-            if not response.is_success:
-                content_type = response.headers.get("content-type", "")
-                body_snippet = response.text[:500]
-                logger.warning(
-                    "PAD-US upstream returned %s (content-type: %s): %s",
-                    response.status_code,
-                    content_type,
-                    body_snippet,
-                )
-                raise HTTPException(
-                    status_code=status.HTTP_502_BAD_GATEWAY,
-                    detail=f"PAD-US upstream returned {response.status_code}",
-                )
-            content_type = response.headers.get("content-type", "")
-            if "json" not in content_type:
-                logger.warning(
-                    "PAD-US upstream returned unexpected content-type %s: %s",
-                    content_type,
-                    response.text[:500],
-                )
-                raise HTTPException(
-                    status_code=status.HTTP_502_BAD_GATEWAY,
-                    detail="PAD-US service returned an unexpected response format",
-                )
-            data = response.json()
-            # ArcGIS can return HTTP 200 with an error payload like
-            # {"error": {"code": 400, "message": "..."}} — surface this as 502.
-            if "error" in data:
-                err = data["error"]
-                logger.warning(
-                    "PAD-US upstream returned an error in a 200 response: %s", err
-                )
-                raise HTTPException(
-                    status_code=status.HTTP_502_BAD_GATEWAY,
-                    detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', 'unknown error')}",
-                )
-            # f=json returns esriJSON (no "type" key) — convert to GeoJSON.
-            if "type" not in data:
-                data = _esri_to_geojson(data)
-            return data
-    except HTTPException:
-        raise
-    except httpx.HTTPError as e:
-        raise HTTPException(
-            status_code=status.HTTP_502_BAD_GATEWAY,
-            detail=f"Failed to fetch PAD-US data: {str(e)}",
+    if range_header:
+        match = re.fullmatch(r"bytes=(\d+)-(\d*)", range_header.strip())
+        if not match:
+            raise HTTPException(
+                status_code=416,
+                detail="Range Not Satisfiable",
+                headers={"Content-Range": f"bytes */{file_size}"},
+            )
+        start = int(match.group(1))
+        end = int(match.group(2)) if match.group(2) else file_size - 1
+
+        if start > end or start >= file_size:
+            raise HTTPException(
+                status_code=416,
+                detail="Range Not Satisfiable",
+                headers={"Content-Range": f"bytes */{file_size}"},
+            )
+        end = min(end, file_size - 1)
+        length = end - start + 1
+
+        with open(path, "rb") as fh:
+            fh.seek(start)
+            chunk = fh.read(length)
+
+        return Response(
+            content=chunk,
+            status_code=206,
+            headers={
+                **base_headers,
+                "Content-Range": f"bytes {start}-{end}/{file_size}",
+                "Content-Length": str(length),
+            },
+            media_type="application/octet-stream",
         )
-    except ValueError as e:
-        raise HTTPException(
-            status_code=status.HTTP_502_BAD_GATEWAY,
-            detail=f"Failed to parse PAD-US response: {str(e)}",
-        )
+
+    # Full file
+    with open(path, "rb") as fh:
+        content = fh.read()
+
+    return Response(
+        content=content,
+        status_code=200,
+        headers={**base_headers, "Content-Length": str(file_size)},
+        media_type="application/octet-stream",
+    )
 
 
 @router.get(

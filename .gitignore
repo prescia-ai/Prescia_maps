@@ -38,3 +38,7 @@ logs/
 *_checkpoint.json
 *.checkpoint.json
 scrape_checkpoint*.json
+
+# PAD-US baked tiles (run scripts/bake_padus_pmtiles.sh to regenerate)
+backend/data/padus.pmtiles
+backend/data/padus.pmtiles.tmp

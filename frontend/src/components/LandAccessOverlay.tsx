@@ -1,150 +1,160 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { GeoJSON, useMap } from 'react-leaflet';
-import type { FeatureCollection, Polygon, MultiPolygon } from 'geojson';
-
-interface PADUSProperties {
-  Mang_Name: string;
-  GAP_Sts: number;
-  Des_Tp: string;
-  Unit_Nm?: string;
-}
+import { useEffect, useRef } from 'react';
+import { useMap } from 'react-leaflet';
+import * as maplibregl from 'maplibre-gl';
+import { Protocol } from 'pmtiles';
+import '@maplibre/maplibre-gl-leaflet';
+import L from 'leaflet';
 
 interface LandAccessOverlayProps {
   visible: boolean;
 }
 
-function getAccessColor(props: PADUSProperties): string {
-  const mang = props.Mang_Name || '';
-  const gap = props.GAP_Sts || 4;
-  const designation = props.Des_Tp || '';
+// Keep getAccessLabel exported in case other components use it.
+export function getAccessLabel(mangName: string, gapSts: number, desTp: string): string {
+  const mang = mangName || '';
+  const gap = gapSts || 4;
+  const designation = desTp || '';
 
   // RED: Off Limits
-  if (mang === 'NPS' || mang === 'FWS' || mang === 'DOD') return '#ef4444';
-  if (designation.includes('WILDERNESS') || designation.includes('WILD AREA')) return '#ef4444';
-  if (gap <= 2) return '#ef4444'; // High protection status
+  if (mang === 'NPS' || mang === 'FWS' || mang === 'DOD') return 'Off Limits';
+  if (designation.includes('WILDERNESS') || designation.includes('WILD AREA')) return 'Off Limits';
+  if (gap <= 2) return 'Off Limits';
 
   // GREEN: Public OK
-  if ((mang.includes('BLM') || mang.includes('USFS')) && gap === 3) return '#22c55e';
-  if (mang === 'BOR') return '#22c55e'; // Bureau of Reclamation
+  if ((mang.includes('BLM') || mang.includes('USFS')) && gap === 3) return 'Public — OK to Detect';
+  if (mang === 'BOR') return 'Public — OK to Detect';
 
-  // YELLOW: State/Private - Permission Required
-  if (mang.includes('STATE') || mang.includes('STAT')) return '#eab308';
-  if (mang.includes('LOC') || mang.includes('CNTY')) return '#eab308';
+  // YELLOW: State/Local
+  if (mang.includes('STATE') || mang.includes('STAT')) return 'Private — Permit Required';
+  if (mang.includes('LOC') || mang.includes('CNTY')) return 'Private — Permit Required';
 
-  // ORANGE: Unsure
-  return '#f97316';
-}
-
-function getAccessLabel(props: PADUSProperties): string {
-  const color = getAccessColor(props);
-  if (color === '#ef4444') return 'Off Limits';
-  if (color === '#22c55e') return 'Public — OK to Detect';
-  if (color === '#eab308') return 'Private — Permit Required';
   return 'Unsure — Verify First';
 }
 
 const MIN_ZOOM = 9;
 
+// MapLibre fill-color expression that ports the getAccessColor logic.
+const FILL_COLOR_EXPR: maplibregl.ExpressionSpecification = [
+  'case',
+  // RED: NPS, FWS, DOD — always off-limits
+  ['any',
+    ['==', ['get', 'Mang_Name'], 'NPS'],
+    ['==', ['get', 'Mang_Name'], 'FWS'],
+    ['==', ['get', 'Mang_Name'], 'DOD'],
+    ['in', 'WILDERNESS', ['upcase', ['to-string', ['get', 'Des_Tp']]]],
+    ['in', 'WILD AREA', ['upcase', ['to-string', ['get', 'Des_Tp']]]],
+    ['<=', ['to-number', ['get', 'GAP_Sts'], 4], 2],
+  ], '#ef4444',
+  // GREEN: BLM/USFS at GAP 3, or Bureau of Reclamation
+  ['any',
+    ['all',
+      ['in', 'BLM', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+      ['==', ['to-number', ['get', 'GAP_Sts'], 4], 3],
+    ],
+    ['all',
+      ['in', 'USFS', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+      ['==', ['to-number', ['get', 'GAP_Sts'], 4], 3],
+    ],
+    ['==', ['get', 'Mang_Name'], 'BOR'],
+  ], '#22c55e',
+  // YELLOW: State / local government land
+  ['any',
+    ['in', 'STATE', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+    ['in', 'STAT', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+    ['in', 'LOC', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+    ['in', 'CNTY', ['upcase', ['to-string', ['get', 'Mang_Name']]]],
+  ], '#eab308',
+  // ORANGE: Unsure / everything else
+  '#f97316',
+];
+
+const PMTILES_URL = '/api/v1/land-access/padus.pmtiles';
+
 export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
   const map = useMap();
-  const [data, setData] = useState<FeatureCollection<Polygon | MultiPolygon, PADUSProperties> | null>(null);
-  const fetchingRef = useRef(false);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const fetchData = useCallback(async () => {
-    if (map.getZoom() < MIN_ZOOM) {
-      setData(null);
-      return;
-    }
-    if (fetchingRef.current) return;
-    fetchingRef.current = true;
-    try {
-      const bounds = map.getBounds();
-      const bbox = [
-        bounds.getWest(),
-        bounds.getSouth(),
-        bounds.getEast(),
-        bounds.getNorth(),
-      ].join(',');
-
-      // Use backend proxy to avoid CORS issues
-      const url = new URL('/api/v1/land-access/pad-us-proxy', window.location.origin);
-      url.searchParams.set('bbox', bbox);
-
-      const response = await fetch(url.toString());
-      if (!response.ok) {
-        const bodySnippet = await response.text().then((t) => t.slice(0, 500)).catch(() => '');
-        throw new Error(`HTTP ${response.status}: ${bodySnippet}`);
-      }
-
-      const geojson = await response.json();
-      setData(geojson);
-    } catch (error) {
-      console.error('Failed to fetch PAD-US data:', error instanceof Error ? error.message : error);
-      setData(null);
-    } finally {
-      fetchingRef.current = false;
-    }
-  }, [map]);
-
-  const debouncedFetch = useCallback(() => {
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    debounceRef.current = setTimeout(() => {
-      if (map.getZoom() < MIN_ZOOM) {
-        setData(null);
-      } else {
-        fetchData();
-      }
-    }, 400);
-  }, [fetchData, map]);
+  const layerRef = useRef<L.MaplibreGL | null>(null);
+  const protocolRef = useRef<Protocol | null>(null);
 
   useEffect(() => {
     if (!visible) {
-      setData(null);
+      if (layerRef.current) {
+        map.removeLayer(layerRef.current);
+        layerRef.current = null;
+      }
       return;
     }
 
-    if (map.getZoom() >= MIN_ZOOM) {
-      fetchData();
+    // Register the pmtiles:// protocol with MapLibre once.
+    if (!protocolRef.current) {
+      const protocol = new Protocol();
+      maplibregl.addProtocol('pmtiles', protocol.tile.bind(protocol));
+      protocolRef.current = protocol;
     }
 
-    map.on('moveend', debouncedFetch);
+    // Create the MapLibre GL layer if it doesn't exist yet.
+    if (!layerRef.current) {
+      const glLayer = L.maplibreGL({
+        style: {
+          version: 8,
+          sources: {
+            padus: {
+              type: 'vector',
+              url: `pmtiles://${PMTILES_URL}`,
+            },
+          },
+          layers: [
+            {
+              id: 'padus-fill',
+              type: 'fill',
+              source: 'padus',
+              'source-layer': 'padus',
+              minzoom: MIN_ZOOM,
+              paint: {
+                'fill-color': FILL_COLOR_EXPR,
+                'fill-opacity': 0.35,
+              },
+            },
+            {
+              id: 'padus-outline',
+              type: 'line',
+              source: 'padus',
+              'source-layer': 'padus',
+              minzoom: MIN_ZOOM,
+              paint: {
+                'line-color': FILL_COLOR_EXPR,
+                'line-opacity': 0.7,
+                'line-width': 1,
+              },
+            },
+          ],
+        },
+        // Suppress the MapLibre attribution control — Leaflet handles attribution.
+        attributionControl: false,
+      });
+
+      glLayer.addTo(map);
+      layerRef.current = glLayer;
+    }
+
     return () => {
-      map.off('moveend', debouncedFetch);
-      if (debounceRef.current) clearTimeout(debounceRef.current);
+      // Cleanup on unmount only — visibility toggling is handled above.
     };
-  }, [map, visible, fetchData, debouncedFetch]);
+  }, [visible, map]);
 
-  if (!visible || !data) return null;
+  // Cleanup protocol and layer on unmount.
+  useEffect(() => {
+    return () => {
+      if (layerRef.current) {
+        map.removeLayer(layerRef.current);
+        layerRef.current = null;
+      }
+      if (protocolRef.current) {
+        maplibregl.removeProtocol('pmtiles');
+        protocolRef.current = null;
+      }
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  return (
-    <GeoJSON
-      key="land-access"
-      data={data}
-      style={(feature) => {
-        if (!feature) return {};
-        const color = getAccessColor(feature.properties as PADUSProperties);
-        return {
-          fillColor: color,
-          fillOpacity: 0.35,
-          color: color,
-          weight: 1,
-          opacity: 0.6,
-        };
-      }}
-      onEachFeature={(feature, layer) => {
-        const props = feature.properties as PADUSProperties;
-        const label = getAccessLabel(props);
-        const name = props.Unit_Nm || props.Mang_Name || 'Unknown';
-
-        layer.bindPopup(`
-          <div class="text-sm">
-            <strong>${name}</strong><br/>
-            <span class="text-xs text-gray-600">${label}</span><br/>
-            <span class="text-xs text-gray-500">Managed by: ${props.Mang_Name || 'Unknown'}</span>
-          </div>
-        `);
-      }}
-    />
-  );
+  return null;
 }

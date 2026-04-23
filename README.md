@@ -76,6 +76,20 @@ npm install
 npm run dev   # Starts Vite dev server on http://localhost:5173
 ```
 
+### Baking the land-access overlay (PAD-US)
+
+The land-access overlay is served as a self-hosted PMTiles vector archive. Bake it once:
+
+```bash
+bash scripts/bake_padus_pmtiles.sh
+```
+
+This produces `backend/data/padus.pmtiles` (~100 MB). The file is gitignored; re-bake when PAD-US publishes a new version (annually).
+
+Requires: GDAL (`ogr2ogr`) and tippecanoe.
+- macOS: `brew install gdal tippecanoe`
+- Ubuntu: `apt install gdal-bin` + [build tippecanoe from source](https://github.com/felt/tippecanoe)
+
 ---
 
 ## Populating Data
