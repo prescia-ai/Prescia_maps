@@ -198,7 +198,7 @@ def _build_test_app(mock_transport: httpx.MockTransport):
                     err = data["error"]
                     raise HTTPException(
                         status.HTTP_502_BAD_GATEWAY,
-                        detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', '')}",
+                        detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', 'unknown error')}",
                     )
                 if "type" not in data:
                     data = conv(data)

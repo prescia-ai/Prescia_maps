@@ -790,7 +790,7 @@ async def pad_us_proxy(
                 )
                 raise HTTPException(
                     status_code=status.HTTP_502_BAD_GATEWAY,
-                    detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', '')}",
+                    detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', 'unknown error')}",
                 )
             # f=json returns esriJSON (no "type" key) — convert to GeoJSON.
             if "type" not in data:
