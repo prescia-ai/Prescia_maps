@@ -4,6 +4,16 @@ Utility scripts for data preparation and maintenance.
 
 ---
 
+## Quick path (all platforms)
+
+Don't want to install GDAL and tippecanoe? Run `scripts/download_padus_pmtiles.ps1` (Windows) or `scripts/download_padus_pmtiles.sh` (macOS/Linux) to download the latest pre-baked file from the project's GitHub Releases.
+
+## Re-baking via CI
+
+Maintainers can trigger `.github/workflows/bake-padus-pmtiles.yml` manually from the Actions tab. It runs `bake_padus_pmtiles.sh` on an Ubuntu runner and publishes the output as a release asset.
+
+---
+
 ## `bake_padus_pmtiles.sh` — Bake the PAD-US land-access overlay
 
 The land-access overlay is served as a self-hosted [PMTiles](https://protomaps.com/docs/pmtiles)
