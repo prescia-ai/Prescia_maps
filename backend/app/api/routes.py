@@ -748,8 +748,8 @@ async def pad_us_proxy(
         "where": "1=1",
         "returnGeometry": "true",
         "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
-        "resultRecordCount": "2000",
-        "f": "geojson",
+        "resultRecordCount": "1000",
+        "f": "json",
         "outSR": "4326",
     }
 
@@ -781,7 +781,18 @@ async def pad_us_proxy(
                     detail="PAD-US service returned an unexpected response format",
                 )
             data = response.json()
-            # If the service returned esriJSON (no "type" key), convert to GeoJSON.
+            # ArcGIS can return HTTP 200 with an error payload like
+            # {"error": {"code": 400, "message": "..."}} — surface this as 502.
+            if "error" in data:
+                err = data["error"]
+                logger.warning(
+                    "PAD-US upstream returned an error in a 200 response: %s", err
+                )
+                raise HTTPException(
+                    status_code=status.HTTP_502_BAD_GATEWAY,
+                    detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', '')}",
+                )
+            # f=json returns esriJSON (no "type" key) — convert to GeoJSON.
             if "type" not in data:
                 data = _esri_to_geojson(data)
             return data

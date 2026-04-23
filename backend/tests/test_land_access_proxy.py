@@ -174,7 +174,7 @@ def _build_test_app(mock_transport: httpx.MockTransport):
             "spatialRel": "esriSpatialRelIntersects",
             "returnGeometry": "true",
             "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
-            "f": "geojson",
+            "f": "json",
             "outSR": "4326",
         }
         try:
@@ -194,6 +194,12 @@ def _build_test_app(mock_transport: httpx.MockTransport):
                         detail="PAD-US service returned an unexpected response format",
                     )
                 data = response.json()
+                if "error" in data:
+                    err = data["error"]
+                    raise HTTPException(
+                        status.HTTP_502_BAD_GATEWAY,
+                        detail=f"PAD-US upstream error {err.get('code', '?')}: {err.get('message', '')}",
+                    )
                 if "type" not in data:
                     data = conv(data)
                 return data
@@ -296,6 +302,16 @@ def test_proxy_502_on_non_json_200():
     client = _build_test_app(transport)
     resp = client.get("/proxy?bbox=-105,40,-104,41")
     assert resp.status_code == 502
+
+
+def test_proxy_502_on_arcgis_error_json():
+    """Upstream returns 200 with ArcGIS error payload → proxy returns 502."""
+    arcgis_error = {"error": {"code": 400, "message": "resultRecordCount exceeds maxRecordCount"}}
+    transport = httpx.MockTransport(lambda req: _make_response(200, arcgis_error))
+    client = _build_test_app(transport)
+    resp = client.get("/proxy?bbox=-105,40,-104,41")
+    assert resp.status_code == 502
+    assert "400" in resp.json()["detail"]
 
 
 def test_proxy_422_on_too_few_parts():
