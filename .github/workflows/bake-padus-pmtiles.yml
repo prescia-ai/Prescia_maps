@@ -1,0 +1,107 @@
+name: Bake PAD-US PMTiles
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Once a year on Jan 15 at 06:00 UTC as a reminder/safety-net rebake.
+    - cron: "0 6 15 1 *"
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install GDAL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gdal-bin build-essential libsqlite3-dev zlib1g-dev
+
+      # ------------------------------------------------------------------
+      # Cache tippecanoe by the HEAD SHA of the felt/tippecanoe repo so
+      # subsequent runs skip the rebuild when there is no new upstream commit.
+      # ------------------------------------------------------------------
+      - name: Get tippecanoe HEAD SHA (for cache key)
+        id: tc_sha
+        run: |
+          SHA=$(git ls-remote https://github.com/felt/tippecanoe.git HEAD | cut -f1)
+          echo "sha=${SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Cache tippecanoe binary
+        id: tc_cache
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/tippecanoe
+          key: tippecanoe-${{ steps.tc_sha.outputs.sha }}
+
+      - name: Build tippecanoe from source
+        if: steps.tc_cache.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/felt/tippecanoe.git /tmp/tippecanoe
+          cd /tmp/tippecanoe && make -j$(nproc) && sudo make install
+
+      # ------------------------------------------------------------------
+      # Run the bake script.  PAD-US download + conversion can be slow,
+      # so allow up to 90 minutes before GitHub kills the step.
+      # ------------------------------------------------------------------
+      - name: Bake padus.pmtiles
+        timeout-minutes: 90
+        run: bash scripts/bake_padus_pmtiles.sh
+
+      # ------------------------------------------------------------------
+      # Compute a version tag and record provenance metadata for the
+      # release body.
+      # ------------------------------------------------------------------
+      - name: Compute version tag and file metadata
+        id: meta
+        run: |
+          TAG="padus-$(date -u +%Y%m%d-%H%M)"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+          SIZE=$(du -h backend/data/padus.pmtiles | cut -f1)
+          echo "size=${SIZE}" >> "$GITHUB_OUTPUT"
+
+          SHA=$(sha256sum backend/data/padus.pmtiles | cut -d' ' -f1)
+          echo "sha256=${SHA}" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------------
+      # Publish a GitHub Release with the baked file as an asset.
+      # ------------------------------------------------------------------
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: "PAD-US PMTiles bake — ${{ steps.meta.outputs.tag }}"
+          prerelease: false
+          make_latest: true
+          body: |
+            ## PAD-US PMTiles bake
+
+            | Field | Value |
+            |-------|-------|
+            | Tag | `${{ steps.meta.outputs.tag }}` |
+            | File size | ${{ steps.meta.outputs.size }} |
+            | SHA-256 | `${{ steps.meta.outputs.sha256 }}` |
+            | Source | PAD-US 4.1 Combined (USGS ScienceBase) |
+            | CONUS clip bbox | `-125 24 -66 50` |
+            | Zoom range | 4–12 |
+            | tippecanoe flags | `--drop-densest-as-needed --coalesce-smallest-as-needed --extend-zooms-if-still-dropping --no-tile-size-limit --simplification=10` |
+
+            ### How to use
+
+            Download `padus.pmtiles` and place it at `backend/data/padus.pmtiles`, or run one of the download scripts:
+
+            ```powershell
+            # Windows (PowerShell):
+            ./scripts/download_padus_pmtiles.ps1
+            ```
+
+            ```bash
+            # macOS / Linux:
+            bash scripts/download_padus_pmtiles.sh
+            ```
+          files: backend/data/padus.pmtiles

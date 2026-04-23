@@ -76,19 +76,33 @@ npm install
 npm run dev   # Starts Vite dev server on http://localhost:5173
 ```
 
-### Baking the land-access overlay (PAD-US)
+### Getting the land-access overlay file
 
-The land-access overlay is served as a self-hosted PMTiles vector archive. Bake it once:
+You need `backend/data/padus.pmtiles` for the land-access overlay to render. You have two options:
+
+**Option 1 — Download the pre-baked file (recommended, works on all platforms):**
+
+```powershell
+# Windows (PowerShell):
+./scripts/download_padus_pmtiles.ps1
+```
+
+```bash
+# macOS / Linux:
+bash scripts/download_padus_pmtiles.sh
+```
+
+This downloads the latest release asset from GitHub (~100 MB). No GDAL or tippecanoe required.
+
+**Option 2 — Bake it yourself** (needed if you want to customize the filter or zoom range):
+
+Requires GDAL and tippecanoe. See `scripts/README.md`. Windows users should use WSL2 or Docker.
 
 ```bash
 bash scripts/bake_padus_pmtiles.sh
 ```
 
-This produces `backend/data/padus.pmtiles` (~100 MB). The file is gitignored; re-bake when PAD-US publishes a new version (annually).
-
-Requires: GDAL (`ogr2ogr`) and tippecanoe.
-- macOS: `brew install gdal tippecanoe`
-- Ubuntu: `apt install gdal-bin` + [build tippecanoe from source](https://github.com/felt/tippecanoe)
+**Re-baking via GitHub Actions:** Maintainers can trigger a fresh bake by running the "Bake PAD-US PMTiles" workflow from the Actions tab. It publishes a new release automatically.
 
 ---
 
