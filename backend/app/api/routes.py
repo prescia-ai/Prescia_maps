@@ -11,6 +11,7 @@ import logging
 import os
 import re
 from collections import defaultdict
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -65,10 +66,9 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-# Path to the pre-baked PAD-US PMTiles archive (relative to this file's package root).
-_PADUS_PMTILES_PATH = os.path.join(
-    os.path.dirname(__file__), "..", "..", "..", "data", "padus.pmtiles"
-)
+# Absolute path to the pre-baked PAD-US PMTiles archive.
+_PADUS_DATA_DIR: Path = Path(__file__).parent.parent.parent / "data"
+_PADUS_PMTILES_PATH: Path = _PADUS_DATA_DIR / "padus.pmtiles"
 
 
 def _type_str(value: Any) -> str:
@@ -677,14 +677,22 @@ async def serve_padus_pmtiles(request: StarletteRequest) -> Response:
     requests, 200 for full-file requests, and 404 if the file hasn't
     been baked yet.
     """
-    path = os.path.normpath(_PADUS_PMTILES_PATH)
-    if not os.path.isfile(path):
+    path = _PADUS_PMTILES_PATH.resolve()
+    # Ensure the resolved path stays within the expected data directory.
+    try:
+        path.relative_to(_PADUS_DATA_DIR.resolve())
+    except ValueError:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Access denied",
+        )
+    if not path.is_file():
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="padus.pmtiles not found — run scripts/bake_padus_pmtiles.sh",
         )
 
-    file_size = os.path.getsize(path)
+    file_size = path.stat().st_size
     range_header = request.headers.get("range")
 
     base_headers: Dict[str, str] = {
