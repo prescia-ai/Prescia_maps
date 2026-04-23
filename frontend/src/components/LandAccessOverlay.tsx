@@ -45,6 +45,8 @@ const FILL_COLOR_EXPR: maplibregl.ExpressionSpecification = [
   ['any',
     ['in', 'STATE', ['upcase', ['to-string', ['get', 'agency']]]],
     ['in', 'STAT', ['upcase', ['to-string', ['get', 'agency']]]],
+    ['in', 'LOC', ['upcase', ['to-string', ['get', 'agency']]]],
+    ['in', 'CNTY', ['upcase', ['to-string', ['get', 'agency']]]],
   ], '#eab308',
   // ORANGE: Unsure / everything else
   '#f97316',
