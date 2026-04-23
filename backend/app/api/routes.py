@@ -745,8 +745,10 @@ async def pad_us_proxy(
         "geometryType": "esriGeometryEnvelope",
         "inSR": "4326",
         "spatialRel": "esriSpatialRelIntersects",
+        "where": "1=1",
         "returnGeometry": "true",
         "outFields": "Mang_Name,GAP_Sts,Des_Tp,Unit_Nm",
+        "resultRecordCount": "2000",
         "f": "geojson",
         "outSR": "4326",
     }
