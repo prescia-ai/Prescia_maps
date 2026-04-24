@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
 import { useMap } from 'react-leaflet';
-import * as maplibregl from 'maplibre-gl';
-import '@maplibre/maplibre-gl-leaflet';
 import L from 'leaflet';
 
 interface LandAccessOverlayProps {
@@ -24,109 +22,92 @@ export function getAccessLabel(agency: string): string {
   return 'Unsure — Verify First';
 }
 
+function getAccessColor(agency: string): string {
+  const ag = (agency || '').toUpperCase();
+  if (ag === 'NPS' || ag === 'FWS' || ag === 'DOD') return '#ef4444';
+  if (ag === 'BLM' || ag === 'USFS' || ag === 'BOR') return '#22c55e';
+  if (ag.includes('STATE') || ag.includes('STAT') || ag.includes('LOC') || ag.includes('CNTY')) return '#eab308';
+  return '#f97316';
+}
+
 const MIN_ZOOM = 9;
-
-// MapLibre fill-color expression that ports the getAccessColor logic.
-const FILL_COLOR_EXPR: maplibregl.ExpressionSpecification = [
-  'case',
-  // RED: NPS, FWS, DOD — always off-limits
-  ['any',
-    ['==', ['get', 'agency'], 'NPS'],
-    ['==', ['get', 'agency'], 'FWS'],
-    ['==', ['get', 'agency'], 'DOD'],
-  ], '#ef4444',
-  // GREEN: BLM, USFS, or Bureau of Reclamation
-  ['any',
-    ['==', ['get', 'agency'], 'BLM'],
-    ['==', ['get', 'agency'], 'USFS'],
-    ['==', ['get', 'agency'], 'BOR'],
-  ], '#22c55e',
-  // YELLOW: State / local government land
-  ['any',
-    ['in', 'STATE', ['upcase', ['to-string', ['get', 'agency']]]],
-    ['in', 'STAT', ['upcase', ['to-string', ['get', 'agency']]]],
-    ['in', 'LOC', ['upcase', ['to-string', ['get', 'agency']]]],
-    ['in', 'CNTY', ['upcase', ['to-string', ['get', 'agency']]]],
-  ], '#eab308',
-  // ORANGE: Unsure / everything else
-  '#f97316',
-];
-
-const FEDERAL_LANDS_TILE_URL = 'https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Federal_Lands/VectorTileServer';
+// 500 is the max page size; at zoom ≥ 9 the viewport is small enough that this covers the area.
+const RESULT_RECORD_COUNT = 500;
+const ESRI_URL = 'https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Federal_Lands/FeatureServer/0/query';
+const DEBOUNCE_MS = 300;
 
 export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
   const map = useMap();
-  const layerRef = useRef<L.MaplibreGL | null>(null);
+  const layerRef = useRef<L.GeoJSON | null>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    if (!visible) {
-      if (layerRef.current) {
-        map.removeLayer(layerRef.current);
-        layerRef.current = null;
-      }
+  function removeLayer() {
+    if (layerRef.current) {
+      map.removeLayer(layerRef.current);
+      layerRef.current = null;
+    }
+  }
+
+  async function fetchAndRender() {
+    if (!visible || map.getZoom() < MIN_ZOOM) {
+      removeLayer();
       return;
     }
 
-    // Create the MapLibre GL layer if it doesn't exist yet.
-    if (!layerRef.current) {
-      const glLayer = L.maplibreGL({
-        style: {
-          version: 8,
-          sources: {
-            padus: {
-              type: 'vector',
-              url: FEDERAL_LANDS_TILE_URL,
-            },
-          },
-          layers: [
-            {
-              id: 'padus-fill',
-              type: 'fill',
-              source: 'padus',
-              'source-layer': 'agbur',
-              minzoom: MIN_ZOOM,
-              paint: {
-                'fill-color': FILL_COLOR_EXPR,
-                'fill-opacity': 0.35,
-              },
-            },
-            {
-              id: 'padus-outline',
-              type: 'line',
-              source: 'padus',
-              'source-layer': 'agbur',
-              minzoom: MIN_ZOOM,
-              paint: {
-                'line-color': FILL_COLOR_EXPR,
-                'line-opacity': 0.7,
-                'line-width': 1,
-              },
-            },
-          ],
-        },
-        // Suppress the MapLibre attribution control — Leaflet handles attribution.
-        attributionControl: false,
-      });
+    const b = map.getBounds();
+    const params = new URLSearchParams({
+      geometry: `${b.getWest()},${b.getSouth()},${b.getEast()},${b.getNorth()}`,
+      geometryType: 'esriGeometryEnvelope',
+      inSR: '4326',
+      outSR: '4326',
+      outFields: 'agency',
+      returnGeometry: 'true',
+      f: 'geojson',
+      resultRecordCount: String(RESULT_RECORD_COUNT),
+    });
 
-      glLayer.addTo(map);
-      layerRef.current = glLayer;
+    try {
+      const res = await fetch(`${ESRI_URL}?${params}`);
+      if (!res.ok) {
+        console.warn(`LandAccessOverlay: Esri request failed (${res.status})`);
+        return;
+      }
+      const data = await res.json();
+
+      removeLayer();
+      layerRef.current = L.geoJSON(data, {
+        style: (feature) => {
+          const agency: string = feature?.properties?.agency ?? '';
+          const color = getAccessColor(agency);
+          return { fillColor: color, fillOpacity: 0.35, color, weight: 1, opacity: 0.7 };
+        },
+      }).addTo(map);
+    } catch (err) {
+      console.warn('LandAccessOverlay: fetch error', err);
+    }
+  }
+
+  function scheduleFetch() {
+    if (debounceRef.current !== null) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => { fetchAndRender(); }, DEBOUNCE_MS);
+  }
+
+  useEffect(() => {
+    if (!visible) {
+      removeLayer();
+      return;
     }
 
-    return () => {
-      // Cleanup on unmount only — visibility toggling is handled above.
-    };
-  }, [visible, map]);
+    map.on('moveend zoomend', scheduleFetch);
+    fetchAndRender();
 
-  // Cleanup layer on unmount.
-  useEffect(() => {
     return () => {
-      if (layerRef.current) {
-        map.removeLayer(layerRef.current);
-        layerRef.current = null;
-      }
+      map.off('moveend zoomend', scheduleFetch);
+      if (debounceRef.current !== null) clearTimeout(debounceRef.current);
+      removeLayer();
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [visible, map]);
 
   return null;
 }
