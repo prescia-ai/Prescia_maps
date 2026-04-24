@@ -6,27 +6,51 @@ interface LandAccessOverlayProps {
   visible: boolean;
 }
 
+function resolveAgencyRaw(props: Record<string, unknown>): string {
+  return String(
+    props?.agency ?? props?.Mang_Name ?? props?.manager ?? props?.AGBUR ?? props?.agbur ?? ''
+  ).toUpperCase();
+}
+
 // Keep getAccessLabel exported in case other components use it.
-export function getAccessLabel(agency: string): string {
-  const ag = (agency || '').toUpperCase();
+export function getAccessLabel(props: Record<string, unknown> | string): string {
+  const raw = typeof props === 'string' ? props.toUpperCase() : resolveAgencyRaw(props);
 
   // RED: Off Limits
-  if (ag === 'NPS' || ag === 'FWS' || ag === 'DOD') return 'Off Limits';
+  if (raw.includes('PARK') || raw.includes('NPS')) return 'Off Limits';
+  if (raw.includes('WILDLIFE') || raw.includes('FWS') || raw.includes('FISH')) return 'Off Limits';
+  if (raw.includes('DOD') || raw.includes('DEFENSE') || raw.includes('ARMY') || raw.includes('AIR FORCE') || raw.includes('NAVY') || raw.includes('MARINE')) return 'Off Limits';
+  if (raw.includes('WILDERNESS')) return 'Off Limits';
 
   // GREEN: Public OK
-  if (ag === 'BLM' || ag === 'USFS' || ag === 'BOR') return 'Public — OK to Detect';
+  if (raw.includes('BLM') || raw.includes('BUREAU OF LAND')) return 'Public — OK to Detect';
+  if (raw.includes('USFS') || raw.includes('FOREST SERVICE') || raw.includes('NATIONAL FOREST')) return 'Public — OK to Detect';
+  if (raw.includes('BOR') || raw.includes('RECLAMATION')) return 'Public — OK to Detect';
 
   // YELLOW: State/Local
-  if (ag.includes('STATE') || ag.includes('STAT') || ag.includes('LOC') || ag.includes('CNTY')) return 'Private — Permit Required';
+  if (raw.includes('STATE') || raw.includes('COUNTY') || raw.includes('CNTY') || raw.includes('LOCAL') || raw.includes('MUNICIPAL')) return 'Private — Permit Required';
 
   return 'Unsure — Verify First';
 }
 
-function getAccessColor(agency: string): string {
-  const ag = (agency || '').toUpperCase();
-  if (ag === 'NPS' || ag === 'FWS' || ag === 'DOD') return '#ef4444';
-  if (ag === 'BLM' || ag === 'USFS' || ag === 'BOR') return '#22c55e';
-  if (ag.includes('STATE') || ag.includes('STAT') || ag.includes('LOC') || ag.includes('CNTY')) return '#eab308';
+function getAccessColor(props: Record<string, unknown>): string {
+  const raw = resolveAgencyRaw(props);
+
+  // RED: off limits
+  if (raw.includes('PARK') || raw.includes('NPS')) return '#ef4444';
+  if (raw.includes('WILDLIFE') || raw.includes('FWS') || raw.includes('FISH')) return '#ef4444';
+  if (raw.includes('DOD') || raw.includes('DEFENSE') || raw.includes('ARMY') || raw.includes('AIR FORCE') || raw.includes('NAVY') || raw.includes('MARINE')) return '#ef4444';
+  if (raw.includes('WILDERNESS')) return '#ef4444';
+
+  // GREEN: OK to detect
+  if (raw.includes('BLM') || raw.includes('BUREAU OF LAND')) return '#22c55e';
+  if (raw.includes('USFS') || raw.includes('FOREST SERVICE') || raw.includes('NATIONAL FOREST')) return '#22c55e';
+  if (raw.includes('BOR') || raw.includes('RECLAMATION')) return '#22c55e';
+
+  // YELLOW: permit required
+  if (raw.includes('STATE') || raw.includes('COUNTY') || raw.includes('CNTY') || raw.includes('LOCAL') || raw.includes('MUNICIPAL')) return '#eab308';
+
+  // ORANGE: unsure
   return '#f97316';
 }
 
@@ -60,7 +84,7 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
       geometryType: 'esriGeometryEnvelope',
       inSR: '4326',
       outSR: '4326',
-      outFields: 'agency',
+      outFields: '*',
       returnGeometry: 'true',
       f: 'geojson',
       resultRecordCount: String(RESULT_RECORD_COUNT),
@@ -74,11 +98,14 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
       }
       const data = await res.json();
 
+      if (data?.features?.length > 0) {
+        console.log('LandAccessOverlay: first feature properties', data.features[0].properties);
+      }
+
       removeLayer();
       layerRef.current = L.geoJSON(data, {
         style: (feature) => {
-          const agency: string = feature?.properties?.agency ?? '';
-          const color = getAccessColor(agency);
+          const color = getAccessColor(feature?.properties ?? {});
           return { fillColor: color, fillOpacity: 0.35, color, weight: 1, opacity: 0.7 };
         },
       }).addTo(map);
