@@ -22,10 +22,10 @@ function getAccessColor(pubAccess: string): string {
 }
 
 const MIN_ZOOM = 9;
-// 500 is the max page size; at zoom ≥ 9 the viewport is small enough that this covers the area.
-const RESULT_RECORD_COUNT = 500;
+// 2000 is the service max; larger pages mean fewer re-fetches after panning.
+const RESULT_RECORD_COUNT = 2000;
 const ESRI_URL = 'https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/PADUS_Public_Access/FeatureServer/0/query';
-const DEBOUNCE_MS = 300;
+const DEBOUNCE_MS = 600;
 
 export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
   const map = useMap();
@@ -47,12 +47,15 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
 
     const b = map.getBounds();
     const params = new URLSearchParams({
+      where: '1=1',
       geometry: `${b.getWest()},${b.getSouth()},${b.getEast()},${b.getNorth()}`,
       geometryType: 'esriGeometryEnvelope',
+      spatialRel: 'esriSpatialRelIntersects',
       inSR: '4326',
       outSR: '4326',
       outFields: 'Pub_Access,MngNm_Desc,Unit_Nm',
       returnGeometry: 'true',
+      maxAllowableOffset: '0.001',
       f: 'geojson',
       resultRecordCount: String(RESULT_RECORD_COUNT),
     });
@@ -71,6 +74,7 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
 
       removeLayer();
       layerRef.current = L.geoJSON(data, {
+        interactive: false,
         style: (feature) => {
           const pubAccess: string = feature?.properties?.Pub_Access ?? '';
           const color = getAccessColor(pubAccess);

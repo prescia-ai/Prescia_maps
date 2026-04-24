@@ -109,11 +109,11 @@ def generate_area_code(attrs: Dict[str, Any]) -> str:
     Build a deterministic, human-readable area code:
     ``PADUS-{state_abbrev}-{agency_abbrev}-{OBJECTID}``
     """
-    state = _state_abbrev(attrs.get("State_Nm", ""))
+    state = _state_abbrev(attrs.get("ST_Name") or attrs.get("State_Nm", ""))
     agency = _agency_abbrev(
-        attrs.get("Mang_Name", ""),
-        attrs.get("Mang_Type", ""),
-        attrs.get("Des_Tp", ""),
+        attrs.get("MngNm_Desc") or attrs.get("Mang_Name", ""),
+        attrs.get("MngTp_Desc") or attrs.get("Mang_Type", ""),
+        attrs.get("DesTp_Desc") or attrs.get("Des_Tp", ""),
     )
     object_id = str(attrs.get("OBJECTID", "0")).zfill(4)
     return f"PADUS-{state}-{agency}-{object_id}"
@@ -129,190 +129,144 @@ def classify_area(attrs: Dict[str, Any]) -> Dict[str, Any]:
 
     Returns ``{"status": ..., "confidence": ..., "reason": ...}``.
     """
-    des_tp = (attrs.get("Des_Tp") or "").upper()
-    mang_type = (attrs.get("Mang_Type") or "").upper()
-    mang_name = (attrs.get("Mang_Name") or "").upper()
+    pub_access = (attrs.get("Pub_Access") or "").upper()
+    mng_nm = (attrs.get("MngNm_Desc") or attrs.get("Mang_Name") or "").upper()
+    mng_tp = (attrs.get("MngTp_Desc") or attrs.get("Mang_Type") or "").upper()
+    des_tp = (attrs.get("DesTp_Desc") or attrs.get("Des_Tp") or "").upper()
     gap_sts = attrs.get("GAP_Sts")
     try:
         gap_sts = int(gap_sts) if gap_sts is not None else None
     except (ValueError, TypeError):
         gap_sts = None
 
-    # --- Wilderness (any agency) ---
+    # Pub_Access = XA → always off limits
+    if pub_access == "XA":
+        return {"status": "off_limits", "confidence": 0.95,
+                "reason": "PAD-US marks this area as Closed Access — detecting is prohibited."}
+
+    # Wilderness
     if "WILDERNESS" in des_tp:
-        return {
-            "status": "off_limits",
-            "confidence": 0.98,
-            "reason": "Wilderness Areas are federally protected; metal detecting is prohibited.",
-        }
+        return {"status": "off_limits", "confidence": 0.98,
+                "reason": "Wilderness Areas are federally protected; metal detecting is prohibited."}
 
-    # --- GAP Status 1 or 2 (any agency) ---
+    # DOD
+    if "DEFENSE" in mng_nm or "DOD" in mng_nm or "MILITARY" in des_tp or "ARMY" in mng_nm or "AIR FORCE" in mng_nm or "NAVY" in mng_nm:
+        return {"status": "off_limits", "confidence": 0.99,
+                "reason": "Department of Defense land — access restricted; metal detecting is prohibited."}
+
+    # NPS
+    if "NATIONAL PARK SERVICE" in mng_nm or "NPS" in mng_nm or "NATIONAL PARK" in des_tp:
+        return {"status": "off_limits", "confidence": 0.98,
+                "reason": "National Park Service lands — metal detecting is prohibited."}
+
+    # Fish & Wildlife
+    if "FISH AND WILDLIFE" in mng_nm or "FWS" in mng_nm or "WILDLIFE REFUGE" in des_tp:
+        return {"status": "off_limits", "confidence": 0.95,
+                "reason": "US Fish & Wildlife Service lands — metal detecting is prohibited."}
+
+    # GAP 1 or 2
     if gap_sts in (1, 2):
-        return {
-            "status": "off_limits",
-            "confidence": 0.90,
-            "reason": f"GAP Status {gap_sts} indicates high protection — detecting is generally prohibited.",
-        }
+        return {"status": "off_limits", "confidence": 0.90,
+                "reason": f"GAP Status {gap_sts} indicates high protection — detecting is generally prohibited."}
 
-    # --- Federal agencies ---
-    if mang_type == "FED" or any(a in mang_name for a in ("NPS", "FWS", "DOD", "BLM", "USFS", "BOR", "BIA")):
-        # NPS
-        if "NPS" in mang_name or "NATIONAL PARK" in des_tp:
-            return {
-                "status": "off_limits",
-                "confidence": 0.98,
-                "reason": "National Park Service lands — metal detecting is prohibited under the Archaeological Resources Protection Act.",
-            }
-        # Fish & Wildlife
-        if "FWS" in mang_name or "FISH" in mang_name or "WILDLIFE" in des_tp:
-            return {
-                "status": "off_limits",
-                "confidence": 0.95,
-                "reason": "US Fish & Wildlife Service lands — metal detecting is prohibited.",
-            }
-        # DOD
-        if "DOD" in mang_name or "DEFENSE" in mang_name or "MILITARY" in des_tp:
-            return {
-                "status": "off_limits",
-                "confidence": 0.99,
-                "reason": "Department of Defense land — access restricted; metal detecting is prohibited.",
-            }
-        # BLM with GAP 3
-        if ("BLM" in mang_name or "BUREAU OF LAND MANAGEMENT" in mang_name) and gap_sts == 3:
-            return {
-                "status": "allowed",
-                "confidence": 0.92,
-                "reason": "BLM land with GAP Status 3 — metal detecting is generally allowed for recreational/hobby use.",
-            }
-        # BLM other
-        if "BLM" in mang_name or "BUREAU OF LAND MANAGEMENT" in mang_name:
-            return {
-                "status": "allowed",
-                "confidence": 0.85,
-                "reason": "BLM land — metal detecting is generally allowed for recreational/hobby use. Check local restrictions.",
-            }
-        # USFS non-wilderness with GAP 3
-        if ("USFS" in mang_name or "FOREST SERVICE" in mang_name or "NATIONAL FOREST" in des_tp) and gap_sts == 3:
-            return {
-                "status": "allowed",
-                "confidence": 0.90,
-                "reason": "USFS land (non-wilderness) with GAP Status 3 — metal detecting is generally allowed.",
-            }
-        # USFS other
-        if "USFS" in mang_name or "FOREST SERVICE" in mang_name or "NATIONAL FOREST" in des_tp:
-            return {
-                "status": "allowed",
-                "confidence": 0.80,
-                "reason": "USFS land (non-wilderness) — metal detecting is generally allowed. Check local ranger district rules.",
-            }
-        # Bureau of Reclamation
-        if "BOR" in mang_name or "RECLAMATION" in mang_name:
-            return {
-                "status": "unsure",
-                "confidence": 0.50,
-                "reason": "Bureau of Reclamation land — rules vary by site. Contact the local office before detecting.",
-            }
-        # BIA / Tribal
-        if "BIA" in mang_name or "INDIAN AFFAIRS" in mang_name:
-            return {
-                "status": "unsure",
-                "confidence": 0.30,
-                "reason": "Bureau of Indian Affairs land — tribal sovereignty applies. Contact the tribal authority.",
-            }
+    # BLM
+    if "BUREAU OF LAND MANAGEMENT" in mng_nm or "BLM" in mng_nm:
+        return {"status": "allowed", "confidence": 0.92,
+                "reason": "BLM land — metal detecting is generally allowed for recreational/hobby use. Check local restrictions."}
 
-    # --- State lands ---
-    if mang_type == "STAT":
-        if "STATE FOREST" in des_tp or "STATE FOREST" in mang_name:
-            return {
-                "status": "allowed",
-                "confidence": 0.80,
-                "reason": "State forest land — metal detecting is generally allowed. Check state-specific rules.",
-            }
-        # State parks are unsure
-        return {
-            "status": "unsure",
-            "confidence": 0.50,
-            "reason": "State-managed land — rules vary by state and park. Contact the managing agency before detecting.",
-        }
+    # Forest Service
+    if "FOREST SERVICE" in mng_nm or "USFS" in mng_nm or "NATIONAL FOREST" in des_tp:
+        return {"status": "allowed", "confidence": 0.88,
+                "reason": "USFS land (non-wilderness) — metal detecting is generally allowed. Check local ranger district rules."}
 
-    # --- Tribal ---
-    if mang_type == "TRIB":
-        return {
-            "status": "unsure",
-            "confidence": 0.30,
-            "reason": "Tribal land — tribal sovereignty applies. Contact the tribal authority before detecting.",
-        }
+    # Bureau of Reclamation
+    if "RECLAMATION" in mng_nm or "BOR" in mng_nm:
+        return {"status": "unsure", "confidence": 0.50,
+                "reason": "Bureau of Reclamation land — rules vary by site. Contact the local office before detecting."}
 
-    # --- Private ---
-    if mang_type == "PVT" or gap_sts == 4:
-        return {
-            "status": "private_permit",
-            "confidence": 0.85,
-            "reason": "Private land — metal detecting requires landowner permission.",
-        }
+    # Pub_Access = OA with federal land → allowed
+    if pub_access == "OA" and "FEDERAL" in mng_tp:
+        return {"status": "allowed", "confidence": 0.80,
+                "reason": "Federal open-access land — metal detecting is likely allowed. Verify local rules."}
 
-    # --- Local government ---
-    if mang_type == "LOC":
-        return {
-            "status": "unsure",
-            "confidence": 0.50,
-            "reason": "Local government land — rules vary. Contact the local parks department before detecting.",
-        }
+    # Pub_Access = OA
+    if pub_access == "OA":
+        return {"status": "allowed", "confidence": 0.70,
+                "reason": "PAD-US marks this area as Open Access — detecting may be allowed. Verify with managing agency."}
 
-    # --- Fallback ---
-    return {
-        "status": "unsure",
-        "confidence": 0.40,
-        "reason": "Unclassified public land — rules are unclear. Verify with the managing agency before detecting.",
-    }
+    # Pub_Access = RA
+    if pub_access == "RA":
+        return {"status": "private_permit", "confidence": 0.80,
+                "reason": "PAD-US marks this area as Restricted Access — permit or permission required."}
+
+    # State lands
+    if "STATE" in mng_tp or "STATE" in mng_nm:
+        if "STATE FOREST" in des_tp:
+            return {"status": "allowed", "confidence": 0.75,
+                    "reason": "State forest — metal detecting is generally allowed. Check state-specific rules."}
+        return {"status": "unsure", "confidence": 0.50,
+                "reason": "State-managed land — rules vary by state. Contact the managing agency before detecting."}
+
+    # Local government
+    if "LOCAL" in mng_tp or "LOCAL" in mng_nm or "COUNTY" in mng_nm or "MUNICIPAL" in mng_nm:
+        return {"status": "unsure", "confidence": 0.50,
+                "reason": "Local government land — rules vary. Contact the local parks department before detecting."}
+
+    # Tribal
+    if "TRIBAL" in mng_tp or "TRIBE" in mng_nm or "TRIBAL" in mng_nm:
+        return {"status": "unsure", "confidence": 0.30,
+                "reason": "Tribal land — tribal sovereignty applies. Contact the tribal authority before detecting."}
+
+    # Private
+    if "PRIVATE" in mng_tp or gap_sts == 4:
+        return {"status": "private_permit", "confidence": 0.85,
+                "reason": "Private land — metal detecting requires landowner permission."}
+
+    # Fallback
+    return {"status": "unsure", "confidence": 0.40,
+            "reason": "Unclassified land — rules are unclear. Verify with the managing agency before detecting."}
 
 
 # ---------------------------------------------------------------------------
 # PAD-US ArcGIS REST API client
 # ---------------------------------------------------------------------------
 
-PADUS_IDENTIFY_URL = (
-    "https://gis.usgs.gov/arcgis/rest/services/PADUS3_0/MapServer/identify"
+PADUS_QUERY_URL = (
+    "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/"
+    "PADUS_Public_Access/FeatureServer/0/query"
 )
 
 
 async def query_padus(lat: float, lon: float) -> Optional[Dict[str, Any]]:
     """
-    Query the PAD-US ArcGIS REST identify endpoint for parcel attributes
+    Query the PAD-US Public Access FeatureServer for parcel attributes
     at the given lat/lon.  Returns the attribute dict of the first result,
     or ``None`` if nothing is found.
     """
-    # Build a small bbox around the point for the mapExtent parameter
-    delta = 0.01
-    bbox = f"{lon - delta},{lat - delta},{lon + delta},{lat + delta}"
-
     params = {
         "geometry": f"{lon},{lat}",
         "geometryType": "esriGeometryPoint",
-        "sr": "4326",
-        "layers": "all",
-        "tolerance": "2",
-        "mapExtent": bbox,
-        "imageDisplay": "800,600,96",
+        "inSR": "4326",
+        "spatialRel": "esriSpatialRelIntersects",
+        "outFields": "Pub_Access,MngNm_Desc,MngTp_Desc,DesTp_Desc,Unit_Nm,GAP_Sts,ST_Name",
         "returnGeometry": "false",
         "f": "json",
+        "resultRecordCount": "1",
     }
 
     try:
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            resp = await client.get(PADUS_IDENTIFY_URL, params=params)
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.get(PADUS_QUERY_URL, params=params)
             resp.raise_for_status()
             data = resp.json()
     except Exception:
-        logger.exception("PAD-US identify request failed for (%s, %s)", lat, lon)
+        logger.exception("PAD-US query failed for (%s, %s)", lat, lon)
         return None
 
-    results = data.get("results")
-    if not results:
+    features = data.get("features")
+    if not features:
         return None
-
-    # Return the attributes of the first (most relevant) result
-    return results[0].get("attributes")
+    return features[0].get("attributes")
 
 
 # ---------------------------------------------------------------------------
@@ -363,9 +317,9 @@ async def lookup_land_access(
         return {
             "area_code": area_code,
             "unit_name": attrs.get("Unit_Nm"),
-            "managing_agency": attrs.get("Mang_Name"),
-            "designation": attrs.get("Des_Tp"),
-            "state": _state_abbrev(attrs.get("State_Nm", "")),
+            "managing_agency": attrs.get("MngNm_Desc") or attrs.get("Mang_Name"),
+            "designation": attrs.get("DesTp_Desc") or attrs.get("Des_Tp"),
+            "state": _state_abbrev(attrs.get("ST_Name") or attrs.get("State_Nm", "")),
             "gap_status": attrs.get("GAP_Sts"),
             "status": override_row.status,
             "confidence": 1.0,
@@ -404,14 +358,14 @@ async def lookup_land_access(
 
     # Step 5 — Tier-1 rule engine
     classification = classify_area(attrs)
-    state_abbr = _state_abbrev(attrs.get("State_Nm", ""))
+    state_abbr = _state_abbrev(attrs.get("ST_Name") or attrs.get("State_Nm", ""))
 
     # Step 6 — cache the result
     cache_entry = LandAccessCache(
         area_code=area_code,
         unit_name=attrs.get("Unit_Nm"),
-        managing_agency=attrs.get("Mang_Name"),
-        designation=attrs.get("Des_Tp"),
+        managing_agency=attrs.get("MngNm_Desc") or attrs.get("Mang_Name"),
+        designation=attrs.get("DesTp_Desc") or attrs.get("Des_Tp"),
         state=state_abbr,
         gap_status=attrs.get("GAP_Sts"),
         status=classification["status"],
@@ -432,8 +386,8 @@ async def lookup_land_access(
     return {
         "area_code": area_code,
         "unit_name": attrs.get("Unit_Nm"),
-        "managing_agency": attrs.get("Mang_Name"),
-        "designation": attrs.get("Des_Tp"),
+        "managing_agency": attrs.get("MngNm_Desc") or attrs.get("Mang_Name"),
+        "designation": attrs.get("DesTp_Desc") or attrs.get("Des_Tp"),
         "state": state_abbr,
         "gap_status": attrs.get("GAP_Sts"),
         "status": classification["status"],
