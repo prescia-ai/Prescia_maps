@@ -110,7 +110,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
     return (
       <button
         onClick={() => setPanelOpen(true)}
-        className="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm border border-stone-200 shadow-lg rounded-xl px-3 py-2 text-xs font-medium text-stone-700 hover:bg-stone-50 hover:text-stone-900 transition-colors"
+        className="flex items-center gap-1.5 bg-stone-900 backdrop-blur-sm border border-stone-700 shadow-lg rounded-xl px-3 py-2 text-xs font-medium text-stone-100 hover:bg-stone-800 transition-colors"
       >
         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -121,14 +121,14 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
   }
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-xl shadow-lg p-3 w-64 max-h-[80vh] overflow-y-auto">
+    <div className="bg-stone-900 border border-stone-700 rounded-xl shadow-xl p-3 w-72 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-stone-700 scrollbar-track-transparent">
       <div className="flex items-center justify-between mb-3 px-1">
-        <h2 className="text-xs font-semibold tracking-widest uppercase text-stone-500">
+        <h2 className="text-xs font-semibold tracking-widest uppercase text-stone-100">
           Map Layers
         </h2>
         <button
           onClick={() => setPanelOpen(false)}
-          className="text-stone-400 hover:text-stone-700 transition-colors"
+          className="text-stone-100 hover:text-white transition-colors"
           aria-label="Close layers panel"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -141,30 +141,32 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
         {SECTIONS.map((section) => {
           const isCollapsed = !!collapsed[section.title];
           const allOn = section.items.every((item) => layers[item.key]);
-          const someOn = section.items.some((item) => layers[item.key]);
 
           return (
-            <div key={section.title} className="border border-stone-200 rounded-lg overflow-hidden">
+            <div key={section.title} className="rounded-lg overflow-hidden">
               {/* Section header */}
-              <div className="flex items-center justify-between px-2 py-1.5 bg-stone-50">
+              <div className="flex items-center justify-between px-2 py-1.5 bg-stone-800">
                 <button
                   onClick={() => toggleSection(section.items)}
-                  className="flex items-center gap-1.5 text-xs font-semibold text-stone-600 hover:text-stone-900 transition-colors"
+                  className="text-[10px] font-semibold tracking-wider uppercase text-stone-300 hover:text-stone-100 transition-colors"
                   title={allOn ? 'Turn all off' : 'Turn all on'}
                 >
-                  <span
-                    className={`inline-block w-2 h-2 rounded-full flex-shrink-0 transition-colors ${
-                      allOn ? 'bg-amber-600' : someOn ? 'bg-stone-400' : 'bg-stone-200'
-                    }`}
-                  />
                   {section.title}
                 </button>
                 <button
                   onClick={() => toggleCollapse(section.title)}
-                  className="text-stone-400 hover:text-stone-700 transition-colors text-xs px-1"
+                  className="text-stone-400 hover:text-stone-200 transition-colors"
                   aria-label={isCollapsed ? 'Expand section' : 'Collapse section'}
                 >
-                  {isCollapsed ? '▶' : '▼'}
+                  <svg
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${isCollapsed ? '-rotate-90' : ''}`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
               </div>
 
@@ -179,14 +181,14 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                           onClick={() => toggle(key)}
                           className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
                             ${active
-                              ? 'bg-stone-100 text-stone-900'
-                              : 'bg-transparent text-stone-500 hover:bg-stone-50 hover:text-stone-700'
+                              ? 'bg-stone-800 text-stone-100'
+                              : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                             }`}
                         >
-                          {/* Color dot */}
+                          {/* Color swatch */}
                           <span
-                            className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0"
-                            style={{ backgroundColor: active ? color : '#d1d5db' }}
+                            className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
+                            style={{ backgroundColor: color, opacity: active ? 1 : 0.7 }}
                           />
 
                           {/* Label */}
@@ -194,39 +196,38 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
 
                           {/* Toggle pill */}
                           <span
-                            className={`relative inline-flex h-4 w-7 flex-shrink-0 rounded-full transition-colors duration-200
-                              ${active ? 'bg-amber-600' : 'bg-stone-200'}`}
+                            className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                              ${active ? 'bg-amber-600' : 'bg-stone-700'}`}
                           >
                             <span
                               className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                                ${active ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                                ${active ? 'translate-x-4' : 'translate-x-0.5'}`}
                             />
                           </span>
                         </button>
 
                         {/* Land Access legend — shown when blm is active */}
                         {key === 'blm' && active && (
-                          <div className="mt-2 mx-1 rounded-lg overflow-hidden border border-stone-200 bg-white shadow-sm">
+                          <div className="mt-2 mx-1 rounded-lg overflow-hidden border border-stone-700 bg-stone-800 shadow-sm">
                             {/* Legend header */}
-                            <div className="px-3 py-1.5 bg-stone-50 border-b border-stone-100">
+                            <div className="px-3 py-1.5 border-b border-stone-700">
                               <p className="text-[10px] font-semibold tracking-widest uppercase text-stone-400">Access Key</p>
                             </div>
                             {/* Legend rows */}
-                            <div className="divide-y divide-stone-100">
+                            <div className="divide-y divide-stone-700">
                               {LAND_ACCESS_LEGEND.map(({ color: c, label: l }) => (
                                 <div key={l} className="flex items-center gap-2.5 px-3 py-1.5">
-                                  {/* Color swatch — rounded rect instead of tiny dot */}
                                   <span
                                     className="flex-shrink-0 w-3 h-3 rounded-sm shadow-sm"
-                                    style={{ backgroundColor: c, opacity: 0.85 }}
+                                    style={{ backgroundColor: c }}
                                   />
-                                  <span className="text-xs text-stone-600 leading-tight">{l}</span>
+                                  <span className="text-xs text-stone-300 leading-tight">{l}</span>
                                 </div>
                               ))}
                             </div>
                             {/* Footer hint */}
-                            <div className="px-3 py-1.5 bg-stone-50 border-t border-stone-100">
-                              <p className="text-[10px] text-stone-400 flex items-center gap-1">
+                            <div className="px-3 py-1.5 border-t border-stone-700">
+                              <p className="text-[10px] text-stone-500 flex items-center gap-1">
                                 <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
@@ -249,34 +250,34 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
       {user && (
         <>
           <div className="mt-3 mb-1 flex items-center gap-2 px-1">
-            <div className="h-px flex-1 bg-stone-200" />
-            <span className="text-xs text-stone-400 uppercase tracking-wider">Personal</span>
-            <div className="h-px flex-1 bg-stone-200" />
+            <div className="h-px flex-1 bg-stone-700" />
+            <span className="text-xs text-stone-500 uppercase tracking-wider">Personal</span>
+            <div className="h-px flex-1 bg-stone-700" />
           </div>
 
-          <div className="border border-stone-200 rounded-lg overflow-hidden">
+          <div className="rounded-lg overflow-hidden">
             <ul className="px-2 py-1 space-y-0.5">
               <li>
                 <button
                   onClick={() => toggle('my_hunts')}
                   className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
                     ${layers.my_hunts
-                      ? 'bg-stone-100 text-stone-900'
-                      : 'bg-transparent text-stone-500 hover:bg-stone-50 hover:text-stone-700'
+                      ? 'bg-stone-800 text-stone-100'
+                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                     }`}
                 >
                   <span
-                    className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: layers.my_hunts ? '#10b981' : '#d1d5db' }}
+                    className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
+                    style={{ backgroundColor: '#10b981', opacity: layers.my_hunts ? 1 : 0.7 }}
                   />
                   <span className="text-xs font-medium leading-tight flex-1">My Hunts</span>
                   <span
-                    className={`relative inline-flex h-4 w-7 flex-shrink-0 rounded-full transition-colors duration-200
-                      ${layers.my_hunts ? 'bg-emerald-600' : 'bg-stone-200'}`}
+                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                      ${layers.my_hunts ? 'bg-emerald-600' : 'bg-stone-700'}`}
                   >
                     <span
                       className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                        ${layers.my_hunts ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                        ${layers.my_hunts ? 'translate-x-4' : 'translate-x-0.5'}`}
                     />
                   </span>
                 </button>
@@ -286,22 +287,22 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                   onClick={() => toggle('group_events')}
                   className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
                     ${layers.group_events
-                      ? 'bg-stone-100 text-stone-900'
-                      : 'bg-transparent text-stone-500 hover:bg-stone-50 hover:text-stone-700'
+                      ? 'bg-stone-800 text-stone-100'
+                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                     }`}
                 >
                   <span
-                    className="inline-block w-2.5 h-2.5 rounded-full flex-shrink-0"
-                    style={{ backgroundColor: layers.group_events ? '#8b5cf6' : '#d1d5db' }}
+                    className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
+                    style={{ backgroundColor: '#8b5cf6', opacity: layers.group_events ? 1 : 0.7 }}
                   />
                   <span className="text-xs font-medium leading-tight flex-1">Group Events</span>
                   <span
-                    className={`relative inline-flex h-4 w-7 flex-shrink-0 rounded-full transition-colors duration-200
-                      ${layers.group_events ? 'bg-violet-500' : 'bg-stone-200'}`}
+                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                      ${layers.group_events ? 'bg-violet-500' : 'bg-stone-700'}`}
                   >
                     <span
                       className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                        ${layers.group_events ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                        ${layers.group_events ? 'translate-x-4' : 'translate-x-0.5'}`}
                     />
                   </span>
                 </button>
@@ -311,9 +312,9 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
         </>
       )}
 
-      <p className="mt-3 text-xs text-stone-400 text-center">Click map to score a location</p>
+      <p className="mt-3 text-xs text-stone-500 text-center">Click map to score a location</p>
       {user && (
-        <p className="mt-1 text-xs text-stone-300 text-center">Right-click to log a hunt</p>
+        <p className="mt-1 text-xs text-stone-500 text-center">Right-click to log a hunt</p>
       )}
     </div>
   );
