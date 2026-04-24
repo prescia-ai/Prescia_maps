@@ -8,10 +8,10 @@ interface LayerControlsProps {
 }
 
 const LAND_ACCESS_LEGEND = [
-  { color: '#22c55e', label: 'Public — OK to Detect' },
-  { color: '#eab308', label: 'Private — Permit Required' },
+  { color: '#22c55e', label: 'OK to Detect' },
+  { color: '#eab308', label: 'Permit Required' },
   { color: '#ef4444', label: 'Off Limits' },
-  { color: '#f97316', label: 'Unsure — Verify First' },
+  { color: '#f97316', label: 'Verify First' },
 ];
 
 interface TypeDef {
@@ -206,17 +206,33 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
 
                         {/* Land Access legend — shown when blm is active */}
                         {key === 'blm' && active && (
-                          <div className="mt-1 ml-4 pl-2 border-l border-stone-200 space-y-0.5">
-                            {LAND_ACCESS_LEGEND.map(({ color: c, label: l }) => (
-                              <div key={l} className="flex items-center gap-2">
-                                <span
-                                  className="inline-block w-2 h-2 rounded-full flex-shrink-0"
-                                  style={{ backgroundColor: c }}
-                                />
-                                <span className="text-xs text-stone-500">{l}</span>
-                              </div>
-                            ))}
-                            <p className="text-xs text-stone-400 italic pt-0.5">Zoom in to level 9+ to load</p>
+                          <div className="mt-2 mx-1 rounded-lg overflow-hidden border border-stone-200 bg-white shadow-sm">
+                            {/* Legend header */}
+                            <div className="px-3 py-1.5 bg-stone-50 border-b border-stone-100">
+                              <p className="text-[10px] font-semibold tracking-widest uppercase text-stone-400">Access Key</p>
+                            </div>
+                            {/* Legend rows */}
+                            <div className="divide-y divide-stone-100">
+                              {LAND_ACCESS_LEGEND.map(({ color: c, label: l }) => (
+                                <div key={l} className="flex items-center gap-2.5 px-3 py-1.5">
+                                  {/* Color swatch — rounded rect instead of tiny dot */}
+                                  <span
+                                    className="flex-shrink-0 w-3 h-3 rounded-sm shadow-sm"
+                                    style={{ backgroundColor: c, opacity: 0.85 }}
+                                  />
+                                  <span className="text-xs text-stone-600 leading-tight">{l}</span>
+                                </div>
+                              ))}
+                            </div>
+                            {/* Footer hint */}
+                            <div className="px-3 py-1.5 bg-stone-50 border-t border-stone-100">
+                              <p className="text-[10px] text-stone-400 flex items-center gap-1">
+                                <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                Zoom to level 9+ to load
+                              </p>
+                            </div>
                           </div>
                         )}
                       </li>
