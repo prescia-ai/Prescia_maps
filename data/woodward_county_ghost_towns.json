@@ -1,0 +1,592 @@
+[
+  {
+    "name": "Alston, OK",
+    "type": "town",
+    "latitude": 36.4361,
+    "longitude": -99.29,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.85,
+    "detecting_weight": 58,
+    "description": "Alston was a small farming and ranching community in Woodward County, Oklahoma, located in the rolling plains of the Cherokee Outlet that was opened by the Land Run of 1893. Like dozens of other small settlements that emerged across northwestern Oklahoma in the years following the run, Alston developed as a local supply point serving surrounding homestead farms and cattle operations. The community never grew large enough to sustain commercial growth as the region's agricultural economy shifted and highway development drew trade to Woodward and other county seats. The surrounding farmland retains the character of the original homestead era, and detecting with landowner permission in former northwestern Oklahoma communities like Alston can yield early 1900s coins, brass fittings, and household items left by the first settlers."
+  },
+  {
+    "name": "Belva, OK",
+    "type": "town",
+    "latitude": 36.4989,
+    "longitude": -98.9747,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.87,
+    "detecting_weight": 48,
+    "description": "Belva was a farming community on the eastern edge of Woodward County, Oklahoma, that maintained a post office from August 1900 through March 1960, one of the longer-lived rural post offices in the region. The community served as a local center for the surrounding agricultural area throughout the early twentieth century, with the post office anchoring the community for six decades despite the gradual depopulation of the surrounding farmland. The extended post office tenure suggests Belva had a stable if modest population base through much of the first half of the twentieth century. Today the townsite is farmland, and the relatively long occupancy of the site makes it a worthwhile target for metal detectorists with landowner permission, as decades of rural commerce leave behind a diverse scatter of coins, buttons, and household items."
+  },
+  {
+    "name": "Beryl, OK",
+    "type": "town",
+    "latitude": 36.38,
+    "longitude": -99.16,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.62,
+    "detecting_weight": 55,
+    "description": "Beryl was a short-lived rural settlement in Woodward County, Oklahoma, that emerged in the early years of the twentieth century as homesteaders staked claims on the Cherokee Strip lands opened in 1893. Like many northwestern Oklahoma communities of the era, Beryl likely served as a neighborhood post office and gathering point for surrounding farms before declining as rural populations consolidated in larger towns. The exact location is uncertain from surviving records, but the surrounding Woodward County farmland dates to the homestead era and retains significant archaeological potential. Detecting with landowner permission across former northwestern Oklahoma townsites of this period can produce early Lincoln cents, Indian Head pennies, and the small brass and iron hardware of farmstead life."
+  },
+  {
+    "name": "Bethany, OK",
+    "type": "town",
+    "latitude": 36.44,
+    "longitude": -99.21,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Bethany was a small rural community in Woodward County, Oklahoma, distinct from the current city of Bethany in central Oklahoma. The settlement arose in the years following the 1893 Cherokee Strip Land Run and served briefly as a neighborhood supply point and post office for homestead farmers working the northwestern Oklahoma plains. As with many of the smaller post office communities in Woodward County, Bethany did not survive the consolidation of rural populations during the early twentieth century and was eventually absorbed into the surrounding farmland. Homestead-era northwestern Oklahoma sites like this one can yield a range of early 1900s artifacts when searched with landowner permission."
+  },
+  {
+    "name": "Broph, OK",
+    "type": "town",
+    "latitude": 36.35,
+    "longitude": -99.31,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 53,
+    "description": "Broph was a small post office community in Woodward County, Oklahoma, that served the surrounding farming and ranching settlement during the early territorial period. The town appeared on county records shortly after the 1893 land opening and provided a local mail distribution point for the homesteaders settling the area, but never developed the commercial infrastructure needed to survive as the region's road network improved. The community's name appears in early county records and postal directories, confirming its existence, though physical traces above ground are minimal today. Metal detecting with permission in the area that was Broph can reveal early twentieth-century farm household debris including coins, buttons, and the remnants of pioneer domestic life."
+  },
+  {
+    "name": "Camp Supply, OK",
+    "type": "town",
+    "latitude": 36.5667,
+    "longitude": -99.5667,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.91,
+    "detecting_weight": 65,
+    "description": "Camp Supply was the original military installation and supply depot established by General Philip Sheridan in November 1868 as a forward base for the winter campaign against the Southern Plains tribes, which culminated in Custer's attack on Black Kettle's Cheyenne village at the Washita in the same season. The post served continuously as a military supply and administrative point on the North Canadian River throughout the Plains Indian Wars period, before being redesignated as Fort Supply in June 1889 and the associated post office community acquiring that name. The civilian post office operated under the Camp Supply name from March 1873 until the redesignation, making this one of the most historically significant sites in northwestern Oklahoma. The long military and civilian occupation spanning from 1868 through the territorial period means the surrounding area has exceptional potential for 19th-century military hardware, coins, buttons, and campaign-era artifacts for those with legitimate access to the site."
+  },
+  {
+    "name": "Carroll, OK",
+    "type": "town",
+    "latitude": 36.48,
+    "longitude": -99.09,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 51,
+    "description": "Carroll was a rural community in Woodward County, Oklahoma, that briefly served as a neighborhood post office and supply point following the 1893 Cherokee Strip Land Run. The settlement emerged as neighboring homesteaders sought a local center for mail and commerce but never accumulated the population or commercial base to sustain long-term growth. As the county's railroad network and road system developed, residents of Carroll gravitated to better-connected communities, leaving the original townsite to return to agricultural use. Early twentieth-century Oklahoma homestead communities like Carroll tend to leave a modest but detectable scatter of period coins and domestic artifacts in the soil around the former post office and store sites."
+  },
+  {
+    "name": "Cecil, OK",
+    "type": "town",
+    "latitude": 36.31,
+    "longitude": -99.13,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 51,
+    "description": "Cecil was a small farming community in Woodward County, Oklahoma, established in the years following the 1893 Cherokee Strip opening when homesteaders began organizing local postal and commercial services. The community likely had a post office, a general store, and a small cluster of residences serving the surrounding rural population, but the combination of drought, low grain prices, and improved transportation that undermined many Woodward County communities during the early twentieth century eventually erased Cecil from the landscape. The site is now agricultural land. Detecting the former homesites of small Oklahoma territorial towns like Cecil with landowner permission can produce Indian Head and Lincoln cents, early wheat back coins, and the small manufactured goods of the homestead era."
+  },
+  {
+    "name": "Cedardale, OK",
+    "type": "town",
+    "latitude": 36.3189,
+    "longitude": -98.9961,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.86,
+    "detecting_weight": 55,
+    "description": "Cedardale was a farming community in the southeastern part of Woodward County, Oklahoma, with a post office that operated from April 1903 through September 1951. The community served the dense agricultural settlement of the area during the peak homestead years and the early decades of Oklahoma statehood, with the nearly half-century post office tenure suggesting a stable if modest rural population. The town sits in the transition zone between the more heavily farmed eastern reaches of Woodward County and the more arid western range country, and the area's mixed agricultural history means the former townsite has a layered deposit of period artifacts. Metal detecting with landowner permission around former community centers in this part of Oklahoma can yield coins and household items spanning from the territorial era through the mid-twentieth century."
+  },
+  {
+    "name": "Cooley, OK",
+    "type": "town",
+    "latitude": 36.2176,
+    "longitude": -99.4788,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 57,
+    "description": "Cooley was a rural post office community in Woodward County, Oklahoma, that operated from April 1902 through November 1917, serving homesteaders in the more remote western portion of the county. The community's fifteen-year post office tenure places it among the medium-lived settlements of the northwestern Oklahoma frontier, outlasting many of the shortest-lived communities while still failing to achieve the permanence of larger neighbors. The western Woodward County landscape where Cooley stood is characterized by shortgrass plains and scattered ranch operations, and the former townsite has returned to agricultural use. Detecting the remnants of early twentieth-century Oklahoma communities in the western county with landowner permission typically yields homestead-era coins and the small manufactured goods brought by settlers to the frontier."
+  },
+  {
+    "name": "Curtis, OK",
+    "type": "town",
+    "latitude": 36.4392,
+    "longitude": -99.1422,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.87,
+    "detecting_weight": 60,
+    "description": "Curtis was a farming and ranching community in Woodward County, Oklahoma, with a post office that operated from October 1894 through October 1952, one of the longer tenures among the county's rural post office communities and spanning from the earliest territorial years into the mid-twentieth century. The nearly six-decade post office history indicates Curtis sustained a viable rural community through the Dust Bowl years and World War II, finally succumbing to the rural depopulation that eliminated most small Oklahoma post offices after the war. The long occupation of the site means multiple generations of homesteaders left behind a layered deposit of artifacts spanning from the 1890s territorial era through the 1950s. Detecting with landowner permission at former long-tenure Oklahoma post office communities like Curtis can yield a wide chronological range of coins, buttons, and household items."
+  },
+  {
+    "name": "Deighton, OK",
+    "type": "town",
+    "latitude": 36.2322,
+    "longitude": -98.9924,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 54,
+    "description": "Deighton was a small farming settlement in the southeastern reaches of Woodward County, Oklahoma, with a post office that ran from November 1899 through November 1908. The nine-year tenure suggests Deighton established itself firmly enough during the homestead boom of the late 1890s to justify a post office, but the community could not sustain the commercial and population base needed to endure into the second decade of the twentieth century. The early date of establishment places Deighton among the first generation of post-Land Run communities in this part of the county. Today the townsite area is part of the broader farming landscape of southeastern Woodward County, and period artifacts from the turn-of-the-century settlement layer can be found through diligent searching with landowner permission."
+  },
+  {
+    "name": "Detroit, OK",
+    "type": "town",
+    "latitude": 36.2904,
+    "longitude": -99.374,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "Detroit was a rural post office community in Woodward County, Oklahoma, that operated from February 1901 through February 1907, serving homesteaders in the central portion of the county during the heady years following Oklahoma Territory's settlement. The six-year post office run places Detroit among the briefer of Woodward County's communities, likely closing when the nearest railroad town became accessible enough to make the local post office redundant. The name Detroit \u2014 echoing the Michigan city \u2014 reflects the common practice of transplanted midwesterners giving familiar place names to their new Oklahoma homesites. The former townsite is now farmland, and the brief but concentrated period of habitation means searching the area with landowner permission can produce coins and artifacts from the first decade of the twentieth century."
+  },
+  {
+    "name": "Doe Creek, OK",
+    "type": "town",
+    "latitude": 36.6984,
+    "longitude": -99.0596,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 58,
+    "description": "Doe Creek was a rural farming community in the northern reaches of Woodward County or adjacent Ellis County, Oklahoma, with a post office that operated from October 1916 through July 1918. The short two-year post office tenure suggests Doe Creek was a very small and transient community, possibly established in response to a brief population influx during World War I when high grain prices encouraged more marginal land to be brought into cultivation across northwestern Oklahoma. The creek-side location implies the community had access to reliable water, a significant asset in the semi-arid northwestern Oklahoma landscape. The brief occupation of the site limits the depth of the artifact deposit, but early twentieth-century farm sites in this part of the state can still produce period coins and household hardware when searched with landowner permission."
+  },
+  {
+    "name": "Doris aka Keenan, OK",
+    "type": "town",
+    "latitude": 36.2758,
+    "longitude": -99.5692,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.86,
+    "detecting_weight": 60,
+    "description": "Doris, also known as Keenan, was a rural community in the western reaches of Woodward County, Oklahoma, that operated under the Doris post office name from July 1901 through February 1910, when the post office was renamed Keenan. The community sat in the more arid western county near the Ellis County line, where ranching and dryland farming were the primary economic activities. The dual naming of the community reflects the common pattern of Oklahoma territorial post offices being renamed when new postmasters took charge or when the community sought a different identity. The western Woodward County landscape around the former community has changed little since the homestead era, and while public access is limited, detecting with landowner permission can produce early 1900s Oklahoma territorial and statehood-era artifacts."
+  },
+  {
+    "name": "Driscoll, OK",
+    "type": "town",
+    "latitude": 36.3779,
+    "longitude": -99.0596,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 54,
+    "description": "Driscoll was a small farming community in Woodward County, Oklahoma, with a post office that opened in September 1898 and closed in January 1904. The six-year lifespan straddled the transition from Oklahoma Territory to eventual statehood in 1907, placing Driscoll among the earliest generation of post-Land Run communities that could not survive long enough to become established towns. The late 1890s founding suggests the community developed during the initial surge of homestead settlement following the 1893 run, when optimism about northwestern Oklahoma's agricultural potential was high. Today the site is farmland, and the turn-of-the-century occupation layer may yield Indian Head cents, early Liberty and Barber coinage, and the brass hardware of frontier homesteads when searched with landowner permission."
+  },
+  {
+    "name": "Ellendale, OK",
+    "type": "town",
+    "latitude": 36.6984,
+    "longitude": -99.2524,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 57,
+    "description": "Ellendale was a farming and ranching community in northern Woodward County or adjacent Ellis County, Oklahoma, with a post office that operated from September 1901 through November 1917. The sixteen-year tenure suggests Ellendale achieved a degree of stability during the homestead boom and early statehood period, serving the sparse but determined farming population of the northern county. The northern Woodward/Ellis County border country where Ellendale stood is characterized by rolling plains and river breaks, and the community would have served as a local mail and supply point for a widely scattered population. Detecting with landowner permission around former community sites in this part of Oklahoma can yield period coins and early twentieth-century domestic artifacts from the homestead era."
+  },
+  {
+    "name": "Fish, OK",
+    "type": "town",
+    "latitude": 36.5,
+    "longitude": -99.26,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Fish was a small rural community in Woodward County, Oklahoma, that operated briefly as a neighborhood gathering point and likely post office in the early years following the 1893 Cherokee Strip Land Run. The settlement served local homesteaders seeking a central point for mail and commerce in the otherwise undifferentiated plains landscape, but did not develop the commercial or population base needed for long-term survival. The modest community faded as improved roads made nearby larger towns accessible, leaving no significant physical trace on the landscape. Homestead-era sites in northwestern Oklahoma like Fish can produce early 1900s coins and household items when detected with landowner permission."
+  },
+  {
+    "name": "Fitzgerald, OK",
+    "type": "town",
+    "latitude": 36.57,
+    "longitude": -99.55,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 58,
+    "description": "Fitzgerald was a short-lived post office community in western Woodward County, Oklahoma, near the present-day Fort Supply area, with a post office that operated from February 1902 through May 1903. The community sat near the historic Camp Supply/Fort Supply military reservation, and the proximity to the fort's complex history of occupation from 1868 onwards may have encouraged early settlers to establish a civilian community nearby. The extremely brief post office tenure of barely fifteen months suggests Fitzgerald never achieved viability as an independent community and may have merged with or been supplanted by the nearby Fort Supply townsite. The proximity to the old military reservation and homestead settlement layers means the broader area has significant archaeological potential for 19th and early 20th-century artifacts."
+  },
+  {
+    "name": "Fort Supply, OK",
+    "type": "town",
+    "latitude": 36.5667,
+    "longitude": -99.5667,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.9,
+    "detecting_weight": 63,
+    "description": "Fort Supply was the successor post office to Camp Supply, established in June 1889 when the military installation was officially redesignated as Fort Supply, and continuing under this name until October 1895. The fort and its associated civilian community occupied a strategic position on the North Canadian River in what would become Woodward County, serving as a military garrison and supply hub for the surrounding region during the final decades of the Plains Indian Wars. The site had been continuously occupied since General Sheridan's winter campaign of 1868, making it one of the oldest continuously used sites in northwestern Oklahoma. After the military abandoned the post in 1895, a civilian town of Fort Supply developed nearby and persists today as a small community, though much of the original fort area has been absorbed by the Western State Hospital facility. The long military occupation of the area means extraordinary potential for 19th-century military artifacts, but access to the immediate fort site is restricted."
+  },
+  {
+    "name": "Frets, OK",
+    "type": "town",
+    "latitude": 36.1739,
+    "longitude": -99.4788,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "Frets was a rural post office community in southwestern Woodward County, Oklahoma, in the more remote and arid country near the Dewey County line. The settlement served homesteaders attempting to farm the shortgrass plains country that proved marginal for agriculture during most years, and the community likely had a brief post office tenure before the population drifted away. The location code placing Frets in the southernmost row of sections near the county line indicates it sat at the edge of the more densely settled central Woodward County area. Detecting the sites of former southwestern Woodward County homesteads with landowner permission can produce early twentieth-century Oklahoma territorial and statehood-era coins and household artifacts."
+  },
+  {
+    "name": "Gerlach, OK",
+    "type": "town",
+    "latitude": 36.4358,
+    "longitude": -99.4522,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.87,
+    "detecting_weight": 60,
+    "description": "Gerlach was a farming and ranching community in western Woodward County, Oklahoma, whose townsite has been precisely documented at 36\u00b026'9\"N, 99\u00b027'8\"W. The community sat in the transition zone between the eastern farming country and the more arid ranching lands to the west, serving local homesteaders who attempted to bring the shortgrass plains under cultivation during the homestead boom of the early twentieth century. The area around Gerlach represents one of the more remote parts of Woodward County, where the sparse population density and marginal agricultural conditions limited the growth of any permanent community. Metal detecting with landowner permission around former western Woodward County community sites like Gerlach can yield early 1900s coins and farm hardware from the brief homestead occupation."
+  },
+  {
+    "name": "Grapevine, OK",
+    "type": "town",
+    "latitude": 36.41,
+    "longitude": -99.38,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Grapevine was a small rural community in Woodward County, Oklahoma, that briefly operated as a neighborhood post office in the early 1900s. Post office records indicate the community had an active period roughly 1901 to 1907, serving the sparse farming population of the western county. The name Grapevine, applied to dozens of communities across the Great Plains, likely referred to the wild grape vines common along creek bottoms in the area. The community never developed beyond a very small post office and general store serving immediate neighbors, and the town faded as the post office became unnecessary. The former community site is now agricultural land, and detecting with landowner permission can produce period coins and household items from the homestead occupation."
+  },
+  {
+    "name": "Griffin, OK",
+    "type": "town",
+    "latitude": 36.46,
+    "longitude": -99.16,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Griffin was a small homestead-era community in Woodward County, Oklahoma, that emerged in the years following the 1893 Cherokee Strip Land Run. The settlement served as a neighborhood gathering point and likely post office for the surrounding agricultural community, but could not sustain the commercial development needed to survive long-term as Oklahoma's rural population began to concentrate in towns with railroad access and better transportation connections. The community's quiet disappearance into the agricultural landscape is typical of the dozens of small post office communities that briefly flourished in Woodward County during the territorial and early statehood period. Early settlers' sites in this part of Oklahoma can yield Indian Head and early Lincoln cents along with farm hardware when detected with landowner permission."
+  },
+  {
+    "name": "Hackberry aka Sharon, OK",
+    "type": "town",
+    "latitude": 36.2686,
+    "longitude": -99.3152,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 56,
+    "description": "Hackberry, also known as Sharon, was a farming community in Woodward County, Oklahoma, with a post office that operated from June 1895 through February 1912. The community operated under the Hackberry name initially, likely named for the native hackberry trees common along the creeks of central and western Oklahoma, before being renamed Sharon at some point during its existence. The seventeen-year post office tenure suggests the community was reasonably well-established during the homestead and early statehood period, serving the surrounding farming population of central Woodward County. The dual name, spanning nearly two decades of rural community life, reflects the active engagement of the area's homestead population with their new communities. Detecting with landowner permission around the former Hackberry/Sharon townsite can yield a range of late 19th and early 20th-century artifacts."
+  },
+  {
+    "name": "Hallren, OK",
+    "type": "town",
+    "latitude": 36.2322,
+    "longitude": -99.3404,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 54,
+    "description": "Hallren was a small farming community in southwestern Woodward County, Oklahoma, with a post office that operated from December 1904 through January 1901 \u2014 suggesting either a very brief tenure or a clerical anomaly in the historical records. The community sat in the southwestern portion of the county in a section of rolling plains country where homesteaders attempted to establish grain and livestock operations in the early years of Oklahoma Territory. The sparse population of this remote part of the county made sustaining a community center difficult, and Hallren faded from the landscape within a few years of establishment. Detecting with landowner permission around former southwestern Woodward County homestead sites can produce period territorial and statehood-era artifacts."
+  },
+  {
+    "name": "Haskew, OK",
+    "type": "town",
+    "latitude": 36.6838,
+    "longitude": -99.202,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 57,
+    "description": "Haskew was a farming and ranching community in northern Woodward County or adjacent Ellis County, Oklahoma, with a post office that operated from July 1902 through October 1921. The nearly twenty-year post office tenure indicates Haskew was among the more substantial small communities in the northern county, serving the farming and cattle ranching population of the upper county through the homestead boom and into the early consolidation period of the 1920s. The northern Woodward/Ellis County border area where Haskew stood is characterized by broad plains and scattered ranching operations, and the community would have served as an important local mail and supply point for widely dispersed residents. Detecting with landowner permission around this type of long-tenure Oklahoma rural community can yield coins and artifacts from two decades of active occupation."
+  },
+  {
+    "name": "Higley, OK",
+    "type": "town",
+    "latitude": 36.1739,
+    "longitude": -99.4116,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "Higley was a rural post office community in southwestern Woodward County, Oklahoma, with a post office that operated from April 1901 through July 1913. The twelve-year tenure suggests Higley established a modest local presence during the homestead era and survived into early statehood before fading. The community sat in the remote southwestern corner of the county where the more arid conditions limited agricultural productivity and population density. Named possibly after one of the early settlers of the area, Higley served the sparse homestead population of the southwestern county as a mail distribution point before the combination of drought and depopulation made the post office no longer viable. The former site is now agricultural or rangeland, and detecting with landowner permission can produce early 1900s territorial and statehood-era artifacts."
+  },
+  {
+    "name": "Howard, OK",
+    "type": "town",
+    "latitude": 36.7712,
+    "longitude": -99.202,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 56,
+    "description": "Howard was a rural post office community in northern Woodward County or Ellis County, Oklahoma, with a post office that operated from May 1907 through August 1909. The brief two-year tenure suggests Howard was an optimistic but ultimately unsuccessful attempt to establish a community in the northern county's ranching country during the final years before Oklahoma statehood in 1907. The timing of the post office \u2014 coinciding almost exactly with statehood \u2014 reflects the burst of community-building activity that accompanied the transition from territory to state. Howard disappeared quickly, but the homestead-era artifacts of Oklahoma's statehood generation can still be found in the soil of former community sites with landowner permission."
+  },
+  {
+    "name": "Keenan aka Doris, OK",
+    "type": "town",
+    "latitude": 36.2758,
+    "longitude": -99.5692,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.88,
+    "detecting_weight": 62,
+    "description": "Keenan, also known as Doris, was a rural community in the western part of Woodward County, Oklahoma, that operated under the Keenan post office name from February 1910 through July 1935. The community is the successor identity to the earlier Doris post office (1901-1910) at the same location, suggesting a continuous settlement that maintained postal service under two names for over three decades. The twenty-five-year post office tenure under the Keenan name, spanning the Dust Bowl period of the 1930s, indicates the community had unusual staying power for a remote western county settlement. The coordinates at 36\u00b016'33\"N, 99\u00b034'9\"W place Keenan in the arid western Woodward County near the Ellis County line. The long occupation spanning multiple naming periods means the site has a layered deposit of artifacts from the early 1900s through the 1930s, making it a worthwhile target for metal detectorists with landowner permission."
+  },
+  {
+    "name": "Lathrop, OK",
+    "type": "town",
+    "latitude": 36.5818,
+    "longitude": -99.29,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 56,
+    "description": "Lathrop was a farming community in north-central Woodward County, Oklahoma, that served as a neighborhood post office and gathering point for homesteaders in the more productive farming country of the central county. The community sat at the northern end of the county's main agricultural belt where wheat farming and mixed livestock operations could be sustained, and the Lathrop post office provided a local mail distribution point for the surrounding rural population. Like many of its contemporaries in northwestern Oklahoma, Lathrop faded as the highway network developed and residents found it easier to do business in Woodward and other county towns. The former community site is now farmland, and detecting with landowner permission can produce period coins and household artifacts from the homestead era."
+  },
+  {
+    "name": "Leafie, OK",
+    "type": "town",
+    "latitude": 36.7712,
+    "longitude": -99.2692,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 57,
+    "description": "Leafie was a farming and ranching community in northern Woodward County or Ellis County, Oklahoma, in the remote shortgrass plains country near the Kansas border. The unusual name Leafie \u2014 one of the more distinctive among the dozens of Oklahoma ghost town names \u2014 was likely taken from a family name among the early settlers of the area. The community served as a local gathering and mail distribution point for the sparse homestead population of the northern county, but could not sustain itself as the marginal agricultural conditions of the northern county plains drove settlers away during the dry years of the early twentieth century. Detecting with landowner permission in the remote northern Oklahoma panhandle-adjacent country where Leafie stood can produce early homestead-era artifacts from the brief settlement period."
+  },
+  {
+    "name": "Libson, OK",
+    "type": "town",
+    "latitude": 36.34,
+    "longitude": -99.42,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Libson was a small rural community in Woodward County, Oklahoma, that operated briefly as a post office and neighborhood gathering point in the early years following the 1893 Cherokee Strip Land Run. The community sat in the western portion of the county where homesteaders attempted to establish farms on the more challenging dryland terrain, and the settlement could not overcome the economic and environmental difficulties that eliminated dozens of similar communities across northwestern Oklahoma during the territorial period. Today the site of Libson has been absorbed into the surrounding agricultural landscape with little surface evidence of the former community. Detecting with landowner permission in this part of Woodward County can produce early twentieth-century coins and frontier homestead artifacts."
+  },
+  {
+    "name": "McNeal, OK",
+    "type": "town",
+    "latitude": 36.2176,
+    "longitude": -99.114,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "McNeal was a rural post office community in Woodward County, Oklahoma, that operated from April 1899 through January 1904 \u2014 with the peculiar terminal date sometimes recorded as '9104' in historical records suggesting a transcription error in the source documents. The community served the farming population of the southeastern county during the height of the homestead era, providing a local mail and commerce point in an area that was being rapidly settled following the 1893 land run. The five-year post office tenure places McNeal among the medium-short-lived communities of the county that established themselves during the initial optimistic period but could not sustain viability as the rural population stabilized. Detecting with landowner permission around former southeastern Woodward County homestead sites can yield early 1900s coins and territorial-era household items."
+  },
+  {
+    "name": "Moscow, OK",
+    "type": "town",
+    "latitude": 36.3341,
+    "longitude": -99.2188,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 56,
+    "description": "Moscow was a farming community in Woodward County, Oklahoma, with a post office that operated from May 1894 through November 1906. The twelve-year tenure spanning from almost the very beginning of the post-Land Run settlement through the early statehood era makes Moscow one of the earlier-established communities in the county. The name Moscow \u2014 exotic and somewhat incongruous on the Oklahoma plains \u2014 reflects the common Great Plains practice of naming new communities after famous cities in a spirit of civic optimism. Established in 1894, just a year after the 1893 land run, Moscow represents some of the earliest post-settlement community organization in Woodward County. The twelve years of active occupation leave a meaningful artifact deposit, and detecting with landowner permission can reveal Indian Head cents, early Barber coinage, and the hardware of the first generation of Oklahoma homesteaders."
+  },
+  {
+    "name": "O'Neil, OK",
+    "type": "town",
+    "latitude": 36.3706,
+    "longitude": -99.0176,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.7,
+    "detecting_weight": 54,
+    "description": "O'Neil was a small rural community in Woodward County, Oklahoma, with a post office that operated from January 1901 through July 1904. The brief three-year tenure suggests the community was established during the optimistic expansion of Woodward County's rural population in the early years of the twentieth century but could not sustain a viable local economy. The Irish surname reflects the presence of Irish-American homesteaders among the settlers of northwestern Oklahoma, who gave their family names to dozens of small post office communities across the territory. The southeastern Woodward County area where O'Neil stood has returned to agricultural use, and detecting with landowner permission around former community sites in this part of the county can produce early 1900s Oklahoma territorial coins and household artifacts."
+  },
+  {
+    "name": "Opal, OK",
+    "type": "town",
+    "latitude": 36.53,
+    "longitude": -99.19,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Opal was a small post office community in Woodward County, Oklahoma, with a post office that operated from October 1900 through January 1904, serving the farming and ranching population of the central county during the homestead boom. The gem-stone name was popular for small communities during the Victorian and Edwardian era, and several 'Opal' post offices existed across the Great Plains simultaneously. The three-year tenure suggests Opal was among the more transient of Woodward County's post offices, unable to establish the local commercial base needed for long-term viability. Today the site has returned to agricultural use, and detecting with landowner permission can produce turn-of-the-century Oklahoma territorial coins and early homestead artifacts."
+  },
+  {
+    "name": "Osiris, OK",
+    "type": "town",
+    "latitude": 36.458,
+    "longitude": -99.2272,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.7,
+    "detecting_weight": 55,
+    "description": "Osiris was a rural community in Woodward County, Oklahoma, with a post office that operated from July 1900 through January 1909. The Egyptian mythological name \u2014 highly distinctive among the hundreds of Oklahoma ghost town names \u2014 reflects the eclectic naming practices of homesteaders who drew on classical history, mythology, and literary sources when choosing names for their new communities. The nine-year tenure of the Osiris post office places it among the medium-lived communities of Woodward County, suggesting it established a modest but viable local presence during the homestead boom years. The community straddled the Township 23N-24N boundary in Range 19W, placing it in the more productive farming country of central Woodward County. Detecting with landowner permission around the former Osiris townsite can produce a range of early 1900s Oklahoma territorial and statehood-era artifacts."
+  },
+  {
+    "name": "Peace, OK",
+    "type": "town",
+    "latitude": 36.5381,
+    "longitude": -99.0428,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 56,
+    "description": "Peace was a rural post office community in northern Woodward County, Oklahoma, with a post office that operated from December 1903 through February 1908. The aspirationally named community served the farming population of the northern county during the height of the homestead settlement period, providing a local mail distribution point for the surrounding rural area. The four-year tenure reflects the general pattern of optimistic establishment followed by rapid depopulation that characterized many Woodward County communities during this period. The northern Woodward County location places Peace in country that was increasingly devoted to dryland wheat farming in the early twentieth century. Detecting with landowner permission around former northern county homestead sites can produce period coins and early Oklahoma statehood-era artifacts."
+  },
+  {
+    "name": "Pearce, OK",
+    "type": "town",
+    "latitude": 36.27,
+    "longitude": -99.283,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.65,
+    "detecting_weight": 54,
+    "description": "Pearce was a farming community in Woodward County, Oklahoma, with a post office that operated from December 1897 through September 1911. The nearly fourteen-year post office tenure indicates Pearce was among the more established small communities in the county, having been founded just four years after the 1893 land run and surviving through early Oklahoma statehood. The community served the farming population of southwestern Woodward County during both the optimistic homestead boom and the initial period of agricultural consolidation. The fourteen years of active community life means the former townsite has a meaningful deposit of late 19th and early 20th-century artifacts, including the possibility of Indian Head cents and early Barber coinage alongside the hardware and household items of the homestead era. Detecting with landowner permission is the appropriate approach to exploring this and similar Woodward County sites."
+  },
+  {
+    "name": "Pearl, OK",
+    "type": "town",
+    "latitude": 36.2904,
+    "longitude": -99.065,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 55,
+    "description": "Pearl was a small farming community in Woodward County, Oklahoma, with a post office that operated from December 1897 through September 1911. The fourteen-year post office tenure running from the late 1890s through early Oklahoma statehood suggests Pearl was a modest but persistent rural community that served its surrounding agricultural neighborhood through both the optimistic homestead period and the first years of statehood. The late 1890s founding places Pearl among the second generation of post-Land Run communities that established themselves once the initial settlement rush had passed and the county's agricultural character was becoming clearer. Today the site is agricultural land, and detecting with landowner permission around former Pearl-era homesteads can produce late 19th and early 20th-century Oklahoma artifacts."
+  },
+  {
+    "name": "Perdue, OK",
+    "type": "town",
+    "latitude": 36.611,
+    "longitude": -99.2356,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 57,
+    "description": "Perdue was a farming community in northern Woodward County, Oklahoma, with a post office that operated from April 1901 through July 1909. The eight-year tenure spanning from the early territorial period through the year of Oklahoma statehood suggests Perdue established itself during the homestead boom but could not sustain viability into the statehood era when rural population began to consolidate around better-connected towns. The northern county location places Perdue in country that was being converted from open range to dryland wheat farming during this period, as homesteaders replaced the cattle drives with grain operations. Detecting with landowner permission around former northern Woodward County homestead sites like Perdue can yield period coins and farming-era artifacts from the early twentieth century."
+  },
+  {
+    "name": "Persimmon, OK",
+    "type": "town",
+    "latitude": 36.2176,
+    "longitude": -99.2356,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "Persimmon was a rural post office community in Woodward County, Oklahoma, with a post office that operated from April 1894 through March 1907. The thirteen-year tenure beginning just one year after the 1893 land run makes Persimmon one of the earliest communities established in Woodward County, having formed while the homestead dust was still settling. Named for the native persimmon trees found along the creek bottoms of the Oklahoma plains, the community served the early settlers of the southwestern county as a mail and neighborhood meeting point. The thirteen years of occupation spanning the territorial and early statehood period leave a meaningful artifact deposit including some of the earliest coins circulating in post-Land Run Oklahoma. Detecting with landowner permission at former Persimmon-era homesteads can produce Indian Head cents and early Barber coinage alongside territorial-era hardware."
+  },
+  {
+    "name": "Pluma, OK",
+    "type": "town",
+    "latitude": 36.43,
+    "longitude": -99.47,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Pluma was a small post office community in Woodward County, Oklahoma, with a post office that operated from February 1902 through January 1906. The four-year tenure places Pluma among the shorter-lived communities of the county, established during the continued expansion of homestead settlement in the early 1900s but unable to achieve the commercial viability needed for long-term survival. The Spanish-derived name suggests the community's founders drew on the southwestern naming traditions common across Oklahoma, or named the community after a settler with a Spanish-origin surname. Today the site is agricultural land with no surface evidence of the former community. Detecting with landowner permission around former Woodward County homestead sites of this era can produce early 1900s Oklahoma territorial coins and frontier household artifacts."
+  },
+  {
+    "name": "Pringey, OK",
+    "type": "town",
+    "latitude": 36.6401,
+    "longitude": -99.114,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 57,
+    "description": "Pringey was a farming community in northern Woodward County, Oklahoma, with a post office that operated from May 1901 through May 1914. The thirteen-year tenure spanning the late territorial and early statehood period indicates Pringey established a meaningful local presence in the northern county's farming community. The community sat in the more productive grain farming country of north-central Woodward County where adequate precipitation and good soils allowed for wheat cultivation. The thirteen years of active post office operation represent a significant period of continuous community life, leaving behind a deposit of early Oklahoma coins and household items from the homestead and statehood era. Detecting with landowner permission at the former Pringey townsite can yield a range of artifacts from the first decade-and-a-half of Oklahoma statehood and the late territorial period."
+  },
+  {
+    "name": "Quinlan, OK",
+    "type": "town",
+    "latitude": 36.45,
+    "longitude": -99.05,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.9,
+    "detecting_weight": 55,
+    "description": "Quinlan was a farming community in eastern Woodward County, Oklahoma, with a remarkably long post office tenure running from April 1901 through January 1968, making it one of the longest-surviving rural post offices in northwestern Oklahoma. The sixty-seven year post office run spans from the early territorial period through the mid-twentieth century rural consolidation that eliminated most remaining small post offices in Oklahoma, suggesting Quinlan maintained a viable local agricultural community through the Dust Bowl, World War II, and the postwar rural exodus. The coordinates at 36\u00b027'0\"N, 99\u00b03'0\"W place Quinlan in the more productive farming country of eastern Woodward County. The extraordinary span of occupation \u2014 from 1901 to 1968 \u2014 means the former Quinlan area has an unusually deep and diverse artifact deposit spanning seven decades of rural community life. Metal detecting with landowner permission in this area can yield coins from Indian Head pennies through modern issues alongside agricultural hardware of multiple eras."
+  },
+  {
+    "name": "Rawdon, OK",
+    "type": "town",
+    "latitude": 36.2831,
+    "longitude": -99.332,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.7,
+    "detecting_weight": 54,
+    "description": "Rawdon was a small post office community in Woodward County, Oklahoma, with a post office that operated from May 1901 through July 1905. The four-year tenure places Rawdon among the short-lived communities that blossomed briefly across northwestern Oklahoma during the continuing homestead expansion of the early 1900s. The community served the farming and ranching population of the central county as a local mail point, but the combination of limited population density and improved transportation made the post office obsolete within just a few years. The former Rawdon site is now agricultural land typical of the Woodward County interior, and detecting with landowner permission can produce early Oklahoma territorial coins and homestead-era household artifacts from the brief occupation period."
+  },
+  {
+    "name": "Red Horse, OK",
+    "type": "town",
+    "latitude": 36.56,
+    "longitude": -99.11,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 53,
+    "description": "Red Horse was a small community in northern Woodward County, Oklahoma, with a distinctive name that may derive from local Native American heritage or from the color of the local terrain. The community operated briefly as a post office or neighborhood gathering point during the early years of the twentieth century, serving the farming and ranching population of the northern county. The name Red Horse stands out among the more conventionally named communities of Woodward County and may indicate the community was located near land that was formerly used by or associated with the Plains tribes who occupied the Cherokee Outlet before the 1893 land run. The site today is agricultural or rangeland, and detecting with landowner permission can produce homestead-era artifacts from the community's brief occupation."
+  },
+  {
+    "name": "Richmond, OK",
+    "type": "town",
+    "latitude": 36.1908,
+    "longitude": -99.0519,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.88,
+    "detecting_weight": 57,
+    "description": "Richmond was a farming community in the southeastern portion of Woodward County, Oklahoma, with a post office that operated from November 1893 through February 1923, one of the longer-lived rural post offices in the county. The thirty-year tenure beginning just months after the 1893 land run and continuing through the early 1920s indicates Richmond was among the more substantial and persistent small communities established in Woodward County's agricultural belt. The coordinates at 36\u00b011'27\"N, 99\u00b03'7\"W place Richmond at the southeastern extreme of the county, in country that transitioned from open range to intensive dryland farming during the community's active years. The three decades of community life from the frontier period through the post-World War I farm bust leave a meaningful deposit of late 19th and early 20th-century artifacts. Detecting with landowner permission at the Richmond site can yield Indian Head cents, early Barber and Morgan coinage, and the hardware of three decades of homestead and farm life."
+  },
+  {
+    "name": "Stalter, OK",
+    "type": "town",
+    "latitude": 36.37,
+    "longitude": -99.23,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Stalter was a small rural community in Woodward County, Oklahoma, that served briefly as a neighborhood gathering point and post office during the homestead settlement of the late 1890s or early 1900s. The community was likely named after one of the original settler families of the area, reflecting the common practice of naming Oklahoma territorial communities after prominent local residents. Like dozens of similar communities across northwestern Oklahoma, Stalter could not sustain the population and commercial activity needed to persist beyond the first generation of settlement. The site has returned to agricultural use with no significant above-ground evidence of the former community, but detecting with landowner permission can recover period coins and frontier household artifacts from the occupation layer."
+  },
+  {
+    "name": "Supply, OK",
+    "type": "town",
+    "latitude": 36.5673,
+    "longitude": -99.55,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.85,
+    "detecting_weight": 60,
+    "description": "Supply was a civilian community associated with the Fort Supply military reservation in western Woodward County, Oklahoma, with a post office that operated from May 1903 through March 1943. The community grew up adjacent to the old military fort complex and took its name from the supply depot mission that had defined the site since General Sheridan established Camp Supply in 1868. The forty-year post office tenure spanning from the early statehood period through World War II reflects the community's unusual persistence, sustained in part by the continued use of the fort buildings for the Western State Hospital after the military abandoned the post. The proximity to the historic fort complex \u2014 which saw occupation from 1868 through the late 1890s \u2014 combined with the civilian community's own forty-year lifespan means the Supply townsite area has layers of 19th and early 20th-century artifacts for those with legitimate access."
+  },
+  {
+    "name": "Tangier, OK",
+    "type": "town",
+    "latitude": 36.4208,
+    "longitude": -99.5331,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.88,
+    "detecting_weight": 60,
+    "description": "Tangier was a farming community in western Woodward County, Oklahoma, with a post office that operated from May 1901 through August 1941. The forty-year post office tenure, spanning from the early territorial period through the beginning of World War II, makes Tangier one of the most persistent small communities in Woodward County. The exotic North African city name reflects the literary and geographical ambitions common among early Oklahoma settlers who drew on world place names for their new communities. The coordinates at 36\u00b025'15\"N, 99\u00b031'59\"W place Tangier in the arid western portion of the county where ranching and dryland farming competed for the marginal landscape. The four decades of continuous community life at Tangier mean a substantial artifact deposit spanning Oklahoma territorial, statehood, and early modern periods. Detecting with landowner permission at the former Tangier site can yield a diverse chronological range of coins and household artifacts."
+  },
+  {
+    "name": "Tibbets, OK",
+    "type": "town",
+    "latitude": 36.49,
+    "longitude": -99.36,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Tibbets was a small rural community in Woodward County, Oklahoma, that operated briefly as a post office and neighborhood gathering point during the early years of the twentieth century. Named likely after a settler family, Tibbets served the farming and ranching population of the western county as a local mail distribution point before the combination of rural depopulation and improved transportation made the small post office unnecessary. The community never developed beyond the most basic commercial infrastructure and left little physical trace on the landscape after its closure. Metal detecting with landowner permission in the former Tibbets area can produce early Oklahoma territorial and statehood-era coins and homestead artifacts from the brief period of community activity."
+  },
+  {
+    "name": "Verdi, OK",
+    "type": "town",
+    "latitude": 36.1957,
+    "longitude": -99.5416,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.72,
+    "detecting_weight": 55,
+    "description": "Verdi was a small post office community in Woodward County, Oklahoma, with a post office that operated from December 1902 through March 1904, one of the briefer post offices in the county's extensive list of ghost towns. The sixteen-month tenure suggests Verdi was established during the continued expansion of homestead settlement in the early 1900s but quickly proved unable to sustain a viable community in the arid southwestern portion of the county where the more challenging dryland conditions made farming difficult. The Italian composer's name \u2014 Giuseppe Verdi having died just the previous year in 1901 \u2014 suggests the community's founders had some appreciation for European culture and current events, or possibly honored a settler with Italian heritage. Today the site is agricultural or rangeland with little trace of the former community."
+  },
+  {
+    "name": "Virbel, OK",
+    "type": "town",
+    "latitude": 36.3,
+    "longitude": -99.19,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Virbel was a small rural community in Woodward County, Oklahoma, that appeared briefly in the county's roster of post office communities during the early homestead period. The distinctive and unusual name suggests it was either a family name of one of the early settlers or a creative invention of the founding community, as Virbel does not correspond to any obvious geographic, biographical, or literary reference commonly used for Oklahoma place names. The community served as a neighborhood post office and gathering point for the local homestead population before fading from the landscape as the rural population consolidated. Detecting with landowner permission in the area where Virbel once stood can produce early Oklahoma territorial coins and frontier homestead artifacts from the brief occupation period."
+  },
+  {
+    "name": "Vonton, OK",
+    "type": "town",
+    "latitude": 36.3706,
+    "longitude": -99.332,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.7,
+    "detecting_weight": 54,
+    "description": "Vonton was a small post office community in Woodward County, Oklahoma, with a post office that operated from December 1902 through July 1906. The three-and-a-half-year tenure places Vonton among the shorter-lived communities of the county, established during the continuing homestead expansion of the early twentieth century but unable to sustain viability in the central county's more competitive commercial environment. The unusual name \u2014 neither a common place name nor an obviously recognizable surname \u2014 may be a variant spelling of a settler's name or a creative localism coined by the founding postmaster. The central Woodward County location of Vonton suggests it was established in an area where competing nearby communities made it difficult to build a loyal customer base. Detecting with landowner permission can produce early 1900s Oklahoma coins and homestead artifacts from the site."
+  },
+  {
+    "name": "Weston, OK",
+    "type": "town",
+    "latitude": 36.2176,
+    "longitude": -99.0804,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.73,
+    "detecting_weight": 55,
+    "description": "Weston was a small farming community in Woodward County, Oklahoma, with a post office that operated from May 1899 through April 1907. The eight-year tenure spanning the late 1890s through early Oklahoma statehood places Weston among the communities that established themselves during the homestead boom and survived through the territorial period before being absorbed or eliminated during the transition to statehood. The southeastern Woodward County location puts Weston in the county's more productive farming belt where dryland wheat cultivation was viable, and the community likely served a reasonably dense local agricultural population. The eight years of active community life leave a meaningful deposit of late 19th and early 20th-century artifacts, including the possibility of Indian Head cents and early Barber silver coinage for detectorists with landowner permission."
+  },
+  {
+    "name": "Woodbine, OK",
+    "type": "town",
+    "latitude": 36.56,
+    "longitude": -99.24,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 52,
+    "description": "Woodbine was a small rural community in northern Woodward County, Oklahoma, that served briefly as a post office and neighborhood gathering point during the early homestead period following the 1893 Cherokee Strip Land Run. Named for the common woodbine vine (Virginia creeper) that grew along creek bottoms and fence rows across the Oklahoma plains, the community reflected the nature-based naming tradition common among early Oklahoma settlers. The community never achieved the size needed to sustain commercial development and faded into the agricultural landscape within a few years of establishment. Detecting with landowner permission around former northern Woodward County homestead sites like Woodbine can produce early Oklahoma territorial coins and the small manufactured goods of the homestead era."
+  },
+  {
+    "name": "Zella, OK",
+    "type": "town",
+    "latitude": 36.27,
+    "longitude": -99.1,
+    "source": "woodward_county_ghost_towns",
+    "confidence": 0.61,
+    "detecting_weight": 53,
+    "description": "Zella was a small post office community in Woodward County, Oklahoma, that operated briefly during the early homestead period following the 1893 Cherokee Strip Land Run. The given name Zella \u2014 a feminine personal name common in the late Victorian era \u2014 suggests the community was named after the wife or daughter of one of the founding settlers, a common naming practice for small Oklahoma post offices where the founding postmaster often named the community after a family member. Like the majority of Woodward County's small post office communities, Zella could not sustain a viable local commercial presence as the county's population consolidated in larger towns with better transportation connections. The site has returned to agricultural use with little surface evidence of the former community, but early Oklahoma territorial artifacts can be found with landowner permission."
+  }
+]
