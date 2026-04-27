@@ -1,0 +1,116 @@
+{
+  "state": "Oklahoma",
+  "description": "10 pre-1940 public land historical sites suitable for metal detecting",
+  "locations": [
+    {
+      "name": "Battle of Honey Springs Site",
+      "type": "battle",
+      "latitude": 35.605,
+      "longitude": -95.624,
+      "year": 1863,
+      "description": "Largest Civil War battle in Indian Territory fought on July 17, 1863. Union forces under General Blunt defeated Confederate troops, securing control of Indian Territory. Now a state historic site with public access.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.95,
+      "notes": "Honey Springs Battlefield Historic Site - Oklahoma state historic site, public access, metal detecting allowed with permit"
+    },
+    {
+      "name": "Fort Gibson Historic Site",
+      "type": "structure",
+      "latitude": 35.7984,
+      "longitude": -95.2471,
+      "year": 1824,
+      "description": "Established in 1824 as the westernmost U.S. military post, Fort Gibson was a key outpost during Cherokee removal and the Civil War. Served as terminus of the Trail of Tears for the Five Civilized Tribes.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.95,
+      "notes": "Fort Gibson Historic Site - Oklahoma state historic site, open to public, museum and grounds accessible"
+    },
+    {
+      "name": "Fort Washita Historic Site",
+      "type": "structure",
+      "latitude": 34.0617,
+      "longitude": -96.6417,
+      "year": 1842,
+      "description": "Built in 1842 by General Zachary Taylor to protect Chickasaw and Choctaw lands from Plains Indian raids. Later used as a Confederate post during the Civil War. Ruins and grounds open to the public.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.95,
+      "notes": "Fort Washita Historic Site - Oklahoma state historic site, public access, extensive grounds"
+    },
+    {
+      "name": "Washita Battlefield National Historic Site",
+      "type": "battle",
+      "latitude": 35.6175,
+      "longitude": -99.7022,
+      "year": 1868,
+      "description": "Site of the November 27, 1868 Battle of the Washita where Lt. Colonel George Custer led the 7th Cavalry in an attack on a Southern Cheyenne village led by Chief Black Kettle. Now a National Historic Site managed by the National Park Service.",
+      "source": "National Park Service",
+      "confidence": 0.95,
+      "notes": "Washita Battlefield NHS - NPS managed, public access, visitor center on site"
+    },
+    {
+      "name": "Fort Supply Historic Site",
+      "type": "structure",
+      "latitude": 36.5667,
+      "longitude": -99.5806,
+      "year": 1868,
+      "description": "Established in November 1868 as Camp Supply to support General Sheridan's winter campaign against Southern Plains tribes. Served as a major military supply depot. The original stockade and several historic buildings survive.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.95,
+      "notes": "Fort Supply Historic Site - Oklahoma state historic site, open to public"
+    },
+    {
+      "name": "Doaksville Ghost Town Site",
+      "type": "town",
+      "latitude": 34.0503,
+      "longitude": -95.5572,
+      "year": 1824,
+      "description": "Founded in 1824 as a trading post, Doaksville became the capital of the Choctaw Nation and one of the largest towns in Indian Territory before the Civil War. Confederate General Stand Watie surrendered here in June 1865.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.90,
+      "notes": "On public land near Fort Towson Historic Site - accessible via state historic site grounds"
+    },
+    {
+      "name": "Fort Towson Historic Site",
+      "type": "structure",
+      "latitude": 34.0253,
+      "longitude": -95.2625,
+      "year": 1824,
+      "description": "Established in 1824 to maintain peace between Choctaw settlers and Texans along the Red River. Site of the last Confederate surrender of the Civil War in June 1865. Ruins and grounds are publicly accessible.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.95,
+      "notes": "Fort Towson Historic Site - Oklahoma state historic site, public access"
+    },
+    {
+      "name": "Boggy Depot State Park",
+      "type": "town",
+      "latitude": 34.5119,
+      "longitude": -96.2058,
+      "year": 1837,
+      "description": "Established around 1837 as a Choctaw settlement and waystation on the Butterfield Overland Mail route. Served as a major supply depot during the Civil War. Cemetery and remnants of the historic town are preserved in the state park.",
+      "source": "Oklahoma State Parks",
+      "confidence": 0.90,
+      "notes": "Boggy Depot State Park - Oklahoma state park, public access, historic cemetery on site"
+    },
+    {
+      "name": "Council Oak Tree - Creek Nation Site",
+      "type": "locale",
+      "latitude": 36.1539,
+      "longitude": -96.0036,
+      "year": 1836,
+      "description": "Historic site where Creek Nation leaders met under a large oak tree after the Trail of Tears to rekindle the sacred fire and re-establish their nation in Indian Territory circa 1836. The council oak and surrounding land are publicly accessible in Tulsa.",
+      "source": "City of Tulsa / Creek Nation",
+      "confidence": 0.88,
+      "notes": "Council Oak Park - City of Tulsa public park, Creek Nation historic site, open access"
+    },
+    {
+      "name": "Camp Napoleon Confederate Site",
+      "type": "camp",
+      "latitude": 34.9833,
+      "longitude": -98.4167,
+      "year": 1865,
+      "description": "Location of the Camp Napoleon Compact of 1865, signed May 26, 1865, between Confederate-allied tribal nations at the end of the Civil War. One of the last Confederate meetings in Indian Territory. Located on public land in Caddo County.",
+      "source": "Oklahoma Historical Society",
+      "confidence": 0.85,
+      "notes": "Camp Napoleon historic marker site - public roadside access, Caddo County"
+    }
+  ]
+}
