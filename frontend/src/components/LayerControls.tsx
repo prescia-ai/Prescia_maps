@@ -8,10 +8,7 @@ interface LayerControlsProps {
 }
 
 const LAND_ACCESS_LEGEND = [
-  { color: '#22c55e', label: 'OK to Detect' },
-  { color: '#eab308', label: 'Permit Required' },
-  { color: '#ef4444', label: 'Off Limits' },
-  { color: '#f97316', label: 'Verify First' },
+  { color: '#22c55e', label: 'Public — OK to Detect' },
 ];
 
 interface TypeDef {
@@ -78,7 +75,7 @@ const SECTIONS: SectionDef[] = [
     title: 'Overlays',
     items: [
       { key: 'heatmap',      label: 'Activity Heatmap',   color: '#f97316' },
-      { key: 'blm',          label: 'Land Access',         color: '#22c55e' },
+      { key: 'blm',          label: 'Public Land (BLM/USFS)',  color: '#22c55e' },
       { key: 'aerials_1955', label: '1955 Historical Aerials', color: '#78716c' },
     ],
   },
@@ -231,7 +228,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                                 <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                 </svg>
-                                Zoom to level 9+ to load
+                                Only public BLM/USFS land shown
                               </p>
                             </div>
                           </div>

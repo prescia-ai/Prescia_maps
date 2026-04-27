@@ -47,7 +47,7 @@ export default function LandAccessOverlay({ visible }: LandAccessOverlayProps) {
 
     const b = map.getBounds();
     const params = new URLSearchParams({
-      where: '1=1',
+      where: "Pub_Access='OA'",
       geometry: `${b.getWest()},${b.getSouth()},${b.getEast()},${b.getNorth()}`,
       geometryType: 'esriGeometryEnvelope',
       spatialRel: 'esriSpatialRelIntersects',
