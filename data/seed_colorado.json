@@ -36,15 +36,15 @@
       "notes": "Fort Garland Museum - History Colorado managed, public access, Fort Garland, CO"
     },
     {
-      "name": "Ludlow Massacre State Monument",
-      "type": "event",
-      "latitude": 37.3594,
-      "longitude": -104.6894,
-      "year": 1914,
-      "description": "Site of the April 20, 1914 Ludlow Massacre during the Colorado Coal Field War, when Colorado National Guard and Baldwin-Felts agents attacked a tent colony of striking coal miners and their families, killing 19 people including 11 children. Colorado state monument and National Historic Landmark, publicly accessible with interpretive signage.",
-      "source": "Colorado State Archives / UMWA - Public Land",
-      "confidence": 0.95,
-      "notes": "Ludlow Massacre State Monument - Colorado SHPO, open public access, near Trinidad, CO"
+      "name": "Battle of Milk Creek Battlefield",
+      "type": "battle",
+      "latitude": 40.1394,
+      "longitude": -108.0961,
+      "year": 1879,
+      "description": "Site of the September 29 to October 5, 1879 battle between the White River Ute and US Army troops under Major Thomas Thornburgh, who was killed in the initial ambush. The last major battle between the Ute Nation and US forces in Colorado and one of the final Indian Wars engagements in the state. Located on Bureau of Land Management land north of Meeker, publicly accessible.",
+      "source": "BLM Colorado / Colorado Historical Society - Public Land",
+      "confidence": 0.90,
+      "notes": "Battle of Milk Creek site - BLM managed public land, accessible via CR 15, near Meeker, CO"
     },
     {
       "name": "Boggsville Historic Site",
