@@ -3,7 +3,7 @@
 
 [ ] Alabama
 [ ] Alaska
-[ ] Arizona
+[X] Arizona
 [ ] Arkansas
 [ ] California
 [X] Colorado
@@ -47,7 +47,7 @@
 [ ] Utah
 [ ] Vermont
 [ ] Virginia
-[ ] Washington
+[X] Washington
 [ ] West Virginia
 [ ] Wisconsin
 [ ] Wyoming
