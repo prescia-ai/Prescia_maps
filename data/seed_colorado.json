@@ -3,26 +3,26 @@
   "description": "10 pre-1940 public land historical sites suitable for metal detecting",
   "locations": [
     {
-      "name": "Bent's Old Fort National Historic Site",
-      "type": "structure",
-      "latitude": 38.0372,
-      "longitude": -103.4269,
-      "year": 1833,
-      "description": "Major fur-trade and Santa Fe Trail trading post built by brothers Charles and William Bent and Ceran St. Vrain in 1833. The hub of the southern plains trade network until it was abandoned in 1849. The NPS reconstructed the fort on its original foundations. Open grounds and reconstructed fort accessible to the public.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Bent's Old Fort NHS - NPS managed, open to public, near La Junta, CO"
+      "name": "Vicksburg Ghost Town",
+      "type": "town",
+      "latitude": 38.8131,
+      "longitude": -106.4450,
+      "year": 1880,
+      "description": "Silver and gold mining ghost town established around 1880 in the Brown's Canyon area of Chaffee County. Vicksburg and nearby Winfield were supply towns serving the rich silver mines of the upper Clear Creek drainage. The townsite includes stone foundations and mining debris along the creek. Located on Bureau of Land Management land within the Brown's Canyon National Monument corridor, freely accessible via county road.",
+      "source": "BLM Colorado - Public Land",
+      "confidence": 0.90,
+      "notes": "Vicksburg Ghost Town - BLM Colorado managed, open to public, Chaffee County, CO - metal detecting allowed on BLM land"
     },
     {
-      "name": "Sand Creek Massacre National Historic Site",
-      "type": "battle",
-      "latitude": 38.5464,
-      "longitude": -102.5153,
-      "year": 1864,
-      "description": "Site of the November 29, 1864 massacre where Colorado militia under Colonel John Chivington attacked a peaceful village of Southern Cheyenne and Arapaho, killing approximately 150-200 people, mostly women, children, and elderly. National Park Service site with open trail system through the historic ground.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Sand Creek Massacre NHS - NPS managed, public trail access, near Eads, CO"
+      "name": "Independence Ghost Town",
+      "type": "town",
+      "latitude": 39.0911,
+      "longitude": -106.6603,
+      "year": 1880,
+      "description": "High-altitude silver and gold mining ghost town established in 1880 at 10,900 feet elevation on the western slope of the Continental Divide in Pitkin County. At its peak Independence had 1,500 residents, a post office, hotel, and multiple saloons. The town was abandoned by 1899 when the railroad bypassed it. The Aspen Historical Society preserves the townsite within the White River National Forest on US Forest Service land, open year-round via Independence Pass Road (CO-82).",
+      "source": "USFS White River National Forest / Aspen Historical Society - Public Land",
+      "confidence": 0.92,
+      "notes": "Independence Ghost Town - USFS White River NF, open public access, Pitkin County, CO - metal detecting generally allowed on USFS land outside designated archaeological sites"
     },
     {
       "name": "Fort Garland State Museum",

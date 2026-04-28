@@ -14,26 +14,26 @@
       "notes": "Mine Creek Battlefield State Historic Site - publicly owned, open grounds, near Pleasanton, KS"
     },
     {
-      "name": "Fort Scott National Historic Site",
-      "type": "structure",
-      "latitude": 37.8369,
-      "longitude": -94.7058,
-      "year": 1842,
-      "description": "Established in 1842 along the Military Road to protect the Permanent Indian Frontier. Became a flashpoint during Bleeding Kansas (1854-1861) and served as a major Union base during the Civil War. National Park Service site with restored buildings and open grounds.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Fort Scott NHS - NPS managed, open to public, downtown Fort Scott, KS"
+      "name": "Coronado Heights County Park",
+      "type": "locale",
+      "latitude": 38.9017,
+      "longitude": -97.9039,
+      "year": 1541,
+      "description": "Sandstone hill in the Smoky Hills of McPherson County believed to be near the northernmost point reached by Francisco Vasquez de Coronado during his 1541 expedition searching for the fabled city of Quivira. The site commands panoramic views of the surrounding grasslands and was used as a lookout and campsite by Spanish explorers, later by Wichita and Pawnee people, and by Santa Fe Trail travelers. The park is owned and maintained by the City of Lindsborg in McPherson County, freely accessible.",
+      "source": "City of Lindsborg, McPherson County - Public Land",
+      "confidence": 0.88,
+      "notes": "Coronado Heights County Park - publicly owned county/city park, open access, near Lindsborg, KS - metal detecting allowed in open park areas"
     },
     {
-      "name": "Fort Larned National Historic Site",
-      "type": "structure",
-      "latitude": 38.1833,
-      "longitude": -99.2186,
-      "year": 1859,
-      "description": "Established in 1859 to protect mail and freight traffic along the Santa Fe Trail and serve as an agency for the Kiowa and Comanche peoples. One of the best preserved frontier military forts in the US. National Park Service site with open grounds.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Fort Larned NHS - NPS managed, open grounds and trails, near Larned, KS"
+      "name": "Kanopolis Lake Army Corps Historic Campsite",
+      "type": "locale",
+      "latitude": 38.6167,
+      "longitude": -98.1500,
+      "year": 1800,
+      "description": "Army Corps of Engineers shoreline land along Kanopolis Lake (Smoky Hill River) in Ellsworth County, Kansas. The Smoky Hill River corridor was a major travel and trading route for Cheyenne, Arapaho, and early Euro-American traders and settlers from the 1800s onward. Horsethief Canyon and adjacent BLM bluffs feature historic Native American pictograph panels and documented camp sites. Army Corps of Engineers and BLM managed public land with open shoreline and trail access.",
+      "source": "US Army Corps of Engineers / BLM Kansas - Public Land",
+      "confidence": 0.87,
+      "notes": "Kanopolis Lake shoreline - Army Corps of Engineers public land, open access, near Kanopolis, KS - detecting allowed on Corps shoreline areas"
     },
     {
       "name": "Hollenberg Pony Express Station State Historic Site",
