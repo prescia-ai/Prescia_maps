@@ -1,12 +1,63 @@
-# State-by-State Historical Seed Data Progress
-# Each state needs 10 high-quality public land historical sites (pre-1940)
+# STATE SEED DATA GUIDELINES
+# Updated: 2026-04-28
 
+## METAL DETECTING ALLOWED ✅
+- BLM land (Bureau of Land Management)
+- USFS land (US Forest Service - National Forests, NOT Wilderness)
+- State Parks (verify per state, many require permits)
+- State Wildlife Management Areas (WMAs)
+- Army Corps of Engineers lake/reservoir land
+- County/City public parks (verify locally)
+- Public beaches (below high tide line)
+- Historic railroad grades on public land
+- Ghost towns on BLM/USFS land
+
+## METAL DETECTING PROHIBITED ❌
+- ALL National Park Service (NPS) sites
+- National Historic Sites (NHS)
+- National Historical Parks (NHP)
+- National Monuments
+- National Battlefields (if NPS managed)
+- Wilderness Areas
+- Many State Historic Sites (verify each)
+- Archaeological protected sites
+
+## DEDUPLICATION REQUIRED
+Before adding any site to a state seed file, check these files for duplicates:
+- All state seed files (seed_*.json)
+- data/battles_seed.json
+- data/frrandp_ghost_towns.json
+- data/historic_camps.json
+- data/historic_trail_landmarks.json
+- data/stagecoach_stops.json
+- data/abandoned_churches.json
+- data/abandoned_fairgrounds.json
+- data/historic_brothels.json
+- All mine seed files (seed_mines_*.json)
+
+If site name exists OR coordinates are within ~0.01 degrees, find different site.
+
+## VERIFICATION CHECKLIST
+Each site must:
+1. ✅ Be on public land where detecting is ALLOWED
+2. ✅ Be accessible right now (no gates/fees/special access)
+3. ✅ Be pre-1940 (older preferred)
+4. ✅ Have exact coordinates from official source
+5. ✅ NOT duplicate any existing seed data
+
+---
+
+# STATE COMPLETION STATUS
+
+[X] Oklahoma - 10 sites (NPS sites removed, replaced with detectable alternatives)
+[X] Kansas - 10 sites (NPS sites removed, replaced with detectable alternatives)
+[X] Colorado - 10 sites (NPS sites removed, replaced with detectable alternatives)
+[X] Washington - 10 sites (NPS sites removed, replaced with detectable alternatives)
+[X] Arizona - 10 sites (NPS sites removed, replaced with detectable alternatives)
 [ ] Alabama
 [ ] Alaska
-[X] Arizona
 [ ] Arkansas
 [ ] California
-[X] Colorado
 [ ] Connecticut
 [ ] Delaware
 [ ] Florida
@@ -16,7 +67,6 @@
 [ ] Illinois
 [ ] Indiana
 [ ] Iowa
-[X] Kansas
 [ ] Kentucky
 [ ] Louisiana
 [ ] Maine
@@ -36,7 +86,6 @@
 [ ] North Carolina
 [ ] North Dakota
 [ ] Ohio
-[X] Oklahoma
 [ ] Oregon
 [ ] Pennsylvania
 [ ] Rhode Island
@@ -47,7 +96,7 @@
 [ ] Utah
 [ ] Vermont
 [ ] Virginia
-[X] Washington
 [ ] West Virginia
 [ ] Wisconsin
 [ ] Wyoming
+

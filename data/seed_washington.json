@@ -3,37 +3,48 @@
   "description": "10 pre-1940 public land historical sites suitable for metal detecting",
   "locations": [
     {
-      "name": "Fort Vancouver National Historic Site",
-      "type": "structure",
-      "latitude": 45.6237,
-      "longitude": -122.6567,
-      "year": 1825,
-      "description": "Hudson's Bay Company fur-trading headquarters and later U.S. Army post established in 1825. The most important trading post in the Pacific Northwest, Fort Vancouver was the commercial and social hub of the entire region. National Park Service site with extensive public grounds and documented artifact scatter areas along the original fort perimeter.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Fort Vancouver NHS - NPS managed, open to public, Vancouver, WA"
+      "name": "Monte Cristo Ghost Town",
+      "type": "town",
+      "latitude": 48.0214,
+      "longitude": -121.4806,
+      "year": 1893,
+      "description": "Silver and gold mining ghost town established in 1893 in the North Cascades of Snohomish County. At its peak Monte Cristo had 2,000 residents, a concentrator mill, and rail connection to Everett. The mines produced millions in silver, gold, copper, and lead before closure around 1907. The historic townsite and mill ruins are preserved within the Mount Baker-Snoqualmie National Forest on US Forest Service land, accessible via a scenic 4-mile trail along the Sauk River.",
+      "source": "USFS Mount Baker-Snoqualmie National Forest - Public Land",
+      "confidence": 0.92,
+      "notes": "Monte Cristo Ghost Town - USFS Mt. Baker-Snoqualmie NF, open public access, Snohomish County, WA - metal detecting generally allowed on USFS land"
     },
     {
-      "name": "Whitman Mission National Historic Site",
-      "type": "structure",
-      "latitude": 46.0424,
-      "longitude": -118.4690,
-      "year": 1836,
-      "description": "Protestant mission established by Marcus and Narcissa Whitman in 1836 on the Oregon Trail. A major waystation for westward emigrants until the 1847 Whitman Massacre. National Park Service site with 98 acres of public grounds covering the original mission buildings, millpond, and emigrant campground.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Whitman Mission NHS - NPS managed, open grounds and trails, near Walla Walla, WA"
+      "name": "Nighthawk Townsite",
+      "type": "town",
+      "latitude": 48.9250,
+      "longitude": -119.5917,
+      "year": 1900,
+      "description": "Gold mining camp established around 1900 in the Okanogan Highlands near the Canadian border in Okanogan County. The Nighthawk area produced gold from placer and hard-rock mines, with multiple stamp mills and a railroad spur connecting to Oroville. The townsite ruins and surrounding mining landscape occupy Bureau of Land Management land in the Similkameen River valley, freely accessible for exploration.",
+      "source": "BLM Washington - Public Land",
+      "confidence": 0.88,
+      "notes": "Nighthawk Townsite - BLM Washington managed, open to public, Okanogan County, WA - metal detecting allowed on BLM land"
     },
     {
-      "name": "Fort Spokane",
+      "name": "Fort Okanogan State Park",
       "type": "structure",
-      "latitude": 47.8897,
-      "longitude": -118.7197,
-      "year": 1880,
-      "description": "U.S. Army post established in 1880 at the confluence of the Spokane and Columbia rivers to oversee the Colville Reservation. Decommissioned in 1898 and later served as an Indian boarding school. Part of Lake Roosevelt National Recreation Area, NPS managed, with surviving historic buildings and open public grounds.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.95,
-      "notes": "Fort Spokane - Lake Roosevelt NRA, NPS managed, open to public, near Davenport, WA"
+      "latitude": 48.1417,
+      "longitude": -119.7500,
+      "year": 1811,
+      "description": "Site of the Pacific Fur Company's Fort Okanogan, established in 1811 by David Stuart as the first permanent American settlement in present-day Washington State. Located at the confluence of the Okanogan and Columbia Rivers, the post was later operated by the North West Company (1813) and Hudson's Bay Company (1821) until 1847. The interpretive site is managed by Washington State Parks at the edge of Lake Pateros (Columbia River reservoir) with publicly accessible grounds.",
+      "source": "Washington State Parks - Public Land",
+      "confidence": 0.90,
+      "notes": "Fort Okanogan State Park - WA State Parks managed, open to public, near Brewster, WA - state park, verify detecting permit requirements"
+    },
+    {
+      "name": "Conconully Historic Townsite",
+      "type": "town",
+      "latitude": 48.5583,
+      "longitude": -119.7517,
+      "year": 1888,
+      "description": "Silver mining camp and former Okanogan County seat established in 1888 during the Okanogan Highlands silver rush. Conconully briefly flourished with hotels, saloons, and a courthouse before silver prices collapsed in 1893. The historic townsite sits adjacent to Conconully State Park along Salmon Creek, with Washington State Parks managing the surrounding public land and reservoir area.",
+      "source": "Washington State Parks - Public Land",
+      "confidence": 0.88,
+      "notes": "Conconully Historic Townsite - WA State Parks / public land, open to public, Okanogan County, WA - verify detecting permit at state park"
     },
     {
       "name": "Fort Simcoe State Park Historic Site",
@@ -56,17 +67,6 @@
       "source": "Washington State Parks - Public Land",
       "confidence": 0.93,
       "notes": "Steptoe Battlefield State Park - WA State Parks, public access, near Rosalia, WA"
-    },
-    {
-      "name": "Ebey's Landing National Historical Reserve",
-      "type": "locale",
-      "latitude": 48.2041,
-      "longitude": -122.6967,
-      "year": 1850,
-      "description": "One of the first American settlements on Puget Sound, settled by Isaac Ebey in 1850. The reserve preserves the agricultural and historical character of central Whidbey Island. Includes public trails traversing historic farmsteads, prairies, and the original Donation Land Claim sites. Jointly managed by NPS, WA State Parks, and Island County.",
-      "source": "National Park Service - Public Land",
-      "confidence": 0.93,
-      "notes": "Ebey's Landing NHR - NPS/State Parks/Island County, public trails and beaches, Coupeville, WA"
     },
     {
       "name": "Liberty Ghost Town",

@@ -36,15 +36,15 @@
       "notes": "Fort Washita Historic Site - Oklahoma state historic site, public access, extensive grounds"
     },
     {
-      "name": "Washita Battlefield National Historic Site",
-      "type": "battle",
-      "latitude": 35.6175,
-      "longitude": -99.7022,
-      "year": 1868,
-      "description": "Site of the November 27, 1868 Battle of the Washita where Lt. Colonel George Custer led the 7th Cavalry in an attack on a Southern Cheyenne village led by Chief Black Kettle. Now a National Historic Site managed by the National Park Service.",
-      "source": "National Park Service",
-      "confidence": 0.95,
-      "notes": "Washita Battlefield NHS - NPS managed, public access, visitor center on site"
+      "name": "Black Mesa Cimarron Route Campsite",
+      "type": "trail",
+      "latitude": 36.9331,
+      "longitude": -102.9978,
+      "year": 1821,
+      "description": "Historic campsite area at Black Mesa on the Cimarron Cutoff of the Santa Fe Trail in Oklahoma's Panhandle (Cimarron County). Traders and military expeditions following the Cimarron Route camped in this area from the 1820s onward. The mesa and surrounding high plains are managed by the Bureau of Land Management. Highest point in Oklahoma at 4,973 feet, with documented trail ruts and historic campfire rings.",
+      "source": "BLM Oklahoma / National Santa Fe Trail Association - Public Land",
+      "confidence": 0.88,
+      "notes": "Black Mesa BLM area - Bureau of Land Management managed, open to public, Cimarron County, OK - metal detecting allowed on BLM land"
     },
     {
       "name": "Fort Supply Historic Site",
