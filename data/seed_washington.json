@@ -1,0 +1,116 @@
+{
+  "state": "Washington",
+  "description": "10 pre-1940 public land historical sites suitable for metal detecting",
+  "locations": [
+    {
+      "name": "Fort Vancouver National Historic Site",
+      "type": "structure",
+      "latitude": 45.6237,
+      "longitude": -122.6567,
+      "year": 1825,
+      "description": "Hudson's Bay Company fur-trading headquarters and later U.S. Army post established in 1825. The most important trading post in the Pacific Northwest, Fort Vancouver was the commercial and social hub of the entire region. National Park Service site with extensive public grounds and documented artifact scatter areas along the original fort perimeter.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Vancouver NHS - NPS managed, open to public, Vancouver, WA"
+    },
+    {
+      "name": "Whitman Mission National Historic Site",
+      "type": "structure",
+      "latitude": 46.0424,
+      "longitude": -118.4690,
+      "year": 1836,
+      "description": "Protestant mission established by Marcus and Narcissa Whitman in 1836 on the Oregon Trail. A major waystation for westward emigrants until the 1847 Whitman Massacre. National Park Service site with 98 acres of public grounds covering the original mission buildings, millpond, and emigrant campground.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Whitman Mission NHS - NPS managed, open grounds and trails, near Walla Walla, WA"
+    },
+    {
+      "name": "Fort Spokane",
+      "type": "structure",
+      "latitude": 47.8897,
+      "longitude": -118.7197,
+      "year": 1880,
+      "description": "U.S. Army post established in 1880 at the confluence of the Spokane and Columbia rivers to oversee the Colville Reservation. Decommissioned in 1898 and later served as an Indian boarding school. Part of Lake Roosevelt National Recreation Area, NPS managed, with surviving historic buildings and open public grounds.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Spokane - Lake Roosevelt NRA, NPS managed, open to public, near Davenport, WA"
+    },
+    {
+      "name": "Fort Simcoe State Park Historic Site",
+      "type": "structure",
+      "latitude": 46.3444,
+      "longitude": -120.8214,
+      "year": 1856,
+      "description": "U.S. Army post built in 1856 in the heart of Yakama territory following the Yakima War. Converted to an Indian agency in 1859 and became the Yakama Indian Agency headquarters. Five original buildings survive including the commandant's house. Washington State Parks, publicly accessible grounds.",
+      "source": "Washington State Parks - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Simcoe State Park Historic Site - WA State Parks, open to public, near White Swan, WA"
+    },
+    {
+      "name": "Steptoe Battlefield State Park",
+      "type": "battle",
+      "latitude": 47.1833,
+      "longitude": -117.2667,
+      "year": 1858,
+      "description": "Site of the May 16-17, 1858 Battle of Steptoe, where a U.S. Army column under Lieutenant Colonel Edward Steptoe was surrounded and forced to retreat by Spokane, Palouse, and Coeur d'Alene warriors. One of the most significant U.S. Army defeats in the Pacific Northwest. Washington State Parks, open grounds with monument.",
+      "source": "Washington State Parks - Public Land",
+      "confidence": 0.93,
+      "notes": "Steptoe Battlefield State Park - WA State Parks, public access, near Rosalia, WA"
+    },
+    {
+      "name": "Ebey's Landing National Historical Reserve",
+      "type": "locale",
+      "latitude": 48.2041,
+      "longitude": -122.6967,
+      "year": 1850,
+      "description": "One of the first American settlements on Puget Sound, settled by Isaac Ebey in 1850. The reserve preserves the agricultural and historical character of central Whidbey Island. Includes public trails traversing historic farmsteads, prairies, and the original Donation Land Claim sites. Jointly managed by NPS, WA State Parks, and Island County.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.93,
+      "notes": "Ebey's Landing NHR - NPS/State Parks/Island County, public trails and beaches, Coupeville, WA"
+    },
+    {
+      "name": "Liberty Ghost Town",
+      "type": "town",
+      "latitude": 47.2186,
+      "longitude": -120.6797,
+      "year": 1893,
+      "description": "Gold placer mining camp established in the 1880s and booming by 1893, Liberty is one of the oldest and most intact gold mining ghost towns in Washington. The Swauk Mining District produced gold continuously into the early twentieth century. Located on Okanogan-Wenatchee National Forest land with public access to historic mining structures and placer claims.",
+      "source": "USFS Okanogan-Wenatchee National Forest - Public Land",
+      "confidence": 0.90,
+      "notes": "Liberty Ghost Town - USFS Okanogan-Wenatchee NF, public access, near Cle Elum, WA"
+    },
+    {
+      "name": "Ruby Ghost Town",
+      "type": "town",
+      "latitude": 48.5444,
+      "longitude": -119.0789,
+      "year": 1888,
+      "description": "Silver and gold mining boom town established in 1888 in the Okanogan Highlands that briefly had 1,500 residents, two hotels, and a newspaper. The mines produced silver, gold, and copper until the collapse of silver prices in 1893. Located on Okanogan-Wenatchee National Forest land, townsite and mining ruins are publicly accessible.",
+      "source": "USFS Okanogan-Wenatchee National Forest - Public Land",
+      "confidence": 0.88,
+      "notes": "Ruby Ghost Town - USFS Okanogan NF, public access, near Conconully, WA"
+    },
+    {
+      "name": "Cape Disappointment State Park (Fort Canby)",
+      "type": "structure",
+      "latitude": 46.2847,
+      "longitude": -124.0481,
+      "year": 1864,
+      "description": "Lewis and Clark reached the Pacific Ocean near this headland in November 1805, establishing a temporary camp at present-day Cape Disappointment. Fort Canby was built here in 1864 to defend the Columbia River mouth. Two historic lighthouses, the oldest in Washington (1856), stand on the cape. Washington State Parks with extensive public beach and trail access.",
+      "source": "Washington State Parks - Public Land",
+      "confidence": 0.93,
+      "notes": "Cape Disappointment State Park - WA State Parks, open to public, near Ilwaco, WA"
+    },
+    {
+      "name": "Fort Nisqually Historic Site",
+      "type": "structure",
+      "latitude": 47.2914,
+      "longitude": -122.5497,
+      "year": 1833,
+      "description": "Hudson's Bay Company trading post established in 1833 as the first European settlement on Puget Sound. Fort Nisqually was a major agricultural and fur-trading center serving the southern Puget Sound region for decades. Two original HBC granary buildings dating to 1843 and 1850 survive and were moved to Point Defiance Park. City of Tacoma public park, freely accessible.",
+      "source": "City of Tacoma / Metro Parks - Public Land",
+      "confidence": 0.92,
+      "notes": "Fort Nisqually Historic Site - City of Tacoma Metro Parks, open to public, Point Defiance Park, Tacoma, WA"
+    }
+  ]
+}

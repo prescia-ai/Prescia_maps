@@ -1,0 +1,116 @@
+{
+  "state": "Arizona",
+  "description": "10 pre-1940 public land historical sites suitable for metal detecting",
+  "locations": [
+    {
+      "name": "Tumacacori National Historical Park",
+      "type": "mission",
+      "latitude": 31.5672,
+      "longitude": -111.0512,
+      "year": 1691,
+      "description": "Spanish colonial mission established by Jesuit Father Eusebio Kino in 1691 and active through 1848. One of the earliest European settlements in the American Southwest. The imposing adobe church ruin and surrounding grounds preserve over 150 years of Spanish and O'odham occupation. National Park Service site with open grounds and documented archaeological scatter.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Tumacacori NHP - NPS managed, open to public, near Tubac, AZ"
+    },
+    {
+      "name": "Fort Bowie National Historic Site",
+      "type": "structure",
+      "latitude": 32.1497,
+      "longitude": -109.4478,
+      "year": 1862,
+      "description": "U.S. Army post established in 1862 at Apache Pass to protect the Butterfield Overland Mail route and water source. The fort served as the primary base for operations against Cochise and Geronimo during the Apache Wars (1861-1886). National Park Service site accessed by a 1.5-mile trail through the historic pass, with open grounds around fort ruins.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Bowie NHS - NPS managed, trail access, near Willcox, AZ"
+    },
+    {
+      "name": "Fort Verde State Historic Park",
+      "type": "structure",
+      "latitude": 34.6389,
+      "longitude": -111.7697,
+      "year": 1871,
+      "description": "U.S. Army post established in 1871 in the Verde Valley as the main base for General George Crook's campaigns against the Yavapai and Tonto Apache. Four original adobe officer's quarters dating to the 1870s survive. Arizona State Historic Park with open grounds and adjacent public land in Camp Verde.",
+      "source": "Arizona State Parks - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Verde State Historic Park - Arizona State Parks, open to public, Camp Verde, AZ"
+    },
+    {
+      "name": "Tubac Presidio State Historic Park",
+      "type": "structure",
+      "latitude": 31.6861,
+      "longitude": -111.0467,
+      "year": 1752,
+      "description": "Site of the first Spanish presidio (military garrison) established in present-day Arizona in 1752 following the Pima Revolt. Tubac was the largest European settlement in the region for much of the 18th century and served as the staging point for the 1776 Anza expedition to found San Francisco. Arizona State Historic Park preserving the original presidio foundations.",
+      "source": "Arizona State Parks - Public Land",
+      "confidence": 0.95,
+      "notes": "Tubac Presidio State Historic Park - Arizona State Parks, open to public, Tubac, AZ"
+    },
+    {
+      "name": "Cochise Stronghold Recreation Area",
+      "type": "locale",
+      "latitude": 31.9197,
+      "longitude": -109.9864,
+      "year": 1861,
+      "description": "Natural fortress in the Dragoon Mountains used by Chiricahua Apache chief Cochise as his primary stronghold during the Apache Wars (1861-1872). The rugged granite canyon was the site of numerous Apache encampments and the rumored burial site of Cochise. Located within Coronado National Forest on USFS managed land, publicly accessible via developed trails.",
+      "source": "USFS Coronado National Forest - Public Land",
+      "confidence": 0.92,
+      "notes": "Cochise Stronghold - USFS Coronado NF, campground and trails, near Pearce, AZ"
+    },
+    {
+      "name": "Swansea Ghost Town",
+      "type": "town",
+      "latitude": 34.1081,
+      "longitude": -114.2175,
+      "year": 1909,
+      "description": "Copper and gold mining town established in 1909 along the Bill Williams River in La Paz County. At its peak Swansea had a smelter, railroad connections, and over 500 residents. Abandoned by the 1920s when ore grades declined. Located on Bureau of Land Management land in the Buckskin Mountains, publicly accessible with surviving mine structures and building foundations.",
+      "source": "BLM Arizona - Public Land",
+      "confidence": 0.90,
+      "notes": "Swansea Ghost Town - BLM Arizona managed, open to public, near Parker, AZ"
+    },
+    {
+      "name": "Fort Lowell Park",
+      "type": "structure",
+      "latitude": 32.2464,
+      "longitude": -110.8722,
+      "year": 1873,
+      "description": "U.S. Army post established in 1873 in the Rillito River valley to protect Tucson and conduct operations during the final phase of the Apache Wars. Served as the headquarters for General Crook's 1882-1886 campaigns. Adobe ruins of the hospital, officer's quarters, and other structures survive. City of Tucson public park with the Lowell neighborhood surrounding the historic site.",
+      "source": "City of Tucson / Pima County - Public Land",
+      "confidence": 0.93,
+      "notes": "Fort Lowell Park - City of Tucson public park, open access, northeast Tucson, AZ"
+    },
+    {
+      "name": "Gleeson Ghost Town",
+      "type": "town",
+      "latitude": 31.7717,
+      "longitude": -109.8242,
+      "year": 1900,
+      "description": "Copper, gold, and turquoise mining town established in 1900 in the Dragoon Mountains of Cochise County. Known for extensive turquoise deposits mined by the Apache for centuries before commercial operations began. The town ruins including the jail, hospital, and school remain on Bureau of Land Management land, open to the public.",
+      "source": "BLM Arizona - Public Land",
+      "confidence": 0.88,
+      "notes": "Gleeson Ghost Town - BLM Arizona, public access, Cochise County, AZ"
+    },
+    {
+      "name": "Congress Mine Historic District",
+      "type": "mine",
+      "latitude": 34.1664,
+      "longitude": -112.8506,
+      "year": 1884,
+      "description": "One of Arizona's largest gold mines, the Congress Mine was established in 1884 and produced over $8 million in gold by 1910. The town of Congress grew around the mine with hotels, saloons, and a railroad stop. Historic mine structures and the townsite occupy Bureau of Land Management and Arizona State Land Department land near the current town of Congress.",
+      "source": "BLM Arizona / Arizona State Land Department - Public Land",
+      "confidence": 0.88,
+      "notes": "Congress Mine Historic District - BLM/State Land, public access, Congress, AZ"
+    },
+    {
+      "name": "Jerome State Historic Park",
+      "type": "town",
+      "latitude": 34.7508,
+      "longitude": -112.1136,
+      "year": 1876,
+      "description": "Copper mining boomtown established in 1876 on Mingus Mountain above the Verde Valley. Jerome produced over $1 billion in copper, gold, and silver and was once the fourth largest city in Arizona with 15,000 residents. Declared a National Historic Landmark in 1967. The Jerome State Historic Park anchors the historic district on the mountainside, and public streets, parks, and the mine museum provide open access.",
+      "source": "Arizona State Parks - Public Land",
+      "confidence": 0.92,
+      "notes": "Jerome State Historic Park - Arizona State Parks, public access, Jerome, AZ"
+    }
+  ]
+}
