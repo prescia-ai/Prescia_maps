@@ -1,0 +1,116 @@
+{
+  "state": "Colorado",
+  "description": "10 pre-1940 public land historical sites suitable for metal detecting",
+  "locations": [
+    {
+      "name": "Bent's Old Fort National Historic Site",
+      "type": "structure",
+      "latitude": 38.0372,
+      "longitude": -103.4269,
+      "year": 1833,
+      "description": "Major fur-trade and Santa Fe Trail trading post built by brothers Charles and William Bent and Ceran St. Vrain in 1833. The hub of the southern plains trade network until it was abandoned in 1849. The NPS reconstructed the fort on its original foundations. Open grounds and reconstructed fort accessible to the public.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Bent's Old Fort NHS - NPS managed, open to public, near La Junta, CO"
+    },
+    {
+      "name": "Sand Creek Massacre National Historic Site",
+      "type": "battle",
+      "latitude": 38.5464,
+      "longitude": -102.5153,
+      "year": 1864,
+      "description": "Site of the November 29, 1864 massacre where Colorado militia under Colonel John Chivington attacked a peaceful village of Southern Cheyenne and Arapaho, killing approximately 150-200 people, mostly women, children, and elderly. National Park Service site with open trail system through the historic ground.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Sand Creek Massacre NHS - NPS managed, public trail access, near Eads, CO"
+    },
+    {
+      "name": "Fort Garland State Museum",
+      "type": "structure",
+      "latitude": 37.4278,
+      "longitude": -105.4339,
+      "year": 1858,
+      "description": "Established in 1858 to protect settlers in the San Luis Valley after the Mexican-American War. Kit Carson commanded the fort from 1866-1867. The original adobe structures still stand. Colorado state museum with publicly accessible grounds in the historic San Luis Valley.",
+      "source": "History Colorado - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Garland Museum - History Colorado managed, public access, Fort Garland, CO"
+    },
+    {
+      "name": "Ludlow Massacre State Monument",
+      "type": "event",
+      "latitude": 37.3594,
+      "longitude": -104.6894,
+      "year": 1914,
+      "description": "Site of the April 20, 1914 Ludlow Massacre during the Colorado Coal Field War, when Colorado National Guard and Baldwin-Felts agents attacked a tent colony of striking coal miners and their families, killing 19 people including 11 children. Colorado state monument and National Historic Landmark, publicly accessible with interpretive signage.",
+      "source": "Colorado State Archives / UMWA - Public Land",
+      "confidence": 0.95,
+      "notes": "Ludlow Massacre State Monument - Colorado SHPO, open public access, near Trinidad, CO"
+    },
+    {
+      "name": "Boggsville Historic Site",
+      "type": "structure",
+      "latitude": 37.9339,
+      "longitude": -103.5669,
+      "year": 1862,
+      "description": "Founded by Thomas Boggs and John Wesley Prowers in 1862 as a ranching and farming settlement on the Mountain Branch of the Santa Fe Trail along the Purgatoire River. Kit Carson died here in 1868 after a brief stay. One of the earliest Euro-American settlements in southeastern Colorado. Bent County public historic site with open grounds.",
+      "source": "Bent County / History Colorado - Public Land",
+      "confidence": 0.90,
+      "notes": "Boggsville Historic Site - Bent County/History Colorado, public access, near Las Animas, CO"
+    },
+    {
+      "name": "Fort Vasquez State Museum",
+      "type": "structure",
+      "latitude": 40.0903,
+      "longitude": -104.9803,
+      "year": 1835,
+      "description": "Adobe fur-trading post built by Louis Vasquez and Andrew Sublette in 1835 on the South Platte River. One of several competing trading forts in the area, it operated until about 1842. The Colorado state museum features a reconstruction of the fort on the original foundation site with open outdoor grounds.",
+      "source": "History Colorado - Public Land",
+      "confidence": 0.92,
+      "notes": "Fort Vasquez Museum - History Colorado managed, publicly accessible, near Platteville, CO"
+    },
+    {
+      "name": "Summitville Historic Mining District",
+      "type": "mine",
+      "latitude": 37.4267,
+      "longitude": -106.5986,
+      "year": 1873,
+      "description": "High-altitude gold mining district active from 1873 through the early twentieth century on the slopes of Summitville Peak in the San Juan Mountains. Multiple historic mine structures survive. Located on Bureau of Land Management and Rio Grande National Forest land, open to public exploration.",
+      "source": "BLM Colorado / USFS Rio Grande NF - Public Land",
+      "confidence": 0.88,
+      "notes": "Summitville Mining District - BLM/USFS public land, accessible via forest road, near Del Norte, CO"
+    },
+    {
+      "name": "Animas Forks Ghost Town",
+      "type": "town",
+      "latitude": 37.9236,
+      "longitude": -107.5736,
+      "year": 1875,
+      "description": "High-altitude silver and gold mining ghost town established in 1875 at the confluence of the Animas River forks at 11,200 feet. At its peak the town had 450 residents, a newspaper, and a hotel. Historic structures are preserved by the Bureau of Land Management and are open to the public.",
+      "source": "BLM Colorado - Public Land",
+      "confidence": 0.92,
+      "notes": "Animas Forks Ghost Town - BLM managed, open to public, accessible via CR 110 from Silverton, CO"
+    },
+    {
+      "name": "St. Elmo Ghost Town",
+      "type": "town",
+      "latitude": 38.7003,
+      "longitude": -106.3461,
+      "year": 1878,
+      "description": "Well-preserved silver and gold mining ghost town established in 1878 as a supply hub for the Chalk Creek mining district and terminus of the Denver, South Park and Pacific Railroad. At peak it had 2,000 residents and 150 buildings. Located within the San Isabel National Forest, the townsite is publicly accessible.",
+      "source": "USFS San Isabel National Forest - Public Land",
+      "confidence": 0.93,
+      "notes": "St. Elmo Ghost Town - USFS San Isabel NF, open public access, near Buena Vista, CO"
+    },
+    {
+      "name": "Ashcroft Ghost Town",
+      "type": "town",
+      "latitude": 39.0525,
+      "longitude": -106.8089,
+      "year": 1880,
+      "description": "Silver mining ghost town established in 1880 at the headwaters of Castle Creek in the Elk Mountains. At its peak it boasted 3,500 residents and briefly rivaled Aspen in size. The Aspen Historical Society preserves the townsite on US Forest Service land within the White River National Forest, open to the public year-round.",
+      "source": "USFS White River National Forest / Aspen Historical Society - Public Land",
+      "confidence": 0.93,
+      "notes": "Ashcroft Ghost Town - USFS White River NF, publicly accessible, near Aspen, CO"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "state": "Kansas",
+  "description": "10 pre-1940 public land historical sites suitable for metal detecting",
+  "locations": [
+    {
+      "name": "Battle of Mine Creek State Historic Site",
+      "type": "battle",
+      "latitude": 38.2658,
+      "longitude": -94.7086,
+      "year": 1864,
+      "description": "Site of the second largest cavalry battle of the Civil War, fought October 25, 1864. Union forces routed Confederate General Sterling Price's army, capturing two generals. Kansas state historic site with 600 acres of open battlefield accessible to the public.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.95,
+      "notes": "Mine Creek Battlefield State Historic Site - publicly owned, open grounds, near Pleasanton, KS"
+    },
+    {
+      "name": "Fort Scott National Historic Site",
+      "type": "structure",
+      "latitude": 37.8369,
+      "longitude": -94.7058,
+      "year": 1842,
+      "description": "Established in 1842 along the Military Road to protect the Permanent Indian Frontier. Became a flashpoint during Bleeding Kansas (1854-1861) and served as a major Union base during the Civil War. National Park Service site with restored buildings and open grounds.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Scott NHS - NPS managed, open to public, downtown Fort Scott, KS"
+    },
+    {
+      "name": "Fort Larned National Historic Site",
+      "type": "structure",
+      "latitude": 38.1833,
+      "longitude": -99.2186,
+      "year": 1859,
+      "description": "Established in 1859 to protect mail and freight traffic along the Santa Fe Trail and serve as an agency for the Kiowa and Comanche peoples. One of the best preserved frontier military forts in the US. National Park Service site with open grounds.",
+      "source": "National Park Service - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Larned NHS - NPS managed, open grounds and trails, near Larned, KS"
+    },
+    {
+      "name": "Hollenberg Pony Express Station State Historic Site",
+      "type": "stagecoach_stop",
+      "latitude": 39.8822,
+      "longitude": -96.9819,
+      "year": 1860,
+      "description": "Built in 1857-1858 by Gerat Hollenberg, this is the only unaltered, original Pony Express station still standing on its original site. Served the Pony Express route April 1860 to October 1861. Kansas state historic site with open grounds and visitor access.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.95,
+      "notes": "Hollenberg Station State Historic Site - Kansas SHPO, public access, near Hanover, KS"
+    },
+    {
+      "name": "Pawnee Rock State Historic Site",
+      "type": "locale",
+      "latitude": 38.2667,
+      "longitude": -98.9500,
+      "year": 1820,
+      "description": "A prominent sandstone outcrop on the Santa Fe Trail used as a landmark by traders, explorers, and military expeditions from the 1820s through the 1870s. Kit Carson, Zebulon Pike, and thousands of westward migrants carved their names here. Kansas state historic site, open to the public.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.95,
+      "notes": "Pawnee Rock State Historic Site - publicly owned, open grounds, near Great Bend, KS"
+    },
+    {
+      "name": "Fort Hays State Historic Site",
+      "type": "structure",
+      "latitude": 38.8722,
+      "longitude": -99.3306,
+      "year": 1865,
+      "description": "Established in 1865 to protect workers building the Kansas Pacific Railroad and to maintain order on the plains. Buffalo Bill Cody served as a scout here. George Custer commanded troops from this post. Kansas state historic site with original buildings and open grounds.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.95,
+      "notes": "Fort Hays State Historic Site - Kansas SHPO, public access, in Hays, KS"
+    },
+    {
+      "name": "Marais des Cygnes Massacre State Historic Site",
+      "type": "battle",
+      "latitude": 38.3581,
+      "longitude": -94.8283,
+      "year": 1858,
+      "description": "Site of the May 19, 1858 massacre where pro-slavery raiders under Charles Hamilton killed five Free State settlers and wounded five others during the Bleeding Kansas conflict. Commemorated by John Greenleaf Whittier in verse. Kansas state historic site, open to the public.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.92,
+      "notes": "Marais des Cygnes Massacre State Historic Site - publicly owned, near Trading Post, KS"
+    },
+    {
+      "name": "Black Jack Battlefield and Nature Park",
+      "type": "battle",
+      "latitude": 38.7875,
+      "longitude": -95.1875,
+      "year": 1856,
+      "description": "Site of the Battle of Black Jack on June 2, 1856, the first pitched battle between pro-slavery and Free State forces during Bleeding Kansas. John Brown led the Free State forces to victory. Now a county-owned public park and nature preserve with open grounds.",
+      "source": "Douglas County / Black Jack Battlefield Trust - Public Land",
+      "confidence": 0.92,
+      "notes": "Black Jack Battlefield and Nature Park - publicly accessible, near Baldwin City, KS"
+    },
+    {
+      "name": "Kaw Mission State Historic Site",
+      "type": "structure",
+      "latitude": 38.6606,
+      "longitude": -96.4939,
+      "year": 1851,
+      "description": "Methodist mission established in 1851 to educate Kaw (Kansa) Nation children, located on the Santa Fe Trail in Council Grove. The building served as a school, church, and community center for the growing trail town. Kansas state historic site with open grounds on the National Historic Landmark trail corridor.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.93,
+      "notes": "Kaw Mission State Historic Site - publicly owned, Council Grove, KS - Santa Fe Trail NHT corridor"
+    },
+    {
+      "name": "Alcove Spring Historic Site",
+      "type": "trail",
+      "latitude": 39.8667,
+      "longitude": -96.7833,
+      "year": 1846,
+      "description": "Natural spring and campsite along the Oregon Trail used extensively by emigrant wagon trains from 1841 onward. The Donner-Reed Party camped here in May 1846, where Edwin Bryant named the spring. Petroglyphs and carved pioneer names remain. Kansas state historic site and public land.",
+      "source": "Kansas Historical Society - Public Land",
+      "confidence": 0.93,
+      "notes": "Alcove Spring Historic Site - publicly owned, near Blue Rapids, KS - Oregon Trail corridor"
+    }
+  ]
+}

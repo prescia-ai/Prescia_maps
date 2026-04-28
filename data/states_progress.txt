@@ -6,7 +6,7 @@
 [ ] Arizona
 [ ] Arkansas
 [ ] California
-[ ] Colorado
+[X] Colorado
 [ ] Connecticut
 [ ] Delaware
 [ ] Florida
@@ -16,7 +16,7 @@
 [ ] Illinois
 [ ] Indiana
 [ ] Iowa
-[ ] Kansas
+[X] Kansas
 [ ] Kentucky
 [ ] Louisiana
 [ ] Maine
