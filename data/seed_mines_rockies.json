@@ -10,6 +10,7 @@
   "mines": [
     {
       "name": "Cresson Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7607,
@@ -24,6 +25,7 @@
     },
     {
       "name": "Portland Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.717,
@@ -38,6 +40,7 @@
     },
     {
       "name": "Independence Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7724,
@@ -52,6 +55,7 @@
     },
     {
       "name": "Vindicator Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7911,
@@ -66,6 +70,7 @@
     },
     {
       "name": "Ajax Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7346,
@@ -80,6 +85,7 @@
     },
     {
       "name": "Strong Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7102,
@@ -94,6 +100,7 @@
     },
     {
       "name": "Isabella Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6872,
@@ -108,6 +115,7 @@
     },
     {
       "name": "Modoc Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.762,
@@ -122,6 +130,7 @@
     },
     {
       "name": "Victor Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7105,
@@ -136,6 +145,7 @@
     },
     {
       "name": "El Paso Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7811,
@@ -150,6 +160,7 @@
     },
     {
       "name": "Granite Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7807,
@@ -164,6 +175,7 @@
     },
     {
       "name": "Pharmacist Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7248,
@@ -178,6 +190,7 @@
     },
     {
       "name": "Last Dollar Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7989,
@@ -192,6 +205,7 @@
     },
     {
       "name": "Anchoria-Leland Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6951,
@@ -206,6 +220,7 @@
     },
     {
       "name": "Elkton Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7857,
@@ -220,6 +235,7 @@
     },
     {
       "name": "Mary McKinney Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7809,
@@ -234,6 +250,7 @@
     },
     {
       "name": "C.O.D. Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7483,
@@ -248,6 +265,7 @@
     },
     {
       "name": "Findley Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7294,
@@ -262,6 +280,7 @@
     },
     {
       "name": "Gold Coin Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7835,
@@ -276,6 +295,7 @@
     },
     {
       "name": "Specimen Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7874,
@@ -290,6 +310,7 @@
     },
     {
       "name": "Blue Flag Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7685,
@@ -304,6 +325,7 @@
     },
     {
       "name": "Deadwood Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7113,
@@ -318,6 +340,7 @@
     },
     {
       "name": "Acacia Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6936,
@@ -332,6 +355,7 @@
     },
     {
       "name": "Doctor Jack Pot Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6961,
@@ -346,6 +370,7 @@
     },
     {
       "name": "Economic Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7603,
@@ -360,6 +385,7 @@
     },
     {
       "name": "Emma Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7284,
@@ -374,6 +400,7 @@
     },
     {
       "name": "Franklin Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.716,
@@ -388,6 +415,7 @@
     },
     {
       "name": "Galley Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7618,
@@ -402,6 +430,7 @@
     },
     {
       "name": "Golden Cycle Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7045,
@@ -416,6 +445,7 @@
     },
     {
       "name": "High Five Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7036,
@@ -430,6 +460,7 @@
     },
     {
       "name": "Hull City Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.8027,
@@ -444,6 +475,7 @@
     },
     {
       "name": "Joe Dandy Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7508,
@@ -458,6 +490,7 @@
     },
     {
       "name": "Junior Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7851,
@@ -472,6 +505,7 @@
     },
     {
       "name": "Kathleen Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7115,
@@ -486,6 +520,7 @@
     },
     {
       "name": "Lida Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7219,
@@ -500,6 +535,7 @@
     },
     {
       "name": "Lone Star Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7093,
@@ -514,6 +550,7 @@
     },
     {
       "name": "Lucky Bell Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7892,
@@ -528,6 +565,7 @@
     },
     {
       "name": "Majestic Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7627,
@@ -542,6 +580,7 @@
     },
     {
       "name": "Midget Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7937,
@@ -556,6 +595,7 @@
     },
     {
       "name": "Morning Glory Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7158,
@@ -570,6 +610,7 @@
     },
     {
       "name": "Mountain Beauty Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7514,
@@ -584,6 +625,7 @@
     },
     {
       "name": "Mountain Slide Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7542,
@@ -598,6 +640,7 @@
     },
     {
       "name": "New York Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7319,
@@ -612,6 +655,7 @@
     },
     {
       "name": "Night Hawk Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.8037,
@@ -626,6 +670,7 @@
     },
     {
       "name": "Ophir Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6949,
@@ -640,6 +685,7 @@
     },
     {
       "name": "Pauper Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6972,
@@ -654,6 +700,7 @@
     },
     {
       "name": "Phenix Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.779,
@@ -668,6 +715,7 @@
     },
     {
       "name": "Plymouth Rock Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6916,
@@ -682,6 +730,7 @@
     },
     {
       "name": "Poverty Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.8035,
@@ -696,6 +745,7 @@
     },
     {
       "name": "Prince Albert Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.8005,
@@ -710,6 +760,7 @@
     },
     {
       "name": "Red Bird Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6854,
@@ -724,6 +775,7 @@
     },
     {
       "name": "Rexford Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7658,
@@ -738,6 +790,7 @@
     },
     {
       "name": "Rochester Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.716,
@@ -752,6 +805,7 @@
     },
     {
       "name": "Rock Foundry Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6974,
@@ -766,6 +820,7 @@
     },
     {
       "name": "Scarlett Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7384,
@@ -780,6 +835,7 @@
     },
     {
       "name": "Silver Dollar Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7891,
@@ -794,6 +850,7 @@
     },
     {
       "name": "Snowbird Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7441,
@@ -808,6 +865,7 @@
     },
     {
       "name": "Spring Creek Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7935,
@@ -822,6 +880,7 @@
     },
     {
       "name": "Standley Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7198,
@@ -836,6 +895,7 @@
     },
     {
       "name": "Summit Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7571,
@@ -850,6 +910,7 @@
     },
     {
       "name": "Tidal Wave Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7755,
@@ -864,6 +925,7 @@
     },
     {
       "name": "Triangle Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7774,
@@ -878,6 +940,7 @@
     },
     {
       "name": "Two Bears Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6841,
@@ -892,6 +955,7 @@
     },
     {
       "name": "Union Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6863,
@@ -906,6 +970,7 @@
     },
     {
       "name": "Ute Chief Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7894,
@@ -920,6 +985,7 @@
     },
     {
       "name": "Vanderbilt Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7209,
@@ -934,6 +1000,7 @@
     },
     {
       "name": "Victor Gold Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7894,
@@ -948,6 +1015,7 @@
     },
     {
       "name": "Waverley Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6943,
@@ -962,6 +1030,7 @@
     },
     {
       "name": "Whittier Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.6923,
@@ -976,6 +1045,7 @@
     },
     {
       "name": "Wild Horse Mine",
+      "type": "mine",
       "district": "Cripple Creek",
       "state": "Colorado",
       "latitude": 38.7759,
@@ -990,6 +1060,7 @@
     },
     {
       "name": "Chrysolite Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2473,
@@ -1004,6 +1075,7 @@
     },
     {
       "name": "Robert E. Lee Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2242,
@@ -1018,6 +1090,7 @@
     },
     {
       "name": "Little Pittsburgh Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2415,
@@ -1032,6 +1105,7 @@
     },
     {
       "name": "Carbonate Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2543,
@@ -1046,6 +1120,7 @@
     },
     {
       "name": "Iron Silver Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2171,
@@ -1060,6 +1135,7 @@
     },
     {
       "name": "Morning Star Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3045,
@@ -1074,6 +1150,7 @@
     },
     {
       "name": "Ibex Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2432,
@@ -1088,6 +1165,7 @@
     },
     {
       "name": "Adelaide Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2083,
@@ -1102,6 +1180,7 @@
     },
     {
       "name": "Agassiz Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2322,
@@ -1116,6 +1195,7 @@
     },
     {
       "name": "American Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2203,
@@ -1130,6 +1210,7 @@
     },
     {
       "name": "August Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2028,
@@ -1144,6 +1225,7 @@
     },
     {
       "name": "Black Cloud Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2202,
@@ -1158,6 +1240,7 @@
     },
     {
       "name": "Blue Danube Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2896,
@@ -1172,6 +1255,7 @@
     },
     {
       "name": "Boss Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2212,
@@ -1186,6 +1270,7 @@
     },
     {
       "name": "Breece Iron Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2186,
@@ -1200,6 +1285,7 @@
     },
     {
       "name": "Carbonate King Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2979,
@@ -1214,6 +1300,7 @@
     },
     {
       "name": "Catalpa Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.247,
@@ -1228,6 +1315,7 @@
     },
     {
       "name": "Centennial Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2838,
@@ -1242,6 +1330,7 @@
     },
     {
       "name": "Chicago Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2057,
@@ -1256,6 +1345,7 @@
     },
     {
       "name": "Clara Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2416,
@@ -1270,6 +1360,7 @@
     },
     {
       "name": "Coliseum Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2752,
@@ -1284,6 +1375,7 @@
     },
     {
       "name": "Colonel Sellers Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3033,
@@ -1298,6 +1390,7 @@
     },
     {
       "name": "Combination Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2393,
@@ -1312,6 +1405,7 @@
     },
     {
       "name": "Corona Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2898,
@@ -1326,6 +1420,7 @@
     },
     {
       "name": "Denver City Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2159,
@@ -1340,6 +1435,7 @@
     },
     {
       "name": "Drum Lummox Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2414,
@@ -1354,6 +1450,7 @@
     },
     {
       "name": "Dunkin Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2225,
@@ -1368,6 +1465,7 @@
     },
     {
       "name": "Eldon Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2437,
@@ -1382,6 +1480,7 @@
     },
     {
       "name": "Evening Star Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2555,
@@ -1396,6 +1495,7 @@
     },
     {
       "name": "Excelsior Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3049,
@@ -1410,6 +1510,7 @@
     },
     {
       "name": "Falcon Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3016,
@@ -1424,6 +1525,7 @@
     },
     {
       "name": "Fifth Wheel Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2884,
@@ -1438,6 +1540,7 @@
     },
     {
       "name": "Forest Queen Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2484,
@@ -1452,6 +1555,7 @@
     },
     {
       "name": "Fourth of July Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2391,
@@ -1466,6 +1570,7 @@
     },
     {
       "name": "German Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2367,
@@ -1480,6 +1585,7 @@
     },
     {
       "name": "Globe Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2242,
@@ -1494,6 +1600,7 @@
     },
     {
       "name": "Gold Flint Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2451,
@@ -1508,6 +1615,7 @@
     },
     {
       "name": "Grand Central Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3003,
@@ -1522,6 +1630,7 @@
     },
     {
       "name": "Hibernia Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2561,
@@ -1536,6 +1645,7 @@
     },
     {
       "name": "Highland Chief Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.212,
@@ -1550,6 +1660,7 @@
     },
     {
       "name": "Highland Mary Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.3016,
@@ -1564,6 +1675,7 @@
     },
     {
       "name": "Horseshoe Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2546,
@@ -1578,6 +1690,7 @@
     },
     {
       "name": "Ida Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2013,
@@ -1592,6 +1705,7 @@
     },
     {
       "name": "John Jay Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2503,
@@ -1606,6 +1720,7 @@
     },
     {
       "name": "Kansas Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2123,
@@ -1620,6 +1735,7 @@
     },
     {
       "name": "King Solomon Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2038,
@@ -1634,6 +1750,7 @@
     },
     {
       "name": "La Plata Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2605,
@@ -1648,6 +1765,7 @@
     },
     {
       "name": "Lazarus Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2209,
@@ -1662,6 +1780,7 @@
     },
     {
       "name": "Lead Chief Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2929,
@@ -1676,6 +1795,7 @@
     },
     {
       "name": "Matchless Mine",
+      "type": "mine",
       "district": "Leadville",
       "state": "Colorado",
       "latitude": 39.2604,
@@ -1690,6 +1810,7 @@
     },
     {
       "name": "Smuggler-Union Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9281,
@@ -1704,6 +1825,7 @@
     },
     {
       "name": "Tomboy Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9395,
@@ -1718,6 +1840,7 @@
     },
     {
       "name": "Sheridan Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9045,
@@ -1732,6 +1855,7 @@
     },
     {
       "name": "Nellie Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9083,
@@ -1746,6 +1870,7 @@
     },
     {
       "name": "Pandora Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9559,
@@ -1760,6 +1885,7 @@
     },
     {
       "name": "Alta Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9168,
@@ -1774,6 +1900,7 @@
     },
     {
       "name": "Argentine Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.89,
@@ -1788,6 +1915,7 @@
     },
     {
       "name": "Black Bear Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9918,
@@ -1802,6 +1930,7 @@
     },
     {
       "name": "Butterfly-Terrible Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.8901,
@@ -1816,6 +1945,7 @@
     },
     {
       "name": "Carbonero Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9112,
@@ -1830,6 +1960,7 @@
     },
     {
       "name": "Cimarron Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9789,
@@ -1844,6 +1975,7 @@
     },
     {
       "name": "Columbus Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9226,
@@ -1858,6 +1990,7 @@
     },
     {
       "name": "Confidence Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9737,
@@ -1872,6 +2005,7 @@
     },
     {
       "name": "Corn Stalk Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9493,
@@ -1886,6 +2020,7 @@
     },
     {
       "name": "Esperanza Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9539,
@@ -1900,6 +2035,7 @@
     },
     {
       "name": "Gold King Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9719,
@@ -1914,6 +2050,7 @@
     },
     {
       "name": "Humboldt Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.955,
@@ -1928,6 +2065,7 @@
     },
     {
       "name": "Japan Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.8968,
@@ -1942,6 +2080,7 @@
     },
     {
       "name": "Kangaroo Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.8938,
@@ -1956,6 +2095,7 @@
     },
     {
       "name": "Liberty Bell Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.912,
@@ -1970,6 +2110,7 @@
     },
     {
       "name": "Lone Tree Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9609,
@@ -1984,6 +2125,7 @@
     },
     {
       "name": "Louise Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9518,
@@ -1998,6 +2140,7 @@
     },
     {
       "name": "Mendota Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9357,
@@ -2012,6 +2155,7 @@
     },
     {
       "name": "Montezuma Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9751,
@@ -2026,6 +2170,7 @@
     },
     {
       "name": "Nevada Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9286,
@@ -2040,6 +2185,7 @@
     },
     {
       "name": "Newport Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.8824,
@@ -2054,6 +2200,7 @@
     },
     {
       "name": "Ohio Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9521,
@@ -2068,6 +2215,7 @@
     },
     {
       "name": "Ottawa Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.9635,
@@ -2082,6 +2230,7 @@
     },
     {
       "name": "Philadelphia Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.929,
@@ -2096,6 +2245,7 @@
     },
     {
       "name": "Sherwood Mine",
+      "type": "mine",
       "district": "Telluride",
       "state": "Colorado",
       "latitude": 37.8903,
@@ -2110,6 +2260,7 @@
     },
     {
       "name": "Sunnyside Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8564,
@@ -2124,6 +2275,7 @@
     },
     {
       "name": "Iowa Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8488,
@@ -2138,6 +2290,7 @@
     },
     {
       "name": "Old Hundred Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7733,
@@ -2152,6 +2305,7 @@
     },
     {
       "name": "Pride of the West Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7909,
@@ -2166,6 +2320,7 @@
     },
     {
       "name": "Silver Lake Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8446,
@@ -2180,6 +2335,7 @@
     },
     {
       "name": "Mayflower Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8559,
@@ -2194,6 +2350,7 @@
     },
     {
       "name": "Aspen Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7844,
@@ -2208,6 +2365,7 @@
     },
     {
       "name": "Belcher Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8428,
@@ -2222,6 +2380,7 @@
     },
     {
       "name": "Black Dwarf Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8017,
@@ -2236,6 +2395,7 @@
     },
     {
       "name": "Brown Mountain Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.774,
@@ -2250,6 +2410,7 @@
     },
     {
       "name": "Buffalo Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8521,
@@ -2264,6 +2425,7 @@
     },
     {
       "name": "Congress Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8462,
@@ -2278,6 +2440,7 @@
     },
     {
       "name": "Dives Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7597,
@@ -2292,6 +2455,7 @@
     },
     {
       "name": "Emperor Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7935,
@@ -2306,6 +2470,7 @@
     },
     {
       "name": "Eureka Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8452,
@@ -2320,6 +2485,7 @@
     },
     {
       "name": "Florence Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8462,
@@ -2334,6 +2500,7 @@
     },
     {
       "name": "Frisco Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8436,
@@ -2348,6 +2515,7 @@
     },
     {
       "name": "Galena Queen Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8529,
@@ -2362,6 +2530,7 @@
     },
     {
       "name": "Grand View Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7815,
@@ -2376,6 +2545,7 @@
     },
     {
       "name": "Green Mountain Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8076,
@@ -2390,6 +2560,7 @@
     },
     {
       "name": "Highland Mary Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8445,
@@ -2404,6 +2575,7 @@
     },
     {
       "name": "Iron Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7596,
@@ -2418,6 +2590,7 @@
     },
     {
       "name": "King Solomon Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.7931,
@@ -2432,6 +2605,7 @@
     },
     {
       "name": "Lark Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8634,
@@ -2446,6 +2620,7 @@
     },
     {
       "name": "Vermillion Mine",
+      "type": "mine",
       "district": "Silverton",
       "state": "Colorado",
       "latitude": 37.8276,
@@ -2460,6 +2635,7 @@
     },
     {
       "name": "Amethyst Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8923,
@@ -2474,6 +2650,7 @@
     },
     {
       "name": "Last Chance Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8885,
@@ -2488,6 +2665,7 @@
     },
     {
       "name": "Bachelor Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8913,
@@ -2502,6 +2680,7 @@
     },
     {
       "name": "Commodore Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8906,
@@ -2516,6 +2695,7 @@
     },
     {
       "name": "Solomon Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8138,
@@ -2530,6 +2710,7 @@
     },
     {
       "name": "Alpha Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8696,
@@ -2544,6 +2725,7 @@
     },
     {
       "name": "Arizona Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8586,
@@ -2558,6 +2740,7 @@
     },
     {
       "name": "Campbell Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8387,
@@ -2572,6 +2755,7 @@
     },
     {
       "name": "Chance Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8269,
@@ -2586,6 +2770,7 @@
     },
     {
       "name": "Crown Prince Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8042,
@@ -2600,6 +2785,7 @@
     },
     {
       "name": "Daisy Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8525,
@@ -2614,6 +2800,7 @@
     },
     {
       "name": "Democrat Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8708,
@@ -2628,6 +2815,7 @@
     },
     {
       "name": "Emperor Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8368,
@@ -2642,6 +2830,7 @@
     },
     {
       "name": "Free Coinage Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8638,
@@ -2656,6 +2845,7 @@
     },
     {
       "name": "Gilt Edge Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8323,
@@ -2670,6 +2860,7 @@
     },
     {
       "name": "Happy Thought Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8688,
@@ -2684,6 +2875,7 @@
     },
     {
       "name": "Holy Moses Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8318,
@@ -2698,6 +2890,7 @@
     },
     {
       "name": "Idaho Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8402,
@@ -2712,6 +2905,7 @@
     },
     {
       "name": "Jumbo Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8155,
@@ -2726,6 +2920,7 @@
     },
     {
       "name": "Loma Prieta Mine",
+      "type": "mine",
       "district": "Creede",
       "state": "Colorado",
       "latitude": 37.8886,
@@ -2740,6 +2935,7 @@
     },
     {
       "name": "Belmont Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7352,
@@ -2754,6 +2950,7 @@
     },
     {
       "name": "Colorado Central Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6871,
@@ -2768,6 +2965,7 @@
     },
     {
       "name": "Dives-Pelican Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.663,
@@ -2782,6 +2980,7 @@
     },
     {
       "name": "Everett Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6974,
@@ -2796,6 +2995,7 @@
     },
     {
       "name": "Free America Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7154,
@@ -2810,6 +3010,7 @@
     },
     {
       "name": "Green Lake Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6984,
@@ -2824,6 +3025,7 @@
     },
     {
       "name": "Griffith Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7009,
@@ -2838,6 +3040,7 @@
     },
     {
       "name": "Hazeltine Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7267,
@@ -2852,6 +3055,7 @@
     },
     {
       "name": "Hidden Treasure Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6698,
@@ -2866,6 +3070,7 @@
     },
     {
       "name": "Mountain Lion Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7136,
@@ -2880,6 +3085,7 @@
     },
     {
       "name": "Perigo Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7285,
@@ -2894,6 +3100,7 @@
     },
     {
       "name": "Prospect Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.7168,
@@ -2908,6 +3115,7 @@
     },
     {
       "name": "Snowdrift Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6789,
@@ -2922,6 +3130,7 @@
     },
     {
       "name": "Star of the West Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.6826,
@@ -2936,6 +3145,7 @@
     },
     {
       "name": "Sussex Mine",
+      "type": "mine",
       "district": "Georgetown",
       "state": "Colorado",
       "latitude": 39.731,
@@ -2950,6 +3160,7 @@
     },
     {
       "name": "Bates Hunter Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7932,
@@ -2964,6 +3175,7 @@
     },
     {
       "name": "Black Hawk Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7756,
@@ -2978,6 +3190,7 @@
     },
     {
       "name": "Bob Tail Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7996,
@@ -2992,6 +3205,7 @@
     },
     {
       "name": "Casey Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8125,
@@ -3006,6 +3220,7 @@
     },
     {
       "name": "Chain Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8201,
@@ -3020,6 +3235,7 @@
     },
     {
       "name": "Fisk Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7685,
@@ -3034,6 +3250,7 @@
     },
     {
       "name": "Gunnell Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7741,
@@ -3048,6 +3265,7 @@
     },
     {
       "name": "Hidden Hand Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8014,
@@ -3062,6 +3280,7 @@
     },
     {
       "name": "Hubert Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7799,
@@ -3076,6 +3295,7 @@
     },
     {
       "name": "Illinois Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.7965,
@@ -3090,6 +3310,7 @@
     },
     {
       "name": "Mammoth Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8134,
@@ -3104,6 +3325,7 @@
     },
     {
       "name": "New York-Bates Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8076,
@@ -3118,6 +3340,7 @@
     },
     {
       "name": "Portland-Mackey Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8313,
@@ -3132,6 +3355,7 @@
     },
     {
       "name": "Quartz Hill Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8175,
@@ -3146,6 +3370,7 @@
     },
     {
       "name": "Topeka Mine",
+      "type": "mine",
       "district": "Central City",
       "state": "Colorado",
       "latitude": 39.8264,
@@ -3160,6 +3385,7 @@
     },
     {
       "name": "Delaware Flats Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.5167,
@@ -3174,6 +3400,7 @@
     },
     {
       "name": "French Gulch Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4787,
@@ -3188,6 +3415,7 @@
     },
     {
       "name": "Gold Pan Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4583,
@@ -3202,6 +3430,7 @@
     },
     {
       "name": "Lincoln Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.5049,
@@ -3216,6 +3445,7 @@
     },
     {
       "name": "Mons Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4924,
@@ -3230,6 +3460,7 @@
     },
     {
       "name": "Moonshine Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.443,
@@ -3244,6 +3475,7 @@
     },
     {
       "name": "Pug Ryan Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4605,
@@ -3258,6 +3490,7 @@
     },
     {
       "name": "Wellington Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4846,
@@ -3272,6 +3505,7 @@
     },
     {
       "name": "Bonanza Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4568,
@@ -3286,6 +3520,7 @@
     },
     {
       "name": "Carbonateville Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4996,
@@ -3300,6 +3535,7 @@
     },
     {
       "name": "Denver Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4727,
@@ -3314,6 +3550,7 @@
     },
     {
       "name": "Dyerville Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4734,
@@ -3328,6 +3565,7 @@
     },
     {
       "name": "Illinois Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4738,
@@ -3342,6 +3580,7 @@
     },
     {
       "name": "King Solomon Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.4886,
@@ -3356,6 +3595,7 @@
     },
     {
       "name": "Washington Mine",
+      "type": "mine",
       "district": "Breckenridge",
       "state": "Colorado",
       "latitude": 39.5131,
@@ -3370,6 +3610,7 @@
     },
     {
       "name": "Bachelor-Syracuse Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0134,
@@ -3384,6 +3625,7 @@
     },
     {
       "name": "Beaumont Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0111,
@@ -3398,6 +3640,7 @@
     },
     {
       "name": "Ben Butler Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0513,
@@ -3412,6 +3655,7 @@
     },
     {
       "name": "Camp Bird Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0165,
@@ -3426,6 +3670,7 @@
     },
     {
       "name": "Mineral Farm Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0267,
@@ -3440,6 +3685,7 @@
     },
     {
       "name": "Portland Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0006,
@@ -3454,6 +3700,7 @@
     },
     {
       "name": "Revenue Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0179,
@@ -3468,6 +3715,7 @@
     },
     {
       "name": "Smuggler Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0099,
@@ -3482,6 +3730,7 @@
     },
     {
       "name": "Uncompahgre Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0153,
@@ -3496,6 +3745,7 @@
     },
     {
       "name": "Yankee Girl Mine",
+      "type": "mine",
       "district": "Ouray",
       "state": "Colorado",
       "latitude": 38.0204,
@@ -3510,6 +3760,7 @@
     },
     {
       "name": "Anaconda Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0137,
@@ -3524,6 +3775,7 @@
     },
     {
       "name": "Alice Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9863,
@@ -3538,6 +3790,7 @@
     },
     {
       "name": "Badger Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9423,
@@ -3552,6 +3805,7 @@
     },
     {
       "name": "Bell Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9553,
@@ -3566,6 +3820,7 @@
     },
     {
       "name": "Belmont Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.945,
@@ -3580,6 +3835,7 @@
     },
     {
       "name": "Berkeley Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9644,
@@ -3594,6 +3850,7 @@
     },
     {
       "name": "Blue Jay Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0303,
@@ -3608,6 +3865,7 @@
     },
     {
       "name": "Boston and Montana Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0292,
@@ -3622,6 +3880,7 @@
     },
     {
       "name": "Buffalo Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9693,
@@ -3636,6 +3895,7 @@
     },
     {
       "name": "Butte and Boston Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9413,
@@ -3650,6 +3910,7 @@
     },
     {
       "name": "California Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.059,
@@ -3664,6 +3925,7 @@
     },
     {
       "name": "Cambridge Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.017,
@@ -3678,6 +3940,7 @@
     },
     {
       "name": "Carbon Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0172,
@@ -3692,6 +3955,7 @@
     },
     {
       "name": "Centennial Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.053,
@@ -3706,6 +3970,7 @@
     },
     {
       "name": "Clarke Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9414,
@@ -3720,6 +3985,7 @@
     },
     {
       "name": "Colusa Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9541,
@@ -3734,6 +4000,7 @@
     },
     {
       "name": "Copper King Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0067,
@@ -3748,6 +4015,7 @@
     },
     {
       "name": "Elm Orlu Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0229,
@@ -3762,6 +4030,7 @@
     },
     {
       "name": "Emma Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9591,
@@ -3776,6 +4045,7 @@
     },
     {
       "name": "Excelsior Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0288,
@@ -3790,6 +4060,7 @@
     },
     {
       "name": "Flora Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0373,
@@ -3804,6 +4075,7 @@
     },
     {
       "name": "Gagnon Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.952,
@@ -3818,6 +4090,7 @@
     },
     {
       "name": "Gambetta Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9764,
@@ -3832,6 +4105,7 @@
     },
     {
       "name": "Gold Note Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.054,
@@ -3846,6 +4120,7 @@
     },
     {
       "name": "Gray Rock Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0248,
@@ -3860,6 +4135,7 @@
     },
     {
       "name": "Green Mountain Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0219,
@@ -3874,6 +4150,7 @@
     },
     {
       "name": "High Ore Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9512,
@@ -3888,6 +4165,7 @@
     },
     {
       "name": "Highore Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.041,
@@ -3902,6 +4180,7 @@
     },
     {
       "name": "Idaho Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9535,
@@ -3916,6 +4195,7 @@
     },
     {
       "name": "John Young Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0329,
@@ -3930,6 +4210,7 @@
     },
     {
       "name": "Kelly Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9904,
@@ -3944,6 +4225,7 @@
     },
     {
       "name": "Keltt Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9997,
@@ -3958,6 +4240,7 @@
     },
     {
       "name": "Lexington Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0409,
@@ -3972,6 +4255,7 @@
     },
     {
       "name": "Little Minah Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9517,
@@ -3986,6 +4270,7 @@
     },
     {
       "name": "Magazine Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0153,
@@ -4000,6 +4285,7 @@
     },
     {
       "name": "Meaderville Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0239,
@@ -4014,6 +4300,7 @@
     },
     {
       "name": "Michael Davitt Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0271,
@@ -4028,6 +4315,7 @@
     },
     {
       "name": "Mike Horse Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9714,
@@ -4042,6 +4330,7 @@
     },
     {
       "name": "Minnie Healey Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0036,
@@ -4056,6 +4345,7 @@
     },
     {
       "name": "Missoula Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9913,
@@ -4070,6 +4360,7 @@
     },
     {
       "name": "Montana Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9712,
@@ -4084,6 +4375,7 @@
     },
     {
       "name": "Mountain Con Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0387,
@@ -4098,6 +4390,7 @@
     },
     {
       "name": "Mountain View Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0448,
@@ -4112,6 +4405,7 @@
     },
     {
       "name": "Never Sweat Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9948,
@@ -4126,6 +4420,7 @@
     },
     {
       "name": "Nettie Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9845,
@@ -4140,6 +4435,7 @@
     },
     {
       "name": "Nipper Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0411,
@@ -4154,6 +4450,7 @@
     },
     {
       "name": "Original Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9645,
@@ -4168,6 +4465,7 @@
     },
     {
       "name": "Parrot Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9798,
@@ -4182,6 +4480,7 @@
     },
     {
       "name": "Pennsylvania Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 46.0231,
@@ -4196,6 +4495,7 @@
     },
     {
       "name": "Pittsmont Mine",
+      "type": "mine",
       "district": "Butte",
       "state": "Montana",
       "latitude": 45.9402,
@@ -4210,6 +4510,7 @@
     },
     {
       "name": "Alder Gulch Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2537,
@@ -4224,6 +4525,7 @@
     },
     {
       "name": "Baxter Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.29,
@@ -4238,6 +4540,7 @@
     },
     {
       "name": "Beutler Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3082,
@@ -4252,6 +4555,7 @@
     },
     {
       "name": "Black Picard Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2902,
@@ -4266,6 +4570,7 @@
     },
     {
       "name": "Bruner Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2544,
@@ -4280,6 +4585,7 @@
     },
     {
       "name": "Buckskin Joe Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3083,
@@ -4294,6 +4600,7 @@
     },
     {
       "name": "Cliff Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2983,
@@ -4308,6 +4615,7 @@
     },
     {
       "name": "Daylight Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2938,
@@ -4322,6 +4630,7 @@
     },
     {
       "name": "Duffield Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3131,
@@ -4336,6 +4645,7 @@
     },
     {
       "name": "Fritz Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3093,
@@ -4350,6 +4660,7 @@
     },
     {
       "name": "Gold Bug Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2686,
@@ -4364,6 +4675,7 @@
     },
     {
       "name": "Green Fancy Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2633,
@@ -4378,6 +4690,7 @@
     },
     {
       "name": "Gulch Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2942,
@@ -4392,6 +4705,7 @@
     },
     {
       "name": "Harvey Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2627,
@@ -4406,6 +4720,7 @@
     },
     {
       "name": "Henry Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2896,
@@ -4420,6 +4735,7 @@
     },
     {
       "name": "Highland Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3339,
@@ -4434,6 +4750,7 @@
     },
     {
       "name": "Jack Pot Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2715,
@@ -4448,6 +4765,7 @@
     },
     {
       "name": "Jackson Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2635,
@@ -4462,6 +4780,7 @@
     },
     {
       "name": "Jefferson Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2621,
@@ -4476,6 +4795,7 @@
     },
     {
       "name": "Johnson Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2941,
@@ -4490,6 +4810,7 @@
     },
     {
       "name": "June Bug Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3337,
@@ -4504,6 +4825,7 @@
     },
     {
       "name": "Keeley Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3088,
@@ -4518,6 +4840,7 @@
     },
     {
       "name": "Kent Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3242,
@@ -4532,6 +4855,7 @@
     },
     {
       "name": "Kimball Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.3245,
@@ -4546,6 +4870,7 @@
     },
     {
       "name": "Kirk Mine",
+      "type": "mine",
       "district": "Virginia City",
       "state": "Montana",
       "latitude": 45.2882,
@@ -4560,6 +4885,7 @@
     },
     {
       "name": "Bannack Quartz Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1416,
@@ -4574,6 +4900,7 @@
     },
     {
       "name": "Comstock Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.2097,
@@ -4588,6 +4915,7 @@
     },
     {
       "name": "Dempsey Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.199,
@@ -4602,6 +4930,7 @@
     },
     {
       "name": "Fielding Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1317,
@@ -4616,6 +4945,7 @@
     },
     {
       "name": "Gold Creek Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1298,
@@ -4630,6 +4960,7 @@
     },
     {
       "name": "Henry Plummer Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1757,
@@ -4644,6 +4975,7 @@
     },
     {
       "name": "Hornet Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.2145,
@@ -4658,6 +4990,7 @@
     },
     {
       "name": "Howard Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1938,
@@ -4672,6 +5005,7 @@
     },
     {
       "name": "Jackson Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1962,
@@ -4686,6 +5020,7 @@
     },
     {
       "name": "Johnson Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.172,
@@ -4700,6 +5035,7 @@
     },
     {
       "name": "Kirk Bannack Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1648,
@@ -4714,6 +5050,7 @@
     },
     {
       "name": "Lewistown Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.2141,
@@ -4728,6 +5065,7 @@
     },
     {
       "name": "Lincoln Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1809,
@@ -4742,6 +5080,7 @@
     },
     {
       "name": "Lucky Strike Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1916,
@@ -4756,6 +5095,7 @@
     },
     {
       "name": "Montana Belle Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1437,
@@ -4770,6 +5110,7 @@
     },
     {
       "name": "Nester Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1844,
@@ -4784,6 +5125,7 @@
     },
     {
       "name": "Noyes Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1406,
@@ -4798,6 +5140,7 @@
     },
     {
       "name": "Plumas Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1252,
@@ -4812,6 +5155,7 @@
     },
     {
       "name": "Silver Bow Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1784,
@@ -4826,6 +5170,7 @@
     },
     {
       "name": "Vigilante Mine",
+      "type": "mine",
       "district": "Bannack",
       "state": "Montana",
       "latitude": 45.1458,
@@ -4840,6 +5185,7 @@
     },
     {
       "name": "Carbonate Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8862,
@@ -4854,6 +5200,7 @@
     },
     {
       "name": "Clark Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.885,
@@ -4868,6 +5215,7 @@
     },
     {
       "name": "Democrat Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.893,
@@ -4882,6 +5230,7 @@
     },
     {
       "name": "Feeny Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8829,
@@ -4896,6 +5245,7 @@
     },
     {
       "name": "First Chance Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.864,
@@ -4910,6 +5260,7 @@
     },
     {
       "name": "Garnet Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8818,
@@ -4924,6 +5275,7 @@
     },
     {
       "name": "Globe Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8961,
@@ -4938,6 +5290,7 @@
     },
     {
       "name": "Gold Bug Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8433,
@@ -4952,6 +5305,7 @@
     },
     {
       "name": "Hidden Treasure Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8899,
@@ -4966,6 +5320,7 @@
     },
     {
       "name": "Jim Blaine Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8531,
@@ -4980,6 +5335,7 @@
     },
     {
       "name": "Mitchell Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8851,
@@ -4994,6 +5350,7 @@
     },
     {
       "name": "Nancy Hanks Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.9054,
@@ -5008,6 +5365,7 @@
     },
     {
       "name": "Pat Hennessy Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8695,
@@ -5022,6 +5380,7 @@
     },
     {
       "name": "Red Lion Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8332,
@@ -5036,6 +5395,7 @@
     },
     {
       "name": "Shamrock Mine",
+      "type": "mine",
       "district": "Garnet",
       "state": "Montana",
       "latitude": 46.8558,
@@ -5050,6 +5410,7 @@
     },
     {
       "name": "Bald Mountain Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5592,
@@ -5064,6 +5425,7 @@
     },
     {
       "name": "Broadwater Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6262,
@@ -5078,6 +5440,7 @@
     },
     {
       "name": "Buckley Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6366,
@@ -5092,6 +5455,7 @@
     },
     {
       "name": "Capital Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6115,
@@ -5106,6 +5470,7 @@
     },
     {
       "name": "Columbia Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5546,
@@ -5120,6 +5485,7 @@
     },
     {
       "name": "Comstock Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5933,
@@ -5134,6 +5500,7 @@
     },
     {
       "name": "Danvers Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6334,
@@ -5148,6 +5515,7 @@
     },
     {
       "name": "Empire Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6037,
@@ -5162,6 +5530,7 @@
     },
     {
       "name": "Galena Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5953,
@@ -5176,6 +5545,7 @@
     },
     {
       "name": "Granite Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5823,
@@ -5190,6 +5560,7 @@
     },
     {
       "name": "Green Gulch Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6113,
@@ -5204,6 +5575,7 @@
     },
     {
       "name": "Helena Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5807,
@@ -5218,6 +5590,7 @@
     },
     {
       "name": "Highland Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5769,
@@ -5232,6 +5605,7 @@
     },
     {
       "name": "Last Chance Gulch Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.6242,
@@ -5246,6 +5620,7 @@
     },
     {
       "name": "Montana Consolidated Mine",
+      "type": "mine",
       "district": "Helena",
       "state": "Montana",
       "latitude": 46.5919,
@@ -5260,6 +5635,7 @@
     },
     {
       "name": "Bi-Metallic Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3169,
@@ -5274,6 +5650,7 @@
     },
     {
       "name": "Black Pine Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3233,
@@ -5288,6 +5665,7 @@
     },
     {
       "name": "Blue Bird Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.37,
@@ -5302,6 +5680,7 @@
     },
     {
       "name": "Boulder Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3344,
@@ -5316,6 +5695,7 @@
     },
     {
       "name": "Collins Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.306,
@@ -5330,6 +5710,7 @@
     },
     {
       "name": "Commonwealth Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3515,
@@ -5344,6 +5725,7 @@
     },
     {
       "name": "Cordova Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3518,
@@ -5358,6 +5740,7 @@
     },
     {
       "name": "Delmonte Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3349,
@@ -5372,6 +5755,7 @@
     },
     {
       "name": "Douglas Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.326,
@@ -5386,6 +5770,7 @@
     },
     {
       "name": "Flint Creek Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3007,
@@ -5400,6 +5785,7 @@
     },
     {
       "name": "Granite Mountain Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3397,
@@ -5414,6 +5800,7 @@
     },
     {
       "name": "Hope Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3037,
@@ -5428,6 +5815,7 @@
     },
     {
       "name": "Independence Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3352,
@@ -5442,6 +5830,7 @@
     },
     {
       "name": "Noonday Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3704,
@@ -5456,6 +5845,7 @@
     },
     {
       "name": "Stonewall Mine",
+      "type": "mine",
       "district": "Philipsburg",
       "state": "Montana",
       "latitude": 46.3279,
@@ -5470,6 +5860,7 @@
     },
     {
       "name": "Elkhorn Belle Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3453,
@@ -5484,6 +5875,7 @@
     },
     {
       "name": "Elkhorn Bullion Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3372,
@@ -5498,6 +5890,7 @@
     },
     {
       "name": "Elkhorn Chief Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3061,
@@ -5512,6 +5905,7 @@
     },
     {
       "name": "Elkhorn Crown Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3556,
@@ -5526,6 +5920,7 @@
     },
     {
       "name": "Elkhorn Eagle Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3256,
@@ -5540,6 +5935,7 @@
     },
     {
       "name": "Elkhorn Gold Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3515,
@@ -5554,6 +5950,7 @@
     },
     {
       "name": "Elkhorn King Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3486,
@@ -5568,6 +5965,7 @@
     },
     {
       "name": "Elkhorn Queen Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3063,
@@ -5582,6 +5980,7 @@
     },
     {
       "name": "Elkhorn Silver Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.316,
@@ -5596,6 +5995,7 @@
     },
     {
       "name": "Elkhorn Star Mine",
+      "type": "mine",
       "district": "Elkhorn",
       "state": "Montana",
       "latitude": 46.3225,
@@ -5610,6 +6010,7 @@
     },
     {
       "name": "Atlantic Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4661,
@@ -5624,6 +6025,7 @@
     },
     {
       "name": "Carissa Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4996,
@@ -5638,6 +6040,7 @@
     },
     {
       "name": "Duncan Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4889,
@@ -5652,6 +6055,7 @@
     },
     {
       "name": "Emma Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4942,
@@ -5666,6 +6070,7 @@
     },
     {
       "name": "Ester Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4957,
@@ -5680,6 +6085,7 @@
     },
     {
       "name": "Flagstaff Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4851,
@@ -5694,6 +6100,7 @@
     },
     {
       "name": "Fortune Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4558,
@@ -5708,6 +6115,7 @@
     },
     {
       "name": "Garfield Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4979,
@@ -5722,6 +6130,7 @@
     },
     {
       "name": "Gold Hill Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5203,
@@ -5736,6 +6145,7 @@
     },
     {
       "name": "Golden Gate Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5169,
@@ -5750,6 +6160,7 @@
     },
     {
       "name": "Harvey Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5243,
@@ -5764,6 +6175,7 @@
     },
     {
       "name": "Independent Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.508,
@@ -5778,6 +6190,7 @@
     },
     {
       "name": "John Dale Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5429,
@@ -5792,6 +6205,7 @@
     },
     {
       "name": "Last Chance Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4391,
@@ -5806,6 +6220,7 @@
     },
     {
       "name": "Little Soldier Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4999,
@@ -5820,6 +6235,7 @@
     },
     {
       "name": "Lucky Shot Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5312,
@@ -5834,6 +6250,7 @@
     },
     {
       "name": "Nevada Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4929,
@@ -5848,6 +6265,7 @@
     },
     {
       "name": "North American Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.5145,
@@ -5862,6 +6280,7 @@
     },
     {
       "name": "Oregon Buttes Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.507,
@@ -5876,6 +6295,7 @@
     },
     {
       "name": "Pioneer Mine",
+      "type": "mine",
       "district": "South Pass",
       "state": "Wyoming",
       "latitude": 42.4866,
@@ -5890,6 +6310,7 @@
     },
     {
       "name": "Atlantic City Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4991,
@@ -5904,6 +6325,7 @@
     },
     {
       "name": "Buckeye Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.524,
@@ -5918,6 +6340,7 @@
     },
     {
       "name": "Burr Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5402,
@@ -5932,6 +6355,7 @@
     },
     {
       "name": "Continental Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5024,
@@ -5946,6 +6370,7 @@
     },
     {
       "name": "De Smet Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5295,
@@ -5960,6 +6385,7 @@
     },
     {
       "name": "Dry Gulch Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5418,
@@ -5974,6 +6400,7 @@
     },
     {
       "name": "Embar Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4775,
@@ -5988,6 +6415,7 @@
     },
     {
       "name": "Ghost Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5457,
@@ -6002,6 +6430,7 @@
     },
     {
       "name": "Golden Fleece Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5317,
@@ -6016,6 +6445,7 @@
     },
     {
       "name": "Hamilton Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4799,
@@ -6030,6 +6460,7 @@
     },
     {
       "name": "Iron Ore Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5418,
@@ -6044,6 +6475,7 @@
     },
     {
       "name": "Ingalls Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.5275,
@@ -6058,6 +6490,7 @@
     },
     {
       "name": "Lincoln Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4757,
@@ -6072,6 +6505,7 @@
     },
     {
       "name": "Miner Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4955,
@@ -6086,6 +6520,7 @@
     },
     {
       "name": "Pacific Mine",
+      "type": "mine",
       "district": "Atlantic City",
       "state": "Wyoming",
       "latitude": 42.4836,
@@ -6100,6 +6535,7 @@
     },
     {
       "name": "Battle Creek Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.2073,
@@ -6114,6 +6550,7 @@
     },
     {
       "name": "Ben Holt Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1756,
@@ -6128,6 +6565,7 @@
     },
     {
       "name": "Copperkettle Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.2317,
@@ -6142,6 +6580,7 @@
     },
     {
       "name": "Grand Encampment Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1813,
@@ -6156,6 +6595,7 @@
     },
     {
       "name": "Hack Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1734,
@@ -6170,6 +6610,7 @@
     },
     {
       "name": "Horseshoe Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1823,
@@ -6184,6 +6625,7 @@
     },
     {
       "name": "Keystone Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1628,
@@ -6198,6 +6640,7 @@
     },
     {
       "name": "North American Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.2341,
@@ -6212,6 +6655,7 @@
     },
     {
       "name": "Rambler Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1746,
@@ -6226,6 +6670,7 @@
     },
     {
       "name": "Rudefeha Mine",
+      "type": "mine",
       "district": "Encampment",
       "state": "Wyoming",
       "latitude": 41.1896,
@@ -6240,6 +6685,7 @@
     },
     {
       "name": "Centennial Gold Mine",
+      "type": "mine",
       "district": "Centennial",
       "state": "Wyoming",
       "latitude": 41.3473,
@@ -6254,6 +6700,7 @@
     },
     {
       "name": "Centennial Silver Mine",
+      "type": "mine",
       "district": "Centennial",
       "state": "Wyoming",
       "latitude": 41.324,
@@ -6268,6 +6715,7 @@
     },
     {
       "name": "Centennial Copper Mine",
+      "type": "mine",
       "district": "Centennial",
       "state": "Wyoming",
       "latitude": 41.321,
@@ -6282,6 +6730,7 @@
     },
     {
       "name": "Centennial Eagle Mine",
+      "type": "mine",
       "district": "Centennial",
       "state": "Wyoming",
       "latitude": 41.338,
@@ -6296,6 +6745,7 @@
     },
     {
       "name": "Centennial Star Mine",
+      "type": "mine",
       "district": "Centennial",
       "state": "Wyoming",
       "latitude": 41.3433,
@@ -6310,6 +6760,7 @@
     },
     {
       "name": "Atlanta Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8901,
@@ -6324,6 +6775,7 @@
     },
     {
       "name": "Boise Basin Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8884,
@@ -6338,6 +6790,7 @@
     },
     {
       "name": "Boulder Creek Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8039,
@@ -6352,6 +6805,7 @@
     },
     {
       "name": "Centennial Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8533,
@@ -6366,6 +6820,7 @@
     },
     {
       "name": "Chatcolet Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.7769,
@@ -6380,6 +6835,7 @@
     },
     {
       "name": "Clear Creek Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8306,
@@ -6394,6 +6850,7 @@
     },
     {
       "name": "Eagle Rock Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8053,
@@ -6408,6 +6865,7 @@
     },
     {
       "name": "Elk Creek Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8438,
@@ -6422,6 +6880,7 @@
     },
     {
       "name": "Elk Horn Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8474,
@@ -6436,6 +6895,7 @@
     },
     {
       "name": "Empire Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8523,
@@ -6450,6 +6910,7 @@
     },
     {
       "name": "Gambrinus Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8501,
@@ -6464,6 +6925,7 @@
     },
     {
       "name": "Gold Bug Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8464,
@@ -6478,6 +6940,7 @@
     },
     {
       "name": "Idaho Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8486,
@@ -6492,6 +6955,7 @@
     },
     {
       "name": "Jacoby Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8239,
@@ -6506,6 +6970,7 @@
     },
     {
       "name": "Kaiser Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8589,
@@ -6520,6 +6985,7 @@
     },
     {
       "name": "Loon Creek Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8064,
@@ -6534,6 +7000,7 @@
     },
     {
       "name": "Lucky Strike Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.7921,
@@ -6548,6 +7015,7 @@
     },
     {
       "name": "Maid of Erin Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8357,
@@ -6562,6 +7030,7 @@
     },
     {
       "name": "Ophir Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8347,
@@ -6576,6 +7045,7 @@
     },
     {
       "name": "Pioneerville Mine",
+      "type": "mine",
       "district": "Idaho City",
       "state": "Idaho",
       "latitude": 43.8707,
@@ -6590,6 +7060,7 @@
     },
     {
       "name": "Black Jack Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0227,
@@ -6604,6 +7075,7 @@
     },
     {
       "name": "Booneville Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0207,
@@ -6618,6 +7090,7 @@
     },
     {
       "name": "Buckeye Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9693,
@@ -6632,6 +7105,7 @@
     },
     {
       "name": "Florida Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0379,
@@ -6646,6 +7120,7 @@
     },
     {
       "name": "Flossie Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0383,
@@ -6660,6 +7135,7 @@
     },
     {
       "name": "Golden Chariot Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0117,
@@ -6674,6 +7150,7 @@
     },
     {
       "name": "Hays Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0384,
@@ -6688,6 +7165,7 @@
     },
     {
       "name": "Homestake Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9722,
@@ -6702,6 +7180,7 @@
     },
     {
       "name": "Idaho Jordan Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9335,
@@ -6716,6 +7195,7 @@
     },
     {
       "name": "Morning Star Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.982,
@@ -6730,6 +7210,7 @@
     },
     {
       "name": "New York Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.006,
@@ -6744,6 +7225,7 @@
     },
     {
       "name": "Ore No Name Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 43.0225,
@@ -6758,6 +7240,7 @@
     },
     {
       "name": "Poorman Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9439,
@@ -6772,6 +7255,7 @@
     },
     {
       "name": "Trade Dollar Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9348,
@@ -6786,6 +7270,7 @@
     },
     {
       "name": "War Eagle Mine",
+      "type": "mine",
       "district": "Silver City",
       "state": "Idaho",
       "latitude": 42.9938,
@@ -6800,6 +7285,7 @@
     },
     {
       "name": "Concord Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2509,
@@ -6814,6 +7300,7 @@
     },
     {
       "name": "Gold Finch Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.3051,
@@ -6828,6 +7315,7 @@
     },
     {
       "name": "Idaho Consolidated Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2582,
@@ -6842,6 +7330,7 @@
     },
     {
       "name": "Miller Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2436,
@@ -6856,6 +7345,7 @@
     },
     {
       "name": "North Star Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2584,
@@ -6870,6 +7360,7 @@
     },
     {
       "name": "Oregon Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2397,
@@ -6884,6 +7375,7 @@
     },
     {
       "name": "Rehberg Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2432,
@@ -6898,6 +7390,7 @@
     },
     {
       "name": "Revenue Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2913,
@@ -6912,6 +7405,7 @@
     },
     {
       "name": "Salmon River Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.3161,
@@ -6926,6 +7420,7 @@
     },
     {
       "name": "Thunder Mountain Mine",
+      "type": "mine",
       "district": "Warren",
       "state": "Idaho",
       "latitude": 45.2978,
@@ -6940,6 +7435,7 @@
     },
     {
       "name": "De Lamar Mine",
+      "type": "mine",
       "district": "De Lamar",
       "state": "Idaho",
       "latitude": 42.8749,
@@ -6954,6 +7450,7 @@
     },
     {
       "name": "De Lamar Silver Mine",
+      "type": "mine",
       "district": "De Lamar",
       "state": "Idaho",
       "latitude": 42.8794,
@@ -6968,6 +7465,7 @@
     },
     {
       "name": "Oro Fino Mine",
+      "type": "mine",
       "district": "De Lamar",
       "state": "Idaho",
       "latitude": 42.9071,
@@ -6982,6 +7480,7 @@
     },
     {
       "name": "Silver Butte Mine",
+      "type": "mine",
       "district": "De Lamar",
       "state": "Idaho",
       "latitude": 42.8722,
@@ -6996,6 +7495,7 @@
     },
     {
       "name": "Trade Dollar Mine",
+      "type": "mine",
       "district": "De Lamar",
       "state": "Idaho",
       "latitude": 42.907,
