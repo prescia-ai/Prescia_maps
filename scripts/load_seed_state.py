@@ -71,26 +71,79 @@ BATCH_SIZE = 200
 async def load_state_seed(
     state_code: str, dry_run: bool = False
 ) -> Dict[str, int]:
-    """Load seed data for a single state and return insert/skip counts."""
-    state_code = state_code.upper()
-    if state_code not in STATE_CODES:
-        raise ValueError(f"Invalid state code: {state_code}")
+    """Load seed data for a state or region, handling multiple JSON formats.
 
-    seed_file = _DATA_DIR / f"seed_{state_code.lower()}.json"
-    if not seed_file.exists():
-        raise FileNotFoundError(f"Seed file not found: {seed_file}")
+    ``state_code`` may be a two-letter state code (e.g. ``"OK"``), a region
+    name (e.g. ``"western"``), or any other identifier used to locate a seed
+    file.
 
-    state_name = STATE_CODES[state_code]
-    logger.info("Loading seed data for %s from %s", state_name, seed_file.name)
+    Supported formats:
+      1. Flat array:              [{...}, {...}]
+      2. Nested with "locations": {"state": "X", "locations": [{...}]}
+      3. Nested with "mines":     {"region": "X", "mines": [{...}]}
+
+    File name patterns tried in order:
+      - seed_{code}.json           (e.g. seed_ok.json)
+      - seed_{full_state_name}.json (e.g. seed_oklahoma.json)
+      - {code}_seed.json           (e.g. battles_seed.json)
+      - seed_mines_{code}.json     (e.g. seed_mines_western.json)
+    """
+    code_lower = state_code.lower()
+    code_upper = state_code.upper()
+
+    # Build candidate file paths in priority order
+    candidate_files: List[Path] = [
+        _DATA_DIR / f"seed_{code_lower}.json",
+    ]
+    if code_upper in STATE_CODES:
+        full_name = STATE_CODES[code_upper].lower().replace(" ", "_")
+        candidate_files.append(_DATA_DIR / f"seed_{full_name}.json")
+    candidate_files.append(_DATA_DIR / f"{code_lower}_seed.json")
+    candidate_files.append(_DATA_DIR / f"seed_mines_{code_lower}.json")
+
+    seed_file = next((f for f in candidate_files if f.exists()), None)
+    if seed_file is None:
+        tried = ", ".join(f.name for f in candidate_files)
+        raise FileNotFoundError(
+            f"Seed file not found for {state_code!r}. Tried: {tried}"
+        )
+
+    logger.info("Loading seed data for %s from %s", code_upper, seed_file.name)
 
     with open(seed_file, encoding="utf-8") as fh:
-        data: Dict[str, Any] = json.load(fh)
+        data: Any = json.load(fh)
 
-    raw_locations: List[Dict[str, Any]] = data.get("locations", [])
+    # Auto-detect format and extract the list of location records
+    if isinstance(data, list):
+        # Format 1: Flat array [{...}, {...}]
+        raw_locations: List[Dict[str, Any]] = data
+        logger.info("Detected flat array format.")
+    elif isinstance(data, dict):
+        if "locations" in data:
+            # Format 2: Nested with "locations" key
+            raw_locations = data["locations"]
+            label = data.get("state", code_upper)
+            logger.info("Detected nested format with 'locations' array for %s.", label)
+        elif "mines" in data:
+            # Format 3: Nested with "mines" key
+            raw_locations = data["mines"]
+            label = data.get("region", code_upper)
+            logger.info("Detected nested format with 'mines' array for %s.", label)
+        else:
+            raise ValueError(
+                f"Invalid JSON format in {seed_file.name}: expected array or "
+                "object with 'locations' or 'mines' key"
+            )
+    else:
+        raise ValueError(
+            f"Invalid JSON format in {seed_file.name}: expected array or object, "
+            f"got {type(data).__name__}"
+        )
+
     logger.info("Found %d locations in seed file.", len(raw_locations))
 
     if dry_run:
-        logger.info("[DRY-RUN] Preview for %s:", state_name)
+        logger.info("[DRY-RUN] Preview for %s:", code_upper)
         for loc in raw_locations:
             coords = "%.4f, %.4f" % (loc.get("latitude", 0), loc.get("longitude", 0))
             logger.info(
@@ -161,7 +214,7 @@ async def load_state_seed(
             chunk = batch[start : start + BATCH_SIZE]
             total_inserted += await insert_location_batch(session, chunk)
 
-    logger.info("Inserted %d records for %s.", total_inserted, state_name)
+    logger.info("Inserted %d records for %s.", total_inserted, code_upper)
     await engine.dispose()
 
     return {
