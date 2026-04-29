@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atchison, Topeka and Santa Fe Railway",
+        "type": "railroad",
+        "source": "AURIK",
+        "years": "1868-1940s",
+        "description": "The Atchison, Topeka and Santa Fe Railway (AT&SF) was one of the longest railroads in the United States, stretching from Kansas City through the Southwest to Los Angeles. It largely followed the historic Santa Fe Trail through the Great Plains and crossed into New Mexico via Raton Pass. Division points like Newton, Dodge City, and La Junta saw enormous amounts of commerce and worker activity, making them prime metal detecting locations. The Raton Pass corridor and abandoned section houses along the desert stretches through Arizona and New Mexico regularly yield late-19th to early-20th century artifacts."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-94.5786, 39.0997],
+          [-95.6659, 39.0559],
+          [-96.6673, 38.9592],
+          [-97.6114, 37.6872],
+          [-98.0, 37.7],
+          [-99.9929, 37.753],
+          [-100.017, 37.753],
+          [-101.3, 37.75],
+          [-103.5, 37.3],
+          [-104.509, 37.687],
+          [-104.839, 37.169],
+          [-104.441, 36.909],
+          [-106.65, 35.0844],
+          [-106.6504, 35.0844],
+          [-107.0, 35.0],
+          [-111.093, 35.198],
+          [-114.612, 34.848],
+          [-116.977, 34.847],
+          [-117.289, 34.108],
+          [-118.2437, 34.0522]
+        ]
+      }
+    }
+  ]
+}

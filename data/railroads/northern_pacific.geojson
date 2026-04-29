@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Northern Pacific Railway",
+        "type": "railroad",
+        "source": "AURIK",
+        "years": "1864-1940s",
+        "description": "The Northern Pacific Railway was the second transcontinental railroad, completed in 1883, running from Lake Superior to Puget Sound. It opened vast territories in the northern Great Plains and Pacific Northwest to settlement, and was built partly through lands that had seen significant conflict during the Plains Indian Wars. Division points like Bismarck, Miles City, and Livingston were major service hubs with large machine shops and roundhouses. Abandoned town sites, section houses, and division point yards along the Yellowstone River valley and Montana High Line corridor offer rich metal detecting opportunities, with coins, railroad hardware, military artifacts, and homestead-era items."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-93.2650, 44.9778],
+          [-94.5, 45.0],
+          [-96.0, 46.8],
+          [-97.0, 46.9],
+          [-100.779, 46.808],
+          [-101.0, 46.8],
+          [-104.0, 46.5],
+          [-105.837, 46.408],
+          [-108.5, 45.8],
+          [-108.503, 45.783],
+          [-110.56, 45.663],
+          [-112.0, 46.6],
+          [-113.999, 46.872],
+          [-114.342, 47.5],
+          [-117.426, 47.659],
+          [-117.426, 47.659],
+          [-122.2, 47.4],
+          [-122.4443, 47.2529]
+        ]
+      }
+    }
+  ]
+}

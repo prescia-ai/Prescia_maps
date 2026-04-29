@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "First Transcontinental Railroad",
+        "type": "railroad",
+        "source": "AURIK",
+        "years": "1863-1869",
+        "description": "The First Transcontinental Railroad, completed May 10, 1869 at Promontory Summit, Utah, linked the Union Pacific (building west from Omaha) and the Central Pacific (building east from Sacramento). Built largely by Civil War veterans and Chinese laborers, it transformed commerce and migration across the continent. Division points, water stops, and construction camp sites along this route are highly productive for metal detecting, yielding railroad spikes, coins, buttons, and personal effects from the massive workforce that built it."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-95.9345, 41.2565],
+          [-97.0, 41.1],
+          [-99.0, 41.1233],
+          [-100.764, 41.1233],
+          [-101.629, 41.139],
+          [-104.82, 41.1399],
+          [-105.59, 41.312],
+          [-106.31, 41.311],
+          [-107.43, 41.535],
+          [-108.97, 41.527],
+          [-110.37, 41.31],
+          [-111.497, 41.9605],
+          [-112.0255, 41.5627],
+          [-112.5497, 41.6191],
+          [-113.9, 41.0],
+          [-115.0, 40.83],
+          [-116.0, 40.59],
+          [-117.7439, 40.5016],
+          [-119.8138, 39.5296],
+          [-121.4944, 38.5816]
+        ]
+      }
+    }
+  ]
+}
