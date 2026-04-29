@@ -682,17 +682,6 @@
     "detecting_weight": 66
   },
   {
-    "name": "Lordsburg, NM - Southern Pacific Water Stop",
-    "type": "railroad_stop",
-    "latitude": 32.3498,
-    "longitude": -108.7082,
-    "description": "Lordsburg, New Mexico was a critical Southern Pacific water stop in the Animas Valley where the railroad maintained a depot, section houses, and water facilities for the hot desert crossing. The area around the original SP facilities and the old townsite have produced coins and personal items from the 1880s-1930s. The surrounding Hidalgo County desert on BLM land preserves numerous section house sites along the original SP grade that are accessible for metal detecting. The ghost town of Shakespeare, just 2 miles from Lordsburg, adds further historical context with 1870s-1880s mining artifacts.",
-    "source": "AURIK",
-    "confidence": 0.81,
-    "year": 1880,
-    "detecting_weight": 69
-  },
-  {
     "name": "Deming, NM - SP/AT&SF Junction",
     "type": "railroad_stop",
     "latitude": 32.268,
