@@ -12,7 +12,7 @@ import os
 import re
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.shape import from_shape
@@ -939,19 +939,57 @@ async def list_land_access_overrides(
     "/import/locations",
     response_model=ImportSummaryResponse,
     status_code=status.HTTP_200_OK,
-    summary="Bulk-import point locations from a JSON array",
+    summary="Bulk-import point locations from a JSON array or nested object",
     tags=["import"],
 )
 async def import_locations(
-    payload: List[ImportLocationItem],
+    payload: Union[List[ImportLocationItem], Dict[str, Any]],
     db: AsyncSession = Depends(get_db),
 ) -> ImportSummaryResponse:
     """
-    Accept a JSON array of point locations and insert them into the database.
+    Accept locations in multiple formats and insert them into the database.
+
+    Supported formats:
+      1. Flat array: [{"name": "...", ...}, ...]
+      2. Nested with "locations": {"state": "X", "locations": [{...}]}
+      3. Nested with "mines": {"region": "X", "mines": [{...}]}
 
     Skips duplicate records (matched by exact name) and invalid records.
     Returns a summary of inserted, skipped, and errored rows.
     """
+    # Extract location array from payload
+    raw_items: List[Any] = []
+
+    if isinstance(payload, list):
+        raw_items = payload  # type: ignore[assignment]
+    elif isinstance(payload, dict):
+        if "locations" in payload:
+            raw_locations = payload["locations"]
+            if not isinstance(raw_locations, list):
+                raise HTTPException(
+                    status_code=400,
+                    detail="Invalid format: 'locations' must be an array",
+                )
+            raw_items = raw_locations
+        elif "mines" in payload:
+            raw_mines = payload["mines"]
+            if not isinstance(raw_mines, list):
+                raise HTTPException(
+                    status_code=400,
+                    detail="Invalid format: 'mines' must be an array",
+                )
+            raw_items = raw_mines
+        else:
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid format: expected array or object with 'locations' or 'mines' key",
+            )
+    else:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Invalid format: expected array or object, got {type(payload).__name__}",
+        )
+
     inserted = 0
     skipped_duplicate = 0
     skipped_invalid = 0
@@ -961,8 +999,20 @@ async def import_locations(
     existing_result = await db.execute(select(Location.name))
     existing_names: set = {row[0] for row in existing_result.all()}
 
-    for idx, item in enumerate(payload):
+    for idx, raw_item in enumerate(raw_items):
         row_label = f"Row {idx + 1}"
+
+        # Coerce dict payloads (from nested formats) into ImportLocationItem
+        if isinstance(raw_item, dict):
+            try:
+                item = ImportLocationItem(**raw_item)
+            except Exception as exc:
+                skipped_invalid += 1
+                errors.append(f"{row_label}: {exc}")
+                continue
+        else:
+            item = raw_item
+
         if item.name in existing_names:
             skipped_duplicate += 1
             continue
