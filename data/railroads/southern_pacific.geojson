@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Southern Pacific Railroad",
+        "type": "railroad",
+        "source": "AURIK",
+        "years": "1865-1940s",
+        "description": "The Southern Pacific Railroad's 'Sunset Route' connected New Orleans to Los Angeles and San Francisco, running through Texas, New Mexico, Arizona, and California. Built through some of the most desolate desert terrain in North America, it relied on numerous water stops, section houses, and division points to sustain operations. Abandoned station sites along the route through the Sonoran Desert, Chihuahuan Desert, and lower Rio Grande valley are excellent metal detecting locations, with artifacts ranging from railroad hardware and coins to military items from soldiers stationed at nearby forts."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-89.9867, 29.9511],
+          [-90.8, 30.2],
+          [-92.0199, 30.2241],
+          [-93.75, 30.1],
+          [-95.3698, 29.7604],
+          [-98.4936, 29.4241],
+          [-99.5, 29.3],
+          [-106.4869, 31.7587],
+          [-110.926, 32.2217],
+          [-114.0235, 32.6927],
+          [-115.4989, 32.6673],
+          [-116.9, 33.0],
+          [-117.1611, 32.7157],
+          [-118.2437, 34.0522],
+          [-119.1, 34.2],
+          [-120.4357, 34.9516],
+          [-121.4944, 36.0],
+          [-122.4194, 37.7749]
+        ]
+      }
+    }
+  ]
+}

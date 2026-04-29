@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denver and Rio Grande Railroad",
+        "type": "railroad",
+        "source": "AURIK",
+        "years": "1871-1940s",
+        "description": "The Denver and Rio Grande Railroad (D&RG) was famous for its narrow-gauge mountain lines winding through the Colorado Rockies to serve mining camps and towns. Built to access silver and gold mining districts in the San Juan Mountains and Arkansas River valley, the railroad connected isolated mining communities to markets. Abandoned grades, section houses, and ghost town depots along routes like the Durango & Silverton corridor are exceptional metal detecting sites, preserving coins, mining equipment, personal effects, and railroad hardware from the silver boom era of the 1870s-1890s. The Royal Gorge route and Gunnison River corridor are particularly productive."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-104.9903, 39.7392],
+          [-104.8, 38.8],
+          [-104.6091, 38.2544],
+          [-105.025, 38.254],
+          [-105.2422, 38.0],
+          [-105.4433, 38.5361],
+          [-106.0, 38.52],
+          [-106.4346, 38.534],
+          [-106.926, 38.2],
+          [-107.873, 38.4766],
+          [-107.8773, 38.4775],
+          [-108.55, 38.47],
+          [-107.6602, 37.2753],
+          [-107.8773, 37.2753],
+          [-107.8833, 37.2695]
+        ]
+      }
+    }
+  ]
+}
