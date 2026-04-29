@@ -18,8 +18,16 @@ function parseFile(content: string, tab: TabType): ParsedFile | null {
   try {
     const parsed = JSON.parse(content);
     if (tab === 'locations') {
-      if (!Array.isArray(parsed)) return null;
-      return { records: parsed, raw: parsed };
+      if (Array.isArray(parsed)) {
+        return { records: parsed, raw: parsed };
+      } else if (parsed && typeof parsed === 'object') {
+        if (Array.isArray(parsed.locations)) {
+          return { records: parsed.locations, raw: parsed };
+        } else if (Array.isArray(parsed.mines)) {
+          return { records: parsed.mines, raw: parsed };
+        }
+      }
+      return null;
     } else {
       if (parsed.type !== 'FeatureCollection' || !Array.isArray(parsed.features)) return null;
       return { records: parsed.features, raw: parsed };
@@ -166,7 +174,7 @@ export default function ImportModal({ onClose, onImportSuccess }: ImportModalPro
           {/* Format hint */}
           <p className="text-xs text-stone-500">
             {tab === 'locations'
-              ? 'Upload a .json file containing an array of location objects (name, type, latitude, longitude, …).'
+              ? 'Upload a .json file containing a flat array of location objects, or a nested object with a "locations" or "mines" array (name, type, latitude, longitude, …).'
               : 'Upload a .geojson file with a FeatureCollection of LineString features (name + type in properties).'}
           </p>
 
