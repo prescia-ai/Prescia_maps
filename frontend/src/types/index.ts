@@ -80,16 +80,9 @@ export interface LayerState {
   trail: boolean;
   trail_landmark: boolean;
   structure: boolean;
-  cemetery: boolean;
-  ferry: boolean;
-  fairground: boolean;
-  abandoned_fairground: boolean;
-  school: boolean;
-  spring: boolean;
   locale: boolean;
-  mission: boolean;
   trading_post: boolean;
-  shipwreck: boolean;
+  abandoned_fairground: boolean;
   pony_express: boolean;
   abandoned_church: boolean;
   historic_brothel: boolean;

@@ -75,10 +75,6 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'battle',       label: 'Battle',         color: '#ef4444' },
       { key: 'structure',    label: 'Fort / Structure', color: '#f97316' },
-      { key: 'cemetery',     label: 'Cemetery',        color: '#6366f1' },
-      { key: 'mission',      label: 'Mission',         color: '#d97706' },
-      { key: 'school',       label: 'School',          color: '#8b5cf6' },
-      { key: 'fairground',   label: 'Fairground',      color: '#eab308' },
       { key: 'abandoned_fairground', label: 'Abandoned Fairground', color: '#d97706' },
       { key: 'trading_post',    label: 'Trading Post',     color: '#b45309' },
       { key: 'abandoned_church', label: 'Abandoned Church', color: '#7c3aed' },
@@ -90,7 +86,6 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'mine',   label: 'Mine',   color: '#f59e0b' },
       { key: 'camp',   label: 'Camp',   color: '#22c55e' },
-      { key: 'spring', label: 'Spring', color: '#10b981' },
     ],
   },
   {
@@ -98,8 +93,6 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'town',      label: 'Town / Ghost Town', color: '#3b82f6' },
       { key: 'locale',    label: 'Historic Locale',   color: '#94a3b8' },
-      { key: 'ferry',     label: 'Ferry',             color: '#06b6d4' },
-      { key: 'shipwreck', label: 'Shipwreck',         color: '#0369a1' },
     ],
   },
   {
