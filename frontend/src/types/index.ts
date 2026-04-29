@@ -79,16 +79,9 @@ export interface LayerState {
   stagecoach_stop: boolean;
   trail: boolean;
   structure: boolean;
-  cemetery: boolean;
-  ferry: boolean;
-  fairground: boolean;
-  abandoned_fairground: boolean;
-  school: boolean;
-  spring: boolean;
   locale: boolean;
-  mission: boolean;
   trading_post: boolean;
-  shipwreck: boolean;
+  abandoned_fairground: boolean;
   pony_express: boolean;
   abandoned_church: boolean;
   historic_brothel: boolean;
