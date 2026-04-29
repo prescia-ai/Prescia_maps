@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Natchez Trace",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1700s-1820s",
+        "description": "One of America's oldest roads, the Natchez Trace followed ancient Native American paths through the Old Southwest, linking the Mississippi River port of Natchez to Nashville, Tennessee. Flatboat men who floated goods downriver to Natchez walked this trace northward home, earning the nickname 'Kaintucks.'"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -91.4032,
+            31.5604
+          ],
+          [
+            -91.0,
+            32.0
+          ],
+          [
+            -90.9,
+            32.2988
+          ],
+          [
+            -90.2,
+            32.7
+          ],
+          [
+            -89.9711,
+            34.26
+          ],
+          [
+            -88.7037,
+            34.55
+          ],
+          [
+            -88.0,
+            34.9889
+          ],
+          [
+            -87.0,
+            35.15
+          ],
+          [
+            -86.7816,
+            36.1627
+          ]
+        ]
+      }
+    }
+  ]
+}

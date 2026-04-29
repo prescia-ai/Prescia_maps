@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zane's Trace",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1796-1800s",
+        "description": "Surveyed by Ebenezer Zane under a congressional land grant in 1796-1797, Zane's Trace was the first road through the Northwest Territory, cutting diagonally across Ohio from Wheeling to Limestone (Maysville), Kentucky. The three ferry crossings at Zanesville, Lancaster, and Chillicothe each grew into important Ohio towns."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -80.7209,
+            40.064
+          ],
+          [
+            -81.5,
+            40.0
+          ],
+          [
+            -81.9946,
+            39.9401
+          ],
+          [
+            -83.0,
+            39.5
+          ],
+          [
+            -83.75,
+            38.9
+          ],
+          [
+            -84.31,
+            38.9
+          ],
+          [
+            -84.512,
+            39.1031
+          ]
+        ]
+      }
+    }
+  ]
+}

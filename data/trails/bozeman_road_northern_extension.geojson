@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bozeman Road - Northern Extension",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1864-1866",
+        "description": "The northern extension of the Bozeman Trail connected the gold mining center of Virginia City, Montana with the Missouri River steamboat terminus at Fort Benton, providing a supply route for the booming mining camps of southwestern Montana. This segment saw heavy freight wagon traffic during the height of the Montana gold rush."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.7624,
+            45.6796
+          ],
+          [
+            -111.5,
+            46.0
+          ],
+          [
+            -111.9,
+            46.5
+          ],
+          [
+            -112.0269,
+            46.5958
+          ],
+          [
+            -110.6699,
+            47.8211
+          ]
+        ]
+      }
+    }
+  ]
+}

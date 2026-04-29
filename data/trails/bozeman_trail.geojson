@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bozeman Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1863-1868",
+        "description": "Blazed by John Bozeman in 1863 as a shortcut to the Montana goldfields, the Bozeman Trail cut directly through the Powder River Basin, prime hunting grounds of the Lakota and Cheyenne. Red Cloud's War (1866-1868) forced the U.S. Army to abandon its forts along the trail, making it the only conflict in which the government conceded defeat to Native Americans."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -104.5,
+            43.0
+          ],
+          [
+            -106.4,
+            43.9
+          ],
+          [
+            -106.55,
+            44.3
+          ],
+          [
+            -106.9506,
+            44.5244
+          ],
+          [
+            -107.5,
+            45.0
+          ],
+          [
+            -107.9195,
+            45.317
+          ],
+          [
+            -108.5,
+            45.6
+          ],
+          [
+            -110.7624,
+            45.6796
+          ]
+        ]
+      }
+    }
+  ]
+}

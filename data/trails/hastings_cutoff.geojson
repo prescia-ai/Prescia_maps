@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hastings Cutoff",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1846",
+        "description": "Promoted by Lansford Hastings as a shortcut to California, the Hastings Cutoff crossed the treacherous Great Salt Lake Desert and actually proved longer and more dangerous than the established route. The Donner-Reed Party's decision to take this route in 1846 contributed directly to their catastrophic entrapment in the Sierra Nevada."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -112.0,
+            40.8
+          ],
+          [
+            -113.5,
+            40.5
+          ],
+          [
+            -115.0,
+            40.5
+          ],
+          [
+            -116.0,
+            40.5
+          ],
+          [
+            -116.5,
+            40.5
+          ],
+          [
+            -117.0,
+            40.7
+          ]
+        ]
+      }
+    }
+  ]
+}

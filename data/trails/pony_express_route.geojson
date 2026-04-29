@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pony Express Route",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1860-1861",
+        "description": "The Pony Express operated for only 18 months from April 1860 to October 1861, yet became one of the most celebrated enterprises in American history. Riders covered the nearly 2,000-mile route between Missouri and California in approximately 10 days, delivering mail across the continent before the telegraph made the service obsolete."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.8467,
+            39.7675
+          ],
+          [
+            -96.0,
+            40.1
+          ],
+          [
+            -98.382,
+            40.6936
+          ],
+          [
+            -100.45,
+            40.69
+          ],
+          [
+            -102.2583,
+            40.9875
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -107.0,
+            42.1
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ],
+          [
+            -114.0,
+            39.2
+          ],
+          [
+            -116.2023,
+            39.1638
+          ],
+          [
+            -119.75,
+            39.15
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    }
+  ]
+}

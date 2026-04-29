@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Butterfield Trail Connecting Segment",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1858-1861",
+        "description": "The eastern segment of the Butterfield Overland Mail route connected Memphis and St. Louis to Fort Smith, Arkansas before crossing Indian Territory into Texas. This section passed through the Cherokee and Choctaw nations and marked the eastern approach to the great southwestern overland route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -90.049,
+            35.1495
+          ],
+          [
+            -90.5,
+            35.5
+          ],
+          [
+            -91.0,
+            35.5
+          ],
+          [
+            -92.0,
+            35.3
+          ],
+          [
+            -94.3985,
+            35.3859
+          ],
+          [
+            -95.0,
+            35.6
+          ],
+          [
+            -96.0,
+            35.7
+          ],
+          [
+            -96.797,
+            35.9
+          ],
+          [
+            -96.8,
+            36.1
+          ],
+          [
+            -97.0,
+            36.1
+          ],
+          [
+            -97.5,
+            36.0
+          ],
+          [
+            -96.5884,
+            33.6357
+          ]
+        ]
+      }
+    }
+  ]
+}

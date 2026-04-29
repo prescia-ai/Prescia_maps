@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kearny Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1846",
+        "description": "General Stephen Kearny led his Army of the West along this route in 1846 to conquer New Mexico during the Mexican-American War, following much of the Santa Fe Trail. The army's swift capture of Santa Fe without firing a shot marked the beginning of American rule over the Southwest."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.91,
+            39.36
+          ],
+          [
+            -96.0,
+            39.0
+          ],
+          [
+            -97.0,
+            38.5
+          ],
+          [
+            -98.0,
+            38.0
+          ],
+          [
+            -99.0,
+            37.5
+          ],
+          [
+            -100.0,
+            37.5
+          ],
+          [
+            -101.0,
+            37.5
+          ],
+          [
+            -102.5,
+            37.98
+          ],
+          [
+            -103.55,
+            37.49
+          ],
+          [
+            -104.5,
+            36.91
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    }
+  ]
+}

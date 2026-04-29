@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "National Road / Cumberland Road",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1811-1830s",
+        "description": "The National Road was the first federally funded interstate highway in the United States, authorized by Congress in 1806 and constructed from Cumberland, Maryland westward to Vandalia, Illinois by 1839. It served as the primary artery for westward migration before the railroad era, handling enormous traffic in goods, livestock, and settlers."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.7625,
+            39.6528
+          ],
+          [
+            -79.5,
+            39.7
+          ],
+          [
+            -80.7209,
+            40.064
+          ],
+          [
+            -81.5,
+            40.2
+          ],
+          [
+            -82.0,
+            40.0
+          ],
+          [
+            -82.9988,
+            39.9612
+          ],
+          [
+            -83.5,
+            39.8
+          ],
+          [
+            -84.512,
+            39.77
+          ],
+          [
+            -85.0,
+            39.77
+          ],
+          [
+            -85.5,
+            39.77
+          ],
+          [
+            -86.1581,
+            39.7684
+          ],
+          [
+            -87.0,
+            39.5
+          ],
+          [
+            -89.144,
+            38.9606
+          ]
+        ]
+      }
+    }
+  ]
+}

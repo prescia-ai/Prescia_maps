@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Western Trail / Dodge City Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1874-1893",
+        "description": "Established in 1874 when Abilene's cattle era ended and Dodge City rose as the new cow capital, the Western Trail ultimately carried more cattle northward than even the famous Chisholm Trail. At its peak in the early 1880s, the trail saw hundreds of thousands of longhorns pass through Dodge City annually."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -99.074,
+            29.7274
+          ],
+          [
+            -99.1403,
+            30.0474
+          ],
+          [
+            -100.4359,
+            31.4638
+          ],
+          [
+            -99.7167,
+            32.4487
+          ],
+          [
+            -98.7167,
+            33.0
+          ],
+          [
+            -99.5,
+            34.0
+          ],
+          [
+            -100.5,
+            35.0
+          ],
+          [
+            -100.0,
+            36.0
+          ],
+          [
+            -99.7667,
+            37.7528
+          ],
+          [
+            -99.0,
+            38.5
+          ],
+          [
+            -100.0,
+            39.5
+          ],
+          [
+            -101.7011,
+            40.7267
+          ]
+        ]
+      }
+    }
+  ]
+}

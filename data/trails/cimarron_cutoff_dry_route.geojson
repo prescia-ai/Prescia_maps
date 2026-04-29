@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cimarron Cutoff / Dry Route",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1822-1880",
+        "description": "The Cimarron Cutoff shaved 100 miles off the Mountain Branch of the Santa Fe Trail by cutting across the Cimarron Desert, but the waterless stretch between the Arkansas and Cimarron Rivers made it extremely dangerous. Despite frequent attacks by Comanche and Kiowa warriors, most commercial caravans preferred this shorter route to avoid the mountains."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -96.4892,
+            38.6617
+          ],
+          [
+            -97.5,
+            38.3
+          ],
+          [
+            -98.5,
+            38.0
+          ],
+          [
+            -99.7667,
+            37.7528
+          ],
+          [
+            -100.5,
+            37.5
+          ],
+          [
+            -101.3,
+            37.0
+          ],
+          [
+            -102.5,
+            36.5
+          ],
+          [
+            -103.5,
+            36.5
+          ],
+          [
+            -104.5,
+            36.0
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    }
+  ]
+}

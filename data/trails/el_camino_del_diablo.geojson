@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Camino del Diablo",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1699-1849",
+        "description": "El Camino del Diablo (The Devil's Highway) was one of the most dangerous trails in North America, traversing 250 miles of the Sonoran Desert with limited water sources. First used by Father Kino in the 1690s to connect his missions, it later became a desperate shortcut for California-bound forty-niners, hundreds of whom perished from thirst."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -111.7,
+            30.5
+          ],
+          [
+            -111.0,
+            30.7
+          ],
+          [
+            -113.0,
+            31.5
+          ],
+          [
+            -114.0,
+            32.0
+          ],
+          [
+            -114.6277,
+            32.6927
+          ],
+          [
+            -117.161,
+            32.7153
+          ]
+        ]
+      }
+    }
+  ]
+}

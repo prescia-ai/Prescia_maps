@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barlow Road",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1845",
+        "description": "Opened by Samuel Barlow in 1846 as a toll road over the southern slopes of Mount Hood, the Barlow Road provided the first all-land route from The Dalles to the Willamette Valley. Before its construction, emigrants faced the dangerous Columbia River rapids or expensive river passage to reach Oregon City."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -121.1789,
+            45.6052
+          ],
+          [
+            -121.5,
+            45.5
+          ],
+          [
+            -121.7,
+            45.35
+          ],
+          [
+            -121.9,
+            45.3
+          ],
+          [
+            -122.1,
+            45.4
+          ],
+          [
+            -122.6765,
+            45.5231
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilderness Road / Boone's Trace",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1775-1810",
+        "description": "Blazed by Daniel Boone and a party of axemen for the Transylvania Company in 1775, the Wilderness Road opened the trans-Appalachian frontier to settlement. By 1800 it had carried an estimated 300,000 settlers through the Cumberland Gap into Kentucky and the Ohio Valley."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -82.562,
+            36.5484
+          ],
+          [
+            -83.6,
+            36.6
+          ],
+          [
+            -83.677,
+            36.6017
+          ],
+          [
+            -84.0,
+            36.9
+          ],
+          [
+            -84.2,
+            37.4
+          ],
+          [
+            -84.2981,
+            37.5678
+          ],
+          [
+            -84.5,
+            37.95
+          ],
+          [
+            -84.4947,
+            38.0523
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mullan Road",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1860-1862",
+        "description": "Built by Army Lieutenant John Mullan between 1859 and 1862, the Mullan Road was a 624-mile military wagon road connecting the navigable waters of the Missouri River at Fort Benton to the Columbia River system at Walla Walla. It opened the northern Rocky Mountain region to settlement and became a major immigration route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -110.6699,
+            47.8211
+          ],
+          [
+            -112.0269,
+            46.5958
+          ],
+          [
+            -112.3,
+            46.0
+          ],
+          [
+            -113.9966,
+            46.8721
+          ],
+          [
+            -114.0,
+            47.0
+          ],
+          [
+            -116.5,
+            47.6788
+          ],
+          [
+            -117.0,
+            47.5
+          ],
+          [
+            -118.343,
+            46.0646
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherokee Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1849-1860s",
+        "description": "The Cherokee Trail was blazed in 1849 by a party of Cherokee men from Indian Territory seeking a gold rush route to California via the southern Rockies. It became an important alternative route connecting the southern states to Utah and California, following the Arkansas River and crossing the Rockies at Raton Pass."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.3985,
+            35.3859
+          ],
+          [
+            -95.0,
+            36.0
+          ],
+          [
+            -95.5,
+            36.7
+          ],
+          [
+            -96.0,
+            37.0
+          ],
+          [
+            -97.0,
+            37.5
+          ],
+          [
+            -99.0,
+            37.5
+          ],
+          [
+            -101.0,
+            37.5
+          ],
+          [
+            -103.0,
+            37.3
+          ],
+          [
+            -104.5,
+            37.2
+          ],
+          [
+            -104.5,
+            37.0
+          ],
+          [
+            -106.3489,
+            39.5501
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ]
+        ]
+      }
+    }
+  ]
+}

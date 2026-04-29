@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goodnight-Loving Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1866-1889",
+        "description": "Pioneered by Charles Goodnight and Oliver Loving in 1866, this trail blazed a new path westward through the Pecos River valley to supply beef to New Mexico forts and Colorado mining camps. Loving was fatally wounded by Comanche warriors on a scouting trip in 1867, and the trail's story inspired Larry McMurtry's Lonesome Dove."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -100.4359,
+            31.4638
+          ],
+          [
+            -101.4,
+            31.85
+          ],
+          [
+            -102.0,
+            31.42
+          ],
+          [
+            -103.5,
+            31.45
+          ],
+          [
+            -104.4244,
+            31.7587
+          ],
+          [
+            -104.4,
+            32.5
+          ],
+          [
+            -104.515,
+            34.17
+          ],
+          [
+            -104.6,
+            35.0
+          ],
+          [
+            -104.68,
+            36.5
+          ],
+          [
+            -104.5,
+            37.0
+          ],
+          [
+            -104.9845,
+            39.7392
+          ],
+          [
+            -104.9847,
+            41.14
+          ]
+        ]
+      }
+    }
+  ]
+}
