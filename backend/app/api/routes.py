@@ -968,6 +968,11 @@ async def import_locations(
             continue
 
         try:
+            # Override source to "AURIK" unless it's a community submission
+            source = item.source
+            if not source or not source.startswith("community:"):
+                source = "AURIK"
+
             loc = Location(
                 name=item.name,
                 type=item.type,
@@ -975,7 +980,7 @@ async def import_locations(
                 longitude=item.longitude,
                 year=item.year,
                 description=item.description,
-                source=item.source,
+                source=source,
                 confidence=item.confidence,
             )
             db.add(loc)
