@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1841-1869",
+        "description": "Branching from the Oregon Trail at South Pass or Fort Hall, the California Trail brought hundreds of thousands of emigrants and Forty-Niners to the goldfields of California. The treacherous crossing of the Sierra Nevada, especially at Donner Pass, became legendary for its dangers."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -113.715,
+            42.0706
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -117.0,
+            40.7
+          ],
+          [
+            -118.0,
+            40.5
+          ],
+          [
+            -118.7,
+            39.3
+          ],
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.9,
+            38.8
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    }
+  ]
+}

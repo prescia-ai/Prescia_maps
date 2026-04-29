@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Wagon Road",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1730s-1780s",
+        "description": "The Great Wagon Road was the most heavily traveled road in colonial America, carrying German and Scots-Irish immigrants from Philadelphia southward through the Shenandoah Valley and into the Carolina backcountry. By the eve of the Revolution, it had carried over 100,000 settlers into the southern frontier."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.1652,
+            39.9526
+          ],
+          [
+            -76.3055,
+            40.0379
+          ],
+          [
+            -76.7275,
+            39.9626
+          ],
+          [
+            -77.7199,
+            39.6418
+          ],
+          [
+            -78.1633,
+            39.1857
+          ],
+          [
+            -79.942,
+            37.271
+          ],
+          [
+            -80.4139,
+            37.2796
+          ],
+          [
+            -81.0,
+            36.5
+          ],
+          [
+            -80.8431,
+            35.2271
+          ],
+          [
+            -81.5,
+            34.0
+          ],
+          [
+            -81.9748,
+            33.4735
+          ]
+        ]
+      }
+    }
+  ]
+}

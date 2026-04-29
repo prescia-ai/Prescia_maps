@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Overland Stage to Denver",
+        "type": "road",
+        "source": "AURIK"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5784,
+            39.0997
+          ],
+          [
+            -96.6721,
+            39.0587
+          ],
+          [
+            -98.58,
+            39.055
+          ],
+          [
+            -100.3501,
+            38.97
+          ],
+          [
+            -102.0832,
+            38.8337
+          ],
+          [
+            -104.6919,
+            38.8339
+          ],
+          [
+            -104.9903,
+            39.7392
+          ]
+        ]
+      }
+    }
+  ]
+}

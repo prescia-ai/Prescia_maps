@@ -1,0 +1,72 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chisholm Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1867-1884",
+        "description": "The most famous of the Texas cattle trails, the Chisholm Trail carried an estimated five million longhorns northward from Texas to the Kansas railheads between 1867 and 1884. Named for trader Jesse Chisholm who had blazed a wagon road through Indian Territory, it defined the era of the open-range cattle drive."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.4936,
+            29.4241
+          ],
+          [
+            -98.0,
+            30.0
+          ],
+          [
+            -97.7431,
+            30.2672
+          ],
+          [
+            -97.5,
+            31.0
+          ],
+          [
+            -97.1469,
+            31.5493
+          ],
+          [
+            -97.0,
+            32.0
+          ],
+          [
+            -97.3208,
+            32.7254
+          ],
+          [
+            -97.5,
+            33.5
+          ],
+          [
+            -97.9,
+            34.5
+          ],
+          [
+            -98.3,
+            35.5
+          ],
+          [
+            -98.3,
+            36.5
+          ],
+          [
+            -97.0,
+            37.0
+          ],
+          [
+            -97.2167,
+            38.9517
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smoky Hill Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1859-1870",
+        "description": "The Smoky Hill Trail was the most direct route from the Missouri River to Denver, following the Smoky Hill River across Kansas. Despite its shorter distance, it was notorious for lack of water and food in western Kansas, earning it the name 'Starvation Trail' before military posts were established along the route."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5784,
+            39.0997
+          ],
+          [
+            -96.8,
+            39.1
+          ],
+          [
+            -96.5,
+            38.5
+          ],
+          [
+            -97.5,
+            38.5
+          ],
+          [
+            -98.0,
+            38.5
+          ],
+          [
+            -99.0,
+            38.5
+          ],
+          [
+            -100.0,
+            38.5
+          ],
+          [
+            -101.0,
+            38.5
+          ],
+          [
+            -102.0,
+            38.5
+          ],
+          [
+            -103.0,
+            38.8
+          ],
+          [
+            -104.9847,
+            39.7392
+          ]
+        ]
+      }
+    }
+  ]
+}

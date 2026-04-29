@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gila Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1846-1850s",
+        "description": "The Gila Trail followed the Gila River across the Sonoran Desert, providing the southernmost all-weather route to California during the Gold Rush era. Pioneered during the Mexican-American War by General Kearny's Army of the West, it later became a major route for thousands of Forty-Niners."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.485,
+            31.7619
+          ],
+          [
+            -108.0,
+            32.0
+          ],
+          [
+            -109.5,
+            32.3
+          ],
+          [
+            -110.9747,
+            32.2226
+          ],
+          [
+            -112.074,
+            33.4484
+          ],
+          [
+            -113.5,
+            33.2
+          ],
+          [
+            -114.6277,
+            32.6927
+          ],
+          [
+            -117.161,
+            32.7153
+          ]
+        ]
+      }
+    }
+  ]
+}

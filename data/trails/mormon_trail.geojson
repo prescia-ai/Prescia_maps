@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mormon Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1846-1869",
+        "description": "Blazed by Brigham Young and the Latter-day Saints fleeing religious persecution in 1846-1847, the Mormon Trail paralleled the Oregon Trail but ran along the north bank of the Platte River. Over 70,000 Mormon pioneers followed this route to build their Zion in the Salt Lake Valley."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -91.381,
+            40.55
+          ],
+          [
+            -93.0,
+            41.25
+          ],
+          [
+            -95.8517,
+            41.2606
+          ],
+          [
+            -97.0,
+            41.5
+          ],
+          [
+            -99.0,
+            41.1
+          ],
+          [
+            -101.0,
+            41.2
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -107.0,
+            42.1
+          ],
+          [
+            -110.3874,
+            41.3166
+          ],
+          [
+            -111.3874,
+            40.7608
+          ]
+        ]
+      }
+    }
+  ]
+}

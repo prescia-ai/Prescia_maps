@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "King's Highway / El Camino Real de los Tejas",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1690s-1790s",
+        "description": "El Camino Real de los Tejas, the Royal Road of the Tejas, linked the Spanish settlements of Texas with French Louisiana along an ancient Native American path. Established in the 1690s to counter French expansion into Texas, it connected missions, presidios, and towns across the Texas interior for over a century."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -98.4936,
+            29.4241
+          ],
+          [
+            -98.0,
+            29.7
+          ],
+          [
+            -97.5,
+            30.0
+          ],
+          [
+            -96.797,
+            30.4
+          ],
+          [
+            -96.0,
+            30.9
+          ],
+          [
+            -95.0,
+            31.1
+          ],
+          [
+            -94.7256,
+            31.6035
+          ],
+          [
+            -94.0,
+            31.75
+          ],
+          [
+            -93.5,
+            31.75
+          ],
+          [
+            -93.086,
+            31.7543
+          ]
+        ]
+      }
+    }
+  ]
+}

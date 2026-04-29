@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Spanish Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1829-1848",
+        "description": "The Old Spanish Trail connected the Spanish colonial settlements of New Mexico with the missions of Alta California through the harsh Colorado Plateau and Mojave Desert. First fully traversed by Antonio Armijo in 1829-1830, it became a mule trade route carrying woolen blankets west and returning with horses and mules."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -105.9378,
+            35.687
+          ],
+          [
+            -106.5,
+            36.5
+          ],
+          [
+            -107.8801,
+            37.2753
+          ],
+          [
+            -109.55,
+            38.55
+          ],
+          [
+            -110.0,
+            38.0
+          ],
+          [
+            -111.0,
+            37.5
+          ],
+          [
+            -113.0,
+            37.0
+          ],
+          [
+            -114.0,
+            36.0
+          ],
+          [
+            -115.1398,
+            36.1699
+          ],
+          [
+            -117.0,
+            34.5
+          ],
+          [
+            -118.2437,
+            34.0522
+          ]
+        ]
+      }
+    }
+  ]
+}

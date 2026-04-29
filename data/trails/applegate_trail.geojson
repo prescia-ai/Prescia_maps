@@ -1,0 +1,52 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Applegate Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1846",
+        "description": "Pioneered in 1846 by brothers Jesse and Lindsay Applegate as a supposedly safer southern alternative to the dangerous Columbia River section of the Oregon Trail, the Applegate Trail entered Oregon through the Klamath Basin. Despite the brothers' good intentions, the route proved extremely difficult and desert crossings caused immense suffering."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -117.0,
+            41.5
+          ],
+          [
+            -118.5,
+            41.5
+          ],
+          [
+            -120.3,
+            41.98
+          ],
+          [
+            -121.5,
+            42.2
+          ],
+          [
+            -122.5,
+            43.2
+          ],
+          [
+            -123.0867,
+            44.0521
+          ]
+        ]
+      }
+    }
+  ]
+}

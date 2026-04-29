@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oregon Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1830s-1869",
+        "description": "The most heavily traveled overland route in American history, the Oregon Trail carried over 400,000 emigrants from Missouri to the Pacific Northwest between the 1840s and 1860s. It followed the Platte River valley through the Great Plains before crossing the Continental Divide at South Pass."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5786,
+            39.0997
+          ],
+          [
+            -97.0,
+            40.7
+          ],
+          [
+            -98.382,
+            40.6936
+          ],
+          [
+            -100.45,
+            41.32
+          ],
+          [
+            -104.545,
+            42.2125
+          ],
+          [
+            -105.9,
+            42.94
+          ],
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -115.7,
+            42.6
+          ],
+          [
+            -116.2,
+            43.65
+          ],
+          [
+            -116.9347,
+            43.6
+          ],
+          [
+            -118.9647,
+            45.5946
+          ],
+          [
+            -121.1789,
+            45.6052
+          ],
+          [
+            -122.6765,
+            45.5231
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lander Road / Lander Cutoff",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1858-1869",
+        "description": "Surveyed by Frederick Lander and constructed with federal funds in 1858, the Lander Road provided an improved northern cutoff to the Oregon Trail that bypassed the barren desert around Fort Bridger. It was the first federally funded road improvement project west of the Mississippi River."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -108.86,
+            42.5
+          ],
+          [
+            -110.0,
+            42.7
+          ],
+          [
+            -111.0,
+            42.5
+          ],
+          [
+            -112.0,
+            42.5
+          ],
+          [
+            -112.4455,
+            42.8713
+          ]
+        ]
+      }
+    }
+  ]
+}

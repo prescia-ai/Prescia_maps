@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carson Route",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1848",
+        "description": "The Carson Route via Carson Pass was identified by Kit Carson during Fr\u00e9mont's 1844 expedition and became one of the primary Sierra Nevada crossings for California-bound emigrants. The route entered the Sierra at a more southerly point than Donner Pass and funneled emigrants toward the American River drainage and Sutter's Fort."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.1,
+            38.9
+          ],
+          [
+            -120.4,
+            38.7
+          ],
+          [
+            -120.7,
+            38.5
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shawnee Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1840s-1860s",
+        "description": "The earliest of the great Texas cattle trails, the Shawnee Trail (also called the Texas Road or Sedalia Trail) carried longhorns northeastward to Missouri markets before the Civil War and resumed briefly afterward. It was eventually abandoned due to resistance from Missouri and Kansas farmers who feared Texas fever decimating their livestock."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -95.3698,
+            29.7604
+          ],
+          [
+            -96.0,
+            30.5
+          ],
+          [
+            -96.797,
+            32.7767
+          ],
+          [
+            -96.5,
+            33.5
+          ],
+          [
+            -95.5,
+            34.5
+          ],
+          [
+            -94.9,
+            35.5
+          ],
+          [
+            -94.5,
+            36.0
+          ],
+          [
+            -94.9785,
+            37.0282
+          ],
+          [
+            -94.4,
+            37.5
+          ],
+          [
+            -93.2,
+            38.5
+          ],
+          [
+            -93.2283,
+            38.7048
+          ]
+        ]
+      }
+    }
+  ]
+}

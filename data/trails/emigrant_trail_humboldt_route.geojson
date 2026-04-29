@@ -1,0 +1,60 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emigrant Trail / Humboldt Route",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1840s-1860s",
+        "description": "The Humboldt Route followed the Humboldt River across the Nevada desert, providing the critical water and forage corridor for westbound California emigrants. The Humboldt Sink at the river's terminus presented the final major challenge before the Sierra Nevada, as emigrants faced a brutal 40-mile desert crossing."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -112.4455,
+            42.8713
+          ],
+          [
+            -114.5,
+            42.0
+          ],
+          [
+            -115.7271,
+            42.6
+          ],
+          [
+            -116.0,
+            42.0
+          ],
+          [
+            -116.5,
+            41.5
+          ],
+          [
+            -117.0,
+            41.0
+          ],
+          [
+            -117.5,
+            40.5
+          ],
+          [
+            -118.0,
+            40.0
+          ],
+          [
+            -118.5,
+            39.5
+          ],
+          [
+            -118.7,
+            39.3
+          ]
+        ]
+      }
+    }
+  ]
+}

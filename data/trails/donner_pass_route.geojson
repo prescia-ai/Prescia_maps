@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Donner Pass Route",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1844",
+        "description": "The Donner Pass crossing of the Sierra Nevada was first used by the Stephens-Townsend-Murphy Party in 1844, who successfully crossed the mountains just before winter closed in. Two years later, the Donner-Reed Party became stranded here, and the resulting tragedy of cannibalism and death became the most harrowing story of overland emigration."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8,
+            39.3
+          ],
+          [
+            -120.1,
+            39.35
+          ],
+          [
+            -120.31,
+            39.32
+          ],
+          [
+            -120.5,
+            39.2
+          ],
+          [
+            -120.8,
+            38.95
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    }
+  ]
+}

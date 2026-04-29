@@ -1,0 +1,48 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Camino Real de Tierra Adentro",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1598-1882",
+        "description": "The Royal Road of the Interior Land, stretching nearly 1,800 miles from Mexico City to Santa Fe, was the lifeline of Spanish colonial New Mexico for nearly three centuries. Established by Juan de O\u00f1ate in 1598, it was one of the longest and oldest European trade routes in North America."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -106.485,
+            31.7619
+          ],
+          [
+            -106.6,
+            32.5
+          ],
+          [
+            -107.25,
+            33.0
+          ],
+          [
+            -107.25,
+            33.85
+          ],
+          [
+            -106.6504,
+            35.0844
+          ],
+          [
+            -106.45,
+            35.45
+          ],
+          [
+            -105.9378,
+            35.687
+          ]
+        ]
+      }
+    }
+  ]
+}

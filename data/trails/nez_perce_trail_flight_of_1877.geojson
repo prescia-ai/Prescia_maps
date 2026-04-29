@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nez Perce Trail - Flight of 1877",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1877",
+        "description": "In the summer of 1877, Chief Joseph and approximately 800 Nez Perce men, women, and children fled 1,170 miles across Idaho, Wyoming, and Montana to escape forced relocation to a reservation. They were stopped just 40 miles from the Canadian border at the Battle of Bear Paw, where Chief Joseph delivered his famous surrender speech."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -117.2,
+            45.5
+          ],
+          [
+            -116.0,
+            46.0
+          ],
+          [
+            -114.5847,
+            46.5442
+          ],
+          [
+            -113.5,
+            46.2
+          ],
+          [
+            -113.3,
+            45.65
+          ],
+          [
+            -112.5,
+            45.2
+          ],
+          [
+            -111.0,
+            44.5
+          ],
+          [
+            -109.5,
+            45.0
+          ],
+          [
+            -109.7,
+            48.5
+          ]
+        ]
+      }
+    }
+  ]
+}

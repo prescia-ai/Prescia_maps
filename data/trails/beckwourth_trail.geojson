@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beckwourth Trail",
+        "type": "trail",
+        "source": "AURIK",
+        "years": "1851",
+        "description": "Discovered by mountain man and former slave Jim Beckwourth in 1851, the Beckwourth Trail crossed the Sierra Nevada at what is now Beckwourth Pass, the lowest pass through the northern Sierra. Beckwourth actively recruited emigrants at the Humboldt River to use his route, which he had promoted to a nearby town for commercial benefit."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -119.8138,
+            39.5296
+          ],
+          [
+            -120.3,
+            39.8
+          ],
+          [
+            -120.5,
+            39.9
+          ],
+          [
+            -120.9,
+            39.7
+          ],
+          [
+            -121.4944,
+            38.5816
+          ]
+        ]
+      }
+    }
+  ]
+}
