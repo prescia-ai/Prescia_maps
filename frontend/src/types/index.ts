@@ -78,6 +78,7 @@ export interface LayerState {
   railroad_stop: boolean;
   stagecoach_stop: boolean;
   trail: boolean;
+  trail_landmark: boolean;
   structure: boolean;
   locale: boolean;
   trading_post: boolean;
@@ -95,6 +96,11 @@ export interface LayerState {
   // Personal layers
   my_hunts: boolean;
   group_events: boolean;
+  // Grouped route toggles (master switches that control linear + stop layers together)
+  grouped_trails: boolean;
+  grouped_stagecoach: boolean;
+  grouped_railroads: boolean;
+  grouped_pony_express: boolean;
 }
 
 // ── User Hunt Pins ────────────────────────────────────────────────────────────

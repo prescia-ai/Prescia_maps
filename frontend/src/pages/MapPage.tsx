@@ -29,6 +29,7 @@ const DEFAULT_LAYERS: LayerState = {
   railroad_stop:   true,
   stagecoach_stop: true,
   trail:           true,
+  trail_landmark:  true,
   structure:       true,
   locale:          true,
   trading_post:    true,
@@ -43,6 +44,10 @@ const DEFAULT_LAYERS: LayerState = {
   aerials_1955:    false,
   my_hunts:        false,
   group_events:    true,
+  grouped_trails:       true,
+  grouped_stagecoach:   true,
+  grouped_railroads:    true,
+  grouped_pony_express: true,
 };
 
 export default function MapPage() {

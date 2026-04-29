@@ -31,6 +31,7 @@ const TYPE_COLORS: Record<string, string> = {
   camp:            '#22c55e', // green
   railroad_stop:   '#a855f7', // purple
   trail:           '#14b8a6', // teal
+  trail_landmark:  '#84cc16', // lime-green
   structure:       '#f97316', // orange
   cemetery:        '#6366f1', // indigo
   ferry:           '#06b6d4', // cyan
