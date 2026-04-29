@@ -31,6 +31,7 @@ const TYPE_COLORS: Record<string, string> = {
   camp:            '#22c55e', // green
   railroad_stop:   '#a855f7', // purple
   trail:           '#14b8a6', // teal
+  trail_landmark:  '#84cc16', // lime-green
   structure:       '#f97316', // orange
   cemetery:        '#6366f1', // indigo
   ferry:           '#06b6d4', // cyan
@@ -44,7 +45,7 @@ const TYPE_COLORS: Record<string, string> = {
   trading_post:    '#b45309', // brown-amber
   shipwreck:       '#0369a1', // dark blue
   pony_express:    '#dc2626', // dark red
-  abandoned_church: '#ec4899', // pink (same family as church)
+  abandoned_church: '#7c3aed', // purple
   abandoned_fairground: '#d97706', // amber/brown
   historic_brothel: '#f43f5e', // rose
 };

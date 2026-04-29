@@ -22,6 +22,53 @@ interface SectionDef {
   items: TypeDef[];
 }
 
+// Grouped route definitions — each group has a master toggle that controls
+// all of its child sub-layers (linear feature + stop points) together.
+interface GroupRouteDef {
+  groupedKey: keyof LayerState;
+  label: string;
+  accentColor: string;
+  items: TypeDef[];
+}
+
+const ROUTE_GROUPS: GroupRouteDef[] = [
+  {
+    groupedKey: 'grouped_trails',
+    label: 'Historic Trails & Landmarks',
+    accentColor: '#22c55e',
+    items: [
+      { key: 'trail',          label: 'Trail Routes (linear)', color: '#22c55e' },
+      { key: 'trail_landmark', label: 'Trail Landmarks',       color: '#84cc16' },
+    ],
+  },
+  {
+    groupedKey: 'grouped_stagecoach',
+    label: 'Stagecoach Routes & Stops',
+    accentColor: '#d97706',
+    items: [
+      { key: 'road',           label: 'Stagecoach Routes (linear)', color: '#d97706' },
+      { key: 'stagecoach_stop', label: 'Stagecoach Stops',          color: '#84cc16' },
+    ],
+  },
+  {
+    groupedKey: 'grouped_railroads',
+    label: 'Railroad Lines & Stops',
+    accentColor: '#ef4444',
+    items: [
+      { key: 'railroad',      label: 'Railroad Lines (linear)', color: '#ef4444' },
+      { key: 'railroad_stop', label: 'Railroad Stops',          color: '#a855f7' },
+    ],
+  },
+  {
+    groupedKey: 'grouped_pony_express',
+    label: 'Pony Express',
+    accentColor: '#dc2626',
+    items: [
+      { key: 'pony_express', label: 'Pony Express Stations', color: '#dc2626' },
+    ],
+  },
+];
+
 const SECTIONS: SectionDef[] = [
   {
     title: 'Battles & Events',
@@ -34,25 +81,8 @@ const SECTIONS: SectionDef[] = [
       { key: 'fairground',   label: 'Fairground',      color: '#eab308' },
       { key: 'abandoned_fairground', label: 'Abandoned Fairground', color: '#d97706' },
       { key: 'trading_post',    label: 'Trading Post',     color: '#b45309' },
-      { key: 'abandoned_church', label: 'Abandoned Church', color: '#ec4899' },
+      { key: 'abandoned_church', label: 'Abandoned Church', color: '#7c3aed' },
       { key: 'historic_brothel', label: 'Historic Brothel', color: '#f43f5e' },
-    ],
-  },
-  {
-    title: 'Trails & Routes',
-    items: [
-      { key: 'trail',          label: 'Trail',           color: '#14b8a6' },
-      { key: 'stagecoach_stop', label: 'Stagecoach Stop', color: '#84cc16' },
-      { key: 'ferry',          label: 'Ferry',           color: '#06b6d4' },
-      { key: 'pony_express',   label: 'Pony Express',    color: '#dc2626' },
-      { key: 'road',           label: 'Road (linear)',   color: '#d97706' },
-    ],
-  },
-  {
-    title: 'Railroads',
-    items: [
-      { key: 'railroad_stop', label: 'Railroad Stop',    color: '#a855f7' },
-      { key: 'railroad',      label: 'Railroad (linear)', color: '#ef4444' },
     ],
   },
   {
@@ -68,6 +98,7 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'town',      label: 'Town / Ghost Town', color: '#3b82f6' },
       { key: 'locale',    label: 'Historic Locale',   color: '#94a3b8' },
+      { key: 'ferry',     label: 'Ferry',             color: '#06b6d4' },
       { key: 'shipwreck', label: 'Shipwreck',         color: '#0369a1' },
     ],
   },
@@ -96,6 +127,16 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
     items.forEach((item) => {
       update[item.key] = !allOn as boolean;
     });
+    onChange({ ...layers, ...update });
+  };
+
+  // Toggle a route group: flips the master key and all child sub-layer keys together.
+  const handleGroupedToggle = (group: GroupRouteDef) => {
+    const subKeys = group.items.map((i) => i.key);
+    const allOn = subKeys.every((k) => layers[k]);
+    const newState = !allOn;
+    const update: Partial<LayerState> = { [group.groupedKey]: newState };
+    subKeys.forEach((k) => { update[k] = newState; });
     onChange({ ...layers, ...update });
   };
 
@@ -135,6 +176,132 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
       </div>
 
       <div className="space-y-1.5">
+        {/* ── Routes & Stops (grouped) ─────────────────────────────────── */}
+        <div className="rounded-lg overflow-hidden">
+          <div className="flex items-center justify-between px-2 py-1.5 bg-stone-800">
+            <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-300">
+              Routes &amp; Stops
+            </span>
+            <button
+              onClick={() => toggleCollapse('Routes & Stops')}
+              className="text-stone-400 hover:text-stone-200 transition-colors"
+              aria-label={collapsed['Routes & Stops'] ? 'Expand section' : 'Collapse section'}
+            >
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${collapsed['Routes & Stops'] ? '-rotate-90' : ''}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          {!collapsed['Routes & Stops'] && (
+            <ul className="px-2 py-1 space-y-1">
+              {ROUTE_GROUPS.map((group) => {
+                const subKeys = group.items.map((i) => i.key);
+                const allSubOn = subKeys.every((k) => layers[k]);
+                const someSubOn = subKeys.some((k) => layers[k]);
+                const isGroupCollapsed = !!collapsed[group.groupedKey as string];
+
+                return (
+                  <li key={group.groupedKey as string}>
+                    {/* Master group toggle row */}
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => handleGroupedToggle(group)}
+                        className={`flex-1 flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
+                          ${allSubOn
+                            ? 'bg-stone-800 text-stone-100'
+                            : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                          }`}
+                      >
+                        {/* Color swatch — half-filled when mixed state */}
+                        <span
+                          className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
+                          style={{
+                            backgroundColor: group.accentColor,
+                            opacity: allSubOn ? 1 : someSubOn ? 0.5 : 0.3,
+                          }}
+                        />
+                        <span className="text-xs font-semibold leading-tight flex-1">{group.label}</span>
+                        {/* Toggle pill */}
+                        <span
+                          className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                            ${allSubOn ? 'bg-amber-600' : someSubOn ? 'bg-amber-900' : 'bg-stone-700'}`}
+                        >
+                          <span
+                            className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                              ${allSubOn ? 'translate-x-4' : 'translate-x-0.5'}`}
+                          />
+                        </span>
+                      </button>
+                      {/* Collapse sub-items chevron */}
+                      {group.items.length > 1 && (
+                        <button
+                          onClick={() => toggleCollapse(group.groupedKey as string)}
+                          className="text-stone-500 hover:text-stone-300 transition-colors px-1"
+                          aria-label={isGroupCollapsed ? 'Show sub-layers' : 'Hide sub-layers'}
+                        >
+                          <svg
+                            className={`w-3 h-3 transition-transform duration-200 ${isGroupCollapsed ? '-rotate-90' : ''}`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Child sub-layer toggles */}
+                    {!isGroupCollapsed && group.items.length > 1 && (
+                      <ul className="ml-4 mt-0.5 space-y-0.5 border-l border-stone-700 pl-2">
+                        {group.items.map(({ key, label, color }) => {
+                          const active = layers[key];
+                          return (
+                            <li key={key as string}>
+                              <button
+                                onClick={() => toggle(key)}
+                                className={`w-full flex items-center gap-2 px-2 py-1 rounded-md transition-all duration-150 text-left
+                                  ${active
+                                    ? 'bg-stone-800 text-stone-100'
+                                    : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                                  }`}
+                              >
+                                <span
+                                  className="inline-block w-2.5 h-2.5 rounded-sm flex-shrink-0"
+                                  style={{ backgroundColor: color, opacity: active ? 1 : 0.5 }}
+                                />
+                                <span className="text-[11px] leading-tight flex-1">{label}</span>
+                                <span
+                                  className={`relative inline-flex h-3.5 w-7 flex-shrink-0 rounded-full transition-colors duration-200
+                                    ${active ? 'bg-amber-600' : 'bg-stone-700'}`}
+                                >
+                                  <span
+                                    className={`inline-block h-2.5 w-2.5 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                                      ${active ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                                  />
+                                </span>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+
+        {/* ── Other sections ───────────────────────────────────────────── */}
         {SECTIONS.map((section) => {
           const isCollapsed = !!collapsed[section.title];
           const allOn = section.items.every((item) => layers[item.key]);
