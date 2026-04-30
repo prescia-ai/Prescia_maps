@@ -38,6 +38,7 @@ const DEFAULT_LAYERS: LayerState = {
   abandoned_church: true,
   historic_brothel: true,
   ccc_camp:         true,
+  homestead_site:   true,
   wwii_training:    true,
   wwi_training:     true,
   pow_camp:         true,
