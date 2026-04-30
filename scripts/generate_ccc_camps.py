@@ -264,7 +264,7 @@ def make_camp(forest_name, forest_data):
     # All states in FORESTS have entries in GEO_FEATURES; this fallback is a safety net only
     state_features = GEO_FEATURES.get(state)
     if not state_features:
-        raise ValueError(f"No GEO_FEATURES entry for state '{state}' (forest: {forest_name}). Add one to GEO_FEATURES.")
+        raise ValueError(f"Unexpected missing GEO_FEATURES entry for state '{state}' (forest: {forest_name}). This indicates a code configuration error.")
     geo = random.choice(state_features)
 
     work = random.choice(WORK_ACTIVITIES)
@@ -291,10 +291,8 @@ def make_camp(forest_name, forest_data):
     confidence = round(random.uniform(0.70, 0.92), 2)
     detecting_weight = random.randint(65, 90)
 
-    # Clean forest name for forest_or_park field
+    # Clean forest name for forest_or_park field; State Park names are kept as-is
     forest_or_park = forest_name.replace(" SD", "").replace(" CCC", "").strip()
-    if "State Park" in forest_or_park or "State Parks" in forest_or_park:
-        forest_or_park = forest_or_park
 
     return {
         "name": camp_name,
