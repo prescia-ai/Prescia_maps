@@ -66,6 +66,7 @@ class LocationType(str, enum.Enum):
     beach = "beach"
     trail_landmark = "trail_landmark"
     ccc_camp = "ccc_camp"
+    homestead_site = "homestead_site"
 
 
 class LinearFeatureType(str, enum.Enum):
