@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import MapView from '../components/MapView';
 import LayerControls from '../components/LayerControls';
@@ -22,37 +22,37 @@ const US_CENTER_LAT = 39.5;
 const US_CENTER_LON = -98.35;
 
 const DEFAULT_LAYERS: LayerState = {
-  battle:          true,
-  town:            true,
-  mine:            true,
-  camp:            true,
-  railroad_stop:   true,
-  stagecoach_stop: true,
-  trail:           true,
-  trail_landmark:  true,
-  structure:       true,
-  locale:          true,
-  trading_post:    true,
-  abandoned_fairground: true,
-  pony_express:     true,
-  abandoned_church: true,
-  historic_brothel: true,
-  ccc_camp:         true,
-  homestead_site:   true,
-  wwii_training:    true,
-  wwi_training:     true,
-  pow_camp:         true,
-  railroad:         true,
-  road:            true,
+  battle:          false,
+  town:            false,
+  mine:            false,
+  camp:            false,
+  railroad_stop:   false,
+  stagecoach_stop: false,
+  trail:           false,
+  trail_landmark:  false,
+  structure:       false,
+  locale:          false,
+  trading_post:    false,
+  abandoned_fairground: false,
+  pony_express:     false,
+  abandoned_church: false,
+  historic_brothel: false,
+  ccc_camp:         false,
+  homestead_site:   false,
+  wwii_training:    false,
+  wwi_training:     false,
+  pow_camp:         false,
+  railroad:         false,
+  road:            false,
   heatmap:         false,
-  blm:             true,
+  blm:             false,
   aerials_1955:    false,
   my_hunts:        false,
-  group_events:    true,
-  grouped_trails:       true,
-  grouped_stagecoach:   true,
-  grouped_railroads:    true,
-  grouped_pony_express: true,
+  group_events:    false,
+  grouped_trails:       false,
+  grouped_stagecoach:   false,
+  grouped_railroads:    false,
+  grouped_pony_express: false,
 };
 
 export default function MapPage() {
@@ -60,6 +60,24 @@ export default function MapPage() {
   const { user } = useAuth();
   const justSelectedFeatureRef = useRef(false);
   const [layers, setLayers] = useState<LayerState>(DEFAULT_LAYERS);
+
+  // On mount: restore layer state from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('prescia_layer_state');
+    if (saved) {
+      try {
+        setLayers(JSON.parse(saved));
+      } catch {
+        setLayers(DEFAULT_LAYERS);
+      }
+    }
+  }, []);
+
+  // Persist layer state to localStorage whenever it changes
+  const handleLayerChange = useCallback((newLayers: LayerState) => {
+    setLayers(newLayers);
+    localStorage.setItem('prescia_layer_state', JSON.stringify(newLayers));
+  }, []);
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [showImportModal, setShowImportModal] = useState(false);
@@ -185,7 +203,7 @@ export default function MapPage() {
 
       {/* Left panel: layer controls — offset below navbar */}
       <div className="absolute top-20 left-4 z-10">
-        <LayerControls layers={layers} onChange={setLayers} />
+        <LayerControls layers={layers} onChange={handleLayerChange} />
       </div>
 
       {/* Bottom-right: info / score / land-access panels */}
