@@ -37,6 +37,7 @@ const DEFAULT_LAYERS: LayerState = {
   pony_express:     true,
   abandoned_church: true,
   historic_brothel: true,
+  ccc_camp:         true,
   railroad:         true,
   road:            true,
   heatmap:         false,

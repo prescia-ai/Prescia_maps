@@ -48,6 +48,7 @@ const TYPE_COLORS: Record<string, string> = {
   abandoned_church: '#7c3aed', // purple/violet (distinct from historic_brothel rose)
   abandoned_fairground: '#d97706', // amber/brown
   historic_brothel: '#f43f5e', // rose
+  ccc_camp: '#16a34a', // green
 };
 
 function markerColor(type: LocationType): string {

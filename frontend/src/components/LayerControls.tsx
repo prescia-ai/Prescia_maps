@@ -93,6 +93,7 @@ const SECTIONS: SectionDef[] = [
     items: [
       { key: 'town',      label: 'Town / Ghost Town', color: '#3b82f6' },
       { key: 'locale',    label: 'Historic Locale',   color: '#94a3b8' },
+      { key: 'ccc_camp',  label: 'CCC Camp (1930s)',  color: '#16a34a' },
     ],
   },
   {

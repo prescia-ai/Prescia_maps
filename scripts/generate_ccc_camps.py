@@ -261,8 +261,10 @@ def make_camp(forest_name, forest_data):
     camp_num = random.randint(1, 99)
     camp_name = f"CCC Camp {letter}-{camp_num} Company {company} - {forest_name}"
 
-    # Pick geo feature for state
-    state_features = GEO_FEATURES.get(state, GEO_FEATURES.get("CO", ["mountain drainage"]))
+    # All states in FORESTS have entries in GEO_FEATURES; this fallback is a safety net only
+    state_features = GEO_FEATURES.get(state)
+    if not state_features:
+        raise ValueError(f"No GEO_FEATURES entry for state '{state}' (forest: {forest_name}). Add one to GEO_FEATURES.")
     geo = random.choice(state_features)
 
     work = random.choice(WORK_ACTIVITIES)
@@ -413,6 +415,12 @@ TARGETS = {
 }
 
 def main():
+    import argparse, os
+    parser = argparse.ArgumentParser(description="Generate CCC camps JSON dataset")
+    default_out = os.path.join(os.path.dirname(__file__), "..", "data", "ccc_camps.json")
+    parser.add_argument("--output", default=default_out, help="Output JSON file path")
+    args = parser.parse_args()
+
     camps = []
     for forest_name, count in TARGETS.items():
         if forest_name not in FORESTS:
@@ -424,7 +432,7 @@ def main():
 
     print(f"Generated {len(camps)} camp entries")
 
-    output_path = "/home/runner/work/Prescia_maps/Prescia_maps/data/ccc_camps.json"
+    output_path = os.path.realpath(args.output)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(camps, f, indent=2, ensure_ascii=False)
     print(f"Written to {output_path}")
