@@ -44,6 +44,10 @@ class LocationType(str, enum.Enum):
     abandoned_fairground = "abandoned_fairground"
     beach = "beach"
     trail_landmark = "trail_landmark"
+    ccc_camp = "ccc_camp"
+    wwii_training = "wwii_training"
+    wwi_training = "wwi_training"
+    pow_camp = "pow_camp"
 
 
 class LinearFeatureType(str, enum.Enum):

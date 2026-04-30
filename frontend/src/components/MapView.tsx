@@ -49,6 +49,9 @@ const TYPE_COLORS: Record<string, string> = {
   abandoned_fairground: '#d97706', // amber/brown
   historic_brothel: '#f43f5e', // rose
   ccc_camp: '#16a34a', // green
+  wwii_training: '#6b7280', // military gray
+  wwi_training: '#92400e', // WWI brown
+  pow_camp: '#78716c',     // camp gray
 };
 
 function markerColor(type: LocationType): string {

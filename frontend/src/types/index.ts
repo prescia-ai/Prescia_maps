@@ -87,6 +87,9 @@ export interface LayerState {
   abandoned_church: boolean;
   historic_brothel: boolean;
   ccc_camp: boolean;
+  wwii_training: boolean;
+  wwi_training: boolean;
+  pow_camp: boolean;
   // Linear feature types
   railroad: boolean;
   road: boolean;
