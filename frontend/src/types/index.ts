@@ -88,6 +88,9 @@ export interface LayerState {
   historic_brothel: boolean;
   ccc_camp: boolean;
   homestead_site: boolean;
+  wwii_training: boolean;
+  wwi_training: boolean;
+  pow_camp: boolean;
   // Linear feature types
   railroad: boolean;
   road: boolean;

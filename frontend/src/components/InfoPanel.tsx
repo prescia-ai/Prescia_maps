@@ -14,6 +14,9 @@ const TYPE_CONFIG: Record<string, { bg: string; text: string; label: string }> =
   trail:          { bg: 'bg-teal-100',   text: 'text-teal-700',   label: 'Trail' },
   ccc_camp:       { bg: 'bg-green-100',  text: 'text-green-700',  label: 'CCC Camp' },
   homestead_site: { bg: 'bg-amber-100',  text: 'text-amber-800',  label: 'Homestead Site' },
+  wwii_training:  { bg: 'bg-gray-100',   text: 'text-gray-700',   label: 'WWII Training Site' },
+  wwi_training:   { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'WWI Training Camp' },
+  pow_camp:       { bg: 'bg-stone-100',  text: 'text-stone-700',  label: 'POW Camp' },
 };
 
 function getTypeConfig(type: LocationType) {

@@ -98,6 +98,14 @@ const SECTIONS: SectionDef[] = [
     ],
   },
   {
+    title: 'Military Sites',
+    items: [
+      { key: 'wwii_training', label: 'WWII Training Site',   color: '#6b7280' },
+      { key: 'wwi_training',  label: 'WWI Training Camp',    color: '#92400e' },
+      { key: 'pow_camp',      label: 'POW Camp (1942–1946)', color: '#78716c' },
+    ],
+  },
+  {
     title: 'Overlays',
     items: [
       { key: 'heatmap',      label: 'Activity Heatmap',   color: '#f97316' },
