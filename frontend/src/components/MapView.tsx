@@ -29,7 +29,7 @@ const TYPE_COLORS: Record<string, string> = {
   town:            '#3b82f6', // blue
   mine:            '#f59e0b', // amber
   camp:            '#22c55e', // green
-  railroad_stop:   '#a855f7', // purple
+  railroad_stop:   '#ef4444', // red (distinct from abandoned_church purple)
   trail:           '#14b8a6', // teal
   trail_landmark:  '#84cc16', // lime-green
   structure:       '#f97316', // orange
@@ -49,8 +49,8 @@ const TYPE_COLORS: Record<string, string> = {
   abandoned_fairground: '#d97706', // amber/brown
   historic_brothel: '#f43f5e', // rose
   ccc_camp: '#16a34a', // green
-  homestead_site: '#b45309', // homestead rust
-  wwii_training: '#6b7280', // military gray
+  homestead_site: '#ea580c', // bright orange (distinct from WWI brown)
+  wwii_training: '#4f46e5', // indigo (distinct from POW gray)
   wwi_training: '#92400e', // WWI brown
   pow_camp: '#78716c',     // camp gray
 };

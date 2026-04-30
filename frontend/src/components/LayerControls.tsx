@@ -56,7 +56,7 @@ const ROUTE_GROUPS: GroupRouteDef[] = [
     accentColor: '#ef4444',
     items: [
       { key: 'railroad',      label: 'Railroad Lines (linear)', color: '#ef4444' },
-      { key: 'railroad_stop', label: 'Railroad Stops',          color: '#a855f7' },
+      { key: 'railroad_stop', label: 'Railroad Stops',          color: '#ef4444' },
     ],
   },
   {
@@ -91,16 +91,16 @@ const SECTIONS: SectionDef[] = [
   {
     title: 'Other',
     items: [
-      { key: 'town',      label: 'Town / Ghost Town', color: '#3b82f6' },
+      { key: 'town',      label: 'Ghost Town',          color: '#3b82f6' },
       { key: 'locale',    label: 'Historic Locale',   color: '#94a3b8' },
       { key: 'ccc_camp',       label: 'CCC Camp (1930s)',        color: '#16a34a' },
-      { key: 'homestead_site', label: 'Homestead Site (1862-1934)', color: '#b45309' },
+      { key: 'homestead_site', label: 'Homestead Site (1862-1934)', color: '#ea580c' },
     ],
   },
   {
     title: 'Military Sites',
     items: [
-      { key: 'wwii_training', label: 'WWII Training Site',   color: '#6b7280' },
+      { key: 'wwii_training', label: 'WWII Training Site',   color: '#4f46e5' },
       { key: 'wwi_training',  label: 'WWI Training Camp',    color: '#92400e' },
       { key: 'pow_camp',      label: 'POW Camp (1942–1946)', color: '#78716c' },
     ],
