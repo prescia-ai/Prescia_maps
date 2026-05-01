@@ -506,7 +506,7 @@ def _build_pdf(plan: HuntPlan) -> bytes:
         from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
         from reportlab.lib.enums import TA_LEFT
     except ImportError:
-        return b"%PDF-1.4 placeholder — reportlab not installed"
+        return b"%PDF-1.4 placeholder - reportlab not installed"
 
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(
