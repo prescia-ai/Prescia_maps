@@ -474,6 +474,56 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                   </span>
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => toggle('huntPlans')}
+                  className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
+                    ${layers.huntPlans
+                      ? 'bg-stone-800 text-stone-100'
+                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                    }`}
+                >
+                  <span
+                    className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
+                    style={{ backgroundColor: '#f59e0b', opacity: layers.huntPlans ? 1 : 0.7 }}
+                  />
+                  <span className="text-xs font-medium leading-tight flex-1">Hunt Plans</span>
+                  <span
+                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                      ${layers.huntPlans ? 'bg-amber-600' : 'bg-stone-700'}`}
+                  >
+                    <span
+                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                        ${layers.huntPlans ? 'translate-x-4' : 'translate-x-0.5'}`}
+                    />
+                  </span>
+                </button>
+
+                {/* Show archived sub-toggle — only visible when huntPlans is on */}
+                {layers.huntPlans && (
+                  <div className="ml-5 mt-0.5">
+                    <button
+                      onClick={() => toggle('huntPlansArchived')}
+                      className={`w-full flex items-center gap-2 px-2 py-1 rounded-md transition-all duration-150 text-left
+                        ${layers.huntPlansArchived
+                          ? 'bg-stone-800 text-stone-100'
+                          : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                        }`}
+                    >
+                      <span className="text-[11px] leading-tight flex-1">Show Archived</span>
+                      <span
+                        className={`relative inline-flex h-3.5 w-7 flex-shrink-0 rounded-full transition-colors duration-200
+                          ${layers.huntPlansArchived ? 'bg-amber-600' : 'bg-stone-700'}`}
+                      >
+                        <span
+                          className={`inline-block h-2.5 w-2.5 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                            ${layers.huntPlansArchived ? 'translate-x-3.5' : 'translate-x-0.5'}`}
+                        />
+                      </span>
+                    </button>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
         </>

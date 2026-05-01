@@ -8,7 +8,7 @@ import LandAccessPanel from '../components/LandAccessPanel';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Navbar from '../components/Navbar';
 import ImportModal from '../components/ImportModal';
-import LogHuntModal from '../components/LogHuntModal';
+import MapContextMenu from '../components/MapContextMenu';
 import { useLocations } from '../hooks/useLocations';
 import { useFeatures } from '../hooks/useFeatures';
 import { useHeatmap } from '../hooks/useHeatmap';
@@ -49,6 +49,8 @@ const DEFAULT_LAYERS: LayerState = {
   aerials_1955:    false,
   my_hunts:        false,
   group_events:    false,
+  huntPlans:       true,
+  huntPlansArchived: false,
   grouped_trails:       false,
   grouped_stagecoach:   false,
   grouped_railroads:    false,
@@ -81,8 +83,9 @@ export default function MapPage() {
   const [selectedFeature, setSelectedFeature] = useState<LocationFeature | null>(null);
   const [clickedCoords, setClickedCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [showImportModal, setShowImportModal] = useState(false);
-  const [showLogHuntModal, setShowLogHuntModal] = useState(false);
-  const [logHuntCoords, setLogHuntCoords] = useState<{ lat: number; lon: number } | null>(null);
+  const [showContextMenu, setShowContextMenu] = useState(false);
+  const [contextMenuCoords, setContextMenuCoords] = useState<{ lat: number; lon: number } | null>(null);
+  const [contextMenuTab, setContextMenuTab] = useState<'log_hunt' | 'plan_hunt'>('log_hunt');
   // Track map zoom level for zoom-adaptive heatmap fetching
   const [mapZoom, setMapZoom] = useState(5); // matches MapContainer initial zoom
 
@@ -146,8 +149,8 @@ export default function MapPage() {
 
   const handleContextMenu = useCallback((lat: number, lon: number) => {
     if (user) {
-      setLogHuntCoords({ lat, lon });
-      setShowLogHuntModal(true);
+      setContextMenuCoords({ lat, lon });
+      setShowContextMenu(true);
     }
   }, [user]);
 
@@ -160,8 +163,9 @@ export default function MapPage() {
   }, []);
 
   const handleNavbarLogHunt = useCallback(() => {
-    setLogHuntCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
-    setShowLogHuntModal(true);
+    setContextMenuCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
+    setContextMenuTab('log_hunt');
+    setShowContextMenu(true);
   }, []);
 
   const locations      = locationsQuery.data?.features ?? [];
@@ -198,6 +202,8 @@ export default function MapPage() {
           onZoomChange={handleZoomChange}
           userPins={userPins}
           eventPins={eventPins}
+          showHuntPlans={!!(user && layers.huntPlans)}
+          showHuntPlansArchived={layers.huntPlansArchived}
         />
       </div>
 
@@ -252,13 +258,15 @@ export default function MapPage() {
         />
       )}
 
-      {/* Log Hunt modal (right-click) */}
-      {showLogHuntModal && logHuntCoords && (
-        <LogHuntModal
-          lat={logHuntCoords.lat}
-          lon={logHuntCoords.lon}
-          onClose={() => setShowLogHuntModal(false)}
-          onSuccess={handleHuntSuccess}
+      {/* Right-click / Log Hunt context menu */}
+      {showContextMenu && contextMenuCoords && (
+        <MapContextMenu
+          lat={contextMenuCoords.lat}
+          lon={contextMenuCoords.lon}
+          onClose={() => setShowContextMenu(false)}
+          onHuntSuccess={handleHuntSuccess}
+          initialTab={contextMenuTab}
+          onTabChange={setContextMenuTab}
         />
       )}
     </div>

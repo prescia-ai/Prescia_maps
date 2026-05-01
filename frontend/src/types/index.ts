@@ -101,6 +101,8 @@ export interface LayerState {
   // Personal layers
   my_hunts: boolean;
   group_events: boolean;
+  huntPlans: boolean;
+  huntPlansArchived: boolean;
   // Grouped route toggles (master switches that control linear + stop layers together)
   grouped_trails: boolean;
   grouped_stagecoach: boolean;
@@ -391,3 +393,67 @@ export interface NotificationsResponse {
   unread_count: number;
   notifications: Notification[];
 }
+
+// ── Hunt Plans ────────────────────────────────────────────────────────────────
+
+export type HuntPlanStatus = 'idea' | 'planned' | 'done' | 'archived';
+
+export type HuntPlanSiteType = 'dirt' | 'beach' | 'water' | 'park' | 'yard' | 'club_hunt';
+
+export interface InZoneMarker {
+  id: string;
+  lat: number;
+  lng: number;
+  type: 'dig_target' | 'avoid' | 'access' | 'already_detected';
+  label: string;
+  note: string | null;
+}
+
+export interface GearItem {
+  item: string;
+  checked: boolean;
+}
+
+export interface PermissionInfo {
+  owner_name: string | null;
+  contact: string | null;
+  status: string | null;
+  expiry: string | null;
+  notes: string | null;
+}
+
+export interface ViewSnapshot {
+  center: [number, number];
+  zoom: number;
+  layers: Record<string, boolean>;
+}
+
+export interface HuntPlan {
+  id: string;
+  owner_id: string;
+  title: string;
+  planned_date: string | null;
+  site_type: HuntPlanSiteType | null;
+  status: HuntPlanStatus;
+  notes: string | null;
+  geom: { lat: number; lng: number } | null;
+  area_geojson: object;
+  in_zone_markers: InZoneMarker[] | null;
+  gear_checklist: GearItem[] | null;
+  permission: PermissionInfo | null;
+  view_snapshot: ViewSnapshot | null;
+  photo_urls: string[] | null;
+  created_at: string;
+  updated_at: string | null;
+}
+
+export interface HuntPlanMapPin {
+  id: string;
+  title: string;
+  lat: number;
+  lng: number;
+  status: HuntPlanStatus;
+  site_type: HuntPlanSiteType | null;
+  area_geojson?: object;
+}
+

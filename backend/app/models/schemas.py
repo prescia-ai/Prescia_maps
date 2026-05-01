@@ -881,3 +881,93 @@ class NewlyEarnedBadgesResponse(BaseModel):
 
     newly_earned: List[BadgeResponse]
     total_earned: int
+
+
+# ---------------------------------------------------------------------------
+# Hunt Plan schemas
+# ---------------------------------------------------------------------------
+
+class HuntPlanStatus(str, enum.Enum):
+    idea = "idea"
+    planned = "planned"
+    done = "done"
+    archived = "archived"
+
+
+class HuntPlanCreate(BaseModel):
+    """Request payload for creating a new hunt plan."""
+
+    title: str = Field(..., min_length=1, max_length=200)
+    area_geojson: Dict[str, Any]
+    planned_date: Optional[str] = None
+    site_type: Optional[str] = Field(None, pattern=r"^(dirt|beach|water|park|yard|club_hunt)$")
+    notes: Optional[str] = None
+    in_zone_markers: Optional[List[Dict[str, Any]]] = None
+    gear_checklist: Optional[List[Dict[str, Any]]] = None
+    permission: Optional[Dict[str, Any]] = None
+    view_snapshot: Optional[Dict[str, Any]] = None
+    photo_urls: Optional[List[str]] = None
+
+
+class HuntPlanUpdate(BaseModel):
+    """Request payload for updating an existing hunt plan (all fields optional)."""
+
+    title: Optional[str] = Field(None, min_length=1, max_length=200)
+    area_geojson: Optional[Dict[str, Any]] = None
+    planned_date: Optional[str] = None
+    site_type: Optional[str] = Field(None, pattern=r"^(dirt|beach|water|park|yard|club_hunt)$")
+    notes: Optional[str] = None
+    in_zone_markers: Optional[List[Dict[str, Any]]] = None
+    gear_checklist: Optional[List[Dict[str, Any]]] = None
+    permission: Optional[Dict[str, Any]] = None
+    view_snapshot: Optional[Dict[str, Any]] = None
+    photo_urls: Optional[List[str]] = None
+
+
+class HuntPlanResponse(BaseModel):
+    """Full hunt plan record returned by the API."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID
+    owner_id: UUID
+    title: str
+    planned_date: Optional[Any] = None
+    site_type: Optional[str] = None
+    status: HuntPlanStatus
+    notes: Optional[str] = None
+    geom: Optional[Dict[str, float]] = None  # {lat, lng}
+    area_geojson: Dict[str, Any]
+    in_zone_markers: Optional[List[Dict[str, Any]]] = None
+    gear_checklist: Optional[List[Dict[str, Any]]] = None
+    permission: Optional[Dict[str, Any]] = None
+    view_snapshot: Optional[Dict[str, Any]] = None
+    photo_urls: Optional[List[str]] = None
+    created_at: Optional[Any] = None
+    updated_at: Optional[Any] = None
+
+
+class HuntPlanListResponse(BaseModel):
+    """Paginated list of hunt plans."""
+
+    plans: List[HuntPlanResponse]
+    total: int
+
+
+class HuntPlanMapPin(BaseModel):
+    """Lightweight plan record for map layer display."""
+
+    id: UUID
+    title: str
+    lat: float
+    lng: float
+    status: HuntPlanStatus
+    site_type: Optional[str] = None
+    area_geojson: Optional[Dict[str, Any]] = None
+
+
+class HuntPlanStatusUpdate(BaseModel):
+    """Request payload for changing a plan's status."""
+
+    status: HuntPlanStatus
+
