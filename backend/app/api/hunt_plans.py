@@ -312,12 +312,16 @@ async def update_plan(
 # DELETE /hunt-plans/{plan_id}  — delete plan
 # ---------------------------------------------------------------------------
 
-@router.delete("/{plan_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete(
+    "/{plan_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    response_class=Response,
+)
 async def delete_plan(
     plan_id: uuid.UUID,
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> None:
+):
     result = await db.execute(select(HuntPlan).where(HuntPlan.id == plan_id))
     plan = result.scalar_one_or_none()
     _require_owner(plan, current_user)
