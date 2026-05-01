@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { createCheckoutSession, createPortalSession } from '../api/client';
 
@@ -100,9 +100,10 @@ function PlanCard({
 export default function SubscriptionSettingsPage() {
   const { user, subscription, isPro, loading: authLoading, refreshSubscription } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   // Read ?intent= query param
-  const intentParam = new URLSearchParams(window.location.search).get('intent') ?? '';
+  const intentParam = searchParams.get('intent') ?? '';
   const intentLabel = intentParam ? (INTENT_LABELS[intentParam] ?? intentParam.replace(/_/g, ' ')) : null;
 
   const [checkoutLoading, setCheckoutLoading] = useState<'monthly' | 'annual' | null>(null);

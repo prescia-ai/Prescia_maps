@@ -42,7 +42,7 @@ function RequireProfile({ children }: { children: React.ReactNode }) {
  * intent query parameter so the page can show a contextual upgrade message.
  * Pro users and admins pass through normally.
  */
-function RequireSubscription({ intent, children }: { tier: 'pro'; intent: string; children: React.ReactNode }) {
+function RequireSubscription({ intent, children }: { intent: string; children: React.ReactNode }) {
   const { isPro, loading } = useAuth();
   const location = useLocation();
   if (loading) return null;

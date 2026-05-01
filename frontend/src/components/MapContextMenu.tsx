@@ -7,6 +7,9 @@ import { useAuth } from '../contexts/AuthContext';
 
 type Tab = 'log_hunt' | 'plan_hunt';
 
+/** Mirrors the backend FREE_TIER_PIN_LIMIT constant */
+const FREE_PIN_LIMIT = 5;
+
 interface MapContextMenuProps {
   lat: number;
   lon: number;
@@ -72,7 +75,7 @@ export default function MapContextMenu({
             Log Hunt
             {!isPro && pinCount !== null && (
               <span className="text-xs text-stone-400 font-normal">
-                {pinCount}/5
+                {pinCount}/{FREE_PIN_LIMIT}
               </span>
             )}
           </button>

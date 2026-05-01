@@ -62,6 +62,7 @@ from app.services.land_access import lookup_land_access
 from app.services.badge_service import check_all_badges, get_badge_progress
 from app.auth.deps import get_current_user as _get_current_user, optional_user as _optional_user
 from app.auth.subscription import require_tier as _require_tier
+from app.models.database import User as _User
 
 logger = logging.getLogger(__name__)
 
@@ -129,7 +130,7 @@ async def get_locations(
     limit: int = Query(5000, ge=1, le=100000),
     per_type_limit: Optional[int] = Query(None, ge=1, le=10000),
     offset: int = Query(0, ge=0),
-    current_user: Optional[Any] = Depends(_optional_user),
+    current_user: Optional[_User] = Depends(_optional_user),
     db: AsyncSession = Depends(get_db),
 ) -> GeoJSONFeatureCollection:
     """
@@ -146,7 +147,7 @@ async def get_locations(
     in ``FREE_TIER_LOCATION_TYPES``.  Pro/admin users receive the full set.
     """
     # Determine if the requesting user has Pro access
-    is_pro_user = current_user is not None and current_user.is_pro
+    is_pro_user: bool = current_user is not None and current_user.is_pro
 
     # If a specific type is requested and the user is free-tier, enforce the
     # free-tier restriction rather than returning a 402 (so the map still
@@ -467,7 +468,7 @@ async def get_score(
     lat: float = Query(..., ge=-90.0, le=90.0, description="Latitude"),
     lon: float = Query(..., ge=-180.0, le=180.0, description="Longitude"),
     radius_km: float = Query(10.0, ge=0.1, le=100.0, description="Search radius in km"),
-    _pro_user: Any = Depends(_require_tier("pro")),
+    _pro_user: _User = Depends(_require_tier("pro")),
     db: AsyncSession = Depends(get_db),
 ) -> ScoreResponse:
     """
@@ -690,7 +691,7 @@ async def create_layer(
     tags=["land-access"],
 )
 async def get_blm_tile_url(
-    _pro_user: Any = Depends(_require_tier("pro")),
+    _pro_user: _User = Depends(_require_tier("pro")),
 ) -> Dict[str, str]:
     """
     Return the PAD-US (Protected Areas Database) tile URL.
@@ -712,7 +713,7 @@ async def get_blm_tile_url(
 )
 async def serve_padus_pmtiles(
     request: StarletteRequest,
-    _pro_user: Any = Depends(_require_tier("pro")),
+    _pro_user: _User = Depends(_require_tier("pro")),
 ) -> Response:
     """
     Serve the local padus.pmtiles file with HTTP Range support.

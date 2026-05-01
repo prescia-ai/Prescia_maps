@@ -52,7 +52,7 @@ _USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,30}$")
 async def get_me(
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> dict:
+) -> UserProfile:
     """Return the authenticated user's profile.
 
     Lazily migrates avatar URLs from the old drive.google.com/thumbnail format
@@ -73,9 +73,9 @@ async def get_me(
     )
     pin_count = pin_count_result.scalar_one()
 
-    profile_data = UserProfile.model_validate(current_user).model_dump()
-    profile_data["pin_count"] = pin_count
-    return profile_data
+    profile = UserProfile.model_validate(current_user)
+    profile.pin_count = pin_count
+    return profile
 
 
 @router.get(
