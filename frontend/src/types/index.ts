@@ -206,6 +206,7 @@ export interface Post {
   author_username: string | null;
   author_display_name: string | null;
   author_avatar_url?: string | null;
+  author_is_pro?: boolean;
   content: string;
   privacy: 'public' | 'followers' | 'private';
   created_at: string;
@@ -225,6 +226,7 @@ export interface Comment {
   author_username: string | null;
   author_display_name: string | null;
   author_avatar_url?: string | null;
+  author_is_pro?: boolean;
   content: string;
   created_at: string;
 }
@@ -249,6 +251,7 @@ export interface PublicProfile {
   is_following: boolean;
   avatar_url?: string | null;
   is_admin?: boolean;
+  is_pro?: boolean;
   contributed_pins_count?: number;
 }
 
@@ -462,7 +465,7 @@ export interface HuntPlanMapPin {
 // ── Subscription / Billing ────────────────────────────────────────────────────
 
 export type SubscriptionTier = 'free' | 'pro';
-export type SubscriptionStatus = 'none' | 'trialing' | 'active' | 'past_due' | 'canceled';
+export type SubscriptionStatus = 'none' | 'trialing' | 'active' | 'past_due' | 'canceled' | 'admin';
 
 export interface SubscriptionInfo {
   tier:                SubscriptionTier;

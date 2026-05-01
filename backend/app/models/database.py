@@ -267,7 +267,9 @@ class User(Base):
 
     @property
     def is_pro(self) -> bool:
-        """Return True when the user has an active Pro subscription."""
+        """Return True when the user has an active Pro subscription, or is an admin."""
+        if self.is_admin:
+            return True
         if self.subscription_tier != "pro":
             return False
         if self.subscription_status in ("trialing", "active"):

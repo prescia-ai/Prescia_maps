@@ -4,6 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
 import PhotoGrid from './PhotoGrid';
 import ImageLightbox from './ImageLightbox';
+import ProBadge from './ProBadge';
 import {
   reactToPost,
   fetchComments,
@@ -138,12 +139,15 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
           />
           <div className="min-w-0">
             {currentPost.author_username ? (
-              <Link
-                to={`/profile/${currentPost.author_username}`}
-                className="text-sm font-semibold text-stone-900 hover:text-amber-700 transition-colors truncate block"
-              >
-                {displayName}
-              </Link>
+              <div className="flex items-center gap-1">
+                <Link
+                  to={`/profile/${currentPost.author_username}`}
+                  className="text-sm font-semibold text-stone-900 hover:text-amber-700 transition-colors truncate"
+                >
+                  {displayName}
+                </Link>
+                {currentPost.author_is_pro && <ProBadge size="sm" />}
+              </div>
             ) : (
               <span className="text-sm font-semibold text-stone-900 truncate block">{displayName}</span>
             )}
@@ -261,8 +265,11 @@ export default function PostCard({ post, onPostDeleted, onPostUpdated }: PostCar
                   />
                   <div className="flex-1 min-w-0">
                     <div className="bg-stone-50 rounded-xl px-3 py-2">
-                      <span className="text-xs font-semibold text-stone-700 mr-1.5">
-                        {c.author_display_name || (c.author_username ? `@${c.author_username}` : 'User')}
+                      <span className="inline-flex items-center gap-1 mr-1.5">
+                        <span className="text-xs font-semibold text-stone-700">
+                          {c.author_display_name || (c.author_username ? `@${c.author_username}` : 'User')}
+                        </span>
+                        {c.author_is_pro && <ProBadge size="sm" />}
                       </span>
                       <span className="text-xs text-stone-600 break-words">{c.content}</span>
                     </div>

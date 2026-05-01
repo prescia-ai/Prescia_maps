@@ -7,6 +7,7 @@ import PhotoGrid from '../components/PhotoGrid';
 import ImageLightbox from '../components/ImageLightbox';
 import CollectionLightbox from '../components/CollectionLightbox';
 import CollectionUploadModal from '../components/CollectionUploadModal';
+import ProBadge from '../components/ProBadge';
 import api from '../api/client';
 import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto, fetchUserBadges, checkBadges } from '../api/client';
 import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto, Badge, BadgeCategory } from '../types';
@@ -233,8 +234,9 @@ export default function ProfilePage() {
                 size="xl"
               />
               <div className="min-w-0">
-                <h1 className="text-2xl font-bold text-stone-900 truncate">
-                  @{publicProfile.username ?? username}
+                <h1 className="flex items-center gap-2 text-2xl font-bold text-stone-900 truncate">
+                  <span>@{publicProfile.username ?? username}</span>
+                  {publicProfile.is_pro && <ProBadge size="lg" />}
                 </h1>
                 {publicProfile.display_name && (
                   <p className="flex items-center gap-1.5 text-stone-600 text-base leading-tight mt-0.5">

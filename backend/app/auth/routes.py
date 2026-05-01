@@ -177,6 +177,7 @@ async def get_public_profile(
         avatar_url=user.avatar_url,
         is_admin=user.is_admin,
         contributed_pins_count=contributed_pins_count,
+        is_pro=user.is_pro,
     )
 
 
