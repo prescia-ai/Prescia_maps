@@ -455,5 +455,7 @@ export interface HuntPlanMapPin {
   status: HuntPlanStatus;
   site_type: HuntPlanSiteType | null;
   area_geojson?: object;
+  planned_date: string | null;
+  notes_preview: string | null;
 }
 

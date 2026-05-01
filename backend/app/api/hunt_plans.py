@@ -237,6 +237,13 @@ async def get_map_pins(
         lat, lng = _get_centroid_lat_lng(plan.area_geojson)
         if lat is None:
             continue
+        planned_date_str = (
+            plan.planned_date.strftime("%Y-%m-%d") if plan.planned_date else None
+        )
+        notes_preview = (
+            (plan.notes[:140] + "…") if plan.notes and len(plan.notes) > 140
+            else plan.notes or None
+        )
         pins.append({
             "id": plan.id,
             "title": plan.title,
@@ -245,6 +252,8 @@ async def get_map_pins(
             "status": plan.status,
             "site_type": plan.site_type,
             "area_geojson": plan.area_geojson,
+            "planned_date": planned_date_str,
+            "notes_preview": notes_preview,
         })
     return pins
 
@@ -477,9 +486,19 @@ def _extract_polygon_coords(geom: dict) -> list:
     return []
 
 
-# ---------------------------------------------------------------------------
-# GET /hunt-plans/{plan_id}/export.pdf  — PDF export
-# ---------------------------------------------------------------------------
+# Marker pin colors for the Mapbox Static Images overlay (keyed by in-zone marker type)
+_MARKER_COLORS: dict = {
+    "dig_target": "00b700",
+    "avoid": "f44336",
+    "access": "2196f3",
+    "already_detected": "9e9e9e",
+}
+
+# Aspect ratio of the Mapbox static image request (600 x 400 = 3:2)
+_MAP_IMAGE_ASPECT_RATIO = 1.5
+
+
+
 
 @router.get("/{plan_id}/export.pdf")
 async def export_pdf(
@@ -500,6 +519,97 @@ async def export_pdf(
     )
 
 
+def _fetch_mapbox_static_image(plan: HuntPlan) -> Optional[bytes]:
+    """
+    Fetch a static map image from the Mapbox Static Images API showing the
+    plan's drawn area and in-zone markers.  Returns PNG bytes or None on any
+    failure (bad token, network error, oversized URL, etc.).
+    """
+    import json
+    import logging
+    from urllib.parse import quote
+
+    import httpx
+    from shapely.geometry import mapping, shape
+
+    token = settings.MAPBOX_TOKEN
+    if not token:
+        return None
+
+    try:
+        geom_input = plan.area_geojson or {}
+        if geom_input.get("type") == "Feature":
+            geom_input = geom_input["geometry"]
+
+        geom = shape(geom_input)
+
+        # Marker colors by in-zone marker type (see module-level _MARKER_COLORS)
+        def _pin_overlays() -> list:
+            pins = []
+            if plan.in_zone_markers:
+                for m in plan.in_zone_markers:
+                    lat = m.get("lat")
+                    lng = m.get("lng")
+                    if lat is None or lng is None:
+                        continue
+                    color = _MARKER_COLORS.get(m.get("type", ""), "ff8c00")
+                    pins.append(f"pin-s+{color}({lng},{lat})")
+            return pins
+
+        def _build_url(simplified_geom) -> str:
+            feature = {
+                "type": "Feature",
+                "geometry": mapping(simplified_geom),
+                "properties": {
+                    "fill": "#d97706",
+                    "fill-opacity": 0.3,
+                    "stroke": "#d97706",
+                    "stroke-width": 2,
+                    "stroke-opacity": 1,
+                },
+            }
+            geojson_overlay = f"geojson({quote(json.dumps(feature, separators=(',', ':')))})"
+            overlays = [geojson_overlay] + _pin_overlays()
+            overlay_str = ",".join(overlays)
+            return (
+                f"https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12"
+                f"/static/{overlay_str}/auto/600x400@2x"
+                f"?access_token={token}&padding=50"
+            )
+
+        # Try with light simplification first, then heavier, then centroid fallback
+        for tolerance in (0.0001, 0.001, 0.01):
+            simplified = geom.simplify(tolerance, preserve_topology=True)
+            url = _build_url(simplified)
+            if len(url) <= 8000:
+                break
+        else:
+            # Last resort: centroid + zoom (no polygon overlay)
+            centroid = geom.centroid
+            pins = ",".join(_pin_overlays())
+            overlay_str = pins if pins else ""
+            if overlay_str:
+                url = (
+                    f"https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12"
+                    f"/static/{overlay_str}/{centroid.x},{centroid.y},13"
+                    f"/600x400@2x?access_token={token}"
+                )
+            else:
+                url = (
+                    f"https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12"
+                    f"/static/{centroid.x},{centroid.y},13/600x400@2x"
+                    f"?access_token={token}"
+                )
+
+        resp = httpx.get(url, timeout=10.0, follow_redirects=True)
+        resp.raise_for_status()
+        return resp.content
+
+    except Exception as exc:
+        logging.getLogger(__name__).warning("Mapbox static image fetch failed: %s", exc)
+        return None
+
+
 def _build_pdf(plan: HuntPlan) -> bytes:
     """Build a PDF summary of the hunt plan using reportlab."""
     try:
@@ -507,7 +617,7 @@ def _build_pdf(plan: HuntPlan) -> bytes:
         from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
         from reportlab.lib.units import inch
         from reportlab.lib import colors
-        from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+        from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, Image
         from reportlab.lib.enums import TA_LEFT
     except ImportError:
         return b"%PDF-1.4 placeholder - reportlab not installed"
@@ -549,6 +659,17 @@ def _build_pdf(plan: HuntPlan) -> bytes:
     ]))
     story.append(meta_table)
     story.append(Spacer(1, 0.15 * inch))
+
+    # Static map image (satellite view of the drawn area)
+    map_image_bytes = _fetch_mapbox_static_image(plan)
+    if map_image_bytes:
+        try:
+            img_buffer = io.BytesIO(map_image_bytes)
+            map_img = Image(img_buffer, width=6.5 * inch, height=(6.5 / _MAP_IMAGE_ASPECT_RATIO) * inch)
+            story.append(map_img)
+            story.append(Spacer(1, 0.15 * inch))
+        except Exception:
+            pass  # skip map image on any rendering error
 
     # Notes
     if plan.notes:
