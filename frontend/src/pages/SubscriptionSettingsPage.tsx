@@ -18,6 +18,18 @@ function formatDate(dateStr: string | null | undefined): string {
   }
 }
 
+// ── Intent display names ─────────────────────────────────────────────────────
+
+const INTENT_LABELS: Record<string, string> = {
+  plans:           'Hunt Planning',
+  groups:          'Groups & Events',
+  submit:          'Pin Submission',
+  score:           'Score Engine',
+  layers:          'Premium Map Layers',
+  hunt_logging:    'Hunt Logging',
+  collection:      'Collection',
+};
+
 // ── Feature list ─────────────────────────────────────────────────────────────
 
 const PRO_FEATURES = [
@@ -88,6 +100,10 @@ function PlanCard({
 export default function SubscriptionSettingsPage() {
   const { user, subscription, isPro, loading: authLoading, refreshSubscription } = useAuth();
   const navigate = useNavigate();
+
+  // Read ?intent= query param
+  const intentParam = new URLSearchParams(window.location.search).get('intent') ?? '';
+  const intentLabel = intentParam ? (INTENT_LABELS[intentParam] ?? intentParam.replace(/_/g, ' ')) : null;
 
   const [checkoutLoading, setCheckoutLoading] = useState<'monthly' | 'annual' | null>(null);
   const [portalLoading, setPortalLoading] = useState(false);
@@ -209,6 +225,14 @@ export default function SubscriptionSettingsPage() {
         </Link>
         <h1 className="text-xl font-semibold text-stone-900">Subscription</h1>
       </div>
+
+      {/* ── Intent callout (when arriving from a Pro-gated route) ── */}
+      {!isAdmin && intentLabel && (
+        <div className="mb-4 px-4 py-3 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-sm">
+          Looks like you wanted to use <strong>{intentLabel}</strong> — that's a Pro feature.
+          Start your free trial below 👇
+        </div>
+      )}
 
       {/* ── Admin bypass banner ── */}
       {isAdmin && (

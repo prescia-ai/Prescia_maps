@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import type { LayerState } from '../types';
 import { useAuth } from '../contexts/AuthContext';
+import LockBadge from './LockBadge';
+import PaywallModal from './PaywallModal';
 
 interface LayerControlsProps {
   layers: LayerState;
@@ -10,6 +12,41 @@ interface LayerControlsProps {
 const LAND_ACCESS_LEGEND = [
   { color: '#22c55e', label: 'Public — OK to Detect' },
 ];
+
+// Layer keys that require a Pro subscription. Free users see a lock badge
+// and clicking opens the paywall modal instead of toggling the layer.
+const PRO_LAYER_KEYS = new Set<keyof LayerState>([
+  // Overlays
+  'blm',
+  'aerials_1955',
+  // Personal
+  'my_hunts',
+  'group_events',
+  'huntPlans',
+  'huntPlansArchived',
+  // Site types not in the free-tier subset
+  'structure',
+  'abandoned_fairground',
+  'trading_post',
+  'abandoned_church',
+  'historic_brothel',
+  'ccc_camp',
+  'locale',
+  'wwii_training',
+  'wwi_training',
+  'pow_camp',
+  // Routes (all Pro)
+  'trail',
+  'road',
+  'railroad',
+  'railroad_stop',
+  'stagecoach_stop',
+  'pony_express',
+  'grouped_trails',
+  'grouped_stagecoach',
+  'grouped_railroads',
+  'grouped_pony_express',
+]);
 
 interface TypeDef {
   key: keyof LayerState;
@@ -118,13 +155,23 @@ const SECTIONS: SectionDef[] = [
 export default function LayerControls({ layers, onChange }: LayerControlsProps) {
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
   const [panelOpen, setPanelOpen] = useState(false);
-  const { user } = useAuth();
+  const { user, isPro } = useAuth();
+  const [showLayerPaywall, setShowLayerPaywall] = useState(false);
 
   const toggle = (key: keyof LayerState) => {
+    if (!isPro && PRO_LAYER_KEYS.has(key)) {
+      setShowLayerPaywall(true);
+      return;
+    }
     onChange({ ...layers, [key]: !layers[key] });
   };
 
   const toggleSection = (items: TypeDef[]) => {
+    // If any item in section is Pro-gated and user is free, open paywall
+    if (!isPro && items.some((item) => PRO_LAYER_KEYS.has(item.key))) {
+      setShowLayerPaywall(true);
+      return;
+    }
     const allOn = items.every((item) => layers[item.key]);
     const update: Partial<LayerState> = {};
     items.forEach((item) => {
@@ -135,6 +182,10 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
 
   // Toggle a route group: flips the master key and all child sub-layer keys together.
   const handleGroupedToggle = (group: GroupRouteDef) => {
+    if (!isPro && PRO_LAYER_KEYS.has(group.groupedKey)) {
+      setShowLayerPaywall(true);
+      return;
+    }
     const subKeys = group.items.map((i) => i.key);
     const allOn = subKeys.every((k) => layers[k]);
     const newState = !allOn;
@@ -162,6 +213,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
   }
 
   return (
+    <>
     <div className="bg-stone-900 border border-stone-700 rounded-xl shadow-xl p-3 w-72 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-stone-700 scrollbar-track-transparent">
       <div className="flex items-center justify-between mb-3 px-1">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-stone-100">
@@ -209,6 +261,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                 const allSubOn = subKeys.every((k) => layers[k]);
                 const someSubOn = subKeys.some((k) => layers[k]);
                 const isGroupCollapsed = !!collapsed[group.groupedKey as string];
+                const isGroupProGated = !isPro && PRO_LAYER_KEYS.has(group.groupedKey);
 
                 return (
                   <li key={group.groupedKey as string}>
@@ -217,9 +270,11 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                       <button
                         onClick={() => handleGroupedToggle(group)}
                         className={`flex-1 flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
-                          ${allSubOn
-                            ? 'bg-stone-800 text-stone-100'
-                            : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                          ${isGroupProGated
+                            ? 'bg-transparent text-stone-500 opacity-70 hover:bg-stone-800/40'
+                            : allSubOn
+                              ? 'bg-stone-800 text-stone-100'
+                              : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                           }`}
                       >
                         {/* Color swatch — half-filled when mixed state */}
@@ -227,23 +282,27 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                           className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
                           style={{
                             backgroundColor: group.accentColor,
-                            opacity: allSubOn ? 1 : someSubOn ? 0.5 : 0.3,
+                            opacity: isGroupProGated ? 0.4 : allSubOn ? 1 : someSubOn ? 0.5 : 0.3,
                           }}
                         />
                         <span className="text-xs font-semibold leading-tight flex-1">{group.label}</span>
-                        {/* Toggle pill */}
-                        <span
-                          className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
-                            ${allSubOn ? 'bg-amber-600' : someSubOn ? 'bg-amber-900' : 'bg-stone-700'}`}
-                        >
+                        {/* Lock badge for Pro-gated, toggle pill otherwise */}
+                        {isGroupProGated ? (
+                          <LockBadge />
+                        ) : (
                           <span
-                            className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                              ${allSubOn ? 'translate-x-4' : 'translate-x-0.5'}`}
-                          />
-                        </span>
+                            className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                              ${allSubOn ? 'bg-amber-600' : someSubOn ? 'bg-amber-900' : 'bg-stone-700'}`}
+                          >
+                            <span
+                              className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                                ${allSubOn ? 'translate-x-4' : 'translate-x-0.5'}`}
+                            />
+                          </span>
+                        )}
                       </button>
-                      {/* Collapse sub-items chevron */}
-                      {group.items.length > 1 && (
+                      {/* Collapse sub-items chevron — hide for Pro-gated groups */}
+                      {group.items.length > 1 && !isGroupProGated && (
                         <button
                           onClick={() => toggleCollapse(group.groupedKey as string)}
                           className="text-stone-500 hover:text-stone-300 transition-colors px-1"
@@ -263,7 +322,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                     </div>
 
                     {/* Child sub-layer toggles */}
-                    {!isGroupCollapsed && group.items.length > 1 && (
+                    {!isGroupCollapsed && !isGroupProGated && group.items.length > 1 && (
                       <ul className="ml-4 mt-0.5 space-y-0.5 border-l border-stone-700 pl-2">
                         {group.items.map(({ key, label, color }) => {
                           const active = layers[key];
@@ -342,35 +401,42 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                 <ul className="px-2 py-1 space-y-0.5">
                   {section.items.map(({ key, label, color }) => {
                     const active = layers[key];
+                    const isProGated = !isPro && PRO_LAYER_KEYS.has(key);
                     return (
                       <li key={key}>
                         <button
                           onClick={() => toggle(key)}
                           className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
-                            ${active
-                              ? 'bg-stone-800 text-stone-100'
-                              : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                            ${isProGated
+                              ? 'bg-transparent text-stone-500 opacity-70 hover:bg-stone-800/40'
+                              : active
+                                ? 'bg-stone-800 text-stone-100'
+                                : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                             }`}
                         >
                           {/* Color swatch */}
                           <span
                             className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
-                            style={{ backgroundColor: color, opacity: active ? 1 : 0.7 }}
+                            style={{ backgroundColor: color, opacity: isProGated ? 0.4 : active ? 1 : 0.7 }}
                           />
 
                           {/* Label */}
                           <span className="text-xs font-medium leading-tight flex-1">{label}</span>
 
-                          {/* Toggle pill */}
-                          <span
-                            className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
-                              ${active ? 'bg-amber-600' : 'bg-stone-700'}`}
-                          >
+                          {/* Lock badge for Pro-gated layers, toggle pill otherwise */}
+                          {isProGated ? (
+                            <LockBadge />
+                          ) : (
                             <span
-                              className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                                ${active ? 'translate-x-4' : 'translate-x-0.5'}`}
-                            />
-                          </span>
+                              className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                                ${active ? 'bg-amber-600' : 'bg-stone-700'}`}
+                            >
+                              <span
+                                className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                                  ${active ? 'translate-x-4' : 'translate-x-0.5'}`}
+                              />
+                            </span>
+                          )}
                         </button>
 
                         {/* Land Access legend — shown when blm is active */}
@@ -428,79 +494,97 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
                 <button
                   onClick={() => toggle('my_hunts')}
                   className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
-                    ${layers.my_hunts
-                      ? 'bg-stone-800 text-stone-100'
-                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                    ${!isPro
+                      ? 'bg-transparent text-stone-500 opacity-70 hover:bg-stone-800/40'
+                      : layers.my_hunts
+                        ? 'bg-stone-800 text-stone-100'
+                        : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                     }`}
                 >
                   <span
                     className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
-                    style={{ backgroundColor: '#10b981', opacity: layers.my_hunts ? 1 : 0.7 }}
+                    style={{ backgroundColor: '#10b981', opacity: !isPro ? 0.4 : layers.my_hunts ? 1 : 0.7 }}
                   />
                   <span className="text-xs font-medium leading-tight flex-1">My Hunts</span>
-                  <span
-                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
-                      ${layers.my_hunts ? 'bg-emerald-600' : 'bg-stone-700'}`}
-                  >
+                  {!isPro ? (
+                    <LockBadge />
+                  ) : (
                     <span
-                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                        ${layers.my_hunts ? 'translate-x-4' : 'translate-x-0.5'}`}
-                    />
-                  </span>
+                      className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                        ${layers.my_hunts ? 'bg-emerald-600' : 'bg-stone-700'}`}
+                    >
+                      <span
+                        className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                          ${layers.my_hunts ? 'translate-x-4' : 'translate-x-0.5'}`}
+                      />
+                    </span>
+                  )}
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => toggle('group_events')}
                   className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
-                    ${layers.group_events
-                      ? 'bg-stone-800 text-stone-100'
-                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                    ${!isPro
+                      ? 'bg-transparent text-stone-500 opacity-70 hover:bg-stone-800/40'
+                      : layers.group_events
+                        ? 'bg-stone-800 text-stone-100'
+                        : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                     }`}
                 >
                   <span
                     className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
-                    style={{ backgroundColor: '#8b5cf6', opacity: layers.group_events ? 1 : 0.7 }}
+                    style={{ backgroundColor: '#8b5cf6', opacity: !isPro ? 0.4 : layers.group_events ? 1 : 0.7 }}
                   />
                   <span className="text-xs font-medium leading-tight flex-1">Group Events</span>
-                  <span
-                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
-                      ${layers.group_events ? 'bg-violet-500' : 'bg-stone-700'}`}
-                  >
+                  {!isPro ? (
+                    <LockBadge />
+                  ) : (
                     <span
-                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                        ${layers.group_events ? 'translate-x-4' : 'translate-x-0.5'}`}
-                    />
-                  </span>
+                      className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                        ${layers.group_events ? 'bg-violet-500' : 'bg-stone-700'}`}
+                    >
+                      <span
+                        className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                          ${layers.group_events ? 'translate-x-4' : 'translate-x-0.5'}`}
+                      />
+                    </span>
+                  )}
                 </button>
               </li>
               <li>
                 <button
                   onClick={() => toggle('huntPlans')}
                   className={`w-full flex items-center gap-2 px-2 py-1.5 rounded-md transition-all duration-150 text-left
-                    ${layers.huntPlans
-                      ? 'bg-stone-800 text-stone-100'
-                      : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
+                    ${!isPro
+                      ? 'bg-transparent text-stone-500 opacity-70 hover:bg-stone-800/40'
+                      : layers.huntPlans
+                        ? 'bg-stone-800 text-stone-100'
+                        : 'bg-transparent text-stone-400 hover:bg-stone-800/60'
                     }`}
                 >
                   <span
                     className="inline-block w-3 h-3 rounded-sm flex-shrink-0 transition-opacity duration-150"
-                    style={{ backgroundColor: '#f59e0b', opacity: layers.huntPlans ? 1 : 0.7 }}
+                    style={{ backgroundColor: '#f59e0b', opacity: !isPro ? 0.4 : layers.huntPlans ? 1 : 0.7 }}
                   />
                   <span className="text-xs font-medium leading-tight flex-1">Hunt Plans</span>
-                  <span
-                    className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
-                      ${layers.huntPlans ? 'bg-amber-600' : 'bg-stone-700'}`}
-                  >
+                  {!isPro ? (
+                    <LockBadge />
+                  ) : (
                     <span
-                      className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
-                        ${layers.huntPlans ? 'translate-x-4' : 'translate-x-0.5'}`}
-                    />
-                  </span>
+                      className={`relative inline-flex h-4 w-8 flex-shrink-0 rounded-full transition-colors duration-200
+                        ${layers.huntPlans ? 'bg-amber-600' : 'bg-stone-700'}`}
+                    >
+                      <span
+                        className={`inline-block h-3 w-3 mt-0.5 rounded-full bg-white shadow transition-transform duration-200
+                          ${layers.huntPlans ? 'translate-x-4' : 'translate-x-0.5'}`}
+                      />
+                    </span>
+                  )}
                 </button>
 
                 {/* Show archived sub-toggle — only visible when huntPlans is on */}
-                {layers.huntPlans && (
+                {isPro && layers.huntPlans && (
                   <div className="ml-5 mt-0.5">
                     <button
                       onClick={() => toggle('huntPlansArchived')}
@@ -534,5 +618,13 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
         <p className="mt-1 text-xs text-stone-500 text-center">Right-click to log a hunt</p>
       )}
     </div>
+
+    <PaywallModal
+      open={showLayerPaywall}
+      onClose={() => setShowLayerPaywall(false)}
+      feature="Premium Map Layers"
+      description="Unlock 1955 aerials, BLM/PAD-US land access, all 27 historical site types, and personal layers."
+    />
+    </>
   );
 }

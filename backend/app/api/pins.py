@@ -19,6 +19,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.deps import get_current_user
+from app.auth.subscription import require_tier
 from app.models.database import PinImage, User, UserPin, get_db
 from app.models.schemas import PinImageResponse, UserPinCreate, UserPinListResponse, UserPinResponse, UserPinUpdate
 
@@ -73,6 +74,8 @@ async def _attach_pin_images(pins: List[UserPin], db) -> List[dict]:
     return result
 
 
+FREE_TIER_PIN_LIMIT = 5
+
 # ---------------------------------------------------------------------------
 # POST /pins  — create a hunt
 # ---------------------------------------------------------------------------
@@ -83,6 +86,24 @@ async def create_pin(
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> dict:
+    if not current_user.is_pro:
+        count_result = await db.execute(
+            select(func.count()).select_from(UserPin).where(UserPin.user_id == current_user.id)
+        )
+        existing_count = count_result.scalar_one()
+        if existing_count >= FREE_TIER_PIN_LIMIT:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail={
+                    "error": "free_tier_limit_reached",
+                    "limit": FREE_TIER_PIN_LIMIT,
+                    "current_count": existing_count,
+                    "message": (
+                        f"Free accounts can keep up to {FREE_TIER_PIN_LIMIT} hunt logs. "
+                        "Delete an old one or upgrade to Pro for unlimited logging."
+                    ),
+                },
+            )
     hunt_date = _parse_hunt_date(body.hunt_date)
     pin = UserPin(
         user_id=current_user.id,
@@ -111,7 +132,7 @@ async def create_pin(
 async def list_my_pins(
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0),
-    current_user: User = Depends(get_current_user),
+    current_user: User = Depends(require_tier("pro")),
     db: AsyncSession = Depends(get_db),
 ) -> UserPinListResponse:
     total_result = await db.execute(

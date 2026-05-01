@@ -350,6 +350,7 @@ class UserProfile(BaseModel):
     subscription_status: str = "none"
     is_pro: bool = False
     trial_ends_at: Optional[Any] = None
+    pin_count: int = 0
 
 
 class UserProfileSetup(BaseModel):

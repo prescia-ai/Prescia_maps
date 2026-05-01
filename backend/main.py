@@ -15,6 +15,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi import Depends
+
 from app.api.routes import router
 from app.api.pins import router as pins_router
 from app.api.submissions import router as submissions_router
@@ -28,6 +30,7 @@ from app.api.notifications import router as notifications_router
 from app.api.hunt_plans import router as hunt_plans_router
 from app.api.billing import router as billing_router, webhook_router
 from app.auth.routes import router as auth_router
+from app.auth.subscription import require_tier
 from app.models.database import create_tables
 
 # ---------------------------------------------------------------------------
@@ -104,17 +107,37 @@ def create_app() -> FastAPI:
     # -----------------------------------------------------------------------
     app.include_router(router, prefix="/api/v1")
     app.include_router(pins_router, prefix="/api/v1")
-    app.include_router(submissions_router, prefix="/api/v1")
+    app.include_router(
+        submissions_router,
+        prefix="/api/v1",
+        dependencies=[Depends(require_tier("pro"))],
+    )
     app.include_router(feed_router, prefix="/api/v1")
     app.include_router(social_router, prefix="/api/v1")
     app.include_router(auth_router, prefix="/api/v1")
     app.include_router(google_auth_router, prefix="/api/v1")
     app.include_router(collection_router, prefix="/api/v1")
-    app.include_router(groups_router, prefix="/api/v1")
-    app.include_router(group_events_router, prefix="/api/v1")
-    app.include_router(event_pins_router, prefix="/api/v1")
+    app.include_router(
+        groups_router,
+        prefix="/api/v1",
+        dependencies=[Depends(require_tier("pro"))],
+    )
+    app.include_router(
+        group_events_router,
+        prefix="/api/v1",
+        dependencies=[Depends(require_tier("pro"))],
+    )
+    app.include_router(
+        event_pins_router,
+        prefix="/api/v1",
+        dependencies=[Depends(require_tier("pro"))],
+    )
     app.include_router(notifications_router, prefix="/api/v1")
-    app.include_router(hunt_plans_router, prefix="/api/v1")
+    app.include_router(
+        hunt_plans_router,
+        prefix="/api/v1",
+        dependencies=[Depends(require_tier("pro"))],
+    )
     app.include_router(billing_router, prefix="/api/v1")
     app.include_router(webhook_router, prefix="/api/v1")
 

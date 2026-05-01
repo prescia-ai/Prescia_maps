@@ -9,6 +9,7 @@ import { usePlanMapPins } from '../hooks/useHuntPlans';
 import { fetchPlan } from '../api/client';
 import PlanMapPopup from './PlanMapPopup';
 import type { HuntPlanMapPin, HuntPlanStatus } from '../types';
+import { useAuth } from '../contexts/AuthContext';
 
 // Status → fill color
 const STATUS_FILL: Record<HuntPlanStatus, string> = {
@@ -86,12 +87,22 @@ interface PlanMapLayerProps {
 }
 
 export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerProps) {
+  const { isPro } = useAuth();
   const map = useMap();
   const { data: pins } = usePlanMapPins(includeArchived);
   const clusterGroupRef = useRef<any>(null);
   const [hoveredGeojson, setHoveredGeojson] = useState<any>(null);
 
   useEffect(() => {
+    // For non-Pro users, ensure any lingering cluster group is removed and bail early.
+    if (!isPro) {
+      if (clusterGroupRef.current) {
+        map.removeLayer(clusterGroupRef.current);
+        clusterGroupRef.current = null;
+      }
+      return;
+    }
+
     if (!pins) return;
 
     // Remove old cluster group
@@ -162,7 +173,7 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
         clusterGroupRef.current = null;
       }
     };
-  }, [map, pins]);
+  }, [map, pins, isPro]);
 
   return hoveredGeojson ? <HoverPolygon geojson={hoveredGeojson} /> : null;
 }

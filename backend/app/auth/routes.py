@@ -52,18 +52,30 @@ _USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,30}$")
 async def get_me(
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-) -> User:
+) -> dict:
     """Return the authenticated user's profile.
 
     Lazily migrates avatar URLs from the old drive.google.com/thumbnail format
     to the more stable lh3.googleusercontent.com CDN format.
+
+    Also includes ``pin_count`` — the number of hunt logs the user has — so the
+    frontend can display the X/5 free-tier indicator without an extra request.
     """
     if current_user.avatar_url:
         new_url = _migrate_drive_url_to_lh3(current_user.avatar_url, size_suffix="=s400")
         if new_url:
             current_user.avatar_url = new_url
             await db.flush()
-    return current_user
+
+    # Count the user's hunt pins for the free-tier X/5 indicator
+    pin_count_result = await db.execute(
+        select(func.count()).select_from(UserPin).where(UserPin.user_id == current_user.id)
+    )
+    pin_count = pin_count_result.scalar_one()
+
+    profile_data = UserProfile.model_validate(current_user).model_dump()
+    profile_data["pin_count"] = pin_count
+    return profile_data
 
 
 @router.get(

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LogHuntModal from './LogHuntModal';
+import LockBadge from './LockBadge';
+import PaywallModal from './PaywallModal';
+import { useAuth } from '../contexts/AuthContext';
 
 type Tab = 'log_hunt' | 'plan_hunt';
 
@@ -23,7 +26,9 @@ export default function MapContextMenu({
   onTabChange,
 }: MapContextMenuProps) {
   const navigate = useNavigate();
+  const { isPro, pinCount } = useAuth();
   const [activeTab, setActiveTab] = useState<Tab>(initialTab);
+  const [showPlanPaywall, setShowPlanPaywall] = useState(false);
 
   // Plan-a-Hunt stub form
   const [planTitle, setPlanTitle] = useState('');
@@ -31,6 +36,10 @@ export default function MapContextMenu({
   const [planNotes, setPlanNotes] = useState('');
 
   function selectTab(tab: Tab) {
+    if (tab === 'plan_hunt' && !isPro) {
+      setShowPlanPaywall(true);
+      return;
+    }
     setActiveTab(tab);
     onTabChange?.(tab);
   }
@@ -43,6 +52,7 @@ export default function MapContextMenu({
   }
 
   return (
+    <>
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
       onClick={(e) => {
@@ -50,27 +60,32 @@ export default function MapContextMenu({
       }}
     >
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-hidden">
-        {/* Tabs */}
         <div className="flex border-b border-stone-200">
           <button
             onClick={() => selectTab('log_hunt')}
-            className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
               activeTab === 'log_hunt'
                 ? 'text-stone-900 border-b-2 border-amber-600'
                 : 'text-stone-500 hover:text-stone-700'
             }`}
           >
             Log Hunt
+            {!isPro && pinCount !== null && (
+              <span className="text-xs text-stone-400 font-normal">
+                {pinCount}/5
+              </span>
+            )}
           </button>
           <button
             onClick={() => selectTab('plan_hunt')}
-            className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
               activeTab === 'plan_hunt'
                 ? 'text-stone-900 border-b-2 border-amber-600'
                 : 'text-stone-500 hover:text-stone-700'
             }`}
           >
             Plan a Hunt
+            {!isPro && <LockBadge />}
           </button>
           <button
             onClick={onClose}
@@ -158,5 +173,13 @@ export default function MapContextMenu({
         )}
       </div>
     </div>
+
+    <PaywallModal
+      open={showPlanPaywall}
+      onClose={() => setShowPlanPaywall(false)}
+      feature="Hunt Planning"
+      description="Plan future hunts on the map, draw zones, and track planned locations."
+    />
+    </>
   );
 }
