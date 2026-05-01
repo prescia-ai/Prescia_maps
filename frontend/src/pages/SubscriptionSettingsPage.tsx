@@ -194,6 +194,8 @@ export default function SubscriptionSettingsPage() {
 
   const planLabel = plan === 'annual' ? 'Annual Plan' : plan === 'monthly' ? 'Monthly Plan' : 'Pro';
 
+  const isAdmin = status === 'admin';
+
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
       <div className="flex items-center gap-3 mb-6">
@@ -208,6 +210,16 @@ export default function SubscriptionSettingsPage() {
         <h1 className="text-xl font-semibold text-stone-900">Subscription</h1>
       </div>
 
+      {/* ── Admin bypass banner ── */}
+      {isAdmin && (
+        <div className="px-5 py-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-sm flex items-center gap-3">
+          <span className="text-xl flex-shrink-0">✨</span>
+          <span>You have full Pro access as an admin. No subscription required.</span>
+        </div>
+      )}
+
+      {!isAdmin && (
+        <>
       {/* ── Error ── */}
       {error && (
         <div className="mb-4 px-4 py-3 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-sm">
@@ -401,6 +413,8 @@ export default function SubscriptionSettingsPage() {
             )}
           </button>
         </div>
+      )}
+        </>
       )}
     </div>
   );

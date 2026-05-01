@@ -388,6 +388,7 @@ class UserProfilePublic(BaseModel):
     avatar_url: Optional[str] = None
     is_admin: bool = False
     contributed_pins_count: int = 0
+    is_pro: bool = False
 
 
 class UserSearchResult(BaseModel):
@@ -407,6 +408,7 @@ class UserProfileLimited(BaseModel):
     display_name: Optional[str] = None
     privacy: str = "private"
     created_at: Optional[Any] = None
+    is_pro: bool = False
 
 
 # ---------------------------------------------------------------------------
@@ -576,6 +578,7 @@ class PostResponse(BaseModel):
     author_username: Optional[str] = None
     author_display_name: Optional[str] = None
     author_avatar_url: Optional[str] = None
+    author_is_pro: bool = False
     content: str
     privacy: str
     created_at: Optional[Any] = None
@@ -610,6 +613,7 @@ class CommentResponse(BaseModel):
     author_username: Optional[str] = None
     author_display_name: Optional[str] = None
     author_avatar_url: Optional[str] = None
+    author_is_pro: bool = False
     content: str
     created_at: Optional[Any] = None
 

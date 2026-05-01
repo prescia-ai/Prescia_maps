@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
+import ProBadge from './ProBadge';
 import { searchUsers, searchGroups } from '../api/client';
 import type { GroupSearchResult } from '../types';
 import NotificationBell from './NotificationBell';
@@ -279,7 +280,7 @@ export default function Navbar({
   onImportClick,
   onLogHuntClick,
 }: NavbarProps) {
-  const { user, profile, signOut } = useAuth();
+  const { user, profile, isPro, signOut } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -474,6 +475,7 @@ export default function Navbar({
                   size="sm"
                 />
                 <span>Profile</span>
+                {isPro && <ProBadge size="sm" />}
               </Link>
               <SettingsDropdown onSignOut={signOut} onImportClick={onImportClick} />
             </div>

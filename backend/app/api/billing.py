@@ -91,6 +91,18 @@ async def get_subscription_status(
     current_user: User = Depends(get_current_user),
 ) -> SubscriptionStatusResponse:
     """Return the subscription status for the authenticated user."""
+    if current_user.is_admin:
+        return SubscriptionStatusResponse(
+            tier="pro",
+            status="admin",
+            plan=None,
+            trial_ends_at=None,
+            current_period_end=None,
+            canceled_at=None,
+            is_pro=True,
+            has_payment_method=False,
+        )
+
     has_payment_method = False
     if current_user.stripe_customer_id and settings.STRIPE_SECRET_KEY:
         try:
@@ -138,6 +150,12 @@ async def create_checkout_session(
       trial_ends_at and current_period_end both being None).
     - Enables automatic tax collection via Stripe Tax.
     """
+    if current_user.is_admin:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Admins do not require a subscription",
+        )
+
     if not settings.STRIPE_SECRET_KEY:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -211,6 +229,12 @@ async def create_portal_session(
 
     Returns 400 if the user has no Stripe customer ID (never subscribed).
     """
+    if current_user.is_admin:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Admins do not require a subscription",
+        )
+
     if not current_user.stripe_customer_id:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
