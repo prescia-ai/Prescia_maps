@@ -1,5 +1,5 @@
 ==============================================================================
-  PRESCIA MAPS (AURIK) — HUNT PLANNING FEATURE DESIGN
+  PRESCIA MAPS (AURIK) — HUNT PLANNING FEATURE DESIGN  (v1 final scope)
 ==============================================================================
 
 ------------------------------------------------------------------------------
@@ -201,159 +201,158 @@ ADMIN
 
 PARTIALLY IMPLEMENTED / RELEVANT STUBS
   - GroupEvent has lat/lon but no polygon/area support
-  - Notification model is fully generic — plan notifications plug in with no schema changes
-  - UserPin.search_pattern field exists but has no UI enum — can extend for plan conversion
+  - Notification model is fully generic — extensible for any future plan
+    notification types with no schema changes
+  - UserPin.search_pattern field exists but has no UI enum
 
 
 ------------------------------------------------------------------------------
-3. INTEGRATION SURFACE FOR A PLANNING FEATURE
+3. INTEGRATION SURFACE FOR THE PLANNING FEATURE
 ------------------------------------------------------------------------------
 
-WHERE A HuntPlan MODEL FITS
-----------------------------
+WHERE THE HuntPlan MODEL FITS
+------------------------------
   New hunt_plans table in backend/app/models/database.py
   New Alembic migration in backend/alembic/versions/
+  Plans are user-private: no junction tables needed in v1.
 
-  Related junction tables:
-    hunt_plan_members  — party member invitations (user IDs → plan)
-    hunt_plan_stands   — named stand/blind positions per plan
-
-WHERE NEW ROUTES / SCREENS WOULD BE ADDED
--------------------------------------------
+WHERE NEW ROUTES / SCREENS WILL BE ADDED
+-----------------------------------------
   Backend:
     New file backend/app/api/hunt_plans.py  (prefix /hunt-plans)
     Register in backend/main.py alongside existing routers
 
   Frontend routes (add to frontend/src/App.tsx):
     /plans              MyPlansPage     list of user's plans
-    /plans/create       CreatePlanPage  multi-step wizard
-    /plans/:id          PlanDetailPage  map + detail view
-    /plans/:id/edit     EditPlanPage
+    /plans/create       CreatePlanPage  single-page create/draw flow
+    /plans/:id          PlanDetailPage  plan detail + edit
+    /plans/:id/edit     (also handled by PlanDetailPage in edit mode)
 
   New frontend files:
     frontend/src/pages/MyPlansPage.tsx
     frontend/src/pages/CreatePlanPage.tsx
     frontend/src/pages/PlanDetailPage.tsx
-    frontend/src/components/PlanMapOverlay.tsx
+    frontend/src/components/PlanMapLayer.tsx     clustered plan pins on MapPage
+    frontend/src/components/PlanMapPopup.tsx     popup with "Open Plan" CTA
+    frontend/src/components/MapContextMenu.tsx   tabbed right-click modal
     frontend/src/hooks/useHuntPlans.ts
     API functions added to frontend/src/api/client.ts
     New types added to frontend/src/types/index.ts
 
 EXISTING UI COMPONENTS THAT CAN BE REUSED
 ------------------------------------------
-  MapView.tsx           Embed in PlanDetailPage; add PlanOverlayProps for
-                        polygon, stands, entry/exit routes
-  CreateEventModal.tsx  Direct parallel to plan creation form; use as template
-  LogHuntModal.tsx      "Convert to Hunt Log" can pre-populate from plan record
-  LayerControls.tsx     Add my_plans toggle to layer state
-  NotificationBell.tsx  Reuses existing UI — plan reminder notifications drop in
+  LayerControls.tsx     Add huntPlans toggle + "Show archived" sub-toggle
+  MapView.tsx           Replace direct LogHuntModal right-click with MapContextMenu
+  LogHuntModal.tsx      Tab 1 content of MapContextMenu (unchanged)
   LoadingSpinner.tsx    Standard loading state
-  Avatar.tsx            Party member display
-  InfoPanel.tsx         Plan summary panel (sidebar)
+  InfoPanel.tsx         Plan summary panel (sidebar in PlanDetailPage)
 
-EXISTING SHARE / GROUP FUNCTIONALITY TO LEVERAGE
--------------------------------------------------
-  Group + GroupMember infrastructure is complete.
-  A HuntPlan can carry an optional group_id (same pattern as Post.group_id)
-  for group visibility, or use its own hunt_plan_members table for fine-grained
-  party sharing without requiring a full group.
+DRAWING LIBRARY
+---------------
+  leaflet-draw (via react-leaflet-draw) is the chosen drawing library for v1.
+  It is ubiquitous, well-documented, and straightforward to integrate with
+  react-leaflet. Supports polygon, rectangle, and circle tools with built-in
+  editing controls.
+
+  Install alongside marker-clustering packages:
+    leaflet-draw
+    react-leaflet-draw
+    leaflet.markercluster
+    react-leaflet-cluster  (or equivalent React wrapper)
+
+  Add all four to frontend/package.json.
+
+REFERENCE LAYERS WHILE DRAWING
+--------------------------------
+  While a user is drawing or editing a plan zone, the following layers can be
+  toggled on/off using the existing LayerControls infrastructure:
+    - 1955 aerial overlay
+    - PAD-US land access layer
+    - Historical sites layer
+    - "My Hunts" (user's past logged pins)
+  No new layer infrastructure needed — toggle state is already persisted in
+  localStorage under 'prescia_layer_state'.
 
 
 ------------------------------------------------------------------------------
-4. PROPOSED HUNT PLANNING FEATURE DESIGN
+4. HUNT PLANNING FEATURE DESIGN  (v1 final scope)
 ------------------------------------------------------------------------------
 
 4.1 DATA MODEL
 --------------
+Single new table. NO auxiliary tables in v1.
 
-hunt_plans table (add to backend/app/models/database.py):
+hunt_plans (add to backend/app/models/database.py):
 
   class HuntPlanStatus(str, enum.Enum):
-      draft      = "draft"
-      scheduled  = "scheduled"
-      completed  = "completed"
-      cancelled  = "cancelled"
+      idea      = "idea"
+      planned   = "planned"
+      done      = "done"
+      archived  = "archived"
 
   class HuntPlan(Base):
       __tablename__ = "hunt_plans"
 
       id               UUID PK default uuid4
-      owner_id         UUID NOT NULL INDEX          -- FK → users.id
-      group_id         UUID NULLABLE INDEX          -- optional group association
+      owner_id         UUID NOT NULL INDEX       -- FK → users.id  (indexed)
 
       title            String(200) NOT NULL
-      description      Text NULLABLE
+      planned_date     DateTime nullable
+      site_type        String(20)                -- dirt|beach|water|park|yard|club_hunt
+      status           Enum(HuntPlanStatus)      -- idea|planned|done|archived
 
-      latitude         Float NOT NULL               -- primary hunting area
-      longitude        Float NOT NULL
-      geom             Geometry(POINT, 4326)        -- spatial index
-      area_polygon     JSONB NULLABLE               -- GeoJSON polygon
+      notes            Text nullable
+      geom             Geometry(POINT, 4326)     -- centroid, auto-derived from area_geojson
+      area_geojson     JSONB NOT NULL            -- full polygon/rectangle/circle GeoJSON
 
-      planned_date     DateTime(timezone=True) NOT NULL
-      planned_end      DateTime(timezone=True) NULLABLE
+      in_zone_markers  JSONB nullable            -- [{id, lat, lng, type, label, note}]
+                                                 --   type: dig_target|avoid|access|
+                                                 --         already_detected
 
-      target_species   JSONB NULLABLE               -- ["whitetail", "turkey"]
-      privacy          String(20) default="private" -- private | party | group
-      status           Enum(HuntPlanStatus) NOT NULL default=draft
-
-      weather_snapshot JSONB NULLABLE               -- temp, wind, precip, condition
-      moon_phase       String(50) NULLABLE          -- "waxing gibbous"
-      sunrise_time     String(10) NULLABLE          -- "06:34"
-      sunset_time      String(10) NULLABLE          -- "19:12"
-
-      notes            Text NULLABLE
-      gear_checklist   JSONB NULLABLE               -- [{item, checked}]
-
-      converted_pin_id UUID NULLABLE               -- FK → user_pins.id (after conversion)
+      gear_checklist   JSONB nullable            -- [{item, checked}]
+      permission       JSONB nullable            -- {owner_name, contact, status,
+                                                 --   expiry, notes}  (text fields only;
+                                                 --   no automation, no PDF generation)
+      view_snapshot    JSONB nullable            -- {center: [lat,lng], zoom,
+                                                 --   layers: {...}}  (restores map view
+                                                 --   when plan is reopened)
+      photo_urls       JSONB nullable            -- [str]  Google Drive URLs
+                                                 --   (reuse existing upload pattern)
 
       created_at       DateTime server_default now()
       updated_at       DateTime server_default now() onupdate now()
 
-
-hunt_plan_members table:
-
-  plan_id    UUID PK   -- FK → hunt_plans.id
-  user_id    UUID PK   -- FK → users.id
-  role       String(20) default="member"   -- owner | member
-  status     String(20) default="invited"  -- invited | accepted | declined
-  added_at   DateTime server_default now()
+  Columns explicitly NOT present in v1:
+    group_id, weather_snapshot, moon_phase, sunrise_time, sunset_time,
+    converted_pin_id, privacy, hunt_plan_members FK, hunt_plan_stands FK.
 
 
-hunt_plan_stands table:
-
-  id           UUID PK default uuid4
-  plan_id      UUID NOT NULL INDEX          -- FK → hunt_plans.id
-  label        String(100) NOT NULL         -- "North Stand", "Blind A"
-  latitude     Float NOT NULL
-  longitude    Float NOT NULL
-  assigned_to  UUID NULLABLE                -- FK → users.id
-  stand_type   String(50) NULLABLE          -- treestand | ground_blind | drop_zone
-  notes        Text NULLABLE
-
-
-Migration: new file backend/alembic/versions/<hash>_add_hunt_plans_tables.py
+Migration: backend/alembic/versions/<hash>_add_hunt_plans.py
+  (single table; no junction tables)
 
 
 Pydantic schemas (add to backend/app/models/schemas.py):
-  HuntPlanCreate          title, latitude, longitude, planned_date, optional fields
-  HuntPlanUpdate          all optional
-  HuntPlanResponse        full record + enriched party members + stands
-  HuntPlanListResponse    { plans: List[HuntPlanResponse], total: int }
-  StandCreate / StandResponse
-  PartyInvite             { username: str }
+
+  HuntPlanCreate        title, area_geojson, optional fields
+  HuntPlanUpdate        all optional
+  HuntPlanResponse      full record
+  HuntPlanListResponse  { plans: List[HuntPlanResponse], total: int }
+  HuntPlanMapPin        id, title, lat, lng, status, site_type  (lightweight)
 
 
 TypeScript types (add to frontend/src/types/index.ts):
 
-  type HuntPlanStatus = 'draft' | 'scheduled' | 'completed' | 'cancelled';
+  type HuntPlanStatus = 'idea' | 'planned' | 'done' | 'archived';
 
-  interface WeatherSnapshot {
-    temp_f:              number;
-    wind_speed_mph:      number;
-    wind_direction:      string;   // "NW", "SSE"
-    precipitation_in:    number;
-    condition:           string;   // "Partly Cloudy"
-    fetched_at:          string;
+  type SiteType = 'dirt' | 'beach' | 'water' | 'park' | 'yard' | 'club_hunt';
+
+  interface InZoneMarker {
+    id:     string;
+    lat:    number;
+    lng:    number;
+    type:   'dig_target' | 'avoid' | 'access' | 'already_detected';
+    label:  string;
+    note:   string | null;
   }
 
   interface GearItem {
@@ -361,52 +360,42 @@ TypeScript types (add to frontend/src/types/index.ts):
     checked: boolean;
   }
 
-  interface HuntPlanStand {
-    id:           string;
-    plan_id:      string;
-    label:        string;
-    latitude:     number;
-    longitude:    number;
-    assigned_to:  string | null;
-    stand_type:   string | null;
-    notes:        string | null;
+  interface PlanPermission {
+    owner_name: string | null;
+    contact:    string | null;
+    status:     string | null;
+    expiry:     string | null;
+    notes:      string | null;
   }
 
-  interface PartyMember {
-    user_id:      string;
-    username:     string | null;
-    display_name: string | null;
-    avatar_url:   string | null;
-    role:         string;
-    status:       'invited' | 'accepted' | 'declined';
+  interface PlanViewSnapshot {
+    center: [number, number];
+    zoom:   number;
+    layers: Record<string, boolean>;
   }
 
   interface HuntPlan {
-    id:               string;
-    owner_id:         string;
-    group_id:         string | null;
-    title:            string;
-    description:      string | null;
-    latitude:         number;
-    longitude:        number;
-    area_polygon:     GeoJSON.Polygon | null;
-    planned_date:     string;
-    planned_end:      string | null;
-    target_species:   string[] | null;
-    privacy:          'private' | 'party' | 'group';
-    status:           HuntPlanStatus;
-    weather_snapshot: WeatherSnapshot | null;
-    moon_phase:       string | null;
-    sunrise_time:     string | null;
-    sunset_time:      string | null;
-    notes:            string | null;
-    gear_checklist:   GearItem[] | null;
-    converted_pin_id: string | null;
-    stands:           HuntPlanStand[];
-    party_members:    PartyMember[];
-    created_at:       string;
-    updated_at:       string | null;
+    id:              string;
+    owner_id:        string;
+    title:           string;
+    planned_date:    string | null;
+    site_type:       SiteType | null;
+    status:          HuntPlanStatus;
+    notes:           string | null;
+    geom:            { lat: number; lng: number } | null;  // centroid
+    area_geojson:    object;                               // GeoJSON Feature
+    in_zone_markers: InZoneMarker[] | null;
+    gear_checklist:  GearItem[] | null;
+    permission:      PlanPermission | null;
+    view_snapshot:   PlanViewSnapshot | null;
+    photo_urls:      string[] | null;
+    created_at:      string;
+    updated_at:      string | null;
   }
+
+  // Add to LayerState (frontend/src/types/index.ts):
+  //   huntPlans:         boolean;
+  //   huntPlansArchived: boolean;
 
 
 4.2 API ENDPOINTS
@@ -414,222 +403,317 @@ TypeScript types (add to frontend/src/types/index.ts):
 New file backend/app/api/hunt_plans.py, registered in main.py.
 All endpoints under /api/v1/hunt-plans.
 
-  POST   /hunt-plans                              Create a plan
-  GET    /hunt-plans/me                           List my plans (owner or party member)
-  GET    /hunt-plans/{plan_id}                    Get single plan
-  PUT    /hunt-plans/{plan_id}                    Update plan (owner only)
-  DELETE /hunt-plans/{plan_id}                    Delete plan (owner only)
-  PATCH  /hunt-plans/{plan_id}/status             Transition status
+  POST   /hunt-plans
+    Create a plan. Body: HuntPlanCreate. Centroid geom auto-derived from
+    area_geojson on the backend. Returns HuntPlanResponse.
 
-  POST   /hunt-plans/{plan_id}/members            Invite by username
-  DELETE /hunt-plans/{plan_id}/members/{uid}      Remove from party
-  PATCH  /hunt-plans/{plan_id}/members/me         Accept / decline invitation
+  GET    /hunt-plans/me
+    List the caller's plans. Query params: search (string), sort (created_at |
+    planned_date | title), order (asc | desc), site_type filter, status filter.
+    Returns HuntPlanListResponse. Archived plans are included when
+    status=archived is passed; excluded otherwise by default.
 
-  POST   /hunt-plans/{plan_id}/stands             Add stand
-  PUT    /hunt-plans/{plan_id}/stands/{sid}       Update stand
-  DELETE /hunt-plans/{plan_id}/stands/{sid}       Delete stand
+  GET    /hunt-plans/{plan_id}
+    Get a single plan (owner only). Returns HuntPlanResponse.
 
-  GET    /hunt-plans/{plan_id}/weather            Fetch / refresh weather snapshot
+  PUT    /hunt-plans/{plan_id}
+    Full update (owner only). Returns HuntPlanResponse.
 
-  POST   /hunt-plans/{plan_id}/convert            Convert plan → UserPin logged hunt
+  DELETE /hunt-plans/{plan_id}
+    Delete plan (owner only). 204 No Content.
 
-  GET    /hunt-plans/map-pins                     Upcoming plan pins for map layer
+  PATCH  /hunt-plans/{plan_id}/status
+    Transition status: idea → planned → done → archived (any direction).
+    Body: { status: HuntPlanStatus }. Returns HuntPlanResponse.
 
-convert endpoint logic:
-  1. Validate caller is plan owner
-  2. Create UserPin from plan.latitude, longitude, planned_date, title, notes
-  3. Set hunt_plan.converted_pin_id = new_pin.id, status = "completed"
-  4. Trigger check_all_badges() (same call used in pins.py)
-  5. Return the new UserPin
+  POST   /hunt-plans/{plan_id}/duplicate
+    Clone an existing plan. Copies all fields except id, created_at, updated_at.
+    Status resets to "idea". Returns the new HuntPlanResponse.
+
+  GET    /hunt-plans/map-pins
+    Lightweight list for the Hunt Plans map layer. Returns
+    [{ id, title, lat, lng, status, site_type }] for the caller's plans.
+    Excludes archived plans by default; pass ?include_archived=true to include.
+
+  GET    /hunt-plans/{plan_id}/export.gpx
+    GPX export of the plan zone polygon + in-zone markers as waypoints.
+
+  GET    /hunt-plans/{plan_id}/export.pdf
+    Printable PDF summary of the plan (title, date, site type, notes,
+    gear checklist, permission info, map thumbnail if feasible).
 
 
 4.3 UI SCREENS
 --------------
 
 /plans → MyPlansPage.tsx
-  - Tabbed list: Upcoming | Past | Drafts
-  - Each card: title, planned date, location, status badge,
-               party member avatars, weather icon snapshot
-  - "Create Plan" CTA → /plans/create
-  - Quick-actions: view, edit, delete, convert to hunt log
-  - Optional month-grid calendar tab (PlanCalendarView component)
+  - Search bar, sort controls (date, title, status), filter by site type
+  - Plan cards: title, status badge (color-coded by status), site type,
+    planned date, notes preview
+  - Archived plans hidden by default; "Show archived" toggle reveals them
+  - Quick actions per card: open, edit, duplicate, delete
+  - "+ Plan a Hunt" button in the page header → /plans/create
+    (this is the primary CTA; it does NOT live on the map toolbar)
+  - Export buttons (GPX / PDF) on the plan card or detail page
 
-/plans/create → CreatePlanPage.tsx (multi-step wizard)
-  Step 1  Location      Click on embedded MapView to drop pin, or type lat/lon
-  Step 2  Date & Time   Date/time pickers; display fetched sunrise/sunset
-  Step 3  Hunt Details  Title, target species (multi-select), notes
-  Step 4  Party         Search users by username, send invites
-  Step 5  Stands        Add named stand markers on embedded map
-  Step 6  Gear          Add/remove checklist items
-  Step 7  Review        Summary — "Save as Draft" or "Schedule"
+/plans/create → CreatePlanPage.tsx  (single-page flow, not a multi-step wizard)
+  - Full-page layout with map canvas on one side, form fields on the other
+  - Drawing toolbar (leaflet-draw): polygon, rectangle, circle tools
+    Drawn zone is editable after creation
+  - Form fields alongside the map:
+      Title (required)
+      Planned date (optional)
+      Site type tag: dirt | beach | water | park | yard | club_hunt
+      Notes
+      Photos (Google Drive upload — same pattern as LogHuntModal)
+  - In-zone markers section: add dig_target | avoid | access | already_detected
+    pins by clicking inside the drawn zone; each has label + note
+  - Gear checklist: add/remove items, check/uncheck
+  - Permission info: owner_name, contact, status, expiry, notes (plain text)
+  - Reference layers toggle panel: 1955 aerial, PAD-US, historical sites,
+    My Hunts — use existing LayerControls toggles
+  - "Save Plan" button — creates the plan and navigates to /plans/:id
+  - If navigated here from the right-click modal (see 4.5), lat/lon is
+    pre-seeded as the map center; no zone is pre-drawn
 
 /plans/:id → PlanDetailPage.tsx
-  Left panel:
-    - All plan metadata
-    - Gear checklist (checkboxes)
-    - Party member list with avatars and acceptance status
-    - Weather snapshot with refresh button
-    - "Mark as Completed / Log Hunt" button → POST /convert
-  Right panel (PlanMapOverlay):
-    - Area polygon (react-leaflet Polygon, semi-transparent)
-    - Stand/blind markers (CircleMarker, colored by stand_type)
-    - Entry/exit route polylines (Polyline, dashed)
-    - Wind direction arrow (SVG DivOverlay)
-    - Historical site overlay filtered to plan area
-    - Past UserPin sightings near the area
+  - Displays all plan metadata (title, status, site type, date, notes, photos)
+  - Map panel: shows the saved area_geojson polygon + in-zone markers
+  - Edit mode: clicking "Edit" re-opens the drawing/form canvas in-page
+  - Gear checklist (interactive checkboxes — changes persist to the server)
+  - Permission info section (editable text fields)
+  - View snapshot: when the plan is opened, map center/zoom/layers are
+    restored from view_snapshot if present; saving the plan writes the
+    current map state back to view_snapshot
+  - Export links: GPX download, PDF download
+  - Status transition buttons: move between idea / planned / done / archived
+  - Duplicate action button
 
 
-4.4 MAP INTEGRATION (PlanMapOverlay component)
------------------------------------------------
-New component frontend/src/components/PlanMapOverlay.tsx
-Accepts a HuntPlan and renders inside an existing MapContainer.
+4.4 MAP INTEGRATION
+-------------------
 
-  Area polygon       react-leaflet Polygon, color-coded by status
-  Stand markers      CircleMarker or custom DivIcon per HuntPlanStand
-  Entry/exit routes  Polyline with dashed style
-  Wind arrow         SVG DivOverlay indicating weather_snapshot.wind_direction
-  Historical filter  Pass area_polygon bbox as query params to /locations endpoint
-                     (add bbox support to routes.py GET /locations)
-  Past sightings     Fetch user's UserPin records near plan area, render dimmed
+Hunt Plans layer toggle (LayerControls.tsx):
+  - New "Hunt Plans" toggle in the layer panel (same pattern as existing
+    "My Hunts", "Group Events" toggles)
+  - When enabled, fetches GET /hunt-plans/map-pins and renders plan pins
+    via the PlanMapLayer component
+  - Sub-toggle: "Show archived" — when checked, re-fetches with
+    ?include_archived=true; archived pins rendered at reduced opacity
+  - Layer state stored under keys huntPlans and huntPlansArchived in
+    the existing 'prescia_layer_state' localStorage object
+
+PlanMapLayer component (frontend/src/components/PlanMapLayer.tsx):
+  - Renders inside MapPage when the huntPlans layer is enabled
+  - Uses react-leaflet-cluster (or react-leaflet-markercluster) to cluster
+    nearby plan pins via leaflet.markercluster
+  - Plan pin icon: color-coded by status
+      idea     → grey marker
+      planned  → blue marker
+      done     → green marker
+      archived → faded / semi-transparent marker
+  - Pin icon shape: distinguishable by site_type (e.g. small shovel DivIcon
+    overlay on the status-colored circle)
+  - Centroid (geom) is auto-computed from area_geojson on save; users never
+    manually place the plan pin
+
+Plan pin popup (frontend/src/components/PlanMapPopup.tsx):
+  - Rendered on click of a plan pin
+  - Content: title, status badge, site type, planned date, notes preview
+    (first 120 chars), "Open Plan" button → navigates to /plans/:id
+  - Styled consistently with existing Leaflet popups in the app
+
+Hover behavior (in PlanMapLayer.tsx):
+  - On mouseenter of a plan pin: fetch or use cached area_geojson from the
+    map-pins response (or a separate lightweight fetch) and render a faint
+    polygon outline over the plan zone (react-leaflet Polygon, low opacity,
+    no fill)
+  - On mouseleave: remove the polygon outline
 
 
-4.5 OPTIONAL INTEGRATIONS
---------------------------
-Weather Forecast:
-  - Backend proxies to Open-Meteo (free, no API key) or WeatherAPI
-  - Add WEATHER_API_KEY setting to backend/app/config.py
-  - Response stored as JSONB in hunt_plans.weather_snapshot
-  - Frontend "Refresh forecast" button calls GET /hunt-plans/{id}/weather
+4.5 RIGHT-CLICK FLOW  (unified entry point)
+--------------------------------------------
 
-Moon Phase:
-  - Pure Python calculation or 'ephem' library
-  - Computed from planned_date; stored in hunt_plans.moon_phase
-  - Displayed as icon/emoji in plan header
+MapContextMenu component (frontend/src/components/MapContextMenu.tsx):
+  - Replaces the existing direct right-click → LogHuntModal behavior in
+    MapView.tsx
+  - A modal dialog with two tabs: "Log Hunt" | "Plan a Hunt"
+  - The last-used tab is remembered in React state (session-scoped; resets
+    on page reload) so that the same tab opens on the next right-click
+    during the same session
 
-Sunrise / Sunset:
-  - Free Sunrise-Sunset API or Python 'astral' library
-  - Computed from lat/lon + date; stored in sunrise_time / sunset_time
+  Tab 1 — "Log Hunt":
+    Existing LogHuntModal content, rendered verbatim.
+    No changes to LogHuntModal.tsx itself.
 
-Historical Sightings Overlay:
-  - Fetch authenticated user's past UserPin records near plan area
-  - Overlay as semi-transparent markers in PlanDetailPage map
+  Tab 2 — "Plan a Hunt":
+    Quick-stub form:
+      - Title (text input)
+      - Planned date (optional date picker)
+      - Notes (optional textarea)
+      - "Continue to draw zone" button
+    On submit: closes the modal and navigates to /plans/create with the
+    right-clicked lat/lon passed as query params (?lat=…&lng=…) so that
+    CreatePlanPage can pre-center the map on that location.
 
-Notifications / Reminders:
-  - Reuse existing Notification model and create_notification() directly
-  - New notification type: "hunt_plan_reminder"
-  - Background task (APScheduler) queries plans with planned_date in next 24h
-    and status=scheduled, then calls create_notification() for owner + party
-  - NotificationBell component already handles all types — no UI changes needed
+  Migration note for MapView.tsx:
+    Replace the existing onContextMenu → open(LogHuntModal) call with
+    onContextMenu → open(MapContextMenu). The lat/lon is passed to the
+    modal the same way it was passed to LogHuntModal previously.
 
-Sharing & Collaboration:
-  - Party invitations trigger "hunt_plan_invite" notifications
-  - Accepted members can view plan detail (privacy check: user in party_members)
-  - Group-scoped plans visible to all active group members (plan.group_id pattern
-    mirrors Post.group_id used in feed.py)
 
-Plan → Logged Hunt Conversion (see 4.2 convert endpoint above):
-  - Frontend CTA in PlanDetailPage
-  - On success: navigate to MapPage with new pin highlighted
-  - Show BadgeDisplay popup (reuse existing BadgeDisplay.tsx)
+4.6 NAVBAR
+----------
+  - Add a "Plans" link to the existing Navbar.tsx navigation bar
+  - Routes to /plans (MyPlansPage)
+  - The "+ Plan a Hunt" creation CTA lives on MyPlansPage, NOT in the
+    navbar or on the map toolbar
+
+
+4.7 EXPLICITLY DEFERRED BEYOND v1
+----------------------------------
+The following items were discussed and deliberately excluded from v1.
+They are listed here so future contributors know these were intentional
+decisions, not oversights.
+
+  hunt_plan_members table / party invites
+    Fine-grained per-user sharing. Deferred because plans are private in v1.
+    Revisit if users request collaborative planning.
+
+  hunt_plan_stands table
+    Replaced in v1 by JSONB in_zone_markers on the plan record.
+    A separate relational table (with assigned_to FK, stand_type enum, etc.)
+    can be introduced later if marker complexity grows.
+
+  Weather snapshot, weather service integration
+    weather_snapshot field, Open-Meteo / WeatherAPI proxy, WEATHER_API_KEY
+    config setting, PlanWeatherWidget component. Deferred.
+
+  Moon phase, sunrise/sunset times
+    moon_phase, sunrise_time, sunset_time fields and ephem/astral libraries.
+    Deferred.
+
+  Plan → UserPin conversion endpoint ("Convert to Hunt Log")
+    POST /hunt-plans/{id}/convert, converted_pin_id field, the frontend
+    "Convert to Hunt Log" button, and BadgeDisplay trigger. Live hunt mode
+    (GPS breadcrumbs, real-time find logging) is its own future feature.
+    Deferred.
+
+  Notification / reminder system for plans
+    hunt_plan_reminder notification type, APScheduler background tasks,
+    NotificationBell changes for plan types. Deferred.
+
+  Calendar view component
+    PlanCalendarView month-grid. Deferred.
+
+  Group sharing / group_id on plans
+    group_id field, group-scoped plan visibility, Post.group_id pattern
+    applied to plans. Deferred.
+
+  AI scoring of plans
+    Extending the existing 0–100 engine to grade a plan's site density,
+    land-access status, and historical aerial signals. Deferred.
+
+  Live hunt mode
+    "Start Hunt" button, GPS breadcrumb trail, real-time find logging,
+    auto-conversion to hunt log on end. A separate future feature.
+
+  Multi-step wizard
+    The original 7-step create wizard (Location → Date → Details → Party →
+    Stands → Gear → Review). v1 uses a single-page create flow instead.
 
 
 ------------------------------------------------------------------------------
 5. IMPLEMENTATION ROADMAP
 ------------------------------------------------------------------------------
 
-PHASE 1 — MVP (Create, List, View, Delete)
--------------------------------------------
+PHASE 1 — v1 Complete Feature Set
+-----------------------------------
+All items below are Phase 1. There is a single phase in v1; the
+earlier Phase 2/3 items listed in the previous design are explicitly
+deferred (see section 4.7 above).
+
 Backend files to CREATE:
-  backend/alembic/versions/<hash>_add_hunt_plans_tables.py
-  backend/app/api/hunt_plans.py   (CRUD: POST, GET list+detail, PUT, DELETE, PATCH status)
+  backend/alembic/versions/<hash>_add_hunt_plans.py
+    Single migration: creates hunt_plans table only.
+
+  backend/app/api/hunt_plans.py
+    All endpoints listed in section 4.2.
 
 Backend files to MODIFY:
-  backend/app/models/database.py  Add HuntPlan, HuntPlanMember, HuntPlanStand, HuntPlanStatus
-  backend/app/models/schemas.py   Add HuntPlanCreate/Update/Response/ListResponse, StandCreate/Response, PartyInvite
-  backend/main.py                 Register hunt_plans_router
+  backend/app/models/database.py
+    Add HuntPlanStatus enum + HuntPlan ORM class.
+
+  backend/app/models/schemas.py
+    Add HuntPlanCreate, HuntPlanUpdate, HuntPlanResponse,
+    HuntPlanListResponse, HuntPlanMapPin.
+
+  backend/main.py
+    Register hunt_plans router.
 
 Frontend files to CREATE:
   frontend/src/pages/MyPlansPage.tsx
-  frontend/src/pages/CreatePlanPage.tsx   (simple single-step form first)
-  frontend/src/pages/PlanDetailPage.tsx   (read-only detail, no map overlay yet)
+  frontend/src/pages/CreatePlanPage.tsx
+  frontend/src/pages/PlanDetailPage.tsx
+  frontend/src/components/PlanMapLayer.tsx
+  frontend/src/components/PlanMapPopup.tsx
+  frontend/src/components/MapContextMenu.tsx
   frontend/src/hooks/useHuntPlans.ts
 
 Frontend files to MODIFY:
-  frontend/src/App.tsx            Add /plans, /plans/create, /plans/:id routes
-  frontend/src/api/client.ts      Add createPlan, fetchMyPlans, fetchPlan, updatePlan, deletePlan
-  frontend/src/types/index.ts     Add HuntPlan, HuntPlanStand, PartyMember, WeatherSnapshot, GearItem
-  frontend/src/components/Navbar.tsx  Add "Plans" nav link
+  frontend/src/App.tsx
+    Add /plans, /plans/create, /plans/:id, /plans/:id/edit routes.
+
+  frontend/src/components/Navbar.tsx
+    Add "Plans" nav link → /plans.
+
+  frontend/src/components/LayerControls.tsx
+    Add huntPlans toggle + "Show archived" sub-toggle.
+
+  frontend/src/components/MapView.tsx
+    Replace direct right-click → LogHuntModal with MapContextMenu.
+
+  frontend/src/pages/MapPage.tsx
+    Include PlanMapLayer when huntPlans layer toggle is on.
+
+  frontend/src/api/client.ts
+    Add plan API functions: createPlan, fetchMyPlans, fetchPlan,
+    updatePlan, deletePlan, patchPlanStatus, duplicatePlan,
+    fetchMapPins, exportGpx, exportPdf.
+
+  frontend/src/types/index.ts
+    Add HuntPlan, InZoneMarker, GearItem, PlanPermission,
+    PlanViewSnapshot, HuntPlanStatus, SiteType types.
+    Add huntPlans + huntPlansArchived keys to LayerState.
+
+  frontend/package.json
+    Add: leaflet-draw, react-leaflet-draw,
+         leaflet.markercluster, react-leaflet-cluster (or equivalent).
 
 
-PHASE 2 — Map Overlays, Party Sharing, Weather Integration
------------------------------------------------------------
-Backend files to CREATE/MODIFY:
-  backend/app/api/hunt_plans.py       Add /members, /stands, /weather, /map-pins endpoints
-  backend/app/services/weather_service.py  NEW — proxy Open-Meteo, moon phase, sunrise/sunset
-  backend/app/config.py               Add WEATHER_API_KEY setting
-
-Frontend files to CREATE:
-  frontend/src/components/PlanMapOverlay.tsx   Polygon, stands, wind arrow
-  frontend/src/components/PlanWeatherWidget.tsx
-
-Frontend files to MODIFY:
-  frontend/src/pages/CreatePlanPage.tsx    Multi-step wizard with map picker
-  frontend/src/pages/PlanDetailPage.tsx    Add map overlay, party management, gear checklist
-  frontend/src/types/index.ts             Add my_plans: boolean to LayerState
-  frontend/src/components/LayerControls.tsx  Add "My Plans" layer toggle
-  frontend/src/components/MapView.tsx     Accept planPins prop; render plan map pins
-                                          (analogous to EventPin markers at lines 83-130)
-  frontend/src/pages/MapPage.tsx          Add usePlans query for map pin layer
-
-
-PHASE 3 — Notifications, Calendar Sync, Post-Hunt Conversion
--------------------------------------------------------------
-Backend files to CREATE/MODIFY:
-  backend/app/api/hunt_plans.py            Add POST /hunt-plans/{id}/convert
-  backend/app/tasks/reminders.py           NEW — background reminder task
-  backend/main.py                          Wire up reminder task on startup
-  backend/requirements.txt                 Add apscheduler (if scheduling reminders)
-
-Frontend files to CREATE:
-  frontend/src/components/PlanCalendarView.tsx  Month-grid calendar
-
-Frontend files to MODIFY:
-  frontend/src/pages/MyPlansPage.tsx       Add calendar tab
-  frontend/src/pages/PlanDetailPage.tsx    Add "Convert to Hunt Log" button + BadgeDisplay
-  frontend/src/api/client.ts              Add convertPlanToHunt, refreshPlanWeather,
-                                           invitePartyMember, respondToInvite
-  frontend/src/components/NotificationBell.tsx
-                                           Handle hunt_plan_reminder and hunt_plan_invite
-                                           notification types (structurally already supported)
-
-
-COMPLETE FILE REFERENCE TABLE
-------------------------------
-File                                                        Action    Phase
---------------------------------------------------------------------------
-backend/app/models/database.py                              Modify    1
-backend/app/models/schemas.py                               Modify    1
-backend/app/api/hunt_plans.py                               Create    1
-backend/main.py                                             Modify    1
-backend/alembic/versions/<hash>_add_hunt_plans_tables.py    Create    1
-frontend/src/types/index.ts                                 Modify    1
-frontend/src/api/client.ts                                  Modify    1
-frontend/src/hooks/useHuntPlans.ts                          Create    1
-frontend/src/pages/MyPlansPage.tsx                          Create    1
-frontend/src/pages/CreatePlanPage.tsx                       Create    1
-frontend/src/pages/PlanDetailPage.tsx                       Create    1
-frontend/src/App.tsx                                        Modify    1
-frontend/src/components/Navbar.tsx                          Modify    1
-backend/app/services/weather_service.py                     Create    2
-backend/app/config.py                                       Modify    2
-frontend/src/components/PlanMapOverlay.tsx                  Create    2
-frontend/src/components/PlanWeatherWidget.tsx               Create    2
-frontend/src/components/LayerControls.tsx                   Modify    2
-frontend/src/components/MapView.tsx                         Modify    2
-frontend/src/pages/MapPage.tsx                              Modify    2
-backend/requirements.txt                                    Modify    3
-backend/app/tasks/reminders.py                              Create    3
-frontend/src/components/PlanCalendarView.tsx                Create    3
-frontend/src/components/NotificationBell.tsx                Modify    3
+COMPLETE FILE REFERENCE TABLE  (Phase 1 / v1 only)
+----------------------------------------------------
+File                                                      Action
+------------------------------------------------------------------------
+backend/alembic/versions/<hash>_add_hunt_plans.py         Create
+backend/app/api/hunt_plans.py                             Create
+backend/app/models/database.py                            Modify
+backend/app/models/schemas.py                             Modify
+backend/main.py                                           Modify
+frontend/src/pages/MyPlansPage.tsx                        Create
+frontend/src/pages/CreatePlanPage.tsx                     Create
+frontend/src/pages/PlanDetailPage.tsx                     Create
+frontend/src/components/PlanMapLayer.tsx                  Create
+frontend/src/components/PlanMapPopup.tsx                  Create
+frontend/src/components/MapContextMenu.tsx                Create
+frontend/src/hooks/useHuntPlans.ts                        Create
+frontend/src/App.tsx                                      Modify
+frontend/src/components/Navbar.tsx                        Modify
+frontend/src/components/LayerControls.tsx                 Modify
+frontend/src/components/MapView.tsx                       Modify
+frontend/src/pages/MapPage.tsx                            Modify
+frontend/src/api/client.ts                                Modify
+frontend/src/types/index.ts                               Modify
+frontend/package.json                                     Modify
 
 ==============================================================================
