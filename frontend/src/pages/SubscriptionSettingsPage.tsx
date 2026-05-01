@@ -115,7 +115,7 @@ export default function SubscriptionSettingsPage() {
       setSuccessBanner(true);
       refreshSubscription();
 
-      // Poll for up to ~5 s for the webhook to process
+      // Poll for up to ~5 sec for the webhook to process
       let attempts = 0;
       const poll = () => {
         attempts += 1;
