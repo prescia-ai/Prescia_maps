@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { MapContainer, Polygon, TileLayer, ZoomControl } from 'react-leaflet';
+import { MapContainer, Polygon, TileLayer, ZoomControl, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import AppLayout from '../components/AppLayout';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -43,9 +43,6 @@ function extractPolygonPositions(geojson: any): [number, number][][] | null {
 }
 
 // ── Map view restorer ────────────────────────────────────────────────────────
-
-import { useMap } from 'react-leaflet';
-import { useRef } from 'react';
 
 function MapViewRestorer({ snapshot, geojson }: { snapshot: ViewSnapshot | null; geojson: any }) {
   const map = useMap();

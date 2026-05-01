@@ -286,7 +286,7 @@ async def update_plan(
         plan.area_geojson = payload.area_geojson
         plan.geom = _compute_centroid(payload.area_geojson)
     if payload.planned_date is not None:
-        plan.planned_date = _parse_planned_date(payload.planned_date)
+        plan.planned_date = _parse_planned_date(payload.planned_date) if payload.planned_date else None
     if payload.site_type is not None:
         plan.site_type = payload.site_type
     if payload.notes is not None:

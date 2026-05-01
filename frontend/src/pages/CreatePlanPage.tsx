@@ -327,10 +327,32 @@ export default function CreatePlanPage({ planId }: CreatePlanPageProps) {
     if (!selected.length) return;
     const combined = [...imageFiles, ...selected].slice(0, 4);
     setImageFiles(combined);
+
+    // Revoke old blob URLs
     for (const url of previewUrlsRef.current) URL.revokeObjectURL(url);
-    const previews = combined.map((f) => URL.createObjectURL(f));
-    previewUrlsRef.current = previews;
-    setImagePreviews(previews);
+
+    // Use FileReader to produce validated data URLs (prevents XSS from crafted SVGs via blob URLs)
+    const previews: string[] = [];
+    let done = 0;
+    for (let i = 0; i < combined.length; i++) {
+      const reader = new FileReader();
+      const idx = i;
+      reader.onload = (ev) => {
+        const result = ev.target?.result as string | null;
+        // Only accept data URLs with an image/* MIME type
+        if (result && /^data:image\//.test(result)) {
+          previews[idx] = result;
+        } else {
+          previews[idx] = '';
+        }
+        done++;
+        if (done === combined.length) {
+          previewUrlsRef.current = [];
+          setImagePreviews(previews);
+        }
+      };
+      reader.readAsDataURL(combined[i]);
+    }
     e.target.value = '';
   }
 
@@ -702,13 +724,11 @@ export default function CreatePlanPage({ planId }: CreatePlanPageProps) {
                 </label>
                 {imagePreviews.length > 0 && (
                   <div className="grid grid-cols-2 gap-1 mt-2">
-                    {imagePreviews.map((url, i) => {
-                      // Only use blob: URLs created by URL.createObjectURL() to prevent open-redirect
-                      const safeSrc = url.startsWith('blob:') ? url : '';
-                      return (
-                        <img key={i} src={safeSrc} className="w-full h-16 object-cover rounded" alt="" />
-                      );
-                    })}
+                    {imagePreviews.map((dataUrl, i) =>
+                      dataUrl ? (
+                        <img key={i} src={dataUrl} className="w-full h-16 object-cover rounded" alt="" />
+                      ) : null,
+                    )}
                   </div>
                 )}
               </div>
