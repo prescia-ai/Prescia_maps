@@ -23,6 +23,11 @@ services:
     container_name: aurik_backend
     environment:
       DATABASE_URL: postgresql+asyncpg://postgres:password@db:5432/aurik
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY:-}
+      STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
+      STRIPE_PRICE_MONTHLY: ${STRIPE_PRICE_MONTHLY:-}
+      STRIPE_PRICE_ANNUAL: ${STRIPE_PRICE_ANNUAL:-}
     ports:
       - "8000:8000"
     depends_on:

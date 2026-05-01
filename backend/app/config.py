@@ -56,6 +56,13 @@ class Settings(BaseSettings):
     # Frontend URL (used for OAuth redirects)
     FRONTEND_URL: str = "http://localhost:5173"
 
+    # Stripe billing
+    STRIPE_SECRET_KEY: str = ""
+    STRIPE_PUBLISHABLE_KEY: str = ""
+    STRIPE_WEBHOOK_SECRET: str = ""
+    STRIPE_PRICE_MONTHLY: str = ""   # Price ID for $4.99/mo
+    STRIPE_PRICE_ANNUAL: str = ""    # Price ID for $49.99/yr
+
     @field_validator("SUPABASE_URL", "FRONTEND_URL")
     @classmethod
     def strip_trailing_slash(cls, v: str) -> str:

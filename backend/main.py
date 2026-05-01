@@ -26,6 +26,7 @@ from app.api.groups import router as groups_router
 from app.api.group_events import router as group_events_router, events_router as event_pins_router
 from app.api.notifications import router as notifications_router
 from app.api.hunt_plans import router as hunt_plans_router
+from app.api.billing import router as billing_router, webhook_router
 from app.auth.routes import router as auth_router
 from app.models.database import create_tables
 
@@ -114,6 +115,8 @@ def create_app() -> FastAPI:
     app.include_router(event_pins_router, prefix="/api/v1")
     app.include_router(notifications_router, prefix="/api/v1")
     app.include_router(hunt_plans_router, prefix="/api/v1")
+    app.include_router(billing_router, prefix="/api/v1")
+    app.include_router(webhook_router, prefix="/api/v1")
 
     return app
 

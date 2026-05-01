@@ -345,6 +345,11 @@ class UserProfile(BaseModel):
     google_folder_id: Optional[str] = None
     avatar_url: Optional[str] = None
     is_admin: bool = False
+    # Subscription info
+    subscription_tier: str = "free"
+    subscription_status: str = "none"
+    is_pro: bool = False
+    trial_ends_at: Optional[Any] = None
 
 
 class UserProfileSetup(BaseModel):
@@ -972,4 +977,43 @@ class HuntPlanStatusUpdate(BaseModel):
     """Request payload for changing a plan's status."""
 
     status: HuntPlanStatus
+
+
+# ---------------------------------------------------------------------------
+# Billing / Subscription schemas
+# ---------------------------------------------------------------------------
+
+class SubscriptionStatusResponse(BaseModel):
+    """Current subscription status for the authenticated user."""
+
+    model_config = ConfigDict(from_attributes=True)
+
+    tier: str = "free"
+    status: str = "none"
+    plan: Optional[str] = None
+    trial_ends_at: Optional[Any] = None
+    current_period_end: Optional[Any] = None
+    canceled_at: Optional[Any] = None
+    is_pro: bool = False
+    has_payment_method: bool = False
+
+
+class CheckoutSessionRequest(BaseModel):
+    """Request payload for creating a Stripe Checkout session."""
+
+    plan: Literal["monthly", "annual"]
+    success_url: str
+    cancel_url: str
+
+
+class CheckoutSessionResponse(BaseModel):
+    """Response containing the Stripe Checkout URL."""
+
+    checkout_url: str
+
+
+class PortalSessionResponse(BaseModel):
+    """Response containing the Stripe Billing Portal URL."""
+
+    portal_url: str
 
