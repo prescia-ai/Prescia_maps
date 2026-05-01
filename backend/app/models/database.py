@@ -7,6 +7,7 @@ for the Aurik historical intelligence system.
 
 import enum
 import uuid
+from datetime import datetime, timezone
 from typing import AsyncGenerator
 
 from geoalchemy2 import Geometry
@@ -252,6 +253,33 @@ class User(Base):
     google_email = Column(String(255), nullable=True)  # The Google account email they connected
     google_folder_id = Column(String(255), nullable=True)  # Google Drive "Aurik" folder ID
     avatar_url = Column(String(500), nullable=True)  # Public Google Drive thumbnail URL
+
+    # Subscription fields
+    subscription_tier = Column(String(20), default="free", nullable=False, server_default="free")
+    subscription_status = Column(String(20), default="none", nullable=False, server_default="none")
+    subscription_provider = Column(String(20), default="none", nullable=False, server_default="none")
+    subscription_plan = Column(String(20), nullable=True)
+    trial_ends_at = Column(DateTime(timezone=True), nullable=True)
+    current_period_end = Column(DateTime(timezone=True), nullable=True)
+    canceled_at = Column(DateTime(timezone=True), nullable=True)
+    stripe_customer_id = Column(String(100), nullable=True, index=True)
+    stripe_subscription_id = Column(String(100), nullable=True, index=True)
+
+    @property
+    def is_pro(self) -> bool:
+        """Return True when the user has an active Pro subscription."""
+        if self.subscription_tier != "pro":
+            return False
+        if self.subscription_status in ("trialing", "active"):
+            return True
+        # Cancellations stay Pro until current_period_end
+        if (
+            self.subscription_status == "canceled"
+            and self.current_period_end is not None
+            and self.current_period_end > datetime.now(timezone.utc)
+        ):
+            return True
+        return False
 
     badges = relationship("UserBadge", back_populates="user", lazy="select")
 

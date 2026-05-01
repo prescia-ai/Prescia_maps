@@ -7,6 +7,7 @@ import MapPage from './pages/MapPage';
 import ProfilePage from './pages/ProfilePage';
 import ProfileSettingsPage from './pages/ProfileSettingsPage';
 import SecuritySettingsPage from './pages/SecuritySettingsPage';
+import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import SubmitPinPage from './pages/SubmitPinPage';
 import AdminSubmissionsPage from './pages/AdminSubmissionsPage';
 import AdminSubmissionReviewPage from './pages/AdminSubmissionReviewPage';
@@ -51,6 +52,7 @@ export default function App() {
         <Route path="/map" element={<RequireProfile><MapPage /></RequireProfile>} />
         <Route path="/feed" element={<AppLayout><RequireProfile><FeedPage /></RequireProfile></AppLayout>} />
         {/* /profile/settings must come before /profile/:username so "settings" isn't treated as a username */}
+        <Route path="/profile/settings/subscription" element={<AppLayout><RequireProfile><SubscriptionSettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/profile/settings" element={<AppLayout><RequireProfile><ProfileSettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/profile/:username" element={<AppLayout><RequireProfile><ProfilePage /></RequireProfile></AppLayout>} />
         <Route path="/submit" element={<AppLayout><RequireProfile><SubmitPinPage /></RequireProfile></AppLayout>} />

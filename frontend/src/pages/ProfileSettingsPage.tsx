@@ -413,6 +413,22 @@ export default function ProfileSettingsPage() {
             )}
           </div>
 
+          {/* Subscription */}
+          <div className="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-sm font-semibold text-stone-700">Subscription</h2>
+                <p className="text-xs text-stone-400 mt-0.5">Manage your Prescia Pro subscription.</p>
+              </div>
+              <Link
+                to="/profile/settings/subscription"
+                className="text-sm font-medium text-amber-700 hover:text-amber-600 transition-colors"
+              >
+                Manage →
+              </Link>
+            </div>
+          </div>
+
           {/* Actions */}
           <button
             type="submit"

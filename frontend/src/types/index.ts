@@ -459,3 +459,19 @@ export interface HuntPlanMapPin {
   notes_preview: string | null;
 }
 
+// ── Subscription / Billing ────────────────────────────────────────────────────
+
+export type SubscriptionTier = 'free' | 'pro';
+export type SubscriptionStatus = 'none' | 'trialing' | 'active' | 'past_due' | 'canceled';
+
+export interface SubscriptionInfo {
+  tier:                SubscriptionTier;
+  status:              SubscriptionStatus;
+  plan:                'monthly' | 'annual' | null;
+  trial_ends_at:       string | null;
+  current_period_end:  string | null;
+  canceled_at:         string | null;
+  is_pro:              boolean;
+  has_payment_method:  boolean;
+}
+

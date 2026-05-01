@@ -21,6 +21,7 @@ import type {
   BadgeProgress,
   NewlyEarnedBadgesResponse,
   NotificationsResponse,
+  SubscriptionInfo,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -786,6 +787,30 @@ export async function exportPlanPdf(planId: string): Promise<void> {
   link.click();
   link.remove();
   window.URL.revokeObjectURL(url);
+}
+
+// ── Billing / Subscription ────────────────────────────────────────────────────
+
+export async function fetchSubscriptionStatus(): Promise<SubscriptionInfo> {
+  const { data } = await api.get<SubscriptionInfo>('/billing/status');
+  return data;
+}
+
+export async function createCheckoutSession(
+  plan: 'monthly' | 'annual',
+): Promise<{ checkout_url: string }> {
+  const origin = window.location.origin;
+  const { data } = await api.post<{ checkout_url: string }>('/billing/checkout', {
+    plan,
+    success_url: `${origin}/profile/settings/subscription?checkout=success`,
+    cancel_url: `${origin}/profile/settings/subscription?checkout=cancel`,
+  });
+  return data;
+}
+
+export async function createPortalSession(): Promise<{ portal_url: string }> {
+  const { data } = await api.post<{ portal_url: string }>('/billing/portal');
+  return data;
 }
 
 export default api;
