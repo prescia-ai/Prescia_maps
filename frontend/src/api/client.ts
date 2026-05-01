@@ -684,4 +684,108 @@ export async function markNotificationsRead(notificationIds: string[]): Promise<
   await api.post('/notifications/read', { notification_ids: notificationIds });
 }
 
+// ── Hunt Plans ────────────────────────────────────────────────────────────────
+
+import type { HuntPlan, HuntPlanMapPin } from '../types';
+
+interface HuntPlanCreatePayload {
+  title: string;
+  area_geojson: object;
+  planned_date?: string | null;
+  site_type?: string | null;
+  notes?: string | null;
+  in_zone_markers?: object[] | null;
+  gear_checklist?: object[] | null;
+  permission?: object | null;
+  view_snapshot?: object | null;
+  photo_urls?: string[] | null;
+}
+
+interface HuntPlanUpdatePayload {
+  title?: string;
+  area_geojson?: object;
+  planned_date?: string | null;
+  site_type?: string | null;
+  notes?: string | null;
+  in_zone_markers?: object[] | null;
+  gear_checklist?: object[] | null;
+  permission?: object | null;
+  view_snapshot?: object | null;
+  photo_urls?: string[] | null;
+}
+
+export async function createPlan(payload: HuntPlanCreatePayload): Promise<HuntPlan> {
+  const { data } = await api.post<HuntPlan>('/hunt-plans', payload);
+  return data;
+}
+
+export async function fetchMyPlans(params?: {
+  q?: string;
+  sort?: string;
+  order?: string;
+  site_type?: string;
+  status?: string;
+  include_archived?: boolean;
+  limit?: number;
+  offset?: number;
+}): Promise<{ plans: HuntPlan[]; total: number }> {
+  const { data } = await api.get<{ plans: HuntPlan[]; total: number }>('/hunt-plans/me', { params });
+  return data;
+}
+
+export async function fetchPlan(planId: string): Promise<HuntPlan> {
+  const { data } = await api.get<HuntPlan>(`/hunt-plans/${planId}`);
+  return data;
+}
+
+export async function updatePlan(planId: string, payload: HuntPlanUpdatePayload): Promise<HuntPlan> {
+  const { data } = await api.put<HuntPlan>(`/hunt-plans/${planId}`, payload);
+  return data;
+}
+
+export async function deletePlan(planId: string): Promise<void> {
+  await api.delete(`/hunt-plans/${planId}`);
+}
+
+export async function updatePlanStatus(planId: string, status: string): Promise<HuntPlan> {
+  const { data } = await api.patch<HuntPlan>(`/hunt-plans/${planId}/status`, { status });
+  return data;
+}
+
+export async function duplicatePlan(planId: string): Promise<HuntPlan> {
+  const { data } = await api.post<HuntPlan>(`/hunt-plans/${planId}/duplicate`);
+  return data;
+}
+
+export async function fetchPlanMapPins(includeArchived = false): Promise<HuntPlanMapPin[]> {
+  const { data } = await api.get<HuntPlanMapPin[]>('/hunt-plans/map-pins', {
+    params: { include_archived: includeArchived },
+  });
+  return data;
+}
+
+export async function exportPlanGpx(planId: string): Promise<void> {
+  const response = await api.get(`/hunt-plans/${planId}/export.gpx`, { responseType: 'blob' });
+  const url = window.URL.createObjectURL(new Blob([response.data]));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', `hunt-plan-${planId}.gpx`);
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.URL.revokeObjectURL(url);
+}
+
+export async function exportPlanPdf(planId: string): Promise<void> {
+  const response = await api.get(`/hunt-plans/${planId}/export.pdf`, { responseType: 'blob' });
+  const url = window.URL.createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', `hunt-plan-${planId}.pdf`);
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.URL.revokeObjectURL(url);
+}
+
 export default api;

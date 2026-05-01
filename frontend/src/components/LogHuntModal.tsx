@@ -10,9 +10,11 @@ interface LogHuntModalProps {
   lon: number;
   onClose: () => void;
   onSuccess: () => void;
+  /** When true, renders without the outer full-screen backdrop (for embedding in tabbed modals). */
+  embedded?: boolean;
 }
 
-export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntModalProps) {
+export default function LogHuntModal({ lat, lon, onClose, onSuccess, embedded = false }: LogHuntModalProps) {
   const { profile: myProfile } = useAuth();
   const today = new Date().toISOString().split('T')[0];
 
@@ -139,7 +141,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess }: LogHuntMo
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm">
+    <div className={embedded ? '' : 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm'}>
       {/* Badge earned notification */}
       {newBadges.length > 0 && (
         <div className="bg-white border border-stone-200 rounded-2xl shadow-xl w-full max-w-sm flex flex-col items-center px-6 py-8 gap-4">

@@ -21,6 +21,7 @@ import type { Feature, Geometry, LineString, MultiLineString } from 'geojson';
 import type { LinearProperties } from '../types';
 import HeatmapLayer from './HeatmapLayer';
 import LandAccessOverlay from './LandAccessOverlay';
+import PlanMapLayer from './PlanMapLayer';
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
 
@@ -290,6 +291,8 @@ interface MapViewProps {
   onZoomChange?: (zoom: number) => void;
   userPins?: UserPin[];
   eventPins?: EventPin[];
+  showHuntPlans?: boolean;
+  showHuntPlansArchived?: boolean;
 }
 
 export default function MapView({
@@ -303,6 +306,8 @@ export default function MapView({
   onZoomChange,
   userPins,
   eventPins,
+  showHuntPlans,
+  showHuntPlansArchived,
 }: MapViewProps) {
   const handleClick = useCallback(
     (lat: number, lon: number) => {
@@ -362,6 +367,10 @@ export default function MapView({
 
       {eventPins && eventPins.length > 0 && (
         <EventPinMarkers pins={eventPins} />
+      )}
+
+      {showHuntPlans && (
+        <PlanMapLayer includeArchived={showHuntPlansArchived} />
       )}
     </MapContainer>
   );

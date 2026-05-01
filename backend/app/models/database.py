@@ -81,6 +81,15 @@ class LinearFeatureType(str, enum.Enum):
     road = "road"
 
 
+class HuntPlanStatus(str, enum.Enum):
+    """Lifecycle status of a hunt plan."""
+
+    idea = "idea"
+    planned = "planned"
+    done = "done"
+    archived = "archived"
+
+
 class MapLayerType(str, enum.Enum):
     """Supported map overlay types."""
 
@@ -547,6 +556,39 @@ class Notification(Base):
     ref_id = Column(String(255), nullable=True)
     read = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+class HuntPlan(Base):
+    """
+    A user-private hunt plan with a drawn zone, metadata, and optional exports.
+
+    ``area_geojson`` stores the full polygon/rectangle/circle GeoJSON drawn
+    by the user. ``geom`` is the centroid point, auto-derived server-side
+    from area_geojson on create/update. Clients never set geom directly.
+    """
+
+    __tablename__ = "hunt_plans"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    owner_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+
+    title = Column(String(200), nullable=False)
+    planned_date = Column(DateTime(timezone=True), nullable=True)
+    site_type = Column(String(20), nullable=True)  # dirt|beach|water|park|yard|club_hunt
+    status = Column(Enum(HuntPlanStatus), nullable=False, default=HuntPlanStatus.idea)
+
+    notes = Column(Text, nullable=True)
+    geom = Column(Geometry("POINT", srid=4326, spatial_index=True), nullable=True)
+    area_geojson = Column(JSONB, nullable=False)
+
+    in_zone_markers = Column(JSONB, nullable=True)  # [{id, lat, lng, type, label, note}]
+    gear_checklist = Column(JSONB, nullable=True)   # [{item, checked}]
+    permission = Column(JSONB, nullable=True)        # {owner_name, contact, status, expiry, notes}
+    view_snapshot = Column(JSONB, nullable=True)     # {center: [lat,lng], zoom, layers: {...}}
+    photo_urls = Column(JSONB, nullable=True)        # [str] Google Drive URLs
+
+    created_at = Column(DateTime(timezone=True), nullable=False, server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), nullable=True, onupdate=func.now())
 
 
 # ---------------------------------------------------------------------------

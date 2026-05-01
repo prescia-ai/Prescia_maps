@@ -16,6 +16,10 @@ import CreateGroupPage from './pages/CreateGroupPage';
 import MyGroupsPage from './pages/MyGroupsPage';
 import BadgesPage from './pages/BadgesPage';
 import AppLayout from './components/AppLayout';
+import MyPlansPage from './pages/MyPlansPage';
+import CreatePlanPage from './pages/CreatePlanPage';
+import PlanDetailPage from './pages/PlanDetailPage';
+import { useParams } from 'react-router-dom';
 
 /**
  * Wraps protected routes so that authenticated users who haven't yet
@@ -30,6 +34,11 @@ function RequireProfile({ children }: { children: React.ReactNode }) {
     return <Navigate to="/setup" replace />;
   }
   return <>{children}</>;
+}
+
+function EditPlanPageWrapper() {
+  const { id } = useParams<{ id: string }>();
+  return <CreatePlanPage planId={id} />;
 }
 
 export default function App() {
@@ -52,6 +61,11 @@ export default function App() {
         <Route path="/groups" element={<AppLayout><RequireProfile><MyGroupsPage /></RequireProfile></AppLayout>} />
         <Route path="/group/:slug" element={<AppLayout><RequireProfile><GroupPage /></RequireProfile></AppLayout>} />
         <Route path="/badges" element={<AppLayout><RequireProfile><BadgesPage /></RequireProfile></AppLayout>} />
+        {/* Hunt Plans routes */}
+        <Route path="/plans/create" element={<RequireProfile><CreatePlanPage /></RequireProfile>} />
+        <Route path="/plans/:id/edit" element={<RequireProfile><EditPlanPageWrapper /></RequireProfile>} />
+        <Route path="/plans/:id" element={<RequireProfile><PlanDetailPage /></RequireProfile>} />
+        <Route path="/plans" element={<RequireProfile><MyPlansPage /></RequireProfile>} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>
