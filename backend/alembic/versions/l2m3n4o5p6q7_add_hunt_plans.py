@@ -56,7 +56,7 @@ def upgrade() -> None:
         sa.Column("notes", sa.Text, nullable=True),
         sa.Column(
             "geom",
-            Geometry("POINT", srid=4326, spatial_index=False),
+            Geometry("POINT", srid=4326, spatial_index=True),
             nullable=True,
         ),
         sa.Column("area_geojson", JSONB, nullable=False),
@@ -75,16 +75,9 @@ def upgrade() -> None:
     )
 
     op.create_index("ix_hunt_plans_owner_id", "hunt_plans", ["owner_id"])
-    op.create_index(
-        "ix_hunt_plans_geom",
-        "hunt_plans",
-        ["geom"],
-        postgresql_using="gist",
-    )
 
 
 def downgrade() -> None:
-    op.drop_index("ix_hunt_plans_geom", table_name="hunt_plans")
     op.drop_index("ix_hunt_plans_owner_id", table_name="hunt_plans")
     op.drop_table("hunt_plans")
     op.execute("DROP TYPE hunt_plan_status_enum")

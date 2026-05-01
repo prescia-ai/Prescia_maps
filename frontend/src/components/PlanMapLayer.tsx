@@ -117,7 +117,9 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
           // Fetch full plan to get area_geojson
           fetchPlan(pin.id)
             .then((full) => setHoveredGeojson(full.area_geojson))
-            .catch(() => {});
+            .catch((err) => {
+              console.debug('Failed to fetch plan polygon for hover:', err);
+            });
         }
       });
       marker.on('mouseout', () => {

@@ -702,9 +702,13 @@ export default function CreatePlanPage({ planId }: CreatePlanPageProps) {
                 </label>
                 {imagePreviews.length > 0 && (
                   <div className="grid grid-cols-2 gap-1 mt-2">
-                    {imagePreviews.map((url, i) => (
-                      <img key={i} src={url} className="w-full h-16 object-cover rounded" alt="" />
-                    ))}
+                    {imagePreviews.map((url, i) => {
+                      // Only use blob: URLs created by URL.createObjectURL() to prevent open-redirect
+                      const safeSrc = url.startsWith('blob:') ? url : '';
+                      return (
+                        <img key={i} src={safeSrc} className="w-full h-16 object-cover rounded" alt="" />
+                      );
+                    })}
                   </div>
                 )}
               </div>

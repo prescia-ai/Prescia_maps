@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import io
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
@@ -302,7 +302,7 @@ async def update_plan(
     if payload.photo_urls is not None:
         plan.photo_urls = payload.photo_urls
 
-    plan.updated_at = datetime.utcnow()
+    plan.updated_at = datetime.now(timezone.utc)
     await db.flush()
     await db.refresh(plan)
     return _plan_to_response(plan)
@@ -340,7 +340,7 @@ async def update_plan_status(
     _require_owner(plan, current_user)
 
     plan.status = payload.status
-    plan.updated_at = datetime.utcnow()
+    plan.updated_at = datetime.now(timezone.utc)
     await db.flush()
     await db.refresh(plan)
     return _plan_to_response(plan)
