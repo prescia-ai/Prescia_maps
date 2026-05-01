@@ -486,9 +486,19 @@ def _extract_polygon_coords(geom: dict) -> list:
     return []
 
 
-# ---------------------------------------------------------------------------
-# GET /hunt-plans/{plan_id}/export.pdf  — PDF export
-# ---------------------------------------------------------------------------
+# Marker pin colors for the Mapbox Static Images overlay (keyed by in-zone marker type)
+_MARKER_COLORS: dict = {
+    "dig_target": "00b700",
+    "avoid": "f44336",
+    "access": "2196f3",
+    "already_detected": "9e9e9e",
+}
+
+# Aspect ratio of the Mapbox static image request (600 x 400 = 3:2)
+_MAP_IMAGE_ASPECT_RATIO = 1.5
+
+
+
 
 @router.get("/{plan_id}/export.pdf")
 async def export_pdf(
@@ -533,14 +543,7 @@ def _fetch_mapbox_static_image(plan: HuntPlan) -> Optional[bytes]:
 
         geom = shape(geom_input)
 
-        # Marker colors by in-zone marker type
-        _MARKER_COLORS: dict = {
-            "dig_target": "00b700",
-            "avoid": "f44336",
-            "access": "2196f3",
-            "already_detected": "9e9e9e",
-        }
-
+        # Marker colors by in-zone marker type (see module-level _MARKER_COLORS)
         def _pin_overlays() -> list:
             pins = []
             if plan.in_zone_markers:
@@ -662,7 +665,7 @@ def _build_pdf(plan: HuntPlan) -> bytes:
     if map_image_bytes:
         try:
             img_buffer = io.BytesIO(map_image_bytes)
-            map_img = Image(img_buffer, width=6.5 * inch, height=(6.5 / 1.5) * inch)
+            map_img = Image(img_buffer, width=6.5 * inch, height=(6.5 / _MAP_IMAGE_ASPECT_RATIO) * inch)
             story.append(map_img)
             story.append(Spacer(1, 0.15 * inch))
         except Exception:

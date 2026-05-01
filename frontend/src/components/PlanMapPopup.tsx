@@ -20,7 +20,9 @@ const SITE_TYPE_LABELS: Record<string, string> = {
 function formatPlannedDate(dateStr: string | null): string {
   if (!dateStr) return 'No date set';
   try {
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
+    // Parse "YYYY-MM-DD" parts directly to avoid timezone shifting
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, day).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
