@@ -4,6 +4,7 @@ import { resizeImage } from '../utils/imageResize';
 import { useAuth } from '../contexts/AuthContext';
 import type { Badge } from '../types';
 import BadgeDisplay from './BadgeDisplay';
+import FreeTierLimitModal from './FreeTierLimitModal';
 
 interface LogHuntModalProps {
   lat: number;
@@ -29,6 +30,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess, embedded = 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
+  const [showLimitModal, setShowLimitModal] = useState(false);
 
   // Image upload state
   const [imageFiles, setImageFiles] = useState<File[]>([]);
@@ -134,13 +136,19 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess, embedded = 
       onSuccess();
       onClose();
     } catch (err: any) {
-      setError(err?.response?.data?.detail ?? err?.message ?? 'Failed to log hunt.');
+      const detail = err?.response?.data?.detail;
+      if (detail && typeof detail === 'object' && detail.error === 'free_tier_limit_reached') {
+        setShowLimitModal(true);
+      } else {
+        setError(detail ?? err?.message ?? 'Failed to log hunt.');
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
+    <>
     <div className={embedded ? '' : 'fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm'}>
       {/* Badge earned notification */}
       {newBadges.length > 0 && (
@@ -386,5 +394,11 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess, embedded = 
       </div>
       )}
     </div>
+
+    <FreeTierLimitModal
+      open={showLimitModal}
+      onClose={() => { setShowLimitModal(false); onClose(); }}
+    />
+    </>
   );
 }

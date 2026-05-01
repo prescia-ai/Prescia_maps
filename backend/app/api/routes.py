@@ -60,7 +60,9 @@ from app.models.schemas import (
 from app.scoring.engine import WEIGHTS, _age_bonus, compute_heatmap_data, score_location
 from app.services.land_access import lookup_land_access
 from app.services.badge_service import check_all_badges, get_badge_progress
-from app.auth.deps import get_current_user as _get_current_user
+from app.auth.deps import get_current_user as _get_current_user, optional_user as _optional_user
+from app.auth.subscription import require_tier as _require_tier
+from app.models.database import User as _User
 
 logger = logging.getLogger(__name__)
 
@@ -69,6 +71,17 @@ router = APIRouter()
 # Absolute path to the pre-baked PAD-US PMTiles archive.
 _PADUS_DATA_DIR: Path = Path(__file__).parent.parent.parent / "data"
 _PADUS_PMTILES_PATH: Path = _PADUS_DATA_DIR / "padus.pmtiles"
+
+# Location types available to free-tier (unauthenticated or non-Pro) users.
+# All other types require a Pro subscription.
+FREE_TIER_LOCATION_TYPES: frozenset[str] = frozenset({
+    "battle",
+    "town",            # ghost towns
+    "homestead_site",
+    "trail_landmark",
+    "camp",
+    "mine",
+})
 
 
 def _type_str(value: Any) -> str:
@@ -117,6 +130,7 @@ async def get_locations(
     limit: int = Query(5000, ge=1, le=100000),
     per_type_limit: Optional[int] = Query(None, ge=1, le=10000),
     offset: int = Query(0, ge=0),
+    current_user: Optional[_User] = Depends(_optional_user),
     db: AsyncSession = Depends(get_db),
 ) -> GeoJSONFeatureCollection:
     """
@@ -128,15 +142,30 @@ async def get_locations(
     up to that many records **per location type** so that all categories are
     represented on the map even when one type (e.g. mines) vastly outnumbers
     the others.
+
+    Free-tier (unauthenticated or non-Pro) users receive only the types listed
+    in ``FREE_TIER_LOCATION_TYPES``.  Pro/admin users receive the full set.
     """
+    # Determine if the requesting user has Pro access
+    is_pro_user: bool = current_user is not None and current_user.is_pro
+
+    # If a specific type is requested and the user is free-tier, enforce the
+    # free-tier restriction rather than returning a 402 (so the map still
+    # renders a partial result).
+    if type_filter and not is_pro_user and type_filter not in FREE_TIER_LOCATION_TYPES:
+        return GeoJSONFeatureCollection(features=[])
+
     if per_type_limit is not None and not type_filter:
         # Balanced query: up to per_type_limit records per type, ordered by id
         # so results are consistent across calls.
         # Split into two branches to avoid passing None as a bind parameter,
         # which causes asyncpg AmbiguousParameterError.
         if source is not None:
+            type_clause = "" if is_pro_user else (
+                "AND type = ANY(:free_types) "
+            )
             balanced_sql = text(
-                """
+                f"""
                 SELECT id, name, type, latitude, longitude, year, description,
                        source, confidence
                 FROM (
@@ -145,20 +174,25 @@ async def get_locations(
                            ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
                     FROM locations
                     WHERE source = :source_filter
+                    {type_clause}
                 ) ranked
                 WHERE rn <= :per_type_limit
                 ORDER BY type, id
                 """
-            ).bindparams(
-                per_type_limit=per_type_limit,
-                source_filter=source,
             )
+            params: dict = {"per_type_limit": per_type_limit, "source_filter": source}
+            if not is_pro_user:
+                params["free_types"] = list(FREE_TIER_LOCATION_TYPES)
+            balanced_sql = balanced_sql.bindparams(**params)
         else:
             # Community-approved pins (source LIKE 'community:%') are always
             # included in full so a newly approved pin is never cut off by the
             # per-type cap.  Non-community pins are still balanced.
+            type_clause = "" if is_pro_user else (
+                "AND type = ANY(:free_types) "
+            )
             balanced_sql = text(
-                """
+                f"""
                 SELECT id, name, type, latitude, longitude, year, description,
                        source, confidence
                 FROM (
@@ -167,6 +201,7 @@ async def get_locations(
                            ROW_NUMBER() OVER (PARTITION BY type ORDER BY id) AS rn
                     FROM locations
                     WHERE (source NOT LIKE 'community:%' OR source IS NULL)
+                    {type_clause}
                     -- NULL source must be kept: NULL NOT LIKE '...' evaluates to NULL (falsy)
                 ) ranked
                 WHERE rn <= :per_type_limit
@@ -175,11 +210,14 @@ async def get_locations(
                        source, confidence
                 FROM locations
                 WHERE source LIKE 'community:%'
+                {"AND type = ANY(:free_types)" if not is_pro_user else ""}
                 ORDER BY type, id
                 """
-            ).bindparams(
-                per_type_limit=per_type_limit,
             )
+            params = {"per_type_limit": per_type_limit}
+            if not is_pro_user:
+                params["free_types"] = list(FREE_TIER_LOCATION_TYPES)
+            balanced_sql = balanced_sql.bindparams(**params)
         result = await db.execute(balanced_sql)
         rows = result.mappings().all()
 
@@ -206,6 +244,8 @@ async def get_locations(
     stmt = select(Location)
     if type_filter:
         stmt = stmt.where(Location.type == type_filter)
+    elif not is_pro_user:
+        stmt = stmt.where(Location.type.in_(list(FREE_TIER_LOCATION_TYPES)))
     if source:
         stmt = stmt.where(Location.source == source)
     stmt = stmt.offset(offset).limit(limit)
@@ -428,6 +468,7 @@ async def get_score(
     lat: float = Query(..., ge=-90.0, le=90.0, description="Latitude"),
     lon: float = Query(..., ge=-180.0, le=180.0, description="Longitude"),
     radius_km: float = Query(10.0, ge=0.1, le=100.0, description="Search radius in km"),
+    _pro_user: _User = Depends(_require_tier("pro")),
     db: AsyncSession = Depends(get_db),
 ) -> ScoreResponse:
     """
@@ -649,7 +690,9 @@ async def create_layer(
     summary="Return the PAD-US land-access tile URL and attribution",
     tags=["land-access"],
 )
-async def get_blm_tile_url() -> Dict[str, str]:
+async def get_blm_tile_url(
+    _pro_user: _User = Depends(_require_tier("pro")),
+) -> Dict[str, str]:
     """
     Return the PAD-US (Protected Areas Database) tile URL.
 
@@ -668,7 +711,10 @@ async def get_blm_tile_url() -> Dict[str, str]:
     summary="Serve the pre-baked PAD-US PMTiles vector tile archive",
     tags=["land-access"],
 )
-async def serve_padus_pmtiles(request: StarletteRequest) -> Response:
+async def serve_padus_pmtiles(
+    request: StarletteRequest,
+    _pro_user: _User = Depends(_require_tier("pro")),
+) -> Response:
     """
     Serve the local padus.pmtiles file with HTTP Range support.
 

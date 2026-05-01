@@ -24,6 +24,7 @@ interface UserProfile {
   subscription_status?: string;
   is_pro?: boolean;
   trial_ends_at?: string | null;
+  pin_count?: number;
 }
 
 interface AuthContextValue {
@@ -32,6 +33,8 @@ interface AuthContextValue {
   loading: boolean;
   subscription: SubscriptionInfo | null;
   isPro: boolean;
+  pinCount: number | null;
+  canLogMoreHunts: boolean;
   signUp: (email: string, password: string) => Promise<void>;
   signIn: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
@@ -122,6 +125,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const isPro = subscription?.is_pro ?? profile?.is_pro ?? false;
+  const pinCount = profile?.pin_count ?? null;
+  const FREE_PIN_LIMIT = 5;
+  const canLogMoreHunts = isPro || (pinCount !== null && pinCount < FREE_PIN_LIMIT);
 
   return (
     <AuthContext.Provider
@@ -131,6 +137,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         loading,
         subscription,
         isPro,
+        pinCount,
+        canLogMoreHunts,
         signUp,
         signIn,
         signOut,

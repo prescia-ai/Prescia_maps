@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
@@ -37,6 +37,22 @@ function RequireProfile({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+/**
+ * Redirects free-tier users to the subscription settings page with an
+ * intent query parameter so the page can show a contextual upgrade message.
+ * Pro users and admins pass through normally.
+ */
+function RequireSubscription({ intent, children }: { intent: string; children: React.ReactNode }) {
+  const { isPro, loading } = useAuth();
+  const location = useLocation();
+  if (loading) return null;
+  if (!isPro) {
+    const params = new URLSearchParams({ intent });
+    return <Navigate to={`/profile/settings/subscription?${params.toString()}`} replace state={{ from: location }} />;
+  }
+  return <>{children}</>;
+}
+
 function EditPlanPageWrapper() {
   const { id } = useParams<{ id: string }>();
   return <CreatePlanPage planId={id} />;
@@ -55,19 +71,19 @@ export default function App() {
         <Route path="/profile/settings/subscription" element={<AppLayout><RequireProfile><SubscriptionSettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/profile/settings" element={<AppLayout><RequireProfile><ProfileSettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/profile/:username" element={<AppLayout><RequireProfile><ProfilePage /></RequireProfile></AppLayout>} />
-        <Route path="/submit" element={<AppLayout><RequireProfile><SubmitPinPage /></RequireProfile></AppLayout>} />
+        <Route path="/submit" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="submit"><SubmitPinPage /></RequireSubscription></RequireProfile></AppLayout>} />
         <Route path="/settings/security" element={<AppLayout><RequireProfile><SecuritySettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/admin/submissions/:id" element={<AppLayout><RequireProfile><AdminSubmissionReviewPage /></RequireProfile></AppLayout>} />
         <Route path="/admin/submissions" element={<AppLayout><RequireProfile><AdminSubmissionsPage /></RequireProfile></AppLayout>} />
-        <Route path="/groups/create" element={<AppLayout><RequireProfile><CreateGroupPage /></RequireProfile></AppLayout>} />
-        <Route path="/groups" element={<AppLayout><RequireProfile><MyGroupsPage /></RequireProfile></AppLayout>} />
-        <Route path="/group/:slug" element={<AppLayout><RequireProfile><GroupPage /></RequireProfile></AppLayout>} />
+        <Route path="/groups/create" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><CreateGroupPage /></RequireSubscription></RequireProfile></AppLayout>} />
+        <Route path="/groups" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><MyGroupsPage /></RequireSubscription></RequireProfile></AppLayout>} />
+        <Route path="/group/:slug" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><GroupPage /></RequireSubscription></RequireProfile></AppLayout>} />
         <Route path="/badges" element={<AppLayout><RequireProfile><BadgesPage /></RequireProfile></AppLayout>} />
-        {/* Hunt Plans routes */}
-        <Route path="/plans/create" element={<RequireProfile><CreatePlanPage /></RequireProfile>} />
-        <Route path="/plans/:id/edit" element={<RequireProfile><EditPlanPageWrapper /></RequireProfile>} />
-        <Route path="/plans/:id" element={<RequireProfile><PlanDetailPage /></RequireProfile>} />
-        <Route path="/plans" element={<RequireProfile><MyPlansPage /></RequireProfile>} />
+        {/* Hunt Plans routes — Pro only */}
+        <Route path="/plans/create" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><CreatePlanPage /></RequireSubscription></RequireProfile>} />
+        <Route path="/plans/:id/edit" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><EditPlanPageWrapper /></RequireSubscription></RequireProfile>} />
+        <Route path="/plans/:id" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><PlanDetailPage /></RequireSubscription></RequireProfile>} />
+        <Route path="/plans" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><MyPlansPage /></RequireSubscription></RequireProfile>} />
         <Route path="/" element={<Navigate to="/map" replace />} />
       </Routes>
     </AuthProvider>

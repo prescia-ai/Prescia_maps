@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Avatar from './Avatar';
 import ProBadge from './ProBadge';
+import LockBadge from './LockBadge';
+import PaywallModal from './PaywallModal';
 import { searchUsers, searchGroups } from '../api/client';
 import type { GroupSearchResult } from '../types';
 import NotificationBell from './NotificationBell';
@@ -282,8 +284,18 @@ export default function Navbar({
 }: NavbarProps) {
   const { user, profile, isPro, signOut } = useAuth();
   const navigate = useNavigate();
+  const [paywallFeature, setPaywallFeature] = useState<string | null>(null);
+
+  function handleLockedNav(feature: string, path: string) {
+    if (isPro) {
+      navigate(path);
+    } else {
+      setPaywallFeature(feature);
+    }
+  }
 
   return (
+    <>
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
       <div className="flex items-center gap-3 px-4 h-12">
         {/* Branding - Just Logo */}
@@ -340,8 +352,8 @@ export default function Navbar({
           )}
 
           {user && (
-            <Link
-              to="/groups"
+            <button
+              onClick={() => handleLockedNav('Groups', '/groups')}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
             >
               <svg
@@ -358,12 +370,13 @@ export default function Navbar({
                 />
               </svg>
               Groups
-            </Link>
+              {!isPro && <LockBadge />}
+            </button>
           )}
 
           {user && (
-            <Link
-              to="/plans"
+            <button
+              onClick={() => handleLockedNav('Hunt Planning', '/plans')}
               className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
             >
               <svg
@@ -380,7 +393,8 @@ export default function Navbar({
                 />
               </svg>
               Plans
-            </Link>
+              {!isPro && <LockBadge />}
+            </button>
           )}
 
           {user && (
@@ -492,5 +506,14 @@ export default function Navbar({
         </div>
       </div>
     </div>
+
+    {paywallFeature && (
+      <PaywallModal
+        open={!!paywallFeature}
+        onClose={() => setPaywallFeature(null)}
+        feature={paywallFeature}
+      />
+    )}
+    </>
   );
 }

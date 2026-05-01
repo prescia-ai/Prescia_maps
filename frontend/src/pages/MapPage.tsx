@@ -59,7 +59,7 @@ const DEFAULT_LAYERS: LayerState = {
 
 export default function MapPage() {
   const queryClient = useQueryClient();
-  const { user } = useAuth();
+  const { user, isPro } = useAuth();
   const justSelectedFeatureRef = useRef(false);
   const [layers, setLayers] = useState<LayerState>(DEFAULT_LAYERS);
 
@@ -171,8 +171,8 @@ export default function MapPage() {
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
   const heatmapPoints  = heatmapQuery.data             ?? [];
-  const userPins       = (user && layers.my_hunts) ? (myPinsQuery.data?.pins ?? []) : [];
-  const eventPins      = (user && layers.group_events) ? (eventPinsQuery.data ?? []) : [];
+  const userPins       = (user && isPro && layers.my_hunts) ? (myPinsQuery.data?.pins ?? []) : [];
+  const eventPins      = (user && isPro && layers.group_events) ? (eventPinsQuery.data ?? []) : [];
 
   const isInitialLoading =
     locationsQuery.isLoading || featuresQuery.isLoading || heatmapQuery.isLoading;
@@ -202,7 +202,7 @@ export default function MapPage() {
           onZoomChange={handleZoomChange}
           userPins={userPins}
           eventPins={eventPins}
-          showHuntPlans={!!(user && layers.huntPlans)}
+          showHuntPlans={!!(user && isPro && layers.huntPlans)}
           showHuntPlansArchived={layers.huntPlansArchived}
         />
       </div>
@@ -218,7 +218,7 @@ export default function MapPage() {
           <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
         )}
 
-        {clickedCoords && (
+        {clickedCoords && isPro && (
           <ScorePanel
             lat={clickedCoords.lat}
             lon={clickedCoords.lon}
