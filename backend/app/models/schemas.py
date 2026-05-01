@@ -964,6 +964,8 @@ class HuntPlanMapPin(BaseModel):
     status: HuntPlanStatus
     site_type: Optional[str] = None
     area_geojson: Optional[Dict[str, Any]] = None
+    planned_date: Optional[str] = None
+    notes_preview: Optional[str] = None
 
 
 class HuntPlanStatusUpdate(BaseModel):

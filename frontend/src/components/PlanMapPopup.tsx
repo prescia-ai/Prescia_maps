@@ -17,6 +17,19 @@ const SITE_TYPE_LABELS: Record<string, string> = {
   club_hunt: 'Club Hunt',
 };
 
+function formatPlannedDate(dateStr: string | null): string {
+  if (!dateStr) return 'No date set';
+  try {
+    return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
 interface PlanMapPopupProps {
   pin: HuntPlanMapPin;
   onClose?: () => void;
@@ -42,14 +55,33 @@ export default function PlanMapPopup({ pin, onClose }: PlanMapPopupProps) {
         </p>
       )}
 
+      <p className="text-[11px] text-stone-500 mb-1">
+        {formatPlannedDate(pin.planned_date)}
+      </p>
+
+      {pin.notes_preview && (
+        <p className="text-[11px] text-stone-600 leading-snug mb-1 line-clamp-3">
+          {pin.notes_preview}
+        </p>
+      )}
+
       <button
         onClick={() => {
           onClose?.();
           navigate(`/plans/${pin.id}`);
         }}
-        className="mt-2 w-full py-1.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-medium rounded-lg transition-colors"
+        className="mt-1 w-full py-1.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-medium rounded-lg transition-colors"
       >
         Open Plan
+      </button>
+      <button
+        onClick={() => {
+          onClose?.();
+          navigate(`/plans/${pin.id}/edit`);
+        }}
+        className="mt-1 w-full py-1.5 border border-amber-600 text-amber-700 hover:bg-amber-50 text-xs font-medium rounded-lg transition-colors"
+      >
+        Edit
       </button>
     </div>
   );
