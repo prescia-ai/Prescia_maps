@@ -478,3 +478,22 @@ export interface SubscriptionInfo {
   has_payment_method:  boolean;
 }
 
+
+// ── Admin Stats ───────────────────────────────────────────────────────────────
+
+export interface AdminStats {
+  generated_at: string;
+  total_users: number;
+  admins: number;
+  pro_users: number;
+  trialing_users: number;
+  active_users: number;
+  past_due_users: number;
+  canceled_users: number;
+  free_users: number;
+  plan_monthly: number;
+  plan_annual: number;
+  new_users_7d: number;
+  new_users_30d: number;
+  conversion_rate: number;
+}

@@ -22,6 +22,7 @@ import type {
   NewlyEarnedBadgesResponse,
   NotificationsResponse,
   SubscriptionInfo,
+  AdminStats,
 } from '../types';
 
 // Minimal request payload types for pin operations
@@ -810,6 +811,11 @@ export async function createCheckoutSession(
 
 export async function createPortalSession(): Promise<{ portal_url: string }> {
   const { data } = await api.post<{ portal_url: string }>('/billing/portal');
+  return data;
+}
+
+export async function fetchAdminStats(): Promise<AdminStats> {
+  const { data } = await api.get<AdminStats>('/admin/stats');
   return data;
 }
 
