@@ -43,28 +43,25 @@ export interface LinearFeatureCollection extends FeatureCollection<Geometry, Lin
   features: Feature<Geometry, LinearProperties>[];
 }
 
-// ── Heatmap ──────────────────────────────────────────────────────────────────
-
-export interface HeatmapPoint {
-  lat: number;
-  lon: number;
-  weight: number;
-}
-
 // ── Score ────────────────────────────────────────────────────────────────────
 
-export interface ScoreBreakdown {
-  [component: string]: number;
+export interface NearbyItem {
+  name: string;
+  type: string;
+  year?: number | null;
+  distance_km: number;
+  lat: number;
+  lon: number;
 }
 
 export interface ScoreResponse {
-  score: number;
-  raw_score?: number;
-  breakdown: ScoreBreakdown;
-  nearby_count: number;
   lat: number;
   lon: number;
+  summary: string | null;
+  nearby_count: number;
+  nearby: NearbyItem[];
   accessible?: string | null;
+  cached: boolean;
 }
 
 // ── Layer visibility state ───────────────────────────────────────────────────
@@ -95,7 +92,6 @@ export interface LayerState {
   railroad: boolean;
   road: boolean;
   // Special layers
-  heatmap: boolean;
   blm: boolean;
   aerials_1955: boolean;
   // Personal layers

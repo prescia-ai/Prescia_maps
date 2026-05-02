@@ -9,9 +9,9 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import Navbar from '../components/Navbar';
 import ImportModal from '../components/ImportModal';
 import MapContextMenu from '../components/MapContextMenu';
+import PaywallModal from '../components/PaywallModal';
 import { useLocations } from '../hooks/useLocations';
 import { useFeatures } from '../hooks/useFeatures';
-import { useHeatmap } from '../hooks/useHeatmap';
 import { useScore } from '../hooks/useScore';
 import { useMyPins } from '../hooks/useMyPins';
 import { useAuth } from '../contexts/AuthContext';
@@ -44,7 +44,6 @@ const DEFAULT_LAYERS: LayerState = {
   pow_camp:         false,
   railroad:         false,
   road:            false,
-  heatmap:         false,
   blm:             false,
   aerials_1955:    false,
   my_hunts:        false,
@@ -86,8 +85,7 @@ export default function MapPage() {
   const [showContextMenu, setShowContextMenu] = useState(false);
   const [contextMenuCoords, setContextMenuCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [contextMenuTab, setContextMenuTab] = useState<'log_hunt' | 'plan_hunt'>('log_hunt');
-  // Track map zoom level for zoom-adaptive heatmap fetching
-  const [mapZoom, setMapZoom] = useState(5); // matches MapContainer initial zoom
+  const [showInsightPaywall, setShowInsightPaywall] = useState(false);
 
   // Land access state
   const [landAccessData, setLandAccessData] = useState<LandAccessResponse | null>(null);
@@ -97,7 +95,6 @@ export default function MapPage() {
 
   const locationsQuery = useLocations();
   const featuresQuery  = useFeatures();
-  const heatmapQuery   = useHeatmap(mapZoom);
   const scoreQuery     = useScore(clickedCoords?.lat ?? null, clickedCoords?.lon ?? null);
   const myPinsQuery    = useMyPins();
   const eventPinsQuery = useQuery({
@@ -112,8 +109,12 @@ export default function MapPage() {
       return;
     }
     setSelectedFeature(null);
+    if (!isPro) {
+      setShowInsightPaywall(true);
+      return;
+    }
     setClickedCoords({ lat, lon });
-  }, []);
+  }, [isPro]);
 
   const handleLandAccessOverride = useCallback(async (
     areaCode: string,
@@ -158,10 +159,6 @@ export default function MapPage() {
     queryClient.invalidateQueries({ queryKey: ['my-pins'] });
   }, [queryClient]);
 
-  const handleZoomChange = useCallback((zoom: number) => {
-    setMapZoom(zoom);
-  }, []);
-
   const handleNavbarLogHunt = useCallback(() => {
     setContextMenuCoords({ lat: US_CENTER_LAT, lon: US_CENTER_LON });
     setContextMenuTab('log_hunt');
@@ -170,12 +167,11 @@ export default function MapPage() {
 
   const locations      = locationsQuery.data?.features ?? [];
   const linearFeatures = featuresQuery.data?.features  ?? [];
-  const heatmapPoints  = heatmapQuery.data             ?? [];
   const userPins       = (user && isPro && layers.my_hunts) ? (myPinsQuery.data?.pins ?? []) : [];
   const eventPins      = (user && isPro && layers.group_events) ? (eventPinsQuery.data ?? []) : [];
 
   const isInitialLoading =
-    locationsQuery.isLoading || featuresQuery.isLoading || heatmapQuery.isLoading;
+    locationsQuery.isLoading || featuresQuery.isLoading;
 
   return (
     <div className="relative w-screen h-screen bg-stone-50 overflow-hidden">
@@ -194,12 +190,10 @@ export default function MapPage() {
         <MapView
           locations={locations}
           linearFeatures={linearFeatures}
-          heatmapPoints={heatmapPoints}
           layers={layers}
           onMapClick={handleMapClick}
           onLocationSelect={handleLocationSelect}
           onContextMenu={handleContextMenu}
-          onZoomChange={handleZoomChange}
           userPins={userPins}
           eventPins={eventPins}
           showHuntPlans={!!(user && isPro && layers.huntPlans)}
@@ -218,7 +212,7 @@ export default function MapPage() {
           <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
         )}
 
-        {clickedCoords && isPro && (
+        {clickedCoords && (
           <ScorePanel
             lat={clickedCoords.lat}
             lon={clickedCoords.lon}
@@ -257,6 +251,13 @@ export default function MapPage() {
           onImportSuccess={handleImportSuccess}
         />
       )}
+
+      {/* Site Insight paywall — shown when a free user clicks the map */}
+      <PaywallModal
+        open={showInsightPaywall}
+        onClose={() => setShowInsightPaywall(false)}
+        feature="Site Insight"
+      />
 
       {/* Right-click / Log Hunt context menu */}
       {showContextMenu && contextMenuCoords && (

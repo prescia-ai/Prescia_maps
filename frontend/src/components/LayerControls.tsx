@@ -145,7 +145,6 @@ const SECTIONS: SectionDef[] = [
   {
     title: 'Overlays',
     items: [
-      { key: 'heatmap',      label: 'Activity Heatmap',   color: '#f97316' },
       { key: 'blm',          label: 'Public Land (BLM/USFS)',  color: '#22c55e' },
       { key: 'aerials_1955', label: '1955 Historical Aerials', color: '#78716c' },
     ],

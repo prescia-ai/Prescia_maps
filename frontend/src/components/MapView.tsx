@@ -13,13 +13,11 @@ import type {
   LocationFeature,
   LocationType,
   LayerState,
-  HeatmapPoint,
   UserPin,
   EventPin,
 } from '../types';
 import type { Feature, Geometry, LineString, MultiLineString } from 'geojson';
 import type { LinearProperties } from '../types';
-import HeatmapLayer from './HeatmapLayer';
 import LandAccessOverlay from './LandAccessOverlay';
 import PlanMapLayer from './PlanMapLayer';
 
@@ -283,12 +281,10 @@ function EventPinMarkers({ pins }: { pins: EventPin[] }) {
 interface MapViewProps {
   locations: LocationFeature[];
   linearFeatures: Feature<Geometry, LinearProperties>[];
-  heatmapPoints: HeatmapPoint[];
   layers: LayerState;
   onMapClick: (lat: number, lon: number) => void;
   onLocationSelect: (f: LocationFeature) => void;
   onContextMenu?: (lat: number, lon: number) => void;
-  onZoomChange?: (zoom: number) => void;
   userPins?: UserPin[];
   eventPins?: EventPin[];
   showHuntPlans?: boolean;
@@ -298,12 +294,10 @@ interface MapViewProps {
 export default function MapView({
   locations,
   linearFeatures,
-  heatmapPoints,
   layers,
   onMapClick,
   onLocationSelect,
   onContextMenu,
-  onZoomChange,
   userPins,
   eventPins,
   showHuntPlans,
@@ -356,10 +350,6 @@ export default function MapView({
       />
 
       <LinearFeatures features={linearFeatures} layers={layers} />
-
-      {heatmapPoints.length > 0 && (
-        <HeatmapLayer points={heatmapPoints} visible={layers.heatmap} onZoomChange={onZoomChange} />
-      )}
 
       {userPins && userPins.length > 0 && (
         <UserPinMarkers pins={userPins} />

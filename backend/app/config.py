@@ -40,8 +40,9 @@ class Settings(BaseSettings):
     # Scoring
     SCORE_SEARCH_RADIUS_KM: float = 10.0
 
-    # Semantic scoring
-    SEMANTIC_SCORING_ENABLED: bool = False
+    # Groq LLM for Site Insight summaries (optional — set to enable)
+    GROQ_API_KEY: str = ""  # falsy → LLM summary disabled, /score returns summary=None
+    GROQ_MODEL: str = "llama-3.1-8b-instant"
 
     # Supabase Auth
     SUPABASE_JWT_SECRET: str = ""

@@ -159,37 +159,39 @@ class GeoJSONFeatureCollection(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# Heatmap & Score schemas
+# Score schemas
 # ---------------------------------------------------------------------------
 
-class HeatmapPoint(BaseModel):
-    """Single weighted point for the heatmap overlay."""
+class NearbyItem(BaseModel):
+    """A nearby historical location included in a site insight response."""
 
+    name: str
+    type: str
+    year: Optional[int] = None
+    distance_km: float
     lat: float
     lon: float
-    weight: float = Field(..., ge=0.0)
 
 
 class ScoreResponse(BaseModel):
     """
-    Scoring result for a queried coordinate.
+    Site Insight result for a queried coordinate.
 
-    ``score`` is a 0–100 float representing metal-detecting interest.
-    ``raw_score`` is the pre-compression score before the soft cap is applied.
-    ``breakdown`` maps contributing factor names to their numeric contribution.
-    ``nearby_count`` is the number of historical sites within the search radius.
-    ``accessible`` is the land-access classification at the queried point
-      (``'allowed'``, ``'off_limits'``, ``'private_permit'``, ``'unsure'``,
-      or ``'unknown'`` when the lookup timed out or failed).
+    ``summary`` is a 2-3 sentence LLM-generated assessment (None if Groq
+    is not configured or the call failed).
+    ``nearby`` lists the top 8 nearest historical locations.
+    ``nearby_count`` is the total count within the search radius.
+    ``accessible`` is the land-access classification at the queried point.
+    ``cached`` is True when the summary was returned from the DB cache.
     """
 
     lat: float
     lon: float
-    score: float = Field(..., ge=0.0, le=100.0)
-    raw_score: Optional[float] = Field(None, ge=0.0)
-    breakdown: Dict[str, float]
+    summary: Optional[str] = None
     nearby_count: int
+    nearby: List[NearbyItem]
     accessible: Optional[str] = None
+    cached: bool = False
 
 
 # ---------------------------------------------------------------------------
