@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { MapContainer, Polygon, TileLayer, ZoomControl, useMap } from 'react-leaflet';
 import L from 'leaflet';
@@ -6,7 +6,7 @@ import AppLayout from '../components/AppLayout';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { usePlan, useDeletePlan, useDuplicatePlan, useUpdatePlan, useUpdatePlanStatus } from '../hooks/useHuntPlans';
 import { exportPlanGpx, exportPlanPdf } from '../api/client';
-import type { HuntPlan, HuntPlanStatus, InZoneMarker, ViewSnapshot } from '../types';
+import type { HuntPlanStatus, InZoneMarker, ViewSnapshot } from '../types';
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 

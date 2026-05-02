@@ -42,10 +42,21 @@ function RequireProfile({ children }: { children: React.ReactNode }) {
  * intent query parameter so the page can show a contextual upgrade message.
  * Pro users and admins pass through normally.
  */
-function RequireSubscription({ intent, children }: { intent: string; children: React.ReactNode }) {
+function RequireSubscription({
+  tier = "pro",
+  intent,
+  children,
+}: {
+  tier?: "pro" | "premium";
+  intent: string;
+  children: React.ReactNode;
+}) {
   const { isPro, loading } = useAuth();
   const location = useLocation();
   if (loading) return null;
+  // For now only "pro" gating is implemented; isPro covers it.
+  // When a "premium" tier is introduced, branch on `tier` here.
+  void tier;
   if (!isPro) {
     const params = new URLSearchParams({ intent });
     return <Navigate to={`/profile/settings/subscription?${params.toString()}`} replace state={{ from: location }} />;
