@@ -199,7 +199,7 @@ async def create_checkout_session(
         "cancel_url": payload.cancel_url,
         "automatic_tax": {"enabled": True},
         "tax_id_collection": {"enabled": True},
-        "customer_update": {"address": "auto"},
+        "customer_update": {"address": "auto", "name": "auto"},
         "billing_address_collection": "required",
         "allow_promotion_codes": True,
         "subscription_data": {
