@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { LocationFeature, LocationType } from '../types';
 
 interface InfoPanelProps {
@@ -21,6 +22,34 @@ const TYPE_CONFIG: Record<string, { bg: string; text: string; label: string }> =
 
 function getTypeConfig(type: LocationType) {
   return TYPE_CONFIG[type] ?? { bg: 'bg-stone-100', text: 'text-stone-600', label: type };
+}
+
+/**
+ * Render the `source` field for display.
+ *
+ * Community-submitted pins are stored in the DB with a source of
+ * `community:<username>` (see backend/app/api/submissions.py).  In the UI we
+ * don't want users to see the raw `community:` prefix — we just want a
+ * clickable username that links to the contributor's profile.
+ *
+ * Anything else (e.g. "AURIK", "USGS", "BLM") is rendered verbatim as plain
+ * text.
+ */
+function SourceValue({ source }: { source: string }) {
+  if (source.startsWith('community:')) {
+    const username = source.slice('community:'.length).trim();
+    if (username) {
+      return (
+        <Link
+          to={`/profile/${encodeURIComponent(username)}`}
+          className="text-amber-700 hover:text-amber-800 hover:underline"
+        >
+          {username}
+        </Link>
+      );
+    }
+  }
+  return <>{source}</>;
 }
 
 function ConfidenceBar({ value }: { value: number }) {
@@ -88,7 +117,8 @@ export default function InfoPanel({ feature, onClose }: InfoPanelProps) {
         {/* Source */}
         {source && (
           <div className="text-xs text-stone-400">
-            <span className="text-stone-500 font-medium">Source:</span> {source}
+            <span className="text-stone-500 font-medium">Source:</span>{' '}
+            <SourceValue source={source} />
           </div>
         )}
 
