@@ -8,7 +8,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   return (
     <div className="min-h-screen bg-stone-50">
       <Navbar />
-      <div className="pt-12">{children}</div>
+      <div className="pt-14">{children}</div>
     </div>
   );
 }

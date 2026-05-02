@@ -190,7 +190,7 @@ export default function MapPage() {
       />
 
       {/* Full-screen map — offset below navbar */}
-      <div className="absolute inset-0 top-16">
+      <div className="absolute inset-0 top-14">
         <MapView
           locations={locations}
           linearFeatures={linearFeatures}
@@ -208,7 +208,7 @@ export default function MapPage() {
       </div>
 
       {/* Left panel: layer controls — offset below navbar */}
-      <div className="absolute top-20 left-4 z-10">
+      <div className="absolute top-[4.5rem] left-4 z-10">
         <LayerControls layers={layers} onChange={handleLayerChange} />
       </div>
 
