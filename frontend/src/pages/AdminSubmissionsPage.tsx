@@ -100,7 +100,7 @@ export default function AdminSubmissionsPage() {
   return (
     <div className="text-stone-900">
       {/* Top nav bar */}
-      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-12 z-10">
+      <div className="border-b border-stone-200 bg-white shadow-sm sticky top-14 z-10">
         <div className="max-w-3xl mx-auto flex items-center gap-3 px-4 h-12">
           <span className="text-stone-700 text-sm font-medium">Community Submissions</span>
           <div className="flex-1" />
