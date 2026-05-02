@@ -117,6 +117,8 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
     });
     clusterGroupRef.current = clusterGroup;
 
+    const roots: Array<ReturnType<typeof createRoot>> = [];
+
     for (const pin of pins) {
       const marker = L.marker([pin.lat, pin.lng], { icon: makePinIcon(pin) });
 
@@ -137,30 +139,20 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
         setHoveredGeojson(null);
       });
 
-      // Click: popup
+      // Click: popup — mount React eagerly into a detached node so Leaflet
+      // sizes the popup correctly on first open and there is no async race.
       const container = document.createElement('div');
-      const popup = L.popup({ closeButton: true, minWidth: 180 }).setContent(container);
-      marker.bindPopup(popup);
+      const root = createRoot(container);
+      root.render(
+        <PlanMapPopup
+          pin={pin}
+          onClose={() => marker.closePopup()}
+        />,
+      );
+      marker.bindPopup(container, { closeButton: true, minWidth: 200, maxWidth: 260 });
 
-      marker.on('popupopen', () => {
-        const root = createRoot(container);
-        root.render(
-          <PlanMapPopup
-            pin={pin}
-            onClose={() => marker.closePopup()}
-          />,
-        );
-        // Store root for cleanup
-        (container as any).__reactRoot = root;
-      });
-
-      marker.on('popupclose', () => {
-        const root = (container as any).__reactRoot;
-        if (root) {
-          setTimeout(() => root.unmount(), 0);
-          delete (container as any).__reactRoot;
-        }
-      });
+      // Track the root so we can unmount it when the cluster group is torn down.
+      roots.push(root);
 
       clusterGroup.addLayer(marker);
     }
@@ -172,6 +164,13 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
         map.removeLayer(clusterGroupRef.current);
         clusterGroupRef.current = null;
       }
+      // Defer unmount to next tick so React doesn't warn about
+      // unmounting a root that's mid-render.
+      setTimeout(() => {
+        for (const r of roots) {
+          try { r.unmount(); } catch { /* ignore */ }
+        }
+      }, 0);
     };
   }, [map, pins, isPro]);
 
