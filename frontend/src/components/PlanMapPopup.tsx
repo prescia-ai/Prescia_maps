@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import type { HuntPlanMapPin, HuntPlanStatus } from '../types';
 
 const STATUS_COLORS: Record<HuntPlanStatus, string> = {
@@ -35,10 +34,11 @@ function formatPlannedDate(dateStr: string | null): string {
 interface PlanMapPopupProps {
   pin: HuntPlanMapPin;
   onClose?: () => void;
+  onOpen?: () => void;
+  onEdit?: () => void;
 }
 
-export default function PlanMapPopup({ pin, onClose }: PlanMapPopupProps) {
-  const navigate = useNavigate();
+export default function PlanMapPopup({ pin, onClose, onOpen, onEdit }: PlanMapPopupProps) {
 
   return (
     <div className="min-w-[180px] max-w-[220px]">
@@ -70,7 +70,7 @@ export default function PlanMapPopup({ pin, onClose }: PlanMapPopupProps) {
       <button
         onClick={() => {
           onClose?.();
-          navigate(`/plans/${pin.id}`);
+          onOpen?.();
         }}
         className="mt-1 w-full py-1.5 bg-amber-600 hover:bg-amber-700 text-white text-xs font-medium rounded-lg transition-colors"
       >
@@ -79,7 +79,7 @@ export default function PlanMapPopup({ pin, onClose }: PlanMapPopupProps) {
       <button
         onClick={() => {
           onClose?.();
-          navigate(`/plans/${pin.id}/edit`);
+          onEdit?.();
         }}
         className="mt-1 w-full py-1.5 border border-amber-600 text-amber-700 hover:bg-amber-50 text-xs font-medium rounded-lg transition-colors"
       >

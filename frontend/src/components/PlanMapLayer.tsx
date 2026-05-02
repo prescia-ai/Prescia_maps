@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMap } from 'react-leaflet';
+import { useNavigate } from 'react-router-dom';
 import L from 'leaflet';
 import 'leaflet.markercluster';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
@@ -89,6 +90,7 @@ interface PlanMapLayerProps {
 export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerProps) {
   const { isPro } = useAuth();
   const map = useMap();
+  const navigate = useNavigate();
   const { data: pins } = usePlanMapPins(includeArchived);
   const clusterGroupRef = useRef<any>(null);
   const [hoveredGeojson, setHoveredGeojson] = useState<any>(null);
@@ -147,6 +149,8 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
         <PlanMapPopup
           pin={pin}
           onClose={() => marker.closePopup()}
+          onOpen={() => navigate(`/plans/${pin.id}`)}
+          onEdit={() => navigate(`/plans/${pin.id}/edit`)}
         />,
       );
       marker.bindPopup(container, { closeButton: true, minWidth: 200, maxWidth: 260 });
@@ -172,7 +176,7 @@ export default function PlanMapLayer({ includeArchived = false }: PlanMapLayerPr
         }
       }, 0);
     };
-  }, [map, pins, isPro]);
+  }, [map, pins, isPro, navigate]);
 
   return hoveredGeojson ? <HoverPolygon geojson={hoveredGeojson} /> : null;
 }
