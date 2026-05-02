@@ -33,6 +33,12 @@ export default function AdminStatsPage() {
     }
   }, [authLoading, user, navigate]);
 
+  useEffect(() => {
+    if (!authLoading && profile !== null && !profile.is_admin) {
+      setTimeout(() => navigate('/map', { replace: true }), 2000);
+    }
+  }, [authLoading, profile, navigate]);
+
   const { data, isLoading, isError, refetch, isFetching } = useQuery({
     queryKey: ['admin-stats'],
     queryFn: fetchAdminStats,
