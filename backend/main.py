@@ -28,6 +28,7 @@ from app.api.groups import router as groups_router
 from app.api.group_events import router as group_events_router, events_router as event_pins_router
 from app.api.notifications import router as notifications_router
 from app.api.hunt_plans import router as hunt_plans_router
+from app.api.admin_stats import router as admin_stats_router
 from app.api.billing import router as billing_router, webhook_router
 from app.auth.routes import router as auth_router
 from app.auth.subscription import require_tier
@@ -140,6 +141,7 @@ def create_app() -> FastAPI:
     )
     app.include_router(billing_router, prefix="/api/v1")
     app.include_router(webhook_router, prefix="/api/v1")
+    app.include_router(admin_stats_router, prefix="/api/v1")
 
     return app
 

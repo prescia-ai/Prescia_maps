@@ -11,6 +11,7 @@ import SubscriptionSettingsPage from './pages/SubscriptionSettingsPage';
 import SubmitPinPage from './pages/SubmitPinPage';
 import AdminSubmissionsPage from './pages/AdminSubmissionsPage';
 import AdminSubmissionReviewPage from './pages/AdminSubmissionReviewPage';
+import AdminStatsPage from './pages/AdminStatsPage';
 import FeedPage from './pages/FeedPage';
 import GroupPage from './pages/GroupPage';
 import CreateGroupPage from './pages/CreateGroupPage';
@@ -84,6 +85,7 @@ export default function App() {
         <Route path="/settings/security" element={<AppLayout><RequireProfile><SecuritySettingsPage /></RequireProfile></AppLayout>} />
         <Route path="/admin/submissions/:id" element={<AppLayout><RequireProfile><AdminSubmissionReviewPage /></RequireProfile></AppLayout>} />
         <Route path="/admin/submissions" element={<AppLayout><RequireProfile><AdminSubmissionsPage /></RequireProfile></AppLayout>} />
+        <Route path="/admin/stats" element={<AppLayout><RequireProfile><AdminStatsPage /></RequireProfile></AppLayout>} />
         <Route path="/groups/create" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><CreateGroupPage /></RequireSubscription></RequireProfile></AppLayout>} />
         <Route path="/groups" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><MyGroupsPage /></RequireSubscription></RequireProfile></AppLayout>} />
         <Route path="/group/:slug" element={<AppLayout><RequireProfile><RequireSubscription tier="pro" intent="groups"><GroupPage /></RequireSubscription></RequireProfile></AppLayout>} />

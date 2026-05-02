@@ -8,6 +8,7 @@ directly to mapping libraries (Mapbox GL JS, Leaflet, etc.).
 from __future__ import annotations
 
 import enum
+from datetime import datetime
 from typing import Any, Dict, List, Literal, Optional, Union
 from uuid import UUID
 
@@ -1022,3 +1023,26 @@ class PortalSessionResponse(BaseModel):
 
     portal_url: str
 
+
+
+# ---------------------------------------------------------------------------
+# Admin Stats schema
+# ---------------------------------------------------------------------------
+
+class AdminStatsResponse(BaseModel):
+    """Aggregated platform metrics returned by the admin stats endpoint."""
+
+    generated_at: datetime
+    total_users: int = 0
+    admins: int = 0
+    pro_users: int = 0
+    trialing_users: int = 0
+    active_users: int = 0
+    past_due_users: int = 0
+    canceled_users: int = 0
+    free_users: int = 0
+    plan_monthly: int = 0
+    plan_annual: int = 0
+    new_users_7d: int = 0
+    new_users_30d: int = 0
+    conversion_rate: float = 0.0
