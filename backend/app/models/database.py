@@ -622,6 +622,34 @@ class HuntPlan(Base):
 
 
 # ---------------------------------------------------------------------------
+# Location Summary (LLM cache)
+# ---------------------------------------------------------------------------
+
+class LocationSummary(Base):
+    """
+    Cached LLM-generated site insight summary for a map location.
+
+    Keyed by a rounded lat/lon (≈11 m grid) and a signature of nearby
+    location IDs so the cache is automatically invalidated when data changes.
+    """
+
+    __tablename__ = "location_summaries"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    lat_key = Column(Float, nullable=False, index=True)   # round(lat, 4)
+    lon_key = Column(Float, nullable=False, index=True)   # round(lon, 4)
+    summary = Column(Text, nullable=False)
+    model = Column(String(64), nullable=False)
+    nearby_signature = Column(String(64), nullable=False)  # sha256[:32] of sorted IDs
+    generated_at = Column(DateTime(timezone=True), server_default=func.now())
+
+    __table_args__ = (
+        UniqueConstraint("lat_key", "lon_key", name="uq_location_summary_coords"),
+        sa_Index("ix_location_summaries_coords", "lat_key", "lon_key"),
+    )
+
+
+# ---------------------------------------------------------------------------
 # Engine & Session Factory
 # ---------------------------------------------------------------------------
 

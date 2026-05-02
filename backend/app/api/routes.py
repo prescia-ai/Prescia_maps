@@ -7,6 +7,7 @@ session (``db``) and, where appropriate, calls the scoring engine.
 """
 
 import asyncio
+import hashlib
 import logging
 import os
 import re
@@ -27,6 +28,7 @@ from app.models.database import (
     LandAccessOverride,
     LinearFeature,
     Location,
+    LocationSummary,
     MapLayer,
     Badge,
     UserBadge,
@@ -38,7 +40,6 @@ from app.models.schemas import (
     FeatureResponse,
     GeoJSONFeatureCollection,
     HealthResponse,
-    HeatmapPoint,
     HotspotCluster,
     ImportFeaturesRequest,
     ImportLocationItem,
@@ -53,11 +54,13 @@ from app.models.schemas import (
     LocationResponse,
     MapLayerCreate,
     MapLayerResponse,
+    NearbyItem,
     NewlyEarnedBadgesResponse,
     PointGeometry,
     ScoreResponse,
 )
-from app.scoring.engine import WEIGHTS, _age_bonus, compute_heatmap_data, score_location
+from app.scoring.engine import WEIGHTS, _age_bonus
+from app.scoring.llm_summary import generate_location_summary
 from app.services.land_access import lookup_land_access
 from app.services.badge_service import check_all_badges, get_badge_progress
 from app.auth.deps import get_current_user as _get_current_user, optional_user as _optional_user
@@ -396,72 +399,14 @@ async def get_features(
 
 
 # ---------------------------------------------------------------------------
-# Heatmap
-# ---------------------------------------------------------------------------
-
-
-@router.get(
-    "/heatmap",
-    response_model=List[HeatmapPoint],
-    summary="Heatmap weight data for all locations",
-    tags=["scoring"],
-)
-async def get_heatmap(
-    zoom: int = Query(10, ge=1, le=20, description="Current map zoom level"),
-    db: AsyncSession = Depends(get_db),
-) -> List[HeatmapPoint]:
-    """
-    Return weighted heatmap points for all historical locations.
-
-    The zoom level controls how points are processed:
-    - Low zoom (≤7): grid-clustered regional hotspots (fewer, broader points)
-    - Mid zoom (8–12): spatially interpolated grid so the area between
-      two historical sites glows warm, not cold
-    - High zoom (≥13): raw location points with tight precision
-
-    Each point's weight is normalised to [0, 1].
-    """
-    result = await db.execute(
-        select(
-            Location.id,
-            Location.latitude,
-            Location.longitude,
-            Location.type,
-            Location.year,
-            Location.name,
-            Location.description,
-            Location.confidence,
-        )
-    )
-    rows = result.all()
-
-    all_locs = [
-        {
-            "id": str(r.id),
-            "latitude": r.latitude,
-            "longitude": r.longitude,
-            "type": _type_str(r.type),
-            "year": r.year,
-            "name": r.name or "",
-            "description": r.description or "",
-            "confidence": r.confidence,
-        }
-        for r in rows
-    ]
-
-    raw_points = compute_heatmap_data(all_locs, zoom=zoom)
-    return [HeatmapPoint(**p) for p in raw_points]
-
-
-# ---------------------------------------------------------------------------
-# Scoring
+# Scoring / Site Insight
 # ---------------------------------------------------------------------------
 
 
 @router.get(
     "/score",
     response_model=ScoreResponse,
-    summary="Score a coordinate for metal-detecting interest",
+    summary="Site Insight: LLM summary + nearby historical features",
     tags=["scoring"],
 )
 async def get_score(
@@ -472,11 +417,15 @@ async def get_score(
     db: AsyncSession = Depends(get_db),
 ) -> ScoreResponse:
     """
-    Compute a 0–100 metal-detecting interest score for the given coordinate.
+    Return a Groq-powered natural-language site insight plus a list of nearby
+    historical locations for the given coordinate.
 
-    Searches for all historical locations and linear features within
-    ``radius_km`` and calls the scoring engine.
+    Pro-gated. Searches for all historical locations and linear features within
+    ``radius_km``.  Summaries are cached in the ``location_summaries`` table
+    keyed by rounded lat/lon and a signature of the nearby location IDs.
     """
+    from app.scoring.engine import _haversine_km  # noqa: PLC0415
+
     # Nearby locations via PostGIS
     nearby_locs_result = await db.execute(
         text(
@@ -488,21 +437,24 @@ async def get_score(
                 ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography,
                 :radius_m
             )
+            ORDER BY geom::geography <-> ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography
             """
         ).bindparams(lat=lat, lon=lon, radius_m=radius_km * 1000)
     )
+    nearby_locs_raw = nearby_locs_result.all()
     nearby_locs = [
         {
             "id": str(r[0]),
-            "name": r[1],
+            "name": r[1] or "",
             "type": _type_str(r[2]),
             "latitude": r[3],
             "longitude": r[4],
             "year": r[5],
             "description": r[6] or "",
             "confidence": r[7],
+            "distance_km": _haversine_km(lat, lon, r[3], r[4]),
         }
-        for r in nearby_locs_result.all()
+        for r in nearby_locs_raw
     ]
 
     # Nearby linear features
@@ -520,17 +472,78 @@ async def get_score(
         ).bindparams(lat=lat, lon=lon, radius_m=radius_km * 1000)
     )
     nearby_feats = [
-        {
-            "name": r[0],
-            "type": _type_str(r[1]),
-        }
+        {"name": r[0] or "", "type": _type_str(r[1])}
         for r in nearby_feats_result.all()
     ]
 
-    result = score_location(lat, lon, nearby_locs, nearby_feats)
+    # Build top-8 NearbyItem list
+    top_nearby = sorted(nearby_locs, key=lambda x: x["distance_km"])[:8]
+    nearby_items = [
+        NearbyItem(
+            name=loc["name"] or loc["type"],
+            type=loc["type"],
+            year=loc.get("year"),
+            distance_km=round(loc["distance_km"], 2),
+            lat=loc["latitude"],
+            lon=loc["longitude"],
+        )
+        for loc in top_nearby
+    ]
 
-    # Land access lookup — best-effort with a 4-second timeout so the score
-    # endpoint doesn't hang if PAD-US is unavailable.
+    # Cache key
+    lat_key = round(lat, 4)
+    lon_key = round(lon, 4)
+    nearby_signature = hashlib.sha256(
+        ",".join(sorted(loc["id"] for loc in nearby_locs)).encode()
+    ).hexdigest()[:32]
+
+    # Check cache
+    cached_summary: Optional[str] = None
+    cache_hit = False
+    try:
+        cache_result = await db.execute(
+            select(LocationSummary).where(
+                LocationSummary.lat_key == lat_key,
+                LocationSummary.lon_key == lon_key,
+            )
+        )
+        cached_row = cache_result.scalar_one_or_none()
+        if cached_row and cached_row.nearby_signature == nearby_signature:
+            cached_summary = cached_row.summary
+            cache_hit = True
+    except Exception:
+        logger.exception("Error reading location_summaries cache")
+
+    # Generate summary if not cached
+    summary: Optional[str] = cached_summary
+    if not cache_hit:
+        summary = await generate_location_summary(
+            lat, lon, nearby_locs, nearby_feats
+        )
+        if summary:
+            try:
+                from app.config import settings as _settings  # noqa: PLC0415
+                from sqlalchemy.dialects.postgresql import insert as pg_insert  # noqa: PLC0415
+                stmt = pg_insert(LocationSummary.__table__).values(
+                    lat_key=lat_key,
+                    lon_key=lon_key,
+                    summary=summary,
+                    model=_settings.GROQ_MODEL,
+                    nearby_signature=nearby_signature,
+                ).on_conflict_do_update(
+                    constraint="uq_location_summary_coords",
+                    set_={
+                        "summary": summary,
+                        "model": _settings.GROQ_MODEL,
+                        "nearby_signature": nearby_signature,
+                        "generated_at": text("now()"),
+                    },
+                )
+                await db.execute(stmt)
+            except Exception:
+                logger.exception("Error upserting location_summaries cache")
+
+    # Land access lookup — best-effort with a 4-second timeout
     accessible: Optional[str] = None
     try:
         land_info = await asyncio.wait_for(
@@ -548,11 +561,11 @@ async def get_score(
     return ScoreResponse(
         lat=lat,
         lon=lon,
-        score=result["score"],
-        raw_score=result.get("raw_score"),
-        breakdown=result["breakdown"],
-        nearby_count=result["nearby_count"],
+        summary=summary,
+        nearby_count=len(nearby_locs),
+        nearby=nearby_items,
         accessible=accessible,
+        cached=cache_hit,
     )
 
 

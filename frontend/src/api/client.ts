@@ -3,7 +3,6 @@ import { supabase } from '../lib/supabase';
 import type {
   LocationFeatureCollection,
   LinearFeatureCollection,
-  HeatmapPoint,
   ScoreResponse,
   LandAccessResponse,
   LandAccessOverrideCreate,
@@ -72,13 +71,6 @@ export async function fetchLocations(): Promise<LocationFeatureCollection> {
 
 export async function fetchFeatures(): Promise<LinearFeatureCollection> {
   const { data } = await api.get<LinearFeatureCollection>('/features');
-  return data;
-}
-
-export async function fetchHeatmap(zoom: number = 10): Promise<HeatmapPoint[]> {
-  const { data } = await api.get<HeatmapPoint[]>('/heatmap', {
-    params: { zoom },
-  });
   return data;
 }
 
