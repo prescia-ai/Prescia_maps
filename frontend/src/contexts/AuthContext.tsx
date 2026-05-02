@@ -39,7 +39,7 @@ interface AuthContextValue {
   signIn: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   refreshProfile: () => Promise<void>;
-  refreshSubscription: () => Promise<void>;
+  refreshSubscription: () => Promise<SubscriptionInfo | null>;
 }
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -61,12 +61,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const loadSubscription = async () => {
+  const loadSubscription = async (): Promise<SubscriptionInfo | null> => {
     try {
       const info = await fetchSubscriptionStatus();
       setSubscription(info);
+      return info;
     } catch {
       setSubscription(null);
+      return null;
     }
   };
 
@@ -77,8 +79,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const refreshSubscription = async () => {
-    await loadSubscription();
+  const refreshSubscription = async (): Promise<SubscriptionInfo | null> => {
+    return loadSubscription();
   };
 
   useEffect(() => {

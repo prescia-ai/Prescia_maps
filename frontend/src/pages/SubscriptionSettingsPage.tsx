@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
 import { useAuth } from '../contexts/AuthContext';
 import { createCheckoutSession, createPortalSession } from '../api/client';
 
@@ -98,9 +99,10 @@ function PlanCard({
 // ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function SubscriptionSettingsPage() {
-  const { user, subscription, isPro, loading: authLoading, refreshSubscription } = useAuth();
+  const { user, subscription, loading: authLoading, refreshSubscription, refreshProfile } = useAuth();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const queryClient = useQueryClient();
 
   // Read ?intent= query param
   const intentParam = searchParams.get('intent') ?? '';
@@ -111,10 +113,10 @@ export default function SubscriptionSettingsPage() {
   const [error, setError] = useState<string | null>(null);
 
   // Checkout return handling
+  const [activating, setActivating] = useState(false);
   const [successBanner, setSuccessBanner] = useState(false);
   const [cancelBanner, setCancelBanner] = useState(false);
   const [processingBanner, setProcessingBanner] = useState(false);
-  const pollingRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Redirect if not logged in
   useEffect(() => {
@@ -125,38 +127,55 @@ export default function SubscriptionSettingsPage() {
 
   // Handle ?checkout=success|cancel query params
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const checkoutParam = params.get('checkout');
+    const checkoutParam = searchParams.get('checkout');
 
-    if (checkoutParam === 'success') {
-      setSuccessBanner(true);
-      refreshSubscription();
-
-      // Poll for up to ~5 sec for the webhook to process
-      let attempts = 0;
-      const poll = () => {
-        attempts += 1;
-        refreshSubscription().then(() => {
-          if (!isPro && attempts < 5) {
-            pollingRef.current = setTimeout(poll, 1000);
-          } else if (!isPro) {
-            setProcessingBanner(true);
-          }
-        });
-      };
-      pollingRef.current = setTimeout(poll, 1000);
-    } else if (checkoutParam === 'cancel') {
+    if (checkoutParam === 'cancel') {
       setCancelBanner(true);
-      setTimeout(() => setCancelBanner(false), 6000);
+      setSearchParams({}, { replace: true });
+      const t = setTimeout(() => setCancelBanner(false), 6000);
+      return () => clearTimeout(t);
     }
 
-    if (checkoutParam) {
-      window.history.replaceState({}, '', window.location.pathname);
-    }
+    if (checkoutParam !== 'success') return undefined;
 
-    return () => {
-      if (pollingRef.current) clearTimeout(pollingRef.current);
+    let cancelled = false;
+    setActivating(true);
+
+    const pollUntilPro = async () => {
+      const maxAttempts = 7;
+      let gotPro = false;
+
+      for (let i = 0; i < maxAttempts; i++) {
+        if (cancelled) return;
+        try {
+          const info = await refreshSubscription();
+          if (info?.is_pro) {
+            gotPro = true;
+            break;
+          }
+        } catch { /* swallow and retry */ }
+        if (i < maxAttempts - 1) {
+          await new Promise((resolve) => setTimeout(resolve, 1500));
+        }
+      }
+
+      if (!cancelled) {
+        await refreshProfile().catch(() => undefined);
+        queryClient.invalidateQueries();
+        setActivating(false);
+        if (gotPro) {
+          setSuccessBanner(true);
+        } else {
+          setProcessingBanner(true);
+        }
+        setSearchParams({}, { replace: true });
+      }
     };
+
+    pollUntilPro();
+    return () => { cancelled = true; };
+  // Run once on mount; captures initial searchParams (the Stripe redirect URL).
+  // Deps intentionally omitted: re-running on every URL change would restart polling.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -249,6 +268,14 @@ export default function SubscriptionSettingsPage() {
       {error && (
         <div className="mb-4 px-4 py-3 rounded-2xl bg-red-50 border border-red-200 text-red-700 text-sm">
           {error}
+        </div>
+      )}
+
+      {/* ── Activating banner ── */}
+      {activating && (
+        <div className="mb-4 px-4 py-3 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-sm flex items-center gap-2">
+          <span className="w-4 h-4 border-2 border-amber-600 border-t-transparent rounded-full animate-spin flex-shrink-0" />
+          Payment received — activating your Pro subscription…
         </div>
       )}
 
