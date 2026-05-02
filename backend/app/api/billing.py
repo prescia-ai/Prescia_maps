@@ -72,8 +72,8 @@ async def _sync_subscription(user: User, sub: stripe.Subscription, db: AsyncSess
         price_id = None
     user.subscription_plan = _derive_plan(price_id)
 
-    user.trial_ends_at = _unix_to_dt(sub.get("trial_end"))
-    user.current_period_end = _unix_to_dt(sub.get("current_period_end"))
+    user.trial_ends_at = _unix_to_dt(getattr(sub, "trial_end", None))
+    user.current_period_end = _unix_to_dt(getattr(sub, "current_period_end", None))
 
     await db.flush()
 
@@ -343,16 +343,16 @@ async def stripe_webhook(
         logger.info(
             "Trial ending soon for customer %s (sub %s). "
             "TODO: send notification in follow-up PR.",
-            sub.get("customer"),
-            sub.get("id"),
+            getattr(sub, "customer", None),
+            getattr(sub, "id", None),
         )
 
     # ── Invoice events ───────────────────────────────────────────────────────
 
     elif event_type == "invoice.payment_succeeded":
         invoice: stripe.Invoice = event["data"]["object"]
-        customer_id = invoice.get("customer")
-        sub_id = invoice.get("subscription")
+        customer_id = getattr(invoice, "customer", None)
+        sub_id = getattr(invoice, "subscription", None)
         user = await _get_user_by_customer_id(str(customer_id), db) if customer_id else None
         if user:
             user.subscription_status = "active"
@@ -360,7 +360,7 @@ async def stripe_webhook(
                 try:
                     stripe.api_key = settings.STRIPE_SECRET_KEY
                     sub = stripe.Subscription.retrieve(str(sub_id))
-                    user.current_period_end = _unix_to_dt(sub.get("current_period_end"))
+                    user.current_period_end = _unix_to_dt(getattr(sub, "current_period_end", None))
                 except stripe.StripeError as exc:
                     logger.warning("Could not refresh period_end after payment: %s", exc)
             await db.flush()
@@ -368,7 +368,7 @@ async def stripe_webhook(
 
     elif event_type == "invoice.payment_failed":
         invoice = event["data"]["object"]
-        customer_id = invoice.get("customer")
+        customer_id = getattr(invoice, "customer", None)
         user = await _get_user_by_customer_id(str(customer_id), db) if customer_id else None
         if user:
             user.subscription_status = "past_due"
@@ -400,14 +400,16 @@ async def _get_user_by_subscription(
     Primary key: stripe_customer_id.
     Fallback: subscription.metadata.user_id (useful before the customer is linked).
     """
-    customer_id = sub.get("customer")
+    customer_id = getattr(sub, "customer", None)
     if customer_id:
         user = await _get_user_by_customer_id(str(customer_id), db)
         if user:
             return user
 
     # Fallback to metadata user_id
-    user_id = (sub.get("metadata") or {}).get("user_id")
+    # metadata is a StripeObject (dict-like); convert to plain dict for safe .get() access
+    metadata = dict(getattr(sub, "metadata", None) or {})
+    user_id = metadata.get("user_id")
     if user_id:
         result = await db.execute(
             select(User).where(User.id == user_id)
@@ -416,7 +418,7 @@ async def _get_user_by_subscription(
 
     logger.warning(
         "Could not resolve user for subscription %s (customer=%s)",
-        sub.get("id"),
+        getattr(sub, "id", None),
         customer_id,
     )
     return None
