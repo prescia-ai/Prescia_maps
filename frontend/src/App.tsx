@@ -47,15 +47,13 @@ function RequireSubscription({
   intent,
   children,
 }: {
-  tier?: "pro" | "premium";
+  tier?: "pro";
   intent: string;
   children: React.ReactNode;
 }) {
   const { isPro, loading } = useAuth();
   const location = useLocation();
   if (loading) return null;
-  // For now only "pro" gating is implemented; isPro covers it.
-  // When a "premium" tier is introduced, branch on `tier` here.
   void tier;
   if (!isPro) {
     const params = new URLSearchParams({ intent });
