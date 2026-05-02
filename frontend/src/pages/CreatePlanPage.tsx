@@ -88,7 +88,6 @@ function DrawControl({ onShapeDrawn, inZoneMarkers }: DrawControlProps) {
   // Render in-zone markers on the map
   useEffect(() => {
     const markerLayers = markerLayersRef.current;
-    const drawnItems = drawnItemsRef.current;
 
     // Remove stale markers
     for (const [id, marker] of markerLayers) {
