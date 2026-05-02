@@ -108,7 +108,7 @@ async def generate_location_summary(
                     {"role": "system", "content": _SYSTEM_PROMPT},
                     {"role": "user", "content": user_prompt},
                 ],
-                max_tokens=140,
+                max_tokens=180,
                 temperature=0.4,
             ),
             timeout=timeout_seconds,

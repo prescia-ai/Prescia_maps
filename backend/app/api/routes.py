@@ -437,7 +437,6 @@ async def get_score(
                 ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography,
                 :radius_m
             )
-            ORDER BY geom::geography <-> ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)::geography
             """
         ).bindparams(lat=lat, lon=lon, radius_m=radius_km * 1000)
     )
