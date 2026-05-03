@@ -19,7 +19,7 @@ function GuestTopBar() {
             Log in
           </Link>
           <Link
-            to="/signup"
+            to="/"
             className="px-4 py-1.5 rounded-xl text-sm bg-amber-600 hover:bg-amber-700 text-white font-medium transition-colors"
           >
             Sign up
@@ -174,7 +174,32 @@ function AboutContent() {
           </Link>
         </div>
 
-        {/* Section 4 — Why "Aurik"? */}
+        {/* Section 4 — Google Drive integration */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-3">Google Drive integration</h2>
+          <div className="space-y-3 text-stone-600 text-sm leading-relaxed">
+            <p>
+              Aurik uses your Google Drive to store the photos you upload — profile pictures,
+              post images, and hunt photos. Connecting Drive is optional and only takes a moment
+              from your profile settings.
+            </p>
+            <p>
+              <strong>Why Google Drive?</strong> It keeps your photos in <em>your</em> account,
+              on storage you already own. Aurik never holds your originals on our servers — we
+              only reference the files in your Drive when displaying them in the app. That means
+              you stay in control of your media, your storage costs nothing extra, and you can
+              revoke access at any time from your Google account settings.
+            </p>
+            <p>
+              <strong>What we access:</strong> Aurik creates and reads files only inside a
+              dedicated Aurik folder in your Drive. We don't browse, modify, or download anything
+              outside that folder. You can disconnect Drive from your profile settings whenever
+              you'd like.
+            </p>
+          </div>
+        </div>
+
+        {/* Section 5 — Why "Aurik"? */}
         <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
           <h2 className="text-lg font-semibold text-stone-900 mb-3">Why "Aurik"?</h2>
           <p className="text-stone-600 text-sm leading-relaxed">
