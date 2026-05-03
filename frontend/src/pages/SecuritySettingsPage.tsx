@@ -87,7 +87,7 @@ export default function SecuritySettingsPage() {
     try {
       await deleteAccount();
       await signOut();
-      navigate('/login', { replace: true });
+      navigate('/', { replace: true });
     } catch (err: any) {
       const msg = err?.response?.data?.detail ?? err?.message ?? 'Failed to delete account';
       setDeleteError(msg);

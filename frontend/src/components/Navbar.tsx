@@ -308,7 +308,7 @@ export default function Navbar({
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
       <div className="flex items-center gap-3 px-4 h-14">
         {/* Branding - Just Logo */}
-        <Link to="/map" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
             src="/brand/logo.png"
             alt="Aurik logo"
@@ -499,7 +499,7 @@ export default function Navbar({
                   size="sm"
                 />
               </Link>
-              <SettingsDropdown onSignOut={signOut} onImportClick={onImportClick} />
+              <SettingsDropdown onSignOut={async () => { await signOut(); navigate('/'); }} onImportClick={onImportClick} />
             </div>
           ) : (
             <div className="border-l border-stone-200 pl-2 ml-1">
