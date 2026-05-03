@@ -18,7 +18,7 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from geoalchemy2.shape import from_shape
 from shapely.geometry import LineString as ShapelyLineString
-from sqlalchemy import select, text
+from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 from starlette.requests import Request as StarletteRequest
 from starlette.responses import Response
@@ -297,6 +297,7 @@ async def create_location(
         description=payload.description,
         source=payload.source,
         confidence=payload.confidence,
+        geom=func.ST_SetSRID(func.ST_MakePoint(payload.longitude, payload.latitude), 4326),
     )
     db.add(loc)
     await db.flush()
@@ -1090,6 +1091,7 @@ async def import_locations(
                 description=item.description,
                 source=source,
                 confidence=item.confidence,
+                geom=func.ST_SetSRID(func.ST_MakePoint(item.longitude, item.latitude), 4326),
             )
             db.add(loc)
             existing_names.add(item.name)
