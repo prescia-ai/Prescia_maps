@@ -7,8 +7,8 @@ Usage
 -----
 python scripts/download_us_aerials.py \
   --year 1955 \
-  --username YOUR_USGS_USERNAME \
-  --password YOUR_USGS_PASSWORD \
+  --username apgrant719 \
+  --password KaidDerly2020! \
   --output ./tiles/1955 \
   --workers 8
 
