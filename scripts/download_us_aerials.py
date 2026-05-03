@@ -5,14 +5,33 @@ continental United States for a given year (default: 1955).
 
 Usage
 -----
+# Preferred: supply the token via environment variable (avoids credentials on
+# the command line)
+export USGS_M2M_TOKEN=YOUR_APPLICATION_TOKEN
 python scripts/download_us_aerials.py \
   --year 1955 \
-  --username apgrant719 \
-  --password KaidDerly2020! \
+  --username YOUR_USGS_USERNAME \
+  --output ./tiles/1955 \
+  --workers 8
+
+# Alternatively, pass the token directly:
+python scripts/download_us_aerials.py \
+  --year 1955 \
+  --username YOUR_USGS_USERNAME \
+  --token YOUR_APPLICATION_TOKEN \
   --output ./tiles/1955 \
   --workers 8
 
 Resume an interrupted run by adding --resume.
+
+The --token value can also be supplied via the USGS_M2M_TOKEN environment
+variable so you avoid putting credentials on the command line.
+
+To generate an Application Token:
+  1. Log in at https://ers.cr.usgs.gov/
+  2. Go to Profile → Application Tokens (https://ers.cr.usgs.gov/profile/access)
+  3. Create a new token with the "M2M API" scope
+  4. Copy the token within the 60-second display window
 
 System dependencies
 -------------------
@@ -105,16 +124,16 @@ def _run(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess:
 class USGSClient:
     """Thin wrapper around the USGS Machine-to-Machine (M2M) JSON API."""
 
-    def __init__(self, username: str, password: str) -> None:
+    def __init__(self, username: str, token: str) -> None:
         self._session = requests.Session()
         self._api_key: str | None = None
-        self._login(username, password)
+        self._login(username, token)
 
     # ── Auth ───────────────────────────────────────────────────────────────────
 
-    def _login(self, username: str, password: str) -> None:
-        payload = {"username": username, "password": password}
-        resp = self._post("login", payload)
+    def _login(self, username: str, token: str) -> None:
+        payload = {"username": username, "token": token}
+        resp = self._post("login-token", payload)
         self._api_key = resp
         self._session.headers.update({"X-Auth-Token": self._api_key})
         logger.info("Logged in to USGS M2M API.")
@@ -209,8 +228,8 @@ class USGSClient:
 class USAerialDownloader:
     """Downloads, optimizes, and tiles USGS historical aerials for the CONUS."""
 
-    def __init__(self, username: str, password: str) -> None:
-        self._client = USGSClient(username, password)
+    def __init__(self, username: str, token: str) -> None:
+        self._client = USGSClient(username, token)
 
     # ── Public API ─────────────────────────────────────────────────────────────
 
@@ -566,8 +585,13 @@ def _parse_args() -> argparse.Namespace:
                         help="Target year for aerial imagery.")
     parser.add_argument("--username", required=True,
                         help="USGS ERS username.")
-    parser.add_argument("--password", required=True,
-                        help="USGS ERS password.")
+    parser.add_argument("--token", default=None,
+                        help=(
+                            "USGS Application Token (M2M API scope). "
+                            "May also be supplied via the USGS_M2M_TOKEN env var. "
+                            "Generate one at https://ers.cr.usgs.gov/profile/access "
+                            "(Profile → Application Tokens)"
+                        ))
     parser.add_argument("--output",   default="./tiles",
                         help="Root output directory.")
     parser.add_argument("--workers",  type=int,
@@ -597,6 +621,17 @@ def _parse_args() -> argparse.Namespace:
 def main() -> None:
     args = _parse_args()
 
+    # Resolve token: CLI flag → env var → error
+    token = args.token or os.environ.get("USGS_M2M_TOKEN")
+    if not token:
+        print(
+            "Error: a USGS Application Token is required.\n"
+            "Pass it with --token or set the USGS_M2M_TOKEN environment variable.\n"
+            "Generate a token at: https://ers.cr.usgs.gov/profile/access",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     # Allow CLI overrides for the key optimization parameters
     OPTIMIZATION_SETTINGS["zoom_min"]          = args.zoom_min
     OPTIMIZATION_SETTINGS["zoom_max"]          = args.zoom_max
@@ -606,7 +641,7 @@ def main() -> None:
 
     output_dir = Path(args.output) / str(args.year)
 
-    downloader = USAerialDownloader(args.username, args.password)
+    downloader = USAerialDownloader(args.username, token)
     downloader.download_full_us(
         year=args.year,
         output_dir=output_dir,
