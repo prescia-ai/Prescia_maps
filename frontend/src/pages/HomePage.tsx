@@ -29,7 +29,7 @@ function TopBarLogin() {
   return (
     <form onSubmit={handleSubmit} className="flex items-center gap-2">
       {error && (
-        <span className="text-red-300 text-xs hidden sm:block">{error}</span>
+        <span className="text-red-600 text-xs hidden sm:block">{error}</span>
       )}
       <input
         type="email"
@@ -37,7 +37,7 @@ function TopBarLogin() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
-        className="hidden sm:block w-36 lg:w-44 bg-white/10 border border-white/30 rounded-lg px-3 py-1.5 text-white text-sm placeholder-white/60 focus:outline-none focus:border-white/60"
+        className="hidden sm:block w-36 lg:w-44 bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:border-stone-400"
       />
       <input
         type="password"
@@ -45,19 +45,19 @@ function TopBarLogin() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-        className="hidden sm:block w-28 lg:w-36 bg-white/10 border border-white/30 rounded-lg px-3 py-1.5 text-white text-sm placeholder-white/60 focus:outline-none focus:border-white/60"
+        className="hidden sm:block w-28 lg:w-36 bg-white border border-stone-200 rounded-lg px-3 py-1.5 text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:border-stone-400"
       />
       <button
         type="submit"
         disabled={loading}
-        className="hidden sm:block bg-white text-amber-700 font-semibold px-4 py-1.5 rounded-lg text-sm hover:bg-amber-50 disabled:opacity-50 transition-colors whitespace-nowrap"
+        className="hidden sm:block bg-stone-800 hover:bg-stone-700 text-white font-semibold px-4 py-1.5 rounded-lg text-sm disabled:opacity-50 transition-colors whitespace-nowrap"
       >
         {loading ? '…' : 'Log in'}
       </button>
       {/* Mobile fallback: just show a link */}
       <Link
         to="/login"
-        className="sm:hidden text-white font-semibold text-sm underline underline-offset-2"
+        className="sm:hidden text-stone-900 font-semibold text-sm underline underline-offset-2"
       >
         Log in
       </Link>
@@ -95,7 +95,7 @@ function SignupCard() {
   };
 
   return (
-    <div className="bg-white border border-stone-200 rounded-2xl p-7 shadow-sm">
+    <div className="bg-white border border-stone-200 rounded-3xl p-7 shadow-sm">
       <h2 className="text-stone-900 text-xl font-bold mb-1">Sign up — it's free.</h2>
       <p className="text-stone-500 text-sm mb-5">Join the community of history hunters.</p>
 
@@ -163,7 +163,7 @@ function SignupCard() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-amber-700 hover:bg-amber-600 disabled:opacity-50 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
+              className="w-full bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white font-semibold py-2.5 rounded-xl transition-colors text-sm"
             >
               {loading ? 'Creating account…' : 'Sign Up'}
             </button>
@@ -195,18 +195,17 @@ export default function HomePage() {
   if (loading) return null;
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50">
+    <div className="min-h-screen flex flex-col bg-amber-50/30">
       {/* ── Top bar ─────────────────────────────────────────────── */}
-      <header className="bg-amber-700 shadow-md">
+      <header className="bg-white border-b border-stone-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
           {/* Brand */}
-          <div className="flex items-center gap-2.5 shrink-0">
+          <div className="shrink-0">
             <img
               src="/brand/logo.png"
               alt="Aurik logo"
-              className="h-8 w-8 rounded-lg object-contain"
+              className="h-8 w-auto"
             />
-            <span className="text-white text-xl font-bold tracking-tight">Aurik</span>
           </div>
 
           {/* Compact login */}
@@ -236,7 +235,7 @@ export default function HomePage() {
                 <li className="flex items-start gap-3">
                   <span className="text-2xl leading-none mt-0.5">🗺️</span>
                   <div>
-                    <p className="font-semibold text-stone-800">Map every site</p>
+                    <p className="font-semibold text-stone-900">Map every site</p>
                     <p className="text-stone-500 text-sm">
                       Pin ghost towns, abandoned structures, and historic finds on a shared
                       live map with vintage aerial overlays.
@@ -246,7 +245,7 @@ export default function HomePage() {
                 <li className="flex items-start gap-3">
                   <span className="text-2xl leading-none mt-0.5">📓</span>
                   <div>
-                    <p className="font-semibold text-stone-800">Log every hunt</p>
+                    <p className="font-semibold text-stone-900">Log every hunt</p>
                     <p className="text-stone-500 text-sm">
                       Keep a personal field journal, track your finds, and build a private
                       archive of your expeditions.
@@ -256,7 +255,7 @@ export default function HomePage() {
                 <li className="flex items-start gap-3">
                   <span className="text-2xl leading-none mt-0.5">👥</span>
                   <div>
-                    <p className="font-semibold text-stone-800">Join the community</p>
+                    <p className="font-semibold text-stone-900">Join the community</p>
                     <p className="text-stone-500 text-sm">
                       Follow fellow hunters, share discoveries, and earn badges as you
                       contribute to the collective record.
@@ -266,7 +265,7 @@ export default function HomePage() {
               </ul>
 
               {/* Hero map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-stone-200 shadow-sm bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 h-48 flex items-center justify-center">
+              <div className="rounded-2xl overflow-hidden border border-stone-200 shadow-sm bg-gradient-to-br from-amber-50 via-stone-50 to-amber-100 h-48 flex items-center justify-center">
                 <div className="text-center text-stone-400">
                   <div className="text-5xl mb-2">🗺️</div>
                   <p className="text-sm font-medium">Interactive map — sign in to explore</p>
