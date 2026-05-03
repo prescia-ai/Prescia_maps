@@ -231,7 +231,7 @@ export default function HomePage() {
               </p>
 
               {/* Feature bullets */}
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-4 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-2xl leading-none mt-0.5">🗺️</span>
                   <div>
@@ -264,13 +264,6 @@ export default function HomePage() {
                 </li>
               </ul>
 
-              {/* Hero map placeholder */}
-              <div className="rounded-2xl overflow-hidden border border-stone-200 shadow-sm bg-gradient-to-br from-amber-50 via-stone-50 to-amber-100 h-48 flex items-center justify-center">
-                <div className="text-center text-stone-400">
-                  <div className="text-5xl mb-2">🗺️</div>
-                  <p className="text-sm font-medium">Interactive map — sign in to explore</p>
-                </div>
-              </div>
             </div>
 
             {/* Right: signup card */}
@@ -284,7 +277,7 @@ export default function HomePage() {
       {/* ── Footer ──────────────────────────────────────────────── */}
       <footer className="border-t border-stone-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-wrap gap-x-6 gap-y-2 justify-center text-stone-400 text-xs">
-          <a href="#" className="hover:text-stone-600 transition-colors">About</a>
+          <a href="/about" className="hover:text-stone-600 transition-colors">About</a>
           <a href="#" className="hover:text-stone-600 transition-colors">Privacy</a>
           <a href="#" className="hover:text-stone-600 transition-colors">Terms</a>
           <a href="#" className="hover:text-stone-600 transition-colors">Contact</a>

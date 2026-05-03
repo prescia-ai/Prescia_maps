@@ -1,0 +1,205 @@
+import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import AppLayout from '../components/AppLayout';
+
+// ─── Minimal top bar for logged-out visitors ──────────────────────────────────
+
+function GuestTopBar() {
+  return (
+    <header className="bg-white border-b border-stone-200 shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        <Link to="/" className="shrink-0">
+          <img src="/brand/logo.png" alt="Aurik logo" className="h-8 w-auto" />
+        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/"
+            className="px-4 py-1.5 rounded-lg text-sm text-stone-700 hover:bg-stone-100 transition-colors font-medium"
+          >
+            Log in
+          </Link>
+          <Link
+            to="/signup"
+            className="px-4 py-1.5 rounded-xl text-sm bg-amber-600 hover:bg-amber-700 text-white font-medium transition-colors"
+          >
+            Sign up
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+// ─── Page content (shared for both auth states) ───────────────────────────────
+
+function AboutContent({ isLoggedIn }: { isLoggedIn: boolean }) {
+  return (
+    <div className="min-h-screen bg-amber-50/30">
+      <div className="max-w-3xl mx-auto px-4 py-12">
+        {/* Heading */}
+        <h1 className="text-3xl font-bold text-stone-900 mb-2">About Aurik</h1>
+        <p className="text-stone-500 text-base mb-8">
+          A community map and field journal for history hunters everywhere.
+        </p>
+
+        {/* Section 1 — What is Aurik? */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-3">What is Aurik?</h2>
+          <div className="space-y-3 text-stone-600 text-sm leading-relaxed">
+            <p>
+              Aurik is a community-driven map and field journal built for metal-detecting
+              hobbyists, history hunters, and amateur historians. It brings together the
+              tools you need to research, plan, and document your expeditions in one place.
+            </p>
+            <p>
+              At its core, Aurik overlays historical aerial imagery — starting with 1955
+              USGS photography, with more eras on the way — directly onto a live map of
+              ghost towns, abandoned structures, and significant historic sites. See the
+              landscape as it looked decades ago alongside what's there today.
+            </p>
+            <p>
+              Whether you're chasing a lead on a long-forgotten farmstead or cataloguing
+              finds from a weekend outing, Aurik gives you the context to hunt smarter and
+              the journal to remember what you find.
+            </p>
+          </div>
+        </div>
+
+        {/* Section 2 — What can I do here? */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-3">What can I do here?</h2>
+          <ul className="space-y-1.5">
+            {[
+              {
+                icon: '🗺️',
+                text: 'Browse a community map of historical sites, ghost towns, and abandoned structures',
+              },
+              {
+                icon: '🛩️',
+                text: 'Toggle vintage aerial imagery overlays (1955 launching first, more years to follow)',
+              },
+              {
+                icon: '📓',
+                text: 'Log your hunts in a private field journal',
+              },
+              {
+                icon: '📋',
+                text: (
+                  <>
+                    Plan future expeditions with the Hunt Plans tool{' '}
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-1.5 py-0.5 ml-0.5">
+                      Pro
+                    </span>
+                  </>
+                ),
+              },
+              {
+                icon: '👥',
+                text: (
+                  <>
+                    Join groups and share finds with fellow hunters{' '}
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-1.5 py-0.5 ml-0.5">
+                      Pro
+                    </span>
+                  </>
+                ),
+              },
+              {
+                icon: '📍',
+                text: 'Submit new pins and contribute to the historical record',
+              },
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-stone-600 text-sm">
+                <span className="text-lg leading-none mt-0.5 shrink-0">{item.icon}</span>
+                <span>{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Section 3 — Free vs. Pro */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-4">Free vs. Pro</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+            {/* Free */}
+            <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4">
+              <p className="font-semibold text-stone-800 text-sm mb-2">Free</p>
+              <ul className="space-y-1.5 text-stone-600 text-sm list-disc list-inside">
+                <li>Browse the community map</li>
+                <li>Log up to 5 hunts</li>
+                <li>View community pins</li>
+                <li>1955 aerial imagery overlay</li>
+              </ul>
+            </div>
+            {/* Pro */}
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+              <p className="font-semibold text-amber-800 text-sm mb-2">Pro</p>
+              <ul className="space-y-1.5 text-amber-900 text-sm list-disc list-inside">
+                <li>Unlimited hunt logs</li>
+                <li>Submit pins to the map</li>
+                <li>Hunt planning tools</li>
+                <li>Groups &amp; community sharing</li>
+                <li>All upcoming aerial imagery layers</li>
+              </ul>
+            </div>
+          </div>
+          <Link
+            to={isLoggedIn ? '/profile/settings/subscription' : '/signup'}
+            className="inline-block bg-amber-600 hover:bg-amber-700 text-white rounded-xl px-5 py-2.5 text-sm font-medium transition-colors"
+          >
+            Start free trial
+          </Link>
+        </div>
+
+        {/* Section 4 — Why "Aurik"? */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-3">Why "Aurik"?</h2>
+          <p className="text-stone-600 text-sm leading-relaxed">
+            The name is a nod to <em>aurum</em> — Latin for gold — and the timeless pull of
+            discovery that drives every hunt. It's a coined name, but it felt right for a
+            tool built around finding what's hidden beneath the surface.
+          </p>
+        </div>
+
+        {/* Section 5 — Get in touch */}
+        <div className="bg-white border border-stone-200 rounded-3xl shadow-sm p-6 mb-4">
+          <h2 className="text-lg font-semibold text-stone-900 mb-3">Get in touch</h2>
+          <p className="text-stone-600 text-sm leading-relaxed">
+            Questions, feedback, or want to contribute? Reach us at{' '}
+            {/* TODO: confirm contact email */}
+            <a
+              href="mailto:hello@aurik.app"
+              className="text-amber-700 hover:text-amber-600 underline underline-offset-2"
+            >
+              hello@aurik.app
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Main page ────────────────────────────────────────────────────────────────
+
+export default function AboutPage() {
+  const { user, loading } = useAuth();
+
+  if (loading) return null;
+
+  if (user) {
+    return (
+      <AppLayout>
+        <AboutContent isLoggedIn={true} />
+      </AppLayout>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col bg-amber-50/30">
+      <GuestTopBar />
+      <AboutContent isLoggedIn={false} />
+    </div>
+  );
+}
