@@ -24,6 +24,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    event,
     func,
     text,
 )
@@ -139,6 +140,14 @@ class Location(Base):
     confidence = Column(Float, nullable=False, default=0.5)
     # PostGIS geometry stored as WGS-84 (SRID 4326)
     geom = Column(Geometry("POINT", srid=4326, spatial_index=True), nullable=True)
+
+
+@event.listens_for(Location, "before_insert")
+@event.listens_for(Location, "before_update")
+def _populate_location_geom(mapper, connection, target):
+    """Auto-fill geom from lat/lon when geom is not set (ORM-layer mirror of the DB trigger)."""
+    if target.geom is None and target.latitude is not None and target.longitude is not None:
+        target.geom = func.ST_SetSRID(func.ST_MakePoint(target.longitude, target.latitude), 4326)
 
 
 class LinearFeature(Base):
