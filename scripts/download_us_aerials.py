@@ -124,9 +124,17 @@ def _run(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess:
 class USGSClient:
     """Thin wrapper around the USGS Machine-to-Machine (M2M) JSON API."""
 
-    def __init__(self, username: str, token: str) -> None:
+    def __init__(
+        self,
+        username: str,
+        token: str,
+        api_timeout: int = 300,
+        api_retries: int = 5,
+    ) -> None:
         self._session = requests.Session()
         self._api_key: str | None = None
+        self._api_timeout = api_timeout
+        self._api_retries = api_retries
         self._login(username, token)
 
     # ── Auth ───────────────────────────────────────────────────────────────────
@@ -215,12 +223,44 @@ class USGSClient:
 
     def _post(self, endpoint: str, payload: dict) -> Any:
         url = f"{M2M_BASE_URL}/{endpoint}"
-        resp = self._session.post(url, json=payload, timeout=60)
-        resp.raise_for_status()
-        body = resp.json()
-        if body.get("errorCode"):
-            raise requests.HTTPError(f"{body['errorCode']}: {body.get('errorMessage')}")
-        return body.get("data")
+        timeout = (30, self._api_timeout)
+        last_exc: Exception = RuntimeError("Retry loop failed without capturing exception")
+        # attempt=0 is the initial try; 1..api_retries are retries
+        for attempt in range(self._api_retries + 1):
+            try:
+                resp = self._session.post(url, json=payload, timeout=timeout)
+                resp.raise_for_status()
+                body = resp.json()
+                if body.get("errorCode"):
+                    raise requests.HTTPError(
+                        f"{body['errorCode']}: {body.get('errorMessage')}"
+                    )
+                return body.get("data")
+            except (requests.exceptions.ReadTimeout, requests.exceptions.ConnectionError) as exc:
+                last_exc = exc
+                if attempt < self._api_retries:
+                    wait = 2 ** (attempt + 1)  # 2s, 4s, 8s, 16s, 32s
+                    logger.warning(
+                        "USGS /%s timed out, retrying in %ds (attempt %d/%d)",
+                        endpoint, wait, attempt + 1, self._api_retries,
+                    )
+                    time.sleep(wait)
+            except requests.exceptions.HTTPError as exc:
+                last_exc = exc
+                status = exc.response.status_code if exc.response is not None else 0
+                # Only retry transient server/rate-limit errors
+                if status == 429 or status >= 500:
+                    if attempt < self._api_retries:
+                        wait = 2 ** (attempt + 1)  # 2s, 4s, 8s, 16s, 32s
+                        logger.warning(
+                            "USGS /%s returned %d, retrying in %ds (attempt %d/%d)",
+                            endpoint, status, wait, attempt + 1, self._api_retries,
+                        )
+                        time.sleep(wait)
+                else:
+                    # 4xx (except 429) — don't retry, fail fast
+                    raise
+        raise last_exc
 
 
 # ── Main downloader class ──────────────────────────────────────────────────────
@@ -228,8 +268,14 @@ class USGSClient:
 class USAerialDownloader:
     """Downloads, optimizes, and tiles USGS historical aerials for the CONUS."""
 
-    def __init__(self, username: str, token: str) -> None:
-        self._client = USGSClient(username, token)
+    def __init__(
+        self,
+        username: str,
+        token: str,
+        api_timeout: int = 300,
+        api_retries: int = 5,
+    ) -> None:
+        self._client = USGSClient(username, token, api_timeout=api_timeout, api_retries=api_retries)
 
     # ── Public API ─────────────────────────────────────────────────────────────
 
@@ -252,9 +298,20 @@ class USAerialDownloader:
         state = self._load_manifest(manifest) if (resume and manifest.exists()) else {}
         completed_grids: set[str] = set(state.get("completed_grids", []))
         all_tif_paths:   list[str] = list(state.get("tif_paths", []))
+        # On resume, previously failed grids are retried; start fresh otherwise
+        failed_grids: list[str] = list(state.get("failed_grids", [])) if resume else []
 
         grid_boxes = self._create_download_grid(CONUS_BBOX, GRID_STEP)
         total_grids = len(grid_boxes)
+
+        # On resume, also collect grid boxes for previously failed grids
+        if resume and failed_grids:
+            retry_keys = set(failed_grids)
+            failed_grids.clear()  # Will re-populate as they fail again
+            # Remove previously failed grids from completed so they get retried
+            for key in retry_keys:
+                completed_grids.discard(key)
+
         logger.info("Grid tiles: %d  (already done: %d)", total_grids, len(completed_grids))
 
         # ── Phase 1: Download GeoTIFFs ─────────────────────────────────────────
@@ -266,14 +323,37 @@ class USAerialDownloader:
 
             logger.info("[%d/%d] Downloading grid %s", i, total_grids, grid_key)
             grid_dir = raw_dir / f"grid_{i}"
-            new_paths = self._download_grid(bbox, year, grid_dir)
+            try:
+                new_paths = self._download_grid(bbox, year, grid_dir)
+            except Exception as exc:
+                logger.warning(
+                    "[%d/%d] Grid %s failed: %s — skipping and recording for retry",
+                    i, total_grids, grid_key, exc,
+                )
+                if grid_key not in failed_grids:
+                    failed_grids.append(grid_key)
+                self._save_manifest(manifest, {
+                    "completed_grids": list(completed_grids),
+                    "tif_paths": all_tif_paths,
+                    "failed_grids": failed_grids,
+                })
+                continue
             all_tif_paths.extend(str(p) for p in new_paths)
 
             completed_grids.add(grid_key)
             self._save_manifest(manifest, {
                 "completed_grids": list(completed_grids),
                 "tif_paths": all_tif_paths,
+                "failed_grids": failed_grids,
             })
+
+        completed_count = len(completed_grids)
+        failed_count = len(failed_grids)
+        logger.info(
+            "Completed: %d/%d grids. Failed: %d%s",
+            completed_count, total_grids, failed_count,
+            " (see download_manifest.json `failed_grids` for retry)" if failed_count else "",
+        )
 
         # ── Phase 2: Optimize GeoTIFFs ─────────────────────────────────────────
         logger.info("Optimizing %d GeoTIFFs …", len(all_tif_paths))
@@ -615,6 +695,12 @@ def _parse_args() -> argparse.Namespace:
                         default=OPTIMIZATION_SETTINGS["resolution_meters"],
                         dest="resolution_meters",
                         help="Target GeoTIFF resolution in metres.")
+    parser.add_argument("--api-timeout", type=int, default=300,
+                        dest="api_timeout",
+                        help="Read timeout in seconds for USGS M2M API calls.")
+    parser.add_argument("--api-retries", type=int, default=5,
+                        dest="api_retries",
+                        help="Maximum number of retries for transient USGS API errors.")
     return parser.parse_args()
 
 
@@ -641,7 +727,11 @@ def main() -> None:
 
     output_dir = Path(args.output) / str(args.year)
 
-    downloader = USAerialDownloader(args.username, token)
+    downloader = USAerialDownloader(
+        args.username, token,
+        api_timeout=args.api_timeout,
+        api_retries=args.api_retries,
+    )
     downloader.download_full_us(
         year=args.year,
         output_dir=output_dir,
