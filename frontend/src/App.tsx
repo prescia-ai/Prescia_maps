@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProfileSetupPage from './pages/ProfileSetupPage';
@@ -95,7 +96,7 @@ export default function App() {
         <Route path="/plans/:id/edit" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><EditPlanPageWrapper /></RequireSubscription></RequireProfile>} />
         <Route path="/plans/:id" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><PlanDetailPage /></RequireSubscription></RequireProfile>} />
         <Route path="/plans" element={<RequireProfile><RequireSubscription tier="pro" intent="plans"><MyPlansPage /></RequireSubscription></RequireProfile>} />
-        <Route path="/" element={<Navigate to="/map" replace />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </AuthProvider>
   );
