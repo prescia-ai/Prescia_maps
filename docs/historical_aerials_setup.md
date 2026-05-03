@@ -14,6 +14,16 @@ a free USGS Earth Resources Observation and Science (EROS) account.
 
 1. Register at <https://ers.cr.usgs.gov/register/>
 2. Log in and request M2M API access (usually approved within a day)
+3. Generate an Application Token:
+   - Go to **Profile → Application Tokens**
+   - Click **Create Token**, select the **M2M API** scope, and give it a name
+   - Copy the token within the **60-second display window** — it will not be
+     shown again
+   - Store it securely (e.g. in a `.env` file or a password manager)
+
+> **Token expiry:** Application Tokens are valid for approximately 2 years by
+> default.  If authentication starts failing, generate a new token and update
+> your `USGS_M2M_TOKEN` environment variable (or `--token` argument).
 
 ### Storage
 
@@ -66,7 +76,7 @@ pip install requests pillow tqdm
 python scripts/download_us_aerials.py \
   --year 1955 \
   --username YOUR_USGS_USERNAME \
-  --password YOUR_USGS_PASSWORD \
+  --token YOUR_APPLICATION_TOKEN \
   --output ./tiles \
   --workers 8
 ```
@@ -79,7 +89,7 @@ The script writes output to `./tiles/1955/` by default.
 python scripts/download_us_aerials.py \
   --year 1955 \
   --username YOUR_USGS_USERNAME \
-  --password YOUR_USGS_PASSWORD \
+  --token YOUR_APPLICATION_TOKEN \
   --output ./tiles \
   --resume
 ```
@@ -93,7 +103,7 @@ Each completed 10° × 10° grid square is recorded so you never re-download it.
 |------|---------|-------------|
 | `--year` | `1955` | Target year for aerial imagery |
 | `--username` | *(required)* | USGS ERS username |
-| `--password` | *(required)* | USGS ERS password |
+| `--token` | *(required)* | USGS Application Token (or set `USGS_M2M_TOKEN` env var) |
 | `--output` | `./tiles` | Root output directory |
 | `--workers` | `8` | Parallel processes for tile conversion |
 | `--resume` | `false` | Resume from a previous interrupted run |
