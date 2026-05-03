@@ -303,6 +303,11 @@ export default function Navbar({
     }
   }
 
+  async function handleSignOut() {
+    await signOut();
+    navigate('/');
+  }
+
   return (
     <>
     <div className="fixed top-0 left-0 right-0 z-20 bg-white border-b border-stone-200 shadow-sm">
@@ -499,7 +504,7 @@ export default function Navbar({
                   size="sm"
                 />
               </Link>
-              <SettingsDropdown onSignOut={async () => { await signOut(); navigate('/'); }} onImportClick={onImportClick} />
+              <SettingsDropdown onSignOut={handleSignOut} onImportClick={onImportClick} />
             </div>
           ) : (
             <div className="border-l border-stone-200 pl-2 ml-1">
