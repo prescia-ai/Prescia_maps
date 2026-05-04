@@ -54,6 +54,8 @@ export default function BadgesPage() {
 
   const totalEarned = progress.filter((p) => p.earned).length;
   const total = progress.length;
+  const totalScore = progress.filter((p) => p.earned).reduce((sum, p) => sum + (p.badge.points ?? 0), 0);
+  const maxScore = progress.reduce((sum, p) => sum + (p.badge.points ?? 0), 0);
 
   return (
     <div className="min-h-screen bg-stone-50 py-8 px-4">
@@ -66,14 +68,18 @@ export default function BadgesPage() {
           </p>
           {!loading && total > 0 && (
             <div className="mt-3 inline-flex items-center gap-2 bg-white border border-stone-200 rounded-full px-4 py-1.5">
-              <span className="text-stone-900 font-semibold text-sm">{totalEarned}</span>
-              <span className="text-stone-400 text-sm">/ {total} earned</span>
-              <div className="w-24 h-1.5 bg-stone-100 rounded-full overflow-hidden ml-1">
-                <div
-                  className="h-full bg-amber-500 rounded-full"
-                  style={{ width: total > 0 ? `${Math.round((totalEarned / total) * 100)}%` : '0%' }}
-                />
-              </div>
+              <span className="text-amber-500 text-base leading-none">🏆</span>
+              <span className="text-stone-900 font-semibold text-sm">{totalScore}</span>
+              <span className="text-stone-400 text-sm">pts</span>
+              {maxScore > 0 && (
+                <div className="w-24 h-1.5 bg-stone-100 rounded-full overflow-hidden ml-1">
+                  <div
+                    className="h-full bg-amber-500 rounded-full"
+                    style={{ width: `${Math.min(Math.round((totalScore / maxScore) * 100), 100)}%` }}
+                  />
+                </div>
+              )}
+              <span className="text-stone-400 text-xs ml-1">{totalEarned} of {total} earned</span>
             </div>
           )}
         </div>

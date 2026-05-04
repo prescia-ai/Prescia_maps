@@ -201,15 +201,6 @@ BADGES = [
     },
     # ── Treasure Trove — Coins ─────────────────────────────────────────────────
     {
-        "badge_id": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890",
-        "name": "Coin Collector",
-        "description": "Add 50 coins to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "coin", "threshold": 50},
-        "points": 60,
-        "rarity": "rare",
-    },
-    {
         "badge_id": "E46CD796-E5BB-48DE-A3F6-9F9819ADC019",
         "name": "Coin Hoarder",
         "description": "Add 100 coins to your collection.",
@@ -219,15 +210,6 @@ BADGES = [
         "rarity": "epic",
     },
     # ── Treasure Trove — Buttons ───────────────────────────────────────────────
-    {
-        "badge_id": "B2C3D4E5-F6A7-8901-BCDE-F12345678901",
-        "name": "Button Box",
-        "description": "Add 25 buttons to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "button", "threshold": 25},
-        "points": 50,
-        "rarity": "rare",
-    },
     {
         "badge_id": "D1840574-3B84-4621-9602-5CC0A095E381",
         "name": "Button Baron",
@@ -239,15 +221,6 @@ BADGES = [
     },
     # ── Treasure Trove — Bullets ───────────────────────────────────────────────
     {
-        "badge_id": "C3D4E5F6-A7B8-9012-CDEF-123456789012",
-        "name": "Lead Farmer",
-        "description": "Add 50 bullets to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "bullet", "threshold": 50},
-        "points": 50,
-        "rarity": "rare",
-    },
-    {
         "badge_id": "0F5AE77F-8165-45F5-977B-2B12C29D6C75",
         "name": "Bullet Cache",
         "description": "Add 100 bullets to your collection.",
@@ -258,15 +231,6 @@ BADGES = [
     },
     # ── Treasure Trove — Jewelry ───────────────────────────────────────────────
     {
-        "badge_id": "D4E5F6A7-B8C9-0123-DEF0-234567890123",
-        "name": "Jewelry Box",
-        "description": "Add 10 jewelry items to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "jewelry", "threshold": 10},
-        "points": 70,
-        "rarity": "epic",
-    },
-    {
         "badge_id": "FB3E90DF-3C93-4AF2-99BE-C8EF7F443600",
         "name": "Jewel Hunter",
         "description": "Add 20 jewelry items to your collection.",
@@ -276,15 +240,6 @@ BADGES = [
         "rarity": "epic",
     },
     # ── Treasure Trove — Buckles ───────────────────────────────────────────────
-    {
-        "badge_id": "E5F6A7B8-C9D0-1234-EF01-345678901234",
-        "name": "Buckle Up",
-        "description": "Add 15 buckles to your collection.",
-        "category": "treasure_trove",
-        "criteria": {"type": "collection_type_count", "find_type": "buckle", "threshold": 15},
-        "points": 50,
-        "rarity": "rare",
-    },
     {
         "badge_id": "79F9EB4B-7278-4905-B46F-3FD4696778D5",
         "name": "Buckle Bonanza",
