@@ -11,7 +11,7 @@ export USGS_M2M_TOKEN=YOUR_APPLICATION_TOKEN
 python scripts/download_us_aerials.py \
   --year 1955 \
   --username YOUR_USGS_USERNAME \
-  --output ./tiles/1955 \
+  --output ./tiles \
   --workers 8
 
 # Alternatively, pass the token directly:
@@ -19,7 +19,7 @@ python scripts/download_us_aerials.py \
   --year 1955 \
   --username YOUR_USGS_USERNAME \
   --token YOUR_APPLICATION_TOKEN \
-  --output ./tiles/1955 \
+  --output ./tiles \
   --workers 8
 
 Resume an interrupted run by adding --resume.
@@ -72,12 +72,16 @@ GRID_STEP = 10.0  # degrees per grid tile
 
 M2M_BASE_URL = "https://m2m.cr.usgs.gov/api/api/json/stable"
 
-# Candidate dataset names for 1950s aerial coverage (API names)
+# Candidate dataset names for historical aerial coverage (API names).
+# AERIAL_COMBIN is an aggregate whose temporal filter behaves unexpectedly for
+# historical years (returns modern frames).  HRP is modern orthoimagery.
+# AERIAL (single-frame historical collection) is preferred; NHAP/NAPP cover
+# the 1970s-1980s national programmes.  All candidates are tried and results
+# merged so coverage is maximised.
 CANDIDATE_DATASETS = [
-    "AERIAL_COMBIN",
+    "AERIAL",      # Historical aerial photography single-frame collection
     "NHAP",        # National High Altitude Photography
     "NAPP",        # National Aerial Photography Program
-    "HRP",         # High Resolution Orthoimagery (fallback)
 ]
 
 OPTIMIZATION_SETTINGS: dict[str, Any] = {
@@ -187,21 +191,107 @@ class USGSClient:
 
     # ── Download ───────────────────────────────────────────────────────────────
 
+    def get_download_options(
+        self, dataset_name: str, entity_ids: list[str]
+    ) -> list[dict]:
+        """Return available download products for *entity_ids* in *dataset_name*.
+
+        Calls the M2M ``download-options`` endpoint.  Each item in the returned
+        list has at least ``entityId``, ``id`` (the product ID), ``available``,
+        and ``bulkAvailable`` keys.
+        """
+        payload = {"datasetName": dataset_name, "entityIds": entity_ids}
+        try:
+            result = self._post("download-options", payload)
+            return result if isinstance(result, list) else []
+        except requests.HTTPError as exc:
+            logger.warning("download-options failed for %s: %s", dataset_name, exc)
+            return []
+
     def request_download_urls(
         self, dataset_name: str, scene_ids: list[str]
     ) -> list[dict]:
-        """Request download URLs for a list of entity IDs."""
-        payload = {
-            "datasetName": dataset_name,
-            "entityIds": scene_ids,
-            "products": [{"productCode": "standard", "useCustomization": False}],
-        }
+        """Request download URLs for a list of entity IDs.
+
+        Correct M2M flow:
+
+        1. ``download-options``  → per-scene product catalogue
+        2. ``download-request``  → submit ``{downloads:[{entityId,productId}], label}``
+        3. ``download-retrieve`` → poll for items that are still "preparing"
+
+        Returns combined list of download dicts (each has a ``url`` key).
+        """
+        # Step 1: get real {entityId, productId} pairs from the catalogue
+        options = self.get_download_options(dataset_name, scene_ids)
+        downloads_to_request: list[dict] = []
+        for opt in options:
+            entity_id  = opt.get("entityId")
+            product_id = opt.get("id")
+            if not entity_id or not product_id:
+                continue
+            if opt.get("available") or opt.get("bulkAvailable"):
+                downloads_to_request.append(
+                    {"entityId": entity_id, "productId": product_id}
+                )
+
+        logger.debug(
+            "download-options: %d/%d scenes have downloadable products",
+            len(downloads_to_request), len(scene_ids),
+        )
+        if not downloads_to_request:
+            return []
+
+        # Step 2: submit download request with proper payload shape
+        label = f"prescia_{dataset_name}_{int(time.time())}"
+        payload = {"downloads": downloads_to_request, "label": label}
         try:
             result = self._post("download-request", payload)
-            return result.get("availableDownloads", [])
         except requests.HTTPError as exc:
             logger.warning("download-request failed: %s", exc)
             return []
+
+        available: list[dict] = result.get("availableDownloads", []) if result else []
+        preparing: list[dict] = result.get("preparingDownloads", []) if result else []
+        logger.debug(
+            "download-request: %d available, %d preparing",
+            len(available), len(preparing),
+        )
+
+        # Step 3: poll for items that are still being prepared
+        if preparing:
+            retrieved = self._poll_download_retrieve(label)
+            available.extend(retrieved)
+
+        return available
+
+    def _poll_download_retrieve(
+        self, label: str, max_wait: int = 300
+    ) -> list[dict]:
+        """Poll ``download-retrieve`` until all items are ready or *max_wait* expires."""
+        collected: list[dict] = []
+        deadline = time.time() + max_wait
+        delay = 5
+        while time.time() < deadline:
+            time.sleep(delay)
+            delay = min(delay * 2, 60)  # exponential back-off, cap at 60 s
+            try:
+                result = self._post("download-retrieve", {"label": label})
+            except requests.HTTPError as exc:
+                logger.warning("download-retrieve failed: %s", exc)
+                break
+            if not result:
+                continue
+            ready         = result.get("available", [])
+            still_waiting = result.get("requested", [])
+            collected.extend(ready)
+            if ready:
+                logger.debug(
+                    "download-retrieve: +%d ready, %d still preparing",
+                    len(ready), len(still_waiting),
+                )
+            if not still_waiting:
+                break
+        return collected
 
     def download_file(self, url: str, dest_path: Path) -> bool:
         """Stream download to dest_path. Returns True on success."""
@@ -287,13 +377,15 @@ class USAerialDownloader:
         resume: bool = False,
     ) -> None:
         """End-to-end pipeline: download → optimize → tile → archive."""
-        output_dir.mkdir(parents=True, exist_ok=True)
-        raw_dir   = output_dir / "raw_geotiffs"
-        tile_dir  = output_dir / "tiles" / str(year)
-        manifest  = output_dir / "download_manifest.json"
+        # All year-specific output lives under output_dir/<year>/
+        year_dir  = output_dir / str(year)
+        year_dir.mkdir(parents=True, exist_ok=True)
+        raw_dir   = year_dir / "raw_geotiffs"
+        tile_dir  = year_dir / "tiles" / str(year)
+        manifest  = year_dir / "download_manifest.json"
 
-        _add_file_handler(output_dir / "download.log")
-        logger.info("Starting US aerial download  year=%d  output=%s", year, output_dir)
+        _add_file_handler(year_dir / "download.log")
+        logger.info("Starting US aerial download  year=%d  output=%s", year, year_dir)
 
         state = self._load_manifest(manifest) if (resume and manifest.exists()) else {}
         completed_grids: set[str] = set(state.get("completed_grids", []))
@@ -357,7 +449,7 @@ class USAerialDownloader:
 
         # ── Phase 2: Optimize GeoTIFFs ─────────────────────────────────────────
         logger.info("Optimizing %d GeoTIFFs …", len(all_tif_paths))
-        opt_dir = output_dir / "optimized_geotiffs"
+        opt_dir = year_dir / "optimized_geotiffs"
         opt_dir.mkdir(parents=True, exist_ok=True)
         optimized_paths = []
         for tif in all_tif_paths:
@@ -378,10 +470,11 @@ class USAerialDownloader:
 
         # ── Phase 4: Archive ───────────────────────────────────────────────────
         logger.info("Compressing tiles …")
-        archive = self.compress_tiles(tile_dir, year, output_dir)
+        archive = self.compress_tiles(tile_dir, year, year_dir)
 
         # ── Phase 5: Metadata ──────────────────────────────────────────────────
-        self._write_metadata(tile_dir, year, len(optimized_paths))
+        if archive is not None:
+            self._write_metadata(tile_dir, year, len(optimized_paths))
 
         # ── Cleanup temp directories ───────────────────────────────────────────
         logger.info("Cleaning up temporary GeoTIFF directories …")
@@ -389,7 +482,10 @@ class USAerialDownloader:
             if d.exists():
                 shutil.rmtree(d)
 
-        logger.info("All done. Archive: %s", archive)
+        if archive is not None:
+            logger.info("All done. Archive: %s", archive)
+        else:
+            logger.error("All done. No archive was created — no tiles were generated.")
         self._client.logout()
 
     # ── Grid creation ──────────────────────────────────────────────────────────
@@ -424,36 +520,71 @@ class USAerialDownloader:
         year: int,
         grid_dir: Path,
     ) -> list[Path]:
-        """Search USGS for scenes in bbox/year and download them."""
+        """Search USGS for scenes in bbox/year and download them.
+
+        Tries every candidate dataset, accumulates results, and deduplicates by
+        entity ID so the same scene is never downloaded twice.  Raises
+        ``RuntimeError`` when no download URLs are returned across all datasets.
+        """
         grid_dir.mkdir(parents=True, exist_ok=True)
-        all_paths: list[Path] = []
+        all_paths:    list[Path] = []
+        all_downloads: list[dict] = []
+        seen_entity_ids: set[str] = set()
 
         for dataset in CANDIDATE_DATASETS:
             scenes = self._client.search_scenes(dataset, bbox, year)
             if not scenes:
                 continue
-            logger.info("  Dataset %-20s → %d scenes found", dataset, len(scenes))
 
-            entity_ids = [s.get("entityId", s.get("entity_id", "")) for s in scenes]
-            entity_ids = [e for e in entity_ids if e]
+            # Deduplicate entity IDs: skip any already seen in a prior dataset
+            entity_ids = [
+                eid
+                for eid in (
+                    s.get("entityId", s.get("entity_id", "")) for s in scenes
+                )
+                if eid and eid not in seen_entity_ids
+            ]
             if not entity_ids:
                 continue
+            seen_entity_ids.update(entity_ids)
+            logger.info("  Dataset %-20s → %d scenes found", dataset, len(entity_ids))
 
             downloads = self._client.request_download_urls(dataset, entity_ids)
-            for dl in downloads:
-                url = dl.get("url")
-                if not url:
-                    continue
-                fname = url.rsplit("/", 1)[-1] or f"{dl.get('entityId', 'scene')}.tif"
-                dest  = grid_dir / fname
-                if dest.exists():
-                    all_paths.append(dest)
-                    continue
-                logger.info("    Downloading %s", fname)
-                if self._client.download_file(url, dest):
-                    all_paths.append(dest)
-                time.sleep(0.25)  # polite throttle
-            break  # use first dataset that has coverage
+            if not downloads:
+                logger.warning(
+                    "  Dataset %s: 0/%d scenes returned download URLs",
+                    dataset, len(entity_ids),
+                )
+                continue
+
+            logger.info(
+                "  Dataset %-20s → %d/%d scenes have download URLs",
+                dataset, len(downloads), len(entity_ids),
+            )
+            all_downloads.extend(downloads)
+
+        if not all_downloads:
+            raise RuntimeError(
+                f"No download URLs were returned by any dataset for this grid "
+                f"(tried: {', '.join(CANDIDATE_DATASETS)})"
+            )
+
+        # Deduplicate downloads by URL before fetching
+        seen_urls: set[str] = set()
+        for dl in all_downloads:
+            url = dl.get("url")
+            if not url or url in seen_urls:
+                continue
+            seen_urls.add(url)
+            fname = url.rsplit("/", 1)[-1] or f"{dl.get('entityId', 'scene')}.tif"
+            dest  = grid_dir / fname
+            if dest.exists():
+                all_paths.append(dest)
+                continue
+            logger.info("    Downloading %s", fname)
+            if self._client.download_file(url, dest):
+                all_paths.append(dest)
+            time.sleep(0.25)  # polite throttle
 
         return all_paths
 
@@ -463,25 +594,43 @@ class USAerialDownloader:
         """
         Reduce to 10 m resolution, convert to grayscale, and apply JPEG
         compression inside the GeoTIFF.  Returns True on success.
+
+        ``PHOTOMETRIC=YCBCR`` is only added for RGB (≥ 3-band) inputs; it is
+        invalid for single-band grayscale scans and would cause gdalwarp to fail.
         """
         settings = OPTIMIZATION_SETTINGS
         tr = settings["resolution_meters"]
+        band_count = self._get_band_count(input_path)
+        cmd = [
+            "gdalwarp",
+            "-tr", str(tr), str(tr),
+            "-r",  settings["resampling"],
+            "-co", f"COMPRESS={settings['compression']}",
+            "-co", f"JPEG_QUALITY={settings['jpeg_quality']}",
+            "-co", "TILED=YES",
+        ]
+        if band_count >= 3:
+            cmd += ["-co", "PHOTOMETRIC=YCBCR"]
+        cmd += [str(input_path), str(output_path)]
         try:
-            _run([
-                "gdalwarp",
-                "-tr", str(tr), str(tr),
-                "-r",  settings["resampling"],
-                "-co", f"COMPRESS={settings['compression']}",
-                "-co", f"JPEG_QUALITY={settings['jpeg_quality']}",
-                "-co", "PHOTOMETRIC=YCBCR",
-                "-co", "TILED=YES",
-                str(input_path),
-                str(output_path),
-            ])
+            _run(cmd)
             return True
         except subprocess.CalledProcessError as exc:
             logger.error("gdalwarp failed for %s:\n%s", input_path, exc.stderr)
             return False
+
+    @staticmethod
+    def _get_band_count(path: Path) -> int:
+        """Return the number of raster bands in *path* (0 on error)."""
+        try:
+            result = subprocess.run(
+                ["gdalinfo", "-json", str(path)],
+                check=True, capture_output=True, text=True,
+            )
+            info = json.loads(result.stdout)
+            return len(info.get("bands", []))
+        except Exception:
+            return 0
 
     # ── Tiling ────────────────────────────────────────────────────────────────
 
@@ -516,16 +665,26 @@ class USAerialDownloader:
 
     def compress_tiles(
         self, tile_dir: Path, year: int, output_dir: Path
-    ) -> Path:
+    ) -> Path | None:
         """
         Create a tar.gz archive of the tile directory.
         Splits into 2 GB chunks when the total exceeds that threshold.
+        Returns ``None`` (and logs an error) when *tile_dir* contains no
+        ``*.webp`` files — the pipeline should not create an empty archive.
         """
+        webp_files = list(tile_dir.rglob("*.webp")) if tile_dir.exists() else []
+        if not webp_files:
+            logger.error(
+                "compress_tiles: %s contains no *.webp files — skipping archive creation.",
+                tile_dir,
+            )
+            return None
+
         archive = output_dir / f"us_aerials_{year}.tar.gz"
         level   = OPTIMIZATION_SETTINGS["tar_compression"]
         logger.info("Creating archive %s (gzip level %d) …", archive, level)
 
-        with tarfile.open(archive, f"w:gz", compresslevel=level) as tar:
+        with tarfile.open(archive, "w:gz", compresslevel=level) as tar:
             tar.add(tile_dir, arcname=str(year))
 
         size_gb = archive.stat().st_size / (1 << 30)
@@ -725,7 +884,7 @@ def main() -> None:
     OPTIMIZATION_SETTINGS["resolution_meters"] = args.resolution_meters
     OPTIMIZATION_SETTINGS["workers"]           = args.workers
 
-    output_dir = Path(args.output) / str(args.year)
+    output_dir = Path(args.output)  # year sub-directory is created by download_full_us
 
     downloader = USAerialDownloader(
         args.username, token,
