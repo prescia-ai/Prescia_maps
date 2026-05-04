@@ -73,15 +73,15 @@ GRID_STEP = 10.0  # degrees per grid tile
 M2M_BASE_URL = "https://m2m.cr.usgs.gov/api/api/json/stable"
 
 # Candidate dataset names for historical aerial coverage (API names).
-# AERIAL_COMBIN is an aggregate whose temporal filter behaves unexpectedly for
-# historical years (returns modern frames).  HRP is modern orthoimagery.
-# AERIAL (single-frame historical collection) is preferred; NHAP/NAPP cover
-# the 1970s-1980s national programmes.  All candidates are tried and results
-# merged so coverage is maximised.
+# AERIAL_COMBIN is the primary collection for all historical single-frame
+# aerials (USGS, USDA, and other agencies, all decades).  NHAP and NAPP cover
+# dedicated national programmes from the late 1970s-1990s.  All candidates are
+# tried and results merged so coverage is maximised.  Do not include AERIAL
+# (not a valid M2M datasetName) or HRP (modern orthoimagery only).
 CANDIDATE_DATASETS = [
-    "AERIAL",      # Historical aerial photography single-frame collection
-    "NHAP",        # National High Altitude Photography
-    "NAPP",        # National Aerial Photography Program
+    "AERIAL_COMBIN",   # Aerial Photo Single Frames (primary historical collection, all decades)
+    "NHAP",            # National High Altitude Photography (late 1970s-80s)
+    "NAPP",            # National Aerial Photography Program (1980s-90s)
 ]
 
 OPTIMIZATION_SETTINGS: dict[str, Any] = {
@@ -164,11 +164,17 @@ class USGSClient:
         dataset_name: str,
         bbox: tuple[float, float, float, float],
         year: int,
-        max_results: int = 50,
+        max_results: int = 10_000,
+        page_size: int = 100,
     ) -> list[dict]:
-        """Search for scenes within bbox for the given year."""
+        """Search for scenes within bbox for the given year.
+
+        Paginates through all results using ``startingNumber`` so grids with
+        more than *page_size* scenes are fully retrieved.  At most *max_results*
+        scenes are returned across all pages.
+        """
         west, south, east, north = bbox
-        payload = {
+        base_payload = {
             "datasetName": dataset_name,
             "spatialFilter": {
                 "filterType": "mbr",
@@ -179,15 +185,34 @@ class USGSClient:
                 "startDate": f"{year}-01-01",
                 "endDate":   f"{year}-12-31",
             },
-            "maxResults": max_results,
-            "startingNumber": 1,
         }
+        all_scenes: list[dict] = []
+        starting = 1
+        pages = 0
         try:
-            result = self._post("scene-search", payload)
-            return result.get("results", [])
+            while len(all_scenes) < max_results:
+                payload = dict(base_payload)
+                payload["maxResults"]     = min(page_size, max_results - len(all_scenes))
+                payload["startingNumber"] = starting
+                result = self._post("scene-search", payload)
+                page_results = result.get("results", []) if result else []
+                if not page_results:
+                    break
+                all_scenes.extend(page_results)
+                pages += 1
+                total_hits = result.get("totalHits", len(all_scenes))
+                starting += len(page_results)
+                if starting > total_hits:
+                    break
         except requests.HTTPError as exc:
             logger.warning("scene-search failed for %s: %s", dataset_name, exc)
             return []
+        if pages > 1:
+            logger.debug(
+                "scene-search %s: total scenes found across %d pages: %d",
+                dataset_name, pages, len(all_scenes),
+            )
+        return all_scenes
 
     # ── Download ───────────────────────────────────────────────────────────────
 
@@ -219,23 +244,66 @@ class USGSClient:
         2. ``download-request``  → submit ``{downloads:[{entityId,productId}], label}``
         3. ``download-retrieve`` → poll for items that are still "preparing"
 
+        Exactly one product is selected per ``entityId`` to avoid downloading
+        the same scene multiple times.  Preference order (first match wins):
+
+        1. Product whose ``productCode`` or ``productName`` matches
+           ``(?i)standard|geotiff|tiff|full.?res|high.?res`` **and** is
+           ``available`` or ``bulkAvailable``.
+        2. The product with the largest ``filesize``/``productSize`` that is
+           ``available`` or ``bulkAvailable``.
+        3. The first product that is ``available`` or ``bulkAvailable``.
+
         Returns combined list of download dicts (each has a ``url`` key).
         """
+        import re
+        _PREFERRED = re.compile(r"(?i)standard|geotiff|tiff|full.?res|high.?res")
+
         # Step 1: get real {entityId, productId} pairs from the catalogue
         options = self.get_download_options(dataset_name, scene_ids)
-        downloads_to_request: list[dict] = []
+
+        # Group options by entityId
+        by_entity: dict[str, list[dict]] = {}
         for opt in options:
-            entity_id  = opt.get("entityId")
-            product_id = opt.get("id")
-            if not entity_id or not product_id:
+            eid = opt.get("entityId")
+            if eid:
+                by_entity.setdefault(eid, []).append(opt)
+
+        downloads_to_request: list[dict] = []
+        for eid, products in by_entity.items():
+            available = [
+                p for p in products
+                if p.get("available") or p.get("bulkAvailable")
+            ]
+            if not available:
                 continue
-            if opt.get("available") or opt.get("bulkAvailable"):
-                downloads_to_request.append(
-                    {"entityId": entity_id, "productId": product_id}
-                )
+
+            # Preference 1: name matches preferred pattern
+            chosen = next(
+                (
+                    p for p in available
+                    if _PREFERRED.search(str(p.get("productCode", "")))
+                    or _PREFERRED.search(str(p.get("productName", "")))
+                ),
+                None,
+            )
+            if chosen is None:
+                # Preference 2: largest filesize / productSize
+                def _size(p: dict) -> int:
+                    return int(p.get("filesize") or p.get("productSize") or 0)
+                largest = max(available, key=_size, default=None)
+                if largest is not None and _size(largest) > 0:
+                    chosen = largest
+                else:
+                    # Preference 3: first available product
+                    chosen = available[0]
+
+            product_id = chosen.get("id")
+            if product_id:
+                downloads_to_request.append({"entityId": eid, "productId": product_id})
 
         logger.debug(
-            "download-options: %d/%d scenes have downloadable products",
+            "download-options: %d/%d scenes have a downloadable product",
             len(downloads_to_request), len(scene_ids),
         )
         if not downloads_to_request:
@@ -250,19 +318,19 @@ class USGSClient:
             logger.warning("download-request failed: %s", exc)
             return []
 
-        available: list[dict] = result.get("availableDownloads", []) if result else []
-        preparing: list[dict] = result.get("preparingDownloads", []) if result else []
+        available_dl: list[dict] = result.get("availableDownloads", []) if result else []
+        preparing: list[dict]    = result.get("preparingDownloads", []) if result else []
         logger.debug(
             "download-request: %d available, %d preparing",
-            len(available), len(preparing),
+            len(available_dl), len(preparing),
         )
 
         # Step 3: poll for items that are still being prepared
         if preparing:
             retrieved = self._poll_download_retrieve(label)
-            available.extend(retrieved)
+            available_dl.extend(retrieved)
 
-        return available
+        return available_dl
 
     def _poll_download_retrieve(
         self, label: str, max_wait: int = 300
@@ -376,12 +444,28 @@ class USAerialDownloader:
         workers: int = 8,
         resume: bool = False,
     ) -> None:
-        """End-to-end pipeline: download → optimize → tile → archive."""
-        # All year-specific output lives under output_dir/<year>/
-        year_dir  = output_dir / str(year)
+        """End-to-end pipeline: download → optimize → tile → archive.
+
+        ``output_dir`` should be the root output directory, e.g. ``./tiles``.
+        A ``<year>/`` sub-directory is created automatically::
+
+            python scripts/download_us_aerials.py --year 1955 --output ./tiles
+
+        Passing ``--output ./tiles/1955`` also works — the script detects that
+        the directory already ends in the year and does **not** append it again.
+        """
+        # Make year_dir idempotent: don't double-append if output_dir already ends
+        # in the year (e.g. the user passed --output ./tiles/1955).
+        if output_dir.name == str(year):
+            logger.warning(
+                "Output directory already ends in year; not appending."
+            )
+            year_dir = output_dir
+        else:
+            year_dir = output_dir / str(year)
         year_dir.mkdir(parents=True, exist_ok=True)
         raw_dir   = year_dir / "raw_geotiffs"
-        tile_dir  = year_dir / "tiles" / str(year)
+        tile_dir  = year_dir / "tiles"
         manifest  = year_dir / "download_manifest.json"
 
         _add_file_handler(year_dir / "download.log")
@@ -550,6 +634,7 @@ class USAerialDownloader:
             logger.info("  Dataset %-20s → %d scenes found", dataset, len(entity_ids))
 
             downloads = self._client.request_download_urls(dataset, entity_ids)
+            unique_scenes = len({dl.get("entityId") for dl in downloads if dl.get("entityId")})
             if not downloads:
                 logger.warning(
                     "  Dataset %s: 0/%d scenes returned download URLs",
@@ -559,8 +644,14 @@ class USAerialDownloader:
 
             logger.info(
                 "  Dataset %-20s → %d/%d scenes have download URLs",
-                dataset, len(downloads), len(entity_ids),
+                dataset, unique_scenes, len(entity_ids),
             )
+            if unique_scenes < len(entity_ids) * 0.5:
+                logger.warning(
+                    "  Dataset %s: fewer than half of scenes have download URLs "
+                    "(%d/%d) — some scenes may be unavailable.",
+                    dataset, unique_scenes, len(entity_ids),
+                )
             all_downloads.extend(downloads)
 
         if not all_downloads:
