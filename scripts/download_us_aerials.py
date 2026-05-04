@@ -270,6 +270,10 @@ class USGSClient:
                 by_entity.setdefault(eid, []).append(opt)
 
         downloads_to_request: list[dict] = []
+
+        def _size(p: dict) -> int:
+            return int(p.get("filesize") or p.get("productSize") or 0)
+
         for eid, products in by_entity.items():
             available = [
                 p for p in products
@@ -289,8 +293,6 @@ class USGSClient:
             )
             if chosen is None:
                 # Preference 2: largest filesize / productSize
-                def _size(p: dict) -> int:
-                    return int(p.get("filesize") or p.get("productSize") or 0)
                 largest = max(available, key=_size, default=None)
                 if largest is not None and _size(largest) > 0:
                     chosen = largest
@@ -458,7 +460,9 @@ class USAerialDownloader:
         # in the year (e.g. the user passed --output ./tiles/1955).
         if output_dir.name == str(year):
             logger.warning(
-                "Output directory already ends in year; not appending."
+                "Output directory '%s' already ends in %d; using it directly "
+                "without creating a nested year subdirectory.",
+                output_dir, year,
             )
             year_dir = output_dir
         else:
@@ -634,7 +638,6 @@ class USAerialDownloader:
             logger.info("  Dataset %-20s → %d scenes found", dataset, len(entity_ids))
 
             downloads = self._client.request_download_urls(dataset, entity_ids)
-            unique_scenes = len({dl.get("entityId") for dl in downloads if dl.get("entityId")})
             if not downloads:
                 logger.warning(
                     "  Dataset %s: 0/%d scenes returned download URLs",
@@ -642,6 +645,7 @@ class USAerialDownloader:
                 )
                 continue
 
+            unique_scenes = len({dl.get("entityId") for dl in downloads if dl.get("entityId")})
             logger.info(
                 "  Dataset %-20s → %d/%d scenes have download URLs",
                 dataset, unique_scenes, len(entity_ids),
