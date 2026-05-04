@@ -12,6 +12,7 @@ import api from '../api/client';
 import { fetchMyPins, fetchUserPins, followUser, unfollowUser, fetchFollowers, fetchFollowing, fetchUserPosts, fetchCollection, updateCollectionPhoto, deleteCollectionPhoto, fetchUserBadges, checkBadges } from '../api/client';
 import type { UserPin, PublicProfile, Post, FollowInfo, CollectionPhoto, Badge, BadgeCategory } from '../types';
 import BadgeDisplay from '../components/BadgeDisplay';
+import { isHiddenBadge } from '../constants/badges';
 
 type ActiveTab = 'activity' | 'hunts' | 'collection' | 'followers' | 'badges';
 type FollowSubTab = 'followers' | 'following';
@@ -152,7 +153,7 @@ export default function ProfilePage() {
     if (!username || activeTab !== 'badges') return;
     setBadgesLoading(true);
     fetchUserBadges(username)
-      .then((badges) => setUserBadges(badges))
+      .then((badges) => setUserBadges(badges.filter((b) => !isHiddenBadge(b.badge_id))))
       .catch(() => setUserBadges([]))
       .finally(() => setBadgesLoading(false));
   }, [username, activeTab]);

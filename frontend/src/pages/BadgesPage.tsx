@@ -3,6 +3,7 @@ import { fetchMyBadgeProgress, checkBadges } from '../api/client';
 import type { Badge, BadgeProgress, BadgeCategory } from '../types';
 import BadgeDisplay from '../components/BadgeDisplay';
 import { useAuth } from '../contexts/AuthContext';
+import { isHiddenBadge } from '../constants/badges';
 
 const CATEGORY_LABELS: Record<BadgeCategory, string> = {
   hunt_milestone: 'Hunt Milestones',
@@ -32,8 +33,9 @@ export default function BadgesPage() {
     // First check for newly earned badges, then fetch progress
     checkBadges()
       .then((result) => {
-        if (result.newly_earned.length > 0) {
-          setNewlyEarned(result.newly_earned);
+        const visible = result.newly_earned.filter((b) => !isHiddenBadge(b.badge_id));
+        if (visible.length > 0) {
+          setNewlyEarned(visible);
         }
       })
       .catch(() => {
@@ -41,7 +43,7 @@ export default function BadgesPage() {
       })
       .finally(() => {
         fetchMyBadgeProgress()
-          .then(setProgress)
+          .then((data) => setProgress(data.filter((p) => !isHiddenBadge(p.badge.badge_id))))
           .catch(() => setError('Failed to load badge progress.'))
           .finally(() => setLoading(false));
       });
