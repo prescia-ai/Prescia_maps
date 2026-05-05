@@ -67,6 +67,14 @@ except ImportError:
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 
+# Resolved at startup by _preflight_check_tools(); falls back to "gdal2tiles.py"
+# so the module can be imported in tests without GDAL installed.
+GDAL2TILES_CMD: str = "gdal2tiles.py"
+
+# M2M session refresh thresholds
+SESSION_TTL_SECONDS = 90 * 60      # 5400 s — proactive re-login in _post
+GRID_RELOGIN_SECONDS = 60 * 60     # 3600 s — proactive re-login between grids
+
 CONUS_BBOX = (-125.0, 24.0, -66.0, 49.0)  # (west, south, east, north)
 GRID_STEP = 10.0  # degrees per grid tile
 
@@ -139,6 +147,9 @@ class USGSClient:
         self._api_key: str | None = None
         self._api_timeout = api_timeout
         self._api_retries = api_retries
+        self._username = username
+        self._token = token
+        self.login_time: float = 0.0
         self._login(username, token)
 
     # ── Auth ───────────────────────────────────────────────────────────────────
@@ -148,7 +159,14 @@ class USGSClient:
         resp = self._post("login-token", payload)
         self._api_key = resp
         self._session.headers.update({"X-Auth-Token": self._api_key})
+        self.login_time = time.monotonic()
         logger.info("Logged in to USGS M2M API.")
+
+    def relogin(self) -> None:
+        """Refresh the M2M auth token by re-running login-token."""
+        logger.warning("USGS auth appears expired — re-logging in …")
+        self._session.headers.pop("X-Auth-Token", None)
+        self._login(self._username, self._token)
 
     def logout(self) -> None:
         try:
@@ -385,8 +403,17 @@ class USGSClient:
         url = f"{M2M_BASE_URL}/{endpoint}"
         timeout = (30, self._api_timeout)
         last_exc: Exception = RuntimeError("Retry loop failed without capturing exception")
-        # attempt=0 is the initial try; 1..api_retries are retries
-        for attempt in range(self._api_retries + 1):
+
+        # Proactively re-login if the session is older than 90 minutes, but not
+        # while executing login-token itself (that would recurse infinitely).
+        if endpoint != "login-token" and time.monotonic() - self.login_time > SESSION_TTL_SECONDS:
+            self.relogin()
+
+        auth_retried = False
+        attempt = 0
+        # attempt=0 is the initial try; 1..api_retries are regular retries.
+        # Auth retries (401/403) do NOT increment attempt so they don't consume a slot.
+        while attempt <= self._api_retries:
             try:
                 resp = self._session.post(url, json=payload, timeout=timeout)
                 resp.raise_for_status()
@@ -405,9 +432,15 @@ class USGSClient:
                         endpoint, wait, attempt + 1, self._api_retries,
                     )
                     time.sleep(wait)
+                attempt += 1
             except requests.exceptions.HTTPError as exc:
                 last_exc = exc
                 status = exc.response.status_code if exc.response is not None else 0
+                if status in (401, 403) and not auth_retried:
+                    auth_retried = True
+                    self.relogin()
+                    # Do NOT increment attempt — retry the same slot immediately
+                    continue
                 # Only retry transient server/rate-limit errors
                 if status == 429 or status >= 500:
                     if attempt < self._api_retries:
@@ -417,8 +450,9 @@ class USGSClient:
                             endpoint, status, wait, attempt + 1, self._api_retries,
                         )
                         time.sleep(wait)
+                    attempt += 1
                 else:
-                    # 4xx (except 429) — don't retry, fail fast
+                    # 4xx (except 401/403 first-time and 429) — don't retry, fail fast
                     raise
         raise last_exc
 
@@ -503,6 +537,11 @@ class USAerialDownloader:
 
             logger.info("[%d/%d] Downloading grid %s", i, total_grids, grid_key)
             grid_dir = raw_dir / f"grid_{i}"
+
+            # Proactively re-login between grids if the session is older than 60 minutes.
+            if time.monotonic() - self._client.login_time > GRID_RELOGIN_SECONDS:
+                self._client.relogin()
+
             try:
                 new_paths = self._download_grid(bbox, year, grid_dir)
             except Exception as exc:
@@ -874,7 +913,7 @@ def _process_single_geotiff_worker(args: tuple[Path, Path]) -> None:
         # ── Raster → PNG tiles ─────────────────────────────────────────────────
         subprocess.run(
             [
-                "gdal2tiles.py",
+                GDAL2TILES_CMD,
                 "--zoom", f"{zoom_min}-{zoom_max}",
                 "--resampling", settings["resampling"],
                 "--webviewer", "none",
@@ -908,6 +947,62 @@ def _process_single_geotiff_worker(args: tuple[Path, Path]) -> None:
             shutil.rmtree(tmp_png_dir)
 
 
+# ── Preflight tool check ───────────────────────────────────────────────────────
+
+_INSTALL_INSTRUCTIONS = """\
+Windows install:
+  1. Download OSGeo4W: https://download.osgeo.org/osgeo4w/osgeo4w-setup.exe
+     Express Install → check "GDAL"
+  2. Download libwebp: https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.4.0-windows-x64.zip
+     Extract and copy bin\\cwebp.exe to C:\\OSGeo4W\\bin\\
+  3. Add C:\\OSGeo4W\\bin to PATH
+
+Linux install:
+  sudo apt-get install gdal-bin python3-gdal webp
+
+Verify:
+  gdalwarp --version
+  gdal2tiles --help
+  cwebp -version"""
+
+
+def _preflight_check_tools() -> None:
+    """Verify that all required external tools are on PATH.
+
+    Resolves ``gdal2tiles`` / ``gdal2tiles.py`` and sets the module-level
+    ``GDAL2TILES_CMD`` constant so the worker can use whichever form is
+    available (OSGeo4W on Windows ships ``gdal2tiles.bat``; Linux ships
+    ``gdal2tiles.py``).
+
+    Exits with code 2 and a helpful install message if any tool is missing.
+    """
+    global GDAL2TILES_CMD
+
+    missing: list[tuple[str, str]] = []
+
+    if not shutil.which("gdalwarp"):
+        missing.append(("gdalwarp", "install GDAL"))
+
+    # Accept either name: gdal2tiles (OSGeo4W / newer distros) or gdal2tiles.py
+    gdal2tiles_path = shutil.which("gdal2tiles") or shutil.which("gdal2tiles.py")
+    if gdal2tiles_path is None:
+        missing.append(("gdal2tiles / gdal2tiles.py", "install GDAL"))
+    else:
+        GDAL2TILES_CMD = gdal2tiles_path
+
+    if not shutil.which("cwebp"):
+        missing.append(("cwebp", "install libwebp"))
+
+    if missing:
+        lines = ["ERROR: Required external tools missing from PATH:"]
+        for tool, hint in missing:
+            lines.append(f"  - {tool:<30} ({hint})")
+        lines.append("")
+        lines.append(_INSTALL_INSTRUCTIONS)
+        print("\n".join(lines), file=sys.stderr)
+        sys.exit(2)
+
+
 # ── CLI ────────────────────────────────────────────────────────────────────────
 
 def _parse_args() -> argparse.Namespace:
@@ -933,6 +1028,9 @@ def _parse_args() -> argparse.Namespace:
                         help="Parallel worker processes for tile conversion.")
     parser.add_argument("--resume",   action="store_true",
                         help="Resume from a previous interrupted run.")
+    parser.add_argument("--skip-preflight", action="store_true",
+                        dest="skip_preflight",
+                        help="Skip preflight check for external tools (useful in CI/testing).")
     parser.add_argument("--zoom-min", type=int,
                         default=OPTIMIZATION_SETTINGS["zoom_min"],
                         dest="zoom_min",
@@ -960,6 +1058,9 @@ def _parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = _parse_args()
+
+    if not args.skip_preflight:
+        _preflight_check_tools()
 
     # Resolve token: CLI flag → env var → error
     token = args.token or os.environ.get("USGS_M2M_TOKEN")
