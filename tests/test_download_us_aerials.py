@@ -12,6 +12,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
+import requests
 
 # Allow importing the script directly without installing it as a package
 sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
@@ -28,6 +29,9 @@ def _make_client() -> m.USGSClient:
         client._api_key = "fake-key"
         client._api_timeout = 30
         client._api_retries = 0
+        client._username = "testuser"
+        client._token = "testtoken"
+        client.login_time = time.monotonic()
     return client
 
 
@@ -679,3 +683,222 @@ class TestSearchScenesPagination:
             )
 
         assert len(scenes) == 150
+
+
+# ── _preflight_check_tools ────────────────────────────────────────────────────
+
+class TestPreflightCheckTools:
+    def test_exits_with_code_2_when_gdalwarp_missing(self, capsys):
+        """_preflight_check_tools exits with code 2 when gdalwarp is absent."""
+        def _which(name):
+            if name == "gdalwarp":
+                return None
+            # Everything else is present
+            return f"/usr/bin/{name}"
+
+        with patch("shutil.which", side_effect=_which):
+            with pytest.raises(SystemExit) as exc_info:
+                m._preflight_check_tools()
+
+        assert exc_info.value.code == 2
+        captured = capsys.readouterr()
+        assert "gdalwarp" in captured.err
+        assert "install GDAL" in captured.err
+
+    def test_exits_with_code_2_when_cwebp_missing(self, capsys):
+        """_preflight_check_tools exits with code 2 when cwebp is absent."""
+        def _which(name):
+            if name == "cwebp":
+                return None
+            return f"/usr/bin/{name}"
+
+        with patch("shutil.which", side_effect=_which):
+            with pytest.raises(SystemExit) as exc_info:
+                m._preflight_check_tools()
+
+        assert exc_info.value.code == 2
+        captured = capsys.readouterr()
+        assert "cwebp" in captured.err
+
+    def test_exits_with_code_2_when_gdal2tiles_missing(self, capsys):
+        """_preflight_check_tools exits with code 2 when neither gdal2tiles variant is found."""
+        def _which(name):
+            if name in ("gdal2tiles", "gdal2tiles.py"):
+                return None
+            return f"/usr/bin/{name}"
+
+        with patch("shutil.which", side_effect=_which):
+            with pytest.raises(SystemExit) as exc_info:
+                m._preflight_check_tools()
+
+        assert exc_info.value.code == 2
+
+    def test_all_tools_present_does_not_exit(self):
+        """_preflight_check_tools does not exit when all tools are found."""
+        with patch("shutil.which", return_value="/usr/bin/tool"):
+            # Should complete without raising SystemExit
+            m._preflight_check_tools()
+
+    def test_sets_gdal2tiles_cmd_to_resolved_path(self):
+        """GDAL2TILES_CMD is updated to the resolved path of gdal2tiles."""
+        def _which(name):
+            if name == "gdal2tiles":
+                return "/usr/bin/gdal2tiles"
+            return f"/usr/bin/{name}"
+
+        with patch("shutil.which", side_effect=_which):
+            m._preflight_check_tools()
+
+        assert m.GDAL2TILES_CMD == "/usr/bin/gdal2tiles"
+
+    def test_error_message_contains_install_instructions(self, capsys):
+        """The error message includes OS-specific install instructions."""
+        with patch("shutil.which", return_value=None):
+            with pytest.raises(SystemExit):
+                m._preflight_check_tools()
+
+        captured = capsys.readouterr()
+        assert "apt-get" in captured.err or "OSGeo4W" in captured.err
+
+
+# ── USGSClient._post — 401/403 auth retry ────────────────────────────────────
+
+class TestPostAuthRetry:
+    def _make_http_error(self, status_code: int) -> requests.exceptions.HTTPError:
+        """Return a mock HTTPError for the given status code."""
+        resp = MagicMock()
+        resp.status_code = status_code
+        exc = requests.exceptions.HTTPError(response=resp)
+        return exc
+
+    def test_retries_once_on_403_then_succeeds(self):
+        """_post calls relogin() once on 403 and retries; succeeds on second attempt."""
+        client = _make_client()
+        client._api_retries = 0  # no transient retries; only auth retry
+
+        call_count = [0]
+
+        def _post_side(url, json, timeout):
+            call_count[0] += 1
+            resp = MagicMock()
+            if call_count[0] == 1:
+                resp.status_code = 403
+                resp.raise_for_status.side_effect = self._make_http_error(403)
+            else:
+                resp.status_code = 200
+                resp.raise_for_status.return_value = None
+                resp.json.return_value = {"data": "ok", "errorCode": None}
+            return resp
+
+        client._session.post.side_effect = _post_side
+        relogin_calls = [0]
+
+        def _relogin():
+            relogin_calls[0] += 1
+            client.login_time = time.monotonic()
+
+        with patch.object(client, "relogin", side_effect=_relogin):
+            result = client._post("scene-search", {})
+
+        assert result == "ok"
+        assert relogin_calls[0] == 1, "relogin() should be called exactly once"
+
+    def test_retries_once_on_401_then_succeeds(self):
+        """_post calls relogin() once on 401 and retries; succeeds on second attempt."""
+        client = _make_client()
+        client._api_retries = 0
+
+        call_count = [0]
+
+        def _post_side(url, json, timeout):
+            call_count[0] += 1
+            resp = MagicMock()
+            if call_count[0] == 1:
+                resp.status_code = 401
+                resp.raise_for_status.side_effect = self._make_http_error(401)
+            else:
+                resp.status_code = 200
+                resp.raise_for_status.return_value = None
+                resp.json.return_value = {"data": "ok", "errorCode": None}
+            return resp
+
+        client._session.post.side_effect = _post_side
+
+        with patch.object(client, "relogin"):
+            result = client._post("scene-search", {})
+
+        assert result == "ok"
+
+    def test_does_not_retry_403_twice(self):
+        """_post raises after a single auth retry — does not loop on repeated 403."""
+        client = _make_client()
+        client._api_retries = 0
+
+        def _post_side(url, json, timeout):
+            resp = MagicMock()
+            resp.status_code = 403
+            resp.raise_for_status.side_effect = self._make_http_error(403)
+            return resp
+
+        client._session.post.side_effect = _post_side
+        relogin_calls = [0]
+
+        def _relogin():
+            relogin_calls[0] += 1
+            client.login_time = time.monotonic()
+
+        with patch.object(client, "relogin", side_effect=_relogin):
+            with pytest.raises(requests.exceptions.HTTPError):
+                client._post("scene-search", {})
+
+        assert relogin_calls[0] == 1, (
+            "relogin() should be called exactly once, then the error is raised"
+        )
+
+    def test_proactive_relogin_when_session_expired(self):
+        """_post calls relogin() proactively when login_time is older than 90 min."""
+        client = _make_client()
+        client._api_retries = 0
+        # Simulate session that is 91 minutes old
+        client.login_time = time.monotonic() - 5460
+
+        def _post_side(url, json, timeout):
+            resp = MagicMock()
+            resp.status_code = 200
+            resp.raise_for_status.return_value = None
+            resp.json.return_value = {"data": "ok", "errorCode": None}
+            return resp
+
+        client._session.post.side_effect = _post_side
+        relogin_calls = [0]
+
+        def _relogin():
+            relogin_calls[0] += 1
+            client.login_time = time.monotonic()
+
+        with patch.object(client, "relogin", side_effect=_relogin):
+            result = client._post("scene-search", {})
+
+        assert result == "ok"
+        assert relogin_calls[0] == 1, "relogin() should be called proactively"
+
+    def test_no_proactive_relogin_for_fresh_session(self):
+        """_post does not proactively call relogin() when the session is fresh."""
+        client = _make_client()
+        client._api_retries = 0
+        client.login_time = time.monotonic()  # just logged in
+
+        def _post_side(url, json, timeout):
+            resp = MagicMock()
+            resp.status_code = 200
+            resp.raise_for_status.return_value = None
+            resp.json.return_value = {"data": "ok", "errorCode": None}
+            return resp
+
+        client._session.post.side_effect = _post_side
+
+        with patch.object(client, "relogin") as mock_relogin:
+            client._post("scene-search", {})
+
+        mock_relogin.assert_not_called()
+
