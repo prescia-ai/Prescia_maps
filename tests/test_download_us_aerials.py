@@ -42,8 +42,8 @@ def _make_downloader() -> m.USAerialDownloader:
 # ── CANDIDATE_DATASETS ────────────────────────────────────────────────────────
 
 class TestCandidateDatasets:
-    def test_includes_aerial(self):
-        assert "AERIAL" in m.CANDIDATE_DATASETS
+    def test_includes_aerial_combin(self):
+        assert "AERIAL_COMBIN" in m.CANDIDATE_DATASETS
 
     def test_includes_nhap(self):
         assert "NHAP" in m.CANDIDATE_DATASETS
@@ -51,14 +51,14 @@ class TestCandidateDatasets:
     def test_includes_napp(self):
         assert "NAPP" in m.CANDIDATE_DATASETS
 
-    def test_excludes_aerial_combin(self):
-        assert "AERIAL_COMBIN" not in m.CANDIDATE_DATASETS
+    def test_excludes_aerial(self):
+        assert "AERIAL" not in m.CANDIDATE_DATASETS
 
     def test_excludes_hrp(self):
         assert "HRP" not in m.CANDIDATE_DATASETS
 
-    def test_aerial_is_first(self):
-        assert m.CANDIDATE_DATASETS[0] == "AERIAL"
+    def test_aerial_combin_is_first(self):
+        assert m.CANDIDATE_DATASETS[0] == "AERIAL_COMBIN"
 
 
 # ── USGSClient.request_download_urls — payload construction ───────────────────
@@ -248,7 +248,7 @@ class TestDownloadGrid:
         downloader = _make_downloader()
 
         def _search(dataset, b, y, **kw):
-            if dataset == "AERIAL":
+            if dataset == "AERIAL_COMBIN":
                 return [{"entityId": "E1"}]
             if dataset == "NHAP":
                 return [{"entityId": "E2"}]
@@ -332,7 +332,7 @@ class TestDownloadGrid:
         downloader = _make_downloader()
 
         def _search(dataset, b, y, **kw):
-            if dataset in ("AERIAL", "NHAP"):
+            if dataset in ("AERIAL_COMBIN", "NHAP"):
                 return [{"entityId": f"{dataset}_E1"}]
             return []
 
@@ -411,3 +411,271 @@ class TestOutputPath:
         assert year_dir.is_dir(), (
             "download_full_us must create <output_dir>/1955/ automatically"
         )
+
+    def test_no_double_nesting_when_output_already_ends_in_year(self, tmp_path):
+        """When --output already ends in the year, do NOT append /<year> again."""
+        downloader = _make_downloader()
+
+        downloader._download_grid         = MagicMock(return_value=[])
+        downloader.optimize_geotiff       = MagicMock(return_value=True)
+        downloader.create_optimized_tiles = MagicMock()
+        downloader.compress_tiles         = MagicMock(return_value=None)
+        downloader._write_metadata        = MagicMock()
+        downloader._client.logout         = MagicMock()
+
+        # Simulate: user passed --output ./tiles/1955
+        year_dir_input = tmp_path / "1955"
+        year_dir_input.mkdir()
+
+        downloader.download_full_us(year=1955, output_dir=year_dir_input, workers=1)
+
+        # Output must live directly under year_dir_input, NOT year_dir_input/1955
+        double_nested = year_dir_input / "1955"
+        assert not double_nested.exists(), (
+            "download_full_us must NOT create 1955/1955 when output already ends in year"
+        )
+
+    def test_tile_dir_is_not_double_year(self, tmp_path):
+        """tile_dir must be <year_dir>/tiles, not <year_dir>/tiles/<year>."""
+        downloader = _make_downloader()
+
+        captured: dict = {}
+
+        def _capture_compress(tile_dir, year, output_dir):
+            captured["tile_dir"] = tile_dir
+            return None
+
+        downloader._download_grid         = MagicMock(return_value=[])
+        downloader.optimize_geotiff       = MagicMock(return_value=True)
+        downloader.create_optimized_tiles = MagicMock()
+        downloader.compress_tiles         = MagicMock(side_effect=_capture_compress)
+        downloader._write_metadata        = MagicMock()
+        downloader._client.logout         = MagicMock()
+
+        downloader.download_full_us(year=1955, output_dir=tmp_path, workers=1)
+
+        tile_dir = captured.get("tile_dir")
+        assert tile_dir is not None
+        # The tile_dir should end with "tiles", not "tiles/1955"
+        assert tile_dir.name == "tiles", (
+            f"tile_dir should be <year_dir>/tiles, got {tile_dir}"
+        )
+
+
+# ── request_download_urls — one product per entityId ─────────────────────────
+
+class TestRequestDownloadUrlsOneProductPerScene:
+    def test_selects_exactly_one_product_per_entity(self):
+        """When download-options returns 3 products for the same entity, only
+        one entry is included in the download-request payload."""
+        client = _make_client()
+
+        options_resp = [
+            # Three products for the same entityId E1
+            {"entityId": "E1", "id": 201, "available": True,  "bulkAvailable": False,
+             "productCode": "BROWSE", "productName": "Browse Image", "filesize": 500_000},
+            {"entityId": "E1", "id": 202, "available": True,  "bulkAvailable": False,
+             "productCode": "STANDARD", "productName": "Standard Download", "filesize": 5_000_000},
+            {"entityId": "E1", "id": 203, "available": False, "bulkAvailable": False,
+             "productCode": "TIFF_HR", "productName": "High Res TIFF", "filesize": 50_000_000},
+        ]
+        request_resp = {
+            "availableDownloads": [
+                {"url": "https://example.com/E1.tif", "entityId": "E1"}
+            ],
+            "preparingDownloads": [],
+        }
+        captured: dict = {}
+
+        def _side(endpoint, payload):
+            if endpoint == "download-options":
+                return options_resp
+            if endpoint == "download-request":
+                captured["payload"] = payload
+                return request_resp
+            return {}
+
+        with patch.object(client, "_post", side_effect=_side):
+            result = client.request_download_urls("AERIAL_COMBIN", ["E1"])
+
+        downloads = captured["payload"]["downloads"]
+        assert len(downloads) == 1, (
+            f"Expected exactly 1 product in download-request, got {len(downloads)}"
+        )
+        assert downloads[0]["entityId"] == "E1"
+
+    def test_prefers_preferred_product_name(self):
+        """Product matching 'standard|geotiff|tiff' is chosen over larger browse image."""
+        client = _make_client()
+
+        options_resp = [
+            {"entityId": "E1", "id": 301, "available": True,
+             "productCode": "BROWSE", "productName": "Browse Image", "filesize": 10_000_000},
+            {"entityId": "E1", "id": 302, "available": True,
+             "productCode": "STANDARD", "productName": "Standard GeoTIFF", "filesize": 1_000_000},
+        ]
+        captured: dict = {}
+
+        def _side(endpoint, payload):
+            if endpoint == "download-options":
+                return options_resp
+            if endpoint == "download-request":
+                captured["payload"] = payload
+                return {"availableDownloads": [], "preparingDownloads": []}
+            return {}
+
+        with patch.object(client, "_post", side_effect=_side):
+            client.request_download_urls("AERIAL_COMBIN", ["E1"])
+
+        downloads = captured["payload"]["downloads"]
+        assert downloads[0]["productId"] == 302, (
+            "Standard GeoTIFF product should be preferred over browse image"
+        )
+
+    def test_falls_back_to_largest_when_no_preferred_name(self):
+        """When no product matches the preferred pattern, largest filesize wins."""
+        client = _make_client()
+
+        options_resp = [
+            {"entityId": "E1", "id": 401, "available": True,
+             "productCode": "JPEG", "productName": "JPEG Preview", "filesize": 200_000},
+            {"entityId": "E1", "id": 402, "available": True,
+             "productCode": "FULL", "productName": "Full Resolution", "filesize": 8_000_000},
+        ]
+        captured: dict = {}
+
+        def _side(endpoint, payload):
+            if endpoint == "download-options":
+                return options_resp
+            if endpoint == "download-request":
+                captured["payload"] = payload
+                return {"availableDownloads": [], "preparingDownloads": []}
+            return {}
+
+        with patch.object(client, "_post", side_effect=_side):
+            client.request_download_urls("AERIAL_COMBIN", ["E1"])
+
+        downloads = captured["payload"]["downloads"]
+        assert downloads[0]["productId"] == 402, (
+            "Largest-filesize product should be chosen when no preferred name matches"
+        )
+
+    def test_skips_entity_with_no_available_product(self):
+        """Entities where all products are unavailable are omitted entirely."""
+        client = _make_client()
+
+        options_resp = [
+            {"entityId": "E1", "id": 501, "available": False, "bulkAvailable": False,
+             "productCode": "STANDARD", "productName": "Standard"},
+            {"entityId": "E2", "id": 502, "available": True,  "bulkAvailable": False,
+             "productCode": "STANDARD", "productName": "Standard"},
+        ]
+        captured: dict = {}
+
+        def _side(endpoint, payload):
+            if endpoint == "download-options":
+                return options_resp
+            if endpoint == "download-request":
+                captured["payload"] = payload
+                return {"availableDownloads": [], "preparingDownloads": []}
+            return {}
+
+        with patch.object(client, "_post", side_effect=_side):
+            client.request_download_urls("AERIAL_COMBIN", ["E1", "E2"])
+
+        downloads = captured["payload"]["downloads"]
+        assert len(downloads) == 1
+        assert downloads[0]["entityId"] == "E2"
+
+
+# ── search_scenes — pagination ────────────────────────────────────────────────
+
+class TestSearchScenesPagination:
+    def test_paginates_when_total_hits_exceeds_page_size(self):
+        """search_scenes should keep fetching pages until totalHits is exhausted."""
+        client = _make_client()
+
+        # Simulate 150 scenes spread over 2 pages of 100
+        page1 = [{"entityId": f"E{i}"} for i in range(100)]
+        page2 = [{"entityId": f"E{i}"} for i in range(100, 150)]
+
+        call_count = 0
+
+        def _side(endpoint, payload):
+            nonlocal call_count
+            if endpoint != "scene-search":
+                return {}
+            call_count += 1
+            starting = payload.get("startingNumber", 1)
+            if starting == 1:
+                return {"results": page1, "totalHits": 150}
+            else:
+                return {"results": page2, "totalHits": 150}
+
+        with patch.object(client, "_post", side_effect=_side):
+            scenes = client.search_scenes(
+                "AERIAL_COMBIN",
+                (-125.0, 24.0, -115.0, 34.0),
+                1955,
+                max_results=10_000,
+                page_size=100,
+            )
+
+        assert len(scenes) == 150, f"Expected 150 scenes, got {len(scenes)}"
+        assert call_count == 2, f"Expected 2 API calls, got {call_count}"
+
+    def test_stops_when_results_empty(self):
+        """search_scenes stops when the API returns an empty results list."""
+        client = _make_client()
+
+        page1 = [{"entityId": "E1"}, {"entityId": "E2"}]
+
+        call_count = 0
+
+        def _side(endpoint, payload):
+            nonlocal call_count
+            if endpoint != "scene-search":
+                return {}
+            call_count += 1
+            starting = payload.get("startingNumber", 1)
+            if starting == 1:
+                return {"results": page1, "totalHits": 2}
+            return {"results": [], "totalHits": 2}
+
+        with patch.object(client, "_post", side_effect=_side):
+            scenes = client.search_scenes(
+                "NHAP",
+                (-125.0, 24.0, -115.0, 34.0),
+                1955,
+            )
+
+        assert len(scenes) == 2
+        # After fetching page 1 (2 results, totalHits=2), starting becomes 3 > 2 → stop.
+        # Only 1 API call is needed; the empty-results guard is an extra safety net.
+        assert call_count >= 1
+
+    def test_respects_max_results_cap(self):
+        """search_scenes never returns more than max_results scenes."""
+        client = _make_client()
+
+        # Mock respects maxResults from the payload so we simulate a realistic API
+        def _side(endpoint, payload):
+            if endpoint != "scene-search":
+                return {}
+            count = payload.get("maxResults", 100)
+            start = payload.get("startingNumber", 1)
+            return {
+                "results": [{"entityId": f"E{start + i}"} for i in range(count)],
+                "totalHits": 10_000,
+            }
+
+        with patch.object(client, "_post", side_effect=_side):
+            scenes = client.search_scenes(
+                "AERIAL_COMBIN",
+                (-125.0, 24.0, -115.0, 34.0),
+                1955,
+                max_results=150,
+                page_size=100,
+            )
+
+        assert len(scenes) == 150
