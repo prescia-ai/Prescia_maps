@@ -859,8 +859,8 @@ class TestPostAuthRetry:
         """_post calls relogin() proactively when login_time is older than 90 min."""
         client = _make_client()
         client._api_retries = 0
-        # Simulate session that is 91 minutes old
-        client.login_time = time.monotonic() - 5460
+        # Simulate session that is 91 minutes old (SESSION_TTL_SECONDS is 90 min)
+        client.login_time = time.monotonic() - (91 * 60)
 
         def _post_side(url, json, timeout):
             resp = MagicMock()

@@ -71,6 +71,10 @@ except ImportError:
 # so the module can be imported in tests without GDAL installed.
 GDAL2TILES_CMD: str = "gdal2tiles.py"
 
+# M2M session refresh thresholds
+SESSION_TTL_SECONDS = 90 * 60      # 5400 s — proactive re-login in _post
+GRID_RELOGIN_SECONDS = 60 * 60     # 3600 s — proactive re-login between grids
+
 CONUS_BBOX = (-125.0, 24.0, -66.0, 49.0)  # (west, south, east, north)
 GRID_STEP = 10.0  # degrees per grid tile
 
@@ -402,7 +406,7 @@ class USGSClient:
 
         # Proactively re-login if the session is older than 90 minutes, but not
         # while executing login-token itself (that would recurse infinitely).
-        if endpoint != "login-token" and time.monotonic() - self.login_time > 5400:
+        if endpoint != "login-token" and time.monotonic() - self.login_time > SESSION_TTL_SECONDS:
             self.relogin()
 
         auth_retried = False
@@ -534,8 +538,8 @@ class USAerialDownloader:
             logger.info("[%d/%d] Downloading grid %s", i, total_grids, grid_key)
             grid_dir = raw_dir / f"grid_{i}"
 
-            # Belt-and-suspenders: proactively re-login between grids after 60 min.
-            if time.monotonic() - self._client.login_time > 3600:
+            # Proactively re-login between grids if the session is older than 60 minutes.
+            if time.monotonic() - self._client.login_time > GRID_RELOGIN_SECONDS:
                 self._client.relogin()
 
             try:
