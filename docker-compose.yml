@@ -29,7 +29,7 @@ services:
       STRIPE_PRICE_MONTHLY: ${STRIPE_PRICE_MONTHLY:-}
       STRIPE_PRICE_ANNUAL: ${STRIPE_PRICE_ANNUAL:-}
     ports:
-      - "8000:8000"
+      - "8001:8000"
     depends_on:
       db:
         condition: service_healthy
