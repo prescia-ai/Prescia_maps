@@ -202,35 +202,41 @@ export default function MapPage() {
       </div>
 
       {/* Left panel: layer controls — offset below navbar */}
-      <div className="absolute top-[4.5rem] left-4 z-10">
+      <div className="absolute top-[4.5rem] left-2 sm:left-4 z-10">
         <LayerControls layers={layers} onChange={handleLayerChange} />
       </div>
 
       {/* Bottom-right: info / score / land-access panels */}
-      <div className="absolute bottom-6 right-6 z-10 flex flex-col gap-3 items-end">
+      <div className="absolute inset-x-0 bottom-2 px-2 sm:inset-auto sm:bottom-6 sm:right-6 sm:px-0 z-10 flex flex-col gap-3 items-stretch sm:items-end pointer-events-none">
         {selectedFeature && (
-          <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
+          <div className="pointer-events-auto">
+            <InfoPanel feature={selectedFeature} onClose={handleCloseInfo} />
+          </div>
         )}
 
         {clickedCoords && (
-          <ScorePanel
-            lat={clickedCoords.lat}
-            lon={clickedCoords.lon}
-            score={scoreQuery.data}
-            isLoading={scoreQuery.isLoading}
-            isError={scoreQuery.isError}
-            onClose={handleCloseScore}
-          />
+          <div className="pointer-events-auto">
+            <ScorePanel
+              lat={clickedCoords.lat}
+              lon={clickedCoords.lon}
+              score={scoreQuery.data}
+              isLoading={scoreQuery.isLoading}
+              isError={scoreQuery.isError}
+              onClose={handleCloseScore}
+            />
+          </div>
         )}
 
         {showLandAccess && (
-          <LandAccessPanel
-            data={landAccessData}
-            isLoading={landAccessLoading}
-            isError={landAccessError}
-            onClose={handleCloseLandAccess}
-            onOverride={handleLandAccessOverride}
-          />
+          <div className="pointer-events-auto">
+            <LandAccessPanel
+              data={landAccessData}
+              isLoading={landAccessLoading}
+              isError={landAccessError}
+              onClose={handleCloseLandAccess}
+              onOverride={handleLandAccessOverride}
+            />
+          </div>
         )}
       </div>
 

@@ -190,7 +190,7 @@ export default function AdminSubmissionReviewPage() {
 
   return (
     <div className="text-stone-900">
-      <div className="max-w-2xl mx-auto px-4 py-8">
+      <div className="max-w-2xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
         {loading ? (
           <div className="flex items-center justify-center py-16">
             <span className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
@@ -232,7 +232,7 @@ export default function AdminSubmissionReviewPage() {
             )}
 
             <div className="space-y-4">
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-5 shadow-sm">
+              <div className="bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 space-y-5 shadow-sm">
                 <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wider">
                   Submission Details
                 </h2>
@@ -272,7 +272,7 @@ export default function AdminSubmissionReviewPage() {
                 </div>
 
                 {/* Coordinates */}
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div className="space-y-1.5">
                     <label className="block text-sm font-medium text-stone-700">Latitude</label>
                     <input
@@ -342,7 +342,7 @@ export default function AdminSubmissionReviewPage() {
               </div>
 
               {/* Admin-only fields */}
-              <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-5 shadow-sm">
+              <div className="bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 space-y-5 shadow-sm">
                 <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wider">
                   Admin Fields
                 </h2>
@@ -381,7 +381,7 @@ export default function AdminSubmissionReviewPage() {
                 <button
                   onClick={handleApprove}
                   disabled={saving || submission.status === 'approved'}
-                  className="w-full bg-green-700 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-2xl transition-colors text-sm"
+                   className="w-full bg-green-700 hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium min-h-[44px] py-3 rounded-2xl transition-colors text-sm"
                 >
                   {saving ? 'Saving…' : 'Approve & Add to Map'}
                 </button>
@@ -390,14 +390,14 @@ export default function AdminSubmissionReviewPage() {
                   <button
                     onClick={handleSaveDraft}
                     disabled={saving}
-                    className="flex-1 bg-white hover:bg-stone-50 border border-stone-300 text-stone-700 font-medium py-3 rounded-2xl transition-colors text-sm"
+                     className="flex-1 bg-white hover:bg-stone-50 border border-stone-300 text-stone-700 font-medium min-h-[44px] py-3 rounded-2xl transition-colors text-sm"
                   >
                     Save Draft
                   </button>
                   <button
                     onClick={handleReject}
                     disabled={saving || submission.status === 'rejected'}
-                    className="flex-1 bg-red-50 hover:bg-red-100 border border-red-200 text-red-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium py-3 rounded-2xl transition-colors text-sm"
+                     className="flex-1 bg-red-50 hover:bg-red-100 border border-red-200 text-red-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium min-h-[44px] py-3 rounded-2xl transition-colors text-sm"
                   >
                     Reject
                   </button>

@@ -203,7 +203,7 @@ export default function ProfilePage() {
 
   return (
     <div className="text-stone-900">
-      <div className="max-w-2xl mx-auto px-4 py-8 space-y-6">
+      <div className="max-w-2xl mx-auto px-3 sm:px-4 py-6 sm:py-8 space-y-6">
         {/* ── Google Drive prompt (own profile, not connected) ─────── */}
         {isOwnProfile && !myProfile?.google_connected_at && (
           <div className="bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 flex items-center justify-between gap-3 shadow-sm">
@@ -224,9 +224,9 @@ export default function ProfilePage() {
         )}
 
         {/* ── Profile header ───────────────────────────────────────── */}
-        <div className="bg-white border border-stone-200 rounded-3xl p-6 space-y-4 shadow-sm">
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex items-center gap-4">
+        <div className="bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 space-y-4 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <Avatar
                 username={publicProfile.username ?? username!}
                 displayName={publicProfile.display_name}
@@ -234,7 +234,7 @@ export default function ProfilePage() {
                 size="xl"
               />
               <div className="min-w-0">
-                <h1 className="flex items-center gap-2 text-2xl font-bold text-stone-900 truncate">
+                 <h1 className="flex items-center gap-2 text-xl sm:text-2xl font-bold text-stone-900 truncate">
                   <span>@{publicProfile.username ?? username}</span>
                   {publicProfile.is_pro && <ProBadge size="lg" />}
                 </h1>
@@ -264,7 +264,7 @@ export default function ProfilePage() {
             {isOwnProfile && (
               <Link
                 to="/profile/settings"
-                className="flex-shrink-0 text-sm text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-stone-900 px-4 py-1.5 rounded-xl transition-colors"
+                className="flex-shrink-0 min-h-[44px] text-sm text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-stone-900 px-4 py-1.5 rounded-xl transition-colors"
               >
                 Edit Profile
               </Link>
@@ -275,7 +275,7 @@ export default function ProfilePage() {
               <button
                 onClick={handleFollow}
                 disabled={followLoading}
-                className={`flex-shrink-0 text-sm px-4 py-1.5 rounded-xl transition-colors font-medium ${
+                  className={`flex-shrink-0 min-h-[44px] text-sm px-4 py-1.5 rounded-xl transition-colors font-medium ${
                   publicProfile?.is_following
                     ? 'text-stone-600 border border-stone-300 hover:border-stone-400 hover:text-stone-900'
                     : 'bg-stone-800 hover:bg-stone-700 text-white'
@@ -317,15 +317,15 @@ export default function ProfilePage() {
 
         {/* ── Stats row ────────────────────────────────────────────── */}
         {(!isPrivate || isOwnProfile) && (
-          <div className="bg-white border border-stone-200 rounded-3xl px-6 py-4 shadow-sm">
-            <div className="flex items-center divide-x divide-stone-200">
+          <div className="bg-white border border-stone-200 rounded-3xl px-4 sm:px-6 py-4 shadow-sm">
+            <div className="grid grid-cols-2 sm:flex items-center divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
               {[
                 { label: 'Hunts', value: pins.length },
                 { label: 'Contributed', value: publicProfile?.contributed_pins_count ?? 0 },
                 { label: 'Followers', value: publicProfile?.followers_count ?? 0 },
                 { label: 'Following', value: publicProfile?.following_count ?? 0 },
               ].map((stat) => (
-                <div key={stat.label} className="flex-1 flex flex-col items-center py-2 first:pl-0 last:pr-0 px-4">
+                <div key={stat.label} className="flex-1 flex flex-col items-center py-3 sm:py-2 first:pl-0 last:pr-0 px-3 sm:px-4">
                   <span className="text-2xl font-semibold text-stone-900">{stat.value}</span>
                   <span className="text-xs text-stone-400 mt-0.5">{stat.label}</span>
                 </div>
@@ -338,14 +338,14 @@ export default function ProfilePage() {
         {(!isPrivate || isOwnProfile) && (
           <div className="space-y-0">
             {/* Tab bar */}
-            <div role="tablist" className="flex border-b border-stone-200">
+            <div role="tablist" className="flex border-b border-stone-200 overflow-x-auto">
               {(['activity', 'hunts', 'collection', 'badges', 'followers'] as ActiveTab[]).map((tab) => (
                 <button
                   key={tab}
                   role="tab"
                   aria-selected={activeTab === tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`flex-1 py-3 text-sm font-medium capitalize transition-colors ${
+                  className={`shrink-0 px-4 sm:px-0 sm:flex-1 py-3 text-sm font-medium capitalize transition-colors ${
                     activeTab === tab
                       ? 'text-amber-700 border-b-2 border-amber-600 -mb-px'
                       : 'text-stone-500 hover:text-stone-700'
@@ -357,7 +357,7 @@ export default function ProfilePage() {
             </div>
 
             {/* Tab content */}
-            <div className="bg-white border border-t-0 border-stone-200 rounded-b-3xl p-6 min-h-[160px] shadow-sm">
+            <div className="bg-white border border-t-0 border-stone-200 rounded-b-3xl p-4 sm:p-6 min-h-[160px] shadow-sm">
               {activeTab === 'activity' && (
                 <div className="flex flex-col gap-4">
                   {postsLoading ? (

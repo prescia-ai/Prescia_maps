@@ -101,27 +101,27 @@ export default function AdminSubmissionsPage() {
     <div className="text-stone-900">
       {/* Top nav bar */}
       <div className="border-b border-stone-200 bg-white shadow-sm sticky top-14 z-10">
-        <div className="max-w-3xl mx-auto flex items-center gap-3 px-4 h-12">
+        <div className="max-w-3xl mx-auto flex flex-wrap items-center gap-2 px-3 sm:px-4 py-2 sm:h-12">
           <span className="text-stone-700 text-sm font-medium">Community Submissions</span>
-          <div className="flex-1" />
+          <div className="hidden sm:block flex-1" />
           <button
             onClick={handleExport}
             disabled={exporting}
-            className="text-xs bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
+            className="text-xs bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-3 min-h-[44px] rounded-lg transition-colors disabled:opacity-50"
           >
             {exporting ? 'Exporting…' : 'Export Approved as JSON'}
           </button>
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 py-6">
+      <div className="max-w-3xl mx-auto px-3 sm:px-4 py-6">
         {/* Tab bar */}
-        <div className="flex gap-1 bg-white border border-stone-200 rounded-2xl p-1 mb-6 shadow-sm">
+        <div className="flex gap-1 bg-white border border-stone-200 rounded-2xl p-1 mb-6 shadow-sm overflow-x-auto">
           {(['pending', 'approved', 'rejected'] as StatusFilter[]).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`flex-1 py-2 text-sm font-medium rounded-xl transition-colors capitalize ${
+                className={`min-h-[44px] shrink-0 sm:flex-1 px-4 sm:px-0 py-2 text-sm font-medium rounded-xl transition-colors capitalize ${
                 activeTab === tab
                   ? 'bg-stone-800 text-white'
                   : 'text-stone-500 hover:text-stone-700'
@@ -202,8 +202,8 @@ export default function AdminSubmissionsPage() {
                 <button
                   onClick={handleLoadMore}
                   disabled={loadingMore}
-                  className="text-sm text-stone-500 hover:text-stone-900 border border-stone-300 hover:border-stone-400 px-5 py-2 rounded-xl transition-colors disabled:opacity-50"
-                >
+                   className="text-sm text-stone-500 hover:text-stone-900 border border-stone-300 hover:border-stone-400 px-5 min-h-[44px] rounded-xl transition-colors disabled:opacity-50"
+                 >
                   {loadingMore ? 'Loading…' : `Load more (${total - submissions.length} remaining)`}
                 </button>
               </div>

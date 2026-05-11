@@ -57,16 +57,16 @@ export default function MapContextMenu({
   return (
     <>
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/30 backdrop-blur-sm"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md mx-4 overflow-hidden">
+      <div className="bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl w-full max-w-md sm:mx-4 overflow-hidden h-[100dvh] sm:h-auto">
         <div className="flex border-b border-stone-200">
           <button
             onClick={() => selectTab('log_hunt')}
-            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex-1 min-h-[44px] flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
               activeTab === 'log_hunt'
                 ? 'text-stone-900 border-b-2 border-amber-600'
                 : 'text-stone-500 hover:text-stone-700'
@@ -81,7 +81,7 @@ export default function MapContextMenu({
           </button>
           <button
             onClick={() => selectTab('plan_hunt')}
-            className={`flex-1 flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex-1 min-h-[44px] flex items-center justify-center gap-1.5 px-4 py-3 text-sm font-medium transition-colors ${
               activeTab === 'plan_hunt'
                 ? 'text-stone-900 border-b-2 border-amber-600'
                 : 'text-stone-500 hover:text-stone-700'
@@ -92,7 +92,7 @@ export default function MapContextMenu({
           </button>
           <button
             onClick={onClose}
-            className="px-3 py-3 text-stone-400 hover:text-stone-600 transition-colors"
+            className="px-3 py-3 min-h-[44px] min-w-[44px] text-stone-400 hover:text-stone-600 transition-colors"
             aria-label="Close"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -114,7 +114,7 @@ export default function MapContextMenu({
             embedded
           />
         ) : (
-          <div className="p-5 space-y-4">
+          <div className="p-5 space-y-4 overflow-y-auto">
             <div>
               <p className="text-xs text-stone-500 mb-4">
                 Plan a future hunt at{' '}
@@ -165,7 +165,7 @@ export default function MapContextMenu({
 
             <button
               onClick={handleContinueToDraw}
-              className="w-full py-2.5 bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="w-full min-h-[44px] bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />

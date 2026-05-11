@@ -201,7 +201,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
     return (
       <button
         onClick={() => setPanelOpen(true)}
-        className="flex items-center gap-1.5 bg-stone-900 backdrop-blur-sm border border-stone-700 shadow-lg rounded-xl px-3 py-2 text-xs font-medium text-stone-100 hover:bg-stone-800 transition-colors"
+        className="flex items-center gap-1.5 min-h-[44px] bg-stone-900 backdrop-blur-sm border border-stone-700 shadow-lg rounded-xl px-3 py-2 text-xs font-medium text-stone-100 hover:bg-stone-800 transition-colors"
       >
         <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -213,7 +213,7 @@ export default function LayerControls({ layers, onChange }: LayerControlsProps) 
 
   return (
     <>
-    <div className="bg-stone-900 border border-stone-700 rounded-xl shadow-xl p-3 w-72 max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-stone-700 scrollbar-track-transparent">
+    <div className="bg-stone-900 border border-stone-700 rounded-xl shadow-xl p-3 w-[calc(100vw-1rem)] sm:w-72 max-h-[70vh] sm:max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-stone-700 scrollbar-track-transparent">
       <div className="flex items-center justify-between mb-3 px-1">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-stone-100">
           Map Layers
