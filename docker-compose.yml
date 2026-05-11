@@ -26,6 +26,8 @@ services:
       STRIPE_WEBHOOK_SECRET: ${STRIPE_WEBHOOK_SECRET:-}
       STRIPE_PRICE_MONTHLY: ${STRIPE_PRICE_MONTHLY:-}
       STRIPE_PRICE_ANNUAL: ${STRIPE_PRICE_ANNUAL:-}
+      GOOGLE_REDIRECT_URI: "https://aurik.app/api/v1/google/callback"
+      FRONTEND_URL: "https://aurik.app"
     ports:
       - "8001:8000"
     depends_on:
