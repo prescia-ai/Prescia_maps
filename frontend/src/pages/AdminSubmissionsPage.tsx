@@ -101,9 +101,8 @@ export default function AdminSubmissionsPage() {
     <div className="text-stone-900">
       {/* Top nav bar */}
       <div className="border-b border-stone-200 bg-white shadow-sm sticky top-14 z-10">
-        <div className="max-w-3xl mx-auto flex flex-wrap items-center gap-2 px-3 sm:px-4 py-2 sm:h-12">
+        <div className="max-w-3xl mx-auto flex flex-wrap items-center justify-between gap-2 px-3 sm:px-4 py-2 sm:h-12">
           <span className="text-stone-700 text-sm font-medium">Community Submissions</span>
-          <div className="hidden sm:block flex-1" />
           <button
             onClick={handleExport}
             disabled={exporting}

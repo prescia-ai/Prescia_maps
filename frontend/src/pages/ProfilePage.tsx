@@ -318,7 +318,7 @@ export default function ProfilePage() {
         {/* ── Stats row ────────────────────────────────────────────── */}
         {(!isPrivate || isOwnProfile) && (
           <div className="bg-white border border-stone-200 rounded-3xl px-4 sm:px-6 py-4 shadow-sm">
-            <div className="grid grid-cols-2 sm:flex items-center divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
+            <div className="grid grid-cols-2 gap-2 sm:gap-0 sm:flex items-center sm:divide-x divide-stone-200">
               {[
                 { label: 'Hunts', value: pins.length },
                 { label: 'Contributed', value: publicProfile?.contributed_pins_count ?? 0 },

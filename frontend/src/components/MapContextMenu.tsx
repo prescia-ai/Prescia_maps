@@ -62,7 +62,7 @@ export default function MapContextMenu({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl w-full max-w-md sm:mx-4 overflow-hidden h-[100dvh] sm:h-auto">
+      <div className="bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl w-full max-w-md sm:mx-4 overflow-hidden h-screen h-[100dvh] sm:h-auto">
         <div className="flex border-b border-stone-200">
           <button
             onClick={() => selectTab('log_hunt')}
