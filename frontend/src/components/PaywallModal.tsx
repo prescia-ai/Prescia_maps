@@ -30,10 +30,10 @@ export default function PaywallModal({ open, onClose, feature, description }: Pa
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/40 backdrop-blur-sm"
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm mx-4 overflow-hidden">
+      <div className="bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl w-full max-w-sm sm:mx-4 overflow-hidden min-h-[60vh] sm:min-h-0">
         {/* Header */}
         <div className="px-6 pt-6 pb-4 border-b border-stone-100">
           <div className="flex items-start justify-between gap-3">
@@ -47,7 +47,7 @@ export default function PaywallModal({ open, onClose, feature, description }: Pa
             </div>
             <button
               onClick={onClose}
-              className="text-stone-400 hover:text-stone-600 transition-colors mt-0.5 flex-shrink-0"
+              className="text-stone-400 hover:text-stone-600 transition-colors mt-0.5 flex-shrink-0 min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
               aria-label="Close"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -84,13 +84,13 @@ export default function PaywallModal({ open, onClose, feature, description }: Pa
         <div className="px-6 pb-6 flex flex-col gap-2">
           <button
             onClick={handleUpgrade}
-            className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2.5 rounded-xl transition-colors text-sm"
+            className="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium min-h-[44px] rounded-xl transition-colors text-sm"
           >
             Start 7-day free trial
           </button>
           <button
             onClick={onClose}
-            className="w-full text-stone-500 hover:text-stone-700 text-sm py-2 transition-colors"
+            className="w-full text-stone-500 hover:text-stone-700 text-sm min-h-[44px] transition-colors"
           >
             Maybe later
           </button>

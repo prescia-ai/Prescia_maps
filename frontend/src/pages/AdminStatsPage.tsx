@@ -57,9 +57,9 @@ export default function AdminStatsPage() {
     <div className="text-stone-900">
       {/* Page header */}
       <div className="border-b border-stone-200 bg-white shadow-sm sticky top-14 z-10">
-        <div className="max-w-4xl mx-auto flex items-center gap-3 px-4 h-12">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center gap-2 px-3 sm:px-4 py-2 sm:h-12">
           <span className="text-stone-700 text-sm font-medium">Platform Statistics</span>
-          <div className="flex-1" />
+          <div className="hidden sm:block flex-1" />
           {data && (
             <span className="text-xs text-stone-400">
               Last updated{' '}
@@ -74,14 +74,14 @@ export default function AdminStatsPage() {
           <button
             onClick={() => refetch()}
             disabled={isFetching}
-            className="text-xs bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-3 py-1.5 rounded-lg transition-colors disabled:opacity-50"
+            className="text-xs bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-3 min-h-[44px] rounded-lg transition-colors disabled:opacity-50"
           >
             {isFetching ? 'Refreshing…' : 'Refresh'}
           </button>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-6">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-6">
         {isLoading ? (
           <div className="flex items-center justify-center py-16">
             <span className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin" />
@@ -93,7 +93,7 @@ export default function AdminStatsPage() {
         ) : data ? (
           <>
             <SectionHeading title="Users" />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <StatCard label="Total Users" value={fmt.format(data.total_users)} />
               <StatCard label="Admins" value={fmt.format(data.admins)} />
               <StatCard label="Free Users" value={fmt.format(data.free_users)} />
@@ -101,7 +101,7 @@ export default function AdminStatsPage() {
             </div>
 
             <SectionHeading title="Subscriptions" />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <StatCard label="Trialing" value={fmt.format(data.trialing_users)} />
               <StatCard label="Active" value={fmt.format(data.active_users)} />
               <StatCard label="Past Due" value={fmt.format(data.past_due_users)} />
@@ -109,13 +109,13 @@ export default function AdminStatsPage() {
             </div>
 
             <SectionHeading title="Plans" />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <StatCard label="Monthly" value={fmt.format(data.plan_monthly)} />
               <StatCard label="Annual" value={fmt.format(data.plan_annual)} />
             </div>
 
             <SectionHeading title="Growth" />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <StatCard label="New Users (7d)" value={fmt.format(data.new_users_7d)} />
               <StatCard label="New Users (30d)" value={fmt.format(data.new_users_30d)} />
               <StatCard

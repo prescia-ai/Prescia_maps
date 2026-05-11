@@ -304,6 +304,7 @@ export default function Navbar({
   const { user, profile, isPro, signOut } = useAuth();
   const navigate = useNavigate();
   const [paywallFeature, setPaywallFeature] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function handleLockedNav(feature: string, path: string) {
     if (isPro) {
@@ -315,6 +316,7 @@ export default function Navbar({
 
   async function handleSignOut() {
     await signOut();
+    setMobileMenuOpen(false);
     navigate('/');
   }
 
@@ -332,7 +334,7 @@ export default function Navbar({
         </Link>
 
         {/* Nav items */}
-        <div className="flex items-center gap-2 ml-4">
+        <div className="hidden md:flex items-center gap-2 ml-4">
           <Link
             to="/map"
             className="flex items-center gap-1.5 px-3.5 py-2 text-sm text-stone-600 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
@@ -472,7 +474,7 @@ export default function Navbar({
         </div>
 
         {/* Status badges + auth (right-aligned) */}
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto hidden md:flex items-center gap-2">
           {/* User Search — right side */}
           <UserSearch />
           {isLocationsError && (
@@ -527,6 +529,147 @@ export default function Navbar({
             </div>
           )}
         </div>
+
+        <div className="ml-auto flex items-center gap-2 md:hidden">
+          {user ? (
+            <Link
+              to={profile?.username ? `/profile/${profile.username}` : '/setup'}
+              className="inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded-xl border border-stone-200 bg-white"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Profile"
+            >
+              <Avatar
+                username={profile?.username ?? user.email ?? 'user'}
+                displayName={profile?.display_name}
+                avatarUrl={profile?.avatar_url}
+                size="sm"
+              />
+            </Link>
+          ) : (
+            <button
+              onClick={() => navigate('/login')}
+              className="min-h-[44px] px-3 rounded-xl text-sm bg-stone-800 text-white hover:bg-stone-700 transition-colors font-medium"
+            >
+              Log in
+            </button>
+          )}
+
+          <button
+            onClick={() => setMobileMenuOpen((v) => !v)}
+            className="inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded-xl border border-stone-200 text-stone-700"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      className={`fixed inset-0 z-30 md:hidden bg-black/30 transition-opacity ${mobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+      onClick={() => setMobileMenuOpen(false)}
+    />
+    <div className={`fixed top-14 right-0 bottom-0 z-40 w-[85vw] max-w-sm bg-white border-l border-stone-200 shadow-xl transition-transform md:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className="h-full overflow-y-auto p-3 space-y-2">
+        <Link to="/map" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm font-medium text-stone-700 hover:bg-stone-100">
+          Map
+        </Link>
+        {user && (
+          <Link to="/feed" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm font-medium text-stone-700 hover:bg-stone-100">
+            Feed
+          </Link>
+        )}
+        {user && (
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              handleLockedNav('Groups', '/groups');
+            }}
+            className="w-full min-h-[44px] px-3 rounded-xl flex items-center justify-between text-sm font-medium text-stone-700 hover:bg-stone-100"
+          >
+            <span>Groups</span>
+            {!isPro && <LockBadge />}
+          </button>
+        )}
+        {user && (
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              handleLockedNav('Hunt Planning', '/plans');
+            }}
+            className="w-full min-h-[44px] px-3 rounded-xl flex items-center justify-between text-sm font-medium text-stone-700 hover:bg-stone-100"
+          >
+            <span>Plans</span>
+            {!isPro && <LockBadge />}
+          </button>
+        )}
+        {user && (
+          <Link to="/badges" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm font-medium text-stone-700 hover:bg-stone-100">
+            Badges
+          </Link>
+        )}
+        {user && onLogHuntClick && (
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              onLogHuntClick();
+            }}
+            className="w-full min-h-[44px] px-3 rounded-xl flex items-center text-sm font-medium text-stone-700 hover:bg-stone-100"
+          >
+            Log a Hunt
+          </button>
+        )}
+
+        {user && (
+          <>
+            <div className="h-px bg-stone-200 my-2" />
+            <Link to={profile?.username ? `/profile/${profile.username}` : '/setup'} onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+              Profile
+            </Link>
+            <Link to="/profile/settings" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+              Settings
+            </Link>
+            <Link to="/submit" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+              Submit a Pin
+            </Link>
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+              About
+            </Link>
+            {profile?.is_admin && (
+              <>
+                {onImportClick && (
+                  <button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      onImportClick();
+                    }}
+                    className="w-full min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100"
+                  >
+                    Import Data
+                  </button>
+                )}
+                <Link to="/admin/submissions" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+                  Review Submissions
+                </Link>
+                <Link to="/admin/stats" onClick={() => setMobileMenuOpen(false)} className="min-h-[44px] px-3 rounded-xl flex items-center text-sm text-stone-700 hover:bg-stone-100">
+                  Statistics
+                </Link>
+              </>
+            )}
+            <button
+              onClick={handleSignOut}
+              className="w-full min-h-[44px] px-3 rounded-xl flex items-center text-sm text-red-700 hover:bg-red-50"
+            >
+              Log out
+            </button>
+          </>
+        )}
       </div>
     </div>
 

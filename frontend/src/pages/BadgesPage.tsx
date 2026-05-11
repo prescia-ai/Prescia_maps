@@ -58,11 +58,11 @@ export default function BadgesPage() {
   const maxScore = progress.reduce((sum, p) => sum + (p.badge.points ?? 0), 0);
 
   return (
-    <div className="min-h-screen bg-stone-50 py-8 px-4">
+    <div className="min-h-screen bg-stone-50 py-6 sm:py-8 px-3 sm:px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-stone-900 font-bold text-2xl mb-1">Achievement Badges</h1>
+          <h1 className="text-stone-900 font-bold text-xl sm:text-2xl mb-1">Achievement Badges</h1>
           <p className="text-stone-500 text-sm">
             Earn badges by logging hunts, recording finds, and visiting historic sites.
           </p>
@@ -148,7 +148,7 @@ export default function BadgesPage() {
                     </span>
                   </div>
 
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-6">
                     {items.map((item) => (
                       <div key={item.badge.id} className="flex flex-col items-center gap-2">
                         <BadgeDisplay

@@ -31,12 +31,12 @@ export default function LandAccessPanel({
 
   if (isLoading) {
     return (
-      <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-xl shadow-lg w-80 p-4">
+      <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-2xl sm:rounded-xl shadow-lg w-full sm:w-80 max-w-md p-4">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-stone-900 flex items-center gap-2">
             📍 Land Access Info
           </h3>
-          <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors" aria-label="Close">
+          <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center" aria-label="Close">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -52,12 +52,12 @@ export default function LandAccessPanel({
 
   if (isError || !data) {
     return (
-      <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-xl shadow-lg w-80 p-4">
+      <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-2xl sm:rounded-xl shadow-lg w-full sm:w-80 max-w-md p-4">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-stone-900 flex items-center gap-2">
             📍 Land Access Info
           </h3>
-          <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors" aria-label="Close">
+          <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center" aria-label="Close">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -72,13 +72,13 @@ export default function LandAccessPanel({
   const confidencePct = Math.round(data.confidence * 100);
 
   return (
-    <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-xl shadow-lg w-80 overflow-hidden">
+    <div className="bg-white/95 backdrop-blur-sm border border-stone-200 rounded-2xl sm:rounded-xl shadow-lg w-full sm:w-80 max-w-md overflow-hidden max-h-[55vh] sm:max-h-none">
       {/* Header */}
       <div className="flex items-start justify-between p-4 pb-3 border-b border-stone-100">
         <h3 className="text-sm font-semibold text-stone-900 flex items-center gap-2">
           📍 Land Access Info
         </h3>
-        <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors flex-shrink-0" aria-label="Close">
+        <button onClick={onClose} className="text-stone-400 hover:text-stone-700 transition-colors flex-shrink-0 min-h-[44px] min-w-[44px] inline-flex items-center justify-center" aria-label="Close">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
