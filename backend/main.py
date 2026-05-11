@@ -14,6 +14,9 @@ from typing import AsyncGenerator
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from starlette.responses import Response
 
 from fastapi import Depends
 
@@ -43,6 +46,16 @@ logging.basicConfig(
     format="%(asctime)s  %(levelname)-8s  %(name)s  %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+MAX_BODY_SIZE = 10 * 1024 * 1024  # 10 MB
+
+
+class LimitRequestBodyMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        content_length = request.headers.get("content-length")
+        if content_length and int(content_length) > MAX_BODY_SIZE:
+            return Response("Request body too large", status_code=413)
+        return await call_next(request)
 
 
 # ---------------------------------------------------------------------------
@@ -102,6 +115,7 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+    app.add_middleware(LimitRequestBodyMiddleware)
 
     # -----------------------------------------------------------------------
     # Routers
