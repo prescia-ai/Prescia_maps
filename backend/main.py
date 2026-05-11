@@ -14,6 +14,9 @@ from typing import AsyncGenerator
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.datastructures import Headers
+from starlette.responses import Response
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from fastapi import Depends
 
@@ -43,6 +46,52 @@ logging.basicConfig(
     format="%(asctime)s  %(levelname)-8s  %(name)s  %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+MAX_BODY_SIZE = 10 * 1024 * 1024  # 10 MB
+
+
+class _RequestBodyTooLargeError(Exception):
+    """Raised when request body bytes exceed configured limit."""
+
+
+class LimitRequestBodyMiddleware:
+    def __init__(self, app: ASGIApp, max_body_size: int = MAX_BODY_SIZE):
+        self.app = app
+        self.max_body_size = max_body_size
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        headers = Headers(scope=scope)
+        content_length = headers.get("content-length")
+        if content_length:
+            try:
+                if int(content_length) > self.max_body_size:
+                    response = Response("Request body too large", status_code=413)
+                    await response(scope, receive, send)
+                    return
+            except ValueError:
+                # Ignore malformed values and rely on actual byte-count enforcement.
+                pass
+
+        bytes_read = 0
+
+        async def receive_with_limit() -> Message:
+            nonlocal bytes_read
+            message = await receive()
+            if message["type"] == "http.request":
+                bytes_read += len(message.get("body", b""))
+                if bytes_read > self.max_body_size:
+                    raise _RequestBodyTooLargeError
+            return message
+
+        try:
+            await self.app(scope, receive_with_limit, send)
+        except _RequestBodyTooLargeError:
+            response = Response("Request body too large", status_code=413)
+            await response(scope, receive, send)
 
 
 # ---------------------------------------------------------------------------
@@ -102,6 +151,7 @@ def create_app() -> FastAPI:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+    app.add_middleware(LimitRequestBodyMiddleware)
 
     # -----------------------------------------------------------------------
     # Routers
