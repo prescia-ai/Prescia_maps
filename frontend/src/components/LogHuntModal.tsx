@@ -177,7 +177,7 @@ export default function LogHuntModal({ lat, lon, onClose, onSuccess, embedded = 
 
       {/* Main modal */}
       {newBadges.length === 0 && (
-      <div className="bg-white border border-stone-200 rounded-t-2xl sm:rounded-2xl shadow-xl w-full max-w-md h-screen h-[100dvh] sm:h-auto flex flex-col">
+      <div className="bg-white border border-stone-200 rounded-t-2xl sm:rounded-2xl shadow-xl w-full max-w-md h-[100dvh] sm:h-auto flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
           <h2 className="text-stone-900 font-semibold text-base">Log Hunt</h2>

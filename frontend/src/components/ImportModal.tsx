@@ -137,7 +137,7 @@ export default function ImportModal({ onClose, onImportSuccess }: ImportModalPro
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/40 backdrop-blur-sm">
-      <div className="bg-white border border-stone-200 rounded-t-2xl sm:rounded-2xl shadow-xl w-full max-w-2xl h-screen h-[100dvh] sm:h-auto sm:max-h-[90vh] flex flex-col">
+      <div className="bg-white border border-stone-200 rounded-t-2xl sm:rounded-2xl shadow-xl w-full max-w-2xl h-[100dvh] sm:h-auto sm:max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-stone-200">
           <h2 className="text-stone-900 font-semibold text-base">Import Data</h2>
@@ -230,7 +230,7 @@ export default function ImportModal({ onClose, onImportSuccess }: ImportModalPro
                 Found <span className="text-stone-900 font-semibold">{totalRecords}</span> record{totalRecords !== 1 ? 's' : ''} in file
                 {totalRecords > 10 && <span className="text-stone-400"> — previewing first 10</span>}
               </p>
-              <div className="border border-stone-200 rounded-lg overflow-hidden overflow-x-auto">
+              <div className="border border-stone-200 rounded-lg overflow-x-auto">
                 <table className="w-full">
                   <thead className="bg-stone-100">
                     <tr>
