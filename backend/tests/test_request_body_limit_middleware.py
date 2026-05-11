@@ -6,9 +6,9 @@ from fastapi.testclient import TestClient
 import main as backend_main
 
 
-def _build_app() -> TestClient:
+def _build_app(max_body_size: int = backend_main.MAX_BODY_SIZE) -> TestClient:
     app = fastapi.FastAPI()
-    app.add_middleware(backend_main.LimitRequestBodyMiddleware)
+    app.add_middleware(backend_main.LimitRequestBodyMiddleware, max_body_size=max_body_size)
 
     @app.post("/echo")
     async def echo(payload: dict):
@@ -17,9 +17,8 @@ def _build_app() -> TestClient:
     return TestClient(app)
 
 
-def test_request_body_limit_allows_small_payload(monkeypatch):
-    monkeypatch.setattr(backend_main, "MAX_BODY_SIZE", 1024)
-    client = _build_app()
+def test_request_body_middleware_allows_small_payload():
+    client = _build_app(max_body_size=1024)
 
     response = client.post("/echo", json={"name": "ghost town"})
 
@@ -27,9 +26,8 @@ def test_request_body_limit_allows_small_payload(monkeypatch):
     assert response.json() == {"name": "ghost town"}
 
 
-def test_request_body_limit_rejects_large_payload(monkeypatch):
-    monkeypatch.setattr(backend_main, "MAX_BODY_SIZE", 10)
-    client = _build_app()
+def test_request_body_middleware_rejects_large_payload():
+    client = _build_app(max_body_size=10)
 
     response = client.post("/echo", json={"name": "ghost town"})
 
